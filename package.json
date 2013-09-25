@@ -1,0 +1,17 @@
+{
+  "name": "tg-io",
+  "version": "0.0.1",
+  "description": "sample project",
+  "main": "app/server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://leogdion@bitbucket.org/leogdion/tg-io.git"
+  },
+  "author": "Leo G. Dion, BrightDigit, LLC",
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "dependencies": {
+    "envious": "~0.2.0"
+  }
+}
