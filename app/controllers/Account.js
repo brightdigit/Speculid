@@ -1,5 +1,6 @@
 module.exports = {
   Register : function (request, callback) {
+    var uuid = require('node-uuid');
     var secret, key;
     console.log(request.body);
     emailAddress = request.body.emailAddress;

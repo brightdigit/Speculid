@@ -1,7 +1,7 @@
 
 var express = require('express');
 var app = express();
-
+app.use(express.bodyParser());
 var Controllers = require('./controllers');
 
 console.log(Controllers);
