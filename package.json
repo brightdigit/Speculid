@@ -12,6 +12,9 @@
     "grunt": "~0.4.1"
   },
   "dependencies": {
-    "envious": "~0.2.0"
+    "envious": "~0.2.0",
+    "express": "~3.4.0",
+    "nodemailer": "~0.5.2",
+    "node-uuid": "~1.4.1"
   }
 }
