@@ -4,7 +4,6 @@ var app = express();
 app.use(express.bodyParser());
 var Controllers = require('./controllers');
 
-console.log(Controllers);
 app.post('/api/v1/register', function(req, res){
 	console.log(req.body);
 	Controllers.Account.Register(req, function (result, status) {
