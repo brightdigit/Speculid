@@ -2,7 +2,7 @@ var async = require('async'),
 	fs = require('fs'),
   path = require('path');
 
-module.exports = {
+module.exports = function (){
   var lsr = function (root, callback, iterator) {
     this.root = root;
     this.callback = callback;
@@ -19,15 +19,15 @@ module.exports = {
     },
 
     iterator : function (item, cb) {
-      cb(undefined, cb);
+      cb(undefined, item);
     },
 
-    readdir : function (path) {
-      fs.readdir(path, this.statfiles.bind(this, path));
+    readdir : function (path, cb) {
+      fs.readdir(path, this.statfiles.bind(this, path, cb));
     },
 
-    statfiles : function (parent, error, files) {
-      async.concat(files, this.statfile.bind(this, parent), );
+    statfiles : function (parent, cb, error, files) {
+      async.concat(files, this.statfile.bind(this, parent), cb);
     },
 
     statfile : function (parent, file, cb) {
@@ -35,7 +35,7 @@ module.exports = {
       fs.stat(filepath, this.parsefiledir.bind(this, filepath, cb));
     },
 
-    parsefiledir : function (filepath, cb, error, stat) {
+    parsefiledir : function (filepath, cb, error, stats) {
       if (stats.isFile()) {
         this.iterator(filepath, cb);
       } else if (stats.isDirectory()) {
@@ -47,4 +47,4 @@ module.exports = {
   };
 
   return lsr.readdir;
-};
+}();
