@@ -25,10 +25,25 @@ var lsr = proxyquire('../../app/controllers/lsr.js', {
   async : {
     concat : function (arr, iterator, callback) {
       var result = [];
+      this.reduce(arr, result, iterator, callback);
+    },
+    reduce : function (arr, memo, iterator, callback) {
+
       arr.forEach(function (item) {
-        iterator(item, function (error, newItem) { result.push(newItem); });
+          iterator(memo, item, function (error, newmemo) { 
+        })
       });
-      callback(undefined, result);
+      callback(undefined, memo);
+    },
+    map : function (arr, iterator, callback) {
+      var result = [];      
+      arr.forEach(function (item) {
+        
+        
+        iterator(item, function (error, newmemo) {result.push(newmemo); });
+      });
+      
+      callback(undefined, result);    
     }
   },
   path : {
@@ -39,9 +54,18 @@ var lsr = proxyquire('../../app/controllers/lsr.js', {
 });
 
 exports.readir = function (test) {
-  lsr('path', function (error, results) {
+  lsr('path', 
+  function (error, result) {
     test.ifError(error);
-    console.log(results);
+    console.log(result);
     test.done();
+  },  
+  function (item, cb) {
+    
+    cb(undefined, item.length);
+  },
+  function (item, cb) {
+    
+    cb(undefined, item);
   }); 
 };

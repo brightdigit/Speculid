@@ -22,9 +22,8 @@ module.exports = function () {
       Object.keys(json).forEach(function (key) {
         result[key] = _.template(json[key]);
       });
-      cb(undefined, result);
+      cb(undefined, {name : result});
     }
-
 
     function parsed (name, cb) { 
       function reduce (memo, item, cb) {
