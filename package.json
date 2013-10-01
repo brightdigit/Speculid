@@ -11,7 +11,10 @@
   "devDependencies": {
     "grunt": "~0.4.1",
     "nodeunit": "~0.8.1",
-    "proxyquire": "~0.5.1"
+    "proxyquire": "~0.5.1",
+    "js-beautify": "~1.4.0",
+    "minify": "~0.2.1",
+    "git-wrapper": "~0.1.1"
   },
   "dependencies": {
     "envious": "~0.2.0",
