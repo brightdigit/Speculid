@@ -49,7 +49,7 @@ module.exports = function() {
         );
       }
 
-      _parsed.bind(undefined, name, cb);
+      return _parsed.bind(undefined, name, cb);
     }
 
     return function(name, cb) {

@@ -30,6 +30,11 @@ var templates = proxyquire('../../app/controllers/templates.js', {
   async: {
     each: function(arr, iterator, callback) {
 
+    },
+    reduce : function (arr, memo, iterator, callback) {
+      callback(undefined, {
+        'test' : true
+      });
     }
   }
 });
@@ -42,7 +47,7 @@ function newRequire (filePath) {
 
 exports.load = function (test) {
   templates('test', newRequire)('test', function (error, template) {
-    test.ok();
+    test.ok(template);
     test.done();
   });
 };
