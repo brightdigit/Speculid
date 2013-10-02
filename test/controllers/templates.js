@@ -1,40 +1,39 @@
 var proxyquire = require('proxyquire').noCallThru();
 var templates = proxyquire('../../app/controllers/templates.js', {
-  './lsr': function(path, callback, iterator) {
-    console.log('test');
-    var results = ['a','b','c'].map(function (item) {
-      iterator(item, function (error, result) {
-        return result;
-      })
+  './lsr': function(path, callback, iterator, keyIterator) {
+    iterator(path, function (error, result) {
+      callback(error, [result, {'test2' : {x : 0}}]);
     });
-    callback(undefined, results);
   },
-  _: {
+  'underscore': {
     template: function(str) {
+      
+      
       return function(data) {
-
+        return data;
       };
     }
   },
   path: {
-    extname: function(file) {
-
-    },
-    basename: function(file, ext) {
-
-    },
+    '@noCallThru': false,
     resolve : function (file) {
       return file;
     }
   },
   async: {
     each: function(arr, iterator, callback) {
-
+      arr.forEach(function (item) {
+        iterator(item, function () {})
+      });
+      callback();
     },
     reduce : function (arr, memo, iterator, callback) {
-      callback(undefined, {
-        'test' : true
+      
+      arr.forEach(function(item) {
+        iterator(memo, item, function(error, newmemo) {})
       });
+      
+      callback(undefined, memo);
     }
   }
 });
@@ -47,7 +46,8 @@ function newRequire (filePath) {
 
 exports.load = function (test) {
   templates('test', newRequire)('test', function (error, template) {
-    test.ok(template);
+    console.log(template);
+    test.ok(template({name : 'test'}).name === "test");
     test.done();
   });
 };
