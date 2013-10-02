@@ -46,8 +46,9 @@ function newRequire (filePath) {
 
 exports.load = function (test) {
   templates('test', newRequire)('test', function (error, template) {
-    console.log(template);
-    test.ok(template({name : 'test'}).name === "test");
+    console.log(template)
+
+    test.ok(false);
     test.done();
   });
 };

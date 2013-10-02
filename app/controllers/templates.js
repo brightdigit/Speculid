@@ -13,6 +13,7 @@ module.exports = function() {
         cb(undefined, memo)
       },
       function (error, memo) {
+        console.log(memo);
         cb(undefined, memo);
       });
   }
@@ -59,7 +60,7 @@ module.exports = function() {
             cb();
           },
           function(error) {
-            console.log(memo);
+            
             cb(error, memo);
           });
       }
