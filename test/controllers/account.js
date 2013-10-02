@@ -2,7 +2,7 @@ var proxyquire = require('proxyquire');
 var foo = proxyquire('../../app/controllers/Account.js', {});
 
 exports.Register = {
-  testValid: function (test) {
+  testValid: function(test) {
     var request = {
       body: {
         emailAddress: 'example@valid.com'
@@ -11,22 +11,22 @@ exports.Register = {
     test.ok(false, "this assertion should fail");
     test.done();
   },
-  testAlreadyExists: function (test) {
+  testAlreadyExists: function(test) {
     test.ok(false, "this assertion should fail");
     test.done();
   },
-  testInvalidEmailAddress: function (test) {
+  testInvalidEmailAddress: function(test) {
     test.ok(false, "this assertion should fail");
     test.done();
   },
-  testPropertyExists: function (test) {
+  testPropertyExists: function(test) {
     test.ok(false, "this assertion should fail");
     test.done();
   },
 };
 
 exports.Confirm = {
-  test : function (test) {
+  test: function(test) {
     test.ok(false, "test failed.");
     test.done();
   }
@@ -34,13 +34,13 @@ exports.Confirm = {
 
 
 exports.Login = {
-  test : function (test) {
+  test: function(test) {
     test.ok(false, "test failed.");
     test.done();
   }
 };
 
-exports.testSomethingElse = function (test) {
+exports.testSomethingElse = function(test) {
   test.ok(false, "this assertion should fail");
   test.done();
 };

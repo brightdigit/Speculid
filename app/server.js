@@ -1,38 +1,37 @@
-
 var express = require('express');
 var app = express();
 app.use(express.bodyParser());
 var Controllers = require('./controllers');
 
-app.post('/api/v1/register', function(req, res){
-	console.log(req.body);
-	Controllers.Account.Register(req, function (result, status) {
-		if (status == undefined) {
-			res.send(result);
-		} else {
-			res.send(status, result);
-		}
-	});
+app.post('/api/v1/register', function(req, res) {
+  console.log(req.body);
+  Controllers.Account.Register(req, function(result, status) {
+    if (status == undefined) {
+      res.send(result);
+    } else {
+      res.send(status, result);
+    }
+  });
 });
 
-app.post('/api/v1/confirm', function(req, res){
-	Controllers.Account.Confirm(req, function (result, status) {
-		if (status == undefined) {
-			res.send(result);
-		} else {
-			res.send(status, body);
-		}
-	});
+app.post('/api/v1/confirm', function(req, res) {
+  Controllers.Account.Confirm(req, function(result, status) {
+    if (status == undefined) {
+      res.send(result);
+    } else {
+      res.send(status, body);
+    }
+  });
 });
 
-app.post('/api/v1/login', function(req, res){
-	Controllers.Account.Login(req, function (result, status) {
-		if (status == undefined) {
-			res.send(result);
-		} else {
-			res.send(status, body);
-		}
-	});
+app.post('/api/v1/login', function(req, res) {
+  Controllers.Account.Login(req, function(result, status) {
+    if (status == undefined) {
+      res.send(result);
+    } else {
+      res.send(status, body);
+    }
+  });
 });
 app.listen(3000);
 console.log('Listening on port 3000');

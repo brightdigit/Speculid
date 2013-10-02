@@ -1,3 +1,3 @@
 module.exports = {
-	Account : require('./Account')
+  Account: require('./Account')
 };

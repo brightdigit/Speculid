@@ -3,7 +3,7 @@ var _ = require('underscore');
 
 module.exports = {
   templates: {},
-  queue: function (template, data, callback) {
+  queue: function(template, data, callback) {
     var mailOptions = {};
 
     for (var name in template) {

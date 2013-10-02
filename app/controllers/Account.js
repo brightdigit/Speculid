@@ -1,20 +1,22 @@
 module.exports = {
-  Register : function (request, callback) {
+  Register: function(request, callback) {
     var uuid = require('node-uuid');
     var secret, key;
     console.log(request.body);
     emailAddress = request.body.emailAddress;
 
     // verify emailAddress
-      // property exists
-      // valid
-      // isn't already used
+    // property exists
+    // valid
+    // isn't already used
 
     secret = uuid.v4();
     key = uuid.v4();
 
-      callback({key: uuid.v4()});
-      /*
+    callback({
+      key: uuid.v4()
+    });
+    /*
     emailer.aend('confirmation', {emailAddress : emailAddress, secret : secret}, function (error, response) {
       // what to do if error
       callback({key: uuid.v4()});
@@ -55,10 +57,10 @@ module.exports = {
     });
 */
   },
-  Confirm : function (request) {
+  Confirm: function(request) {
 
   },
-  Login : function (request) {
+  Login: function(request) {
 
   }
 };
