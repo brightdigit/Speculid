@@ -9,19 +9,22 @@ module.exports = {
     emailAddress = request.body.emailAddress;
 
     var data = {
-      emailAddress :  request.body.emailAddress,
-      secret : uuid.v4(),
-      key : uuid.v4()
+      emailAddress: request.body.emailAddress,
+      secret: uuid.v4(),
+      key: uuid.v4()
     };
 
     var a = new account(data);
 
-    a.save(function (error, a) {
+    a.save(function(error, a) {
       if (error) {
         callback(400, error);
         return;
       }
-      emailer.send('confirmation', {emailAddress : a.emailAddress, secret : a.secret}, function (error, response) {
+      emailer.send('confirmation', {
+        emailAddress: a.emailAddress,
+        secret: a.secret
+      }, function(error, response) {
         callback(error ? 400 : undefined, error || {
           key: a.key
         });
