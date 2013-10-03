@@ -22,6 +22,8 @@
     "nodemailer": "~0.5.2",
     "node-uuid": "~1.4.1",
     "underscore": "~1.5.2",
-    "async": "~0.2.9"
+    "async": "~0.2.9",
+    "mysql": "~2.0.0-alpha9",
+    "sequelize": "~2.0.0-beta.0"
   }
 }
