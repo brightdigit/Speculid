@@ -1,5 +1,32 @@
 var proxyquire = require('proxyquire');
-var foo = proxyquire('../../app/controllers/Account.js', {});
+
+function mockModel (data) {
+  for (var key in data) {
+    this[key] = data[key];
+  }
+}
+
+mockModel.prototype.save = function (cb) {
+  if (this.emailAddress === "already@exists.com") {
+    cb("account already exists");
+    return;
+  }
+  cb(undefined, this);
+};
+
+var account = proxyquire('../../app/controllers/Account.js', {
+  'node-uuid' : {
+    v4 : function () {
+      return 'test';
+    }
+  },
+  './emailer.js' : {
+    send : function (name, data, cb) {
+
+    }
+  },
+  '../models/account.js' : mockModel
+});
 
 exports.Register = {
   testValid: function(test) {
@@ -8,20 +35,38 @@ exports.Register = {
         emailAddress: 'example@valid.com'
       }
     };
-    test.ok(false, "this assertion should fail");
-    test.done();
+    account.Register(request, function (status, result) {
+      test.ok(result.key === 'test');
+      test.done();
+    });
   },
   testAlreadyExists: function(test) {
-    test.ok(false, "this assertion should fail");
-    test.done();
+    var request = {
+      body: {
+        emailAddress: "already@exists.com"
+      }
+    };
+    account.Register(request, function (status, result) {
+      test.ok(status === 400);
+      test.ok(result === "account already exists");
+      test.done();
+    });
   },
   testInvalidEmailAddress: function(test) {
     test.ok(false, "this assertion should fail");
     test.done();
   },
   testPropertyExists: function(test) {
-    test.ok(false, "this assertion should fail");
-    test.done();
+    var request = {
+      body: {
+        emailAddress: 'example@valid.com'
+      }
+    };
+    account.Register(request, function (status, result) {
+      test.ok(status === 400);
+      test.ok(result.reason === 'test');
+      test.done();
+    });
   },
 };
 

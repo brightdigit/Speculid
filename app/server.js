@@ -3,16 +3,16 @@ var app = express();
 app.use(express.bodyParser());
 var Controllers = require('./controllers');
 
-app.post('/api/v1/register', function(req, res) {
-  console.log(req.body);
-  Controllers.Account.Register(req, function(result, status) {
-    if (status == undefined) {
-      res.send(result);
-    } else {
+function http (func) {
+  return function (req, res) {
+    func(req, function(status, result) {
+      status = status || 200;
       res.send(status, result);
-    }
-  });
-});
+    });
+  };
+}
+
+app.post('/api/v1/register', http(Controllers.Account.Register));
 
 app.post('/api/v1/confirm', function(req, res) {
   Controllers.Account.Confirm(req, function(result, status) {

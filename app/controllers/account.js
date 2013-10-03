@@ -1,21 +1,37 @@
+var uuid = require('node-uuid'),
+  emailer = request('./emailer.js'),
+  account = require('../models/account.js');
+
 module.exports = {
   Register: function(request, callback) {
-    var uuid = require('node-uuid');
+
     var secret, key;
-    console.log(request.body);
     emailAddress = request.body.emailAddress;
 
+    var data = {
+      emailAddress :  request.body.emailAddress,
+      secret : uuid.v4(),
+      key : uuid.v4()
+    };
+
+    var a = new account(data);
+
+    a.save(function (error, a) {
+      if (error) {
+        callback(500, error);
+        return;
+      }
+      emailer.send('confirmation', {emailAddress : a.emailAddress, secret : a.secret}, function (error, response) {
+        callback(undefined, {
+          key: a.key
+        });
+      });
+    });
     // verify emailAddress
     // property exists
     // valid
     // isn't already used
 
-    secret = uuid.v4();
-    key = uuid.v4();
-
-    callback({
-      key: uuid.v4()
-    });
     /*
     emailer.aend('confirmation', {emailAddress : emailAddress, secret : secret}, function (error, response) {
       // what to do if error
