@@ -1,5 +1,5 @@
 var uuid = require('node-uuid'),
-  emailer = request('./emailer.js'),
+  emailer = require('./emailer.js'),
   account = require('../models/account.js');
 
 module.exports = {
@@ -18,11 +18,11 @@ module.exports = {
 
     a.save(function (error, a) {
       if (error) {
-        callback(500, error);
+        callback(400, error);
         return;
       }
       emailer.send('confirmation', {emailAddress : a.emailAddress, secret : a.secret}, function (error, response) {
-        callback(undefined, {
+        callback(error ? 400 : undefined, error || {
           key: a.key
         });
       });
@@ -37,8 +37,6 @@ module.exports = {
       // what to do if error
       callback({key: uuid.v4()});
     });
-*/
-    /*
     var nodemailer = require("nodemailer");
     var uuid = require('node-uuid');
 

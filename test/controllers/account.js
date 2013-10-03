@@ -1,4 +1,4 @@
-var proxyquire = require('proxyquire');
+var proxyquire = require('proxyquire').noCallThru();
 
 function mockModel (data) {
   for (var key in data) {
@@ -7,7 +7,7 @@ function mockModel (data) {
 }
 
 mockModel.prototype.save = function (cb) {
-  if (this.emailAddress === "already@exists.com") {
+  if (this.emailAddress === "example@invalid.com") {
     cb("account already exists");
     return;
   }
@@ -22,7 +22,11 @@ var account = proxyquire('../../app/controllers/Account.js', {
   },
   './emailer.js' : {
     send : function (name, data, cb) {
-
+      if (data.emailAddress === 'example@emailFailure.com') {
+        cb({error : 'email failure'});
+        return;
+      }
+      cb(undefined, {key : 'test'});
     }
   },
   '../models/account.js' : mockModel
@@ -40,10 +44,10 @@ exports.Register = {
       test.done();
     });
   },
-  testAlreadyExists: function(test) {
+  testInvalid: function(test) {
     var request = {
       body: {
-        emailAddress: "already@exists.com"
+        emailAddress: 'example@invalid.com'
       }
     };
     account.Register(request, function (status, result) {
@@ -52,24 +56,21 @@ exports.Register = {
       test.done();
     });
   },
-  testInvalidEmailAddress: function(test) {
-    test.ok(false, "this assertion should fail");
-    test.done();
-  },
-  testPropertyExists: function(test) {
+  testEmailFailure: function(test) {
     var request = {
       body: {
-        emailAddress: 'example@valid.com'
+        emailAddress: 'example@emailFailure.com'
       }
     };
     account.Register(request, function (status, result) {
       test.ok(status === 400);
-      test.ok(result.reason === 'test');
+      test.ok(result.error === 'email failure');
       test.done();
     });
-  },
+  }
 };
 
+/*
 exports.Confirm = {
   test: function(test) {
     test.ok(false, "test failed.");
@@ -89,3 +90,4 @@ exports.testSomethingElse = function(test) {
   test.ok(false, "this assertion should fail");
   test.done();
 };
+*/
