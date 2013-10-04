@@ -3,8 +3,8 @@ var app = express();
 app.use(express.bodyParser());
 var Controllers = require('./controllers');
 
-function http (func) {
-  return function (req, res) {
+function http(func) {
+  return function(req, res) {
     func(req, function(status, result) {
       status = status || 200;
       res.send(status, result);

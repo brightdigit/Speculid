@@ -1,12 +1,12 @@
 var proxyquire = require('proxyquire').noCallThru();
 
-function mockModel (data) {
+function mockModel(data) {
   for (var key in data) {
     this[key] = data[key];
   }
 }
 
-mockModel.prototype.save = function (cb) {
+mockModel.prototype.save = function(cb) {
   if (this.emailAddress === "example@invalid.com") {
     cb("account already exists");
     return;
@@ -15,21 +15,25 @@ mockModel.prototype.save = function (cb) {
 };
 
 var account = proxyquire('../../app/controllers/Account.js', {
-  'node-uuid' : {
-    v4 : function () {
+  'node-uuid': {
+    v4: function() {
       return 'test';
     }
   },
-  './emailer.js' : {
-    send : function (name, data, cb) {
+  './emailer.js': {
+    send: function(name, data, cb) {
       if (data.emailAddress === 'example@emailFailure.com') {
-        cb({error : 'email failure'});
+        cb({
+          error: 'email failure'
+        });
         return;
       }
-      cb(undefined, {key : 'test'});
+      cb(undefined, {
+        key: 'test'
+      });
     }
   },
-  '../models/account.js' : mockModel
+  '../models/account.js': mockModel
 });
 
 exports.Register = {
@@ -39,7 +43,7 @@ exports.Register = {
         emailAddress: 'example@valid.com'
       }
     };
-    account.Register(request, function (status, result) {
+    account.Register(request, function(status, result) {
       test.ok(result.key === 'test');
       test.done();
     });
@@ -50,7 +54,7 @@ exports.Register = {
         emailAddress: 'example@invalid.com'
       }
     };
-    account.Register(request, function (status, result) {
+    account.Register(request, function(status, result) {
       test.ok(status === 400);
       test.ok(result === "account already exists");
       test.done();
@@ -62,7 +66,7 @@ exports.Register = {
         emailAddress: 'example@emailFailure.com'
       }
     };
-    account.Register(request, function (status, result) {
+    account.Register(request, function(status, result) {
       test.ok(status === 400);
       test.ok(result.error === 'email failure');
       test.done();

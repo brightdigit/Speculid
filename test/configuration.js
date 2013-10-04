@@ -1,46 +1,45 @@
-var proxyquire = require('proxyquire');
+var proxyquire = require('proxyquire').noCallThru();
 
-function configuration (node_env) {
+function configuration_create(node_env) {
   process.env.NODE_ENV = node_env;
-  return proxyquire('../app/configuration', 
-  {
-    path : {
-      resolve : function (dir, file) {
+  console.log(node_env);
+  return proxyquire('../app/configuration', {
+    path: {
+      resolve: function(dir, file) {
         return file;
-      } 
+      },
+      '@noCallThru': false
     },
-    fs : {
-      readdirSync : function (file) {
 
-      }
-    },
-    envious : {
-      apply : function () {
-
+    fs: {
+      readdirSync: function(file) {
+        return ['development.json', 'production.json'];
       }
     },
 
-    'development.json' : {
-
+    envious: {
+      apply: function() {
+        return this[process.env.NODE_ENV];
+      }
     },
-    'production.json' : {
-      
+
+    'development.json': {
+        "name": "development"
+    },
+    'production.json': {
+        "name": "production"
     }
   })
-}
+};
 
-exports.production = function (test) {
-  process.env.NODE_ENV = 'production';
-  var configuration = require('../app/configuration');
+exports.production = function(test) {
+  var configuration = configuration_create('production');
   test.ok(configuration.name == 'production');
   test.done();
 };
 
-exports.development = function (test) {
-  process.env.NODE_ENV = 'development';
-  console.log(process.env.NODE_ENV);
-  var configuration = require('../app/configuration');
-  console.log(configuration);
+exports.development = function(test) {
+  var configuration = configuration_create('development');
   test.ok(configuration.name == 'development');
   test.done();
 };

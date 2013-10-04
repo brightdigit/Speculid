@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -10,7 +9,7 @@ var http = require('http');
 var path = require('path');
 var Sequelize = require("sequelize");
 
-var sequelize = new Sequelize ('sequelize-demo', 'sequelize-user');
+var sequelize = new Sequelize('sequelize-demo', 'sequelize-user');
 console.log(sequelize);
 var Project = sequelize.define('Project', {
   title: Sequelize.STRING,
@@ -23,13 +22,15 @@ var Task = sequelize.define('Task', {
   deadline: Sequelize.DATE
 });
 
-Task.sync().success(function () {
-  
-  var task = Task.build({title: 'very important task'});
-  task.save().error(function (err) {
+Task.sync().success(function() {
+
+  var task = Task.build({
+    title: 'very important task'
+  });
+  task.save().error(function(err) {
     console.log(err);
   });
-}).error(function (error) {
+}).error(function(error) {
   console.log(error);
 });
 
@@ -55,10 +56,10 @@ if ('development' == app.get('env')) {
 //app.get('/', routes.index);
 //app.get('/users', user.list);
 
-app.get('/', function (request, response) {
+app.get('/', function(request, response) {
   response.send(200);
 });
 
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
 });
