@@ -30,7 +30,6 @@ module.exports = function() {
     },
 
     statfiles: function(parent, cb, memo, error, files) {
-
       async.reduce(files, memo, this.statfile.bind(this, parent), cb);
     },
 

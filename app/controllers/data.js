@@ -1,5 +1,5 @@
 var configuration = require('../configuration');
-Sequalize = require('sequalize');
+Sequalize = require('sequelize');
 
 (function(configuration, Sequalize) {
   function build_sequalize() {

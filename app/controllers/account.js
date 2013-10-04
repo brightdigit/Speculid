@@ -1,34 +1,53 @@
 var uuid = require('node-uuid'),
   emailer = require('./emailer.js'),
-  account = require('../models/account.js');
+  sequelize = require('./data.js'),
+  account_request = sequelize.import(__dirname + '/../models/request.js');
 
 module.exports = {
   Register: function(request, callback) {
-
+    //callback(400);
+    //return;
+    // error || {
+    // key: ar.key
+    //});
     var secret, key;
-    emailAddress = request.body.emailAddress;
+    var emailAddress = request.body.emailAddress;
+
 
     var data = {
       emailAddress: request.body.emailAddress,
       secret: uuid.v4(),
       key: uuid.v4()
     };
+    //var ar = account_request.build(data);
 
-    var a = new account(data);
+    emailer.queue('confirmation', {
+      emailAddress: data.emailAddress,
+      secret: data.secret
+    }, function(error, response) {
+      callback(undefined, {
+        key: data.key
+      });
+    });
 
-    a.save(function(error, a) {
+    return;
+    ar.save().success(function(ar) {
+      callback(undefined, {
+        key: ar.key
+      });
+      /*
+      emailer.queue('confirmation', {
+        emailAddress: ar.emailAddress,
+        secret: ar.secret
+      }, function(error, response) {
+        
+      });
+*/
+    }).error(function(error) {
       if (error) {
         callback(400, error);
         return;
       }
-      emailer.send('confirmation', {
-        emailAddress: a.emailAddress,
-        secret: a.secret
-      }, function(error, response) {
-        callback(error ? 400 : undefined, error || {
-          key: a.key
-        });
-      });
     });
     // verify emailAddress
     // property exists

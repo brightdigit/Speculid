@@ -1,0 +1,5 @@
+{
+  "from": "<%= monit@brightdigit.com %>",
+  "to": "<%= emailAddress %>",
+  "body": "<%= secret %>"
+}
