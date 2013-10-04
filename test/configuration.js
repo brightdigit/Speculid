@@ -24,10 +24,10 @@ function configuration_create(node_env) {
     },
 
     'development.json': {
-        "name": "development"
+      "name": "development"
     },
     'production.json': {
-        "name": "production"
+      "name": "production"
     }
   })
 };

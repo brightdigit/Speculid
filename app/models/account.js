@@ -1,6 +1,5 @@
-var bcrypt = require('bcrypt'),
-  configuration = require('../configuration.js'),
-  Sequelize = require('sequelize');
+var bcrypt = require('bcrypt');
+var sequelize = require('../controllers/data.js');
 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define("Account", {
