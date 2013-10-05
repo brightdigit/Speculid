@@ -57,3 +57,18 @@ exports.load = function(test) {
     test.done();
   });
 };
+
+exports.unknownDirectory = function(test) {
+  test.ok(false);
+  test.done();
+};
+
+exports.unknownTemplate = function(test) {
+  test.ok(false);
+  test.done();
+};
+
+exports.templateError = function(test) {
+  test.ok(false);
+  test.done();
+};

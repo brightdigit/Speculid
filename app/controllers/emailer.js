@@ -1,13 +1,13 @@
 var nodemailer = require('nodemailer');
 var _ = require('underscore');
-var templates = require('./templates.js')('../templates');
+var templates = require('./templates.js')(__dirname + '/../templates');
 
 module.exports = {
   queue: function(template, data, callback) {
-    console.log(template);
+
     templates(template, data, function(error, mailOptions) {
 
-      console.log(mailOptions);
+
 
       var smtpTransport = nodemailer.createTransport("SMTP", {
         service: "Gmail",

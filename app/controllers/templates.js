@@ -13,7 +13,7 @@ module.exports = function() {
         cb(undefined, memo)
       },
       function(error, memo) {
-        console.log(memo);
+
         cb(undefined, memo);
       });
   }
@@ -25,23 +25,18 @@ module.exports = function() {
   function templateSet(dirpath, req) {
     var _templates;
     var require = req || require;
-
-
+    
     function template(filepath, cb) {
       var result = {};
       var ext = path.extname(filepath);
       var name = path.basename(filepath, ext);
       try {
-
         var json = require(filepath);
       } catch (e) {
-
         cb();
       }
 
       Object.keys(json).forEach(function(key) {
-
-
         result[key] = _.template(json[key]);
 
       });
@@ -57,7 +52,8 @@ module.exports = function() {
           function(key, cb) {
 
             memo[key] = item[key];
-            cb();
+
+            cb(undefined, memo);
           },
           function(error) {
 
@@ -66,10 +62,10 @@ module.exports = function() {
       }
 
       function _parsed(name, data, cb, error, results) {
+
+
         async.reduce(results, {}, reduce,
           function(error, result) {
-
-
             _templates = result;
             _templates[name](data, cb);
           }
@@ -81,7 +77,7 @@ module.exports = function() {
 
     return function(name, data, cb) {
       if (!_templates) {
-        lsr(dirpath, parsed(name, data, cb), template);
+        lsr(dirpath, parsed(name, cb), templateName, templateData);
       } else {
         _templates(data, cb);
       }

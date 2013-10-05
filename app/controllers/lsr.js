@@ -34,6 +34,7 @@ module.exports = function() {
     },
 
     statfile: function(parent, memo, file, cb) {
+
       var filepath = path.join(parent, file);
       fs.stat(filepath, this.parsefiledir.bind(this, filepath, cb, memo));
     },
@@ -42,8 +43,6 @@ module.exports = function() {
 
       async.map([this.keyIterator.bind(this), this.iterator.bind(this)],
         function(item, cb) {
-
-
           item(filepath, cb);
         },
         function(error, results) {
