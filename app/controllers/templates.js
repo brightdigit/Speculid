@@ -25,59 +25,39 @@ module.exports = function() {
   function templateSet(dirpath, req) {
     var _templates;
     var require = req || require;
-    
-    function template(filepath, cb) {
-      var result = {};
-      var ext = path.extname(filepath);
-      var name = path.basename(filepath, ext);
-      try {
-        var json = require(filepath);
-      } catch (e) {
-        cb();
-      }
-
-      Object.keys(json).forEach(function(key) {
-        result[key] = _.template(json[key]);
-
-      });
-      var retValue = {};
-      retValue[name] = datatemplate(result);
-      cb(undefined, retValue);
-    }
 
     function parsed(name, data, cb) {
-      function reduce(memo, item, cb) {
-
-        async.each(Object.keys(item),
-          function(key, cb) {
-
-            memo[key] = item[key];
-
-            cb(undefined, memo);
-          },
-          function(error) {
-
-            cb(error, memo);
-          });
-      }
 
       function _parsed(name, data, cb, error, results) {
+        _templates = results;
 
-
-        async.reduce(results, {}, reduce,
-          function(error, result) {
-            _templates = result;
-            _templates[name](data, cb);
-          }
-        );
+        _templates[name](data, cb);
       }
-
       return _parsed.bind(undefined, name, data, cb);
     }
 
+    function templateData(filepath, cb) {
+      var data, templates = {};
+      try {
+        data = require(filepath);
+      } catch (e) {
+        cb();
+      }
+      Object.keys(data).forEach(function(name) {
+        templates[name] = _.template(data[name]);
+      });
+      cb(undefined, datatemplate(templates));
+    }
+
+    function templateName(filepath, cb) {
+
+      cb(undefined, path.basename(filepath, '.json'));
+    }
+
     return function(name, data, cb) {
+
       if (!_templates) {
-        lsr(dirpath, parsed(name, cb), templateName, templateData);
+        lsr(dirpath, parsed(name, data, cb), templateData, templateName);
       } else {
         _templates(data, cb);
       }

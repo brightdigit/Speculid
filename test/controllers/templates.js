@@ -1,12 +1,11 @@
 var proxyquire = require('proxyquire').noCallThru();
 var templates = proxyquire('../../app/controllers/templates.js', {
   './lsr': function(path, callback, iterator, keyIterator) {
-    iterator(path, function(error, result) {
-      callback(error, [result, {
-        'test2': {
-          x: 0
-        }
-      }]);
+    iterator('test.json', function(error, result) {
+
+      callback(error, {
+        'test': result
+      });
     });
   },
   'underscore': {
@@ -52,6 +51,7 @@ exports.load = function(test) {
     x: true,
     y: true
   }, function(error, content) {
+
     test.ok(content.to.x);
     test.ok(content.from.y);
     test.done();
