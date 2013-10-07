@@ -29,9 +29,19 @@ module.exports = function() {
     function parsed(name, data, cb) {
 
       function _parsed(name, data, cb, error, results) {
+        if (error) {
+          cb(error);
+          return;
+        }
+
         _templates = results;
 
-        _templates[name](data, cb);
+        if (_templates[name]) {
+          _templates[name](data, cb);
+          return;
+        }
+
+        cb();
       }
       return _parsed.bind(undefined, name, data, cb);
     }
@@ -58,8 +68,10 @@ module.exports = function() {
 
       if (!_templates) {
         lsr(dirpath, parsed(name, data, cb), templateData, templateName);
+      } else if (_templates[name]) {
+        _templates[name](data, cb);
       } else {
-        _templates(data, cb);
+        cb();
       }
     };
   };

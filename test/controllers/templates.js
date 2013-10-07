@@ -1,6 +1,10 @@
 var proxyquire = require('proxyquire').noCallThru();
 var templates = proxyquire('../../app/controllers/templates.js', {
   './lsr': function(path, callback, iterator, keyIterator) {
+    if (path === 'unknownDirectory') {
+      callback({ errno: 34, code: 'ENOENT', path: 'test2' }, undefined);
+      return;
+    } 
     iterator('test.json', function(error, result) {
 
       callback(error, {
@@ -59,16 +63,21 @@ exports.load = function(test) {
 };
 
 exports.unknownDirectory = function(test) {
-  test.ok(false);
-  test.done();
+  templates('unknownDirectory', newRequire)('test',{
+    x: true,
+    y: true
+  }, function(error, content) {
+    test.deepEqual(error, { errno: 34, code: 'ENOENT', path: 'test2' });
+    test.done();
+  });
 };
 
 exports.unknownTemplate = function(test) {
-  test.ok(false);
-  test.done();
-};
-
-exports.templateError = function(test) {
-  test.ok(false);
-  test.done();
+  templates('test', newRequire)('unknownTemplate',{
+    x: true,
+    y: true
+  }, function(error, content) {
+    test.strictEqual(content, undefined);
+    test.done();
+  });
 };
