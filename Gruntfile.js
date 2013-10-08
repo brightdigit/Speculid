@@ -20,7 +20,9 @@ module.exports = function(grunt) {
         src: ['Gruntfile.js', "app/**/*.js", "test/**/*.js", "app/**/*.json", "test/**/*.json"],
         options: {
           mode: "VERIFY_ONLY",
-          indent_size: 2
+          js: {
+            indent_size: 2
+          }
         }
       }
     }
@@ -31,7 +33,7 @@ module.exports = function(grunt) {
     grunt.log.write('Logging some stuff...').ok();
   });
 
-  grunt.registerTask('default', ['sample', 'jsbeautifier', 'jshint', 'nodeunit']);
+  grunt.registerTask('default', ['sample', 'nodeunit', 'jshint', 'jsbeautifier']);
 
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-contrib-jshint');
