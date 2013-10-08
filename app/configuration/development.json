@@ -2,5 +2,10 @@
   "database": {
     "username": "tgio_user",
     "database": "tgio_dev"
+  },
+  "sequelize": {
+    "sync" : {
+      "force" : true
+    }
   }
 }
