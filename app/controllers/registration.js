@@ -10,8 +10,8 @@ module.exports = {
 
     var data = {
       emailAddress: request.body.emailAddress,
-      secret: new Buffer (uuid.parse(uuid.v4())),
-      key: new Buffer (uuid.parse(uuid.v4()))
+      secret: new Buffer(uuid.parse(uuid.v4())),
+      key: new Buffer(uuid.parse(uuid.v4()))
     };
     var ar = account_request.build(data);
 

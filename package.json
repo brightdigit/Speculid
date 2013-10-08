@@ -14,7 +14,10 @@
     "proxyquire": "~0.5.1",
     "js-beautify": "~1.4.0",
     "minify": "~0.2.1",
-    "git-wrapper": "~0.1.1"
+    "git-wrapper": "~0.1.1",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-nodeunit": "~0.2.1",
+    "grunt-jsbeautifier": "~0.2.2"
   },
   "dependencies": {
     "envious": "~0.2.0",

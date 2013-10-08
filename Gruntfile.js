@@ -1,11 +1,39 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json')
+    pkg: grunt.file.readJSON('package.json'),
+    jshint: {
+      all: ['Gruntfile.js', 'app/**/*.js', 'test/**/*.js', 'app/**/*.json', 'test/**/*.json']
+    },
+    nodeunit: {
+      all: ['test/**/*.js']
+    },
+    jsbeautifier: {
+      "default": {
+        src: ['Gruntfile.js', "app/**/*.js", "test/**/*.js", "app/**/*.json", "test/**/*.json"],
+        options: {
+          js: {
+            indent_size: 2
+          }
+        }
+      },
+      "git-pre-commit": {
+        src: ['Gruntfile.js', "app/**/*.js", "test/**/*.js", "app/**/*.json", "test/**/*.json"],
+        options: {
+          mode: "VERIFY_ONLY",
+          indent_size: 2
+        }
+      }
+    }
   });
 
   // A very basic default task.
-  grunt.registerTask('default', 'Log some stuff.', function() {
+  grunt.registerTask('sample', 'Log some stuff.', function() {
     grunt.log.write('Logging some stuff...').ok();
   });
 
+  grunt.registerTask('default', ['sample', 'jsbeautifier', 'jshint', 'nodeunit']);
+
+  grunt.loadNpmTasks('grunt-jsbeautifier');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-nodeunit');
 };

@@ -4,8 +4,8 @@
     "database": "tgio_dev"
   },
   "sequelize": {
-    "sync" : {
-      "force" : true
+    "sync": {
+      "force": true
     }
   }
 }
