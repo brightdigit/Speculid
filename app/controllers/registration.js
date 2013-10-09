@@ -4,7 +4,6 @@ var uuid = require('node-uuid'),
   models = require('../models'),
   registration = require('../models').registration;
 
-console.log(models);
 module.exports = {
   Register: function(request, callback) {
     var secret, key;
@@ -20,10 +19,10 @@ module.exports = {
     ar.save().success(function(ar) {
       emailer.queue('confirmation', {
         emailAddress: data.emailAddress,
-        secret: data.secret
+        secret: data.secret.toString('base64')
       }, function(error, response) {
         callback(error, error ? response : {
-          key: data.key
+          key: data.key.toString('base64')
         });
       });
     }).error(function(error) {
