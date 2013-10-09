@@ -1,8 +1,10 @@
 var uuid = require('node-uuid'),
-  emailer = require('./emailer.js'),
-  sequelize = require('./data.js'),
-  account_request = sequelize.import(__dirname + '/../models/request.js');
+  libs = require('../libs'),
+  emailer = libs.emailer,
+  models = require('../models'),
+  registration = require('../models').registration;
 
+console.log(models);
 module.exports = {
   Register: function(request, callback) {
     var secret, key;
@@ -13,7 +15,7 @@ module.exports = {
       secret: new Buffer(uuid.parse(uuid.v4())),
       key: new Buffer(uuid.parse(uuid.v4()))
     };
-    var ar = account_request.build(data);
+    var ar = registration.build(data);
 
     ar.save().success(function(ar) {
       emailer.queue('confirmation', {

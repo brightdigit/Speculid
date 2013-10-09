@@ -1,3 +1,3 @@
 module.exports = {
-  Account: require('./Account')
+  registration: require('./registration')
 };

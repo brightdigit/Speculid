@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
-var Controllers = require('./controllers');
-var sequelize = require('./controllers/data.js');
+var controllers = require('./controllers');
+var sequelize = require('./libs/sequelize.js');
 var configuration = require('./configuration');
 
 app.use(express.bodyParser());
@@ -17,7 +17,7 @@ function http(func) {
 }
 
 app.post('/api/v1/register', function(req, res) {
-  Controllers.Account.Register(req, function(status, result) {
+  controllers.registration.Register(req, function(status, result) {
     status = status || 200;
     res.send(status, result);
   });
