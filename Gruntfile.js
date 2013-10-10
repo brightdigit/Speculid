@@ -12,7 +12,10 @@ module.exports = function(grunt) {
         src: ['Gruntfile.js', "app/**/*.js", "test/**/*.js", "app/**/*.json", "test/**/*.json"],
         options: {
           js: {
-            indent_size: 2
+            indent_size: 2,
+            "preserve_newlines": true,
+            "max_preserve_newlines": 10,
+            "jslint_happy": false,
           }
         }
       },
@@ -21,7 +24,10 @@ module.exports = function(grunt) {
         options: {
           mode: "VERIFY_ONLY",
           js: {
-            indent_size: 2
+            indent_size: 2,
+            "preserve_newlines": true,
+            "max_preserve_newlines": 10,
+            "jslint_happy": false,
           }
         }
       }
