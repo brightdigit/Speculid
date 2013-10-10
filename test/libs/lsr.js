@@ -58,7 +58,6 @@ exports.readir = function(test) {
   lsr('path',
     function(error, result) {
       test.ifError(error);
-      console.log(result);
       test.done();
     },
     function(item, cb) {

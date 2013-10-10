@@ -6,6 +6,10 @@ var configuration = require('./configuration');
 
 app.use(express.bodyParser());
 
+controllers.initialize(configuration, sequelize, app);
+controllers.listen();
+
+/*
 function http(func) {
   return function(req, res) {
     func(req, function(status, result) {
@@ -29,3 +33,4 @@ sequelize.sync(configuration.sequelize.sync).success(function() {
   console.log(error);
   process.exit(1);
 });
+*/

@@ -1,3 +1,5 @@
-module.exports = {
-  registration: require('./registration')
-};
+var master = require('./master');
+
+module.exports = new master(
+  'registration'
+);

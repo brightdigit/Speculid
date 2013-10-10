@@ -2,7 +2,6 @@ var proxyquire = require('proxyquire').noCallThru();
 
 function configuration_create(node_env) {
   process.env.NODE_ENV = node_env;
-  console.log(node_env);
   return proxyquire('../app/configuration', {
     path: {
       resolve: function(dir, file) {

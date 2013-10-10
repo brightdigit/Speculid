@@ -10,7 +10,7 @@ var path = require('path');
 var Sequelize = require("sequelize");
 
 var sequelize = new Sequelize('sequelize-demo', 'sequelize-user');
-console.log(sequelize);
+
 var Project = sequelize.define('Project', {
   title: Sequelize.STRING,
   description: Sequelize.TEXT

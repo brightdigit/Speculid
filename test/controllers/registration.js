@@ -94,32 +94,9 @@ exports.Register = {
       }
     };
     account.Register(request, function(status, result) {
-      console.log(status);
       test.ok(status === 400);
       test.ok(result.error === 'email failure');
       test.done();
     });
   }
 };
-
-/*
-exports.Confirm = {
-  test: function(test) {
-    test.ok(false, "test failed.");
-    test.done();
-  }
-};
-
-
-exports.Login = {
-  test: function(test) {
-    test.ok(false, "test failed.");
-    test.done();
-  }
-};
-
-exports.testSomethingElse = function(test) {
-  test.ok(false, "this assertion should fail");
-  test.done();
-};
-*/
