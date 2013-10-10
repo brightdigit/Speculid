@@ -1,13 +1,18 @@
 var proxyquire = require('proxyquire');
-var emailer = proxyquire('../../app/controllers/emailer.js', {
+var emailer = proxyquire('../../app/libs/emailer.js', {
   nodemailer: {
     createTransport: function(type, settings) {
       return {
         sendMail: function(mailOptions, callback) {
           callback(undefined, mailOptions);
         }
-      }
+      };
     }
+  },
+  './templates.js': function(dirname) {
+    return function(name, data, cb) {
+      cb(undefined, data);
+    };
   }
 });
 
@@ -22,7 +27,7 @@ exports.queue = {
       name: "test"
     }, function(error, response) {
       //test.ok(false, "this assertion should fail");
-      test.strictEqual(response.body, "test");
+      test.strictEqual(response.name, "test");
       test.done();
     });
   }

@@ -6,34 +6,61 @@ function mockModel(data) {
   }
 }
 
-mockModel.prototype.save = function(cb) {
+mockModel.prototype.save = function() {
   if (this.emailAddress === "example@invalid.com") {
-    cb("account already exists");
-    return;
+    this._error = "account already exists";
   }
-  cb(undefined, this);
+
+  return this;
 };
 
-var account = proxyquire('../../app/controllers/Account.js', {
+mockModel.prototype.success = function(cb) {
+  if (!this._error) {
+    cb(this);
+  }
+
+  return this;
+};
+
+mockModel.prototype.error = function(cb) {
+  if (this._error) {
+    cb(this._error);
+  }
+
+  return this;
+};
+
+var account = proxyquire('../../app/controllers/registration.js', {
   'node-uuid': {
     v4: function() {
       return 'test';
+    },
+    parse: function(value) {
+      return value;
     }
   },
-  './emailer.js': {
-    send: function(name, data, cb) {
-      if (data.emailAddress === 'example@emailFailure.com') {
-        cb({
-          error: 'email failure'
+  '../libs': {
+    emailer: {
+      queue: function(name, data, cb) {
+        if (data.emailAddress === 'example@emailFailure.com') {
+          cb({
+            error: 'email failure'
+          });
+          return;
+        }
+        cb(undefined, {
+          key: 'test'
         });
-        return;
       }
-      cb(undefined, {
-        key: 'test'
-      });
     }
   },
-  '../models/account.js': mockModel
+  '../models': {
+    registration: {
+      build: function(data) {
+        return new mockModel(data);
+      }
+    }
+  }
 });
 
 exports.Register = {
@@ -44,7 +71,7 @@ exports.Register = {
       }
     };
     account.Register(request, function(status, result) {
-      test.ok(result.key === 'test');
+      test.ok(result.key === (new Buffer('test')).toString('base64'));
       test.done();
     });
   },
@@ -67,6 +94,7 @@ exports.Register = {
       }
     };
     account.Register(request, function(status, result) {
+      console.log(status);
       test.ok(status === 400);
       test.ok(result.error === 'email failure');
       test.done();

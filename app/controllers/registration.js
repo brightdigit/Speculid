@@ -21,7 +21,7 @@ module.exports = {
         emailAddress: data.emailAddress,
         secret: data.secret.toString('base64')
       }, function(error, response) {
-        callback(error, error ? response : {
+        callback(error ? 400 : undefined, error ? error : {
           key: data.key.toString('base64')
         });
       });

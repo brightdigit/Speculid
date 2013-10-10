@@ -8,7 +8,6 @@ app.use(express.bodyParser());
 
 function http(func) {
   return function(req, res) {
-    console.log('test');
     func(req, function(status, result) {
       status = status || 200;
       res.send(status, result);
@@ -20,26 +19,6 @@ app.post('/api/v1/register', function(req, res) {
   controllers.registration.Register(req, function(status, result) {
     status = status || 200;
     res.send(status, result);
-  });
-});
-
-app.post('/api/v1/confirm', function(req, res) {
-  Controllers.Account.Confirm(req, function(result, status) {
-    if (status == undefined) {
-      res.send(result);
-    } else {
-      res.send(status, body);
-    }
-  });
-});
-
-app.post('/api/v1/login', function(req, res) {
-  Controllers.Account.Login(req, function(result, status) {
-    if (status == undefined) {
-      res.send(result);
-    } else {
-      res.send(status, body);
-    }
   });
 });
 

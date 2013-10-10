@@ -11,9 +11,9 @@ var configuration = {
   }
 };
 
-var data = proxyquire('../../app/controllers/data.js', {
+var data = proxyquire('../../app/libs/sequelize.js', {
   '../configuration': configuration,
-  'sequalize': function() {
+  'sequelize': function() {
     this.arguments = Array.prototype.slice.call(arguments, 0);
   }
 });

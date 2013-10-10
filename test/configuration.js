@@ -29,8 +29,8 @@ function configuration_create(node_env) {
     'production.json': {
       "name": "production"
     }
-  })
-};
+  });
+}
 
 exports.production = function(test) {
   var configuration = configuration_create('production');

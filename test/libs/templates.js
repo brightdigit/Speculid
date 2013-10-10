@@ -1,5 +1,5 @@
 var proxyquire = require('proxyquire').noCallThru();
-var templates = proxyquire('../../app/controllers/templates.js', {
+var templates = proxyquire('../../app/libs/templates.js', {
   './lsr': function(path, callback, iterator, keyIterator) {
     if (path === 'unknownDirectory') {
       callback({
@@ -32,14 +32,14 @@ var templates = proxyquire('../../app/controllers/templates.js', {
   async: {
     each: function(arr, iterator, callback) {
       arr.forEach(function(item) {
-        iterator(item, function() {})
+        iterator(item, function() {});
       });
       callback();
     },
     reduce: function(arr, memo, iterator, callback) {
 
       arr.forEach(function(item) {
-        iterator(memo, item, function(error, newmemo) {})
+        iterator(memo, item, function(error, newmemo) {});
       });
 
       callback(undefined, memo);

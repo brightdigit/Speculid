@@ -1,6 +1,6 @@
 var proxyquire = require('proxyquire').noCallThru();
 var verify = {};
-var lsr = proxyquire('../../app/controllers/lsr.js', {
+var lsr = proxyquire('../../app/libs/lsr.js', {
   fs: {
     readdir: function(path, cb) {
       if (path == 'path') {
@@ -8,7 +8,7 @@ var lsr = proxyquire('../../app/controllers/lsr.js', {
       } else if (path == 'path,b') {
         cb(undefined, ['ba', 'bc']);
       } else {
-        cb('unknown path: ' + path)
+        cb('unknown path: ' + path);
       }
     },
     stat: function(filepath, cb) {
@@ -30,7 +30,7 @@ var lsr = proxyquire('../../app/controllers/lsr.js', {
     reduce: function(arr, memo, iterator, callback) {
 
       arr.forEach(function(item) {
-        iterator(memo, item, function(error, newmemo) {})
+        iterator(memo, item, function(error, newmemo) {});
       });
       callback(undefined, memo);
     },

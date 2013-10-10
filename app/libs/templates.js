@@ -10,10 +10,9 @@ module.exports = function() {
     async.reduce(Object.keys(templates), {},
       function(memo, templateKey, cb) {
         memo[templateKey] = templates[templateKey](data);
-        cb(undefined, memo)
+        cb(undefined, memo);
       },
       function(error, memo) {
-
         cb(undefined, memo);
       });
   }
@@ -74,7 +73,7 @@ module.exports = function() {
         cb();
       }
     };
-  };
+  }
 
   return function(dirpath, req) {
     dirpath = path.resolve(dirpath);
