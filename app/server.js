@@ -7,7 +7,10 @@ var configuration = require('./configuration');
 app.use(express.bodyParser());
 
 controllers.initialize(configuration, sequelize, app);
-controllers.listen();
+controllers.listen(function (error) {
+  console.log(error);
+  process.exit(1);  
+});
 
 /*
 function http(func) {

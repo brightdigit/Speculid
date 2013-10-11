@@ -5,7 +5,7 @@ module.exports = (function() {
     loadControllers: function(names) {
       var controllers = {};
       names.forEach(function(name) {
-        controllers[name] = new controller(require('./' + name + '.js'));
+        controllers[name] = controller.require(name);
       });
       return controllers;
     }
@@ -17,29 +17,28 @@ module.exports = (function() {
 
   master.prototype = {
     controllers: [],
-    initialize: function(configuration, sequelize, app, cb) {
+    initialize: function(configuration, sequelize, app) {
       this.configuration = configuration;
       this.sequelize = sequelize;
       this.app = app;
-      this.cb = cb;
       for (var name in this.controllers) {
         if (typeof(this.controllers[name].initialize) === 'function') {
           this.controllers[name].initialize(this);
         }
       }
     },
-    syncComplete: function(error) {
+    syncComplete: function(cb, error) {
       if (error) {
-        this.cb(error);
+        cb(error);
       } else {
         this.app.listen(3000);
       }
     },
-    listen: function() {
+    listen: function(cb) {
       this.sequelize
         .sync(this.configuration.sequelize.sync)
-        .success(this.syncComplete.bind(this))
-        .error(this.syncComplete.bind(this));
+        .success(this.syncComplete.bind(this, cb, undefined))
+        .error(this.syncComplete.bind(this, cb));
     }
   };
 
