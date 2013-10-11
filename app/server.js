@@ -7,33 +7,7 @@ var configuration = require('./configuration');
 app.use(express.bodyParser());
 
 controllers.initialize(configuration, sequelize, app);
-controllers.listen(function (error) {
-  console.log(error);
-  process.exit(1);  
-});
-
-/*
-function http(func) {
-  return function(req, res) {
-    func(req, function(status, result) {
-      status = status || 200;
-      res.send(status, result);
-    });
-  };
-}
-
-app.post('/api/v1/register', function(req, res) {
-  controllers.registration.Register(req, function(status, result) {
-    status = status || 200;
-    res.send(status, result);
-  });
-});
-
-sequelize.sync(configuration.sequelize.sync).success(function() {
-  app.listen(3000);
-  console.log('Listening on port 3000');
-}).error(function(error) {
+controllers.listen(function(error) {
   console.log(error);
   process.exit(1);
 });
-*/

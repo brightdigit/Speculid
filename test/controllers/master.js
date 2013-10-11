@@ -8,8 +8,19 @@ var master = proxyquire('../../app/controllers/master.js', {
       this.master = master;
     }
   },
-  './controller' : function (data) {
-    return data;
+  './controller': {
+    require: function(name) {
+      if (name === 'test') {
+        return {
+          initialize: function(master) {
+            this.master = master;
+          },
+          test: {
+            'value': true
+          }
+        };
+      }
+    }
   }
 });
 

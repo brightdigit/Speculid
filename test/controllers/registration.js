@@ -30,7 +30,8 @@ mockModel.prototype.error = function(cb) {
   return this;
 };
 
-var account = proxyquire('../../app/controllers/registration.js', {
+var controller = require('../../app/controllers/controller.js');
+var registration = proxyquire('../../app/controllers/registration.js', {
   'node-uuid': {
     v4: function() {
       return 'test';
@@ -63,14 +64,16 @@ var account = proxyquire('../../app/controllers/registration.js', {
   }
 });
 
-exports.Register = {
+exports.registration = {
   testValid: function(test) {
     var request = {
       body: {
         emailAddress: 'example@valid.com'
       }
     };
-    account.Register(request, function(status, result) {
+    controller.find(registration, {
+      verb: 'post'
+    })(request, function(status, result) {
       test.ok(result.key === (new Buffer('test')).toString('base64'));
       test.done();
     });
@@ -81,7 +84,9 @@ exports.Register = {
         emailAddress: 'example@invalid.com'
       }
     };
-    account.Register(request, function(status, result) {
+    controller.find(registration, {
+      verb: 'post'
+    })(request, function(status, result) {
       test.ok(status === 400);
       test.ok(result === "account already exists");
       test.done();
@@ -93,7 +98,9 @@ exports.Register = {
         emailAddress: 'example@emailFailure.com'
       }
     };
-    account.Register(request, function(status, result) {
+    controller.find(registration, {
+      verb: 'post'
+    })(request, function(status, result) {
       test.ok(status === 400);
       test.ok(result.error === 'email failure');
       test.done();

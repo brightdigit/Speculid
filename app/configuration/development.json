@@ -8,7 +8,7 @@
       "force": true
     }
   },
-  "app" : {
-    "basePath" : "/api/v1/"
+  "app": {
+    "basePath": "/api/v1/"
   }
 }
