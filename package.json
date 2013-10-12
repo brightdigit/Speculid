@@ -17,7 +17,8 @@
     "git-wrapper": "~0.1.1",
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-contrib-nodeunit": "~0.2.1",
-    "grunt-jsbeautifier": "~0.2.2"
+    "grunt-jsbeautifier": "~0.2.2",
+    "grunt-apidoc": "~0.2.0"
   },
   "dependencies": {
     "envious": "~0.2.0",
@@ -27,6 +28,7 @@
     "underscore": "~1.5.2",
     "async": "~0.2.9",
     "mysql": "~2.0.0-alpha9",
-    "sequelize": "~2.0.0-beta.0"
+    "sequelize": "~2.0.0-beta.0",
+    "winston": "~0.7.2"
   }
 }
