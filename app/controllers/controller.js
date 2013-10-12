@@ -1,3 +1,5 @@
+var logger = require('./logger');
+
 module.exports = (function() {
   var _S = {};
 
@@ -43,6 +45,7 @@ module.exports = (function() {
   function priv(obj, name) {
     var __P = {
       register: function(item, index) {
+        logger.info("%s: %s", item.verb, item.getPath());
         this.master.app[item.verb](item.getPath(this.master), path.callback(item));
       },
       callback: function(verb) {

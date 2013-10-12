@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     apidoc: {
       tgio: {
         src: "app/",
-        dest: "apidoc/"
+        dest: "public/apidoc/"
       }
     },
     jsbeautifier: {
