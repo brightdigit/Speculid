@@ -4,6 +4,20 @@ function model(name) {
   return sequelize.import(__dirname + '/' + name + '.js');
 }
 
-module.exports = {
-  registration: model('registration')
-};
+function modelObj(obj) {
+  function _modelObj (obj, name) {
+    obj[name] = model(name);
+  }
+
+  return _modelObj.bind(undefined, obj);
+}
+
+function models() {
+  var obj = {};
+  Array.prototype.forEach.call(arguments, modelObj(obj));
+  return obj;
+}
+
+module.exports = models('registration', 'user');
+
+
