@@ -46,6 +46,7 @@ module.exports = [{
           where : ["emailAddress = ? and `key` = ? and secret = ? and registeredAt > DATE_SUB(NOW(), INTERVAL 5 MINUTE)", request.body.emailAddress, new Buffer(request.body.key, 'base64'), new Buffer(request.body.secret, 'base64')],
           order : "registeredAt DESC"}
         ).success(function (registration) {
+          console.log('registration');
           cb(undefined, registration);
         });
       }
@@ -55,6 +56,7 @@ module.exports = [{
         User.find({
           where : { name : request.body.name }
         }).success(function (user) {
+          console.log('user');
           cb(undefined, user);
         });
       }
@@ -64,13 +66,14 @@ module.exports = [{
           registration : findRegistration, 
           user : findUser
         }, function (err, results) {
-        if (results.registration !== undefined && results.user === undefined) {
-          User.create({ 
+          console.log(results);
+        if (results.registration !== undefined && !results.user) {
+          console.log(results);
+          var user = User.create({ 
             name : request.body.name, 
             password : request.body.password, 
-            emailAddress : request.body.emailAddress, 
-            registration : results.registration 
-          }).success(function (user) {
+            emailAddress : request.body.emailAddress
+          }).setRegistration(results.registration).success(function (user) {
             callback();
           });
         }
