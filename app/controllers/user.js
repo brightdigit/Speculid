@@ -3,8 +3,8 @@
     emailer = libs.emailer,
     async = require('async'),
     models = require('../models'),
-    registration = models.registration,
-    user = models.user;
+    Registration = models.registration,
+    User = models.user;
 
 module.exports = [{
 /**
@@ -42,8 +42,8 @@ module.exports = [{
       */
       function findRegistration (cb) {
 
-        registration.find({ 
-          where : "emailAddress = ? and key = ? and secret = ? and registeredAt > DATE_SUB(NOW(), INTERVAL 5 MINUTE)", 
+        Registration.find({ 
+          where : ["emailAddress = ? and `key` = ? and secret = ? and registeredAt > DATE_SUB(NOW(), INTERVAL 5 MINUTE)", request.body.emailAddress, new Buffer(request.body.key, 'base64'), new Buffer(request.body.secret, 'base64')],
           order : "registeredAt DESC"}
         ).success(function (registration) {
           cb(undefined, registration);
@@ -52,10 +52,29 @@ module.exports = [{
 
       function findUser (cb) {
         // returns list of similar username available or undefined for available name or empty for no similar name
+        User.find({
+          where : { name : request.body.name }
+        }).success(function (user) {
+          cb(undefined, user);
+        });
       }
 
-      async.parallel([findRegistration, findUser], function (err, results) {
-        callback(err, results);
+      async.parallel(
+        {
+          registration : findRegistration, 
+          user : findUser
+        }, function (err, results) {
+        if (results.registration !== undefined && results.user === undefined) {
+          User.create({ 
+            name : request.body.name, 
+            password : request.body.password, 
+            emailAddress : request.body.emailAddress, 
+            registration : results.registration 
+          }).success(function (user) {
+            callback();
+          });
+        }
+        callback('Error');
       });
       /*
       var secret, key;
