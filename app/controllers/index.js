@@ -1,5 +1,5 @@
 var master = require('./master');
 
 module.exports = new master(
-  'registration'
+  'registration', 'user'
 );
