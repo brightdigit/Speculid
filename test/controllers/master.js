@@ -8,7 +8,7 @@ var master = proxyquire('../../app/controllers/_master.js', {
       this.master = master;
     }
   },
-  './controller': {
+  './_controller': {
     require: function(name) {
       if (name === 'test') {
         return {
@@ -74,6 +74,11 @@ exports.asList = {
     example.listen();
     test.ok(app.active);
     test.done();
+  },
+  tearDown : function (cb) {
+    example = undefined;
+    app.active = false;
+    cb();
   }
 };
 
@@ -98,5 +103,10 @@ exports.asArray = {
     example.listen();
     test.ok(app.active);
     test.done();
+  },
+  tearDown : function (cb) {
+    example = undefined;
+    app.active = false;
+    cb();
   }
 }

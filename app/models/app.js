@@ -1,6 +1,4 @@
 module.exports = function(sequelize, DataTypes) {
-  //var User = sequelize.$('user');
-
   var App = sequelize.define("app", {
     name : {
       type : DataTypes.STRING,
@@ -12,8 +10,6 @@ module.exports = function(sequelize, DataTypes) {
       allowNull : false,
     }
   });
-
-  //App.hasOne(User);
 
   return App;
 };

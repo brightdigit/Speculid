@@ -30,7 +30,7 @@ mockModel.prototype.error = function(cb) {
   return this;
 };
 
-var controller = require('../../app/controllers/controller.js');
+var controller = require('../../app/controllers/_controller.js');
 var registration = proxyquire('../../app/controllers/user.js', {
 });
 
@@ -40,6 +40,7 @@ exports.registration = {
     test.done();
   },
   testInvalidName : function (test) {
-    
+    test.ok(false);
+    test.done();
   }
 };
