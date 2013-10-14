@@ -1,0 +1,14 @@
+{
+  "name": "sequeship",
+  "version": "0.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "sequelize": "~2.0.0-beta.0"
+  }
+}
