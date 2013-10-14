@@ -23,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  User.hasOne(Registration);
+  User.belongsTo(Registration);
 
   return User;
 };
