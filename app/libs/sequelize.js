@@ -13,6 +13,10 @@ Sequalize = require('sequelize');
       _data = build_sequalize();
     }
 
+    _data.$ = function (name) {
+      return this.import(__dirname + "/../models/" + name + ".js");
+    }
+
     return _data;
   }();
 })(configuration, Sequalize);

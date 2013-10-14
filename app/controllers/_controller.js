@@ -1,4 +1,4 @@
-var logger = require('./logger');
+var logger = require('../libs/logger');
 
 module.exports = (function() {
   var _S = {};

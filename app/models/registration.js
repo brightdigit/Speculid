@@ -1,5 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define("registration", {
+  var App = sequelize.import(__dirname + '/App.js');
+
+  var Registration = sequelize.define("registration", {
     emailAddress: {
       type : DataTypes.STRING,
       allowNull : false,
@@ -21,4 +23,8 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: DataTypes.NOW
     }
   });
+
+  Registration.belongsTo(App);
+
+  return Registration;
 };

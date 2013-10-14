@@ -1,5 +1,4 @@
-var master = require('./master');
+var master = require('./_master'),
+  indexer = require('../libs/indexer');
 
-module.exports = new master(
-  'registration', 'user'
-);
+module.exports = indexer(__dirname, master.construct);

@@ -1,5 +1,5 @@
 var proxyquire = require('proxyquire').noCallThru();
-var master = proxyquire('../../app/controllers/master.js', {
+var master = proxyquire('../../app/controllers/_master.js', {
   './test.js': {
     'test': {
       value: true
@@ -53,27 +53,50 @@ var configuration = {
 
 var example;
 
-exports.setUp = function(cb) {
-  example = new master('test');
-  example.initialize(configuration, sequelize, app);
-  cb();
+exports.asList = {
+  setUp : function(cb) {
+    example = new master('test');
+    example.initialize(configuration, sequelize, app);
+    cb();
+  },
+  constructor : function(test) {
+    test.ok(example.controllers.test.test.value);
+    test.done();
+  },
+  initialize : function(test) {
+    test.strictEqual(example.controllers.test.master.app, app);
+    test.strictEqual(example.controllers.test.master.sequelize, sequelize);
+    test.strictEqual(example.controllers.test.master.configuration, configuration);
+    test.done();
+  },
+  listen : function(test) {
+    test.ok(!app.active);
+    example.listen();
+    test.ok(app.active);
+    test.done();
+  }
 };
 
-exports.constructor = function(test) {
-  test.ok(example.controllers.test.test.value);
-  test.done();
-};
-
-exports.initialize = function(test) {
-  test.strictEqual(example.controllers.test.master.app, app);
-  test.strictEqual(example.controllers.test.master.sequelize, sequelize);
-  test.strictEqual(example.controllers.test.master.configuration, configuration);
-  test.done();
-};
-
-exports.listen = function(test) {
-  test.ok(!app.active);
-  example.listen();
-  test.ok(app.active);
-  test.done();
-};
+exports.asArray = {
+  setUp : function(cb) {
+    example = new master(['test']);
+    example.initialize(configuration, sequelize, app);
+    cb();
+  },
+  constructor : function(test) {
+    test.ok(example.controllers.test.test.value);
+    test.done();
+  },
+  initialize : function(test) {
+    test.strictEqual(example.controllers.test.master.app, app);
+    test.strictEqual(example.controllers.test.master.sequelize, sequelize);
+    test.strictEqual(example.controllers.test.master.configuration, configuration);
+    test.done();
+  },
+  listen : function(test) {
+    test.ok(!app.active);
+    example.listen();
+    test.ok(app.active);
+    test.done();
+  }
+}

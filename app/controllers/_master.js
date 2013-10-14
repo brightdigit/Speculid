@@ -1,4 +1,4 @@
-var controller = require('./controller');
+var controller = require('./_controller');
 
 module.exports = (function() {
   var _ = {
@@ -12,7 +12,11 @@ module.exports = (function() {
   };
 
   var master = function() {
-    this.controllers = _.loadControllers(Array.prototype.slice.call(arguments));
+    if (typeof (arguments[0]) === 'string') {
+      this.controllers = _.loadControllers(Array.prototype.slice.call(arguments));
+    } else if (Object.prototype.toString.call( arguments[0] ) === '[object Array]') {
+      this.controllers = _.loadControllers(arguments[0]);
+    }
   };
 
   master.prototype = {
@@ -40,6 +44,10 @@ module.exports = (function() {
         .success(this.syncComplete.bind(this, cb, undefined))
         .error(this.syncComplete.bind(this, cb));
     }
+  };
+
+  master.fromControllers = function () {
+    return new master(Array.prototype.slice.call(arguments));
   };
 
   return master;

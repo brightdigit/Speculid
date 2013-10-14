@@ -74,7 +74,11 @@ module.exports = [{
           }).success(function (user) {
             user.setRegistration(results.registration).success(function (user) {
               callback();
+            }).error(function (error) {
+              console.log(error);
             });
+          }).error(function (error) {
+            console.log(error);
           });
         }
         callback('Error');

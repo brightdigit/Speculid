@@ -1,5 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
-  var Registration = sequelize.import(__dirname + '/registration.js');
+  var Registration = sequelize.$('registration'),
+    App = sequelize.$('app'),
+    Company = sequelize.$('company');
 
   var User = sequelize.define("user", {
     name : {
@@ -23,7 +25,11 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  User.belongsTo(Registration);
+  User
+    .belongsTo(Company)
+    .belongsTo(Registration)
+    .hasMany(App)
+    .hasOne(Company, { as : 'contact', foreignKey : 'contactId'});
 
   return User;
 };

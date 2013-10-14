@@ -1,7 +1,7 @@
 var sequelize = require('../libs').sequelize;
 
 function model(name) {
-  return sequelize.import(__dirname + '/' + name + '.js');
+  return sequelize.$(name);
 }
 
 function modelObj(obj) {
@@ -18,6 +18,6 @@ function models() {
   return obj;
 }
 
-module.exports = models('registration', 'user');
+module.exports = models('registration', 'user', 'app');
 
 
