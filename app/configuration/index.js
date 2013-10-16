@@ -1,20 +1,23 @@
 var fs = require('fs'),
   path = require('path'),
-  envious = require('envious');
+  merge = require('deepmerge'),
+  envious = require('envious'),
+  defaultOptions = require('./_default.json');
 
 (function(fs, path, envious) {
+
   function build_configuration(fs, path, envious) {
     var files = fs.readdirSync(__dirname);
     files.forEach(function(file) {
-      name = path.basename(file, '.json');
-      try {
-        envious[name] = require(path.resolve(__dirname, file));
-      } catch (e) {
-        console.log(e);
+      if (file[0] != '_') {
+        name = path.basename(file, '.json');
+        envious[name] = merge(defaultOptions, require(path.resolve(__dirname, file)));
       }
     });
+    envious.default_env = "development";
     return envious.apply({
-      strict: true
+      strict: true,
+      strictProperties: true
     });
   }
 

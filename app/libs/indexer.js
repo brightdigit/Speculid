@@ -11,15 +11,21 @@ module.exports = function (dir, func) {
     return _filesOnly.bind(undefined, dir);
   }
 
+  function basename (filename) {
+      return filename.substring(0, filename.length - 3);
+  }
+
   function addObj (obj, dir) {
     function _ (obj, dir, file) {
       var mod;
       try {
-        mod = require(path.resolve(dir, file));
+        mod = require(path.resolve(dir, file + '.js'));
       }
       catch (e) {
         logger.warn("unable to load '%s': %s", path.resolve(dir, file), e);
+        return;
       }
+      obj[file] = mod;
     }
 
     return _.bind(undefined, obj, dir);
@@ -28,6 +34,7 @@ module.exports = function (dir, func) {
   function obj (dir, files) {
     var o = {};
     files.forEach(addObj(o, dir));
+    return o;
   }
 
   function parseFiles(files, dir, func) {
@@ -38,5 +45,5 @@ module.exports = function (dir, func) {
     }
   }
 
-  return parseFiles(fs.readdirSync(dir).filter(filesOnly(path)), dir, func);
+  return parseFiles(fs.readdirSync(dir).filter(filesOnly(dir)).map(basename), dir, func);
 };

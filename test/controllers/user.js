@@ -34,13 +34,19 @@ var controller = require('../../app/controllers/_controller.js');
 var registration = proxyquire('../../app/controllers/user.js', {
 });
 
-exports.registration = {
+exports.user = {
   testValid: function(test) {
-    test.ok(false);
-    test.done();
+    controller.find(registration, {"verb" : "post"})(request,
+      function (status, result) {
+        test.ok(false);
+        test.done();
+    });
   },
   testInvalidName : function (test) {
-    test.ok(false);
-    test.done();
+    controller.find(registration, {"verb" : "post"})(request,
+      function (status, result) {
+        test.ok(false);
+        test.done();
+    });
   }
 };

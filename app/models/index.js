@@ -1,4 +1,5 @@
-var sequelize = require('../libs').sequelize;
+var sequelize = require('../libs').sequelize,
+  indexer = require('../libs').indexer;
 
 function model(name) {
   return sequelize.$(name);
@@ -12,12 +13,12 @@ function modelObj(obj) {
   return _modelObj.bind(undefined, obj);
 }
 
-function models() {
+function models(names) {
   var obj = {};
-  Array.prototype.forEach.call(arguments, modelObj(obj));
+  names.forEach(modelObj(obj));
   return obj;
 }
 
-module.exports = models('registration', 'user', 'app');
+module.exports = indexer(__dirname, models);
 
 

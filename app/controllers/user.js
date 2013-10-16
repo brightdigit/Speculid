@@ -1,6 +1,7 @@
   var uuid = require('node-uuid'),
     libs = require('../libs'),
     emailer = libs.emailer,
+    logger = libs.logger,
     async = require('async'),
     models = require('../models'),
     Registration = models.registration,
@@ -46,7 +47,6 @@ module.exports = [{
           where : ["emailAddress = ? and `key` = ? and secret = ? and registeredAt > DATE_SUB(NOW(), INTERVAL 5 MINUTE)", request.body.emailAddress, new Buffer(request.body.key, 'base64'), new Buffer(request.body.secret, 'base64')],
           order : "registeredAt DESC"}
         ).success(function (registration) {
-          console.log('registration');
           cb(undefined, registration);
         });
       }
@@ -56,7 +56,6 @@ module.exports = [{
         User.find({
           where : { name : request.body.name }
         }).success(function (user) {
-          console.log('user');
           cb(undefined, user);
         });
       }
@@ -75,10 +74,10 @@ module.exports = [{
             user.setRegistration(results.registration).success(function (user) {
               callback();
             }).error(function (error) {
-              console.log(error);
+              logger.error(error);
             });
           }).error(function (error) {
-            console.log(error);
+            logger.error(error);
           });
         }
         callback('Error');

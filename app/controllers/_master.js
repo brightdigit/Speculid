@@ -47,7 +47,7 @@ module.exports = (function() {
   };
 
   master.fromControllers = function () {
-    return new master(Array.prototype.slice.call(arguments));
+    return new master(arguments[0]);
   };
 
   return master;

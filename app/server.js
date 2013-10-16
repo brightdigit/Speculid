@@ -1,13 +1,16 @@
-var express = require('express');
-var app = express();
-var controllers = require('./controllers');
-var sequelize = require('./libs/sequelize.js');
-var configuration = require('./configuration');
+var express = require('express'),
+  controllers = require('./controllers'),
+  configuration = require('./configuration'),
+  libs = require('./libs');
+
+var app = express(),
+  sequelize = libs.sequelize,
+  logger = libs.logger;
 
 app.use(express.bodyParser());
 
 controllers.initialize(configuration, sequelize, app);
 controllers.listen(function(error) {
-  console.log(error);
+  logger.error(error);
   process.exit(1);
 });
