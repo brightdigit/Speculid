@@ -6,7 +6,7 @@ function model(name) {
 }
 
 function modelObj(obj) {
-  function _modelObj (obj, name) {
+  function _modelObj(obj, name) {
     obj[name] = model(name);
   }
 
@@ -20,5 +20,3 @@ function models(names) {
 }
 
 module.exports = indexer(__dirname, models);
-
-

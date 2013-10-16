@@ -54,28 +54,28 @@ var configuration = {
 var example;
 
 exports.asList = {
-  setUp : function(cb) {
+  setUp: function(cb) {
     example = new master('test');
     example.initialize(configuration, sequelize, app);
     cb();
   },
-  constructor : function(test) {
+  constructor: function(test) {
     test.ok(example.controllers.test.test.value);
     test.done();
   },
-  initialize : function(test) {
+  initialize: function(test) {
     test.strictEqual(example.controllers.test.master.app, app);
     test.strictEqual(example.controllers.test.master.sequelize, sequelize);
     test.strictEqual(example.controllers.test.master.configuration, configuration);
     test.done();
   },
-  listen : function(test) {
+  listen: function(test) {
     test.ok(!app.active);
     example.listen();
     test.ok(app.active);
     test.done();
   },
-  tearDown : function (cb) {
+  tearDown: function(cb) {
     example = undefined;
     app.active = false;
     cb();
@@ -83,30 +83,30 @@ exports.asList = {
 };
 
 exports.asArray = {
-  setUp : function(cb) {
+  setUp: function(cb) {
     example = new master(['test']);
     example.initialize(configuration, sequelize, app);
     cb();
   },
-  constructor : function(test) {
+  constructor: function(test) {
     test.ok(example.controllers.test.test.value);
     test.done();
   },
-  initialize : function(test) {
+  initialize: function(test) {
     test.strictEqual(example.controllers.test.master.app, app);
     test.strictEqual(example.controllers.test.master.sequelize, sequelize);
     test.strictEqual(example.controllers.test.master.configuration, configuration);
     test.done();
   },
-  listen : function(test) {
+  listen: function(test) {
     test.ok(!app.active);
     example.listen();
     test.ok(app.active);
     test.done();
   },
-  tearDown : function (cb) {
+  tearDown: function(cb) {
     example = undefined;
     app.active = false;
     cb();
   }
-}
+};

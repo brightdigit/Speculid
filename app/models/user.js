@@ -4,23 +4,23 @@ module.exports = function(sequelize, DataTypes) {
     Company = sequelize.$('company');
 
   var User = sequelize.define("user", {
-    name : {
-      type : DataTypes.STRING,
-      allowNull : false,
-      unique : true,
-      validate : {
-        is: ["[a-z][a-z0-9-]{5,15}"] 
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        is: ["[a-z][a-z0-9-]{5,15}"]
       }
     },
-    password : {
-      type : DataTypes.STRING,
-      allowNull : false,
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     emailAddress: {
-      type : DataTypes.STRING,
-      allowNull : false,
+      type: DataTypes.STRING,
+      allowNull: false,
       validate: {
-        isEmail : true
+        isEmail: true
       }
     }
   });
@@ -29,7 +29,10 @@ module.exports = function(sequelize, DataTypes) {
     .belongsTo(Company)
     .belongsTo(Registration)
     .hasMany(App)
-    .hasOne(Company, { as : 'contact', foreignKey : 'contactId'});
+    .hasOne(Company, {
+      as: 'contact',
+      foreignKey: 'contactId'
+    });
 
   return User;
 };

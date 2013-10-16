@@ -45,7 +45,7 @@ module.exports = function(grunt) {
     grunt.log.write('Logging some stuff...').ok();
   });
 
-  grunt.registerTask('default', ['sample', 'nodeunit', 'jshint', 'apidoc', 'jsbeautifier']);
+  grunt.registerTask('default', ['sample', 'nodeunit', 'jshint', 'jsbeautifier', 'apidoc']);
 
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-apidoc');

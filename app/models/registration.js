@@ -3,23 +3,23 @@ module.exports = function(sequelize, DataTypes) {
 
   var Registration = sequelize.define("registration", {
     emailAddress: {
-      type : DataTypes.STRING,
-      allowNull : false,
+      type: DataTypes.STRING,
+      allowNull: false,
       validate: {
-        isEmail : true
+        isEmail: true
       }
     },
     key: {
-      type : DataTypes.BLOB('tiny'),
-      allowNull : false
+      type: DataTypes.BLOB('tiny'),
+      allowNull: false
     },
     secret: {
-      type : DataTypes.BLOB('tiny'),
-      allowNull : false
+      type: DataTypes.BLOB('tiny'),
+      allowNull: false
     },
-    registeredAt : {
+    registeredAt: {
       type: DataTypes.DATE,
-      allowNull : false,
+      allowNull: false,
       defaultValue: DataTypes.NOW
     }
   });

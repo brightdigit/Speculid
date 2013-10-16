@@ -3,24 +3,24 @@ module.exports = function(sequelize, DataTypes) {
     App = sequelize.$('app');
 
   var Session = sequelize.define("session", {
-    key : {
-      type : DataTypes.STRING,
-      allowNull : false,
-      unique : true
+    key: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true
     },
-    startedAt : {
+    startedAt: {
       type: DataTypes.DATE,
-      allowNull : false,
+      allowNull: false,
       defaultValue: DataTypes.NOW
     },
-    lastActivatedAt : {
+    lastActivatedAt: {
       type: DataTypes.DATE,
-      allowNull : false,
+      allowNull: false,
       defaultValue: DataTypes.NOW
     },
-    endedAt : {
+    endedAt: {
       type: DataTypes.DATE,
-      allowNull : true
+      allowNull: true
     }
   });
 

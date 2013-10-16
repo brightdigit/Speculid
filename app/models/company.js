@@ -2,10 +2,10 @@ module.exports = function(sequelize, DataTypes) {
   //var User = sequelize.$('user');
 
   var Company = sequelize.define("company", {
-    name : {
-      type : DataTypes.STRING,
-      allowNull : false,
-      unique : true
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true
     }
   });
 

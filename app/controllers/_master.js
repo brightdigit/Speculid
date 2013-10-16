@@ -12,9 +12,9 @@ module.exports = (function() {
   };
 
   var master = function() {
-    if (typeof (arguments[0]) === 'string') {
+    if (typeof(arguments[0]) === 'string') {
       this.controllers = _.loadControllers(Array.prototype.slice.call(arguments));
-    } else if (Object.prototype.toString.call( arguments[0] ) === '[object Array]') {
+    } else if (Object.prototype.toString.call(arguments[0]) === '[object Array]') {
       this.controllers = _.loadControllers(arguments[0]);
     }
   };
@@ -46,7 +46,7 @@ module.exports = (function() {
     }
   };
 
-  master.fromControllers = function () {
+  master.fromControllers = function() {
     return new master(arguments[0]);
   };
 

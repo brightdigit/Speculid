@@ -2,26 +2,25 @@ var fs = require('fs'),
   path = require('path'),
   logger = require('./logger.js');
 
-module.exports = function (dir, func) {
-  function filesOnly (dir) {
-    function _filesOnly (dir, subpath) {
+module.exports = function(dir, func) {
+  function filesOnly(dir) {
+    function _filesOnly(dir, subpath) {
       return subpath !== 'index.js' && subpath[0] !== '_' && fs.statSync(path.resolve(dir, subpath)).isFile();
     }
 
     return _filesOnly.bind(undefined, dir);
   }
 
-  function basename (filename) {
-      return filename.substring(0, filename.length - 3);
+  function basename(filename) {
+    return filename.substring(0, filename.length - 3);
   }
 
-  function addObj (obj, dir) {
-    function _ (obj, dir, file) {
+  function addObj(obj, dir) {
+    function _(obj, dir, file) {
       var mod;
       try {
         mod = require(path.resolve(dir, file + '.js'));
-      }
-      catch (e) {
+      } catch (e) {
         logger.warn("unable to load '%s': %s", path.resolve(dir, file), e);
         return;
       }
@@ -31,7 +30,7 @@ module.exports = function (dir, func) {
     return _.bind(undefined, obj, dir);
   }
 
-  function obj (dir, files) {
+  function obj(dir, files) {
     var o = {};
     files.forEach(addObj(o, dir));
     return o;

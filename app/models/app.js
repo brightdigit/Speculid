@@ -1,13 +1,13 @@
 module.exports = function(sequelize, DataTypes) {
   var App = sequelize.define("app", {
-    name : {
-      type : DataTypes.STRING,
-      allowNull : false,
-      unique : true
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true
     },
-    platform : {
-      type : DataTypes.STRING,
-      allowNull : false,
+    platform: {
+      type: DataTypes.STRING,
+      allowNull: false,
     }
   });
 
