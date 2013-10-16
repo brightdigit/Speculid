@@ -1,12 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.$('user'),
-    App = sequelize.$('app');
+    App = sequelize.$('app'),
+    Device = sequelize.$('device');
 
   var Session = sequelize.define("session", {
     key: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
+      type: DataTypes.BLOB('tiny'),
+      allowNull: false
     },
     startedAt: {
       type: DataTypes.DATE,
@@ -26,6 +26,7 @@ module.exports = function(sequelize, DataTypes) {
 
   Session.belongsTo(User);
   Session.belongsTo(App);
+  Session.belongsTo(Device);
 
   return Session;
 };

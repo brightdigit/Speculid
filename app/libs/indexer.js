@@ -17,11 +17,12 @@ module.exports = function(dir, func) {
 
   function addObj(obj, dir) {
     function _(obj, dir, file) {
-      var mod;
+      var mod,
+        filepath = path.resolve(dir, file + '.js');
       try {
-        mod = require(path.resolve(dir, file + '.js'));
+        mod = require(filepath);
       } catch (e) {
-        logger.warn("unable to load '%s': %s", path.resolve(dir, file), e);
+        logger.warn("unable to load '%s': %s", filepath, e);
         return;
       }
       obj[file] = mod;

@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var App = sequelize.import(__dirname + '/App.js');
+  var App = sequelize.$('app');
 
   var Registration = sequelize.define("registration", {
     emailAddress: {
