@@ -8,6 +8,13 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.BLOB('tiny'),
       allowNull: false
     },
+    clientIpAddress: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isIP: true
+      }
+    },
     startedAt: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -22,11 +29,22 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DATE,
       allowNull: true
     }
+  }, {
+    instanceMethods: {
+      renew: function() {
+        this.lastActivatedAt = DataTypes.NOW;
+        return this;
+      },
+      logoff: function() {
+        this.endedAt = DataTypes.NOW;
+        return this;
+      }
+    }
   });
 
-  Session.belongsTo(User);
-  Session.belongsTo(App);
-  Session.belongsTo(Device);
+  Session.belongsTo(User)
+    .belongsTo(App)
+    .belongsTo(Device);
 
   return Session;
 };

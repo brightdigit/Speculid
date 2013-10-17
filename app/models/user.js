@@ -1,6 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   var Registration = sequelize.$('registration'),
     App = sequelize.$('app'),
+    Device = sequelize.$('device'),
     Company = sequelize.$('company');
 
   var User = sequelize.define("user", {
@@ -29,10 +30,13 @@ module.exports = function(sequelize, DataTypes) {
     .belongsTo(Company)
     .belongsTo(Registration)
     .hasMany(App)
+    .hasMany(Device)
     .hasOne(Company, {
       as: 'contact',
       foreignKey: 'contactId'
     });
+
+  Device.hasMany(User);
 
   return User;
 };

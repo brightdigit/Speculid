@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(250),
       allowNull: false,
       unique: true,
-      validate : {
+      validate: {
         is: ["[a-z][a-z0-9-]{4,14}"]
       }
     }
