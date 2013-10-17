@@ -55,6 +55,10 @@ module.exports = [{
       }
     }
 
+    function beginSession(device, app, user, request, callback) {
+        callback(500);
+    }
+
     async.parellel({
       user: findUser(request.body),
       app: findApp(request.body),
@@ -71,19 +75,6 @@ module.exports = [{
       } else {
         beginSession(device, app, user, request, callback);
       }
-    });
-    User.find({
-      where: {
-        name: request.body.name,
-        password: request.body.password
-      }
-    }).success(function(user) {
-      if (user) {
-        //user.hasDevice()
-      } else {
-
-      }
-
     });
   }
 }];
