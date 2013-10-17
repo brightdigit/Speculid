@@ -9,6 +9,7 @@
     }
   },
   "app": {
-    "basePath": "/api/v1/"
+    "basePath": "/api/v1/",
+    "secret": "h9Jd>v;Khe1wE;j6e(CrA~#xSo:x9_(Yd9tG`t{:<1uNV,lN8qj+@!aBy<$LsO("
   }
 }

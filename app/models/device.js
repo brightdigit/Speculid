@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.BLOB('tiny'),
       allowNull: false
     },
-    userAgent : {
+    userAgent: {
       type: DataTypes.STRING,
       allowNull: true
     }

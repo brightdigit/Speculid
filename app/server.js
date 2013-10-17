@@ -8,6 +8,9 @@ var app = express(),
   logger = libs.logger;
 
 app.use(express.bodyParser());
+app.use(express.cookieParser({
+  secret: configuration.app.secret
+}));
 
 controllers.initialize(configuration, sequelize, app);
 controllers.listen(function(error) {

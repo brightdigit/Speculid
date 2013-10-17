@@ -1,4 +1,5 @@
-var models = require('../models');
+var async = require('async'),
+  models = require('../models');
 
 var User = models.user,
   App = models.app;
@@ -32,6 +33,45 @@ module.exports = [{
 
   verb: 'post',
   callback: function(request, callback) {
+    // find user
+    // find app
+    // find or create device
+
+    function findUser(requestBody) {
+      function _(requestBody, cb) {
+
+      }
+    }
+
+    function findApp(requestBody) {
+      function _(requestBody, cb) {
+
+      }
+    }
+
+    function findDevice(request) {
+      function _(request, cb) {
+
+      }
+    }
+
+    async.parellel({
+      user: findUser(request.body),
+      app: findApp(request.body),
+      device: findDevice(request)
+    }, function(error, result) {
+      if (!user) {
+        callback(401, {
+          error: "Unknown username or password."
+        });
+      } else if (!app) {
+        callback(400, {
+          error: "Unknown application key."
+        });
+      } else {
+        beginSession(device, app, user, request, callback);
+      }
+    });
     User.find({
       where: {
         name: request.body.name,

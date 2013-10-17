@@ -15,6 +15,10 @@ module.exports = function(sequelize, DataTypes) {
         isIP: true
       }
     },
+    clientIdentification: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     startedAt: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -42,7 +46,8 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  Session.belongsTo(User)
+  Session
+    .belongsTo(User)
     .belongsTo(App)
     .belongsTo(Device);
 
