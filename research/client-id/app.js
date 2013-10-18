@@ -1,4 +1,5 @@
 var express = require('express'),
+  async = require('async'),
   Sequelize = require('sequelize'),
   app = express();
 
@@ -12,42 +13,65 @@ var sequelize = new Sequelize('database', null, null, {
 });
 
 var Entry = sequelize.define("entry", {
-  name : {
-    type : Sequelize.STRING,
-    allowNull : false
+  name: {
+    type: Sequelize.STRING,
+    allowNull: false
   }
 });
 
 var Field = sequelize.define("field", {
-  name : {
-    type : Sequelize.STRING,
-    allowNull : false,
-    unique : true
+  name: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    unique: true
   }
 });
 
 var Header = sequelize.define("header", {
-  value : {
-    type : Sequelize.STRING,
-    allowNull : false
+  value: {
+    type: Sequelize.STRING,
+    allowNull: false
   }
 });
 
 Header.belongsTo(Field).belongsTo(Entry);
 
-sequelize.sync().success( function () {
-  app.get('/:name', function(req, res){
+function createHeader(entry, headers) {
+  function _(entry, headers, field, cb) {
+    Header.create({
+      value: headers[field.name]
+    }).success(function (header) {
+      header.setEntry(entry).success(function (header) {
+        header.setField(field).success(function (header) {
+          cb();
+        });
+      });
+    });
+  }
+
+  return _.bind(undefined, entry, headers);
+}
+
+sequelize.sync().success(function () {
+  app.get('/:name', function (req, res) {
     var chainer = new Sequelize.Utils.QueryChainer();
     chainer
-      .add(Entry.create({name : req.params.name}));
+      .add(Entry.create({
+        name: req.params.name
+      }));
     for (var key in req.headers) {
-      chainer.add(Field.findOrCreate({name : key}));
+      chainer.add(Field.findOrCreate({
+        name: key
+      }));
     }
 
     chainer.run().success(function (results) {
 
       var entry = results[0];
-
+      async.each(results.slice(1), createHeader(entry, req.headers), function (error) {
+        res.send(error || req.headers);
+      });
+      /*
       for (var index = 1; index < results.length; index++) {
         var field = results[index];
         Header.create({
@@ -61,7 +85,7 @@ sequelize.sync().success( function () {
         });//.setEntry(entry).setField(results[index]));
       }
       res.send(entry.id);
-
+      */
     });
 
   });
