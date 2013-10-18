@@ -41,22 +41,28 @@ module.exports = [{
       function _(requestBody, cb) {
 
       }
+
+      return _.bind(undefined, requestBody);
     }
 
     function findApp(requestBody) {
       function _(requestBody, cb) {
 
       }
+
+      return _.bind(undefined, requestBody);
     }
 
     function findDevice(request) {
       function _(request, cb) {
 
       }
+
+      return _.bind(undefined, requestBody);
     }
 
     function beginSession(device, app, user, request, callback) {
-        callback(500);
+      callback(500);
     }
 
     async.parellel({

@@ -3,6 +3,9 @@ var express = require('express'),
   Sequelize = require('sequelize'),
   app = express();
 
+var UAParser = require('ua-parser-js');
+var parser = new UAParser();
+
 var sequelize = new Sequelize('database', null, null, {
   // sqlite! now!
   dialect: 'sqlite',
@@ -69,6 +72,8 @@ sequelize.sync().success(function () {
 
       var entry = results[0];
       async.each(results.slice(1), createHeader(entry, req.headers), function (error) {
+        var ua = req.headers['user-agent'];
+        console.log(parser.setUA(ua).getResult());  
         res.send(error || req.headers);
       });
       /*
