@@ -2,7 +2,8 @@ var async = require('async'),
   models = require('../models');
 
 var User = models.user,
-  App = models.app;
+  App = models.app,
+  Device = models.device;
 
 module.exports = [{
   /**
@@ -39,7 +40,7 @@ module.exports = [{
 
     function findUser(requestBody) {
       function _(requestBody, cb) {
-
+        User.findByLogin(requestBody.name, requestBody.password).success(cb);
       }
 
       return _.bind(undefined, requestBody);
@@ -47,7 +48,7 @@ module.exports = [{
 
     function findApp(requestBody) {
       function _(requestBody, cb) {
-
+        App.findByKey(requestBody.apiKey).success(cb);
       }
 
       return _.bind(undefined, requestBody);
@@ -55,7 +56,7 @@ module.exports = [{
 
     function findDevice(request) {
       function _(request, cb) {
-
+        Device.findByKey(request.signedCookie['deviceKey'], request.headers['user-agent'], cb);
       }
 
       return _.bind(undefined, requestBody);
@@ -70,16 +71,16 @@ module.exports = [{
       app: findApp(request.body),
       device: findDevice(request)
     }, function(error, result) {
-      if (!user) {
+      if (!result.user) {
         callback(401, {
           error: "Unknown username or password."
         });
-      } else if (!app) {
+      } else if (!result.app) {
         callback(400, {
           error: "Unknown application key."
         });
       } else {
-        beginSession(device, app, user, request, callback);
+        beginSession(result.device, result.app, result.user, request, callback);
       }
     });
   }

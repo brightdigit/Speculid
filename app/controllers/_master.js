@@ -1,4 +1,5 @@
-var controller = require('./_controller');
+var controller = require('./_controller'),
+  configuration = require('../configuration');
 
 module.exports = (function() {
   var _ = {
@@ -32,10 +33,14 @@ module.exports = (function() {
       }
     },
     syncComplete: function(cb, error) {
+      var that = this;
       if (error) {
         cb(error);
       } else {
-        this.app.listen(3000);
+        configuration.script("syncComplete", function (error, result) {
+          console.log(result.key);
+          that.app.listen(3000);
+        });
       }
     },
     listen: function(cb) {

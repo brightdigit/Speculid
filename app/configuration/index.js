@@ -15,10 +15,29 @@ var fs = require('fs'),
       }
     });
     envious.default_env = "development";
-    return envious.apply({
+    var conf =  envious.apply({
       strict: true,
       strictProperties: true
     });
+
+    conf.script = function (name, cb) {
+      var method;
+      if (this.app.scripts[name]) {
+        try {
+          method = require("../scripts/" + this.app.scripts[name] + ".js");
+        } catch (e) {
+          console.log(e);
+
+        }
+      }
+      if (method) {
+        method(cb);
+      } else {
+        cb();
+      }
+    };
+
+    return conf;
   }
 
   var _configuration;

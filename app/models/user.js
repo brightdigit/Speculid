@@ -24,6 +24,12 @@ module.exports = function(sequelize, DataTypes) {
         isEmail: true
       }
     }
+  }, {
+    classMethods : {
+      findByLogin : function (name, password) {
+        return User.find({where : {name : name, password : password}});
+      }
+    }
   });
 
   User

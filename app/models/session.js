@@ -15,10 +15,6 @@ module.exports = function(sequelize, DataTypes) {
         isIP: true
       }
     },
-    clientIdentification: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
     startedAt: {
       type: DataTypes.DATE,
       allowNull: false,

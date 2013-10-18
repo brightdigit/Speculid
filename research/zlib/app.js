@@ -5,4 +5,8 @@ var text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean com
 var md5sum = crypto.createHash('md5');
 md5sum.update(text);
 var d = md5sum.digest('base64');
-console.log(d);
+//console.log(d);
+
+var key = crypto.randomBytes(48);
+console.log(key.toString('base64').length);
+console.log(key.toString('base64'));
