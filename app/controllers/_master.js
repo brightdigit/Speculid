@@ -38,7 +38,10 @@ module.exports = (function() {
         cb(error);
       } else {
         configuration.script("syncComplete", function (error, result) {
-          console.log(result.key);
+          if (result) {
+          console.log(result.key);  
+          }
+          
           that.app.listen(3000);
         });
       }

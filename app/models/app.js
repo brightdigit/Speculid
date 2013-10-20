@@ -16,6 +16,9 @@ module.exports = function(sequelize, DataTypes) {
       {
         createByName : function (name) {
           return App.create({name : name, key : crypto.randomBytes(48).toString('base64')});
+        },
+        findByKey : function (apiKey) {
+          return App.find({where : {key : apiKey}});
         }
       }
   });

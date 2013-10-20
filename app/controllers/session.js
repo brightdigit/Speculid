@@ -5,7 +5,8 @@ var async = require('async'),
 
 var User = models.user,
   App = models.app,
-  Device = models.device;
+  Device = models.device,
+  Session = models.session;
 
 module.exports = [{
   /**
@@ -42,7 +43,7 @@ module.exports = [{
 
     function findUser(requestBody) {
       function _(requestBody, cb) {
-        User.findByLogin(requestBody.name, requestBody.password).success(cb);
+        User.findByLogin(requestBody.name, requestBody.password).success(cb.bind(undefined, undefined));
       }
 
       return _.bind(undefined, requestBody);
@@ -50,7 +51,7 @@ module.exports = [{
 
     function findApp(requestBody) {
       function _(requestBody, cb) {
-        App.findByKey(requestBody.apiKey).success(cb);
+        App.findByKey(requestBody.apiKey).success(cb.bind(undefined, undefined));
       }
 
       return _.bind(undefined, requestBody);
@@ -58,10 +59,10 @@ module.exports = [{
 
     function findDevice(request) {
       function _(request, cb) {
-        Device.findByKey(request.signedCookie['deviceKey'], request.headers['user-agent'], cb);
+        Device.findByKey(request.body.deviceKey, request.headers['user-agent'], cb.bind(undefined, undefined));
       }
 
-      return _.bind(undefined, requestBody);
+      return _.bind(undefined, request);
     }
 
     function beginSession(device, app, user, request, callback) {
@@ -73,11 +74,13 @@ module.exports = [{
         chainer.add(session.setDevice(device));
         chainer.add(session.setApp(app));
         chainer.add(session.setUser(user));
+        chainer.run().success(function (results) {
+          callback(undefined, {key : session.key.toString('base64')});
+        });
       });
-      callback(500);
     }
 
-    async.parellel({
+    async.parallel({
       user: findUser(request.body),
       app: findApp(request.body),
       device: findDevice(request)
