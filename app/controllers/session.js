@@ -1,5 +1,7 @@
 var async = require('async'),
-  models = require('../models');
+  crypto = require('crypto'),
+  models = require('../models'),
+  QueryChainer = require('Sequelize').Utils.QueryChainer;
 
 var User = models.user,
   App = models.app,
@@ -63,6 +65,15 @@ module.exports = [{
     }
 
     function beginSession(device, app, user, request, callback) {
+      Session.create({
+        key : crypto.randomBytes(48),
+        clientIpAddress : request.headers['x-forwarded-for'] || request.connection.remoteAddress
+      }).success(function (session) {
+        var chainer = new QueryChainer ();
+        chainer.add(session.setDevice(device));
+        chainer.add(session.setApp(app));
+        chainer.add(session.setUser(user));
+      });
       callback(500);
     }
 
