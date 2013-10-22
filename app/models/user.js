@@ -2,6 +2,7 @@ module.exports = function(sequelize, DataTypes) {
   var Registration = sequelize.$('registration'),
     App = sequelize.$('app'),
     Device = sequelize.$('device'),
+    Role = sequelize.$('role'),
     Company = sequelize.$('company');
 
   var User = sequelize.define("user", {
@@ -25,9 +26,14 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   }, {
-    classMethods : {
-      findByLogin : function (name, password) {
-        return User.find({where : {name : name, password : password}});
+    classMethods: {
+      findByLogin: function(name, password) {
+        return User.find({
+          where: {
+            name: name,
+            password: password
+          }
+        });
       }
     }
   });
@@ -35,6 +41,8 @@ module.exports = function(sequelize, DataTypes) {
   User
     .belongsTo(Company)
     .belongsTo(Registration)
+    .belongsTo(Role)
+    .hasOne(Registration)
     .hasMany(App)
     .hasMany(Device)
     .hasOne(Company, {

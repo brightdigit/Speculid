@@ -67,15 +67,17 @@ module.exports = [{
 
     function beginSession(device, app, user, request, callback) {
       Session.create({
-        key : crypto.randomBytes(48),
-        clientIpAddress : request.headers['x-forwarded-for'] || request.connection.remoteAddress
-      }).success(function (session) {
-        var chainer = new QueryChainer ();
+        key: crypto.randomBytes(48),
+        clientIpAddress: request.headers['x-forwarded-for'] || request.connection.remoteAddress
+      }).success(function(session) {
+        var chainer = new QueryChainer();
         chainer.add(session.setDevice(device));
         chainer.add(session.setApp(app));
         chainer.add(session.setUser(user));
-        chainer.run().success(function (results) {
-          callback(undefined, {key : session.key.toString('base64')});
+        chainer.run().success(function(results) {
+          callback(undefined, {
+            key: session.key.toString('base64')
+          });
         });
       });
     }

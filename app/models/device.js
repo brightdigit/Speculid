@@ -1,4 +1,4 @@
-var crypto = require('crypto'), 
+var crypto = require('crypto'),
   QueryChainer = require('Sequelize').Utils.QueryChainer;
 
 module.exports = function(sequelize, DataTypes) {
@@ -10,20 +10,26 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   }, {
-    classMethods : {
-      findByKey : function (key, userAgent, cb) {
+    classMethods: {
+      findByKey: function(key, userAgent, cb) {
         var keyBuffer;
         if (key) {
-          keyBuffer = new Buffer (key, 'base64'); 
+          keyBuffer = new Buffer(key, 'base64');
         } else {
           keyBuffer = crypto.randomBytes(48);
         }
-        Device.find({where : ['`key` = ?', keyBuffer]}).success(
-          function (device) {
+        Device.find({
+          where: ['`key` = ?', keyBuffer]
+        }).success(
+          function(device) {
             var chainer = new QueryChainer();
-            chainer.add(Device.create({key : keyBuffer}));
-            chainer.add(UserAgent.findOrCreate({text : userAgent}));
-            chainer.run().success( function (results) {
+            chainer.add(Device.create({
+              key: keyBuffer
+            }));
+            chainer.add(UserAgent.findOrCreate({
+              text: userAgent
+            }));
+            chainer.run().success(function(results) {
               results[0].setUserAgent(results[1]).success(cb);
             });
           }

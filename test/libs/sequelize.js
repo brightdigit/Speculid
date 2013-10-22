@@ -8,11 +8,19 @@ var configuration = {
     'options': {
       'test': true
     }
-  }
+  },
+  "sequelize": {
+    "logging": {
+      "level": "test"
+    }
+  },
 };
 
 var data = proxyquire('../../app/libs/sequelize.js', {
   '../configuration': configuration,
+  './logger': {
+    test: 12
+  },
   'sequelize': function() {
     this.arguments = Array.prototype.slice.call(arguments, 0);
   }

@@ -46,7 +46,7 @@ module.exports = [{
     function findRegistration(cb) {
 
       Registration.find({
-        where: ["emailAddress = ? and `key` = ? and secret = ? and registeredAt > DATE_SUB(NOW(), INTERVAL 5 MINUTE)", request.body.emailAddress, new Buffer(request.body.key, 'base64'), new Buffer(request.body.secret, 'base64')],
+        where: ["emailAddress = ? and `key` = ? and secret = ? and registeredAt > DATE_SUB(NOW(), INTERVAL 5 MINUTE) and userId is NULL", request.body.emailAddress, new Buffer(request.body.key, 'base64'), new Buffer(request.body.secret, 'base64')],
         order: "registeredAt DESC"
       }).success(function(registration) {
         cb(undefined, registration);
@@ -64,6 +64,7 @@ module.exports = [{
       });
     }
 
+
     async.parallel({
       registration: findRegistration,
       user: findUser
@@ -74,6 +75,7 @@ module.exports = [{
           password: request.body.password,
           emailAddress: request.body.emailAddress
         }).success(function(user) {
+          logger.error("missing setting user to registration");
           user.setRegistration(results.registration).success(function(user) {
             callback();
           }).error(function(error) {

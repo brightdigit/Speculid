@@ -21,6 +21,11 @@ var master = proxyquire('../../app/controllers/_master.js', {
         };
       }
     }
+  },
+  '../configuration': {
+    script: function(name, cb) {
+      cb();
+    }
   }
 });
 

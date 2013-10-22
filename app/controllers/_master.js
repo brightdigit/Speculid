@@ -1,5 +1,6 @@
 var controller = require('./_controller'),
-  configuration = require('../configuration');
+  configuration = require('../configuration'),
+  logger = require('../libs').logger;
 
 module.exports = (function() {
   var _ = {
@@ -37,11 +38,11 @@ module.exports = (function() {
       if (error) {
         cb(error);
       } else {
-        configuration.script("syncComplete", function (error, result) {
+        configuration.script("syncComplete", function(error, result) {
           if (result) {
-          console.log(result.key);  
+            logger.debug(result.key);
           }
-          
+
           that.app.listen(3000);
         });
       }

@@ -5,22 +5,28 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true
-    },    
+    },
     key: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true
     }
   }, {
-    classMethods : 
-      {
-        createByName : function (name) {
-          return App.create({name : name, key : crypto.randomBytes(48).toString('base64')});
-        },
-        findByKey : function (apiKey) {
-          return App.find({where : {key : apiKey}});
-        }
+    classMethods: {
+      createByName: function(name) {
+        return App.create({
+          name: name,
+          key: crypto.randomBytes(48).toString('base64')
+        });
+      },
+      findByKey: function(apiKey) {
+        return App.find({
+          where: {
+            key: apiKey
+          }
+        });
       }
+    }
   });
 
   return App;

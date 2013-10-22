@@ -15,12 +15,12 @@ var fs = require('fs'),
       }
     });
     envious.default_env = "development";
-    var conf =  envious.apply({
+    var conf = envious.apply({
       strict: true,
       strictProperties: true
     });
 
-    conf.script = function (name, cb) {
+    conf.script = function(name, cb) {
       var method;
       if (this.app.scripts[name]) {
         try {

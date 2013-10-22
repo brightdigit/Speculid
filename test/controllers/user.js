@@ -62,6 +62,11 @@ var user = proxyquire('../../app/controllers/user.js', {
   '../models': {
     registration: new mockModel().__type('registration'),
     user: new mockModel().__type('user')
+  },
+  '../libs': {
+    logger: {
+      error: function() {}
+    }
   }
 });
 
