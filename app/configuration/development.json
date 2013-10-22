@@ -6,6 +6,15 @@
   "sequelize": {
     "sync": {
       "force": false
+    },
+    "logging": {
+      "level" : "silly"
+    }
+  },
+  "logging" : {
+    "Console" : {
+      "level" : "silly",
+      "colorize" : true
     }
   },
   "app": {

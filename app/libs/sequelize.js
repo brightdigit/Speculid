@@ -5,7 +5,7 @@ var configuration = require('../configuration'),
 (function(configuration, Sequalize, logger) {
   function build_sequalize() {
     var options = configuration.database.options || {};
-    options.logging = logger.silly;
+    options.logging = logger[configuration.sequelize.logging.level];
     return new Sequalize(configuration.database.database, configuration.database.username, configuration.database.password, options);
   }
 
