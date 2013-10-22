@@ -1,9 +1,12 @@
-var configuration = require('../configuration');
-Sequalize = require('sequelize');
+var configuration = require('../configuration'),
+  Sequalize = require('sequelize'),
+  logger = require('./logger');
 
-(function(configuration, Sequalize) {
+(function(configuration, Sequalize, logger) {
   function build_sequalize() {
-    return new Sequalize(configuration.database.database, configuration.database.username, configuration.database.password, configuration.database.options);
+    var options = configuration.database.options || {};
+    options.logging = logger.silly;
+    return new Sequalize(configuration.database.database, configuration.database.username, configuration.database.password, options);
   }
 
   var _data;
@@ -19,4 +22,4 @@ Sequalize = require('sequelize');
 
     return _data;
   }();
-})(configuration, Sequalize);
+})(configuration, Sequalize, logger);
