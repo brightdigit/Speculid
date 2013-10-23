@@ -57,8 +57,8 @@ mockModel.prototype.setRegistration = function(cb) {
   return this;
 };
 
-var controller = require('../../app/controllers/_controller.js');
-var user = proxyquire('../../app/controllers/user.js', {
+var controller = require('../../server/controllers/_controller.js');
+var user = proxyquire('../../server/controllers/user.js', {
   '../models': {
     registration: new mockModel().__type('registration'),
     user: new mockModel().__type('user')

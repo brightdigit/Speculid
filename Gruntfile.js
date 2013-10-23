@@ -2,20 +2,20 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
-      all: ['Gruntfile.js', 'app/**/*.js', 'test/**/*.js', 'app/**/*.json', 'test/**/*.json']
+      all: ['Gruntfile.js', 'server/**/*.js', 'test/**/*.js', 'server/**/*.json', 'test/**/*.json']
     },
     nodeunit: {
       all: ['test/**/*.js']
     },
     apidoc: {
       tgio: {
-        src: "app/",
-        dest: "public/apidoc/"
+        src: "server/",
+        dest: "client/www/apidoc/"
       }
     },
     jsbeautifier: {
       "default": {
-        src: ['Gruntfile.js', "app/**/*.js", "test/**/*.js", "app/**/*.json", "test/**/*.json"],
+        src: ['Gruntfile.js', "server/**/*.js", "test/**/*.js", "server/**/*.json", "test/**/*.json"],
         options: {
           js: {
             indent_size: 2,
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         }
       },
       "git-pre-commit": {
-        src: ['Gruntfile.js', "app/**/*.js", "test/**/*.js", "app/**/*.json", "test/**/*.json"],
+        src: ['Gruntfile.js', "server/**/*.js", "test/**/*.js", "server/**/*.json", "test/**/*.json"],
         options: {
           mode: "VERIFY_ONLY",
           js: {

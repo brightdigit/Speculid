@@ -1,5 +1,5 @@
 var proxyquire = require('proxyquire');
-var emailer = proxyquire('../../app/libs/emailer.js', {
+var emailer = proxyquire('../../server/libs/emailer.js', {
   nodemailer: {
     createTransport: function(type, settings) {
       return {

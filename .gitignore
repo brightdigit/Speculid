@@ -1,5 +1,5 @@
 node_modules
 .DS_Store
-/public/apidoc
+/client/www/apidoc
 xcuserdata
 xcshareddata

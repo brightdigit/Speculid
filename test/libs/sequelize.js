@@ -16,7 +16,7 @@ var configuration = {
   },
 };
 
-var data = proxyquire('../../app/libs/sequelize.js', {
+var data = proxyquire('../../server/libs/sequelize.js', {
   '../configuration': configuration,
   './logger': {
     test: 12

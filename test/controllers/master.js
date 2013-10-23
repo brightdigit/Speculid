@@ -1,5 +1,5 @@
 var proxyquire = require('proxyquire').noCallThru();
-var master = proxyquire('../../app/controllers/_master.js', {
+var master = proxyquire('../../server/controllers/_master.js', {
   './test.js': {
     'test': {
       value: true

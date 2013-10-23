@@ -1,6 +1,6 @@
 var proxyquire = require('proxyquire').noCallThru();
 var verify = {};
-var lsr = proxyquire('../../app/libs/lsr.js', {
+var lsr = proxyquire('../../server/libs/lsr.js', {
   fs: {
     readdir: function(path, cb) {
       if (path == 'path') {

@@ -72,8 +72,8 @@ function models (_) {
   }
 }
 
-var controller = require('../../app/controllers/_controller.js');
-var session = proxyquire('../../app/controllers/session.js',{ models : models( {
+var controller = require('../../server/controllers/_controller.js');
+var session = proxyquire('../../server/controllers/session.js',{ models : models( {
   "user" : {
     find : function (where) {
       return where.name === 'validName' && where.password === 'password';
