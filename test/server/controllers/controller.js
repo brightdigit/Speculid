@@ -1,6 +1,8 @@
 var proxyquire = require('proxyquire').noCallThru();
-var controller = proxyquire('../../server/controllers/_controller.js', {
-
+var controller = proxyquire('../../../server/controllers/_controller.js', {
+  '../libs/logger': {
+    info: function() {}
+  }
 });
 
 var controllers = {

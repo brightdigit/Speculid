@@ -5,7 +5,7 @@ module.exports = function(grunt) {
       all: ['Gruntfile.js', 'server/**/*.js', 'test/**/*.js', 'server/**/*.json', 'test/**/*.json']
     },
     nodeunit: {
-      all: ['test/**/*.js']
+      all: ['test/server/**/*.js']
     },
     apidoc: {
       tgio: {
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
     grunt.log.write('Logging some stuff...').ok();
   });
 
-  grunt.registerTask('default', ['sample', 'nodeunit', 'jshint', 'jsbeautifier', 'apidoc']);
+  grunt.registerTask('default', ['nodeunit', 'jshint', 'jsbeautifier', 'apidoc']);
 
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-apidoc');

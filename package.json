@@ -18,7 +18,8 @@
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-contrib-nodeunit": "~0.2.1",
     "grunt-jsbeautifier": "~0.2.2",
-    "grunt-apidoc": "~0.2.0"
+    "grunt-apidoc": "~0.2.0",
+    "sqlite3": "~2.1.18"
   },
   "dependencies": {
     "envious": "~0.2.0",

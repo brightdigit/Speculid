@@ -1,5 +1,5 @@
 var proxyquire = require('proxyquire').noCallThru();
-var templates = proxyquire('../../server/libs/templates.js', {
+var templates = proxyquire('../../../server/libs/templates.js', {
   './lsr': function(path, callback, iterator, keyIterator) {
     if (path === 'unknownDirectory') {
       callback({

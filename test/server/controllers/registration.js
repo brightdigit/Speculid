@@ -30,8 +30,8 @@ mockModel.prototype.error = function(cb) {
   return this;
 };
 
-var controller = require('../../server/controllers/_controller.js');
-var registration = proxyquire('../../server/controllers/registration.js', {
+var controller = require('../../../server/controllers/_controller.js');
+var registration = proxyquire('../../../server/controllers/registration.js', {
   'node-uuid': {
     v4: function() {
       return 'test';

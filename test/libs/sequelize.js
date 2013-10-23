@@ -1,35 +1,48 @@
-var proxyquire = require('proxyquire').noCallThru();
+var Sequelize = require('sequelize');
 
-var configuration = {
-  'database': {
-    'username': 'username',
-    'password': 'password',
-    'database': 'database',
-    'options': {
-      'test': true
-    }
-  },
-  "sequelize": {
-    "logging": {
-      "level": "test"
-    }
-  },
-};
-
-var data = proxyquire('../../server/libs/sequelize.js', {
-  '../configuration': configuration,
-  './logger': {
-    test: 12
-  },
-  'sequelize': function() {
-    this.arguments = Array.prototype.slice.call(arguments, 0);
+(function(Sequelize) {
+  function build_sequelize() {
+    return new Sequelize('tgio_test', null, null, {
+      dialect: 'sqlite',
+      logging: false
+    });
   }
-});
 
-exports.sequalize = function(test) {
-  test.strictEqual(data.arguments[0], configuration.database.database);
-  test.strictEqual(data.arguments[1], configuration.database.username);
-  test.strictEqual(data.arguments[2], configuration.database.password);
-  test.deepEqual(data.arguments[3], configuration.database.options);
-  test.done();
-};
+  var _data;
+
+  module.exports = function() {
+    if (!_data) {
+      _data = build_sequelize();
+    }
+
+    _data.$ = function(name) {
+      return this.import(__dirname + "/../../server/models/" + name + ".js");
+    };
+
+
+    return _data;
+  }();
+})(Sequelize);
+/*
+(function(Sequalize) {
+  function build_sequalize() {
+    console.log('test');
+    var sequelize = new Sequelize('tgio_test', null, null, {dialect: 'sqlite'});
+  }
+
+  var _data;
+
+  module.exports = function() {
+    console.log("test");
+    if (!_data) {
+      _data = build_sequalize();
+    }
+
+    _data.$ = function(name) {
+      return this.import(__dirname +../../../server/models/" + name + ".js");
+    };
+
+    return _data;
+  }();
+})(Sequalize);
+*/
