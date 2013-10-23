@@ -76,6 +76,7 @@ module.exports = [{
           emailAddress: request.body.emailAddress
         }).success(function(user) {
           logger.error("missing setting user to registration");
+          logger.error("missing encrypt password");
           user.setRegistration(results.registration).success(function(user) {
             callback();
           }).error(function(error) {
