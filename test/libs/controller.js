@@ -4,7 +4,7 @@ var path = require('path'),
 
 module.exports = (function() {
 
-  return function(name) {
+  return function(name, mocks) {
     var sequelize = new Sequelize('tgio_test', null, null, {
       dialect: 'sqlite',
       logging: false
@@ -21,10 +21,9 @@ module.exports = (function() {
     });
 
     var controllerBase = require('../../server/controllers/_controller.js');
-
-    var controller = proxyquire("../../server/controllers/" + name, {
-      "../models": models
-    });
+    mocks = mocks || {};
+    mocks["../models"] = models;
+    var controller = proxyquire("../../server/controllers/" + name, mocks);
 
     controller.find = controllerBase.find.bind(undefined, controller);
     controller.models = models;
@@ -37,14 +36,21 @@ module.exports = (function() {
     };
 
     controller.sync = function(cb) {
-
       return function(testcb) {
         sequelize.sync({
           force: true
         }).success(function() {
-          cb(undefined, testcb);
+          if (cb) {
+            cb(undefined, testcb);
+          } else {
+            testcb();
+          }
         }).error(function(error) {
-          cb(error, testcb);
+          if (cb) {
+            cb(error, testcb);
+          } else {
+            testcb();
+          }
         });
       };
     };

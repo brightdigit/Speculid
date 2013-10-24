@@ -1,45 +1,4 @@
-var proxyquire = require('proxyquire').noCallThru();
-
-function mockModel(data) {
-  for (var key in data) {
-    this[key] = data[key];
-  }
-}
-
-mockModel.prototype.save = function() {
-  if (this.emailAddress === "example@invalid.com") {
-    this._error = "account already exists";
-  }
-
-  return this;
-};
-
-mockModel.prototype.success = function(cb) {
-  if (!this._error) {
-    cb(this);
-  }
-
-  return this;
-};
-
-mockModel.prototype.error = function(cb) {
-  if (this._error) {
-    cb(this._error);
-  }
-
-  return this;
-};
-
-var controller = require('../../../server/controllers/_controller.js');
-var registration = proxyquire('../../../server/controllers/registration.js', {
-  'node-uuid': {
-    v4: function() {
-      return 'test';
-    },
-    parse: function(value) {
-      return value;
-    }
-  },
+var registration = require("../../libs/controller")("registration", {
   '../libs': {
     emailer: {
       queue: function(name, data, cb) {
@@ -54,41 +13,36 @@ var registration = proxyquire('../../../server/controllers/registration.js', {
         });
       }
     }
-  },
-  '../models': {
-    registration: {
-      build: function(data) {
-        return new mockModel(data);
-      }
-    }
   }
 });
 
 exports.registration = {
+  setUp: registration.sync(),
   testValid: function(test) {
     var request = {
       body: {
         emailAddress: 'example@valid.com'
       }
     };
-    controller.find(registration, {
+    registration.find({
       verb: 'post'
     })(request, function(status, result) {
-      test.ok(result.key === (new Buffer('test')).toString('base64'));
+      test.ok(status === 200 || status === undefined);
+      test.ok(result.key);
       test.done();
     });
   },
   testInvalid: function(test) {
     var request = {
       body: {
-        emailAddress: 'example@invalid.com'
+        emailAddress: 'example.com'
       }
     };
-    controller.find(registration, {
+    registration.find({
       verb: 'post'
     })(request, function(status, result) {
       test.ok(status === 400);
-      test.ok(result === "account already exists");
+      test.ok( !! result.error);
       test.done();
     });
   },
@@ -98,11 +52,11 @@ exports.registration = {
         emailAddress: 'example@emailFailure.com'
       }
     };
-    controller.find(registration, {
+    registration.find({
       verb: 'post'
     })(request, function(status, result) {
       test.ok(status === 400);
-      test.ok(result.error === 'email failure');
+      test.ok( !! result.error);
       test.done();
     });
   }

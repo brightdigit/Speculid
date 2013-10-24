@@ -53,8 +53,13 @@
           });
         });
       }).error(function(error) {
-        if (error) {
-          callback(400, error);
+        if (error.emailAddress) {
+          callback(400, {
+            error: error
+          });
+          return;
+        } else if (error) {
+          callback(500, error);
           return;
         }
       });
