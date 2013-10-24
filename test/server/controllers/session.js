@@ -1,29 +1,17 @@
-var proxyquire = require('proxyquire').noCallThru();
+var session = require("../../libs/controller");
 
-var Sequelize = require("sequelize");
-var sequelize = require("../../libs/sequelize.js");
-
-var controller = require('../../../server/controllers/_controller.js');
-var models = proxyquire('../../../server/models', {
-  "../libs": {
-    "sequelize": sequelize,
-    "@noCallThru": false
-  }
-});
-var session = proxyquire("../../../server/controllers/session", {
-  "../models": models
-});
-
-var QC = Sequelize.Utils.QueryChainer;
-var User = models.user,
-  App = models.app;
+var User = session.models.user,
+  App = session.models.app;
 
 exports.session = {
   setUp: function(callback) {
-    sequelize.sync({
-      force: true
-    }).success(function() {
-      var q = new QC();
+    session._sync(function(error) {
+      if (error) {
+        console.log(error);
+        callback(error);
+        return;
+      }
+      var q = session.querychainer();
       q.add(User.create({
         name: "example",
         password: "test",
@@ -35,9 +23,7 @@ exports.session = {
       }));
       q.run().success(function() {
         callback();
-      }).error(function(error) {
-        console.log(error);
-      });
+      })
     });
   },
   testValid: function(test) {
@@ -54,7 +40,7 @@ exports.session = {
         remoteAddress: '127.0.0.1'
       }
     };
-    controller.find(session, {
+    session.find(session, {
       "verb": "post"
     })(request,
       function(status, result) {
@@ -73,7 +59,7 @@ exports.session = {
         'user-agent': 'user agent 1.0'
       }
     };
-    controller.find(session, {
+    session.find(session, {
       "verb": "post"
     })(request,
       function(status, result) {
@@ -93,7 +79,7 @@ exports.session = {
         'user-agent': 'user agent 1.0'
       }
     };
-    controller.find(session, {
+    session.find(session, {
       "verb": "post"
     })(request,
       function(status, result) {

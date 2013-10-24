@@ -1,3 +1,4 @@
+/*
 var proxyquire = require('proxyquire');
 
 function mockModel(data) {
@@ -58,6 +59,7 @@ mockModel.prototype.setRegistration = function(cb) {
 };
 
 var controller = require('../../../server/controllers/_controller.js');
+
 var user = proxyquire('../../../server/controllers/user.js', {
   '../models': {
     registration: new mockModel().__type('registration'),
@@ -70,7 +72,28 @@ var user = proxyquire('../../../server/controllers/user.js', {
   }
 });
 
+*/
+
+var user = require("../../libs/controller");
+
+var User = user.models.user,
+  Registration = user.models.registration;
+
 exports.user = {
+  setUp : user.sync(function (error, cb) {
+    var qc = user.querychainer();
+    qc.add(Registration.create({
+      emailAddress: 'example@valid.com',
+      secret: 'secret',
+      key: 'key',
+    }));
+    qc.add(User.create({
+      emailAddress: 'new@valid.com',
+      name: 'nameAlreadyInUse',
+      password: 'test'
+    }));
+    qc.run().success(cb);
+  }),
   testValid: function(test) {
     var request = {
       body: {
@@ -81,7 +104,7 @@ exports.user = {
         password: 'test'
       }
     };
-    controller.find(user, {
+    user.find(user, {
       "verb": "post"
     })(request,
       function(status, result) {
@@ -99,7 +122,7 @@ exports.user = {
         password: 'test'
       }
     };
-    controller.find(user, {
+    user.find(user, {
       "verb": "post"
     })(request,
       function(status, result) {
@@ -118,7 +141,7 @@ exports.user = {
         password: 'test'
       }
     };
-    controller.find(user, {
+    user.find(user, {
       "verb": "post"
     })(request,
       function(status, result) {
@@ -138,7 +161,7 @@ exports.user = {
         password: 'test'
       }
     };
-    controller.find(user, {
+    user.find(user, {
       "verb": "post"
     })(request,
       function(status, result) {
