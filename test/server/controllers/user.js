@@ -17,7 +17,7 @@ exports.user = {
       key: 'key',
       registeredAt: (new Date(new Date() - 1000 * 60 * 6))
     }));
-    qc.add(User.create({
+    qc.add(User.newLogin({
       emailAddress: 'new@valid.com',
       name: 'nameAlreadyInUse',
       password: 'test'

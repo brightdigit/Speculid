@@ -11,7 +11,7 @@ exports.session = {
         return;
       }
       var q = session.querychainer();
-      q.add(User.create({
+      q.add(User.newLogin({
         name: "example",
         password: "test",
         emailAddress: "test@gmail.com"

@@ -47,15 +47,13 @@ module.exports = [{
       Registration.find({
         where: {
           emailAddress: request.body.emailAddress,
-          key: request.body.key, //new Buffer(request.body.key, 'base64'),
-          secret: request.body.secret, //new Buffer(request.body.secret, 'base64'),
+          key: request.body.key,
+          secret: request.body.secret,
           userId: null,
           registeredAt: {
             gt: new Date(new Date() - 5 * 60 * 1000)
           }
-          // and registeredAt > DATE_SUB(NOW(), INTERVAL 5 MINUTE)",  
         },
-
         order: "registeredAt DESC"
       }).success(function(registration) {
         cb(undefined, registration);
@@ -81,13 +79,11 @@ module.exports = [{
       user: findUser
     }, function(err, results) {
       if (results.registration && !results.user) {
-        var user = User.create({
+        var user = User.newLogin({
           name: request.body.name,
           password: request.body.password,
           emailAddress: request.body.emailAddress
         }).success(function(user) {
-          logger.error("missing setting user to registration");
-          logger.error("missing encrypt password");
           user.setRegistration(results.registration).success(function(user) {
 
             callback();

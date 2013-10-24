@@ -43,7 +43,7 @@ module.exports = [{
 
     function findUser(requestBody) {
       function _(requestBody, cb) {
-        User.findByLogin(requestBody.name, requestBody.password).success(cb.bind(undefined, undefined));
+        User.findByLogin(requestBody.name, requestBody.password, cb.bind(undefined, undefined));
       }
 
       return _.bind(undefined, requestBody);

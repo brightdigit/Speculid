@@ -1,3 +1,6 @@
+var bcrypt = require('bcrypt');
+var salt = bcrypt.genSaltSync(10);
+
 module.exports = function(sequelize, DataTypes) {
   var Registration = sequelize.$('registration'),
     App = sequelize.$('app'),
@@ -27,13 +30,22 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     classMethods: {
-      findByLogin: function(name, password) {
-        return User.find({
+      findByLogin: function(name, password, cb) {
+        User.find({
           where: {
-            name: name,
-            password: password
+            name: name
+          }
+        }).success(function(user) {
+          if (user && bcrypt.compareSync(password, user.password)) {
+            cb(user);
+          } else {
+            cb();
           }
         });
+      },
+      newLogin: function(data) {
+        data.password = bcrypt.hashSync(data.password, salt);
+        return User.create(data);
       }
     }
   });
