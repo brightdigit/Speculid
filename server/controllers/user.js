@@ -45,12 +45,13 @@ module.exports = [{
 
     function findRegistration(cb) {
       Registration.find({
-        where: ["emailAddress = ? and `key` = ? and secret = ? and userId is NULL",// and registeredAt > DATE_SUB(NOW(), INTERVAL 5 MINUTE)", 
-        request.body.emailAddress, new Buffer(request.body.key, 'base64'), new Buffer(request.body.secret, 'base64')],
+        where: ["emailAddress = ? and `key` = ? and secret = ? and userId is NULL", // and registeredAt > DATE_SUB(NOW(), INTERVAL 5 MINUTE)", 
+          request.body.emailAddress, new Buffer(request.body.key, 'base64'), new Buffer(request.body.secret, 'base64')
+        ],
         order: "registeredAt DESC"
       }).success(function(registration) {
         cb(undefined, registration);
-      }).error(function (error) {
+      }).error(function(error) {
         cb(error, undefined);
       });
     }

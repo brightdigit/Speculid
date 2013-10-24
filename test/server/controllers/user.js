@@ -80,7 +80,7 @@ var User = user.models.user,
   Registration = user.models.registration;
 
 exports.user = {
-  setUp : user.sync(function (error, cb) {
+  setUp: user.sync(function(error, cb) {
     var qc = user.querychainer();
     qc.add(Registration.create({
       emailAddress: 'example@valid.com',

@@ -2,10 +2,10 @@ var path = require('path'),
   proxyquire = require('proxyquire'),
   Sequelize = require("sequelize");
 
-(function(){
+(function() {
   var sequelize = new Sequelize('tgio_test', null, null, {
-      dialect: 'sqlite',
-      logging: false
+    dialect: 'sqlite',
+    logging: false
   });
   sequelize.$ = function(name) {
     return this.import(__dirname + "/../../server/models/" + name + ".js");
@@ -28,22 +28,26 @@ var path = require('path'),
   controller.models = models;
   controller.sequelize = sequelize;
 
-  controller._sync = function (cb) {
-    sequelize.sync({force : true}).success(cb.bind(undefined,undefined)).error(cb);
+  controller._sync = function(cb) {
+    sequelize.sync({
+      force: true
+    }).success(cb.bind(undefined, undefined)).error(cb);
   };
 
-  controller.sync = function (cb) {
+  controller.sync = function(cb) {
 
-    return function (testcb) {
-      sequelize.sync({force : true}).success(function () {
+    return function(testcb) {
+      sequelize.sync({
+        force: true
+      }).success(function() {
         cb(undefined, testcb);
-      }).error(function (error) {
+      }).error(function(error) {
         cb(error, testcb);
       });
     };
   };
 
-  controller.querychainer = function () {
+  controller.querychainer = function() {
     return new Sequelize.Utils.QueryChainer();
   };
 
