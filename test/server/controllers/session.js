@@ -7,7 +7,6 @@ exports.session = {
   setUp: function(callback) {
     session._sync(function(error) {
       if (error) {
-        console.log(error);
         callback(error);
         return;
       }

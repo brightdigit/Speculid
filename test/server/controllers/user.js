@@ -1,79 +1,3 @@
-/*
-var proxyquire = require('proxyquire');
-
-function mockModel(data) {
-  this.__empty = !data;
-  for (var key in data) {
-    this[key] = data[key];
-  }
-}
-
-mockModel.prototype.__type = function(typeName) {
-  this.__type = typeName;
-  return this;
-};
-
-mockModel.prototype.create = function(data) {
-  var model = new mockModel(data);
-  if (this.__type === 'user' && data.name === '') {
-    model._error = {
-      'name': 'User name invalid'
-    };
-  }
-  return model;
-};
-
-mockModel.prototype.find = function(query) {
-  if (this.__type === 'user' && query.where.name === 'nameAlreadyInUse') {
-    return new mockModel({}).__type('user');
-  } else if (this.__type === 'registration' && query.where[1] !== 'registrationNotFound@valid.com') {
-    return new mockModel({
-      emailAddress: query.where[1]
-    }).__type("registration");
-  }
-  return new mockModel();
-};
-
-mockModel.prototype.save = function() {
-  return this;
-};
-
-mockModel.prototype.success = function(cb) {
-  if (!this._error) {
-    cb(this.__empty ? null : this);
-  }
-
-  return this;
-};
-
-mockModel.prototype.error = function(cb) {
-  if (this._error) {
-    cb(this._error);
-  }
-
-  return this;
-};
-
-mockModel.prototype.setRegistration = function(cb) {
-  return this;
-};
-
-var controller = require('../../../server/controllers/_controller.js');
-
-var user = proxyquire('../../../server/controllers/user.js', {
-  '../models': {
-    registration: new mockModel().__type('registration'),
-    user: new mockModel().__type('user')
-  },
-  '../libs': {
-    logger: {
-      error: function() {}
-    }
-  }
-});
-
-*/
-
 var user = require("../../libs/controller")("user");
 
 var User = user.models.user,
@@ -86,6 +10,12 @@ exports.user = {
       emailAddress: 'example@valid.com',
       secret: 'secret',
       key: 'key',
+    }));
+    qc.add(Registration.create({
+      emailAddress: 'old@valid.com',
+      secret: 'secret',
+      key: 'key',
+      registeredAt: (new Date(new Date() - 1000 * 60 * 6))
     }));
     qc.add(User.create({
       emailAddress: 'new@valid.com',
@@ -171,6 +101,28 @@ exports.user = {
       function(status, result) {
         test.equals(status, 400);
         test.ok( !! result.error);
+        test.done();
+      });
+  },
+  testRegistrationTooOld: function(test) {
+    var request = {
+      body: {
+        emailAddress: 'old@valid.com',
+        secret: 'secret',
+        key: 'key',
+        name: 'example',
+        password: 'test'
+      }
+    };
+    user.find(user, {
+      "verb": "post"
+    })(request,
+      function(status, result) {
+        test.doesNotThrow(function() {
+          test.ok(status);
+          test.strictEqual(status, 400);
+          test.ok( !! result.error);
+        });
         test.done();
       });
   }

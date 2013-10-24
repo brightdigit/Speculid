@@ -59,7 +59,6 @@ module.exports = [{
 
     function findDevice(request) {
       function _(request, cb) {
-        console.log(request.headers['user-agent']);
         Device.findByKey(request.body.deviceKey, request.headers['user-agent'], cb.bind(undefined, undefined));
       }
 

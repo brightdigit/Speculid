@@ -50,6 +50,9 @@ module.exports = [{
           key: request.body.key, //new Buffer(request.body.key, 'base64'),
           secret: request.body.secret, //new Buffer(request.body.secret, 'base64'),
           userId: null,
+          registeredAt: {
+            gt: new Date(new Date() - 5 * 60 * 1000)
+          }
           // and registeredAt > DATE_SUB(NOW(), INTERVAL 5 MINUTE)",  
         },
 
@@ -57,7 +60,6 @@ module.exports = [{
       }).success(function(registration) {
         cb(undefined, registration);
       }).error(function(error) {
-        console.log(error);
         cb(error, undefined);
       });
     }
@@ -70,6 +72,8 @@ module.exports = [{
         }
       }).success(function(user) {
         cb(undefined, user);
+      }).error(function(error) {
+        cb(error);
       });
     }
     async.parallel({
@@ -85,6 +89,7 @@ module.exports = [{
           logger.error("missing setting user to registration");
           logger.error("missing encrypt password");
           user.setRegistration(results.registration).success(function(user) {
+
             callback();
           }).error(function(error) {
             logger.error(error);
