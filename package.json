@@ -29,7 +29,7 @@
     "underscore": "~1.5.2",
     "async": "~0.2.9",
     "mysql": "~2.0.0-alpha9",
-    "sequelize": "~2.0.0-beta.0",
+    "sequelize": "git://github.com/leogdion/sequelize#milestones/2.0.0",
     "winston": "~0.7.2",
     "deepmerge": "~0.2.7",
     "bcrypt": "~0.7.7"
