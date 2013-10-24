@@ -23,26 +23,3 @@ var Sequelize = require('sequelize');
     return _data;
   }();
 })(Sequelize);
-/*
-(function(Sequalize) {
-  function build_sequalize() {
-    console.log('test');
-    var sequelize = new Sequelize('tgio_test', null, null, {dialect: 'sqlite'});
-  }
-
-  var _data;
-
-  module.exports = function() {
-    console.log("test");
-    if (!_data) {
-      _data = build_sequalize();
-    }
-
-    _data.$ = function(name) {
-      return this.import(__dirname +../../../server/models/" + name + ".js");
-    };
-
-    return _data;
-  }();
-})(Sequalize);
-*/

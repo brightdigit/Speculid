@@ -74,7 +74,7 @@ var user = proxyquire('../../../server/controllers/user.js', {
 
 */
 
-var user = require("../../libs/controller");
+var user = require("../../libs/controller")("user");
 
 var User = user.models.user,
   Registration = user.models.registration;
@@ -92,7 +92,11 @@ exports.user = {
       name: 'nameAlreadyInUse',
       password: 'test'
     }));
-    qc.run().success(cb);
+    qc.run().success(function() {
+      cb();
+    }).error(function(error) {
+      console.log(error);
+    });
   }),
   testValid: function(test) {
     var request = {

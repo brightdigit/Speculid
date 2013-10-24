@@ -2,54 +2,59 @@ var path = require('path'),
   proxyquire = require('proxyquire'),
   Sequelize = require("sequelize");
 
-(function() {
-  var sequelize = new Sequelize('tgio_test', null, null, {
-    dialect: 'sqlite',
-    logging: false
-  });
-  sequelize.$ = function(name) {
-    return this.import(__dirname + "/../../server/models/" + name + ".js");
-  };
+module.exports = (function() {
 
-  var models = proxyquire('../../server/models', {
-    "../libs": {
-      "sequelize": sequelize,
-      "@noCallThru": false
-    }
-  });
+  return function(name) {
+    var sequelize = new Sequelize('tgio_test', null, null, {
+      dialect: 'sqlite',
+      logging: false
+    });
+    sequelize.$ = function(name) {
+      return this.import(__dirname + "/../../server/models/" + name + ".js");
+    };
 
-  var controllerBase = require('../../server/controllers/_controller.js');
+    var models = proxyquire('../../server/models', {
+      "../libs": {
+        "sequelize": sequelize,
+        "@noCallThru": false
+      }
+    });
 
-  var controller = proxyquire("../../server/controllers/" + path.basename(module.parent.filename, '.js'), {
-    "../models": models
-  });
+    var controllerBase = require('../../server/controllers/_controller.js');
 
-  controller.find = controllerBase.find.bind(undefined, controller);
-  controller.models = models;
-  controller.sequelize = sequelize;
+    var controller = proxyquire("../../server/controllers/" + name, {
+      "../models": models
+    });
 
-  controller._sync = function(cb) {
-    sequelize.sync({
-      force: true
-    }).success(cb.bind(undefined, undefined)).error(cb);
-  };
+    controller.find = controllerBase.find.bind(undefined, controller);
+    controller.models = models;
+    controller.sequelize = sequelize;
 
-  controller.sync = function(cb) {
-
-    return function(testcb) {
+    controller._sync = function(cb) {
       sequelize.sync({
         force: true
-      }).success(function() {
-        cb(undefined, testcb);
-      }).error(function(error) {
-        cb(error, testcb);
-      });
+      }).success(cb.bind(undefined, undefined)).error(cb);
     };
-  };
 
-  controller.querychainer = function() {
-    return new Sequelize.Utils.QueryChainer();
-  };
+    controller.sync = function(cb) {
 
-  module.exports = controller;
+      return function(testcb) {
+        sequelize.sync({
+          force: true
+        }).success(function() {
+          cb(undefined, testcb);
+        }).error(function(error) {
+          cb(error, testcb);
+        });
+      };
+    };
+
+    controller.querychainer = function() {
+      return new Sequelize.Utils.QueryChainer();
+    };
+
+    controller.name = name;
+
+    return controller;
+  };
 })();

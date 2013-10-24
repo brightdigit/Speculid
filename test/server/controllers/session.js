@@ -1,4 +1,4 @@
-var session = require("../../libs/controller");
+var session = require("../../libs/controller")("session");
 
 var User = session.models.user,
   App = session.models.app;
@@ -23,7 +23,7 @@ exports.session = {
       }));
       q.run().success(function() {
         callback();
-      })
+      });
     });
   },
   testValid: function(test) {
