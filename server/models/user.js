@@ -50,11 +50,11 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
+  Registration.belongsTo(User);
   User
     .belongsTo(Company)
     .belongsTo(Registration)
     .belongsTo(Role)
-    .hasOne(Registration)
     .hasMany(App)
     .hasMany(Device)
     .hasOne(Company, {

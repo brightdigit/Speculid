@@ -1,5 +1,6 @@
 var libs = require('../libs'),
   async = require('async'),
+  QueryChainer = require("Sequelize").Utils.QueryChainer,
   models = require('../models');
 
 var emailer = libs.emailer,
@@ -47,8 +48,8 @@ module.exports = [{
       Registration.find({
         where: {
           emailAddress: request.body.emailAddress,
-          key: request.body.key,
-          secret: request.body.secret,
+          key: new Buffer(request.body.key, 'base64'),
+          secret: new Buffer(request.body.secret, 'base64'),
           userId: null,
           registeredAt: {
             gt: new Date(new Date() - 5 * 60 * 1000)
@@ -84,8 +85,10 @@ module.exports = [{
           password: request.body.password,
           emailAddress: request.body.emailAddress
         }).success(function(user) {
-          user.setRegistration(results.registration).success(function(user) {
-
+          var chain = new QueryChainer();
+          chain.add(user.setRegistration(results.registration));
+          chain.add(results.registration.setUser(user));
+          chain.run().success(function(results) {
             callback();
           }).error(function(error) {
             logger.error(error);
