@@ -14,7 +14,12 @@
     "proxyquire": "~0.5.1",
     "js-beautify": "~1.4.0",
     "minify": "~0.2.1",
-    "git-wrapper": "~0.1.1"
+    "git-wrapper": "~0.1.1",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-nodeunit": "~0.2.1",
+    "grunt-jsbeautifier": "~0.2.2",
+    "grunt-apidoc": "~0.2.0",
+    "sqlite3": "~2.1.18"
   },
   "dependencies": {
     "envious": "~0.2.0",
@@ -22,6 +27,10 @@
     "nodemailer": "~0.5.2",
     "node-uuid": "~1.4.1",
     "underscore": "~1.5.2",
-    "async": "~0.2.9"
+    "async": "~0.2.9",
+    "mysql": "~2.0.0-alpha9",
+    "sequelize": "~2.0.0-beta.0",
+    "winston": "~0.7.2",
+    "deepmerge": "~0.2.7"
   }
 }
