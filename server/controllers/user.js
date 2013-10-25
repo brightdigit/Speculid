@@ -11,27 +11,33 @@ var Registration = models.registration,
 
 module.exports = [{
   /**
-   * @api {post} /registration Register an email address
-   * @apiVersion 1.0.0
-   * @apiName Register
-   * @apiGroup Registration
+   * @api {post} /user Confirm and create a new user.
+   * @apiName Confirm
+   * @apiGroup User
    *
+   * @apiParam {String} key Registration Key.
+   * @apiParam {String} secret Registration Secret sent through email.
    * @apiParam {String} emailAddress Registration Email Address.
-   *
-   * @apiSuccess {String} key Registration Key for creating a user;
+   * @apiParam {String} name Username.
+   * @apiParam {String} password Password.
    *
    * @apiSuccessExample Success-Response:
    *     HTTP/1.1 200 OK
-   *     {
-   *       "key": ""
-   *     }
    *
-   * @apiError UserNotFound The id of the User was not found.
+   * @apiError RegistrationNotFound The registration information given is not found.
    *
    * @apiErrorExample Error-Response:
    *     HTTP/1.1 404 Not Found
    *     {
-   *       "error": "UserNotFound"
+   *       "error": "RegistrationNotFound"
+   *     }
+   *
+   * @apiError UsernameAlreadyInUse The user name requested is already in use.
+   *
+   * @apiErrorExample Error-Response:
+   *     HTTP/1.1 404 Not Found
+   *     {
+   *       "error": "UsernameAlreadyInUse"
    *     }
    */
   verb: 'post',
@@ -64,7 +70,6 @@ module.exports = [{
     }
 
     function findUser(cb) {
-      // returns list of similar username available or undefined for available name or empty for no similar name
       User.find({
         where: {
           name: request.body.name

@@ -10,27 +10,45 @@ var User = models.user,
 
 module.exports = [{
   /**
-   * @api {post} /registration Register an email address
-   * @apiVersion 1.0.0
-   * @apiName Register
-   * @apiGroup Registration
+   * @api {post} /session Login to the application.
+   * @apiName Login
+   * @apiGroup Session
    *
-   * @apiParam {String} emailAddress Registration Email Address.
+   * @apiParam {String} name Username.
+   * @apiParam {String} password Password.
+   * @apiParam {String} apiKey App api key.
+   * @apiParam {String} [deviceKey] Device key.
    *
-   * @apiSuccess {String} key Registration Key for creating a user;
+   * @apiSuccess {String} key Session key.
+   * @apiSuccess {String} [deviceKey] Device key.
    *
    * @apiSuccessExample Success-Response:
    *     HTTP/1.1 200 OK
    *     {
-   *       "key": ""
+   *       "key": "dGVzdA==",
+   *       "device": "dGVzdA=="
    *     }
    *
-   * @apiError UserNotFound The id of the User was not found.
+   * @apiSuccessExample Success-Response:
+   *     HTTP/1.1 200 OK
+   *     {
+   *       "key": "dGVzdA=="
+   *     }
+   *
+   * @apiError UnknownUsernameAndPassword The Username and Password combination has not been found.
    *
    * @apiErrorExample Error-Response:
    *     HTTP/1.1 404 Not Found
    *     {
-   *       "error": "UserNotFound"
+   *       "error": "UnknownUsernameAndPassword"
+   *     }
+   *
+   * @apiError UnknownApiKey The Application Api Key has not be found.
+   *
+   * @apiErrorExample Error-Response:
+   *     HTTP/1.1 404 Not Found
+   *     {
+   *       "error": "UnknownApiKey"
    *     }
    */
 

@@ -2,12 +2,11 @@
     libs = require('../libs'),
     emailer = libs.emailer,
     models = require('../models'),
-    registration = require('../models').registration;
+    Registration = require('../models').registration;
 
   module.exports = [{
     /**
      * @api {post} /registration Register an email address
-     * @apiVersion 1.0.0
      * @apiName Register
      * @apiGroup Registration
      *
@@ -18,31 +17,27 @@
      * @apiSuccessExample Success-Response:
      *     HTTP/1.1 200 OK
      *     {
-     *       "key": ""
+     *       "key": "dGVzdA=="
      *     }
      *
-     * @apiError UserNotFound The id of the User was not found.
+     * @apiError EmailAddressNotValid The email address entered is not valid.
      *
      * @apiErrorExample Error-Response:
      *     HTTP/1.1 404 Not Found
      *     {
-     *       "error": "UserNotFound"
+     *       "error": "EmailAddressNotValid",
      *     }
      */
 
 
     verb: 'post',
     callback: function(request, callback) {
-      var secret, key;
-      var emailAddress = request.body.emailAddress;
       var data = {
         emailAddress: request.body.emailAddress,
         secret: new Buffer(uuid.parse(uuid.v4())),
         key: new Buffer(uuid.parse(uuid.v4()))
       };
-      var ar = registration.build(data);
-
-      ar.save().success(function(ar) {
+      Registration.create(data).success(function(registration) {
         emailer.queue('confirmation', {
           emailAddress: data.emailAddress,
           secret: data.secret.toString('base64')
