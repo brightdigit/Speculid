@@ -35,7 +35,6 @@
     callback: function(request, callback) {
       var secret, key;
       var emailAddress = request.body.emailAddress;
-      console.log(request.body);
       var data = {
         emailAddress: request.body.emailAddress,
         secret: new Buffer(uuid.parse(uuid.v4())),

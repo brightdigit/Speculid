@@ -7,7 +7,7 @@ module.exports = (function() {
   return function(name, mocks) {
     var sequelize = new Sequelize('tgio_test', null, null, {
       dialect: 'sqlite',
-      logging: false  
+      logging: false
     });
     sequelize.$ = function(name) {
       return this.import(__dirname + "/../../server/models/" + name + ".js");
