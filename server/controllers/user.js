@@ -51,9 +51,9 @@ module.exports = [{
           key: new Buffer(request.body.key, 'base64'),
           secret: new Buffer(request.body.secret, 'base64'),
           userId: null,
-          //registeredAt: {
-          //  gt: new Date(new Date() - 5 * 60 * 1000)
-          //}
+          registeredAt: {
+            gt: new Date(new Date() - 5 * 60 * 1000)
+          }
         },
         order: "registeredAt DESC"
       }).success(function(registration) {

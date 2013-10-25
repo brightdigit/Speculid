@@ -13,7 +13,7 @@
   },
   "logging": {
     "Console": {
-      "level": "silly",
+      "level": "debug",
       "colorize": true
     }
   },

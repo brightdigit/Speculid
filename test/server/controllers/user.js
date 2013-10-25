@@ -3,18 +3,23 @@ var user = require("../../libs/controller")("user");
 var User = user.models.user,
   Registration = user.models.registration;
 
+function base64buffer(str) {
+  return (new Buffer(str, 'base64'));
+}
+
 exports.user = {
   setUp: user.sync(function(error, cb) {
     var qc = user.querychainer();
     qc.add(Registration.create({
       emailAddress: 'example@valid.com',
-      secret: 'secret',
-      key: 'key',
+      secret: base64buffer('secret'),
+      key: base64buffer('key'),
+      registeredAt: (new Date())
     }));
     qc.add(Registration.create({
       emailAddress: 'old@valid.com',
-      secret: 'secret',
-      key: 'key',
+      secret: base64buffer('secret'),
+      key: base64buffer('key'),
       registeredAt: (new Date(new Date() - 1000 * 60 * 6))
     }));
     qc.add(User.newLogin({
@@ -26,6 +31,7 @@ exports.user = {
       cb();
     }).error(function(error) {
       console.log(error);
+      //cb();
     });
   }),
   testValid: function(test) {
