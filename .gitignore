@@ -3,3 +3,4 @@ node_modules
 /client/www/apidoc
 xcuserdata
 xcshareddata
+client/www/vendor
