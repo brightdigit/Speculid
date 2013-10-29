@@ -1,3 +1,5 @@
+var bower = require('bower');
+
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -19,14 +21,14 @@ module.exports = function(grunt) {
       }
     },
     requirejs: {
-      compile: {
+      prod: {
         options: {
-          baseUrl: "client/www/js",
           mainConfigFile: 'client/www/js/config.js',
-          out: 'client/www/js/optimized.js',
-          name: 'tgio'
-        }
-      }
+          name: 'tgio',
+          out: 'client/www/js/main.js',
+          optimize: "none"
+        },
+      },
     },
     jsbeautifier: {
       "default": {
@@ -58,6 +60,18 @@ module.exports = function(grunt) {
   // A very basic default task.
   grunt.registerTask('sample', 'Log some stuff.', function() {
     grunt.log.write('Logging some stuff...').ok();
+  });
+
+  grunt.registerTask('bower-install', function() {
+    var done = this.async();
+    var install = bower.commands.install();
+
+    function log(obj) {
+      grunt.verbose.writeln(obj.id + ": " + obj.message);
+    }
+    install.on('log', log);
+    install.on('error', grunt.log.error);
+    install.on('end', done);
   });
 
   grunt.registerTask('default', ['nodeunit', 'jshint', 'jsbeautifier', 'apidoc']);
