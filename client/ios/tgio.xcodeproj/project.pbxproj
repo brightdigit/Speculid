@@ -22,6 +22,7 @@
 		7B3B3E27181C991000C64992 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3B3E0B181C991000C64992 /* CoreData.framework */; };
 		7B3B3E2F181C991000C64992 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3E2D181C991000C64992 /* InfoPlist.strings */; };
 		7B3B3E31181C991000C64992 /* tgioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B3E30181C991000C64992 /* tgioTests.m */; };
+		7BC37C5718204D1800D18013 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC37C5618204D1800D18013 /* iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		7B3B3E2C181C991000C64992 /* tgioTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tgioTests-Info.plist"; sourceTree = "<group>"; };
 		7B3B3E2E181C991000C64992 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B3B3E30181C991000C64992 /* tgioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgioTests.m; sourceTree = "<group>"; };
+		7BC37C5618204D1800D18013 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = Views/iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		7B3B3E0D181C991000C64992 /* tgio */ = {
 			isa = PBXGroup;
 			children = (
+				7BC37C5818204D1E00D18013 /* Views */,
 				7B3B3E16181C991000C64992 /* AppDelegate.h */,
 				7B3B3E17181C991000C64992 /* AppDelegate.m */,
 				7B3B3E1C181C991000C64992 /* Images.xcassets */,
@@ -151,6 +154,14 @@
 				7B3B3E2D181C991000C64992 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7BC37C5818204D1E00D18013 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7BC37C5618204D1800D18013 /* iPhone.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B3B3E12181C991000C64992 /* InfoPlist.strings in Resources */,
+				7BC37C5718204D1800D18013 /* iPhone.storyboard in Resources */,
 				7B3B3E1D181C991000C64992 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +465,7 @@
 				7B3B3E36181C991000C64992 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B3B3E37181C991000C64992 /* Build configuration list for PBXNativeTarget "tgioTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +474,7 @@
 				7B3B3E39181C991000C64992 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
