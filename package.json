@@ -19,7 +19,10 @@
     "grunt-contrib-nodeunit": "~0.2.1",
     "grunt-jsbeautifier": "~0.2.2",
     "grunt-apidoc": "~0.2.0",
-    "sqlite3": "~2.1.18"
+    "sqlite3": "~2.1.18",
+    "bower": "~1.2.7",
+    "grunt-bower-requirejs": "~0.7.1",
+    "grunt-contrib-requirejs": "~0.4.1"
   },
   "dependencies": {
     "envious": "~0.2.0",

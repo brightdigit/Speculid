@@ -13,6 +13,21 @@ module.exports = function(grunt) {
         dest: "client/www/apidoc/"
       }
     },
+    bower: {
+        target: {
+            rjsConfig: 'client/www/js/config.js'
+        }
+    },
+    requirejs: {
+      compile: {
+        options: {
+          baseUrl: "client/www",
+          mainConfigFile: 'client/www/js/config.js',
+          out: 'client/www/js/optimized.js',
+          name: 'tgio'
+        }
+      }
+    },
     jsbeautifier: {
       "default": {
         src: ['Gruntfile.js', "server/**/*.js", "test/**/*.js", "server/**/*.json", "test/**/*.json"],
@@ -51,4 +66,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-apidoc');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.loadNpmTasks('grunt-bower-requirejs');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
 };
