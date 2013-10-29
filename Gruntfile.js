@@ -14,14 +14,14 @@ module.exports = function(grunt) {
       }
     },
     bower: {
-        target: {
-            rjsConfig: 'client/www/js/config.js'
-        }
+      target: {
+        rjsConfig: 'client/www/js/config.js'
+      }
     },
     requirejs: {
       compile: {
         options: {
-          baseUrl: "client/www",
+          baseUrl: "client/www/js",
           mainConfigFile: 'client/www/js/config.js',
           out: 'client/www/js/optimized.js',
           name: 'tgio'
