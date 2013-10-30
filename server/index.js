@@ -8,6 +8,7 @@ var app = express(),
   sequelize = libs.sequelize,
   logger = libs.logger;
 
+app.use(controllers.initialize(configuration, sequelize, app));
 app.use(express.bodyParser());
 app.use(express.cookieParser({
   secret: configuration.app.secret
@@ -26,8 +27,15 @@ app.use(function(request, response, next) {
   next();
 });
 
-controllers.initialize(configuration, sequelize, app);
-controllers.listen(function(error) {
-  logger.error(error);
-  process.exit(1);
-});
+if(require.main === module) {
+  controllers.listen(function(error, app) {
+    if (error) {
+      logger.error(error);
+      process.exit(1);
+    } else {
+      app.listen(3000);
+    }
+  });
+} else {
+  module.exports = app;
+}

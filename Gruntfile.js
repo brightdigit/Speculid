@@ -1,4 +1,5 @@
-var bower = require('bower');
+var bower = require('bower'),
+  path = require('path');
 
 module.exports = function(grunt) {
   grunt.initConfig({
@@ -27,8 +28,6 @@ module.exports = function(grunt) {
           name: 'tgio',
           out: 'build/www/js/main.js',
           optimize: "none",
-          fileExclusionRegExp: /^Raleway/,
-          logLevel: 0,
         },
       },
     },
@@ -60,6 +59,15 @@ module.exports = function(grunt) {
         }
       }
     },
+    watch: {
+      scripts: {
+        files: ['client/www/**', 'server/**', 'test/**'],
+        tasks: ['default', 'express-restart'],
+        options: {
+          interrupt: true,
+        },
+      },
+    },
     jsbeautifier: {
       "default": {
         src: ['Gruntfile.js', "server/**/*.js", "test/**/*.js", "server/**/*.json", "test/**/*.json", 'client/**/*.js', 'client/**/*.json'],
@@ -82,6 +90,17 @@ module.exports = function(grunt) {
             "max_preserve_newlines": 10,
             "jslint_happy": false,
           }
+        }
+      }
+    },
+    express: {
+      server: {
+        options: {
+          debug: true,
+          verbose: true,
+          hostname: '*',
+          server: path.resolve('./server'),
+          serverreload: true
         }
       }
     }
@@ -114,4 +133,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-express');
 };

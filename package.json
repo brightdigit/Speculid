@@ -25,7 +25,9 @@
     "grunt-contrib-requirejs": "~0.4.1",
     "grunt-bower-task": "~0.3.2",
     "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-less": "~0.8.1"
+    "grunt-contrib-less": "~0.8.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-express": "~1.2.1"
   },
   "dependencies": {
     "envious": "~0.2.0",
