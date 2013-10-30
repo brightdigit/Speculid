@@ -1,7 +1,7 @@
 requirejs.config({
-    paths: {
-        bootstrap: '../vendor/bootstrap/dist/js/bootstrap',
-        jquery: '../vendor/jquery/jquery',
-        requirejs: '../vendor/requirejs/require'
-    },
+  paths: {
+    bootstrap: '../../../bower_components/bootstrap/dist/js/bootstrap',
+    jquery: '../../../bower_components/jquery/jquery',
+    requirejs: '../../../bower_components/requirejs/require'
+  }
 });

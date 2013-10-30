@@ -23,6 +23,6 @@
     "scripts": {
       "syncComplete": "dev.syncComplete"
     },
-    "static": "client/www"
+    "static": "build/www"
   }
 }

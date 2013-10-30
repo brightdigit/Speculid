@@ -23,7 +23,9 @@
     "bower": "~1.2.7",
     "grunt-bower-requirejs": "~0.7.1",
     "grunt-contrib-requirejs": "~0.4.1",
-    "grunt-bower-task": "~0.3.2"
+    "grunt-bower-task": "~0.3.2",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-less": "~0.8.1"
   },
   "dependencies": {
     "envious": "~0.2.0",

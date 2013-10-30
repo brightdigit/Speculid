@@ -1,6 +1,6 @@
 node_modules
 .DS_Store
-/client/www/apidoc
 xcuserdata
 xcshareddata
-client/www/vendor
+build
+bower_components

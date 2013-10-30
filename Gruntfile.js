@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
-      all: ['Gruntfile.js', 'server/**/*.js', 'test/**/*.js', 'server/**/*.json', 'test/**/*.json']
+      all: ['Gruntfile.js', 'server/**/*.js', 'test/**/*.js', 'server/**/*.json', 'test/**/*.json', 'client/**/*.js', 'client/**/*.json']
     },
     nodeunit: {
       all: ['test/server/**/*.js']
@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     apidoc: {
       tgio: {
         src: "server/",
-        dest: "client/www/apidoc/"
+        dest: "build/www/apidoc/"
       }
     },
     bower: {
@@ -25,14 +25,42 @@ module.exports = function(grunt) {
         options: {
           mainConfigFile: 'client/www/js/config.js',
           name: 'tgio',
-          out: 'client/www/js/main.js',
+          out: 'build/www/js/main.js',
           optimize: "none"
         },
       },
     },
+    copy: {
+      main: {
+        files: [
+          // includes files within path and its sub-directories
+          {
+            expand: true,
+            src: ['**'],
+            cwd: 'client/www/static/',
+            dest: 'build/www'
+          }, {
+            expand: true,
+            src: ['require.js'],
+            cwd: 'bower_components/requirejs/',
+            dest: 'build/www/js'
+          }
+        ]
+      }
+    },
+    less: {
+  development: {
+    options: {
+      paths: ["."]
+    },
+    files: {
+      "build/www/css/main.css": "client/www/less/main.less"
+    }
+  }
+},
     jsbeautifier: {
       "default": {
-        src: ['Gruntfile.js', "server/**/*.js", "test/**/*.js", "server/**/*.json", "test/**/*.json"],
+        src: ['Gruntfile.js', "server/**/*.js", "test/**/*.js", "server/**/*.json", "test/**/*.json", 'client/**/*.js', 'client/**/*.json'],
         options: {
           js: {
             indent_size: 2,
@@ -43,7 +71,7 @@ module.exports = function(grunt) {
         }
       },
       "git-pre-commit": {
-        src: ['Gruntfile.js', "server/**/*.js", "test/**/*.js", "server/**/*.json", "test/**/*.json"],
+        src: ['Gruntfile.js', "server/**/*.js", "test/**/*.js", "server/**/*.json", "test/**/*.json", 'client/**/*.js', 'client/**/*.json'],
         options: {
           mode: "VERIFY_ONLY",
           js: {
@@ -74,7 +102,7 @@ module.exports = function(grunt) {
     install.on('end', done);
   });
 
-  grunt.registerTask('default', ['nodeunit', 'jshint', 'jsbeautifier', 'apidoc']);
+  grunt.registerTask('default', ['bower-install', 'bower', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'apidoc']);
 
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-apidoc');
@@ -82,4 +110,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-bower-requirejs');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-less');
 };
