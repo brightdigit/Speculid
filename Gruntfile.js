@@ -26,7 +26,9 @@ module.exports = function(grunt) {
           mainConfigFile: 'client/www/js/config.js',
           name: 'tgio',
           out: 'build/www/js/main.js',
-          optimize: "none"
+          optimize: "none",
+          fileExclusionRegExp: /^Raleway/,
+          logLevel: 0,
         },
       },
     },
@@ -49,15 +51,15 @@ module.exports = function(grunt) {
       }
     },
     less: {
-  development: {
-    options: {
-      paths: ["."]
+      development: {
+        options: {
+          paths: ["."]
+        },
+        files: {
+          "build/www/css/main.css": "client/www/less/main.less"
+        }
+      }
     },
-    files: {
-      "build/www/css/main.css": "client/www/less/main.less"
-    }
-  }
-},
     jsbeautifier: {
       "default": {
         src: ['Gruntfile.js', "server/**/*.js", "test/**/*.js", "server/**/*.json", "test/**/*.json", 'client/**/*.js', 'client/**/*.json'],
@@ -102,7 +104,7 @@ module.exports = function(grunt) {
     install.on('end', done);
   });
 
-  grunt.registerTask('default', ['bower-install', 'bower', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'apidoc']);
+  grunt.registerTask('default', ['bower-install', 'bower', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
 
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-apidoc');
