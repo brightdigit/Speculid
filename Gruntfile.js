@@ -123,8 +123,9 @@ module.exports = function(grunt) {
     install.on('end', done);
   });
 
-  grunt.registerTask('default', ['bower-install', 'bower', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
-
+  grunt.registerTask('build', ['bower-install', 'bower', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
+  grunt.registerTask('server', ['express:server', 'build:default']);
+  grunt.registerTask('default', 'build');
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-apidoc');
   grunt.loadNpmTasks('grunt-contrib-jshint');

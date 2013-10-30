@@ -27,7 +27,7 @@ app.use(function(request, response, next) {
   next();
 });
 
-if(require.main === module) {
+if (require.main === module) {
   controllers.listen(function(error, app) {
     if (error) {
       logger.error(error);
