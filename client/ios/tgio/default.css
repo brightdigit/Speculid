@@ -1,13 +1,14 @@
-view {
-    background-color: #ff0000;
-}
-
-label {
-    color: #fff000;
+label.header {
     font-family: Raleway;
     font-size: 24px;
+    font-weight: 500;
+}
+
+label, text-field {
+    font-family: "Lato";
+    font-weight: 200;
 }
 
 pixelate-config {
-parse-error-destination: console;
+    parse-error-destination: console;
 }
