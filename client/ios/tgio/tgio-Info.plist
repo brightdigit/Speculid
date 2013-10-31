@@ -24,6 +24,30 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Fonts/Lato/Lato-Black.ttf</string>
+		<string>Fonts/Lato/Lato-BlackItalic.ttf</string>
+		<string>Fonts/Lato/Lato-Bold.ttf</string>
+		<string>Fonts/Lato/Lato-BoldItalic.ttf</string>
+		<string>Fonts/Lato/Lato-Hairline.ttf</string>
+		<string>Fonts/Lato/Lato-HairlineItalic.ttf</string>
+		<string>Fonts/Lato/Lato-Italic.ttf</string>
+		<string>Fonts/Lato/Lato-Light.ttf</string>
+		<string>Fonts/Lato/Lato-LightItalic.ttf</string>
+		<string>Fonts/Lato/Lato-Regular.ttf</string>
+		<string>Fonts/Raleway/Raleway-Bold.ttf</string>
+		<string>Fonts/Raleway/Raleway-ExtraBold.ttf</string>
+		<string>Fonts/Raleway/Raleway-ExtraLight.ttf</string>
+		<string>Fonts/Raleway/Raleway-Heavy.ttf</string>
+		<string>Fonts/Raleway/Raleway-Light.ttf</string>
+		<string>Fonts/Raleway/Raleway-Medium.ttf</string>
+		<string>Fonts/Raleway/Raleway-Regular.ttf</string>
+		<string>Fonts/Raleway/Raleway-SemiBold.ttf</string>
+		<string>Fonts/Raleway/Raleway-Thin.ttf</string>
+	</array>
+	<key>UIMainStoryboardFile</key>
+	<string>iPhone</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -22,6 +22,12 @@
 		7B3B3E27181C991000C64992 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3B3E0B181C991000C64992 /* CoreData.framework */; };
 		7B3B3E2F181C991000C64992 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3E2D181C991000C64992 /* InfoPlist.strings */; };
 		7B3B3E31181C991000C64992 /* tgioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B3E30181C991000C64992 /* tgioTests.m */; };
+		7BBB36F91821DF3E00F16823 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 7BBB36F81821DF3E00F16823 /* Fonts */; };
+		7BBB36FD1821F83A00F16823 /* Pixate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBB36FC1821F83A00F16823 /* Pixate.framework */; };
+		7BBB36FF1821F90400F16823 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBB36FE1821F90400F16823 /* CoreText.framework */; };
+		7BBB37011821F90900F16823 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBB37001821F90900F16823 /* QuartzCore.framework */; };
+		7BBB37031821F92400F16823 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 7BBB37021821F92400F16823 /* default.css */; };
+		7BBB37481821FF6700F16823 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBB37471821FF6700F16823 /* LoginScreenViewController.m */; };
 		7BC37C5718204D1800D18013 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC37C5618204D1800D18013 /* iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +60,13 @@
 		7B3B3E2C181C991000C64992 /* tgioTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tgioTests-Info.plist"; sourceTree = "<group>"; };
 		7B3B3E2E181C991000C64992 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B3B3E30181C991000C64992 /* tgioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgioTests.m; sourceTree = "<group>"; };
+		7BBB36F81821DF3E00F16823 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		7BBB36FC1821F83A00F16823 /* Pixate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pixate.framework; path = ../../../../../../../Applications/Pixate/Framework/Pixate.framework; sourceTree = "<group>"; };
+		7BBB36FE1821F90400F16823 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		7BBB37001821F90900F16823 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7BBB37021821F92400F16823 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; tabWidth = 2; };
+		7BBB37461821FF6700F16823 /* LoginScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginScreenViewController.h; path = ViewControllers/LoginScreenViewController.h; sourceTree = "<group>"; };
+		7BBB37471821FF6700F16823 /* LoginScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginScreenViewController.m; path = ViewControllers/LoginScreenViewController.m; sourceTree = "<group>"; };
 		7BC37C5618204D1800D18013 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = Views/iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +75,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BBB37011821F90900F16823 /* QuartzCore.framework in Frameworks */,
+				7BBB36FF1821F90400F16823 /* CoreText.framework in Frameworks */,
+				7BBB36FD1821F83A00F16823 /* Pixate.framework in Frameworks */,
 				7B3B3E08181C991000C64992 /* CoreGraphics.framework in Frameworks */,
 				7B3B3E0C181C991000C64992 /* CoreData.framework in Frameworks */,
 				7B3B3E0A181C991000C64992 /* UIKit.framework in Frameworks */,
@@ -105,6 +121,9 @@
 		7B3B3E04181C991000C64992 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7BBB37001821F90900F16823 /* QuartzCore.framework */,
+				7BBB36FE1821F90400F16823 /* CoreText.framework */,
+				7BBB36FC1821F83A00F16823 /* Pixate.framework */,
 				7B3B3E05181C991000C64992 /* Foundation.framework */,
 				7B3B3E07181C991000C64992 /* CoreGraphics.framework */,
 				7B3B3E09181C991000C64992 /* UIKit.framework */,
@@ -117,12 +136,15 @@
 		7B3B3E0D181C991000C64992 /* tgio */ = {
 			isa = PBXGroup;
 			children = (
+				7BBB37451821FF4200F16823 /* ViewControllers */,
+				7BBB36F81821DF3E00F16823 /* Fonts */,
 				7BC37C5818204D1E00D18013 /* Views */,
 				7B3B3E16181C991000C64992 /* AppDelegate.h */,
 				7B3B3E17181C991000C64992 /* AppDelegate.m */,
 				7B3B3E1C181C991000C64992 /* Images.xcassets */,
 				7B3B3E19181C991000C64992 /* tgio.xcdatamodeld */,
 				7B3B3E0E181C991000C64992 /* Supporting Files */,
+				7BBB37021821F92400F16823 /* default.css */,
 			);
 			path = tgio;
 			sourceTree = "<group>";
@@ -154,6 +176,15 @@
 				7B3B3E2D181C991000C64992 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7BBB37451821FF4200F16823 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BBB37461821FF6700F16823 /* LoginScreenViewController.h */,
+				7BBB37471821FF6700F16823 /* LoginScreenViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		7BC37C5818204D1E00D18013 /* Views */ = {
@@ -211,6 +242,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Leo Dion";
 				TargetAttributes = {
+					7B3B3E01181C991000C64992 = {
+						DevelopmentTeam = MLT7M394S7;
+					};
 					7B3B3E21181C991000C64992 = {
 						TestTargetID = 7B3B3E01181C991000C64992;
 					};
@@ -242,6 +276,8 @@
 				7B3B3E12181C991000C64992 /* InfoPlist.strings in Resources */,
 				7BC37C5718204D1800D18013 /* iPhone.storyboard in Resources */,
 				7B3B3E1D181C991000C64992 /* Images.xcassets in Resources */,
+				7BBB36F91821DF3E00F16823 /* Fonts in Resources */,
+				7BBB37031821F92400F16823 /* default.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +298,7 @@
 			files = (
 				7B3B3E1B181C991000C64992 /* tgio.xcdatamodeld in Sources */,
 				7B3B3E18181C991000C64992 /* AppDelegate.m in Sources */,
+				7BBB37481821FF6700F16823 /* LoginScreenViewController.m in Sources */,
 				7B3B3E14181C991000C64992 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +420,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Pixate/Framework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tgio/tgio-Prefix.pch";
 				INFOPLIST_FILE = "tgio/tgio-Info.plist";
@@ -396,6 +438,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Pixate/Framework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tgio/tgio-Prefix.pch";
 				INFOPLIST_FILE = "tgio/tgio-Info.plist";

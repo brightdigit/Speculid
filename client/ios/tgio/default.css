@@ -1,0 +1,13 @@
+view {
+    background-color: #ff0000;
+}
+
+label {
+    color: #fff000;
+    font-family: Raleway;
+    font-size: 24px;
+}
+
+pixelate-config {
+parse-error-destination: console;
+}
