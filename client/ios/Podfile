@@ -1,0 +1,2 @@
+platform :ios, '6.1'
+pod 'Pixate', '~> 2.0.0RC4'
