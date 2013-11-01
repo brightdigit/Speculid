@@ -4,7 +4,7 @@ label.header {
     font-weight: 500;
 }
 
-label, text-field {
+label, text-field, button {
     font-family: "Lato";
     font-weight: 200;
 }
@@ -12,3 +12,18 @@ label, text-field {
 pixelate-config {
     parse-error-destination: console;
 }
+
+view.startScreens {
+    background-color: #FFCB98;
+}
+
+view view {
+    background-color: transparent;
+}
+
+view.form {
+    background-color: white;
+}
+
+view.form text-field {
+    border: 

@@ -97,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B35A5D118241D6C00F5FB27 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7BC37C5618204D1800D18013 /* iPhone.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		7B3B3DF9181C991000C64992 = {
 			isa = PBXGroup;
 			children = (
@@ -187,7 +195,7 @@
 		7BC37C5818204D1E00D18013 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7BC37C5618204D1800D18013 /* iPhone.storyboard */,
+				7B35A5D118241D6C00F5FB27 /* Storyboards */,
 			);
 			name = Views;
 			sourceTree = "<group>";
