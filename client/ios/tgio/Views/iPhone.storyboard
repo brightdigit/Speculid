@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xb5-Ma-5EP">
     <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GrL-g6-Wc8" userLabel="Form Container">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GrL-g6-Wc8" userLabel="Form Container">
                                 <rect key="frame" x="20" y="186" width="280" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -39,34 +40,31 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label=""/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="ddt-qO-7Oh"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhH-L4-qUA">
-                                <rect key="frame" x="96" y="392" width="128" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhH-L4-qUA">
+                                <rect key="frame" x="88" y="392" width="144" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create an Account">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="j5r-Pe-7d6" kind="modal" modalTransitionStyle="flipHorizontal" id="WYZ-8n-Q98"/>
-                                </connections>
+                                <state key="normal" title="Create an Account"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvK-pW-lOH">
-                                <rect key="frame" x="141" y="430" width="38" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvK-pW-lOH">
+                                <rect key="frame" x="133" y="430" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="WSF-Xh-qC8" kind="modal" modalTransitionStyle="flipHorizontal" id="xd8-04-Xp5"/>
-                                </connections>
+                                <state key="normal" title="Login"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rhH-L4-qUA" firstAttribute="centerY" secondItem="NvK-pW-lOH" secondAttribute="centerY" id="4hd-By-N7p"/>
                             <constraint firstItem="NvK-pW-lOH" firstAttribute="top" secondItem="rhH-L4-qUA" secondAttribute="bottom" constant="8" symbolic="YES" id="4wN-nY-ZTe"/>
+                            <constraint firstItem="rhH-L4-qUA" firstAttribute="centerX" secondItem="NvK-pW-lOH" secondAttribute="centerX" id="7ps-Zw-oo8"/>
+                            <constraint firstItem="rhH-L4-qUA" firstAttribute="centerX" secondItem="GrL-g6-Wc8" secondAttribute="centerX" id="7w5-98-Vt8"/>
                             <constraint firstAttribute="centerY" secondItem="GrL-g6-Wc8" secondAttribute="centerY" id="ARF-nh-kU6"/>
                             <constraint firstAttribute="trailing" secondItem="GrL-g6-Wc8" secondAttribute="trailing" constant="20" id="Hig-ZR-cF4"/>
                             <constraint firstAttribute="centerX" secondItem="rhH-L4-qUA" secondAttribute="centerX" id="KX8-yv-CGU"/>
+                            <constraint firstItem="rhH-L4-qUA" firstAttribute="centerY" secondItem="GrL-g6-Wc8" secondAttribute="centerY" id="fV5-7Q-P1y"/>
                             <constraint firstAttribute="centerX" secondItem="NvK-pW-lOH" secondAttribute="centerX" id="iAT-Q8-3Ci"/>
                             <constraint firstItem="GrL-g6-Wc8" firstAttribute="leading" secondItem="Hkb-ds-ZcO" secondAttribute="leading" constant="20" id="mDB-Qy-Hev"/>
                             <constraint firstItem="L3t-AH-azP" firstAttribute="top" secondItem="NvK-pW-lOH" secondAttribute="bottom" constant="20" id="obg-pC-pnm"/>
@@ -81,78 +79,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KrD-dX-8wF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1059" y="-61"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="do7-sd-RPE">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="j5r-Pe-7d6" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TMP-7j-lDL">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="xqa-JW-iGA" kind="relationship" relationship="rootViewController" id="Ehf-l5-xSl"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vpJ-gW-4kN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1454" y="-384"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="VyH-8R-fA1">
-            <objects>
-                <viewController id="xqa-JW-iGA" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JUn-A5-hrz"/>
-                        <viewControllerLayoutGuide type="bottom" id="lwz-76-OTz"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8tO-HX-lOC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="7Di-WA-mSu">
-                        <barButtonItem key="backBarButtonItem" title="Getting Started" id="pPj-92-fR9"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sYt-dr-J6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1848" y="-384"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="nC2-Kz-Ku7">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="WSF-Xh-qC8" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hjc-gS-BRh">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="vcS-I2-zt8" kind="relationship" relationship="rootViewController" id="TYJ-My-sv7"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H62-Ta-FB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1454" y="190"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="BB8-Fh-JbI">
-            <objects>
-                <viewController id="vcS-I2-zt8" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iV6-OX-w25"/>
-                        <viewControllerLayoutGuide type="bottom" id="8JL-7z-kZN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CQ5-WA-n5D">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="EzM-FY-JpX">
-                        <barButtonItem key="backBarButtonItem" title="Getting Started" id="5PX-vD-p6w"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8d2-k3-hC0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1848" y="190"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
