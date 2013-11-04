@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B2DC5641828441300A066A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5631828441300A066A9 /* Foundation.framework */; };
+		7B2DC5691828441300A066A9 /* tgio_ui.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B2DC5681828441300A066A9 /* tgio_ui.h */; };
+		7B2DC56B1828441300A066A9 /* tgio_ui.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DC56A1828441300A066A9 /* tgio_ui.m */; };
+		7B2DC5721828441300A066A9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5711828441300A066A9 /* XCTest.framework */; };
+		7B2DC5731828441300A066A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5631828441300A066A9 /* Foundation.framework */; };
+		7B2DC5751828441300A066A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5741828441300A066A9 /* UIKit.framework */; };
+		7B2DC5781828441300A066A9 /* libtgio-ui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5601828441300A066A9 /* libtgio-ui.a */; };
+		7B2DC57E1828441300A066A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B2DC57C1828441300A066A9 /* InfoPlist.strings */; };
+		7B2DC5801828441300A066A9 /* tgio_uiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DC57F1828441300A066A9 /* tgio_uiTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B2DC5761828441300A066A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B2DC5581828441300A066A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B2DC55F1828441300A066A9;
+			remoteInfo = "tgio-ui";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7B2DC55E1828441300A066A9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				7B2DC5691828441300A066A9 /* tgio_ui.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7B2DC5601828441300A066A9 /* libtgio-ui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libtgio-ui.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B2DC5631828441300A066A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7B2DC5671828441300A066A9 /* tgio-ui-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tgio-ui-Prefix.pch"; sourceTree = "<group>"; };
+		7B2DC5681828441300A066A9 /* tgio_ui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tgio_ui.h; sourceTree = "<group>"; };
+		7B2DC56A1828441300A066A9 /* tgio_ui.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgio_ui.m; sourceTree = "<group>"; };
+		7B2DC5701828441300A066A9 /* tgio-uiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tgio-uiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B2DC5711828441300A066A9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7B2DC5741828441300A066A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7B2DC57B1828441300A066A9 /* tgio-uiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tgio-uiTests-Info.plist"; sourceTree = "<group>"; };
+		7B2DC57D1828441300A066A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B2DC57F1828441300A066A9 /* tgio_uiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgio_uiTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B2DC55D1828441300A066A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B2DC5641828441300A066A9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B2DC56D1828441300A066A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B2DC5781828441300A066A9 /* libtgio-ui.a in Frameworks */,
+				7B2DC5721828441300A066A9 /* XCTest.framework in Frameworks */,
+				7B2DC5751828441300A066A9 /* UIKit.framework in Frameworks */,
+				7B2DC5731828441300A066A9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B2DC5571828441300A066A9 = {
+			isa = PBXGroup;
+			children = (
+				7B2DC5651828441300A066A9 /* tgio-ui */,
+				7B2DC5791828441300A066A9 /* tgio-uiTests */,
+				7B2DC5621828441300A066A9 /* Frameworks */,
+				7B2DC5611828441300A066A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B2DC5611828441300A066A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B2DC5601828441300A066A9 /* libtgio-ui.a */,
+				7B2DC5701828441300A066A9 /* tgio-uiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B2DC5621828441300A066A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B2DC5631828441300A066A9 /* Foundation.framework */,
+				7B2DC5711828441300A066A9 /* XCTest.framework */,
+				7B2DC5741828441300A066A9 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B2DC5651828441300A066A9 /* tgio-ui */ = {
+			isa = PBXGroup;
+			children = (
+				7B2DC5681828441300A066A9 /* tgio_ui.h */,
+				7B2DC56A1828441300A066A9 /* tgio_ui.m */,
+				7B2DC5661828441300A066A9 /* Supporting Files */,
+			);
+			path = "tgio-ui";
+			sourceTree = "<group>";
+		};
+		7B2DC5661828441300A066A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B2DC5671828441300A066A9 /* tgio-ui-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B2DC5791828441300A066A9 /* tgio-uiTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B2DC57F1828441300A066A9 /* tgio_uiTests.m */,
+				7B2DC57A1828441300A066A9 /* Supporting Files */,
+			);
+			path = "tgio-uiTests";
+			sourceTree = "<group>";
+		};
+		7B2DC57A1828441300A066A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B2DC57B1828441300A066A9 /* tgio-uiTests-Info.plist */,
+				7B2DC57C1828441300A066A9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B2DC55F1828441300A066A9 /* tgio-ui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B2DC5831828441300A066A9 /* Build configuration list for PBXNativeTarget "tgio-ui" */;
+			buildPhases = (
+				7B2DC55C1828441300A066A9 /* Sources */,
+				7B2DC55D1828441300A066A9 /* Frameworks */,
+				7B2DC55E1828441300A066A9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tgio-ui";
+			productName = "tgio-ui";
+			productReference = 7B2DC5601828441300A066A9 /* libtgio-ui.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7B2DC56F1828441300A066A9 /* tgio-uiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B2DC5861828441300A066A9 /* Build configuration list for PBXNativeTarget "tgio-uiTests" */;
+			buildPhases = (
+				7B2DC56C1828441300A066A9 /* Sources */,
+				7B2DC56D1828441300A066A9 /* Frameworks */,
+				7B2DC56E1828441300A066A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B2DC5771828441300A066A9 /* PBXTargetDependency */,
+			);
+			name = "tgio-uiTests";
+			productName = "tgio-uiTests";
+			productReference = 7B2DC5701828441300A066A9 /* tgio-uiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B2DC5581828441300A066A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Leo Dion";
+			};
+			buildConfigurationList = 7B2DC55B1828441300A066A9 /* Build configuration list for PBXProject "tgio-ui" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7B2DC5571828441300A066A9;
+			productRefGroup = 7B2DC5611828441300A066A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B2DC55F1828441300A066A9 /* tgio-ui */,
+				7B2DC56F1828441300A066A9 /* tgio-uiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B2DC56E1828441300A066A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B2DC57E1828441300A066A9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B2DC55C1828441300A066A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B2DC56B1828441300A066A9 /* tgio_ui.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B2DC56C1828441300A066A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B2DC5801828441300A066A9 /* tgio_uiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B2DC5771828441300A066A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B2DC55F1828441300A066A9 /* tgio-ui */;
+			targetProxy = 7B2DC5761828441300A066A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7B2DC57C1828441300A066A9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B2DC57D1828441300A066A9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7B2DC5811828441300A066A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7B2DC5821828441300A066A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B2DC5841828441300A066A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/tgio_ui.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tgio-ui/tgio-ui-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7B2DC5851828441300A066A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/tgio_ui.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tgio-ui/tgio-ui-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7B2DC5871828441300A066A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tgio-ui/tgio-ui-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "tgio-uiTests/tgio-uiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		7B2DC5881828441300A066A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tgio-ui/tgio-ui-Prefix.pch";
+				INFOPLIST_FILE = "tgio-uiTests/tgio-uiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B2DC55B1828441300A066A9 /* Build configuration list for PBXProject "tgio-ui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B2DC5811828441300A066A9 /* Debug */,
+				7B2DC5821828441300A066A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B2DC5831828441300A066A9 /* Build configuration list for PBXNativeTarget "tgio-ui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B2DC5841828441300A066A9 /* Debug */,
+				7B2DC5851828441300A066A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7B2DC5861828441300A066A9 /* Build configuration list for PBXNativeTarget "tgio-uiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B2DC5871828441300A066A9 /* Debug */,
+				7B2DC5881828441300A066A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B2DC5581828441300A066A9 /* Project object */;
+}

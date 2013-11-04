@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		290F9460EF40417994749A2E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8399C3DB0C4C7F88414252 /* libPods.a */; };
+		7B2DC58A1828449900A066A9 /* libtgio-ui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5891828449900A066A9 /* libtgio-ui.a */; };
 		7B3B3E06181C991000C64992 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3B3E05181C991000C64992 /* Foundation.framework */; };
 		7B3B3E08181C991000C64992 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3B3E07181C991000C64992 /* CoreGraphics.framework */; };
 		7B3B3E0A181C991000C64992 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3B3E09181C991000C64992 /* UIKit.framework */; };
@@ -23,11 +24,10 @@
 		7B3B3E27181C991000C64992 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3B3E0B181C991000C64992 /* CoreData.framework */; };
 		7B3B3E2F181C991000C64992 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3E2D181C991000C64992 /* InfoPlist.strings */; };
 		7B3B3E31181C991000C64992 /* tgioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B3E30181C991000C64992 /* tgioTests.m */; };
-		7BBB36F91821DF3E00F16823 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 7BBB36F81821DF3E00F16823 /* Fonts */; };
+		7BAE444F1828501100139CF8 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAE444E1828501100139CF8 /* iPhone.storyboard */; };
 		7BBB36FF1821F90400F16823 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBB36FE1821F90400F16823 /* CoreText.framework */; };
 		7BBB37011821F90900F16823 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBB37001821F90900F16823 /* QuartzCore.framework */; };
 		7BBB37031821F92400F16823 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 7BBB37021821F92400F16823 /* default.css */; };
-		7BC37C5718204D1800D18013 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC37C5618204D1800D18013 /* iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +43,7 @@
 /* Begin PBXFileReference section */
 		14DEED73C52B47B685D6444E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		5E8399C3DB0C4C7F88414252 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B2DC5891828449900A066A9 /* libtgio-ui.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libtgio-ui.a"; path = "tgio-ui/build/Debug-iphoneos/libtgio-ui.a"; sourceTree = "<group>"; };
 		7B3B3E02181C991000C64992 /* tgio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tgio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3B3E05181C991000C64992 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7B3B3E07181C991000C64992 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,11 +62,10 @@
 		7B3B3E2C181C991000C64992 /* tgioTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tgioTests-Info.plist"; sourceTree = "<group>"; };
 		7B3B3E2E181C991000C64992 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B3B3E30181C991000C64992 /* tgioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgioTests.m; sourceTree = "<group>"; };
-		7BBB36F81821DF3E00F16823 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		7BAE444E1828501100139CF8 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = "tgio-ui/Views/Storyboards/iPhone.storyboard"; sourceTree = SOURCE_ROOT; };
 		7BBB36FE1821F90400F16823 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		7BBB37001821F90900F16823 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7BBB37021821F92400F16823 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; tabWidth = 2; };
-		7BC37C5618204D1800D18013 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = Views/iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B2DC58A1828449900A066A9 /* libtgio-ui.a in Frameworks */,
 				7BBB37011821F90900F16823 /* QuartzCore.framework in Frameworks */,
 				7BBB36FF1821F90400F16823 /* CoreText.framework in Frameworks */,
 				7B3B3E08181C991000C64992 /* CoreGraphics.framework in Frameworks */,
@@ -97,14 +98,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7B35A5D118241D6C00F5FB27 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				7BC37C5618204D1800D18013 /* iPhone.storyboard */,
-			);
-			name = Storyboards;
-			sourceTree = "<group>";
-		};
 		7B3B3DF9181C991000C64992 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +121,7 @@
 		7B3B3E04181C991000C64992 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B2DC5891828449900A066A9 /* libtgio-ui.a */,
 				7BBB37001821F90900F16823 /* QuartzCore.framework */,
 				7BBB36FE1821F90400F16823 /* CoreText.framework */,
 				7B3B3E05181C991000C64992 /* Foundation.framework */,
@@ -143,9 +137,7 @@
 		7B3B3E0D181C991000C64992 /* tgio */ = {
 			isa = PBXGroup;
 			children = (
-				7BBB37451821FF4200F16823 /* ViewControllers */,
-				7BBB36F81821DF3E00F16823 /* Fonts */,
-				7BC37C5818204D1E00D18013 /* Views */,
+				7BAE444D1828500000139CF8 /* Storyboards */,
 				7B3B3E16181C991000C64992 /* AppDelegate.h */,
 				7B3B3E17181C991000C64992 /* AppDelegate.m */,
 				7B3B3E1C181C991000C64992 /* Images.xcassets */,
@@ -185,19 +177,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7BBB37451821FF4200F16823 /* ViewControllers */ = {
+		7BAE444D1828500000139CF8 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				7BAE444E1828501100139CF8 /* iPhone.storyboard */,
 			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		7BC37C5818204D1E00D18013 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				7B35A5D118241D6C00F5FB27 /* Storyboards */,
-			);
-			name = Views;
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,10 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B3B3E12181C991000C64992 /* InfoPlist.strings in Resources */,
-				7BC37C5718204D1800D18013 /* iPhone.storyboard in Resources */,
 				7B3B3E1D181C991000C64992 /* Images.xcassets in Resources */,
-				7BBB36F91821DF3E00F16823 /* Fonts in Resources */,
 				7BBB37031821F92400F16823 /* default.css in Resources */,
+				7BAE444F1828501100139CF8 /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +455,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -492,6 +477,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
