@@ -135,7 +135,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0F-rM-R8x">
-                                <rect key="frame" x="8" y="72" width="304" height="99"/>
+                                <rect key="frame" x="8" y="72" width="304" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Begin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACr-qt-18i">
@@ -147,24 +147,38 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="header"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="your email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11V-CE-Vfi">
-                                        <rect key="frame" x="20" y="49" width="264" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1g2-6K-vgQ">
+                                        <rect key="frame" x="20" y="49" width="264" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="JXk-lh-kxO"/>
+                                            <constraint firstAttribute="height" constant="40" id="3Nk-rz-KjQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LtH-s4-ISm">
+                                        <rect key="frame" x="20" y="97" width="264" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="11V-CE-Vfi" firstAttribute="top" secondItem="ACr-qt-18i" secondAttribute="bottom" constant="8" id="29V-Cb-Nwz"/>
-                                    <constraint firstItem="11V-CE-Vfi" firstAttribute="leading" secondItem="n0F-rM-R8x" secondAttribute="leading" constant="20" symbolic="YES" id="2PH-fa-Glm"/>
-                                    <constraint firstAttribute="trailing" secondItem="11V-CE-Vfi" secondAttribute="trailing" constant="20" symbolic="YES" id="9Av-1v-5Pm"/>
+                                    <constraint firstItem="LtH-s4-ISm" firstAttribute="top" secondItem="1g2-6K-vgQ" secondAttribute="bottom" constant="8" id="8Gx-e8-zQt"/>
                                     <constraint firstAttribute="trailing" secondItem="ACr-qt-18i" secondAttribute="trailing" constant="20" symbolic="YES" id="IOy-yL-f38"/>
+                                    <constraint firstAttribute="trailing" secondItem="1g2-6K-vgQ" secondAttribute="trailing" constant="20" id="KEQ-dp-hxW"/>
+                                    <constraint firstAttribute="bottom" secondItem="LtH-s4-ISm" secondAttribute="bottom" constant="20" symbolic="YES" id="TiP-F5-FSD"/>
+                                    <constraint firstItem="LtH-s4-ISm" firstAttribute="leading" secondItem="n0F-rM-R8x" secondAttribute="leading" constant="20" symbolic="YES" id="WTH-e4-4ay"/>
+                                    <constraint firstItem="1g2-6K-vgQ" firstAttribute="leading" secondItem="n0F-rM-R8x" secondAttribute="leading" constant="20" id="YoO-un-kWU"/>
+                                    <constraint firstItem="LtH-s4-ISm" firstAttribute="top" secondItem="1g2-6K-vgQ" secondAttribute="bottom" constant="8" symbolic="YES" id="a1J-US-kj4"/>
+                                    <constraint firstItem="1g2-6K-vgQ" firstAttribute="top" secondItem="ACr-qt-18i" secondAttribute="bottom" constant="8" id="bH7-un-5P2"/>
+                                    <constraint firstItem="1g2-6K-vgQ" firstAttribute="top" secondItem="ACr-qt-18i" secondAttribute="bottom" constant="8" symbolic="YES" id="kTA-HE-tOF"/>
+                                    <constraint firstItem="1g2-6K-vgQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="n0F-rM-R8x" secondAttribute="leading" constant="20" symbolic="YES" id="mFZ-MR-xIP"/>
                                     <constraint firstItem="ACr-qt-18i" firstAttribute="top" secondItem="n0F-rM-R8x" secondAttribute="top" constant="20" symbolic="YES" id="mlX-D9-if8"/>
-                                    <constraint firstAttribute="bottom" secondItem="11V-CE-Vfi" secondAttribute="bottom" constant="20" symbolic="YES" id="oah-Up-n9D"/>
+                                    <constraint firstAttribute="trailing" secondItem="LtH-s4-ISm" secondAttribute="trailing" constant="20" symbolic="YES" id="pRB-5T-Hsz"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1g2-6K-vgQ" secondAttribute="trailing" constant="20" symbolic="YES" id="sFy-Px-D6o"/>
                                     <constraint firstItem="ACr-qt-18i" firstAttribute="leading" secondItem="n0F-rM-R8x" secondAttribute="leading" constant="20" symbolic="YES" id="ucO-y2-ZET"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -185,6 +199,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Create Account" id="lGp-zH-gre">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="SoL-5x-AUI"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Dvg-Eh-mvp">
+                            <connections>
+                                <segue destination="aH7-SR-SNn" kind="push" id="7lc-NV-rqs"/>
+                            </connections>
+                        </barButtonItem>
                         <connections>
                             <outlet property="backBarButtonItem" destination="SoL-5x-AUI" id="0mg-GK-i2t"/>
                         </connections>
@@ -193,6 +212,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jMZ-Fx-w3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1375" y="-353"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lHc-ix-3Cf">
+            <objects>
+                <viewController id="aH7-SR-SNn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="scA-rU-3ns"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lez-x0-De3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Qh-BL-PiO">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check your email to confirm your email address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="tCn-wK-PIZ">
+                                <rect key="frame" x="20" y="20" width="280" height="376"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="header"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="startScreens"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="DKZ-fg-wJ1">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="9BD-WO-TI9"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z4j-bj-lnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1842" y="-353"/>
         </scene>
         <!--View Controller - Login-->
         <scene sceneID="SFa-tt-but">
@@ -206,9 +262,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="styleId" value="YES"/>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Login" id="6dx-UT-112">

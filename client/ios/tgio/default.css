@@ -4,7 +4,7 @@ label.header {
     font-weight: 500;
 }
 
-label, text-field, button {
+label, text-field, button, navigation-item back-bar-button, navigation-bar *  {
     font-family: "Lato";
     font-weight: 200;
 }
@@ -17,13 +17,19 @@ view.startScreens {
     background-color: #FFCB98;
 }
 
-view view {
-    background-color: transparent;
+text-field {
+    border-width: 1px;
+    border-color: #cccccc;
+    border-style: solid;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0px 8px;
 }
 
 view.form {
-    background-color: white;
+    background-color: transparent;
 }
 
-view.form text-field {
-    border: 
+navigation-bar {
+}
