@@ -17,19 +17,15 @@ view.startScreens {
     background-color: #FFCB98;
 }
 
-text-field {
-    border-width: 1px;
-    border-color: #cccccc;
-    border-style: solid;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    padding: 0px 8px;
-}
-
 view.form {
-    background-color: transparent;
+    border: 1px solid #CCC;
+    background-color: #fff;
 }
 
 navigation-bar {
+}
+
+#registration #emailAddress {
+    padding: 0px 20px;
+    background-color: #fff;
 }
