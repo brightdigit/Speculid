@@ -41,6 +41,8 @@
 		7B5687D41829686A008657EC /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAE444E1828501100139CF8 /* iPhone.storyboard */; };
 		7B5687D61829686A008657EC /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 7BC9977418287BF900BA5354 /* default.css */; };
 		7B5687DF18296B6F008657EC /* tgio-mock-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B5687DD18296B68008657EC /* tgio-mock-Info.plist */; };
+		7B56884918297006008657EC /* libtgio-mockInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B56884818297006008657EC /* libtgio-mockInterface.a */; };
+		7B56884B1829700E008657EC /* libtgio-interface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B56884A1829700E008657EC /* libtgio-interface.a */; };
 		7BAE444F1828501100139CF8 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAE444E1828501100139CF8 /* iPhone.storyboard */; };
 		7BBB36FF1821F90400F16823 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBB36FE1821F90400F16823 /* CoreText.framework */; };
 		7BBB37011821F90900F16823 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBB37001821F90900F16823 /* QuartzCore.framework */; };
@@ -84,6 +86,8 @@
 		7B5687DB1829686A008657EC /* tgio-mock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tgio-mock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5687DC1829686A008657EC /* tgio copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "tgio copy-Info.plist"; path = "/Users/leogdion/Documents/Projects/tg-io/client/ios/tgio copy-Info.plist"; sourceTree = "<absolute>"; };
 		7B5687DD18296B68008657EC /* tgio-mock-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tgio-mock-Info.plist"; sourceTree = "<group>"; };
+		7B56884818297006008657EC /* libtgio-mockInterface.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libtgio-mockInterface.a"; path = "tgio-mockInterface/build/Debug-iphoneos/libtgio-mockInterface.a"; sourceTree = "<group>"; };
+		7B56884A1829700E008657EC /* libtgio-interface.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libtgio-interface.a"; path = "tgio-interface/build/Debug-iphoneos/libtgio-interface.a"; sourceTree = "<group>"; };
 		7BAE444E1828501100139CF8 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = "tgio-ui/Views/Storyboards/iPhone.storyboard"; sourceTree = SOURCE_ROOT; };
 		7BBB36FE1821F90400F16823 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		7BBB37001821F90900F16823 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -96,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B56884B1829700E008657EC /* libtgio-interface.a in Frameworks */,
 				7B2DC58A1828449900A066A9 /* libtgio-ui.a in Frameworks */,
 				7BBB37011821F90900F16823 /* QuartzCore.framework in Frameworks */,
 				7BBB36FF1821F90400F16823 /* CoreText.framework in Frameworks */,
@@ -122,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B56884918297006008657EC /* libtgio-mockInterface.a in Frameworks */,
 				7B5687C81829686A008657EC /* libtgio-ui.a in Frameworks */,
 				7B5687C91829686A008657EC /* QuartzCore.framework in Frameworks */,
 				7B5687CA1829686A008657EC /* CoreText.framework in Frameworks */,
@@ -162,6 +168,8 @@
 		7B3B3E04181C991000C64992 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B56884A1829700E008657EC /* libtgio-interface.a */,
+				7B56884818297006008657EC /* libtgio-mockInterface.a */,
 				7B2DC5891828449900A066A9 /* libtgio-ui.a */,
 				7BBB37001821F90900F16823 /* QuartzCore.framework */,
 				7BBB36FE1821F90400F16823 /* CoreText.framework */,
@@ -308,6 +316,9 @@
 					};
 					7B3B3E21181C991000C64992 = {
 						TestTargetID = 7B3B3E01181C991000C64992;
+					};
+					7B5687C11829686A008657EC = {
+						DevelopmentTeam = MLT7M394S7;
 					};
 				};
 			};
@@ -522,7 +533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -556,7 +567,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -577,7 +588,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tgio/tgio-Prefix.pch";
 				INFOPLIST_FILE = "tgio/tgio-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -599,7 +610,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tgio/tgio-Prefix.pch";
 				INFOPLIST_FILE = "tgio/tgio-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -662,6 +673,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tgio/tgio-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"MOCK=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/tgio/tgio-mock-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "$(inherited)";
@@ -684,6 +700,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tgio/tgio-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"MOCK=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/tgio/tgio-mock-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "$(inherited)";

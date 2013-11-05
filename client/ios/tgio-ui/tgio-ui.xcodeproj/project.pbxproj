@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7B2DC5641828441300A066A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5631828441300A066A9 /* Foundation.framework */; };
-		7B2DC5691828441300A066A9 /* tgio_ui.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B2DC5681828441300A066A9 /* tgio_ui.h */; };
-		7B2DC56B1828441300A066A9 /* tgio_ui.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DC56A1828441300A066A9 /* tgio_ui.m */; };
 		7B2DC5721828441300A066A9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5711828441300A066A9 /* XCTest.framework */; };
 		7B2DC5731828441300A066A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5631828441300A066A9 /* Foundation.framework */; };
 		7B2DC5751828441300A066A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5741828441300A066A9 /* UIKit.framework */; };
 		7B2DC5781828441300A066A9 /* libtgio-ui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5601828441300A066A9 /* libtgio-ui.a */; };
 		7B2DC57E1828441300A066A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B2DC57C1828441300A066A9 /* InfoPlist.strings */; };
 		7B2DC5801828441300A066A9 /* tgio_uiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DC57F1828441300A066A9 /* tgio_uiTests.m */; };
+		7B5687E218296F1A008657EC /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5687E118296F1A008657EC /* Configuration.m */; };
 		7BC9977E1828854B00BA5354 /* UILoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9977A1828854B00BA5354 /* UILoginViewController.m */; };
 		7BC9977F1828854B00BA5354 /* UIRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9977B1828854B00BA5354 /* UIRegistrationViewController.m */; };
 /* End PBXBuildFile section */
@@ -37,7 +36,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				7B2DC5691828441300A066A9 /* tgio_ui.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,14 +45,15 @@
 		7B2DC5601828441300A066A9 /* libtgio-ui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libtgio-ui.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2DC5631828441300A066A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7B2DC5671828441300A066A9 /* tgio-ui-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tgio-ui-Prefix.pch"; sourceTree = "<group>"; };
-		7B2DC5681828441300A066A9 /* tgio_ui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tgio_ui.h; sourceTree = "<group>"; };
-		7B2DC56A1828441300A066A9 /* tgio_ui.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgio_ui.m; sourceTree = "<group>"; };
 		7B2DC5701828441300A066A9 /* tgio-uiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tgio-uiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2DC5711828441300A066A9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7B2DC5741828441300A066A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		7B2DC57B1828441300A066A9 /* tgio-uiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tgio-uiTests-Info.plist"; sourceTree = "<group>"; };
 		7B2DC57D1828441300A066A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B2DC57F1828441300A066A9 /* tgio_uiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgio_uiTests.m; sourceTree = "<group>"; };
+		7B5687E018296F1A008657EC /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		7B5687E118296F1A008657EC /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
+		7B5687E318296F57008657EC /* Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
 		7BC9977A1828854B00BA5354 /* UILoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UILoginViewController.m; path = ViewControllers/UILoginViewController.m; sourceTree = "<group>"; };
 		7BC9977B1828854B00BA5354 /* UIRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIRegistrationViewController.m; path = ViewControllers/UIRegistrationViewController.m; sourceTree = "<group>"; };
 		7BC9977C1828854B00BA5354 /* UIRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIRegistrationViewController.h; path = ViewControllers/UIRegistrationViewController.h; sourceTree = "<group>"; };
@@ -87,6 +86,9 @@
 		7B2DC5571828441300A066A9 = {
 			isa = PBXGroup;
 			children = (
+				7B5687E318296F57008657EC /* Interface.h */,
+				7B5687E018296F1A008657EC /* Configuration.h */,
+				7B5687E118296F1A008657EC /* Configuration.m */,
 				7B2DC5651828441300A066A9 /* tgio-ui */,
 				7B2DC5791828441300A066A9 /* tgio-uiTests */,
 				7B2DC5621828441300A066A9 /* Frameworks */,
@@ -117,8 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				7BC997791828853F00BA5354 /* ViewControllers */,
-				7B2DC5681828441300A066A9 /* tgio_ui.h */,
-				7B2DC56A1828441300A066A9 /* tgio_ui.m */,
 				7B2DC5661828441300A066A9 /* Supporting Files */,
 			);
 			path = "tgio-ui";
@@ -243,7 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BC9977E1828854B00BA5354 /* UILoginViewController.m in Sources */,
-				7B2DC56B1828441300A066A9 /* tgio_ui.m in Sources */,
+				7B5687E218296F1A008657EC /* Configuration.m in Sources */,
 				7BC9977F1828854B00BA5354 /* UIRegistrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -342,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

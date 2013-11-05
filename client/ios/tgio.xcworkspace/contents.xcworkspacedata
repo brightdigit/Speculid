@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:tgio-interface/tgio-interface.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:tgio-mockInterface/tgio-mockInterface.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:tgio-sdk/tgio-sdk.xcodeproj">
    </FileRef>
    <FileRef
