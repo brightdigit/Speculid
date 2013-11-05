@@ -3,3 +3,5 @@ node_modules
 /client/www/apidoc
 xcuserdata
 xcshareddata
+Pods
+Podfile.lock
