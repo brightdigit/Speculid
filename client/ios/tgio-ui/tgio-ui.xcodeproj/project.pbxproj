@@ -16,6 +16,8 @@
 		7B2DC5781828441300A066A9 /* libtgio-ui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5601828441300A066A9 /* libtgio-ui.a */; };
 		7B2DC57E1828441300A066A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B2DC57C1828441300A066A9 /* InfoPlist.strings */; };
 		7B2DC5801828441300A066A9 /* tgio_uiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DC57F1828441300A066A9 /* tgio_uiTests.m */; };
+		7BC9977E1828854B00BA5354 /* UILoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9977A1828854B00BA5354 /* UILoginViewController.m */; };
+		7BC9977F1828854B00BA5354 /* UIRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9977B1828854B00BA5354 /* UIRegistrationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		7B2DC57B1828441300A066A9 /* tgio-uiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tgio-uiTests-Info.plist"; sourceTree = "<group>"; };
 		7B2DC57D1828441300A066A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B2DC57F1828441300A066A9 /* tgio_uiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgio_uiTests.m; sourceTree = "<group>"; };
+		7BC9977A1828854B00BA5354 /* UILoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UILoginViewController.m; path = ViewControllers/UILoginViewController.m; sourceTree = "<group>"; };
+		7BC9977B1828854B00BA5354 /* UIRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIRegistrationViewController.m; path = ViewControllers/UIRegistrationViewController.m; sourceTree = "<group>"; };
+		7BC9977C1828854B00BA5354 /* UIRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIRegistrationViewController.h; path = ViewControllers/UIRegistrationViewController.h; sourceTree = "<group>"; };
+		7BC9977D1828854B00BA5354 /* UILoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UILoginViewController.h; path = ViewControllers/UILoginViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 		7B2DC5651828441300A066A9 /* tgio-ui */ = {
 			isa = PBXGroup;
 			children = (
+				7BC997791828853F00BA5354 /* ViewControllers */,
 				7B2DC5681828441300A066A9 /* tgio_ui.h */,
 				7B2DC56A1828441300A066A9 /* tgio_ui.m */,
 				7B2DC5661828441300A066A9 /* Supporting Files */,
@@ -141,6 +148,17 @@
 				7B2DC57C1828441300A066A9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7BC997791828853F00BA5354 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BC9977A1828854B00BA5354 /* UILoginViewController.m */,
+				7BC9977B1828854B00BA5354 /* UIRegistrationViewController.m */,
+				7BC9977C1828854B00BA5354 /* UIRegistrationViewController.h */,
+				7BC9977D1828854B00BA5354 /* UILoginViewController.h */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +242,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC9977E1828854B00BA5354 /* UILoginViewController.m in Sources */,
 				7B2DC56B1828441300A066A9 /* tgio_ui.m in Sources */,
+				7BC9977F1828854B00BA5354 /* UIRegistrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +429,7 @@
 				7B2DC5851828441300A066A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B2DC5861828441300A066A9 /* Build configuration list for PBXNativeTarget "tgio-uiTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +438,7 @@
 				7B2DC5881828441300A066A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -27,9 +27,9 @@
 		7BAE444F1828501100139CF8 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAE444E1828501100139CF8 /* iPhone.storyboard */; };
 		7BBB36FF1821F90400F16823 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBB36FE1821F90400F16823 /* CoreText.framework */; };
 		7BBB37011821F90900F16823 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBB37001821F90900F16823 /* QuartzCore.framework */; };
-		7BBB37031821F92400F16823 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 7BBB37021821F92400F16823 /* default.css */; };
 		7BC997401828678B00BA5354 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 7BC9973F1828678B00BA5354 /* Fonts */; };
 		7BC99741182867D600BA5354 /* tgio-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3E0F181C991000C64992 /* tgio-Info.plist */; };
+		7BC9977518287BF900BA5354 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 7BC9977418287BF900BA5354 /* default.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +67,8 @@
 		7BAE444E1828501100139CF8 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = "tgio-ui/Views/Storyboards/iPhone.storyboard"; sourceTree = SOURCE_ROOT; };
 		7BBB36FE1821F90400F16823 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		7BBB37001821F90900F16823 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		7BBB37021821F92400F16823 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; tabWidth = 2; };
 		7BC9973F1828678B00BA5354 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "tgio-ui/Resources/Fonts"; sourceTree = SOURCE_ROOT; };
+		7BC9977418287BF900BA5354 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = default.css; path = "tgio-ui/default.css"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +104,7 @@
 		7B3B3DF9181C991000C64992 = {
 			isa = PBXGroup;
 			children = (
+				7BC9977418287BF900BA5354 /* default.css */,
 				7B3B3E0D181C991000C64992 /* tgio */,
 				7B3B3E2A181C991000C64992 /* tgioTests */,
 				7B3B3E04181C991000C64992 /* Frameworks */,
@@ -147,7 +148,6 @@
 				7B3B3E1C181C991000C64992 /* Images.xcassets */,
 				7B3B3E19181C991000C64992 /* tgio.xcdatamodeld */,
 				7B3B3E0E181C991000C64992 /* Supporting Files */,
-				7BBB37021821F92400F16823 /* default.css */,
 			);
 			path = tgio;
 			sourceTree = "<group>";
@@ -280,9 +280,9 @@
 				7BC997401828678B00BA5354 /* Fonts in Resources */,
 				7B3B3E12181C991000C64992 /* InfoPlist.strings in Resources */,
 				7B3B3E1D181C991000C64992 /* Images.xcassets in Resources */,
-				7BBB37031821F92400F16823 /* default.css in Resources */,
 				7BAE444F1828501100139CF8 /* iPhone.storyboard in Resources */,
 				7BC99741182867D600BA5354 /* tgio-Info.plist in Resources */,
+				7BC9977518287BF900BA5354 /* default.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
