@@ -2,7 +2,9 @@ package com.brightdigit.tgio;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
@@ -20,4 +22,13 @@ public class MainActivity extends Activity {
         return true;
     }
     
+    public void login(View view) {
+        // Do something in response to button
+    	Log.i(getCallingPackage(), "login");
+    }
+    
+    public void createAccount(View view) {
+        // Do something in response to button
+    	Log.i(getCallingPackage(), "createAccount");
+    }
 }

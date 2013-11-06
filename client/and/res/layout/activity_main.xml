@@ -18,7 +18,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="@string/Login" />
+        android:text="@string/Login" 
+        android:onClick="login" />
 
     
 
@@ -28,6 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/button1"
         android:layout_centerHorizontal="true"
-        android:text="@string/Create_an_Account" />
+        android:text="@string/Create_an_Account"
+        android:onClick="createAccount" />
 
 </RelativeLayout>
