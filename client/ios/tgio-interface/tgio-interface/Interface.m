@@ -12,16 +12,19 @@
 
 id<Interface> _instance;
 
-- (void) initialize {
-    NSLog(@"prod");
+- (void) initialize
+{
+  NSLog(@"prod");
 }
 
-+ (id<Interface>) instance {
-    if (!_instance) {
-        _instance = [[Interface alloc] init];
-    }
-    
-    return _instance;
++ (id<Interface>) instance
+{
+  if (!_instance)
+  {
+    _instance = [[Interface alloc] init];
+  }
+
+  return _instance;
 }
 
 @end

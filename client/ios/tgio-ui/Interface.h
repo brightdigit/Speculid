@@ -12,6 +12,6 @@
 
 - (void) initialize;
 
-+ (id<Interface>) instance;
++ (id<Interface>)instance;
 
 @end

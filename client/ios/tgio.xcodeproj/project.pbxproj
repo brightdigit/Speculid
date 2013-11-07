@@ -40,14 +40,12 @@
 		7B5687D31829686A008657EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3E1C181C991000C64992 /* Images.xcassets */; };
 		7B5687D41829686A008657EC /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAE444E1828501100139CF8 /* iPhone.storyboard */; };
 		7B5687D61829686A008657EC /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 7BC9977418287BF900BA5354 /* default.css */; };
-		7B5687DF18296B6F008657EC /* tgio-mock-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B5687DD18296B68008657EC /* tgio-mock-Info.plist */; };
 		7B56884918297006008657EC /* libtgio-mockInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B56884818297006008657EC /* libtgio-mockInterface.a */; };
 		7B56884B1829700E008657EC /* libtgio-interface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B56884A1829700E008657EC /* libtgio-interface.a */; };
 		7BAE444F1828501100139CF8 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAE444E1828501100139CF8 /* iPhone.storyboard */; };
 		7BBB36FF1821F90400F16823 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBB36FE1821F90400F16823 /* CoreText.framework */; };
 		7BBB37011821F90900F16823 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBB37001821F90900F16823 /* QuartzCore.framework */; };
 		7BC997401828678B00BA5354 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 7BC9973F1828678B00BA5354 /* Fonts */; };
-		7BC99741182867D600BA5354 /* tgio-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3E0F181C991000C64992 /* tgio-Info.plist */; };
 		7BC9977518287BF900BA5354 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 7BC9977418287BF900BA5354 /* default.css */; };
 /* End PBXBuildFile section */
 
@@ -84,7 +82,6 @@
 		7B3B3E2E181C991000C64992 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B3B3E30181C991000C64992 /* tgioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgioTests.m; sourceTree = "<group>"; };
 		7B5687DB1829686A008657EC /* tgio-mock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tgio-mock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B5687DC1829686A008657EC /* tgio copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "tgio copy-Info.plist"; path = "/Users/leogdion/Documents/Projects/tg-io/client/ios/tgio copy-Info.plist"; sourceTree = "<absolute>"; };
 		7B5687DD18296B68008657EC /* tgio-mock-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tgio-mock-Info.plist"; sourceTree = "<group>"; };
 		7B56884818297006008657EC /* libtgio-mockInterface.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libtgio-mockInterface.a"; path = "tgio-mockInterface/build/Debug-iphoneos/libtgio-mockInterface.a"; sourceTree = "<group>"; };
 		7B56884A1829700E008657EC /* libtgio-interface.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libtgio-interface.a"; path = "tgio-interface/build/Debug-iphoneos/libtgio-interface.a"; sourceTree = "<group>"; };
@@ -151,7 +148,6 @@
 				7B3B3E04181C991000C64992 /* Frameworks */,
 				7B3B3E03181C991000C64992 /* Products */,
 				14DEED73C52B47B685D6444E /* Pods.xcconfig */,
-				7B5687DC1829686A008657EC /* tgio copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,6 +251,7 @@
 				7B3B3DFF181C991000C64992 /* Frameworks */,
 				7B3B3E00181C991000C64992 /* Resources */,
 				953175744D6D45F38B046810 /* Copy Pods Resources */,
+				7BEB6910182C45EC008A1D8A /* Uncrustify */,
 			);
 			buildRules = (
 			);
@@ -292,6 +289,7 @@
 				7B5687C71829686A008657EC /* Frameworks */,
 				7B5687D01829686A008657EC /* Resources */,
 				7B5687D71829686A008657EC /* Copy Pods Resources */,
+				7B1B8753182C487F00DFBEA0 /* Uncrustify */,
 			);
 			buildRules = (
 			);
@@ -350,7 +348,6 @@
 				7B3B3E12181C991000C64992 /* InfoPlist.strings in Resources */,
 				7B3B3E1D181C991000C64992 /* Images.xcassets in Resources */,
 				7BAE444F1828501100139CF8 /* iPhone.storyboard in Resources */,
-				7BC99741182867D600BA5354 /* tgio-Info.plist in Resources */,
 				7BC9977518287BF900BA5354 /* default.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,7 +369,6 @@
 				7B5687D31829686A008657EC /* Images.xcassets in Resources */,
 				7B5687D41829686A008657EC /* iPhone.storyboard in Resources */,
 				7B5687D61829686A008657EC /* default.css in Resources */,
-				7B5687DF18296B6F008657EC /* tgio-mock-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +389,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		7B1B8753182C487F00DFBEA0 /* Uncrustify */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Uncrustify;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo $SRCROOT\ncd $SRCROOT\n/usr/local/bin/uncrustify -c objc.cfg --replace `find . -name \"*.m\" -o -name \"*.h\" -o -name \"*.mm\" -o -name \"*.c\" | grep -v Pods`";
 		};
 		7B5687C21829686A008657EC /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -422,6 +432,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BEB6910182C45EC008A1D8A /* Uncrustify */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Uncrustify;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo $SRCROOT\ncd $SRCROOT\n/usr/local/bin/uncrustify -c objc.cfg --replace `find . -name \"*.m\" -o -name \"*.h\" -o -name \"*.mm\" -o -name \"*.c\" | grep -v Pods`";
 			showEnvVarsInLog = 0;
 		};
 		953175744D6D45F38B046810 /* Copy Pods Resources */ = {

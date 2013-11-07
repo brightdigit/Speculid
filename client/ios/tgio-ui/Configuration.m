@@ -13,13 +13,15 @@
 
 static id<Interface> _interface = nil;
 
-+ (id<Interface>) interface {
-    return _interface;
++ (id<Interface>) interface
+{
+  return _interface;
 }
 
-+ (void) configure: (id<Interface>) interface {
-    [interface initialize];
-    _interface = interface;
++ (void) configure:(id<Interface>)interface
+{
+  [interface initialize];
+  _interface = interface;
 }
 
 @end
