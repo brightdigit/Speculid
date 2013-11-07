@@ -5,3 +5,5 @@ xcuserdata
 xcshareddata
 Pods
 Podfile.lock
+
+*.unc-backup*
