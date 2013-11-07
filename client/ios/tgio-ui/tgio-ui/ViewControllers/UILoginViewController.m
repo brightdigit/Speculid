@@ -36,6 +36,12 @@
   // Dispose of any resources that can be recreated.
 }
 
+- (BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+  // _userName.text [a-z][a-z0-9-]
+  return YES;
+}
+
 - (IBAction) login:(id)sender
 {
 //    [AppInterface login:]

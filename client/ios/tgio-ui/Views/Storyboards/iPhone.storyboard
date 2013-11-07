@@ -184,7 +184,11 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="Create Account" id="lGp-zH-gre">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="SoL-5x-AUI"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="SoL-5x-AUI">
+                            <connections>
+                                <action selector="cancel:" destination="Ieb-yX-f06" id="zeN-dZ-J8R"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="Dvg-Eh-mvp">
                             <connections>
                                 <action selector="register:" destination="Ieb-yX-f06" id="eld-SQ-ZSr"/>
@@ -195,7 +199,9 @@
                         </connections>
                     </navigationItem>
                     <connections>
-                        <outlet property="emailAddress" destination="1g2-6K-vgQ" id="mZh-fs-neo"/>
+                        <outlet property="_emailAddress" destination="1g2-6K-vgQ" id="zKM-tX-s9d"/>
+                        <outletCollection property="_nextButtons" destination="LtH-s4-ISm" id="ocK-pF-aXb"/>
+                        <outletCollection property="_nextButtons" destination="Dvg-Eh-mvp" id="lnz-OI-e86"/>
                         <segue destination="aH7-SR-SNn" kind="push" identifier="registration" id="xYA-Cr-9a6"/>
                     </connections>
                 </viewController>
