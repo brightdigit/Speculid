@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <TestFlightSDK/TestFlight.h>
 
 @implementation AppDelegate
 
@@ -16,7 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+    //[TestFlight takeOff:@"faeb8dc2-cf3e-4fa4-8172-fae7c751d970"];
+    [TestFlight takeOff:@"7c34604a-8d68-4b4f-9340-1fe372b828dd"];
     return YES;
 }
 

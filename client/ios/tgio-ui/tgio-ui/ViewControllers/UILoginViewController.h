@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface UILoginViewController : UIViewController {
-    IBOutlet UITextField * userName;
-    IBOutlet UITextField * password;
+    IBOutlet UITextField * _userName;
+    IBOutlet UITextField * _password;
+    
+    IBOutletCollection(id) NSArray * _nextButtons;
 }
 
 - (IBAction) login:(id) sender;
+- (IBAction) cancel:(id)sender;
 
 @end

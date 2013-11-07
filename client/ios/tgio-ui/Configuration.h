@@ -12,6 +12,7 @@
 
 @interface Configuration : NSObject
 
++ (id<Interface>) interface;
 + (void) configure: (id<Interface>) interface;
 
 @end

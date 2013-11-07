@@ -153,10 +153,10 @@
 		7BC997791828853F00BA5354 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7BC9977D1828854B00BA5354 /* UILoginViewController.h */,
 				7BC9977A1828854B00BA5354 /* UILoginViewController.m */,
 				7BC9977B1828854B00BA5354 /* UIRegistrationViewController.m */,
 				7BC9977C1828854B00BA5354 /* UIRegistrationViewController.h */,
-				7BC9977D1828854B00BA5354 /* UILoginViewController.h */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";

@@ -36,7 +36,11 @@
 }
 
 - (IBAction) login:(id) sender {
-    
+//    [AppInterface login:]
+}
+
+- (IBAction) cancel:(id)sender {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

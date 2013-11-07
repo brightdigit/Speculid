@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xb5-Ma-5EP">
     <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
@@ -319,7 +320,11 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Login" id="6dx-UT-112">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="2nR-XS-2rn"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="2nR-XS-2rn">
+                            <connections>
+                                <action selector="cancel:" destination="cTC-RT-9vv" id="rMR-yN-EbU"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Login" id="VMh-cp-eIW">
                             <connections>
                                 <action selector="login:" destination="cTC-RT-9vv" id="JN0-0D-5Lp"/>
@@ -327,8 +332,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="password" destination="ARe-nA-GPk" id="Mgk-Cv-M7H"/>
-                        <outlet property="userName" destination="3JE-Zo-1zB" id="vwJ-L5-dQh"/>
+                        <outlet property="_password" destination="ARe-nA-GPk" id="oTf-5g-Fyb"/>
+                        <outlet property="_userName" destination="3JE-Zo-1zB" id="TgP-7x-8XI"/>
+                        <outletCollection property="_nextButtons" destination="5Ue-z1-C3q" id="4qH-MY-rCu"/>
+                        <outletCollection property="_nextButtons" destination="VMh-cp-eIW" id="eib-mf-ofQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWD-iy-6Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
