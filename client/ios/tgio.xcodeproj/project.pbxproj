@@ -402,7 +402,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo $SRCROOT\ncd $SRCROOT\n/usr/local/bin/uncrustify -c objc.cfg --replace `find . -name \"*.m\" -o -name \"*.h\" -o -name \"*.mm\" -o -name \"*.c\" | grep -v Pods`";
+			shellScript = "echo $SRCROOT\ncd $SRCROOT\n/usr/local/bin/uncrustify -c objc.cfg --replace `find . -name \"*.m\" -o -name \"*.h\" -o -name \"*.mm\" -o -name \"*.c\" -o -name \"*.pch\" | grep -v Pods`";
 		};
 		7B5687C21829686A008657EC /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -446,7 +446,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo $SRCROOT\ncd $SRCROOT\n/usr/local/bin/uncrustify -c objc.cfg --replace `find . -name \"*.m\" -o -name \"*.h\" -o -name \"*.mm\" -o -name \"*.c\" | grep -v Pods`";
+			shellScript = "echo $SRCROOT\ncd $SRCROOT\n/usr/local/bin/uncrustify -c objc.cfg --replace `find . -name \"*.m\" -o -name \"*.h\" -o -name \"*.mm\" -o -name \"*.c\" -o -name \"*.pch\" | grep -v Pods`";
 			showEnvVarsInLog = 0;
 		};
 		953175744D6D45F38B046810 /* Copy Pods Resources */ = {

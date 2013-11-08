@@ -14,6 +14,7 @@
 		7B2DC5781828441300A066A9 /* libtgio-ui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5601828441300A066A9 /* libtgio-ui.a */; };
 		7B2DC57E1828441300A066A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B2DC57C1828441300A066A9 /* InfoPlist.strings */; };
 		7B2DC5801828441300A066A9 /* tgio_uiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DC57F1828441300A066A9 /* tgio_uiTests.m */; };
+		7B3CBCCD182D17D700332A0E /* UIApplication+Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3CBCCC182D17D700332A0E /* UIApplication+Activity.m */; };
 		7B5687E218296F1A008657EC /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5687E118296F1A008657EC /* Configuration.m */; };
 		7BC9977E1828854B00BA5354 /* UILoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9977A1828854B00BA5354 /* UILoginViewController.m */; };
 		7BC9977F1828854B00BA5354 /* UIRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9977B1828854B00BA5354 /* UIRegistrationViewController.m */; };
@@ -51,6 +52,8 @@
 		7B2DC57B1828441300A066A9 /* tgio-uiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tgio-uiTests-Info.plist"; sourceTree = "<group>"; };
 		7B2DC57D1828441300A066A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B2DC57F1828441300A066A9 /* tgio_uiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgio_uiTests.m; sourceTree = "<group>"; };
+		7B3CBCCB182D17D700332A0E /* UIApplication+Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+Activity.h"; path = "ViewControllers/UIApplication+Activity.h"; sourceTree = "<group>"; };
+		7B3CBCCC182D17D700332A0E /* UIApplication+Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+Activity.m"; path = "ViewControllers/UIApplication+Activity.m"; sourceTree = "<group>"; };
 		7B5687E018296F1A008657EC /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
 		7B5687E118296F1A008657EC /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
 		7B5687E318296F57008657EC /* Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				7BC9977A1828854B00BA5354 /* UILoginViewController.m */,
 				7BC9977B1828854B00BA5354 /* UIRegistrationViewController.m */,
 				7BC9977C1828854B00BA5354 /* UIRegistrationViewController.h */,
+				7B3CBCCB182D17D700332A0E /* UIApplication+Activity.h */,
+				7B3CBCCC182D17D700332A0E /* UIApplication+Activity.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BC9977E1828854B00BA5354 /* UILoginViewController.m in Sources */,
+				7B3CBCCD182D17D700332A0E /* UIApplication+Activity.m in Sources */,
 				7B5687E218296F1A008657EC /* Configuration.m in Sources */,
 				7BC9977F1828854B00BA5354 /* UIRegistrationViewController.m in Sources */,
 			);

@@ -59,15 +59,16 @@
 
 - (IBAction) register:(id)sender
 {
-  [_activityView startAnimating];
+  [UIApplication startActivity];
   [AppInterface registerEmailAddress:_emailAddress.text target:self action:@selector(onRegistration:)];
 }
 
 - (void) onRegistration:(id)result
 {
   // if (result.isValid)
+  [UIApplication  stopActivity];
   [self performSegueWithIdentifier:@"registration" sender:self];
-  [_activityView stopAnimating];
+  // [_activityView stopAnimating];
 }
 
 - (IBAction) cancel:(id)sender
