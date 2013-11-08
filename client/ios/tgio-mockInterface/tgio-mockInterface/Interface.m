@@ -17,6 +17,16 @@ id<Interface> _instance;
   NSLog(@"mock");
 }
 
+- (void) loginUser:(NSString *)name withPassword:(NSString *)password target:(id)target action:(SEL)selector
+{
+  [target performSelector:selector withObject:nil afterDelay:5.0];
+}
+
+- (void) registerEmailAddress:(NSString *)emailAddress target:(id)target action:(SEL)selector
+{
+  [target performSelector:selector withObject:nil afterDelay:5.0];
+}
+
 + (id<Interface>) instance
 {
   if (!_instance)

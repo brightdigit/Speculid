@@ -7,6 +7,7 @@
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
     #import "Configuration.h"
+    #import "Interface.h"
 
     #define AppInterface [Configuration interface]
 #endif

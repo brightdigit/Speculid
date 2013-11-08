@@ -44,7 +44,15 @@
 
 - (IBAction) login:(id)sender
 {
-//    [AppInterface login:]
+  [_activityView startAnimating];
+  [AppInterface loginUser:_userName.text withPassword:_password.text target:self action:@selector(onLogin:)];
+}
+
+- (void) onLogin:(id)result
+{
+  //  if (result.isValid) {
+  [self performSegueWithIdentifier:@"home" sender:self];
+  [_activityView stopAnimating];
 }
 
 - (IBAction) cancel:(id)sender
