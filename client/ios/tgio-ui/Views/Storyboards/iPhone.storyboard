@@ -300,12 +300,15 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="form"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ue-z1-C3q">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ue-z1-C3q">
                                 <rect key="frame" x="246" y="110" width="54" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="cTC-RT-9vv" eventType="touchUpInside" id="Mr3-e0-RBT"/>
@@ -331,17 +334,17 @@
                                 <action selector="cancel:" destination="cTC-RT-9vv" id="rMR-yN-EbU"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Login" id="VMh-cp-eIW">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Login" id="VMh-cp-eIW">
                             <connections>
                                 <action selector="login:" destination="cTC-RT-9vv" id="JN0-0D-5Lp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="_loginButton" destination="5Ue-z1-C3q" id="39H-wC-cXk"/>
+                        <outlet property="_nextButton" destination="VMh-cp-eIW" id="kUS-jO-2mc"/>
                         <outlet property="_password" destination="ARe-nA-GPk" id="oTf-5g-Fyb"/>
                         <outlet property="_userName" destination="3JE-Zo-1zB" id="TgP-7x-8XI"/>
-                        <outletCollection property="_nextButtons" destination="5Ue-z1-C3q" id="4qH-MY-rCu"/>
-                        <outletCollection property="_nextButtons" destination="VMh-cp-eIW" id="eib-mf-ofQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWD-iy-6Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>

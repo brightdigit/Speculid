@@ -12,7 +12,9 @@
   IBOutlet UITextField * _userName;
   IBOutlet UITextField * _password;
 
-  IBOutletCollection(id) NSArray * _nextButtons;
+//  IBOutletCollection(NSObject) NSArray * _nextButtons;
+  IBOutlet UIButton * _loginButton;
+  IBOutlet UIBarButtonItem * _nextButton;
 }
 
 - (IBAction) login:(id) sender;
