@@ -42,6 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7B24D5FF182F0D2F00813C4D /* RegistrationResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationResponse.h; sourceTree = "<group>"; };
+		7B24D600182F0D5600813C4D /* LoginResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginResponse.h; sourceTree = "<group>"; };
 		7BC9974B1828766400BA5354 /* libtgio-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libtgio-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC9974E1828766400BA5354 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BC997521828766400BA5354 /* tgio-sdk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tgio-sdk-Prefix.pch"; sourceTree = "<group>"; };
@@ -113,6 +115,8 @@
 				7BC997531828766400BA5354 /* tgio_sdk.h */,
 				7BC997551828766400BA5354 /* tgio_sdk.m */,
 				7BC997511828766400BA5354 /* Supporting Files */,
+				7B24D5FF182F0D2F00813C4D /* RegistrationResponse.h */,
+				7B24D600182F0D5600813C4D /* LoginResponse.h */,
 			);
 			path = "tgio-sdk";
 			sourceTree = "<group>";
@@ -409,6 +413,7 @@
 				7BC997701828766400BA5354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BC997711828766400BA5354 /* Build configuration list for PBXNativeTarget "tgio-sdkTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				7BC997731828766400BA5354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

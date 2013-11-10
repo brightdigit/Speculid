@@ -150,10 +150,13 @@
                                     <constraint firstAttribute="height" constant="40" id="OTq-s8-xH4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="styleId" value="emailAddress"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="Ieb-yX-f06" id="U7N-iM-Dyd"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LtH-s4-ISm">
                                 <rect key="frame" x="20" y="149" width="280" height="30"/>
@@ -200,8 +203,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="_emailAddress" destination="1g2-6K-vgQ" id="zKM-tX-s9d"/>
-                        <outletCollection property="_nextButtons" destination="LtH-s4-ISm" id="ocK-pF-aXb"/>
-                        <outletCollection property="_nextButtons" destination="Dvg-Eh-mvp" id="lnz-OI-e86"/>
+                        <outlet property="_nextButton" destination="Dvg-Eh-mvp" id="J4o-T9-hap"/>
+                        <outlet property="_registerButton" destination="LtH-s4-ISm" id="d7O-7v-oFH"/>
                         <segue destination="aH7-SR-SNn" kind="push" identifier="registration" id="xYA-Cr-9a6"/>
                     </connections>
                 </viewController>
@@ -209,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="1375" y="-353"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirmation View Controller-->
         <scene sceneID="lHc-ix-3Cf">
             <objects>
-                <viewController id="aH7-SR-SNn" sceneMemberID="viewController">
+                <viewController id="aH7-SR-SNn" customClass="ConfirmationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="scA-rU-3ns"/>
                         <viewControllerLayoutGuide type="bottom" id="Lez-x0-De3"/>
@@ -224,6 +227,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check your email to confirm your email address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="tCn-wK-PIZ">
                                 <rect key="frame" x="20" y="20" width="280" height="376"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -266,13 +270,19 @@
                                         <rect key="frame" x="20" y="8" width="280" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="cTC-RT-9vv" id="NCg-lx-hOg"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ARe-nA-GPk">
                                         <rect key="frame" x="20" y="45" width="280" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="cTC-RT-9vv" id="yla-u6-dsd"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVn-TW-0iu" userLabel="Divider Line">
                                         <rect key="frame" x="20" y="35" width="300" height="1"/>

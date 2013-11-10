@@ -31,8 +31,6 @@ static NSRegularExpression * userNameRegularExpression = nil;
 {
   [super viewDidLoad];
   // Do any additional setup after loading the view.
-  _userName.delegate = self;
-  _password.delegate = self;
 }
 
 - (void) didReceiveMemoryWarning
@@ -75,22 +73,34 @@ static NSRegularExpression * userNameRegularExpression = nil;
     password = [textField.text stringByReplacingCharactersInRange:range withString:string];
   }
   BOOL isValid = password.length >= 5 && [UILoginViewController validateUserName:userName];
-  NSLog(@"%@", [_nextButton valueForKey:@"enabled"]);
   [_nextButton setEnabled:isValid];
   [_loginButton setEnabled:isValid];
   result = !(!isValid && textField == _userName  && userName.length > 15);
   return result;
 }
 
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+  if (textField == _userName)
+  {
+    [_password becomeFirstResponder];
+  }
+  else if (textField == _password)
+  {
+    [textField resignFirstResponder];
+  }
+  return YES;
+}
+
 - (IBAction) login:(id)sender
 {
   [UIApplication startActivity];
   [AppInterface loginUser:_userName.text withPassword:_password.text target:self action:@selector(onLogin:)];
+  [self.view endEditing:YES];
 }
 
 - (void) onLogin:(id)result
 {
-  //  if (result.isValid) {
   [self performSegueWithIdentifier:@"home" sender:self];
   [UIApplication stopActivity];
 }

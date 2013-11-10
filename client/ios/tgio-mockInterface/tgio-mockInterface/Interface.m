@@ -17,6 +17,11 @@ id<Interface> _instance;
   NSLog(@"mock");
 }
 
+- (InterfaceType) type
+{
+  return MockInterfaceType;
+}
+
 - (void) loginUser:(NSString *)name withPassword:(NSString *)password target:(id)target action:(SEL)selector
 {
   [target performSelector:selector withObject:nil afterDelay:5.0];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B24D603182F124F00813C4D /* ConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B24D602182F124F00813C4D /* ConfirmationViewController.m */; };
 		7B2DC5641828441300A066A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5631828441300A066A9 /* Foundation.framework */; };
 		7B2DC5721828441300A066A9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5711828441300A066A9 /* XCTest.framework */; };
 		7B2DC5731828441300A066A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DC5631828441300A066A9 /* Foundation.framework */; };
@@ -43,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7B24D601182F124F00813C4D /* ConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfirmationViewController.h; path = ViewControllers/ConfirmationViewController.h; sourceTree = "<group>"; };
+		7B24D602182F124F00813C4D /* ConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfirmationViewController.m; path = ViewControllers/ConfirmationViewController.m; sourceTree = "<group>"; };
 		7B2DC5601828441300A066A9 /* libtgio-ui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libtgio-ui.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2DC5631828441300A066A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7B2DC5671828441300A066A9 /* tgio-ui-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tgio-ui-Prefix.pch"; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				7BC9977C1828854B00BA5354 /* UIRegistrationViewController.h */,
 				7B3CBCCB182D17D700332A0E /* UIApplication+Activity.h */,
 				7B3CBCCC182D17D700332A0E /* UIApplication+Activity.m */,
+				7B24D601182F124F00813C4D /* ConfirmationViewController.h */,
+				7B24D602182F124F00813C4D /* ConfirmationViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				7B3CBCCD182D17D700332A0E /* UIApplication+Activity.m in Sources */,
 				7B5687E218296F1A008657EC /* Configuration.m in Sources */,
 				7BC9977F1828854B00BA5354 /* UIRegistrationViewController.m in Sources */,
+				7B24D603182F124F00813C4D /* ConfirmationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

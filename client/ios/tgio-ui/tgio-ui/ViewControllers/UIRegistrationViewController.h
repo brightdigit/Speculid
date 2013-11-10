@@ -10,7 +10,9 @@
 
 @interface UIRegistrationViewController : UIViewController {
   IBOutlet UITextField * _emailAddress;
-  IBOutletCollection(id) NSArray * _nextButtons;
+
+  IBOutlet UIBarButtonItem * _nextButton;
+  IBOutlet UIButton * _registerButton;
 }
 
 - (IBAction) register :(id) sender;

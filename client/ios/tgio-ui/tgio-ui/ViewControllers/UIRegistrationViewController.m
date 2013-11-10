@@ -7,12 +7,15 @@
 //
 
 #import "UIRegistrationViewController.h"
+#import "../../../tgio-sdk/tgio-sdk/RegistrationResponse.h"
 
 @interface UIRegistrationViewController ()
 
 @end
 
 @implementation UIRegistrationViewController
+
+static NSPredicate * emailTest = nil;
 
 - (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,21 +41,38 @@
 
 - (BOOL) validateEmail:(NSString *)candidate
 {
-  NSString * emailRegex =
-    @"(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}"
-    @"~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\"
-    @"x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-"
-    @"z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5"
-    @"]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-"
-    @"9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21"
-    @"-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])";
-  NSPredicate * emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES[c] %@", emailRegex];
+  if (emailTest == nil)
+  {
+    emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES[c] %@",
+                 @"(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}"
+                 @"~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\"
+                 @"x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-"
+                 @"z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5"
+                 @"]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-"
+                 @"9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21"
+                 @"-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"];
+  }
 
   return [emailTest evaluateWithObject:candidate];
 }
 
 - (BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
+  NSString * emailAddress;
+
+  if (_emailAddress == textField)
+  {
+    emailAddress = [textField.text stringByReplacingCharactersInRange:range withString:string];
+  }
+  else
+  {
+    emailAddress = _emailAddress.text;
+  }
+
+  BOOL isValid = [self validateEmail:emailAddress];
+
+  _registerButton.enabled = isValid;
+  _nextButton.enabled = isValid;
 
   return YES;
 }
@@ -61,14 +81,13 @@
 {
   [UIApplication startActivity];
   [AppInterface registerEmailAddress:_emailAddress.text target:self action:@selector(onRegistration:)];
+  [_emailAddress resignFirstResponder];
 }
 
-- (void) onRegistration:(id)result
+- (void) onRegistration:(id<RegistrationResponse>)result
 {
-  // if (result.isValid)
   [UIApplication  stopActivity];
   [self performSegueWithIdentifier:@"registration" sender:self];
-  // [_activityView stopAnimating];
 }
 
 - (IBAction) cancel:(id)sender
