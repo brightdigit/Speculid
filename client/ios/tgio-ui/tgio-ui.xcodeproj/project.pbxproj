@@ -64,6 +64,7 @@
 		7BC9977B1828854B00BA5354 /* UIRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIRegistrationViewController.m; path = ViewControllers/UIRegistrationViewController.m; sourceTree = "<group>"; };
 		7BC9977C1828854B00BA5354 /* UIRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIRegistrationViewController.h; path = ViewControllers/UIRegistrationViewController.h; sourceTree = "<group>"; };
 		7BC9977D1828854B00BA5354 /* UILoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UILoginViewController.h; path = ViewControllers/UILoginViewController.h; sourceTree = "<group>"; };
+		7BFDDEE51830320100DCDD20 /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Views; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		7B2DC5571828441300A066A9 = {
 			isa = PBXGroup;
 			children = (
+				7BFDDEE51830320100DCDD20 /* Views */,
 				7B5687E318296F57008657EC /* Interface.h */,
 				7B5687E018296F1A008657EC /* Configuration.h */,
 				7B5687E118296F1A008657EC /* Configuration.m */,
