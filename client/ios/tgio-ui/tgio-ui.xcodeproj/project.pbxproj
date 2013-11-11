@@ -17,6 +17,8 @@
 		7B2DC5801828441300A066A9 /* tgio_uiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DC57F1828441300A066A9 /* tgio_uiTests.m */; };
 		7B3CBCCD182D17D700332A0E /* UIApplication+Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3CBCCC182D17D700332A0E /* UIApplication+Activity.m */; };
 		7B5687E218296F1A008657EC /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5687E118296F1A008657EC /* Configuration.m */; };
+		7BA33166183166AD006F9B12 /* UIUsernamePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA33165183166AD006F9B12 /* UIUsernamePasswordViewController.m */; };
+		7BA33169183167DA006F9B12 /* UICreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA33168183167DA006F9B12 /* UICreateAccountViewController.m */; };
 		7BC9977E1828854B00BA5354 /* UILoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9977A1828854B00BA5354 /* UILoginViewController.m */; };
 		7BC9977F1828854B00BA5354 /* UIRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9977B1828854B00BA5354 /* UIRegistrationViewController.m */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,10 @@
 		7B5687E018296F1A008657EC /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
 		7B5687E118296F1A008657EC /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
 		7B5687E318296F57008657EC /* Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
+		7BA33164183166AD006F9B12 /* UIUsernamePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIUsernamePasswordViewController.h; path = ViewControllers/UIUsernamePasswordViewController.h; sourceTree = "<group>"; };
+		7BA33165183166AD006F9B12 /* UIUsernamePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIUsernamePasswordViewController.m; path = ViewControllers/UIUsernamePasswordViewController.m; sourceTree = "<group>"; };
+		7BA33167183167DA006F9B12 /* UICreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UICreateAccountViewController.h; path = ViewControllers/UICreateAccountViewController.h; sourceTree = "<group>"; };
+		7BA33168183167DA006F9B12 /* UICreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UICreateAccountViewController.m; path = ViewControllers/UICreateAccountViewController.m; sourceTree = "<group>"; };
 		7BC9977A1828854B00BA5354 /* UILoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UILoginViewController.m; path = ViewControllers/UILoginViewController.m; sourceTree = "<group>"; };
 		7BC9977B1828854B00BA5354 /* UIRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIRegistrationViewController.m; path = ViewControllers/UIRegistrationViewController.m; sourceTree = "<group>"; };
 		7BC9977C1828854B00BA5354 /* UIRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIRegistrationViewController.h; path = ViewControllers/UIRegistrationViewController.h; sourceTree = "<group>"; };
@@ -161,6 +167,8 @@
 		7BC997791828853F00BA5354 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7BA33164183166AD006F9B12 /* UIUsernamePasswordViewController.h */,
+				7BA33165183166AD006F9B12 /* UIUsernamePasswordViewController.m */,
 				7BC9977D1828854B00BA5354 /* UILoginViewController.h */,
 				7BC9977A1828854B00BA5354 /* UILoginViewController.m */,
 				7BC9977B1828854B00BA5354 /* UIRegistrationViewController.m */,
@@ -169,6 +177,8 @@
 				7B3CBCCC182D17D700332A0E /* UIApplication+Activity.m */,
 				7B24D601182F124F00813C4D /* ConfirmationViewController.h */,
 				7B24D602182F124F00813C4D /* ConfirmationViewController.m */,
+				7BA33167183167DA006F9B12 /* UICreateAccountViewController.h */,
+				7BA33168183167DA006F9B12 /* UICreateAccountViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -256,7 +266,9 @@
 			files = (
 				7BC9977E1828854B00BA5354 /* UILoginViewController.m in Sources */,
 				7B3CBCCD182D17D700332A0E /* UIApplication+Activity.m in Sources */,
+				7BA33169183167DA006F9B12 /* UICreateAccountViewController.m in Sources */,
 				7B5687E218296F1A008657EC /* Configuration.m in Sources */,
+				7BA33166183166AD006F9B12 /* UIUsernamePasswordViewController.m in Sources */,
 				7BC9977F1828854B00BA5354 /* UIRegistrationViewController.m in Sources */,
 				7B24D603182F124F00813C4D /* ConfirmationViewController.m in Sources */,
 			);

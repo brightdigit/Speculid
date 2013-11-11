@@ -1,21 +1,18 @@
 //
-//  UILoginViewController.m
+//  UICreateAccountViewController.m
+//  tgio-ui
 //
-//
-//  Created by Leo G Dion on 11/4/13.
-//
+//  Created by Leo G Dion on 11/11/13.
+//  Copyright (c) 2013 Leo Dion. All rights reserved.
 //
 
-#import "UILoginViewController.h"
+#import "UICreateAccountViewController.h"
 
-@interface UILoginViewController ()
-
+@interface UICreateAccountViewController ()
 
 @end
 
-@implementation UILoginViewController
-
-static NSRegularExpression * userNameRegularExpression = nil;
+@implementation UICreateAccountViewController
 
 - (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,32 +30,21 @@ static NSRegularExpression * userNameRegularExpression = nil;
   // Do any additional setup after loading the view.
 }
 
-- (void) viewDidAppear:(BOOL)animated
-{
-  [super viewDidAppear:animated];
-  [self.navigationController setNavigationBarHidden:NO animated:animated];
-}
-
-- (void) viewWillDisappear:(BOOL)animated
-{
-  [super viewWillDisappear:animated];
-  [self.navigationController setNavigationBarHidden:YES animated:animated];
-}
-
 - (void) didReceiveMemoryWarning
 {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
 }
 
-- (IBAction) login:(id)sender
+
+- (IBAction) create:(id)sender
 {
   [UIApplication startActivity];
-  [AppInterface login:_userName.text withPassword:_password.text target:self action:@selector(onLogin:)];
+  [AppInterface login:_userName.text withPassword:_password.text target:self action:@selector(onCreate:)];
   [self.view endEditing:YES];
 }
 
-- (void) onLogin:(id)result
+- (void) onCreate:(id)result
 {
   [self performSegueWithIdentifier:@"home" sender:self];
   [UIApplication stopActivity];

@@ -17,7 +17,7 @@ typedef enum
 } InterfaceType;
 
 - (void) initialize;
-- (void) loginUser:(NSString *) name withPassword:(NSString *) password target:(id) target action:(SEL) selector;
+- (void) login:(NSString *) name withPassword:(NSString *) password target:(id) target action:(SEL) selector;
 - (void) registerEmailAddress:(NSString *) emailAddress target:(id) target action:(SEL) selector;
 
 @optional

@@ -7,14 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIUsernamePasswordViewController.h"
 
-@interface UILoginViewController : UIViewController<UITextFieldDelegate> {
-  IBOutlet UITextField * _userName;
-  IBOutlet UITextField * _password;
-
-//  IBOutletCollection(NSObject) NSArray * _nextButtons;
-  IBOutlet UIButton * _loginButton;
-  IBOutlet UIBarButtonItem * _nextButton;
+@interface UILoginViewController : UIUsernamePasswordViewController {
 }
 
 - (IBAction) login:(id) sender;

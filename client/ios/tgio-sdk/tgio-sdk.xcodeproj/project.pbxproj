@@ -44,6 +44,8 @@
 /* Begin PBXFileReference section */
 		7B24D5FF182F0D2F00813C4D /* RegistrationResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationResponse.h; sourceTree = "<group>"; };
 		7B24D600182F0D5600813C4D /* LoginResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginResponse.h; sourceTree = "<group>"; };
+		7BA3316A18316A07006F9B12 /* RegistrationRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationRequest.h; sourceTree = "<group>"; };
+		7BA3316B18316A14006F9B12 /* LoginRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
 		7BC9974B1828766400BA5354 /* libtgio-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libtgio-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC9974E1828766400BA5354 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BC997521828766400BA5354 /* tgio-sdk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tgio-sdk-Prefix.pch"; sourceTree = "<group>"; };
@@ -80,6 +82,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7BA3316C18316C69006F9B12 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		7BC997421828766400BA5354 = {
 			isa = PBXGroup;
 			children = (
@@ -112,11 +121,14 @@
 		7BC997501828766400BA5354 /* tgio-sdk */ = {
 			isa = PBXGroup;
 			children = (
+				7BA3316C18316C69006F9B12 /* New Group */,
 				7BC997531828766400BA5354 /* tgio_sdk.h */,
 				7BC997551828766400BA5354 /* tgio_sdk.m */,
 				7BC997511828766400BA5354 /* Supporting Files */,
 				7B24D5FF182F0D2F00813C4D /* RegistrationResponse.h */,
 				7B24D600182F0D5600813C4D /* LoginResponse.h */,
+				7BA3316A18316A07006F9B12 /* RegistrationRequest.h */,
+				7BA3316B18316A14006F9B12 /* LoginRequest.h */,
 			);
 			path = "tgio-sdk";
 			sourceTree = "<group>";

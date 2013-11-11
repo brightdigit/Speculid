@@ -22,7 +22,7 @@ id<Interface> _instance;
   return MockInterfaceType;
 }
 
-- (void) loginUser:(NSString *)name withPassword:(NSString *)password target:(id)target action:(SEL)selector
+- (void) login:(NSString *)name withPassword:(NSString *)password target:(id)target action:(SEL)selector
 {
   [target performSelector:selector withObject:nil afterDelay:5.0];
 }

@@ -370,7 +370,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="_loginButton" destination="5Ue-z1-C3q" id="39H-wC-cXk"/>
+                        <outlet property="_button" destination="5Ue-z1-C3q" id="02P-DU-ebV"/>
                         <outlet property="_nextButton" destination="VMh-cp-eIW" id="pfl-5d-DJZ"/>
                         <outlet property="_password" destination="ARe-nA-GPk" id="oTf-5g-Fyb"/>
                         <outlet property="_userName" destination="3JE-Zo-1zB" id="TgP-7x-8XI"/>
@@ -399,7 +399,7 @@
         <!--Create User-->
         <scene sceneID="qJ9-NR-Glp">
             <objects>
-                <viewController id="JLU-Lt-1GN" userLabel="Create User" sceneMemberID="viewController">
+                <viewController id="JLU-Lt-1GN" userLabel="Create User" customClass="UICreateAccountViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Bu-PJ-Xcv"/>
                         <viewControllerLayoutGuide type="bottom" id="Zx7-bC-RjC"/>
@@ -456,8 +456,8 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="form"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBb-pD-yJx">
-                                <rect key="frame" x="246" y="110" width="54" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBb-pD-yJx">
+                                <rect key="frame" x="255" y="98" width="45" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                 <state key="normal" title="Join">
@@ -473,7 +473,7 @@
                             <constraint firstItem="HWv-Q8-ect" firstAttribute="top" secondItem="4Bu-PJ-Xcv" secondAttribute="bottom" constant="20" id="5dO-U9-I19"/>
                             <constraint firstItem="HWv-Q8-ect" firstAttribute="leading" secondItem="OrK-Oy-DEq" secondAttribute="leading" id="G3g-n7-kzm"/>
                             <constraint firstAttribute="trailing" secondItem="HWv-Q8-ect" secondAttribute="trailing" id="TyA-rX-pVL"/>
-                            <constraint firstItem="HBb-pD-yJx" firstAttribute="top" secondItem="HWv-Q8-ect" secondAttribute="bottom" constant="20" id="nKb-he-bZs"/>
+                            <constraint firstItem="HBb-pD-yJx" firstAttribute="top" secondItem="HWv-Q8-ect" secondAttribute="bottom" constant="8" id="nKb-he-bZs"/>
                             <constraint firstAttribute="trailing" secondItem="HBb-pD-yJx" secondAttribute="trailing" constant="20" id="vxb-nZ-srv"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -486,6 +486,10 @@
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Join" id="ioK-xn-7qU"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="_button" destination="HBb-pD-yJx" id="fyu-VH-2UO"/>
+                        <outlet property="_nextButton" destination="ioK-xn-7qU" id="NLY-MT-3pZ"/>
+                        <outlet property="_password" destination="vEd-E3-sF2" id="MLs-KV-gBW"/>
+                        <outlet property="_userName" destination="6wD-X5-qkv" id="bfB-gx-Rnb"/>
                         <segue destination="TfW-6T-O9P" kind="modal" identifier="home" id="iH8-yL-zpr"/>
                     </connections>
                 </viewController>
@@ -500,6 +504,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="UyN-bv-Cef"/>
+        <segue reference="iH8-yL-zpr"/>
     </inferredMetricsTieBreakers>
 </document>
