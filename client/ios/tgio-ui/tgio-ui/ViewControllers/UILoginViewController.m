@@ -33,6 +33,18 @@ static NSRegularExpression * userNameRegularExpression = nil;
   // Do any additional setup after loading the view.
 }
 
+- (void) viewDidAppear:(BOOL)animated
+{
+  [super viewDidAppear:animated];
+  [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+  [super viewWillDisappear:animated];
+  [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+
 - (void) didReceiveMemoryWarning
 {
   [super didReceiveMemoryWarning];
