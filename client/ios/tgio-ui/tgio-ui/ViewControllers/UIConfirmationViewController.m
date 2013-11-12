@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Leo Dion. All rights reserved.
 //
 
-#import "ConfirmationViewController.h"
+#import "UIConfirmationViewController.h"
 
 @interface ConfirmationViewController ()
 

@@ -5,7 +5,6 @@
 //  Created by Leo G Dion on 11/8/13.
 //  Copyright (c) 2013 Leo Dion. All rights reserved.
 //
-#import <objc/runtime.h>
 #import "UIApplication+Activity.h"
 
 @implementation UIApplication (Activity)

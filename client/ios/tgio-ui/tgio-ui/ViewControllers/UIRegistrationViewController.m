@@ -7,7 +7,6 @@
 //
 
 #import "UIRegistrationViewController.h"
-#import "../../../tgio-sdk/tgio-sdk/RegistrationResponse.h"
 
 @interface UIRegistrationViewController ()
 
@@ -84,7 +83,7 @@ static NSPredicate * emailTest = nil;
   [_emailAddress resignFirstResponder];
 }
 
-- (void) onRegistration:(id<RegistrationResponse>)result
+- (void) onRegistration:(id)result
 {
   [UIApplication  stopActivity];
   [self performSegueWithIdentifier:@"registration" sender:self];
