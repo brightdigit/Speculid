@@ -11,19 +11,7 @@
 
 @implementation Configuration
 
-static id<ClientFactory> _interface = nil;
 static id<TgioClient> _client = nil;
-
-+ (id<ClientFactory>) interface
-{
-  return _interface;
-}
-
-+ (void) configure:(id<ClientFactory>)interface
-{
-  [interface initialize];
-  _interface = interface;
-}
 
 + (void) setupWithClient:(id<TgioClient>)client
 {

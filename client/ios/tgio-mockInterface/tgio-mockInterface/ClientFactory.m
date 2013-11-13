@@ -7,39 +7,24 @@
 //
 
 #import "ClientFactory.h"
+#import "MockClient.h"
 #import "tgio-sdk.h"
 
 @implementation ClientFactory
 
-id<ClientFactory> _instance;
+static ClientFactory * _instance;
 
-- (void) initialize
+- (id<TgioClient>) clientWithConfiguration:(id)configuration
 {
-  NSLog(@"mock");
-}
-
-- (InterfaceType) type
-{
-  return MockInterfaceType;
-}
-
-- (void) login:(id<LoginRequest>)request target:(id)target action:(SEL)selector
-{
-  [target performSelector:selector withObject:nil afterDelay:5.0];
-}
-
-- (void) register:(id<RegistrationRequest>)request target:(id)target action:(SEL)selector
-{
-  [target performSelector:selector withObject:nil afterDelay:5.0];
+  return [MockClient connect:nil];
 }
 
 + (id<ClientFactory>) instance
 {
-  if (!_instance)
+  if (_instance == nil)
   {
     _instance = [[ClientFactory alloc] init];
   }
-
   return _instance;
 }
 

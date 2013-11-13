@@ -42,6 +42,7 @@
 		7B5687D61829686A008657EC /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 7BC9977418287BF900BA5354 /* default.css */; };
 		7B56884918297006008657EC /* libtgio-mockInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B56884818297006008657EC /* libtgio-mockInterface.a */; };
 		7B56884B1829700E008657EC /* libtgio-interface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B56884A1829700E008657EC /* libtgio-interface.a */; };
+		7B6A37C818340182007FB62A /* libtgio-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6A37C718340182007FB62A /* libtgio-sdk.a */; };
 		7BAE444F1828501100139CF8 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAE444E1828501100139CF8 /* iPhone.storyboard */; };
 		7BBB36FF1821F90400F16823 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBB36FE1821F90400F16823 /* CoreText.framework */; };
 		7BBB37011821F90900F16823 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBB37001821F90900F16823 /* QuartzCore.framework */; };
@@ -86,6 +87,7 @@
 		7B5687DD18296B68008657EC /* tgio-mock-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tgio-mock-Info.plist"; sourceTree = "<group>"; };
 		7B56884818297006008657EC /* libtgio-mockInterface.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libtgio-mockInterface.a"; path = "tgio-mockInterface/build/Debug-iphoneos/libtgio-mockInterface.a"; sourceTree = "<group>"; };
 		7B56884A1829700E008657EC /* libtgio-interface.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libtgio-interface.a"; path = "tgio-interface/build/Debug-iphoneos/libtgio-interface.a"; sourceTree = "<group>"; };
+		7B6A37C718340182007FB62A /* libtgio-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libtgio-sdk.a"; path = "../../../../../Library/Developer/Xcode/DerivedData/tgio-asaulkvmkkzlbaeocrsbazvnkakr/Build/Products/Debug-iphoneos/libtgio-sdk.a"; sourceTree = "<group>"; };
 		7BAE444E1828501100139CF8 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = "tgio-ui/Views/Storyboards/iPhone.storyboard"; sourceTree = SOURCE_ROOT; };
 		7BBB36FE1821F90400F16823 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		7BBB37001821F90900F16823 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -127,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6A37C818340182007FB62A /* libtgio-sdk.a in Frameworks */,
 				7B56884918297006008657EC /* libtgio-mockInterface.a in Frameworks */,
 				7B5687C81829686A008657EC /* libtgio-ui.a in Frameworks */,
 				7B5687C91829686A008657EC /* QuartzCore.framework in Frameworks */,
@@ -167,6 +170,7 @@
 		7B3B3E04181C991000C64992 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B6A37C718340182007FB62A /* libtgio-sdk.a */,
 				7BD986A2183278B4001E2FD8 /* libtgio-sdk.a */,
 				7B56884A1829700E008657EC /* libtgio-interface.a */,
 				7B56884818297006008657EC /* libtgio-mockInterface.a */,
@@ -739,6 +743,10 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/tgio/tgio-mock-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/tgio-asaulkvmkkzlbaeocrsbazvnkakr/Build/Products/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -775,6 +783,10 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/tgio/tgio-mock-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/tgio-asaulkvmkkzlbaeocrsbazvnkakr/Build/Products/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

@@ -13,8 +13,6 @@
 
 @interface Configuration : NSObject
 
-+ (id<ClientFactory>) interface __deprecated;
-+ (void) configure:(id<ClientFactory>) interface __deprecated;
 + (id<TgioClient>)client;
 + (void) setupWithClient:(id<TgioClient>)client;
 

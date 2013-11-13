@@ -15,6 +15,7 @@
 		7B56880B18296FE6008657EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B56880918296FE6008657EC /* InfoPlist.strings */; };
 		7B56880D18296FE6008657EC /* tgio_mockInterfaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B56880C18296FE6008657EC /* tgio_mockInterfaceTests.m */; };
 		7B56884E18297042008657EC /* ClientFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B56884D18297042008657EC /* ClientFactory.m */; };
+		7B6A37CB18340212007FB62A /* MockClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A37CA18340212007FB62A /* MockClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		7B56880C18296FE6008657EC /* tgio_mockInterfaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgio_mockInterfaceTests.m; sourceTree = "<group>"; };
 		7B56884C18297042008657EC /* ClientFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientFactory.h; sourceTree = "<group>"; };
 		7B56884D18297042008657EC /* ClientFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientFactory.m; sourceTree = "<group>"; };
+		7B6A37C918340212007FB62A /* MockClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockClient.h; sourceTree = "<group>"; };
+		7B6A37CA18340212007FB62A /* MockClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				7B5687F318296FE6008657EC /* Supporting Files */,
 				7B56884C18297042008657EC /* ClientFactory.h */,
 				7B56884D18297042008657EC /* ClientFactory.m */,
+				7B6A37C918340212007FB62A /* MockClient.h */,
+				7B6A37CA18340212007FB62A /* MockClient.m */,
 			);
 			path = "tgio-mockInterface";
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6A37CB18340212007FB62A /* MockClient.m in Sources */,
 				7B56884E18297042008657EC /* ClientFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
