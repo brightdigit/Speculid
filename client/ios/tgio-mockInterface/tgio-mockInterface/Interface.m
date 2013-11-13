@@ -7,6 +7,7 @@
 //
 
 #import "Interface.h"
+#import "tgio-sdk.h"
 
 @implementation Interface
 
@@ -22,12 +23,12 @@ id<Interface> _instance;
   return MockInterfaceType;
 }
 
-- (void) login:(NSString *)name withPassword:(NSString *)password target:(id)target action:(SEL)selector
+- (void) login:(id<LoginRequest>)request target:(id)target action:(SEL)selector
 {
   [target performSelector:selector withObject:nil afterDelay:5.0];
 }
 
-- (void) registerEmailAddress:(NSString *)emailAddress target:(id)target action:(SEL)selector
+- (void) register:(id<RegistrationRequest>)request target:(id)target action:(SEL)selector
 {
   [target performSelector:selector withObject:nil afterDelay:5.0];
 }

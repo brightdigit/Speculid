@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol TgioAppClient;
-
 @protocol TgioClient <NSObject>
 
-- (id<TgioAppClient>)connect:(NSString *) applicationId;
++ (id<TgioClient>)connect:(NSString *) applicationId;
+- (void) login:(id<LoginRequest>) request target:(id) target action:(SEL) selector;
+- (void) register :(id<RegistrationRequest>) request target:(id) target action:(SEL) selector;
 
 @end

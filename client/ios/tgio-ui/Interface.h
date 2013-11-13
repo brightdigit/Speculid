@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "tgio-sdk.h"
 
 @protocol Interface <NSObject>
 
@@ -17,11 +18,9 @@ typedef enum
 } InterfaceType;
 
 - (void) initialize;
-- (void) login:(NSString *) name withPassword:(NSString *) password target:(id) target action:(SEL) selector __deprecated;
-- (void) registerEmailAddress:(NSString *) emailAddress target:(id) target action:(SEL) selector __deprecated;
 
-- (void) login:(id) request target:(id) target action:(SEL) selector;
-- (void) register :(id) request target:(id) target action:(SEL) selector;
+- (void) login:(id<LoginRequest>) request target:(id) target action:(SEL) selector;
+- (void) register :(id<RegistrationRequest>) request target:(id) target action:(SEL) selector;
 
 @optional
 - (InterfaceType) type;

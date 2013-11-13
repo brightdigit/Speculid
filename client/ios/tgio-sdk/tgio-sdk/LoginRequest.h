@@ -11,3 +11,7 @@
 @protocol LoginRequest <NSObject>
 
 @end
+
+@interface LoginRequest : NSObject<LoginRequest>
+
+@end

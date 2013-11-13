@@ -54,7 +54,8 @@ static NSRegularExpression * userNameRegularExpression = nil;
 - (IBAction) login:(id)sender
 {
   [UIApplication startActivity];
-  [AppInterface login:_userName.text withPassword:_password.text target:self action:@selector(onLogin:)];
+  [AppInterface login:nil target:self action:@selector(onLogin:)];
+//  [AppInterface login:_userName.text withPassword:_password.text target:self action:@selector(onLogin:)];
   [self.view endEditing:YES];
 }
 

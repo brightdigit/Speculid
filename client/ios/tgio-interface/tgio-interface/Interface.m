@@ -7,6 +7,7 @@
 //
 
 #import "Interface.h"
+#import "tgio-sdk.h"
 
 @implementation Interface
 
@@ -25,6 +26,17 @@ id<Interface> _instance;
   }
 
   return _instance;
+}
+
+- (void) login:(id<LoginRequest>)request target:(id)target action:(SEL)selector
+{
+  [client login:request target:target action:selector];
+//  [client login:request target:target selector:selector];
+}
+
+- (void) register:(id<RegistrationRequest>)request target:(id)target action:(SEL)selector
+{
+  [client register:request target:target action:selector];
 }
 
 @end

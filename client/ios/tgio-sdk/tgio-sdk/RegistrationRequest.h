@@ -11,3 +11,7 @@
 @protocol RegistrationRequest <NSObject>
 
 @end
+
+@interface RegistrationRequest : NSObject<RegistrationRequest>
+
+@end

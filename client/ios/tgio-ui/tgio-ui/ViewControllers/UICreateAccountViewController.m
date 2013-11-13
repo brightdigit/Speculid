@@ -40,7 +40,7 @@
 - (IBAction) create:(id)sender
 {
   [UIApplication startActivity];
-  [AppInterface login:_userName.text withPassword:_password.text target:self action:@selector(onCreate:)];
+  // [AppInterface login:_userName.text withPassword:_password.text target:self action:@selector(onCreate:)];
   [self.view endEditing:YES];
 }
 
