@@ -14,4 +14,8 @@
 
 @interface RegistrationRequest : NSObject<RegistrationRequest>
 
+- (id) initWithEmailAddress:(NSString *) emailAddress;
+
+@property (readonly, nonatomic) NSString * emailAddress;
+
 @end

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "tgio-sdk.h"
 
-@protocol Interface <NSObject>
+@protocol ClientFactory <NSObject>
 
 typedef enum
 {
@@ -17,15 +17,13 @@ typedef enum
   MockInterfaceType
 } InterfaceType;
 
-- (void) initialize;
-
+@optional
+- (InterfaceType) type __deprecated;
+- (void) initialize __deprecated;
 - (void) login:(id<LoginRequest>) request target:(id) target action:(SEL) selector __deprecated;
 - (void) register :(id<RegistrationRequest>) request target:(id) target action:(SEL) selector __deprecated;
 
-@optional
-- (InterfaceType) type;
-
-+ (id<Interface>) instance __deprecated;
++ (id<ClientFactory>)instance;
 - (id<TgioClient>)clientWithConfiguration:(id) configuration;
 
 @end

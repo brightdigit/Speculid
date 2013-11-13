@@ -14,4 +14,9 @@
 
 @interface LoginRequest : NSObject<LoginRequest>
 
+- (id) initWithUserName:(NSString *) userName andPassword:(NSString *) password;
+
+@property (readonly, nonatomic) NSString * userName;
+@property (readonly, nonatomic) NSString * password;
+
 @end

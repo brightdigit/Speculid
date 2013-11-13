@@ -10,4 +10,20 @@
 
 @implementation LoginRequest
 
+@synthesize userName = _userName;
+@synthesize password = _password;
+
+- (id) initWithUserName:(NSString *)userName andPassword:(NSString *)password
+{
+  self = [super init];
+
+  if (self)
+  {
+    _userName = userName;
+    _password = password;
+  }
+
+  return self;
+}
+
 @end

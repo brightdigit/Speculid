@@ -6,26 +6,14 @@
 //  Copyright (c) 2013 Leo Dion. All rights reserved.
 //
 
-#import "Interface.h"
+#import "ClientFactory.h"
 #import "tgio-sdk.h"
 
-@implementation Interface
+@implementation ClientFactory
 
-id<Interface> _instance;
-
-- (void) initialize
+- (id<TgioClient>) clientWithConfiguration:(id)configuration
 {
-  NSLog(@"prod");
-}
-
-+ (id<Interface>) instance
-{
-  if (!_instance)
-  {
-    _instance = [[Interface alloc] init];
-  }
-
-  return _instance;
+  return nil;
 }
 
 - (void) login:(id<LoginRequest>)request target:(id)target action:(SEL)selector

@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 Leo Dion. All rights reserved.
 //
 
-#import "Interface.h"
+#import "ClientFactory.h"
 #import "tgio-sdk.h"
 
-@implementation Interface
+@implementation ClientFactory
 
-id<Interface> _instance;
+id<ClientFactory> _instance;
 
 - (void) initialize
 {
@@ -33,11 +33,11 @@ id<Interface> _instance;
   [target performSelector:selector withObject:nil afterDelay:5.0];
 }
 
-+ (id<Interface>) instance
++ (id<ClientFactory>) instance
 {
   if (!_instance)
   {
-    _instance = [[Interface alloc] init];
+    _instance = [[ClientFactory alloc] init];
   }
 
   return _instance;

@@ -79,7 +79,8 @@ static NSPredicate * emailTest = nil;
 - (IBAction) register:(id)sender
 {
   [UIApplication startActivity];
-  [AppInterface register:nil target:self action:@selector(onRegistration:)];
+  [Client register:[[RegistrationRequest alloc] initWithEmailAddress:_emailAddress.text] target:self action:@selector(onRegistration:)];
+  // [AppInterface register:nil target:self action:@selector(onRegistration:)];
   [_emailAddress resignFirstResponder];
 }
 

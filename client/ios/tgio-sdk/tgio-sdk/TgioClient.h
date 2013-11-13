@@ -10,8 +10,17 @@
 
 @protocol TgioClient <NSObject>
 
+typedef enum
+{
+  ProductionClientType,
+  MockClientType
+} TgioClientType;
+
 + (id<TgioClient>)connect:(NSString *) applicationId;
 - (void) login:(id<LoginRequest>) request target:(id) target action:(SEL) selector;
 - (void) register :(id<RegistrationRequest>) request target:(id) target action:(SEL) selector;
+
+@optional
+- (TgioClientType) type;
 
 @end

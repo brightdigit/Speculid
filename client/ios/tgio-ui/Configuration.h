@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "tgio-sdk.h"
 
-@protocol Interface;
+@protocol ClientFactory;
 
 @interface Configuration : NSObject
 
-+ (id<Interface>) interface __deprecated;
-+ (void) configure:(id<Interface>) interface __deprecated;
++ (id<ClientFactory>) interface __deprecated;
++ (void) configure:(id<ClientFactory>) interface __deprecated;
 + (id<TgioClient>)client;
++ (void) setupWithClient:(id<TgioClient>)client;
 
 @end

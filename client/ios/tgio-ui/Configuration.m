@@ -7,21 +7,32 @@
 //
 
 #import "Configuration.h"
-#import "Interface.h"
+#import "ClientFactory.h"
 
 @implementation Configuration
 
-static id<Interface> _interface = nil;
+static id<ClientFactory> _interface = nil;
+static id<TgioClient> _client = nil;
 
-+ (id<Interface>) interface
++ (id<ClientFactory>) interface
 {
   return _interface;
 }
 
-+ (void) configure:(id<Interface>)interface
++ (void) configure:(id<ClientFactory>)interface
 {
   [interface initialize];
   _interface = interface;
+}
+
++ (void) setupWithClient:(id<TgioClient>)client
+{
+  _client = client;
+}
+
++ (id<TgioClient>) client
+{
+  return _client;
 }
 
 @end

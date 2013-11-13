@@ -59,7 +59,7 @@
 		7B3CBCCC182D17D700332A0E /* UIApplication+Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+Activity.m"; path = "ViewControllers/UIApplication+Activity.m"; sourceTree = "<group>"; };
 		7B5687E018296F1A008657EC /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
 		7B5687E118296F1A008657EC /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
-		7B5687E318296F57008657EC /* Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
+		7B5687E318296F57008657EC /* ClientFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientFactory.h; sourceTree = "<group>"; };
 		7BA33164183166AD006F9B12 /* UIUsernamePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIUsernamePasswordViewController.h; path = ViewControllers/UIUsernamePasswordViewController.h; sourceTree = "<group>"; };
 		7BA33165183166AD006F9B12 /* UIUsernamePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIUsernamePasswordViewController.m; path = ViewControllers/UIUsernamePasswordViewController.m; sourceTree = "<group>"; };
 		7BA33167183167DA006F9B12 /* UICreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UICreateAccountViewController.h; path = ViewControllers/UICreateAccountViewController.h; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				7BFDDEE51830320100DCDD20 /* Views */,
-				7B5687E318296F57008657EC /* Interface.h */,
+				7B5687E318296F57008657EC /* ClientFactory.h */,
 				7B5687E018296F1A008657EC /* Configuration.h */,
 				7B5687E118296F1A008657EC /* Configuration.m */,
 				7B2DC5651828441300A066A9 /* tgio-ui */,

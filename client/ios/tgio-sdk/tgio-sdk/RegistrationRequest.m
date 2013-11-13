@@ -10,4 +10,18 @@
 
 @implementation RegistrationRequest
 
+@synthesize emailAddress = _emailAddress;
+
+- (id) initWithEmailAddress:(NSString *)emailAddress
+{
+  self = [super init];
+
+  if (self)
+  {
+    _emailAddress = emailAddress;
+  }
+
+  return self;
+}
+
 @end

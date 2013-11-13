@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "tgio-sdk.h"
-#import "../../tgio-ui/Interface.h"
+#import "../../tgio-ui/ClientFactory.h"
 
-@interface Interface : NSObject<Interface> {
+@interface ClientFactory : NSObject<ClientFactory> {
   id<TgioClient> client;
 }
 
