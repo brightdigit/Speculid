@@ -11,4 +11,5 @@
   #import "UIApplication+Activity.h"
 
   #define AppInterface [Configuration interface]
+  #define Client       [Configuration client]
 #endif

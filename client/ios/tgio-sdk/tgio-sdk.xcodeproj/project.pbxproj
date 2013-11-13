@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B79C173183315680054AB87 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B79C172183315680054AB87 /* Client.m */; };
 		7BC9974F1828766400BA5354 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9974E1828766400BA5354 /* Foundation.framework */; };
 		7BC9975D1828766400BA5354 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9975C1828766400BA5354 /* XCTest.framework */; };
 		7BC9975E1828766400BA5354 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9974E1828766400BA5354 /* Foundation.framework */; };
@@ -44,8 +43,6 @@
 /* Begin PBXFileReference section */
 		7B24D5FF182F0D2F00813C4D /* RegistrationResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationResponse.h; sourceTree = "<group>"; };
 		7B24D600182F0D5600813C4D /* LoginResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginResponse.h; sourceTree = "<group>"; };
-		7B79C171183315680054AB87 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = "tgio-sdk/Client.h"; sourceTree = "<group>"; };
-		7B79C172183315680054AB87 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Client.m; path = "tgio-sdk/Client.m"; sourceTree = "<group>"; };
 		7B918C8818326F360073A65E /* TgioClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TgioClient.h; sourceTree = "<group>"; };
 		7BA3316A18316A07006F9B12 /* RegistrationRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationRequest.h; sourceTree = "<group>"; };
 		7BA3316B18316A14006F9B12 /* LoginRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
@@ -89,8 +86,6 @@
 		7BC997421828766400BA5354 = {
 			isa = PBXGroup;
 			children = (
-				7B79C171183315680054AB87 /* Client.h */,
-				7B79C172183315680054AB87 /* Client.m */,
 				7BC997501828766400BA5354 /* tgio-sdk */,
 				7BC997641828766400BA5354 /* tgio-sdkTests */,
 				7BC9974D1828766400BA5354 /* Frameworks */,
@@ -258,7 +253,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BD26BB01833DE36002C7BD2 /* RegistrationRequest.m in Sources */,
-				7B79C173183315680054AB87 /* Client.m in Sources */,
 				7BD26BAE1833DDE8002C7BD2 /* LoginRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

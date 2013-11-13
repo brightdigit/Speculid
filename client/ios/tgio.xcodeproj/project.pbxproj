@@ -730,6 +730,13 @@
 					"COCOAPODS=1",
 					"MOCK=1",
 				);
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/Pixate\"",
+					"\"${PODS_ROOT}/Headers/Reachability\"",
+					"\"${PODS_ROOT}/Headers/TestFlightSDK\"",
+					"${SRCROOT}/tgio-sdk/tgio-sdk",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/tgio/tgio-mock-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "$(inherited)";
@@ -758,6 +765,13 @@
 					"$(inherited)",
 					"COCOAPODS=1",
 					"MOCK=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/Pixate\"",
+					"\"${PODS_ROOT}/Headers/Reachability\"",
+					"\"${PODS_ROOT}/Headers/TestFlightSDK\"",
+					"${SRCROOT}/tgio-sdk/tgio-sdk",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/tgio/tgio-mock-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;

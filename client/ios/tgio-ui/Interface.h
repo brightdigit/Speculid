@@ -19,12 +19,13 @@ typedef enum
 
 - (void) initialize;
 
-- (void) login:(id<LoginRequest>) request target:(id) target action:(SEL) selector;
-- (void) register :(id<RegistrationRequest>) request target:(id) target action:(SEL) selector;
+- (void) login:(id<LoginRequest>) request target:(id) target action:(SEL) selector __deprecated;
+- (void) register :(id<RegistrationRequest>) request target:(id) target action:(SEL) selector __deprecated;
 
 @optional
 - (InterfaceType) type;
 
-+ (id<Interface>)instance;
++ (id<Interface>) instance __deprecated;
+- (id<TgioClient>)clientWithConfiguration:(id) configuration;
 
 @end
