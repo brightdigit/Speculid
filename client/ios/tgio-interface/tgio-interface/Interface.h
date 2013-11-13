@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+// #import "../../tgio-sdk/tgio-sdk/tgio-sdk.h
+// #import "../../tgio-ui/Interface.h
+#import "tgio-sdk.h"
 #import "../../tgio-ui/Interface.h"
+// #import "tgio-sdk.h"
 
 @interface Interface : NSObject<Interface>
 

@@ -51,6 +51,7 @@
 		7B56883E18296FF1008657EC /* tgio_interfaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgio_interfaceTests.m; sourceTree = "<group>"; };
 		7B56884F18297055008657EC /* Interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
 		7B56885018297055008657EC /* Interface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interface.m; sourceTree = "<group>"; };
+		7BD9869F18327652001E2FD8 /* libtgio-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libtgio-sdk.a"; path = "../tgio-sdk/build/Debug-iphoneos/libtgio-sdk.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 		7B56882118296FF1008657EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7BD9869F18327652001E2FD8 /* libtgio-sdk.a */,
 				7B56882218296FF1008657EC /* Foundation.framework */,
 				7B56883018296FF1008657EC /* XCTest.framework */,
 				7B56883318296FF1008657EC /* UIKit.framework */,
@@ -288,6 +290,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/..",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../tgio-sdk/tgio-sdk/",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -320,6 +328,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/..",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../tgio-sdk/tgio-sdk/",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -332,6 +346,12 @@
 				DSTROOT = /tmp/tgio_interface.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tgio-interface/tgio-interface-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/..",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../tgio-sdk/tgio-sdk/",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -344,6 +364,12 @@
 				DSTROOT = /tmp/tgio_interface.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tgio-interface/tgio-interface-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/..",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../tgio-sdk/tgio-sdk/",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -407,6 +433,7 @@
 				7B56884418296FF1008657EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B56884518296FF1008657EC /* Build configuration list for PBXNativeTarget "tgio-interfaceTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +442,7 @@
 				7B56884718296FF1008657EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

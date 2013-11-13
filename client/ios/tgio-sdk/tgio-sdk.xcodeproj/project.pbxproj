@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B79C173183315680054AB87 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B79C172183315680054AB87 /* Client.m */; };
 		7BC9974F1828766400BA5354 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9974E1828766400BA5354 /* Foundation.framework */; };
 		7BC9975D1828766400BA5354 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9975C1828766400BA5354 /* XCTest.framework */; };
 		7BC9975E1828766400BA5354 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9974E1828766400BA5354 /* Foundation.framework */; };
@@ -41,6 +42,10 @@
 /* Begin PBXFileReference section */
 		7B24D5FF182F0D2F00813C4D /* RegistrationResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationResponse.h; sourceTree = "<group>"; };
 		7B24D600182F0D5600813C4D /* LoginResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginResponse.h; sourceTree = "<group>"; };
+		7B79C171183315680054AB87 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = "tgio-sdk/Client.h"; sourceTree = "<group>"; };
+		7B79C172183315680054AB87 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Client.m; path = "tgio-sdk/Client.m"; sourceTree = "<group>"; };
+		7B918C8818326F360073A65E /* TgioClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TgioClient.h; sourceTree = "<group>"; };
+		7B918C8918326F4E0073A65E /* TgioAppClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TgioAppClient.h; sourceTree = "<group>"; };
 		7BA3316A18316A07006F9B12 /* RegistrationRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationRequest.h; sourceTree = "<group>"; };
 		7BA3316B18316A14006F9B12 /* LoginRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
 		7BC9974B1828766400BA5354 /* libtgio-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libtgio-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +57,7 @@
 		7BC997661828766400BA5354 /* tgio-sdkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tgio-sdkTests-Info.plist"; sourceTree = "<group>"; };
 		7BC997681828766400BA5354 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7BC9976A1828766400BA5354 /* tgio_sdkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgio_sdkTests.m; sourceTree = "<group>"; };
+		7BD986A11832768E001E2FD8 /* tgio-sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "tgio-sdk.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,8 @@
 		7BC997421828766400BA5354 = {
 			isa = PBXGroup;
 			children = (
+				7B79C171183315680054AB87 /* Client.h */,
+				7B79C172183315680054AB87 /* Client.m */,
 				7BC997501828766400BA5354 /* tgio-sdk */,
 				7BC997641828766400BA5354 /* tgio-sdkTests */,
 				7BC9974D1828766400BA5354 /* Frameworks */,
@@ -109,11 +117,14 @@
 		7BC997501828766400BA5354 /* tgio-sdk */ = {
 			isa = PBXGroup;
 			children = (
+				7BD986A11832768E001E2FD8 /* tgio-sdk.h */,
 				7BC997511828766400BA5354 /* Supporting Files */,
 				7B24D5FF182F0D2F00813C4D /* RegistrationResponse.h */,
 				7B24D600182F0D5600813C4D /* LoginResponse.h */,
 				7BA3316A18316A07006F9B12 /* RegistrationRequest.h */,
 				7BA3316B18316A14006F9B12 /* LoginRequest.h */,
+				7B918C8818326F360073A65E /* TgioClient.h */,
+				7B918C8918326F4E0073A65E /* TgioAppClient.h */,
 			);
 			path = "tgio-sdk";
 			sourceTree = "<group>";
@@ -151,6 +162,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BC9976E1828766400BA5354 /* Build configuration list for PBXNativeTarget "tgio-sdk" */;
 			buildPhases = (
+				7B918C8B183270330073A65E /* ShellScript */,
 				7BC997471828766400BA5354 /* Sources */,
 				7BC997481828766400BA5354 /* Frameworks */,
 				7BC997491828766400BA5354 /* CopyFiles */,
@@ -220,11 +232,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7B918C8B183270330073A65E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd $SRCROOT/tgio-sdk\nrm tgio-sdk.h\necho '#ifndef tgio_sdk_Headers_h' > tgio-sdk.h\necho '#define tgio_sdk_Header_h' >> tgio-sdk.h\nprintf '#import \"%s\"\\n' *.h >> tgio-sdk.h\necho '#endif' >> tgio-sdk.h";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7BC997471828766400BA5354 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B79C173183315680054AB87 /* Client.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

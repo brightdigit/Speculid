@@ -7,3 +7,4 @@ Pods
 Podfile.lock
 
 *.unc-backup*
+**/tgio-sdk/tgio-sdk.h
