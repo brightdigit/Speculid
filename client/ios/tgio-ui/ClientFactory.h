@@ -12,6 +12,6 @@
 @protocol ClientFactory <NSObject>
 
 + (id<ClientFactory>)instance;
-- (id<TgioClient>)clientWithConfiguration:(id) configuration;
+- (id<TgioClient>)clientWithConfiguration:(id<TgioConfiguration>)configuration;
 
 @end

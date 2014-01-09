@@ -13,10 +13,10 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     classMethods: {
-      createByName: function(name) {
+      createByName: function(name, key) {
         return App.create({
           name: name,
-          key: crypto.randomBytes(48).toString('base64')
+          key: key || crypto.randomBytes(48).toString('base64')
         });
       },
       findByKey: function(apiKey) {

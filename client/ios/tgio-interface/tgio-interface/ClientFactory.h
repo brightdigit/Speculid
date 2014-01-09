@@ -10,8 +10,6 @@
 #import "tgio-sdk.h"
 #import "../../tgio-ui/ClientFactory.h"
 
-@interface ClientFactory : NSObject<ClientFactory> {
-  id<TgioClient> client;
-}
+@interface ClientFactory : NSObject<ClientFactory>
 
 @end

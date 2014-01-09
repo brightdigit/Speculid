@@ -40,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7B515D17183D6FC200D27F36 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "../Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		7B56881F18296FF1008657EC /* libtgio-interface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libtgio-interface.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B56882218296FF1008657EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7B56882618296FF1008657EC /* tgio-interface-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tgio-interface-Prefix.pch"; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 		7B56882118296FF1008657EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B515D17183D6FC200D27F36 /* libPods.a */,
 				7BD9869F18327652001E2FD8 /* libtgio-sdk.a */,
 				7B56882218296FF1008657EC /* Foundation.framework */,
 				7B56883018296FF1008657EC /* XCTest.framework */,
@@ -352,6 +354,10 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../tgio-sdk/tgio-sdk/",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/leogdion/Documents/Projects/tg-io/client/ios/Pods/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -369,6 +375,10 @@
 					"$(SRCROOT)/..",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../tgio-sdk/tgio-sdk/",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/leogdion/Documents/Projects/tg-io/client/ios/Pods/build/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

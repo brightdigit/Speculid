@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TgioConfiguration.h"
 
 @protocol TgioClient <NSObject>
 
@@ -16,11 +17,18 @@ typedef enum
   MockClientType
 } TgioClientType;
 
-+ (id<TgioClient>)connect:(NSString *) applicationId;
+// + (id<TgioClient>)connect:(NSString *) applicationId;
+- (id) initWithConfiguration: (id<TgioConfiguration>) configuration;
 - (void) login:(id<LoginRequest>) request target:(id) target action:(SEL) selector;
 - (void) register :(id<RegistrationRequest>) request target:(id) target action:(SEL) selector;
 
 @optional
 - (TgioClientType) type;
+
+@end
+
+@interface TgioClient : NSObject<TgioClient> {
+  NSString * _baseUrl;
+}
 
 @end

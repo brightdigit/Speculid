@@ -16,7 +16,7 @@ static ClientFactory * _instance;
 
 - (id<TgioClient>) clientWithConfiguration:(id)configuration
 {
-  return [MockClient connect:nil];
+  return nil;
 }
 
 + (id<ClientFactory>) instance
