@@ -19,7 +19,6 @@
     "grunt-contrib-nodeunit": "~0.2.1",
     "grunt-jsbeautifier": "~0.2.2",
     "grunt-apidoc": "~0.2.0",
-    "sqlite3": "~2.1.18",
     "bower": "~1.2.7",
     "grunt-bower-requirejs": "~0.7.1",
     "grunt-contrib-requirejs": "~0.4.1",
@@ -27,7 +26,8 @@
     "grunt-contrib-copy": "~0.4.1",
     "grunt-contrib-less": "~0.8.1",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-express": "~1.2.1"
+    "grunt-express": "~1.2.1",
+    "sqlite3": "~2.1.19"
   },
   "dependencies": {
     "envious": "~0.2.0",
@@ -37,9 +37,9 @@
     "underscore": "~1.5.2",
     "async": "~0.2.9",
     "mysql": "~2.0.0-alpha9",
-    "sequelize": "git://github.com/leogdion/sequelize#milestones/2.0.0",
     "winston": "~0.7.2",
     "deepmerge": "~0.2.7",
-    "bcrypt": "~0.7.7"
+    "bcrypt": "~0.7.7",
+    "sequelize": "~2.0.0-dev1"
   }
 }
