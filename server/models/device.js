@@ -1,5 +1,5 @@
 var crypto = require('crypto'),
-  QueryChainer = require('Sequelize').Utils.QueryChainer;
+  QueryChainer = require('sequelize').Utils.QueryChainer;
 
 module.exports = function(sequelize, DataTypes) {
   var UserAgent = sequelize.$('userAgent');
