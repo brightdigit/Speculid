@@ -1,6 +1,6 @@
 var libs = require('../libs'),
   async = require('async'),
-  QueryChainer = require("Sequelize").Utils.QueryChainer,
+  QueryChainer = require("sequelize").Utils.QueryChainer,
   models = require('../models');
 
 var emailer = libs.emailer,
