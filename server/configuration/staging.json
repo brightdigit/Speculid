@@ -1,7 +1,10 @@
 {
   "database": {
     "username": "tgio_user",
-    "database": "tgio_dev"
+    "database": "tgio_dev",
+    "options": {
+      "host": "192.168.1.69"
+    }
   },
   "sequelize": {
     "sync": {
@@ -23,6 +26,6 @@
     "scripts": {
       "syncComplete": "dev.syncComplete"
     },
-    "static": "build/www"
+    "static": "client/www"
   }
 }

@@ -1,5 +1,5 @@
 var crypto = require('crypto'),
-  QueryChainer = require('Sequelize').Utils.QueryChainer;
+  QueryChainer = require('sequelize').Utils.QueryChainer;
 
 module.exports = function(sequelize, DataTypes) {
   var UserAgent = sequelize.$('userAgent');
@@ -19,7 +19,9 @@ module.exports = function(sequelize, DataTypes) {
           keyBuffer = crypto.randomBytes(48);
         }
         Device.find({
-          where: ['`key` = ?', keyBuffer]
+          where: {
+            key: keyBuffer
+          }
         }).success(
           function(device) {
             var chainer = new QueryChainer();

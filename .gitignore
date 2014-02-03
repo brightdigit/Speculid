@@ -1,7 +1,9 @@
 node_modules
 .DS_Store
-/client/www/apidoc
 xcuserdata
 xcshareddata
 Pods
 Podfile.lock
+build
+bower_components
+npm-debug.log
