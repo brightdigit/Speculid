@@ -19,7 +19,9 @@ module.exports = function(sequelize, DataTypes) {
           keyBuffer = crypto.randomBytes(48);
         }
         Device.find({
-          where: ['`key` = ?', keyBuffer]
+          where: {
+            key: keyBuffer
+          }
         }).success(
           function(device) {
             var chainer = new QueryChainer();

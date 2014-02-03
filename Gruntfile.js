@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
       all: [
-        'Gruntfile.js', 
+        'Gruntfile.js',
         'server/**/*.js',
         'test/**/*.js',
         'server/**/*.json',
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
           debug: true,
           verbose: true,
           hostname: '*',
-          server: path.resolve('./server'),
+          server: path.resolve(__dirname, 'server'),
           serverreload: true
         }
       }
