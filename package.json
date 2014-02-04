@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://leogdion@bitbucket.org/leogdion/tg-io.git"
   },
+  "engines": {
+    "node": "0.10.x"
+  },
   "author": "Leo G. Dion, BrightDigit, LLC",
   "devDependencies": {
     "grunt": "~0.4.1",

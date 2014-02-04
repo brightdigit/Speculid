@@ -24,6 +24,7 @@ if (configuration.app.static) {
   app.use(express.static(__dirname + "/../" + configuration.app.static));
 }
 
+console.log(process.env.PORT);
 if (require.main === module) {
   controllers.listen(function(error, app) {
     if (error) {
