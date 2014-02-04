@@ -5,7 +5,7 @@ var fs = require('fs'),
   crypto = require('crypto'),
   defaultOptions = require('./_default.json');
 
-var key = fs.readFileSync(path.join(__dirname, "../..", ".keyfile"), 'utf8');
+var key = process.env.KEY || fs.readFileSync(path.join(__dirname, "../..", ".keyfile"), 'utf8');
 
 (function(fs, path, envious) {
 
