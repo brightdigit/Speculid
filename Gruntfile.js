@@ -1,5 +1,7 @@
 var bower = require('bower'),
-  path = require('path');
+  path = require('path'),
+  crypto = require('crypto'),
+  async = require('async');
 
 module.exports = function(grunt) {
   grunt.initConfig({
@@ -111,6 +113,30 @@ module.exports = function(grunt) {
           serverreload: true
         }
       }
+    },
+    encrypt: {
+      default: {
+        files: [{
+          src: ["secure/*.json"],
+          dest: "server",
+          ext: ".encrypted",
+          expand: true
+        }],
+        options: {
+          keyfile: ".keyfile"
+        }
+      },
+      test: {
+        files: [{
+          src: ["test/secure/*.json"],
+          ext: ".encrypted",
+          expand: true
+        }],
+        options: {
+          keyfile: ".keyfile",
+          extension: ".encrypted"
+        }
+      }
     }
   });
 
@@ -131,7 +157,32 @@ module.exports = function(grunt) {
     install.on('end', done);
   });
 
-  grunt.registerTask('build', ['bower-install', 'bower', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
+  grunt.registerMultiTask('encrypt', function() {
+    var options = this.options({
+      "action": grunt.cli.options.crypt || "encrypt",
+      "keyfile": grunt.cli.options.keyfile
+    });
+    var done = this.async();
+    console.log(options.keyfile);
+    var key = grunt.file.read(options.keyfile);
+
+    async.each(this.files, function(file, cb) {
+        var text = grunt.file.read(file.src[0]),
+          cipher = crypto.createCipher('aes-256-cbc', key),
+          crypted = cipher.update(text, 'utf8', 'hex');
+
+        crypted += cipher.final('hex');
+
+        grunt.file.write(file.dest, crypted);
+        grunt.log.writeln('Encrypting ' + file.src[0].cyan + ' -> ' + file.dest.cyan);
+        cb();
+      },
+      function(result) {
+        done(result);
+      });
+  });
+
+  grunt.registerTask('build', ['encrypt', 'bower-install', 'bower', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
   grunt.registerTask('server', ['express:server', 'build:default']);
   grunt.registerTask('default', 'build');
   grunt.loadNpmTasks('grunt-jsbeautifier');

@@ -7,3 +7,6 @@ Podfile.lock
 build
 bower_components
 npm-debug.log
+test/secure/*.encrypted
+secure/*.json
+.keyfile
