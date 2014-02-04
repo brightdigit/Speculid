@@ -163,7 +163,7 @@ module.exports = function(grunt) {
       "keyfile": grunt.cli.options.keyfile
     });
     var done = this.async();
-    var key = grunt.file.read(options.keyfile);
+    var key = process.env.KEY || grunt.file.read(options.keyfile);
     console.log(key);
 
     async.each(this.files, function(file, cb) {
