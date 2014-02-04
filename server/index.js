@@ -30,7 +30,7 @@ if (require.main === module) {
       logger.error(error);
       process.exit(1);
     } else {
-      app.listen(3000);
+      app.listen(process.env.PORT || 5000);
     }
   });
 } else {
