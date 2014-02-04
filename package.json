@@ -12,6 +12,19 @@
   },
   "author": "Leo G. Dion, BrightDigit, LLC",
   "devDependencies": {
+  },
+  "dependencies": {
+    "envious": "~0.2.0",
+    "express": "~3.4.0",
+    "nodemailer": "~0.5.2",
+    "node-uuid": "~1.4.1",
+    "underscore": "~1.5.2",
+    "async": "~0.2.9",
+    "mysql": "~2.0.0-alpha9",
+    "winston": "~0.7.2",
+    "deepmerge": "~0.2.7",
+    "bcrypt": "~0.7.7",
+    "sequelize": "~2.0.0-dev1",
     "grunt": "~0.4.1",
     "nodeunit": "~0.8.1",
     "proxyquire": "~0.5.1",
@@ -31,18 +44,5 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-express": "~1.2.1",
     "sqlite3": "~2.1.19"
-  },
-  "dependencies": {
-    "envious": "~0.2.0",
-    "express": "~3.4.0",
-    "nodemailer": "~0.5.2",
-    "node-uuid": "~1.4.1",
-    "underscore": "~1.5.2",
-    "async": "~0.2.9",
-    "mysql": "~2.0.0-alpha9",
-    "winston": "~0.7.2",
-    "deepmerge": "~0.2.7",
-    "bcrypt": "~0.7.7",
-    "sequelize": "~2.0.0-dev1"
   }
 }
