@@ -126,17 +126,6 @@ module.exports = function(grunt) {
           keyfile: ".keyfile"
         }
       }
-      /*,
-      test: {
-        files: [{
-          src: ["test/secure/*.json"],
-          ext: ".json.encrypted",
-          expand: true
-        }],
-        options: {
-          keyfile: ".testkeyfile"
-        }
-      }*/
     }
   });
 
@@ -162,7 +151,13 @@ module.exports = function(grunt) {
       "action": grunt.cli.options.crypt || "encrypt",
       "keyfile": grunt.cli.options.keyfile
     });
+    console.log(process.env.KEY);
+    if (!process.env.KEY && !grunt.file.exists(options.keyfile)) {
+      grunt.log.writeln("Key file " + options.keyfile + " does not exist.");
+    }
     var done = this.async();
+
+
     var key = process.env.KEY || grunt.file.read(options.keyfile);
     console.log(key);
 
