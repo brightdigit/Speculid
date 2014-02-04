@@ -185,6 +185,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['encrypt', 'bower-install', 'bower', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
   grunt.registerTask('server', ['express:server', 'build:default']);
   grunt.registerTask('default', 'build');
+  grunt.registerTask('heroku:development', 'default');
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-apidoc');
   grunt.loadNpmTasks('grunt-contrib-jshint');
