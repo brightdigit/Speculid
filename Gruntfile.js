@@ -119,24 +119,24 @@ module.exports = function(grunt) {
         files: [{
           src: ["secure/*.json"],
           dest: "server",
-          ext: ".encrypted",
+          ext: ".json.encrypted",
           expand: true
         }],
         options: {
           keyfile: ".keyfile"
         }
-      },
+      }
+      /*,
       test: {
         files: [{
           src: ["test/secure/*.json"],
-          ext: ".encrypted",
+          ext: ".json.encrypted",
           expand: true
         }],
         options: {
-          keyfile: ".keyfile",
-          extension: ".encrypted"
+          keyfile: ".testkeyfile"
         }
-      }
+      }*/
     }
   });
 
@@ -163,8 +163,8 @@ module.exports = function(grunt) {
       "keyfile": grunt.cli.options.keyfile
     });
     var done = this.async();
-    console.log(options.keyfile);
     var key = grunt.file.read(options.keyfile);
+    console.log(key);
 
     async.each(this.files, function(file, cb) {
         var text = grunt.file.read(file.src[0]),
@@ -172,7 +172,7 @@ module.exports = function(grunt) {
           crypted = cipher.update(text, 'utf8', 'hex');
 
         crypted += cipher.final('hex');
-
+        console.log(crypted);
         grunt.file.write(file.dest, crypted);
         grunt.log.writeln('Encrypting ' + file.src[0].cyan + ' -> ' + file.dest.cyan);
         cb();
