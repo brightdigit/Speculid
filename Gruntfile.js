@@ -151,7 +151,7 @@ module.exports = function(grunt) {
       "action": grunt.cli.options.crypt || "encrypt",
       "keyfile": grunt.cli.options.keyfile
     });
-    console.log(process.env.KEY);
+    console.log(process.env);
     if (!process.env.KEY && !grunt.file.exists(options.keyfile)) {
       grunt.log.writeln("Key file " + options.keyfile + " does not exist.");
       return;
