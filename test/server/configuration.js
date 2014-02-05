@@ -18,6 +18,9 @@ function configuration_create(node_env) {
       },
       readFileSync: function(file) {
         return null;
+      },
+      existsSync: function(file) {
+        return false;
       }
     },
 
