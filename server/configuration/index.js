@@ -2,7 +2,10 @@ var fs = require('fs'),
   path = require('path'),
   merge = require('deepmerge'),
   envious = require('envious'),
+  crypto = require('crypto'),
   defaultOptions = require('./_default.json');
+
+var key = process.env.KEY || fs.readFileSync(path.join(__dirname, "../..", ".keyfile"), 'utf8');
 
 (function(fs, path, envious) {
 
@@ -11,7 +14,13 @@ var fs = require('fs'),
     files.forEach(function(file) {
       if (file[0] != '_') {
         name = path.basename(file, '.json');
-        envious[name] = merge(defaultOptions, require(path.resolve(__dirname, file)));
+        var text, secure = path.join(__dirname, '..', 'secure', name + ".json.encrypted");
+        if (key && fs.existsSync(secure)) {
+          var crypted = fs.readFileSync(secure, 'utf8'),
+            decipher = crypto.createDecipher('aes-256-cbc', key);
+          text = decipher.update(crypted, 'hex', 'utf8') + decipher.final('utf8');
+        }
+        envious[name] = merge(merge(defaultOptions, require(path.resolve(__dirname, file))), text ? JSON.parse(text) : {});
       }
     });
     envious.default_env = "development";

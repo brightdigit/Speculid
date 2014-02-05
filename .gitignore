@@ -1,6 +1,5 @@
 node_modules
 .DS_Store
-/client/www/apidoc
 xcuserdata
 xcshareddata
 Pods
@@ -8,3 +7,11 @@ Podfile.lock
 
 *.unc-backup*
 **/tgio-sdk/tgio-sdk.h
+
+build
+bower_components
+npm-debug.log
+test/secure/*.encrypted
+secure/*.json
+.keyfile
+

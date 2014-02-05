@@ -2,6 +2,8 @@ var controller = require('./_controller'),
   configuration = require('../configuration'),
   logger = require('../libs').logger;
 
+var initialized = false;
+
 module.exports = (function() {
   var _ = {
     loadControllers: function(names) {
@@ -32,6 +34,7 @@ module.exports = (function() {
           this.controllers[name].initialize(this);
         }
       }
+      return this.initializer.bind(this);
     },
     syncComplete: function(cb, error) {
       var that = this;
@@ -42,8 +45,10 @@ module.exports = (function() {
           if (result) {
             logger.debug(result.key);
           }
-
-          that.app.listen(3000);
+          if (cb) {
+            initialized = true;
+            cb(undefined, that.app);
+          }
         });
       }
     },
@@ -52,6 +57,16 @@ module.exports = (function() {
         .sync(this.configuration.sequelize.sync)
         .success(this.syncComplete.bind(this, cb, undefined))
         .error(this.syncComplete.bind(this, cb));
+    },
+    initializer: function(request, response, next) {
+      if (initialized) {
+        next();
+      } else {
+        this.sequelize
+          .sync(this.configuration.sequelize.sync)
+          .success(this.syncComplete.bind(this, next, undefined))
+          .error(this.syncComplete.bind(this, next));
+      }
     }
   };
 

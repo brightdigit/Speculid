@@ -1,0 +1,21 @@
+{
+  "name": "tg-io",
+  "version": "0.0.0",
+  "authors": [
+    "Leo Dion <leogdion@brightdigit.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/www/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.0",
+    "requirejs": "~2.1.9",
+    "requirejs-plugins": "~1.0.2"
+  }
+}
