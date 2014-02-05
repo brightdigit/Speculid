@@ -18,16 +18,22 @@ app.use(function(request, response, next) {
   next();
 });
 
+app.use(controllers.initialize(configuration, sequelize, app));
+
 if (configuration.app.static) {
   app.use(express.static(__dirname + "/../" + configuration.app.static));
 }
 
-app.use(function(request, response, next) {
-  next();
-});
-
-controllers.initialize(configuration, sequelize, app);
-controllers.listen(function(error) {
-  logger.error(error);
-  process.exit(1);
-});
+console.log(process.env.PORT);
+if (require.main === module) {
+  controllers.listen(function(error, app) {
+    if (error) {
+      logger.error(error);
+      process.exit(1);
+    } else {
+      app.listen(process.env.PORT || 5000);
+    }
+  });
+} else {
+  module.exports = app;
+}

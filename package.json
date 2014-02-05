@@ -7,8 +7,23 @@
     "type": "git",
     "url": "https://leogdion@bitbucket.org/leogdion/tg-io.git"
   },
+  "engines": {
+    "node": "0.10.x"
+  },
   "author": "Leo G. Dion, BrightDigit, LLC",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "envious": "~0.2.0",
+    "express": "~3.4.0",
+    "nodemailer": "~0.5.2",
+    "node-uuid": "~1.4.1",
+    "underscore": "~1.5.2",
+    "async": "~0.2.9",
+    "mysql": "~2.0.1",
+    "winston": "~0.7.2",
+    "deepmerge": "~0.2.7",
+    "bcrypt": "~0.7.7",
+    "sequelize": "~2.0.0-dev4",
     "grunt": "~0.4.1",
     "nodeunit": "~0.8.1",
     "proxyquire": "~0.5.1",
@@ -19,19 +34,15 @@
     "grunt-contrib-nodeunit": "~0.2.1",
     "grunt-jsbeautifier": "~0.2.2",
     "grunt-apidoc": "~0.2.0",
-    "sqlite3": "~2.1.18"
-  },
-  "dependencies": {
-    "envious": "~0.2.0",
-    "express": "~3.4.0",
-    "nodemailer": "~0.5.2",
-    "node-uuid": "~1.4.1",
-    "underscore": "~1.5.2",
-    "async": "~0.2.9",
-    "mysql": "~2.0.0-alpha9",
-    "sequelize": "git://github.com/leogdion/sequelize#milestones/2.0.0",
-    "winston": "~0.7.2",
-    "deepmerge": "~0.2.7",
-    "bcrypt": "~0.7.7"
+    "bower": "~1.2.7",
+    "grunt-bower-requirejs": "~0.7.1",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-bower-task": "~0.3.2",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-less": "~0.8.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-express": "~1.2.1",
+    "sqlite3": "~2.1.19",
+    "pg": "~2.11.1"
   }
 }

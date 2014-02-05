@@ -1,7 +1,7 @@
 var async = require('async'),
   crypto = require('crypto'),
   models = require('../models'),
-  QueryChainer = require('Sequelize').Utils.QueryChainer;
+  QueryChainer = require('sequelize').Utils.QueryChainer;
 
 var User = models.user,
   App = models.app,

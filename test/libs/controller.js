@@ -1,5 +1,5 @@
 var path = require('path'),
-  proxyquire = require('proxyquire'),
+  proxyquire = require('proxyquire').noCallThru(),
   Sequelize = require("sequelize");
 
 module.exports = (function() {

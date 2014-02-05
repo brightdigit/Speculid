@@ -1,4 +1,6 @@
-var proxyquire = require('proxyquire').noCallThru();
+var proxyquire = require('proxyquire').noCallThru(),
+  path = require('path'),
+  fs = require('fs');
 
 function configuration_create(node_env) {
   process.env.NODE_ENV = node_env;
@@ -13,6 +15,12 @@ function configuration_create(node_env) {
     fs: {
       readdirSync: function(file) {
         return ['development.json', 'production.json'];
+      },
+      readFileSync: function(file) {
+        return null;
+      },
+      existsSync: function(file) {
+        return false;
       }
     },
 
