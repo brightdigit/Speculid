@@ -154,6 +154,7 @@ module.exports = function(grunt) {
     console.log(process.env.KEY);
     if (!process.env.KEY && !grunt.file.exists(options.keyfile)) {
       grunt.log.writeln("Key file " + options.keyfile + " does not exist.");
+      return;
     }
     var done = this.async();
 
