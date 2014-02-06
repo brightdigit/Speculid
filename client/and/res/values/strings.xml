@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">tgio</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="app_tagline">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</string>
+    <string name="Create_an_Account">Create an Account</string>
+    <string name="Login">Login</string>
+
+</resources>
