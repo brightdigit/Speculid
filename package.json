@@ -11,7 +11,6 @@
     "node": "0.10.x"
   },
   "author": "Leo G. Dion, BrightDigit, LLC",
-  "devDependencies": {},
   "dependencies": {
     "envious": "~0.2.0",
     "express": "~3.4.0",
