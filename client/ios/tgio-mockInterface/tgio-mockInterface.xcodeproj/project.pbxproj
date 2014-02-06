@@ -14,7 +14,8 @@
 		7B56880518296FE6008657EC /* libtgio-mockInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5687ED18296FE6008657EC /* libtgio-mockInterface.a */; };
 		7B56880B18296FE6008657EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B56880918296FE6008657EC /* InfoPlist.strings */; };
 		7B56880D18296FE6008657EC /* tgio_mockInterfaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B56880C18296FE6008657EC /* tgio_mockInterfaceTests.m */; };
-		7B56884E18297042008657EC /* Interface.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B56884D18297042008657EC /* Interface.m */; };
+		7B56884E18297042008657EC /* ClientFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B56884D18297042008657EC /* ClientFactory.m */; };
+		7B6A37CB18340212007FB62A /* MockClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A37CA18340212007FB62A /* MockClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +50,10 @@
 		7B56880818296FE6008657EC /* tgio-mockInterfaceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tgio-mockInterfaceTests-Info.plist"; sourceTree = "<group>"; };
 		7B56880A18296FE6008657EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B56880C18296FE6008657EC /* tgio_mockInterfaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgio_mockInterfaceTests.m; sourceTree = "<group>"; };
-		7B56884C18297042008657EC /* Interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
-		7B56884D18297042008657EC /* Interface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interface.m; sourceTree = "<group>"; };
+		7B56884C18297042008657EC /* ClientFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientFactory.h; sourceTree = "<group>"; };
+		7B56884D18297042008657EC /* ClientFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientFactory.m; sourceTree = "<group>"; };
+		7B6A37C918340212007FB62A /* MockClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockClient.h; sourceTree = "<group>"; };
+		7B6A37CA18340212007FB62A /* MockClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +112,10 @@
 			isa = PBXGroup;
 			children = (
 				7B5687F318296FE6008657EC /* Supporting Files */,
-				7B56884C18297042008657EC /* Interface.h */,
-				7B56884D18297042008657EC /* Interface.m */,
+				7B56884C18297042008657EC /* ClientFactory.h */,
+				7B56884D18297042008657EC /* ClientFactory.m */,
+				7B6A37C918340212007FB62A /* MockClient.h */,
+				7B6A37CA18340212007FB62A /* MockClient.m */,
 			);
 			path = "tgio-mockInterface";
 			sourceTree = "<group>";
@@ -222,7 +227,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B56884E18297042008657EC /* Interface.m in Sources */,
+				7B6A37CB18340212007FB62A /* MockClient.m in Sources */,
+				7B56884E18297042008657EC /* ClientFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +338,11 @@
 				DSTROOT = /tmp/tgio_mockInterface.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tgio-mockInterface/tgio-mockInterface-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../tgio-sdk/tgio-sdk",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -344,6 +355,11 @@
 				DSTROOT = /tmp/tgio_mockInterface.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tgio-mockInterface/tgio-mockInterface-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../tgio-sdk/tgio-sdk",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -407,6 +423,7 @@
 				7B56881218296FE6008657EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B56881318296FE6008657EC /* Build configuration list for PBXNativeTarget "tgio-mockInterfaceTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +432,7 @@
 				7B56881518296FE6008657EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -35,6 +35,9 @@ proguard/
 *.iws
 .idea/
 
+*.unc-backup*
+**/tgio-sdk/tgio-sdk.h
+
 build
 bower_components
 npm-debug.log

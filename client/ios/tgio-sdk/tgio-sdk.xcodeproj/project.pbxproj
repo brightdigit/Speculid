@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B515D1A183D727800D27F36 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B515D19183D727800D27F36 /* SystemConfiguration.framework */; };
+		7B515D1C183D727C00D27F36 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B515D1B183D727C00D27F36 /* MobileCoreServices.framework */; };
+		7B6A37CD18340589007FB62A /* TgioClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A37CC18340589007FB62A /* TgioClient.m */; };
+		7B6A37EE18340F9C007FB62A /* TgioConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A37ED18340F9C007FB62A /* TgioConfiguration.m */; };
 		7BC9974F1828766400BA5354 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9974E1828766400BA5354 /* Foundation.framework */; };
-		7BC997541828766400BA5354 /* tgio_sdk.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BC997531828766400BA5354 /* tgio_sdk.h */; };
-		7BC997561828766400BA5354 /* tgio_sdk.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC997551828766400BA5354 /* tgio_sdk.m */; };
 		7BC9975D1828766400BA5354 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9975C1828766400BA5354 /* XCTest.framework */; };
 		7BC9975E1828766400BA5354 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9974E1828766400BA5354 /* Foundation.framework */; };
 		7BC997601828766400BA5354 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9975F1828766400BA5354 /* UIKit.framework */; };
 		7BC997631828766400BA5354 /* libtgio-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9974B1828766400BA5354 /* libtgio-sdk.a */; };
 		7BC997691828766400BA5354 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BC997671828766400BA5354 /* InfoPlist.strings */; };
 		7BC9976B1828766400BA5354 /* tgio_sdkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9976A1828766400BA5354 /* tgio_sdkTests.m */; };
+		7BD26BAE1833DDE8002C7BD2 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD26BAD1833DDE8002C7BD2 /* LoginRequest.m */; };
+		7BD26BB01833DE36002C7BD2 /* RegistrationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD26BAF1833DE36002C7BD2 /* RegistrationRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,24 +39,34 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				7BC997541828766400BA5354 /* tgio_sdk.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7B24D5FF182F0D2F00813C4D /* RegistrationResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationResponse.h; sourceTree = "<group>"; };
+		7B24D600182F0D5600813C4D /* LoginResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginResponse.h; sourceTree = "<group>"; };
+		7B515D19183D727800D27F36 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7B515D1B183D727C00D27F36 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7B6A37CC18340589007FB62A /* TgioClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TgioClient.m; sourceTree = "<group>"; };
+		7B6A37EC18340F9C007FB62A /* TgioConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TgioConfiguration.h; sourceTree = "<group>"; };
+		7B6A37ED18340F9C007FB62A /* TgioConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TgioConfiguration.m; sourceTree = "<group>"; };
+		7B918C8818326F360073A65E /* TgioClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TgioClient.h; sourceTree = "<group>"; };
+		7BA3316A18316A07006F9B12 /* RegistrationRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationRequest.h; sourceTree = "<group>"; };
+		7BA3316B18316A14006F9B12 /* LoginRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
 		7BC9974B1828766400BA5354 /* libtgio-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libtgio-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC9974E1828766400BA5354 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BC997521828766400BA5354 /* tgio-sdk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tgio-sdk-Prefix.pch"; sourceTree = "<group>"; };
-		7BC997531828766400BA5354 /* tgio_sdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tgio_sdk.h; sourceTree = "<group>"; };
-		7BC997551828766400BA5354 /* tgio_sdk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgio_sdk.m; sourceTree = "<group>"; };
 		7BC9975B1828766400BA5354 /* tgio-sdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tgio-sdkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC9975C1828766400BA5354 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7BC9975F1828766400BA5354 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		7BC997661828766400BA5354 /* tgio-sdkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tgio-sdkTests-Info.plist"; sourceTree = "<group>"; };
 		7BC997681828766400BA5354 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7BC9976A1828766400BA5354 /* tgio_sdkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tgio_sdkTests.m; sourceTree = "<group>"; };
+		7BD26BAD1833DDE8002C7BD2 /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
+		7BD26BAF1833DE36002C7BD2 /* RegistrationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationRequest.m; sourceTree = "<group>"; };
+		7BD986A11832768E001E2FD8 /* tgio-sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "tgio-sdk.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B515D1C183D727C00D27F36 /* MobileCoreServices.framework in Frameworks */,
+				7B515D1A183D727800D27F36 /* SystemConfiguration.framework in Frameworks */,
 				7BC9974F1828766400BA5354 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +116,8 @@
 		7BC9974D1828766400BA5354 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B515D1B183D727C00D27F36 /* MobileCoreServices.framework */,
+				7B515D19183D727800D27F36 /* SystemConfiguration.framework */,
 				7BC9974E1828766400BA5354 /* Foundation.framework */,
 				7BC9975C1828766400BA5354 /* XCTest.framework */,
 				7BC9975F1828766400BA5354 /* UIKit.framework */,
@@ -110,9 +128,18 @@
 		7BC997501828766400BA5354 /* tgio-sdk */ = {
 			isa = PBXGroup;
 			children = (
-				7BC997531828766400BA5354 /* tgio_sdk.h */,
-				7BC997551828766400BA5354 /* tgio_sdk.m */,
+				7BD986A11832768E001E2FD8 /* tgio-sdk.h */,
 				7BC997511828766400BA5354 /* Supporting Files */,
+				7B24D5FF182F0D2F00813C4D /* RegistrationResponse.h */,
+				7B24D600182F0D5600813C4D /* LoginResponse.h */,
+				7BA3316A18316A07006F9B12 /* RegistrationRequest.h */,
+				7BA3316B18316A14006F9B12 /* LoginRequest.h */,
+				7B918C8818326F360073A65E /* TgioClient.h */,
+				7BD26BAD1833DDE8002C7BD2 /* LoginRequest.m */,
+				7BD26BAF1833DE36002C7BD2 /* RegistrationRequest.m */,
+				7B6A37CC18340589007FB62A /* TgioClient.m */,
+				7B6A37EC18340F9C007FB62A /* TgioConfiguration.h */,
+				7B6A37ED18340F9C007FB62A /* TgioConfiguration.m */,
 			);
 			path = "tgio-sdk";
 			sourceTree = "<group>";
@@ -150,6 +177,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BC9976E1828766400BA5354 /* Build configuration list for PBXNativeTarget "tgio-sdk" */;
 			buildPhases = (
+				7B918C8B183270330073A65E /* ShellScript */,
 				7BC997471828766400BA5354 /* Sources */,
 				7BC997481828766400BA5354 /* Frameworks */,
 				7BC997491828766400BA5354 /* CopyFiles */,
@@ -219,12 +247,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7B918C8B183270330073A65E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd $SRCROOT/tgio-sdk\nrm tgio-sdk.h\necho '#ifndef tgio_sdk_Headers_h' > tgio-sdk.h\necho '#define tgio_sdk_Header_h' >> tgio-sdk.h\nprintf '#import \"%s\"\\n' *.h >> tgio-sdk.h\necho '#endif' >> tgio-sdk.h";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7BC997471828766400BA5354 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BC997561828766400BA5354 /* tgio_sdk.m in Sources */,
+				7B6A37CD18340589007FB62A /* TgioClient.m in Sources */,
+				7B6A37EE18340F9C007FB62A /* TgioConfiguration.m in Sources */,
+				7BD26BB01833DE36002C7BD2 /* RegistrationRequest.m in Sources */,
+				7BD26BAE1833DDE8002C7BD2 /* LoginRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +381,12 @@
 				DSTROOT = /tmp/tgio_sdk.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tgio-sdk/tgio-sdk-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode51-DP.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"${SRCROOT}/../Pods/Headers/**",
+					"${SRCROOT}/../Pods/Headers/RestKit",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -346,6 +399,12 @@
 				DSTROOT = /tmp/tgio_sdk.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tgio-sdk/tgio-sdk-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode51-DP.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"${SRCROOT}/../Pods/Headers/**",
+					"${SRCROOT}/../Pods/Headers/RestKit",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -409,6 +468,7 @@
 				7BC997701828766400BA5354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BC997711828766400BA5354 /* Build configuration list for PBXNativeTarget "tgio-sdkTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +477,7 @@
 				7BC997731828766400BA5354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

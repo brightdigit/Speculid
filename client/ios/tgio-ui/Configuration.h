@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "tgio-sdk.h"
 
-@protocol Interface;
+@protocol ClientFactory;
 
 @interface Configuration : NSObject
 
-+ (void) configure: (id<Interface>) interface;
++ (id<TgioClient>)client;
++ (void) setupWithClient:(id<TgioClient>)client;
 
 @end

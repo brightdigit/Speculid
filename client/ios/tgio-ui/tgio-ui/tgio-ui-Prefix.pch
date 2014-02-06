@@ -5,5 +5,11 @@
 //
 
 #ifdef __OBJC__
-    #import <Foundation/Foundation.h>
+  #import <Foundation/Foundation.h>
+  #import "Configuration.h"
+  #import "ClientFactory.h"
+  #import "UIApplication+Activity.h"
+
+  #define AppInterface [Configuration interface]
+  #define Client       [Configuration client]
 #endif
