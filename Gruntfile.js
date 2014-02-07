@@ -114,12 +114,27 @@ module.exports = function(grunt) {
         }
       }
     },
+    // refactor these crpyts
     encrypt: {
       default: {
         files: [{
           src: ["secure/*.json"],
           dest: "server",
           ext: ".json.encrypted",
+          expand: true
+        }],
+        options: {
+          keyfile: ".keyfile"
+        }
+      }
+    },
+    decrypt: {
+      default: {
+        files: [{
+          cwd: "server/secure",
+          src: ["*.json.encrypted"],
+          dest: "secure",
+          ext: ".json",
           expand: true
         }],
         options: {
@@ -175,7 +190,35 @@ module.exports = function(grunt) {
       });
   });
 
-  grunt.registerTask('build', ['encrypt', 'bower-install', 'bower', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
+  grunt.registerMultiTask('decrypt', function() {
+    var options = this.options({
+      "action": grunt.cli.options.crypt || "encrypt",
+      "keyfile": grunt.cli.options.keyfile
+    });
+
+    if (!process.env.KEY && !grunt.file.exists(options.keyfile)) {
+      grunt.log.writeln("Key file " + options.keyfile + " does not exist.");
+      return;
+    }
+    var done = this.async();
+
+    var key = process.env.KEY || grunt.file.read(options.keyfile);
+    async.each(this.files, function(file, cb) {
+        var crypted = grunt.file.read(file.src[0]);
+        var cipher = crypto.createDecipher('aes-256-cbc', key);
+
+        var text = cipher.update(crypted, 'hex', 'utf8');
+        text += cipher.final('utf8');
+        grunt.file.write(file.dest, text);
+        grunt.log.writeln('Encrypting ' + file.src[0].cyan + ' -> ' + file.dest.cyan);
+        cb();
+      },
+      function(result) {
+        done(result);
+      });
+  });
+
+  grunt.registerTask('build', ['encrypt', 'decrypt', 'bower-install', 'bower', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
   grunt.registerTask('server', ['express:server', 'build:default']);
   grunt.registerTask('default', 'build');
   grunt.registerTask('heroku:staging', 'default');
