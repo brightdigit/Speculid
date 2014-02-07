@@ -151,16 +151,14 @@ module.exports = function(grunt) {
       "action": grunt.cli.options.crypt || "encrypt",
       "keyfile": grunt.cli.options.keyfile
     });
-    console.log(process.env);
+
     if (!process.env.KEY && !grunt.file.exists(options.keyfile)) {
       grunt.log.writeln("Key file " + options.keyfile + " does not exist.");
       return;
     }
     var done = this.async();
 
-
     var key = process.env.KEY || grunt.file.read(options.keyfile);
-    console.log(key);
 
     async.each(this.files, function(file, cb) {
         var text = grunt.file.read(file.src[0]),
@@ -168,7 +166,6 @@ module.exports = function(grunt) {
           crypted = cipher.update(text, 'utf8', 'hex');
 
         crypted += cipher.final('hex');
-        console.log(crypted);
         grunt.file.write(file.dest, crypted);
         grunt.log.writeln('Encrypting ' + file.src[0].cyan + ' -> ' + file.dest.cyan);
         cb();
