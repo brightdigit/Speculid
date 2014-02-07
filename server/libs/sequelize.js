@@ -20,7 +20,6 @@ var configuration = require('../configuration'),
     if (!_data) {
       _data = build_sequalize();
     }
-
     _data.$ = function(name) {
       return this.import(__dirname + "/../models/" + name + ".js");
     };

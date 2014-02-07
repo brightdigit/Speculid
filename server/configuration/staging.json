@@ -1,11 +1,4 @@
 {
-  "database": {
-    "username": "tgio_user",
-    "database": "tgio_dev",
-    "options": {
-      "host": "192.168.1.69"
-    }
-  },
   "sequelize": {
     "sync": {
       "force": true
