@@ -42,6 +42,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-express": "~1.2.1",
     "sqlite3": "~2.2.0",
-    "pg": "~2.11.1"
+    "pg": "~2.11.1",
+    "grunt-env": "~0.4.1"
   }
 }

@@ -141,6 +141,14 @@ module.exports = function(grunt) {
           keyfile: ".keyfile"
         }
       }
+    },
+    env: {
+      options: {
+        //Shared Options Hash
+      },
+      dev: {
+        NODE_ENV: 'development'
+      }
     }
   });
 
@@ -219,9 +227,10 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build', ['encrypt', 'decrypt', 'bower-install', 'bower', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
-  grunt.registerTask('server', ['express:server', 'build:default']);
+  grunt.registerTask('server', ['build:default', 'env', 'express:server']);
   grunt.registerTask('default', 'build');
   grunt.registerTask('heroku:staging', 'default');
+  grunt.loadNpmTasks('grunt-env');
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-apidoc');
   grunt.loadNpmTasks('grunt-contrib-jshint');
