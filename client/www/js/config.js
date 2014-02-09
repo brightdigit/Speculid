@@ -1,4 +1,9 @@
 requirejs.config({
+  shim: {
+    underscore: {
+      exports: '_'
+    }
+  },
   paths: {
     bootstrap: '../../../bower_components/bootstrap/dist/js/bootstrap',
     jquery: '../../../bower_components/jquery/jquery',
@@ -14,6 +19,8 @@ requirejs.config({
     markdownConverter: '../../../bower_components/requirejs-plugins/lib/Markdown.Converter',
     depend: '../../../bower_components/requirejs-plugins/src/depend',
     'Markdown.Converter': '../../../bower_components/requirejs-plugins/lib/Markdown.Converter',
-    text: '../../../bower_components/requirejs-plugins/lib/text'
+    text: '../../../bower_components/requirejs-plugins/lib/text',
+    backbone: '../../../bower_components/backbone-amd/backbone',
+    underscore: '../../../bower_components/underscore/underscore'
   }
 });

@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       prod: {
         options: {
           mainConfigFile: 'client/www/js/config.js',
-          name: 'tgio',
+          name: 'main',
           out: 'build/www/js/main.js',
           optimize: "none",
         },
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: ['client/www/**', 'server/**', 'test/**'],
+        files: ['client/www/**', 'server/**', 'test/**', '!server/secure/**'],
         tasks: ['default', 'express-restart'],
         options: {
           interrupt: true,

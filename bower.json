@@ -16,6 +16,8 @@
   "dependencies": {
     "bootstrap": "~3.0.0",
     "requirejs": "~2.1.9",
-    "requirejs-plugins": "~1.0.2"
+    "requirejs-plugins": "~1.0.2",
+    "backbone-amd": "~1.1.0",
+    "underscore": "~1.5.2"
   }
 }
