@@ -1,40 +1,41 @@
 <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-          <h2>Sign-up/in</h2>
-          <form role="form">
-            <div class="row">
-              <div class="col-md-12">
-                <input class="form-control input-lg" name="emailAddress" type="email" placeholder="Email Address">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                &nbsp;
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <input class="form-control input-lg" name="name" type="text" placeholder="Name">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <input class="form-control input-lg" name="password" type="password" placeholder="Password">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <label class="checkbox">
-                  <input type="checkbox" value="remember-me"> Remember me
-                </label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-              <button id="register" class="btn btn-lg btn-primary" type="submit" disabled>Sign up</button>
-              <button id="login" class="btn btn-lg btn-primary" type="submit" disabled>Sign in</button>
-              </div>
-            </div>
-          </form>
+  <div class="col-md-4 col-md-offset-4">
+    <h2>Sign-up/in</h2>
+    <form role="form">
+      <div class="row">
+        <div class="col-md-12">
+          <input class="form-control input-lg" name="name" type="text" placeholder="Name" required>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-12">
+          <input class="form-control input-lg" name="password" type="password" placeholder="Password" required>
+        </div>
+      </div>
+      <div class="row collapse">
+        <div class="col-md-12">
+          <input class="form-control input-lg" name="confirm-password" type="password" placeholder="Confirm Password">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <label class="checkbox">
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+      </div>
+      <div class="row collapse">
+        <div class="col-md-12">
+          <input class="form-control input-lg" name="emailAddress" type="emailAddress" placeholder="Email Address">
+          <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+        <button id="register" class="btn btn-lg btn-default pull-right" type="submit">Sign up</button>
+        <button id="login" class="btn btn-lg btn-default btn-primary" type="submit">Sign in</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

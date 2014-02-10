@@ -2,7 +2,10 @@ requirejs.config({
   shim: {
     underscore: {
       exports: '_'
-    }
+    },
+    'jquery-validation': [
+      'jquery'
+    ]
   },
   paths: {
     bootstrap: '../../../bower_components/bootstrap/dist/js/bootstrap',
@@ -22,6 +25,8 @@ requirejs.config({
     text: '../../../bower_components/requirejs-plugins/lib/text',
     backbone: '../../../bower_components/backbone-amd/backbone',
     underscore: '../../../bower_components/underscore/underscore',
-    templates: '../../../tmp/templates'
+    templates: '../../../tmp/templates',
+    store: '../../../bower_components/store.js/store',
+    'jquery-validation': '../../../bower_components/jquery-validation/jquery.validate'
   }
 });

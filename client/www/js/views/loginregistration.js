@@ -3,42 +3,49 @@ define([
   'jquery',
   'backbone',
   'templates',
+  'models/session',
+  'store',
   // Using the Require.js text! plugin, we are loaded raw text
   // which will be used as our views primary template
-], function($, Backbone, templates) {
+], function($, Backbone, templates, SessionModel) {
   var ProjectListView = Backbone.View.extend({
     el: $('body > .container'),
     events: {
-      "click [name='name']": 'loginFocus',
-      "click [name='password']": 'loginFocus',
-      "click [name='emailAddress']": 'signupFocus',
+      "blur input": 'inputBlur',
       "click #register": 'register',
       "click #login": 'login',
     },
-    loginFocus: function() {
-      this.$('#login').prop("disabled", false);
-      this.$('#register').prop("disabled", true);
-      this.$('[name="name"]').prop("readonly", false);
-      this.$('[name="emailAddress"]').prop("readonly", true);
-      this.$('[name="password"]').prop("readonly", false);
-    },
-    signupFocus: function() {
-      this.$('#login').prop("disabled", true);
-      this.$('#register').prop("disabled", false);
-      this.$('[name="name"]').prop("readonly", true);
-      this.$('[name="emailAddress"]').prop("readonly", false);
-      this.$('[name="password"]').prop("readonly", true);
+    inputBlur: function() {},
+    validate: function(callback) {
+      this.$('form').validate();
     },
     register: function(evt) {
-      $.post('/api/v1/registration', {
-        emailAddress: this.$('[name="emailAddress"]').val()
-      }, function(data) {
-        console.log(data);
-      });
+      if (this.isRegistration) {
+        this.validate(function() {
+
+        });
+      } else {
+        this.isRegistration = !this.isRegistration;
+        this.$('.collapse').collapse('show');
+        this.$('#register').toggleClass('btn-primary', true);
+        this.$('#login').toggleClass('btn-primary', false);
+      }
+
       evt.preventDefault();
     },
-    login: function() {
+    login: function(evt) {
+      if (!this.isRegistration) {
+        this.validate(function() {
 
+        });
+      } else {
+        this.isRegistration = !this.isRegistration;
+        this.$('.in').collapse('hide');
+        this.$('#register').toggleClass('btn-primary', false);
+        this.$('#login').toggleClass('btn-primary', true);
+      }
+
+      evt.preventDefault();
     },
     render: function() {
       // Using Underscore we can compile our template with data

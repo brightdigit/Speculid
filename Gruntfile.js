@@ -243,7 +243,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build', ['encrypt', 'decrypt', 'bower-install', 'bower', 'jst', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
-  grunt.registerTask('server', ['build:default', 'env', 'express:server']);
+  grunt.registerTask('server', ['env', 'express:server']);
   grunt.registerTask('default', 'build');
   grunt.registerTask('heroku:staging', 'default');
   grunt.loadNpmTasks('grunt-env');

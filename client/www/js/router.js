@@ -20,7 +20,6 @@ define([
     app_router.on('route:login', function() {
       // Call render on the module we loaded in via the dependency array
       // 'views/projects/list'
-      console.log('Login!');
       var loginView = new LoginRegistrationView();
       loginView.render();
     });
