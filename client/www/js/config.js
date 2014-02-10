@@ -21,6 +21,7 @@ requirejs.config({
     'Markdown.Converter': '../../../bower_components/requirejs-plugins/lib/Markdown.Converter',
     text: '../../../bower_components/requirejs-plugins/lib/text',
     backbone: '../../../bower_components/backbone-amd/backbone',
-    underscore: '../../../bower_components/underscore/underscore'
+    underscore: '../../../bower_components/underscore/underscore',
+    templates: '../../../tmp/templates'
   }
 });

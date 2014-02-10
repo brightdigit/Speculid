@@ -128,6 +128,22 @@ module.exports = function(grunt) {
         }
       }
     },
+    jst: {
+      compile: {
+        options: {
+          templateSettings: {
+            interpolate: /\{\{(.+?)\}\}/g
+          },
+          processName: function(filename) {
+            return path.basename(path.relative('client/www/templates', filename), '.html');
+          },
+          amd: true
+        },
+        files: {
+          "tmp/templates.js": ["client/www/templates/**/*.html"]
+        }
+      }
+    },
     decrypt: {
       default: {
         files: [{
@@ -226,13 +242,14 @@ module.exports = function(grunt) {
       });
   });
 
-  grunt.registerTask('build', ['encrypt', 'decrypt', 'bower-install', 'bower', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
+  grunt.registerTask('build', ['encrypt', 'decrypt', 'bower-install', 'bower', 'jst', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
   grunt.registerTask('server', ['build:default', 'env', 'express:server']);
   grunt.registerTask('default', 'build');
   grunt.registerTask('heroku:staging', 'default');
   grunt.loadNpmTasks('grunt-env');
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-apidoc');
+  grunt.loadNpmTasks('grunt-contrib-jst');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-bower-requirejs');
