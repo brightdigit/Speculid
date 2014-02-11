@@ -1,6 +1,6 @@
 {
   "name": "tg-io",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "sample project",
   "main": "app/server.js",
   "repository": {
@@ -44,6 +44,8 @@
     "sqlite3": "~2.2.0",
     "pg": "~2.11.1",
     "grunt-env": "~0.4.1",
-    "grunt-contrib-jst": "~0.5.1"
+    "grunt-contrib-jst": "~0.5.1",
+    "grunt-bumpup": "~0.5.1",
+    "grunt-bump": "0.0.13"
   }
 }
