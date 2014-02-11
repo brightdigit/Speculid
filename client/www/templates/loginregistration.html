@@ -1,20 +1,20 @@
 <div class="row">
   <div class="col-md-4 col-md-offset-4">
     <h2>Sign-up/in</h2>
-    <form role="form">
+    <form role="form" action="">
       <div class="row">
         <div class="col-md-12">
-          <input class="form-control input-lg" name="name" type="text" placeholder="Name" required>
+          <input class="form-control input-lg" name="name" type="text" placeholder="Name" minlength="5" maxlength="15" required>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <input class="form-control input-lg" name="password" type="password" placeholder="Password" required>
+          <input class="form-control input-lg" name="password" type="password" placeholder="Password" minlength="8" maxlength="255" required>
         </div>
       </div>
       <div class="row collapse">
         <div class="col-md-12">
-          <input class="form-control input-lg" name="confirm-password" type="password" placeholder="Confirm Password">
+          <input class="form-control input-lg ignore" name="confirm-password" type="password" placeholder="Confirm Password" required>
         </div>
       </div>
       <div class="row">
@@ -26,13 +26,13 @@
       </div>
       <div class="row collapse">
         <div class="col-md-12">
-          <input class="form-control input-lg" name="emailAddress" type="emailAddress" placeholder="Email Address">
+          <input class="form-control input-lg ignore" name="emailAddress" type="emailAddress" placeholder="Email Address" required>
           <br>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-        <button id="register" class="btn btn-lg btn-default pull-right" type="submit">Sign up</button>
+        <button id="register" class="btn btn-lg btn-default pull-right" type="button">Sign up</button>
         <button id="login" class="btn btn-lg btn-default btn-primary" type="submit">Sign in</button>
         </div>
       </div>

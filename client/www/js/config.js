@@ -27,6 +27,7 @@ requirejs.config({
     underscore: '../../../bower_components/underscore/underscore',
     templates: '../../../tmp/templates',
     store: '../../../bower_components/store.js/store',
+    'jquery.validate': '../../../bower_components/jquery-validation/jquery.validate',
     'jquery-validation': '../../../bower_components/jquery-validation/jquery.validate'
   }
 });

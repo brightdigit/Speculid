@@ -1,4 +1,4 @@
-require(['jquery', 'app', 'bootstrap', 'jquery-validation', 'font!google,families:[Lato:300,Raleway]'], function($, App) {
+require(['jquery', 'app', 'bootstrap', 'jquery.validate', 'font!google,families:[Lato:300,Raleway]'], function($, App) {
   /*
   $.validator.addMethod(
         "regex",

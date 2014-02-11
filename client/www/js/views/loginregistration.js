@@ -5,7 +5,7 @@ define([
   'templates',
   'models/session',
   'store',
-  'jquery-validation',
+  'jquery.validate',
   // Using the Require.js text! plugin, we are loaded raw text
   // which will be used as our views primary template
 ], function($, Backbone, templates, SessionModel) {
@@ -18,9 +18,51 @@ define([
     },
     inputBlur: function() {},
     validate: function(callback) {
-      this.$('form').validate({
-        debug: true,
-        /*rules: {
+
+    },
+    register: function(evt) {
+      if (!this.isRegistration) {
+        this.isRegistration = !this.isRegistration;
+        this.$('#register').toggleClass('btn-primary', true);
+        this.$('#login').toggleClass('btn-primary', false);
+        this.$('#register').attr('type', 'submit');
+        this.$('#login').attr('type', 'button');
+        this.$('input').popover('destroy');
+        this.$('.collapse input').toggleClass('ignore');
+        this.$('.collapse').collapse('show');
+      } else {
+        console.log(this.validator.form());
+      }
+      evt.preventDefault();
+
+    },
+    login: function(evt) {
+      if (this.isRegistration) {
+        this.isRegistration = !this.isRegistration;
+        this.$('#register').toggleClass('btn-primary', false);
+        this.$('#login').toggleClass('btn-primary', true);
+        this.$('#register').attr('type', 'button');
+        this.$('#login').attr('type', 'submit');
+        this.$('input').popover('destroy');
+        this.$('.in input').toggleClass('ignore');
+        this.$('.in').collapse('hide');
+      } else {
+        console.log(this.validator.form());
+      }
+      evt.preventDefault();
+
+    },
+    render: function() {
+      // Using Underscore we can compile our template with data
+      // Append our compiled template to this Views "el"
+      this.$el.prepend(templates.loginregistration({}));
+      this.validator = this.$('form').validate({
+        ignore: '.ignore',
+        onfocusout: false,
+        onsubmit: false,
+        onfocusin: false,
+        /*
+        rules: {
           name: {
             required: true
           },
@@ -33,8 +75,10 @@ define([
           emailAddress: {
             required: this.isRegistration
           }
-        },*/
+        },
+        */
         showErrors: function(errorMap, errorList) {
+          console.log(errorList.length);
           $.each(this.successList, function(index, value) {
             return $(value).popover("hide");
           });
@@ -42,51 +86,20 @@ define([
             var _popover;
             _popover = $(value.element).popover({
               trigger: "manual",
-              placement: "top",
+              placement: "right",
               content: value.message,
-              template: "<div class=\"popover\"><div class=\"arrow\"></div><div class=\"popover-inner\"><div class=\"popover-content\"><p></p></div></div></div>"
+              template: "<div class=\"popover\"><div class=\"arrow\"></div><div class=\"popover-inner\"><div class=\"popover-content\"><p></p></div></div></div>",
+              container: "body"
             });
             // Bootstrap 3:
-            popover.data("bs.popover").options.content = value.message;
+            _popover.data("bs.popover").options.content = value.message;
             // Bootstrap 2.x:
             //_popover.data("popover").options.content = value.message;
-            return $(value.element).popover("show");
+            var popover = $(value.element).popover("show");
+            return popover;
           });
         }
       });
-    },
-    register: function(evt) {
-      if (this.isRegistration) {
-        this.validate(function() {
-
-        });
-      } else {
-        this.isRegistration = !this.isRegistration;
-        this.$('.collapse').collapse('show');
-        this.$('#register').toggleClass('btn-primary', true);
-        this.$('#login').toggleClass('btn-primary', false);
-      }
-
-      evt.preventDefault();
-    },
-    login: function(evt) {
-      if (!this.isRegistration) {
-        this.validate(function() {
-
-        });
-      } else {
-        this.isRegistration = !this.isRegistration;
-        this.$('.in').collapse('hide');
-        this.$('#register').toggleClass('btn-primary', false);
-        this.$('#login').toggleClass('btn-primary', true);
-      }
-
-      evt.preventDefault();
-    },
-    render: function() {
-      // Using Underscore we can compile our template with data
-      // Append our compiled template to this Views "el"
-      this.$el.prepend(templates.loginregistration({}));
     }
   });
   // Our module now returns our view
