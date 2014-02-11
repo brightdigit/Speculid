@@ -5,7 +5,7 @@ define([
   'templates',
   'models/session',
   'store',
-  'jquery.validate',
+  'jquery-validation',
   // Using the Require.js text! plugin, we are loaded raw text
   // which will be used as our views primary template
 ], function($, Backbone, templates, SessionModel) {

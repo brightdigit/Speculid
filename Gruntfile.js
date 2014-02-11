@@ -158,6 +158,14 @@ module.exports = function(grunt) {
         }
       }
     },
+    bump: {
+      options: {
+        updateProps: {
+          pkg: 'package.json'
+        }
+      },
+      file: 'package.json'
+    },
     env: {
       options: {
         //Shared Options Hash
@@ -214,6 +222,10 @@ module.exports = function(grunt) {
       });
   });
 
+  grunt.registerTask('build-datetime', function() {
+    grunt.file.write('tmp/build', new Date().valueOf());
+  });
+
   grunt.registerMultiTask('decrypt', function() {
     var options = this.options({
       "action": grunt.cli.options.crypt || "encrypt",
@@ -242,7 +254,7 @@ module.exports = function(grunt) {
       });
   });
 
-  grunt.registerTask('build', ['encrypt', 'decrypt', 'bower-install', 'bower', 'jst', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
+  grunt.registerTask('build', ['bump:build:bump-only', 'build-datetime', 'encrypt', 'decrypt', 'bower-install', 'bower', 'jst', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
   grunt.registerTask('server', ['env', 'express:server']);
   grunt.registerTask('default', 'build');
   grunt.registerTask('heroku:staging', 'default');
@@ -258,4 +270,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-express');
+  grunt.loadNpmTasks('grunt-bump');
 };

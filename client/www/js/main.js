@@ -1,5 +1,6 @@
-require(['jquery', 'app', 'bootstrap', 'jquery.validate', 'font!google,families:[Lato:300,Raleway]'], function($, App) {
-  /*
+require(['jquery', 'moment', 'app', 'json!../../../tmp/build', 'json!../../../package.json', 'bootstrap', 'font!google,families:[Lato:300,Raleway]'],
+  function($, moment, App, buildUTC, package) {
+    /*
   $.validator.addMethod(
         "regex",
         function(value, element, regexp) {
@@ -9,5 +10,6 @@ require(['jquery', 'app', 'bootstrap', 'jquery.validate', 'font!google,families:
         "Please check your input."
 );
   */
-  App.initialize();
-});
+    $('#build-version').html('v' + package.version + "[" + moment(buildUTC).format("YY.MM.DD.HH.mm") + "]");
+    App.initialize();
+  });
