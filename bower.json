@@ -21,6 +21,7 @@
     "underscore": "~1.5.2",
     "store.js": "~1.3.15",
     "jquery.validation": "~1.11.1",
-    "moment": "~2.5.1"
+    "moment": "~2.5.1",
+    "jQuery.serializeObject": "~2.0.3"
   }
 }

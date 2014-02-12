@@ -4,11 +4,13 @@ define([
   'backbone',
   'templates',
   'models/session',
+  'models/registration',
   'store',
   'jquery-validation',
+  'jQuery.serializeObject'
   // Using the Require.js text! plugin, we are loaded raw text
   // which will be used as our views primary template
-], function($, Backbone, templates, SessionModel) {
+], function($, Backbone, templates, SessionModel, RegistrationModel, store) {
   var ProjectListView = Backbone.View.extend({
     el: $('body > .container'),
     events: {
@@ -30,10 +32,11 @@ define([
         this.$('input').popover('destroy');
         this.$('.collapse input').toggleClass('ignore');
         this.$('.collapse').collapse('show');
+        evt.preventDefault();
       } else {
-        console.log(this.validator.form());
+        //console.log(this.validator.form());
       }
-      evt.preventDefault();
+      //evt.preventDefault();
 
     },
     login: function(evt) {
@@ -46,38 +49,50 @@ define([
         this.$('input').popover('destroy');
         this.$('.in input').toggleClass('ignore');
         this.$('.in').collapse('hide');
+        evt.preventDefault();
       } else {
-        console.log(this.validator.form());
+        //console.log(this.validator.form());
       }
-      evt.preventDefault();
+      //evt.preventDefault();
+
+    },
+    registrationSuccess: function(data) {
+      console.log(data);
+    },
+    registrationFailure: function(data) {
+
+    },
+    submitRegistration: function(form) {
+      var data = $(form).serializeObject();
+      console.log(data);
+      store.set('user', data.name);
+      store.set('password', data.password);
+      this.model = new RegistrationModel({
+        apiKey: data.apiKey,
+        emailAddress: data.emailAddress
+      });
+      this.model.save();
+    },
+    submitLogin: function() {
 
     },
     render: function() {
+      var view = this;
       // Using Underscore we can compile our template with data
       // Append our compiled template to this Views "el"
       this.$el.prepend(templates.loginregistration({}));
       this.validator = this.$('form').validate({
         ignore: '.ignore',
         onfocusout: false,
-        onsubmit: false,
         onfocusin: false,
         onkeyup: false,
-        /*
-        rules: {
-          name: {
-            required: true
-          },
-          password: {
-            required: true
-          },
-          confirmPassword: {
-            required: this.isRegistration
-          },
-          emailAddress: {
-            required: this.isRegistration
+        submitHandler: function(form) {
+          if ( !! view.isRegistration) {
+            view.submitRegistration(form);
+          } else {
+            view.submitLogin(form);
           }
         },
-        */
         showErrors: function(errorMap, errorList) {
           $.each(this.successList, function(index, value) {
             return $(value).popover("hide");
