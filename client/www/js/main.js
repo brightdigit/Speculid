@@ -10,6 +10,9 @@ require(['jquery', 'moment', 'app', 'json!../../../tmp/build', 'json!../../../pa
         "Please check your input."
 );
   */
-    $('#build-version').html('v' + package.version + "[" + moment(buildUTC).format("YY.MM.DD.HH.mm") + "]");
+    if (package.prerelease) {
+      $('#build-version').html('<strong>' + package.prerelease + '</strong> v' + package.version + "[" + moment(buildUTC).format("YY.MM.DD.HH.mm") + "]");
+
+    }
     App.initialize();
   });

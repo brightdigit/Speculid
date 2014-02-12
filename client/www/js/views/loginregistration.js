@@ -61,6 +61,7 @@ define([
         onfocusout: false,
         onsubmit: false,
         onfocusin: false,
+        onkeyup: false,
         /*
         rules: {
           name: {
@@ -78,7 +79,6 @@ define([
         },
         */
         showErrors: function(errorMap, errorList) {
-          console.log(errorList.length);
           $.each(this.successList, function(index, value) {
             return $(value).popover("hide");
           });
