@@ -3,6 +3,9 @@
 @font-family-sans-serif: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 @font-family-serif: 'Raleway', sans-serif;
 
+@body-bg:               @gray-darker;
+@text-color:            @gray-lighter;
+
 @navbar-inverse-bg: #62A1B2;
 @navbar-inverse-color:                      @gray-light;
 @navbar-inverse-border:                     lighten(@navbar-inverse-bg, 10%);
@@ -32,3 +35,15 @@
 @navbar-inverse-toggle-hover-bg:            #333;
 @navbar-inverse-toggle-icon-bar-bg:         #fff;
 @navbar-inverse-toggle-border-color:        #333;
+
+.popover-content {
+  color: @gray-dark;
+}
+
+#build-version strong {
+  color: @gray-lighter;
+}
+
+a#build-version:hover {
+  color: @navbar-inverse-link-color;
+}

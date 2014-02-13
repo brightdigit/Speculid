@@ -1,4 +1,15 @@
 requirejs.config({
+  shim: {
+    underscore: {
+      exports: '_'
+    },
+    'jquery-validation': [
+      'jquery'
+    ],
+    'jQuery.serializeObject': [
+      'jquery'
+    ]
+  },
   paths: {
     bootstrap: '../../../bower_components/bootstrap/dist/js/bootstrap',
     jquery: '../../../bower_components/jquery/jquery',
@@ -14,6 +25,14 @@ requirejs.config({
     markdownConverter: '../../../bower_components/requirejs-plugins/lib/Markdown.Converter',
     depend: '../../../bower_components/requirejs-plugins/src/depend',
     'Markdown.Converter': '../../../bower_components/requirejs-plugins/lib/Markdown.Converter',
-    text: '../../../bower_components/requirejs-plugins/lib/text'
+    text: '../../../bower_components/requirejs-plugins/lib/text',
+    backbone: '../../../bower_components/backbone-amd/backbone',
+    underscore: '../../../bower_components/underscore/underscore',
+    templates: '../../../tmp/templates',
+    store: '../../../bower_components/store.js/store',
+    buildUTC: 'json!../../../tmp/build',
+    'jquery-validation': '../../../bower_components/jquery-validation/jquery.validate',
+    moment: '../../../bower_components/moment/moment',
+    'jQuery.serializeObject': '../../../bower_components/jQuery.serializeObject/jQuery.serializeObject'
   }
 });

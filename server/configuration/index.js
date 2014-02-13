@@ -23,10 +23,9 @@ var key = process.env.KEY || fs.readFileSync(path.join(__dirname, "../..", ".key
         envious[name] = merge(merge(defaultOptions, require(path.resolve(__dirname, file))), text ? JSON.parse(text) : {});
       }
     });
-    envious.default_env = "development";
+    //envious.default_env = "development";
     var conf = envious.apply({
-      strict: true,
-      strictProperties: true
+      strict: true
     });
 
     conf.script = function(name, cb) {

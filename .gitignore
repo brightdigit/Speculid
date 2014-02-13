@@ -44,3 +44,4 @@ npm-debug.log
 test/secure/*.encrypted
 secure/*.json
 .keyfile
+/tmp
