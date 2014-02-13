@@ -131,9 +131,6 @@ module.exports = function(grunt) {
     jst: {
       compile: {
         options: {
-          templateSettings: {
-            interpolate: /\{\{(.+?)\}\}/g
-          },
           processName: function(filename) {
             return path.basename(path.relative('client/www/templates', filename), '.html');
           },

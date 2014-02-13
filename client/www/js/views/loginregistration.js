@@ -14,7 +14,6 @@ define([
   var ProjectListView = Backbone.View.extend({
     el: $('body > .container'),
     events: {
-      "blur input": 'inputBlur',
       "click #register": 'click',
       "click #login": 'click',
     },
@@ -31,7 +30,6 @@ define([
         this.$('.collapse,.in input').toggleClass('ignore');
         this.$('.in,.collapse').collapse('toggle');
         evt.preventDefault();
-
       }
     },
     submitRegistration: function(form) {
