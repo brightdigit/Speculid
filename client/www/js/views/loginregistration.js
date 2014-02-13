@@ -15,52 +15,24 @@ define([
     el: $('body > .container'),
     events: {
       "blur input": 'inputBlur',
-      "click #register": 'register',
-      "click #login": 'login',
+      "click #register": 'click',
+      "click #login": 'click',
     },
-    inputBlur: function() {},
-    validate: function(callback) {
-
-    },
-    register: function(evt) {
-      if (!this.isRegistration) {
-        this.isRegistration = !this.isRegistration;
-        this.$('#register').toggleClass('btn-primary', true);
-        this.$('#login').toggleClass('btn-primary', false);
-        this.$('#register').attr('type', 'submit');
-        this.$('#login').attr('type', 'button');
+    click: function(evt) {
+      var buttons = this.$('button');
+      var submitButton = buttons.filter('[type="submit"]');
+      var switchButton = buttons.not('[type="submit"]');
+      if (evt.target === switchButton[0]) {
+        switchButton.toggleClass('btn-primary', true);
+        submitButton.toggleClass('btn-primary', false);
+        switchButton.attr('type', 'submit');
+        submitButton.attr('type', 'button');
         this.$('input').popover('destroy');
-        this.$('.collapse input').toggleClass('ignore');
-        this.$('.collapse').collapse('show');
+        this.$('.collapse,.in input').toggleClass('ignore');
+        this.$('.in,.collapse').collapse('toggle');
         evt.preventDefault();
-      } else {
-        //console.log(this.validator.form());
+
       }
-      //evt.preventDefault();
-
-    },
-    login: function(evt) {
-      if (this.isRegistration) {
-        this.isRegistration = !this.isRegistration;
-        this.$('#register').toggleClass('btn-primary', false);
-        this.$('#login').toggleClass('btn-primary', true);
-        this.$('#register').attr('type', 'button');
-        this.$('#login').attr('type', 'submit');
-        this.$('input').popover('destroy');
-        this.$('.in input').toggleClass('ignore');
-        this.$('.in').collapse('hide');
-        evt.preventDefault();
-      } else {
-        //console.log(this.validator.form());
-      }
-      //evt.preventDefault();
-
-    },
-    registrationSuccess: function(data) {
-      console.log(data);
-    },
-    registrationFailure: function(data) {
-
     },
     submitRegistration: function(form) {
       var data = $(form).serializeObject();
@@ -71,10 +43,45 @@ define([
         apiKey: data.apiKey,
         emailAddress: data.emailAddress
       });
-      this.model.save();
+      this.model.save({}, {
+        success: this.registrationSuccess.bind(this),
+        error: this.registrationFailure.bind(this)
+      });
     },
-    submitLogin: function() {
-
+    registrationSuccess: function(data) {
+      console.log('success:');
+      console.log(data);
+    },
+    registrationFailure: function(data) {
+      console.log('failure:');
+      console.log(data);
+    },
+    submitLogin: function(form) {
+      var data = $(form).serializeObject();
+      console.log(data);
+      var deviceKey = store.get('deviceKey');
+      store.set('user', data.name);
+      store.set('password', data.password);
+      this.model = new SessionModel({
+        name: data.name,
+        password: data.password,
+        apiKey: data.apiKey
+      });
+      if (deviceKey) {
+        this.model.set('deviceKey', deviceKey);
+      }
+      this.model.save({}, {
+        success: this.loginSuccess.bind(this),
+        error: this.loginFailure.bind(this)
+      });
+    },
+    loginSuccess: function(data) {
+      console.log('success:');
+      console.log(data);
+    },
+    loginFailure: function(data) {
+      console.log('failure:');
+      console.log(data);
     },
     render: function() {
       var view = this;
@@ -87,7 +94,8 @@ define([
         onfocusin: false,
         onkeyup: false,
         submitHandler: function(form) {
-          if ( !! view.isRegistration) {
+          var type = $(form).find('[type="submit"]').attr('id');
+          if (type === 'register') {
             view.submitRegistration(form);
           } else {
             view.submitLogin(form);

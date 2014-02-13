@@ -94,7 +94,8 @@ module.exports = [{
         chainer.add(session.setUser(user));
         chainer.run().success(function(results) {
           callback(undefined, {
-            key: session.key.toString('base64')
+            sessionKey: session.key.toString('base64'),
+            deviceKey: device.key.toString('base64')
           });
         });
       });

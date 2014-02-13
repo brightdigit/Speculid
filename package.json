@@ -1,6 +1,6 @@
 {
   "name": "tg-io",
-  "version": "0.0.3-37",
+  "version": "0.0.3-60",
   "prerelease" : "alpha",
   "description": "sample project",
   "main": "server",
