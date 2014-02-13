@@ -3,7 +3,7 @@ requirejs.config({
     underscore: {
       exports: '_'
     },
-    'jquery-validation': [
+    'jquery.validation': [
       'jquery'
     ],
     'jQuery.serializeObject': [
@@ -31,7 +31,7 @@ requirejs.config({
     templates: '../../../tmp/templates',
     store: '../../../bower_components/store.js/store',
     buildUTC: 'json!../../../tmp/build',
-    'jquery-validation': '../../../bower_components/jquery-validation/jquery.validate',
+    'jquery.validation': '../../../bower_components/jquery.validation/jquery.validate',
     moment: '../../../bower_components/moment/moment',
     'jQuery.serializeObject': '../../../bower_components/jQuery.serializeObject/jQuery.serializeObject'
   }

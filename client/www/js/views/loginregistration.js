@@ -6,7 +6,7 @@ define([
   'models/session',
   'models/registration',
   'store',
-  'jquery-validation',
+  'jquery.validation',
   'jQuery.serializeObject'
   // Using the Require.js text! plugin, we are loaded raw text
   // which will be used as our views primary template
