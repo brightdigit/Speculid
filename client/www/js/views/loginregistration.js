@@ -1,7 +1,7 @@
 // Filename: views/project/list
 define([
   'jquery',
-  'backbone',
+  'marionette',
   'templates',
   'models/session',
   'models/registration',
@@ -10,8 +10,10 @@ define([
   'jQuery.serializeObject'
   // Using the Require.js text! plugin, we are loaded raw text
   // which will be used as our views primary template
-], function($, Backbone, templates, SessionModel, RegistrationModel, store) {
-  var ProjectListView = Backbone.View.extend({
+], function($, Marionette, templates, SessionModel, RegistrationModel, store) {
+  var LoginRegistrationView = Marionette.CompositeView.extend({
+    template: templates.loginregistration
+    /*
     el: $('body > .container'),
     events: {
       "click #register": 'click',
@@ -121,8 +123,8 @@ define([
           });
         }
       });
-    }
+    }*/
   });
   // Our module now returns our view
-  return ProjectListView;
+  return LoginRegistrationView;
 });

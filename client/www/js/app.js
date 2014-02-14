@@ -1,8 +1,10 @@
-define(['jquery', 'backbone', 'router'], function($, Backbone, Router) {
-  var app = {
-    initialize: function() {
-      Router.initialize();
-    }
-  };
-  return app;
+define(['marionette', 'views/loginregistration'], function(Marionette, LoginRegistrationView) {
+  var Application = new Marionette.Application();
+  Application.addRegions({
+    main: "main"
+  });
+  Application.addInitializer(function(options) {
+    Application.main.show(new LoginRegistrationView());
+  });
+  return Application;
 });
