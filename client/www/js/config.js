@@ -37,6 +37,7 @@ requirejs.config({
     moment: '../../../bower_components/moment/moment',
     'jQuery.serializeObject': '../../../bower_components/jQuery.serializeObject/jQuery.serializeObject',
     marionette: '../../../bower_components/marionette/lib/core/amd/backbone.marionette',
-    'backbone.marionette': '../../../bower_components/marionette/lib/core/amd/backbone.marionette'
+    'backbone.marionette': '../../../bower_components/marionette/lib/core/amd/backbone.marionette',
+    application: 'application'
   }
 });

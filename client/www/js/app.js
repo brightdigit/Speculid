@@ -6,5 +6,8 @@ define(['marionette', 'views/loginregistration'], function(Marionette, LoginRegi
   Application.addInitializer(function(options) {
     Application.main.show(new LoginRegistrationView());
   });
+  Application.vent.on('registration:success', function() {
+    console.log('registration:success');
+  });
   return Application;
 });
