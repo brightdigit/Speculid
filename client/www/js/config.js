@@ -12,7 +12,7 @@ requirejs.config({
   },
   paths: {
     bootstrap: '../../../bower_components/bootstrap/dist/js/bootstrap',
-    jquery: '../../../bower_components/jquery/jquery',
+    jquery: '../../../bower_components/jquery/dist/jquery',
     requirejs: '../../../bower_components/requirejs/require',
     async: '../../../bower_components/requirejs-plugins/src/async',
     font: '../../../bower_components/requirejs-plugins/src/font',
@@ -38,6 +38,7 @@ requirejs.config({
     'jQuery.serializeObject': '../../../bower_components/jQuery.serializeObject/jQuery.serializeObject',
     marionette: '../../../bower_components/marionette/lib/core/amd/backbone.marionette',
     'backbone.marionette': '../../../bower_components/marionette/lib/core/amd/backbone.marionette',
-    application: 'application'
+    application: 'application',
+    sizzle: '../../../bower_components/sizzle/dist/sizzle'
   }
 });
