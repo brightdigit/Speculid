@@ -16,11 +16,15 @@ define([
   var LoginRegistrationView = Marionette.ItemView.extend({
     template: templates.loginregistration,
     ui: {
+      'cancelButton': '#cancel',
       'inputs': 'input',
-      'registrationInputs': '.collapse,.in input',
-      'registrationRows': '.in,.collapse',
-      'buttons': 'button',
-      'form': 'form'
+      'registrationInputs': '.signup input',
+      'registrationRows': '.signup',
+      'buttons': 'button:not(.hide)',
+      'form': 'form',
+      'confirm_hide': '.confirm-hide',
+      'confirmationButton': '#confirmation',
+      'confirmationRows': '.confirmation'
     },
     //el: $('body > .container'),
     events: {
@@ -52,6 +56,12 @@ define([
         apiKey: data.apiKey,
         emailAddress: data.emailAddress
       });
+      this.ui.buttons.filter('#login').fadeOut(
+        function() {
+          $(form).find('#cancel').removeClass('hide').fadeIn();
+        }
+      );
+      this.ui.buttons.filter('#register').button('loading');
       this.model.save({}, {
         success: this.registrationSuccess.bind(this),
         error: this.registrationFailure.bind(this)
@@ -60,7 +70,22 @@ define([
     registrationSuccess: function(data) {
       console.log('success:');
       console.log(data);
-      application().vent.trigger('registration:success');
+      //application().vent.trigger('registration:success');
+      this.ui.confirm_hide.collapse('hide');
+      //this.ui.registrationRows.collapse('hide');
+      this.ui.confirmationRows.collapse('show');
+      this.ui.buttons.fadeOut(function() {
+        $('#confirmation').removeClass('hide').fadeIn();
+        $('input').not('.confirmation input').prop('readOnly', true);
+      });
+      /*
+      var offset = this.ui.confirmationButton.offset();
+      this.ui.confirmationButton.css('position', 'absolute');
+      this.ui.confirmationButton.offset(offset);
+      this.ui.confirmationButton.fadeIn(function() {
+        $(this).css('position', '');
+      });
+*/
     },
     registrationFailure: function(data) {
       console.log('failure:');

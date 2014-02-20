@@ -7,8 +7,8 @@ define(['marionette', 'views/loginregistration', 'views/registrationconfirmation
     Application.addInitializer(function(options) {
       Application.main.show(new LoginRegistrationView());
     });
-    Application.vent.on('registration:success', function() {
-      Application.main.show(new RegistrationConfirmationView());
-    });
+    //Application.vent.on('registration:success', function() {
+    //  Application.main.show(new RegistrationConfirmationView());
+    //});
     return Application;
   });
