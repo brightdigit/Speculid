@@ -32,14 +32,23 @@ define([
     events: {
       "click #register": 'click',
       "click #login": 'click',
-      "click #debug button": 'debug'
+      "click #debug button": 'debug',
+      "click #cancel": 'cancel'
+    },
+    cancel: function(evt) {
+      this.xhr.abort();
+      this.xhr = undefined;
     },
     debug: function(evt) {
       function _(attrName) {
         switch (attrName) {
           case 'name':
             var name = names();
-            return name[0].toLowerCase() + "." + name[1].toLowerCase();
+            name = name[0].toLowerCase() + "-" + name[1].toLowerCase();
+            if (name.length > 15) {
+              name = name.substr(0, 12) + "-" + Math.floor(Math.random() * 100);
+            }
+            return name;
           case 'password':
           case 'confirm-password':
             return 'testtest';
@@ -86,10 +95,11 @@ define([
         }
       );
       this.ui.buttons.filter('#register').button('loading');
-      this.model.save({}, {
+      this.xhr = this.model.save({}, {
         success: this.registrationSuccess.bind(this),
         error: this.registrationFailure.bind(this)
       });
+      this.ui.inputs.not('.confirmation input').prop('readOnly', true);
     },
     registrationSuccess: function(data) {
       console.log('success:');
@@ -98,11 +108,19 @@ define([
       this.ui.confirmationRows.collapse('show');
       this.ui.buttons.fadeOut(function() {
         $('#confirmation').removeClass('hide').fadeIn();
-        $('input').not('.confirmation input').prop('readOnly', true);
       });
     },
-    registrationFailure: function(data) {
+    registrationFailure: function(data, xhr) {
+      var that = this;
       console.log('failure:');
+      console.log(xhr.statusText);
+      if (xhr.statusText === "abort") {
+        this.ui.cancelButton.fadeOut(function() {
+          that.ui.buttons.filter('#login').fadeIn();
+        });
+        this.ui.buttons.filter('#register').button('reset');
+        this.ui.inputs.not('.confirmation input').prop('readOnly', false);
+      }
       console.log(data);
     },
     submitLogin: function(form) {
@@ -152,10 +170,7 @@ define([
               template: "<div class=\"popover\"><div class=\"arrow\"></div><div class=\"popover-inner\"><div class=\"popover-content\"><p></p></div></div></div>",
               container: "body"
             });
-            // Bootstrap 3:
             _popover.data("bs.popover").options.content = value.message;
-            // Bootstrap 2.x:
-            //_popover.data("popover").options.content = value.message;
             var popover = $(value.element).popover("show");
             return popover;
           });
