@@ -94,7 +94,11 @@ module.exports = [{
           chain.add(user.setRegistration(results.registration));
           chain.add(results.registration.setUser(user));
           chain.run().success(function(results) {
-            callback();
+            callback(201, {
+              name: request.body.name
+            }, {
+              "Location": "/user/" + request.body.name
+            });
           }).error(function(error) {
             logger.error(error);
             callback(500, {

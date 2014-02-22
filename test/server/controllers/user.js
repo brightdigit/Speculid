@@ -48,7 +48,7 @@ exports.user = {
       "verb": "post"
     })(request,
       function(status, result) {
-        test.ok(status === 200 || status === undefined);
+        test.ok(status === 201);
         test.done();
       });
   },

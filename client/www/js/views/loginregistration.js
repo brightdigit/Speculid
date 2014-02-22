@@ -5,6 +5,7 @@ define([
   'templates',
   'models/session',
   'models/registration',
+  'models/user',
   'store',
   'application',
   '../configuration',
@@ -14,7 +15,7 @@ define([
   'jQuery.serializeObject'
   // Using the Require.js text! plugin, we are loaded raw text
   // which will be used as our views primary template
-], function($, Marionette, templates, SessionModel, RegistrationModel, store, application, configuration, names) {
+], function($, Marionette, templates, SessionModel, RegistrationModel, UserModel, store, application, configuration, names) {
   var LoginRegistrationView = Marionette.ItemView.extend({
     template: templates.loginregistration,
     ui: {
@@ -33,11 +34,44 @@ define([
       "click #register": 'click',
       "click #login": 'click',
       "click #debug button": 'debug',
-      "click #cancel": 'cancel'
+      "click #cancel": 'cancel',
+      "click #confirmation": 'confirm'
     },
     cancel: function(evt) {
       this.xhr.abort();
       this.xhr = undefined;
+    },
+    confirm: function(evt) {
+      var data = this.ui.form.serializeObject();
+      this.model = new UserModel({
+        key: store.get('key'),
+        name: store.get('user'),
+        password: store.get('password'),
+        secret: data.secret,
+        emailAddress: data.emailAddress
+      });
+      this.ui.inputs.prop('readOnly', true);
+      this.ui.cancelButton.fadeOut();
+      this.model.save({}, {
+        success: this.confirmationSuccess.bind(this),
+        error: this.confirmationFailure.bind(this)
+      });
+    },
+    confirmationSuccess: function(data) {
+      console.log("success");
+      console.log(data);
+      //this.ui.confirm_hide.collapse('show');
+      this.ui.confirmationRows.collapse('hide');
+      this.ui.registrationRows.collapse('hide');
+      this.ui.registrationInputs.toggleClass('ignore', true);
+      this.ui.buttons.button('reset');
+      this.ui.confirmationButton.fadeOut((function() {
+        this.ui.buttons.fadeIn();
+      }).bind(this));
+    },
+    confirmationFailure: function(data, xhr) {
+      console.log("failure");
+      console.log(data);
     },
     debug: function(evt) {
       function _(attrName) {
@@ -104,6 +138,7 @@ define([
     registrationSuccess: function(data) {
       console.log('success:');
       console.log(data);
+      store.set('key', data.changed.key);
       this.ui.confirm_hide.collapse('hide');
       this.ui.confirmationRows.collapse('show');
       this.ui.buttons.fadeOut(function() {
@@ -178,6 +213,6 @@ define([
       });
     },
   });
-  // Our module now returns our view
+
   return LoginRegistrationView;
 });

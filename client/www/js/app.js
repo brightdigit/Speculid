@@ -9,8 +9,5 @@ define(['marionette', 'views/loginregistration', 'views/buildversion'],
       Application.main.show(new LoginRegistrationView());
       Application.buildversion.show(new BuildVersionView());
     });
-    //Application.vent.on('registration:success', function() {
-    //  Application.main.show(new RegistrationConfirmationView());
-    //});
     return Application;
   });
