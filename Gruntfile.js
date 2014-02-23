@@ -223,6 +223,21 @@ module.exports = function(grunt) {
     grunt.file.write('tmp/build', new Date().valueOf());
   });
 
+  grunt.registerTask('stage', function() {
+    grunt.file.write('tmp/stage', (function(NODE_ENV) {
+      switch (NODE_ENV) {
+        case 'production':
+          return '';
+        case '':
+        case undefined:
+        case null:
+          return 'development';
+        default:
+          return NODE_ENV;
+      }
+    })(process.env.NODE_ENV));
+  });
+
   grunt.registerMultiTask('decrypt', function() {
     var options = this.options({
       "action": grunt.cli.options.crypt || "encrypt",
@@ -251,7 +266,7 @@ module.exports = function(grunt) {
       });
   });
 
-  grunt.registerTask('build', ['bump:build:bump-only', 'build-datetime', 'encrypt', 'decrypt', 'bower-install', 'bower', 'jst', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
+  grunt.registerTask('build', ['bump:build:bump-only', 'build-datetime', 'stage', 'encrypt', 'decrypt', 'bower-install', 'bower', 'jst', 'nodeunit', 'jshint', 'jsbeautifier', 'copy', 'requirejs', 'less', 'apidoc']);
   grunt.registerTask('server', ['env', 'express:server']);
   grunt.registerTask('default', 'build');
   grunt.registerTask('heroku:staging', 'default');

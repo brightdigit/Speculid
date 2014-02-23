@@ -23,8 +23,11 @@ module.exports = (function() {
   };
 
   path.result = function(resp) {
-    function _result(resp, status, result) {
+    function _result(resp, status, result, headers) {
       status = status || 200;
+      if (headers) {
+        resp.set(headers);
+      }
       resp.send(status, result);
     }
 
