@@ -8,6 +8,9 @@ requirejs.config({
     ],
     'jQuery.serializeObject': [
       'jquery'
+    ],
+    bootstrap: [
+      'jquery'
     ]
   },
   paths: {

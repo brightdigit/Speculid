@@ -28,7 +28,8 @@ define([
       'confirm_hide': '.confirm-hide',
       'confirmationButton': '#confirmation',
       'confirmationRows': '.confirmation',
-      'debug': '#debug'
+      'debug': '#debug',
+      'signinRows': '.signin'
     },
     events: {
       "click #register": 'click',
@@ -64,7 +65,12 @@ define([
       this.ui.confirmationRows.collapse('hide');
       this.ui.registrationRows.collapse('hide');
       this.ui.registrationInputs.toggleClass('ignore', true);
-      this.ui.buttons.button('reset');
+      this.ui.buttons.button('reset').toggleClass('btn-primary');
+      $.each(this.ui.buttons, function() {
+        var $jq = $(this);
+        $jq.attr('type', $jq.attr('type') === 'submit' ? 'button' : 'submit');
+      });
+      this.ui.signinRows.collapse('show');
       this.ui.confirmationButton.fadeOut((function() {
         this.ui.buttons.fadeIn();
       }).bind(this));
@@ -162,14 +168,25 @@ define([
       console.log('login');
       var data = $(form).serializeObject();
       console.log(data);
+      this.model = new SessionModel({
+        apiKey: data.apiKey,
+        name: data.name,
+        password: data.password
+      });
+      this.model.save({}, {
+        success: this.loginSuccess.bind(this),
+        error: this.loginFailure.bind(this)
+      });
     },
     loginSuccess: function(data) {
       console.log('success:');
       console.log(data);
+      this.$el.html("logged in");
     },
     loginFailure: function(data) {
       console.log('failure:');
       console.log(data);
+      this.$el.html("logging failure");
     },
     onRender: function() {
       if (configuration.stage === 'development') {
