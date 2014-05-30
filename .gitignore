@@ -39,6 +39,7 @@ proguard/
 **/tgio-sdk/tgio-sdk.h
 
 build
+public
 bower_components
 npm-debug.log
 test/secure/*.encrypted
