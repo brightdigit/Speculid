@@ -1,0 +1,21 @@
+{
+  "name": "phragm",
+  "version": "0.1.0",
+  "authors": [
+    "Leo Dion <leogdion@brightdigit.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/www/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.13"
+  },
+  "resolutions": {
+    "bootstrap": "~3.1.1"
+  }
+}
