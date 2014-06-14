@@ -1,6 +1,6 @@
 {
   "name": "phragm",
-  "version": "0.1.1",
+  "version": "0.1.9",
   "authors": [
     "Leo Dion <leogdion@brightdigit.com>"
   ],
@@ -14,8 +14,5 @@
   ],
   "dependencies": {
     "requirejs": "~2.1.13"
-  },
-  "resolutions": {
-    "bootstrap": "~3.1.1"
   }
 }
