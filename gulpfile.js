@@ -90,7 +90,7 @@ gulp.task('JST', ['clean'], function () {
 });
 
 gulp.task('test', ['clean'], function (cb) {
-  gulp.src(['./static/js/**/*.js', './app/**/*.js']).pipe(istanbul()).on('finish', function () {
+  gulp.src(['./app/**/*.js']).pipe(istanbul()).on('finish', function () {
     gulp.src(["./test/**/*.js"]).pipe(mocha()).pipe(istanbul.writeReports()).on('end', cb); // Creating the reports after tests runned
   });
 });
@@ -106,7 +106,7 @@ gulp.task('enforce-coverage', ['test'], function () {
     coverageDirectory: 'coverage',
     rootDirectory: ''
   };
-  return gulp.src(['./static/js/**/*.js', './app/**/*.js']).pipe(coverageEnforcer(options));
+  return gulp.src(['./app/**/*.js']).pipe(coverageEnforcer(options));
 });
 
 gulp.task('bump', function () {
