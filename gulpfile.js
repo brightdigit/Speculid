@@ -16,17 +16,9 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     expressService = require('gulp-express-service');
 
-gulp.task('default', ['clean', 'lint', 'copy']);
+gulp.task('default', ['clean', 'lint', 'enforce-coverage', 'copy', 'bump']);
 
 gulp.task('heroku:staging', ['default']);
-
-gulp.task('test', function (cb) {
-  gulp.src(['./static/js/**/*.js', './app/**/*.js']).pipe(istanbul()) // Covering files
-  .on('end', function () {
-    gulp.src(["./test/**/*.js"]).pipe(mocha()).pipe(istanbul.writeReports()) // Creating the reports after tests runned
-    .on('end', cb);
-  });
-});
 
 gulp.task('clean', function () {
   return gulp.src(['public', '.tmp'], {
@@ -35,7 +27,6 @@ gulp.task('clean', function () {
 });
 
 gulp.task('copy', [ /*'clean', 'bower'*/ ], function () {
-  //    gulp.src('src/**/*.html').pipe(gulp.dest('dist'));
   return es.merge(
   gulp.src('bower_components/requirejs/require.js').pipe(gulp.dest('public/js')), gulp.src('static/html/*.html').pipe(gulp.dest('public')), gulp.src('static/fonts/**/*.*').pipe(gulp.dest('public/fonts')), gulp.src('bower_components/bootstrap/fonts/*.*').pipe(gulp.dest('public/fonts/bootstrap')), gulp.src('static/images/**/*.*').pipe(gulp.dest('public/images')));
 });
@@ -98,6 +89,12 @@ gulp.task('JST', ['clean'], function () {
   })).pipe(gulp.dest('.tmp'));
 });
 
+gulp.task('test', function (cb) {
+  gulp.src(['./static/js/**/*.js', './app/**/*.js']).pipe(istanbul()).on('finish', function () {
+    console.log('test');
+    gulp.src(["./test/**/*.js"]).pipe(mocha()).pipe(istanbul.writeReports()).on('end', cb); // Creating the reports after tests runned
+  });
+});
 
 gulp.task('enforce-coverage', ['test'], function () {
   var options = {
@@ -111,14 +108,6 @@ gulp.task('enforce-coverage', ['test'], function () {
     rootDirectory: ''
   };
   return gulp.src(['./static/js/**/*.js', './app/**/*.js']).pipe(coverageEnforcer(options));
-});
-
-gulp.task('test', function (cb) {
-  gulp.src(['./static/js/**/*.js', './app/**/*.js']).pipe(istanbul()) // Covering files
-  .on('end', function () {
-    gulp.src(["./test/**/*.js"]).pipe(mocha()).pipe(istanbul.writeReports()) // Creating the reports after tests runned
-    .on('end', cb);
-  });
 });
 
 gulp.task('bump', function () {
