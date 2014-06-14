@@ -1,3 +1,4 @@
-define([], function () {
-  console.log('test');
+require(['app', 'bootstrap'], function (app) {
+  var options = {};
+  app.start(options);
 });

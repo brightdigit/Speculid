@@ -21,7 +21,7 @@ gulp.task('default', ['clean', 'less', 'requirejs', 'enforce-coverage', 'copy', 
 gulp.task('heroku:staging', ['default']);
 
 gulp.task('clean', function () {
-  return gulp.src(['public', '.tmp'], {
+  return gulp.src(['public', '.tmp', 'coverage'], {
     read: false
   }).pipe(clean());
 });
@@ -89,9 +89,8 @@ gulp.task('JST', ['clean'], function () {
   })).pipe(gulp.dest('.tmp'));
 });
 
-gulp.task('test', function (cb) {
+gulp.task('test', ['clean'], function (cb) {
   gulp.src(['./static/js/**/*.js', './app/**/*.js']).pipe(istanbul()).on('finish', function () {
-    console.log('test');
     gulp.src(["./test/**/*.js"]).pipe(mocha()).pipe(istanbul.writeReports()).on('end', cb); // Creating the reports after tests runned
   });
 });
