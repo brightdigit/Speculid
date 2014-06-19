@@ -91,7 +91,7 @@ gulp.task('JST', ['clean'], function () {
 
 gulp.task('test', ['clean'], function (cb) {
   gulp.src(['./app/**/*.js']).pipe(istanbul()).on('finish', function () {
-    gulp.src(["./test/**/*.js"]).pipe(mocha()).pipe(istanbul.writeReports()).on('end', cb); // Creating the reports after tests runned
+    gulp.src(["./test/app/**/*.js"]).pipe(mocha()).pipe(istanbul.writeReports()).on('end', cb); // Creating the reports after tests runned
   });
 });
 
