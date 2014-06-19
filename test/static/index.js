@@ -5,10 +5,9 @@ require(["../../test/static/setup", '../../test/static/models/Account'], functio
   //  chai.use(chaiJquery);
   /*globals mocha */
   //mocha.setup('bdd');
-
   //require([
   //  'models/Account',
   //], function(require) {
-    mocha.run();
+  mocha.run();
   //});
 });

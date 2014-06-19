@@ -1,10 +1,14 @@
-define(['backbone.marionette', 'templates', 'backbone'], function (Marionette, templates, Backbone) {
+define(['backbone.marionette', 'templates', 'backbone', 'jquery', 'bootstrap'], function (Marionette, templates, Backbone, $) {
   return Backbone.Marionette.ItemView.extend({
     template: templates.home,
     events: {
       "click button": "buttonClick",
       "click #register.btn-primary": "register",
       "click #signin.btn-primary": "signin"
+    },
+    ui: {
+      signupSection: "#singup",
+      buttons: "buttons"
     },
     register: function () {
       Backbone.history.navigate('#confirmation', {
