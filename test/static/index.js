@@ -1,10 +1,14 @@
-var chai = require('chai');
-var fs = require('fs');
-var app = require(__dirname + '/../app');
-chai.should();
+require(["../../test/static/setup", '../../test/static/models/Account'], function () {
 
-describe('it works', function () {
-  it('should do something', function () {
-    return app.listen.should.be.a('function');
-  });
+  // Chai
+  //var should = chai.should();
+  //  chai.use(chaiJquery);
+  /*globals mocha */
+  //mocha.setup('bdd');
+
+  //require([
+  //  'models/Account',
+  //], function(require) {
+    mocha.run();
+  //});
 });
