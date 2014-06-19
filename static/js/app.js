@@ -11,8 +11,16 @@ define(["backbone.marionette", "./router", 'views/home'], function (Marionette, 
       app.mainRegion.show(new HomeView({
 
       }));
-    }
+    },
 
+    home: function () {
+      console.log('home');
+
+    },
+
+    cofirmation: function () {
+      console.log('confirmation');
+    }
   });
 
   app.addRegions({
