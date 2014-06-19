@@ -14,7 +14,8 @@ var gulp = require('gulp'),
     jstConcat = require('gulp-jst-concat'),
     jst = require('gulp-jst'),
     clean = require('gulp-clean'),
-    expressService = require('gulp-express-service');
+    expressService = require('gulp-express-service'),
+    rename = require('gulp-rename');
 
 gulp.task('default', ['clean', 'less', 'requirejs', 'enforce-coverage', 'copy', 'bump']);
 
@@ -126,4 +127,34 @@ gulp.task('beautify', function () {
     indentSize: 2,
     preserveNewlines: true
   })).pipe(gulp.dest('.'));
+});
+
+gulp.task('bowerrjs-client', ['bower', 'copy-rjs-config-client'], function (cb) {
+  var options = {
+    config: ".tmp/config-client.js",
+    baseUrl: 'test/static',
+    transitive: true
+  };
+
+  bowerRequireJS(options, function (result) {
+    console.log(result);
+    cb(undefined, result);
+  });
+});
+
+gulp.task('copy-rjs-config-client', ['clean'], function () {
+  return gulp.src("test/static/config.js").pipe(rename({
+    suffix: '-client'
+  })).pipe(gulp.dest(".tmp"));
+});
+
+gulp.task('requirejs-client', ['clean', 'bowerrjs-client', 'JST'], function (cb) {
+  var config = {
+    mainConfigFile: ".tmp/config-client.js",
+    baseUrl: 'static/js',
+    name: '../../test/static/index',
+    out: 'test/static/specrunner.js',
+    optimize: 'none'
+  };
+  requirejs.optimize(config, cb.bind(undefined, undefined), cb);
 });

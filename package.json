@@ -1,6 +1,6 @@
 {
   "name": "phragm",
-  "version": "0.1.64",
+  "version": "0.1.65",
   "prerelease": "alpha",
   "description": "sample project",
   "main": "server",
@@ -38,6 +38,7 @@
     "gulp-jst-concat": "git+https://github.com/jfmoy/gulp-jst-concat.git",
     "gulp-less": "^1.2.3",
     "gulp-mocha": "^0.4.1",
+    "gulp-rename": "^1.2.0",
     "requirejs": "^2.1.13"
   }
 }
