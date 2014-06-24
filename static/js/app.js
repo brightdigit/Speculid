@@ -8,9 +8,13 @@ define(["backbone.marionette", "./router", 'views/home'], function (Marionette, 
     },
 
     index: function () {
-      app.mainRegion.show(new HomeView({
+      var view;
+      app.mainRegion.show(view = new HomeView({
 
       }));
+      view.on("registration:post", function () {
+        console.log('registration');
+      });
     },
 
     home: function () {
@@ -26,6 +30,10 @@ define(["backbone.marionette", "./router", 'views/home'], function (Marionette, 
   app.addRegions({
     headerRegion: "header",
     mainRegion: "main"
+  });
+
+  app.on("registration:post", function () {
+    console.log('registration');
   });
 
   app.addInitializer(function () {

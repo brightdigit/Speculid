@@ -3,17 +3,21 @@ define(['backbone.marionette', 'templates', 'backbone', 'jquery', 'bootstrap'], 
     template: templates.home,
     events: {
       "click button": "buttonClick",
-      "click #register.btn-primary": "register",
-      "click #signin.btn-primary": "signin"
+    },
+    triggers: {
+      "click #register.btn-primary": "registration:post",
+      "click #signin.btn-primary": "session:post"
     },
     ui: {
       signupSection: "#singup",
-      buttons: "buttons"
+      buttons: ".button"
     },
     register: function () {
+/*
       Backbone.history.navigate('#confirmation', {
         trigger: true
       });
+      */
     },
     signin: function () {
       Backbone.history.navigate('#home', {
