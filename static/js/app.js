@@ -1,4 +1,4 @@
-define(["backbone.marionette", "./router", 'views/home'], function (Marionette, Router, HomeView) {
+define(["backbone.marionette", "./router", 'views/login'], function (Marionette, Router, LoginView) {
   var app = new Marionette.Application();
 
   var Controller = Marionette.Controller.extend({
@@ -9,11 +9,16 @@ define(["backbone.marionette", "./router", 'views/home'], function (Marionette, 
 
     index: function () {
       var view;
-      app.mainRegion.show(view = new HomeView({
+      app.mainRegion.show(view = new LoginView({
 
       }));
       view.on("registration:post", function () {
         console.log('registration');
+        console.log(arguments);
+
+        Backbone.history.navigate('#confirmation', {
+          trigger: true
+        });
       });
     },
 
@@ -22,7 +27,7 @@ define(["backbone.marionette", "./router", 'views/home'], function (Marionette, 
 
     },
 
-    cofirmation: function () {
+    confirmation: function () {
       console.log('confirmation');
     }
   });

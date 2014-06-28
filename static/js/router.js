@@ -3,7 +3,7 @@ define(['backbone.marionette'], function (Marionette) {
     //"index" must be a method in AppRouter's controller
     appRoutes: {
       "": "index",
-      "confirmation": "cofirmation",
+      "confirmation": "confirmation",
       "home": "home"
     }
   });

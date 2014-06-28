@@ -1,6 +1,6 @@
-define(['backbone.marionette', 'templates', 'backbone', 'bootstrap', 'jquery'], function (Marionette, templates, Backbone, $) {
+define(['backbone.marionette', 'templates', 'backbone', 'jquery', 'bootstrap'], function (Marionette, templates, Backbone, $) {
   return Backbone.Marionette.ItemView.extend({
-    template: templates.home,
+    template: templates.login,
     events: {
       "click button": "buttonClick",
     },
