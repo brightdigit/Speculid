@@ -1,6 +1,6 @@
 {
   "name": "phragm",
-  "version": "0.1.83",
+  "version": "0.1.87",
   "prerelease": "alpha",
   "description": "sample project",
   "main": "server",
