@@ -1,4 +1,4 @@
-define(["backbone.marionette", "./router", 'views/login', 'views/confirmation'], function (Marionette, Router, LoginView, ConfirmationView) {
+define(["backbone.marionette", "./router", 'views/login', 'views/confirmation', 'views/home', 'models/session'], function (Marionette, Router, LoginView, ConfirmationView, HomeView, SessionModel) {
   var app = new Marionette.Application();
 
   var Controller = Marionette.Controller.extend({
@@ -13,8 +13,6 @@ define(["backbone.marionette", "./router", 'views/login', 'views/confirmation'],
 
       }));
       view.on("registration:post", function () {
-        console.log('registration');
-        console.log(arguments);
 
         Backbone.history.navigate('#confirmation', {
           trigger: false
@@ -22,6 +20,21 @@ define(["backbone.marionette", "./router", 'views/login', 'views/confirmation'],
         var view;
         app.mainRegion.show(view = new ConfirmationView({
 
+        }));
+      });
+
+      view.on("session:post", function () {
+
+        Backbone.history.navigate('#home', {
+          trigger: false
+        });
+        var view;
+        app.mainRegion.show(view = new HomeView({
+          model: new SessionModel({
+            user: {
+              name: "John"
+            }
+          })
         }));
       });
     },
