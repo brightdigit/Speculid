@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <h2>Sign-up/in</h2>
+    <form role="form" action="">
+      <input type="hidden" name="apiKey" value="yaCCeDCruL/8ccbFz57sQZiDiu7FVzQfjkMirvSTMBWg19z5Hu8OqYww/2Q/Y3r/"/>
+      <div class="row">
+        <div class="col-md-12">
+          <input class="form-control input-lg" name="name" type="text" placeholder="Name" minlength="5" maxlength="15" required>
+        </div>
+      </div>
+      <div class="row collapse in confirm-hide signin">
+        <div class="col-md-12">
+          <input class="form-control input-lg" name="password" type="password" placeholder="Password" minlength="8" maxlength="255" required>
+        </div>
+      </div>
+      <div class="row collapse signup confirm-hide">
+        <div class="col-md-12">
+          <input class="form-control input-lg ignore" name="confirm-password" type="password" placeholder="Confirm Password" equalTo="[name='password']" required>
+        </div>
+      </div>
+      <div class="row confirm-hide collapse in signin">
+        <div class="col-md-12">
+          <label class="checkbox">
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+      </div>
+      <div class="row collapse confirm-hide signup">
+        <div class="col-md-12">
+          <input class="form-control input-lg ignore" name="emailAddress" type="emailAddress" placeholder="Email Address" required>
+          <br>
+        </div>
+      </div>
+      <div class="row confirmation collapse">
+        <div class="col-md-12">
+        <br>
+          <p class="well">Thank you for registering!<br>Please check your email and enter the corresponding confirmation code you have received.</p>
+          <input class="form-control input-lg" name="secret" type="text" placeholder="Confirmation Code">
+          <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+        <button id="cancel" class="btn btn-lg btn-default hide" type="button">Cancel</button>
+        <button id="confirmation" class="btn btn-lg btn-default btn-primary pull-right hide" data-loading-text="Confirming..." type="button">Confirm</button>
+        <button id="register" class="btn btn-lg btn-default pull-right" data-loading-text="Signing up..." type="button">Sign up</button>
+        <button id="login" class="btn btn-lg btn-default btn-primary" type="submit">Sign in</button>
+        <span id="debug"/>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
