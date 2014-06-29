@@ -1,5 +1,9 @@
 requirejs.config({
+  paths: {
+    "templates": "../../.tmp/jst"
+  },
   shim: {
-    bootstrap: ['jquery']
+    bootstrap: ['jquery'],
+    "jQuery.serializeObject": ['jquery']
   }
 });
