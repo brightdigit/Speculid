@@ -1,4 +1,4 @@
-require(['app', 'bootstrap'], function (app) {
+require(['app', 'bootstrap', 'jQuery.serializeObject'], function (app) {
   var options = {};
   app.start(options);
 });
