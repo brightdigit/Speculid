@@ -9,9 +9,7 @@ define(["backbone.marionette", "./router", 'views/login', 'views/confirmation', 
 
     index: function () {
       var view;
-      app.mainRegion.show(view = new LoginView({
-
-      }));
+      app.mainRegion.show(view = new LoginView());
       view.on("registration:post", function () {
 
         Backbone.history.navigate('#confirmation', {

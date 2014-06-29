@@ -1,16 +1,19 @@
-define(['backbone.marionette', 'templates', 'backbone', 'jquery', 'bootstrap'], function (Marionette, templates, Backbone, $) {
+define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/registration'], function (Marionette, templates, Backbone, $, RegistrationModel) {
   return Backbone.Marionette.ItemView.extend({
     template: templates.login,
     events: {
       "click button": "buttonClick",
+      "click #register.btn-primary": "register",
+      "click #signin.btn-primary": "signin"
     },
     triggers: {
-      "click #register.btn-primary": "registration:post",
-      "click #signin.btn-primary": "session:post"
+      //"click #register.btn-primary": "registration:post",
+      //"click #signin.btn-primary": "session:post"
     },
     ui: {
       signupSection: "#singup",
-      buttons: ".button"
+      buttons: ".button",
+      form: "form"
     },
     register: function () {
 /*
@@ -18,6 +21,8 @@ define(['backbone.marionette', 'templates', 'backbone', 'jquery', 'bootstrap'], 
         trigger: true
       });
       */
+      this.model = new RegistrationModel(this.ui.form.serializeObject());
+      this.trigger("registration:post");
     },
     signin: function () {
       Backbone.history.navigate('#home', {
