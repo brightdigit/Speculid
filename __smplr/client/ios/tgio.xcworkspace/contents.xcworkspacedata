@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:objc.cfg">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Interfaces">
+      <FileRef
+         location = "group:tgio-mockInterface/tgio-mockInterface.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:tgio-interface/tgio-interface.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:tgio-sdk/tgio-sdk.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:tgio-ui/tgio-ui.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:tgio.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
