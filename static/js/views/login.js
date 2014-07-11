@@ -1,5 +1,5 @@
-define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/registration'], function (Marionette, templates, Backbone, $, RegistrationModel) {
-  return Backbone.Marionette.ItemView.extend({
+define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/registration', 'bootstrap'], function (Marionette, templates, Backbone, $, RegistrationModel) {
+  return Marionette.ItemView.extend({
     template: templates.login,
     events: {
       "click button": "buttonClick",
@@ -12,7 +12,7 @@ define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/reg
     },
     ui: {
       signupSection: "#singup",
-      buttons: ".button",
+      buttons: "button",
       form: "form"
     },
     register: function () {
@@ -22,6 +22,7 @@ define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/reg
       });
       */
       this.model = new RegistrationModel(this.ui.form.serializeObject());
+      this.model.save();
       this.trigger("registration:post");
     },
     signin: function () {
@@ -32,12 +33,17 @@ define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/reg
     buttonClick: function (event) {
       var id = $(event.target).attr('id');
       if (id === 'register') {
-        $('#signup').collapse('show');
-        $('button').removeClass('btn-primary');
+        this.ui.signupSection.collapse('show');
+        //$('#signup').collapse('show');
+        this.ui.buttons.removeClass('btn-primary');
+        //$('button').removeClass('btn-primary');
         $(event.target).addClass('btn-primary');
       } else if (id === 'signin') {
-        $('#signup').collapse('hide');
-        $('button').removeClass('btn-primary');
+        //$('#signup').collapse('hide');
+        //$('button').removeClass('btn-primary');
+        this.ui.signupSection.collapse('hide');
+        //$('#signup').collapse('show');
+        this.ui.buttons.removeClass('btn-primary');
         $(event.target).addClass('btn-primary');
       }
     }
