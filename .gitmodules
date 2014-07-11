@@ -1,0 +1,4 @@
+[submodule "roust"]
+	path = roust
+	url = https://github.com/brightdigit/roust.git
+  branch = release/0.1.0

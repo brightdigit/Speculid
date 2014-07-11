@@ -3,7 +3,9 @@ requirejs.config({
     "templates": "../../.tmp/jst"
   },
   shim: {
-    bootstrap: ['jquery'],
-    "jQuery.serializeObject": ['jquery']
+    "bootstrap": {
+      "deps": ['jquery'],
+      exports: "$.fn.collapse"
+    },
   }
 });
