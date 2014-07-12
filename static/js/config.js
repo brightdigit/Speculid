@@ -4,8 +4,10 @@ requirejs.config({
   },
   shim: {
     "bootstrap": {
-      "deps": ['jquery'],
-      exports: "$.fn.collapse"
+      "deps": ['jquery']
+    },
+    "jQuery.serializeObject": {
+      "deps": ['jquery']
     },
   }
 });

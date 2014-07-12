@@ -1,4 +1,4 @@
-define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/registration', 'bootstrap'], function (Marionette, templates, Backbone, $, RegistrationModel) {
+define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/registration', 'bootstrap', 'jQuery.serializeObject'], function (Marionette, templates, Backbone, $, RegistrationModel) {
   return Marionette.ItemView.extend({
     template: templates.login,
     events: {
@@ -11,7 +11,7 @@ define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/reg
       //"click #signin.btn-primary": "session:post"
     },
     ui: {
-      signupSection: "#singup",
+      signupSection: "#signup",
       buttons: "button",
       form: "form"
     },
