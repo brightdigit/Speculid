@@ -12,7 +12,7 @@ module.exports = function (include) {
           res.send('show');
         },
         create: function (req, res) {
-          res.send('create');
+          res.send({});
         },
         update: function (req, res) {
           res.send('update');
