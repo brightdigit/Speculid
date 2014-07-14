@@ -21,9 +21,16 @@ define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/reg
         trigger: true
       });
       */
-      this.model = new RegistrationModel(this.ui.form.serializeObject());
-      this.model.save();
-      this.trigger("registration:post");
+      this.model = new RegistrationModel();
+      this.model.save(this.ui.form.serializeObject(), {
+        error: function () {
+          console.log(arguments);
+        },
+        success: function () {
+          this.trigger("registration:post");
+        }
+      });
+
     },
     signin: function () {
       Backbone.history.navigate('#home', {
