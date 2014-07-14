@@ -26,9 +26,7 @@ define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/reg
         error: function () {
           console.log(arguments);
         },
-        success: function () {
-          this.trigger("registration:post");
-        }
+        success: this.trigger.bind(this, "registration:post")
       });
 
     },
