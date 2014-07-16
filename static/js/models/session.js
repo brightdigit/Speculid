@@ -1,3 +1,5 @@
-define(['backbone'], function (Backbone) {
-  return Backbone.Model.extend({});
+define(['./base'], function (Model) {
+  return Model.extend({
+    resource: 'sessions'
+  });
 });
