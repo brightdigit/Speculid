@@ -1,4 +1,4 @@
-define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/registration', 'bootstrap', 'jQuery.serializeObject'], function (Marionette, templates, Backbone, $, RegistrationModel) {
+define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/registration', '../models/session', 'bootstrap', 'jQuery.serializeObject'], function (Marionette, templates, Backbone, $, RegistrationModel, SessionModel) {
   return Marionette.ItemView.extend({
     template: templates.login,
     events: {
@@ -16,11 +16,6 @@ define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/reg
       form: "form"
     },
     register: function () {
-/*
-      Backbone.history.navigate('#confirmation', {
-        trigger: true
-      });
-      */
       this.model = new RegistrationModel();
       this.model.save(this.ui.form.serializeObject(), {
         error: function () {
@@ -31,12 +26,20 @@ define(['backbone.marionette', 'templates', 'backbone', 'jquery', '../models/reg
 
     },
     signin: function () {
-      Backbone.history.navigate('#home', {
-        trigger: true
+      this.model = new SessionModel();
+      this.model.save(this.ui.form.serializeObject(), {
+        error: function () {
+          console.log(arguments);
+        },
+        success: this.trigger.bind(this, "session:post")
       });
     },
     buttonClick: function (event) {
-      var id = $(event.target).attr('id');
+      var target = $(event.target);
+      var id = target.attr('id');
+      if (target.hasClass('btn-primary')) {
+        return;
+      }
       if (id === 'register') {
         this.ui.signupSection.collapse('show');
         //$('#signup').collapse('show');
