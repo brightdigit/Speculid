@@ -1,12 +1,12 @@
 {
-  "name": "phragm",
-  "version": "0.1.138",
+  "name": "beginkit",
+  "version": "0.1.151",
   "prerelease": "alpha",
   "description": "sample project",
   "main": "server",
   "repository": {
     "type": "git",
-    "url": "https://github.com/brightdigit/phragm.git"
+    "url": "https://github.com/brightdigit/beginkit.git"
   },
   "scripts": {
     "test": "gulp test"
@@ -35,7 +35,7 @@
     "gulp-istanbul-enforcer": "^1.0.2",
     "gulp-jshint": "^1.6.1",
     "gulp-jst": "^0.1.1",
-    "gulp-jst-concat": "git+https://github.com/jfmoy/gulp-jst-concat.git",
+    "gulp-jst-concat": "git+https://github.com/brightdigit/gulp-jst-concat.git",
     "gulp-less": "^1.2.3",
     "gulp-mocha": "^0.4.1",
     "gulp-rename": "^1.2.0",

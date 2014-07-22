@@ -1,13 +1,12 @@
 requirejs.config({
   paths: {
-    "templates": "../../.tmp/jst"
+    "templates": "../../.tmp/jst",
+    "_": "../../bower_components/lodash/dist/lodash"
   },
+
   shim: {
-    "bootstrap": {
-      "deps": ['jquery']
-    },
-    "jQuery.serializeObject": {
-      "deps": ['jquery']
-    },
+    "zepto": {
+      "exports": '$'
+    }
   }
 });

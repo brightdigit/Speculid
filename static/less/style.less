@@ -1,8 +1,55 @@
-@import "bower_components/bootstrap/less/bootstrap.less";
+html, body {
+  background-color: #333;
+  color: #ccc;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+}
 
-@body-bg: @gray-darker;
-@text-color:           @gray-lighter;
+a:visited {
+  color: #f9f;
+}
 
-@navbar-inverse-bg:  @gray-dark;
+a {
+  color: #99f;
+}
 
-body { padding-top: 70px; }
+header > nav {
+  position: fixed;
+  clear: both;
+  width: 100%;
+  background-color: #000;
+  height: 1em;
+  padding: 10px 0px;
+  z-index: 100;
+  ul
+  {
+    list-style: none;
+    margin: 0px 5px;
+    padding: 0;
+    float: left;
+    li {
+      display: block;
+      float: left;
+      margin: 0px 10px;
+      text-transform: lowercase;
+    }
+    li.brand{
+      font-weight: bold;
+      a {
+        color: #FFF;
+      }
+    }
+  }
+  ul.right {
+    float: right;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+main {
+  margin-top: 40px;
+
+}
