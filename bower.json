@@ -1,6 +1,6 @@
 {
-  "name": "phragm",
-  "version": "0.1.137",
+  "name": "beginkit",
+  "version": "0.1.150",
   "authors": [
     "Leo Dion <leogdion@brightdigit.com>"
   ],
@@ -14,13 +14,7 @@
   ],
   "dependencies": {
     "requirejs": "~2.1.13",
-    "bootstrap": "~3.1.1",
-    "marionette": "~1.8.8",
-    "jQuery.serializeObject": "~2.0.3"
-  },
-  "devDependencies": {
-    "mocha": "~1.20.1",
-    "should": "~3.3.1",
-    "chai": "~1.9.1"
+    "zepto": "~1.1.4",
+    "lodash": "~2.4.1"
   }
 }
