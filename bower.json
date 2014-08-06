@@ -1,6 +1,6 @@
 {
   "name": "beginkit",
-  "version": "0.1.150",
+  "version": "0.1.159",
   "authors": [
     "Leo Dion <leogdion@brightdigit.com>"
   ],
@@ -13,7 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "requirejs": "~2.1.13",
+    "requirejs": "~2.1.14",
     "zepto": "~1.1.4",
     "lodash": "~2.4.1"
   }
