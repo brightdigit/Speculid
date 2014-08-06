@@ -10,21 +10,20 @@ var gulp = require('gulp'),
     bowerRequireJS = require('bower-requirejs'),
     requirejs = require('requirejs'),
     es = require('event-stream'),
-    coverageEnforcer = require("gulp-istanbul-enforcer"),
+    cover = require("gulp-coverage"),
     jstConcat = require('gulp-jst-concat'),
     jst = require('gulp-jst'),
-    clean = require('gulp-clean'),
+    async = require('async'),
+    rimraf = require('rimraf'),
     expressService = require('gulp-express-service'),
     rename = require('gulp-rename');
 
-gulp.task('default', ['clean', 'less', 'requirejs', 'enforce-coverage', 'copy', 'bump']);
+gulp.task('default', ['clean', 'less', 'requirejs', 'test', 'copy', 'bump']);
 
 gulp.task('heroku:staging', ['default']);
 
-gulp.task('clean', function () {
-  return gulp.src(['public', '.tmp', 'coverage'], {
-    read: false
-  }).pipe(clean());
+gulp.task('clean', function (cb) {
+  async.each(['public', '.tmp', '.coverdata'], rimraf, cb);
 });
 
 gulp.task('copy', ['clean', 'bowerrjs'], function () {
@@ -90,13 +89,7 @@ gulp.task('JST', ['clean'], function () {
   })).pipe(gulp.dest('.tmp'));
 });
 
-gulp.task('test', ['clean'], function (cb) {
-  gulp.src(['./app/**/*.js']).pipe(istanbul()).on('finish', function () {
-    gulp.src(["./test/app/**/*.js"]).pipe(mocha()).pipe(istanbul.writeReports()).on('end', cb); // Creating the reports after tests runned
-  });
-});
-
-gulp.task('enforce-coverage', ['test'], function () {
+gulp.task('test', ['clean'], function () {
   var options = {
     thresholds: {
       statements: 95,
@@ -107,7 +100,12 @@ gulp.task('enforce-coverage', ['test'], function () {
     coverageDirectory: 'coverage',
     rootDirectory: ''
   };
-  return gulp.src(['./app/**/*.js']).pipe(coverageEnforcer(options));
+  gulp.src(['./app/**/*.js']).pipe(cover.instrument({
+    pattern: ["./test/app/**/*.js"],
+    debugDirectory: 'debug'
+  })).pipe(mocha()).pipe(cover.report({
+    outFile: '.coverdata/coverage.html'
+  })).pipe(cover.enforce(options.thresholds));
 });
 
 gulp.task('bump', function () {
@@ -127,34 +125,4 @@ gulp.task('beautify', function () {
     indentSize: 2,
     preserveNewlines: true
   })).pipe(gulp.dest('.'));
-});
-
-gulp.task('bowerrjs-client', ['bower', 'copy-rjs-config-client'], function (cb) {
-  var options = {
-    config: ".tmp/config-client.js",
-    baseUrl: 'test/static',
-    transitive: true
-  };
-
-  bowerRequireJS(options, function (result) {
-    console.log(result);
-    cb(undefined, result);
-  });
-});
-
-gulp.task('copy-rjs-config-client', ['clean'], function () {
-  return gulp.src("test/static/config.js").pipe(rename({
-    suffix: '-client'
-  })).pipe(gulp.dest(".tmp"));
-});
-
-gulp.task('requirejs-client', ['clean', 'bowerrjs-client', 'JST'], function (cb) {
-  var config = {
-    mainConfigFile: ".tmp/config-client.js",
-    baseUrl: 'static/js',
-    name: '../../test/static/index',
-    out: 'test/static/specrunner.js',
-    optimize: 'none'
-  };
-  requirejs.optimize(config, cb.bind(undefined, undefined), cb);
 });

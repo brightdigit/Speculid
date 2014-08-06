@@ -3,4 +3,5 @@ bower_components
 npm-debug.log
 /.tmp
 node_modules
-coverage
+.coverrun
+.coverdata
