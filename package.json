@@ -1,6 +1,6 @@
 {
   "name": "beginkit",
-  "version": "0.1.163",
+  "version": "0.1.164",
   "prerelease": "alpha",
   "description": "sample project",
   "main": "server",
@@ -33,13 +33,14 @@
     "gulp-coverage": "^0.1.24",
     "gulp-coveralls": "^0.1.2",
     "gulp-express-service": "^1.2.3",
-    "gulp-istanbul": "^0.2.1",
+    "gulp-istanbul": "^0.2.2",
     "gulp-jshint": "^1.8.4",
     "gulp-jst": "^0.1.1",
     "gulp-jst-concat": "git+https://github.com/brightdigit/gulp-jst-concat.git",
-    "gulp-less": "^1.3.3",
     "gulp-mocha": "^0.5.2",
     "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.2.3",
+    "gulp-scss-lint": "^0.1.4",
     "requirejs": "^2.1.14",
     "rimraf": "^2.2.8"
   }
