@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     beautify = require('gulp-beautify'),
     istanbul = require("gulp-istanbul"),
     coveralls = require('gulp-coveralls'),
-    less = require('gulp-less'),
+    sass = require('gulp-sass'),
     bower = require('bower'),
     bowerRequireJS = require('bower-requirejs'),
     requirejs = require('requirejs'),
@@ -18,7 +18,7 @@ var gulp = require('gulp'),
     expressService = require('gulp-express-service'),
     rename = require('gulp-rename');
 
-gulp.task('default', ['clean', 'less', 'requirejs', 'test', 'copy', 'bump']);
+gulp.task('default', ['clean', 'sass', 'requirejs', 'test', 'copy', 'bump']);
 
 gulp.task('heroku:staging', ['default']);
 
@@ -78,8 +78,8 @@ gulp.task('coveralls', ['enforce-coverage'], function () {
   return gulp.src('coverage/**/lcov.info').pipe(coveralls());
 });
 
-gulp.task('less', ['clean', 'bower'], function () {
-  return gulp.src('static/less/**/*.less').pipe(less()).pipe(gulp.dest('public/css'));
+gulp.task('sass', ['clean', 'bower'], function () {
+  return gulp.src('static/scss/**/*.scss').pipe(sass()).pipe(gulp.dest('public/css'));
 });
 
 gulp.task('JST', ['clean'], function () {
