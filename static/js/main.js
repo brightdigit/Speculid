@@ -1,3 +1,3 @@
-require(['app'], function (app) {
-  app.start();
-});
+var $ = require("browserify-zepto");
+
+console.log('Hello World');

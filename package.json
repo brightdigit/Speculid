@@ -1,6 +1,6 @@
 {
   "name": "beginkit",
-  "version": "0.1.164",
+  "version": "0.1.176",
   "prerelease": "alpha",
   "description": "sample project",
   "main": "server",
@@ -15,33 +15,22 @@
     "node": "0.10.x"
   },
   "author": "Leo G. Dion, BrightDigit, LLC <leogdion@brightdigit.com>",
-  "dependencies": {
-    "body-parser": "^1.6.0",
-    "express": "^4.8.0"
-  },
   "devDependencies": {
     "async": "^0.9.0",
-    "bower": "^1.3.9",
-    "bower-requirejs": "^1.0.0",
-    "chai": "^1.9.1",
-    "chai-things": "^0.2.0",
+    "browserify": "^7.0.2",
     "event-stream": "^3.1.7",
     "gulp": "^3.8.7",
     "gulp-beautify": "^1.1.0",
     "gulp-bump": "^0.1.11",
-    "gulp-clean": "^0.3.1",
-    "gulp-coverage": "^0.1.24",
-    "gulp-coveralls": "^0.1.2",
-    "gulp-express-service": "^1.2.3",
-    "gulp-istanbul": "^0.2.2",
     "gulp-jshint": "^1.8.4",
-    "gulp-jst": "^0.1.1",
-    "gulp-jst-concat": "git+https://github.com/brightdigit/gulp-jst-concat.git",
     "gulp-mocha": "^0.5.2",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^1.2.3",
+    "gulp-sass": "^1.2.4",
     "gulp-scss-lint": "^0.1.4",
-    "requirejs": "^2.1.14",
-    "rimraf": "^2.2.8"
+    "rimraf": "^2.2.8",
+    "vinyl-transform": "^1.0.0"
+  },
+  "dependencies": {
+    "browserify-zepto": "^1.1.4"
   }
 }

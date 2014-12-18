@@ -1,3 +1,4 @@
+/*
 define(['zepto', 'templates'], function ($, templates) {
   return {
     start: function () {
@@ -5,3 +6,4 @@ define(['zepto', 'templates'], function ($, templates) {
     }
   };
 });
+*/
