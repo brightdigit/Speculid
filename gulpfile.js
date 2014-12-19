@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     browserify = require('browserify');
     transform = require('vinyl-transform');
 
-gulp.task('default', ['clean', 'browserify', 'sass', 'copy', 'bump']);
+gulp.task('default', ['clean', 'browserify', 'sass', 'copy']);
 
 gulp.task('clean', function (cb) {
   async.each(['public', '.tmp', '.coverdata'], rimraf, cb);
