@@ -1,0 +1,7 @@
+public
+bower_components
+npm-debug.log
+/.tmp
+node_modules
+.coverrun
+.coverdata
