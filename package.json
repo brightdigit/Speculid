@@ -1,6 +1,6 @@
 {
   "name": "speculid",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "prerelease": "alpha",
   "description": "sample project",
   "main": "server",
@@ -9,7 +9,7 @@
     "url": "https://github.com/brightdigit/speculid.git"
   },
   "scripts": {
-     "deploy": "./deploy-ghpages.sh"
+    "deploy": "./deploy-ghpages.sh"
   },
   "engines": {
     "node": "0.10.x"
