@@ -1,5 +1,8 @@
 language: node_js
-script: npm run-script deploy
+after_success:
+  npm run-script deploy
+before_install:
+  - chmod 755 ./deploy-ghpages.sh
 node_js:
 - '0.10'
 env:
