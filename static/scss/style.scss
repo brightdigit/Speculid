@@ -1,9 +1,12 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,700);
+
 html, body {
-  background-color: #333;
-  color: #ccc;
+  background-color: #FFF;
+  color: #333;
   margin: 0;
   overflow-x: hidden;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
 }
 
 a:visited {
@@ -18,9 +21,9 @@ header > nav {
   position: fixed;
   clear: both;
   width: 100%;
-  background-color: #000;
+  background-color: #666;
   height: 1em;
-  padding: 10px 0px;
+  padding: 10px 0px; 
   z-index: 100;
   ul
   {
