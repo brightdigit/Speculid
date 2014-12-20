@@ -27,10 +27,12 @@
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^1.2.4",
     "gulp-scss-lint": "^0.1.4",
+    "node-static": "^0.7.6",
     "rimraf": "^2.2.8",
     "vinyl-transform": "^1.0.0"
   },
   "dependencies": {
-    "browserify-zepto": "^1.1.4"
+    "browserify-zepto": "^1.1.4",
+    "node-bourbon": "^1.2.3"
   }
 }
