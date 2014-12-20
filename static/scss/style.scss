@@ -1,3 +1,4 @@
+@import "bourbon";
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,700);
 
 html, body {
@@ -21,7 +22,7 @@ header > nav {
   position: fixed;
   clear: both;
   width: 100%;
-  background-color: #666;
+  background-color: rgba(0,0,0,0.6);
   height: 1em;
   padding: 10px 0px; 
   z-index: 100;

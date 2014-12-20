@@ -8,9 +8,32 @@ var gulp = require('gulp'),
     rimraf = require('rimraf'),
     rename = require('gulp-rename')
     browserify = require('browserify');
-    transform = require('vinyl-transform');
+    transform = require('vinyl-transform'),
+    nstatic = require('node-static');
 
+var httpServer;
 gulp.task('default', ['clean', 'browserify', 'sass', 'copy']);
+
+gulp.task('serve', ['default'], function () {
+  function startServer () {
+    var fileServer = new nstatic.Server('./public');
+    httpServer = require('http').createServer(function (request, response) {
+      request.addListener('end', function () {
+          fileServer.serve(request, response);
+      }).resume();
+    });
+    httpServer.listen(8080);
+  }
+  if (httpServer) {
+    httpServer.close(startServer)
+  } else {
+    startServer();
+  }
+});
+
+gulp.task('watch', ['serve'], function () {
+  gulp.watch('static/**/*', ['serve']);
+});
 
 gulp.task('clean', function (cb) {
   async.each(['public', '.tmp', '.coverdata'], rimraf, cb);
@@ -22,7 +45,7 @@ gulp.task('copy', ['clean'], function () {
 });
 
 gulp.task('sass', ['clean'], function () {
-  return gulp.src('static/scss/**/*.scss').pipe(sass()).pipe(gulp.dest('public/css'));
+  return gulp.src('static/scss/**/*.scss').pipe(sass({includePaths: require('node-bourbon').includePaths})).pipe(gulp.dest('public/css'));
 });
 
 gulp.task('browserify', function () {
