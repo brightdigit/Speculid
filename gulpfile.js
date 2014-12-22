@@ -12,7 +12,8 @@ var gulp = require('gulp'),
     nstatic = require('node-static');
 
 var httpServer;
-gulp.task('default', ['clean', 'browserify', 'sass', 'copy']);
+gulp.task('default', ['build', 'bump']);
+gulp.task('build', ['clean', 'browserify', 'sass', 'copy']);
 
 gulp.task('serve', ['default'], function () {
   function startServer () {
@@ -31,8 +32,8 @@ gulp.task('serve', ['default'], function () {
   }
 });
 
-gulp.task('watch', ['serve'], function () {
-  gulp.watch('static/**/*', ['serve']);
+gulp.task('watch', ['default'], function () {
+  gulp.watch('static/**/*', ['build']);
 });
 
 gulp.task('clean', function (cb) {

@@ -2,58 +2,54 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,700);
 
 html, body {
-  background-color: #FFF;
+  background-color: #eee;
   color: #333;
   margin: 0;
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
   font-weight: 100;
-}
+  font-size: 1.333em;
+  footer {
+    clear: both;
+    margin: 20px;
+  }
+  main {
+    display: block;
+    clear: both;
+    margin: 20px;
+  #menu  {
 
-a:visited {
-  color: #f9f;
-}
-
-a {
-  color: #99f;
-}
-
-header > nav {
-  position: fixed;
-  clear: both;
-  width: 100%;
-  background-color: rgba(0,0,0,0.6);
-  height: 1em;
-  padding: 10px 0px; 
-  z-index: 100;
-  ul
-  {
-    list-style: none;
-    margin: 0px 5px;
-    padding: 0;
-    float: left;
-    li {
-      display: block;
-      float: left;
-      margin: 0px 10px;
-      text-transform: lowercase;
-    }
-    li.brand{
-      font-weight: bold;
-      a {
+    input[type=checkbox] {
+      display: none;
+      & + label {
+        color: #007aff;
+        padding: 10px;
+        margin: 5px;
+        display: block;
+      }
+      &:checked + label {
+        background-color: #007aff;
         color: #FFF;
       }
     }
-  }
-  ul.right {
-    float: right;
-  }
-  a {
-    text-decoration: none;
+    ol, li {
+
+    }
+    ol {
+      display: block;
+      text-indent: none;
+      margin: 0;
+      clear: both;
+      padding: 0;
+      li {
+        display: block;
+      text-indent: none;
+      margin: none;
+      float: left;
+
+      }
+    }
   }
 }
-
-main {
-  margin-top: 40px;
-
 }
+
