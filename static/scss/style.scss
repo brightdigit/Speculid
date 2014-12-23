@@ -11,7 +11,8 @@
 $blue: #007AFF;
 $yellow: #BEDB00;
 $smoke: #eee;
-$oil: #222;
+$light-smoke: lighten($smoke, 3%);
+$oil: darken($blue, 25%);
 
 html, body {
   background-color: $smoke;
@@ -21,95 +22,237 @@ html, body {
   font-family: 'Lato', sans-serif;
   font-weight: 100;
   font-size: 1em;
+  header {
+    padding: 10px 30px;
+    background-color: $light-smoke;
+    margin: 0px;
+    width: 100%;
+    h1 {
+      margin: 0px;
+    }
+    .logo {
+      float: left;
+      margin-right: 10px;
+    }
+    position: fixed;
+  }
   footer {
     clear: both;
     margin: 10px 30px;
   }
   main {
+    margin-top: 80px;
     display: block;
     clear: both;
-    margin: 20px;
-    table {
-      tr {
-        td:first-child {
-          font-weight: bold;
-          border: none;
-        }
-      }
-      td {
-        padding: 20px 5px;
-        margin: 0;
-        border: solid 1px;
-        ol {
+    & > div {
+      padding: 20px;
+      &#data {
+        display: block;
+        padding: 5px 25px;
+        background-color: $light-smoke;
+        & > ol {
           list-style: none;
+          padding: 5px;
+          li {
+            .asset {
+              font-size: 1.1em;
+              font-weight: 300;
+              padding-top: 10px;
+              margin-bottom: 5px;
+            }
+            & > ol {
+              list-style: none;
+              display: table;
+              padding: 0px 20px;
+              li {
+                clear: both;
+                display: table-row;
+                padding: 5px;
+                margin-bottom: 5px;
+                input {
+                  display: block;
+                  float: left;
+                  &:checked + label * {
+                    text-decoration: line-through;
+                    @include hp-opacity(0.5);
+                  }
+                }
+                label {
+                  display: block;
+                  cursor: pointer;
+                  div {
+                    display: block;
+                    float: left;
+                    clear: none;
+                    padding-left: 5px;
+                    font-size: 0.8em;
+                    text-transform: lowercase;
+                    height: 1.5em;
+                    position: relative;
+                    top: 0.15em;
+                    &:first-child {
+                      padding: 0;
+                    }
+                    &.specs {
+                      color: darken($oil, 20%);
+                      font-size: 1em;
+                      top: 0em;
+                    }
+                    .details {
+                      font-style: italic;
+                    }
+                  }
+                  ol.devices {
+                    display: inline;
+                    float: left;
+                    list-style: none;
+                    clear: none;
+                    font-size: 0.75em;
+                    width: 100%;
+                    li {
+                      float: left;
+                      display: inline;
+                      clear: none;
+                      margin: 0;
+                      padding: 0;
+                      padding-right: 5px;
+
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        table {
+          border-collapse: collapse;
+          thead {
+            tr {
+              th {
+                padding-bottom: 10px;
+                font-size: 0.75em;
+              }
+            }
+          }
+          tbody {
+            tr {
+              td:first-child {
+                font-weight: bold;
+                border: none;
+                padding-right: 20px;
+                text-align: right;
+                font-size: 0.75em;
+              }
+              td:nth-child(2) {
+                border-left: none;
+              }
+              td:last-child{
+                border-right: none;
+              }
+              &.inactive {
+                td {
+                  display: none;
+                  padding: 0px;
+                  @include hp-opacity(0.5);
+                }
+                td:first-child {
+                  display: block;
+                padding-right: 20px;
+                  visibility: visible;
+                }
+              }
+            }
+
+            tr:first-child {
+              td {
+                border-top: none;
+
+              }
+            }
+            tr:last-child {
+              td {
+                border-bottom: none;
+              }
+            }
+            td {
+              padding: 15px;
+              font-size: 0.85em;
+              margin: 0;
+              border: solid darken(#FFF, 10%) 1px;
+              text-align: center;
+              font-weight: 300;
+              ol {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+
+      &#menu  {
+        display: table;
+        input[type=checkbox],input[type=radio] {
+          display: none;
+          & + label, &[disabled] + label {
+            color: $blue;
+            padding: 10px;
+            margin: 5px;
+            display: block;
+            cursor: pointer;
+          }
+          &[disabled] + label {
+            @include hp-opacity(0.5);
+            color: desaturate($blue, 50%);
+          }
+          &[name=view] + label {
+            color: $yellow;
+          }
+          &:checked + label {
+            background-color: $blue;
+            color: $smoke;
+          }
+          &[name=view]:checked + label {
+            color: $smoke;
+            background-color: $yellow;
+          }
+        }
+        ol, li {
+
+        }
+        & > ol > li {
+          border: solid $blue 1px;
+          margin: 10px;
+          &#views {
+            border-color: $yellow;
+            clear: both;
+            & + li {
+              clear: left;
+            }
+          }
+        }
+        & > ol {
+
+          display: table-row;
+        }
+        ol {
+          display: block;
+          text-indent: none;
           margin: 0;
+          clear: both;
           padding: 0;
+          float: left;
+          li {
+            display: block;
+            text-indent: none;
+            margin: none;
+            float: left;
+
+          }
         }
-      }
-    }
-
-  #menu  {
-    display: table;
-    input[type=checkbox],input[type=radio] {
-      display: none;
-      & + label, &[disabled] + label {
-        color: $blue;
-        padding: 10px;
-        margin: 5px;
-        display: block;
-        cursor: pointer;
-      }
-      &[disabled] + label {
-        @include hp-opacity(0.5);
-        color: desaturate($blue, 20%);
-      }
-      &[name=view] + label {
-        color: $yellow;
-      }
-      &:checked + label {
-        background-color: $blue;
-        color: $smoke;
-      }
-
-      &[name=view]:checked + label {
-        color: $smoke;
-        background-color: $yellow;
-      }
-    }
-    ol, li {
-
-    }
-    & > ol > li {
-      border: solid $blue 1px;
-      margin: 10px;
-      &#views {
-        border-color: $yellow;
-        clear: both;
-        & + li {
-          clear: left;
-        }
-      }
-    }
-    & > ol {
-
-    display: table-row;
-    }
-    ol {
-      display: block;
-      text-indent: none;
-      margin: 0;
-      clear: both;
-      padding: 0;
-      float: left;
-      li {
-        display: block;
-      text-indent: none;
-      margin: none;
-      float: left;
-
       }
     }
   }
-}
 }
 

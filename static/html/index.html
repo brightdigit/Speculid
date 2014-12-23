@@ -1,103 +1,139 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <title>Speculid</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-      <main>
-        <div id="menu">
+<head>
+  <meta charset="utf-8">
+  <title>Speculid - Specifications for Mobile App Development</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img class="logo" src="http://placehold.it/60x60.png">
+    <div>
+      <h1>Speculid</h1>
+      <div class="tag">Specifications for Mobile App Development</div> 
+    </div>
+  </header>
+  <main>
+    <div id="menu">
+      <ol>
+        <li id="views">
           <ol>
-            <li id="views">
-              <ol>
-                <li><input type="radio" name="view" id="view_table" checked><label for="view_table">Table</label></li>
-                <li><input type="radio" name="view" id="view_checklist"><label for="view_checklist">Checklist</label></li>
-              </ol>
-            </li>
-            <li>
-              <ol>
-                <li><input type="checkbox" id="os_8"><label for="os_8">iOS 8</label></li>
-                <li><input type="checkbox" id="os_7"><label for="os_7">iOS 7</label></li>
-              </ol>
-            </li>
-            <li>
-              <ol>
-                <li><input type="checkbox" id="dev_n6+" disabled><label for="dev_n6+" >iPhone 6+</label></li>
-                <li><input type="checkbox" id="dev_n6" disabled><label for="dev_n6" >iPhone 6</label></li>
-                <li><input type="checkbox" id="dev_n5"><label for="dev_n5">iPhone 5</label></li>
-                <li><input type="checkbox" id="dev_n4"><label for="dev_n4">iPhone 4</label></li>
-                <li><input type="checkbox" id="dev_drm"><label for="dev_drm">iPad Mini Retina</label></li>
-                <li><input type="checkbox" id="dev_dr"><label for="dev_dr">iPad Retina</label></li>
-                <li><input type="checkbox" id="dev_d"><label for="dev_d">iPad</label></li>
-                <li><input type="checkbox" id="dev_dm"><label for="dev_dm">iPad Mini</label></li>
-              </ol>
-            </li>
-            <li>
-              <ol>
-                <li><input type="radio" name="orient" id="orient_landscape"><label for="orient_landscape">Landscape</label></li>
-                <li><input type="radio" name="orient" id="orient_portrait"><label for="orient_portrait">Portait</label></li>
-                <li><input type="radio" name="orient" id="orient_both" checked><label for="orient_both">Both</label></li>
-              </ol>
-            </li>
+            <li><input type="radio" name="view" id="view_table" checked><label for="view_table">Table</label></li>
+            <li><input type="radio" name="view" id="view_checklist"><label for="view_checklist">Checklist</label></li>
           </ol>
-        </div>
-        <div>
-          <table>
-            <thead>
-              <tr>
-                <th></th>
-                <th>iPhone 6+</th> <th>
-iPhone 6</th> <th>
-iPhone 5</th> <th>
-iPhone 4</th> <th>
-iPad Mini Retina</th> <th>
-iPad Retina</th> <th>
-iPad</th> <th>
-iPad Mini</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>App Icon</td>
-                <td>120px x 120px</td>
-                <td>120px x 120px</td>
-                <td>120px x 120px</td>
-                <td>120px x 120px</td>
-                <td>120px x 120px</td>
-                <td>120px x 120px</td>
-                <td>120px x 120px</td>
-                <td>120px x 120px</td>
-              </tr>
-              <tr>
-                <td>Launch Screen</td>
-                <td>1200px x 1200px</td>
-                <td>1200px x 1200px</td>
-                <td>1200px x 1200px</td>
-                <td>1200px x 1200px</td>
-                <td><ol><li>1200px x 1200px</li><li>1200px x 1200px</li></ol></td>
-                <td><ol><li>1200px x 1200px</li><li>1200px x 1200px</li></ol></td>
-                <td><ol><li>1200px x 1200px</li><li>1200px x 1200px</li></ol></td>
-                <td><ol><li>1200px x 1200px</li><li>1200px x 1200px</li></ol></td>
-              </tr>
-              <tr>
-                <td>Resolution</td>
-                <td>@1x</td>
-                <td>@1x</td>
-                <td>@1x</td>
-                <td>@1x</td>
-                <td>@1x</td>
-                <td>@1x</td>
-                <td>@1x</td>
-                <td>@1x</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </main>
-      <footer>
-        <p>&copy; BrightDigit,LLC 2014</p>
-      </footer>
-    </body>
+        </li>
+        <li>
+          <ol>
+            <li><input type="checkbox" id="os_8"><label for="os_8">iOS 8</label></li>
+            <li><input type="checkbox" id="os_7"><label for="os_7">iOS 7</label></li>
+          </ol>
+        </li>
+        <li>
+          <ol>
+            <li><input type="checkbox" id="dev_n6+" disabled><label for="dev_n6+" >iPhone 6+</label></li>
+            <li><input type="checkbox" id="dev_n6" disabled><label for="dev_n6" >iPhone 6</label></li>
+            <li><input type="checkbox" id="dev_n5"><label for="dev_n5">iPhone 5</label></li>
+            <li><input type="checkbox" id="dev_n4"><label for="dev_n4">iPhone 4</label></li>
+            <li><input type="checkbox" id="dev_drm"><label for="dev_drm">iPad Mini Retina</label></li>
+            <li><input type="checkbox" id="dev_dr"><label for="dev_dr">iPad Retina</label></li>
+            <li><input type="checkbox" id="dev_d"><label for="dev_d">iPad</label></li>
+            <li><input type="checkbox" id="dev_dm"><label for="dev_dm">iPad Mini</label></li>
+          </ol>
+        </li>
+        <li>
+          <ol>
+            <li><input type="radio" name="orient" id="orient_landscape"><label for="orient_landscape">Landscape</label></li>
+            <li><input type="radio" name="orient" id="orient_portrait"><label for="orient_portrait">Portait</label></li>
+            <li><input type="radio" name="orient" id="orient_both" checked><label for="orient_both">Both</label></li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+    <div id="data">
+      <table style="display: none">
+        <thead>
+          <tr>
+            <th></th>
+            <th>iPhone 6+</th> <th>
+            iPhone 6</th> <th>
+            iPhone 5</th> <th>
+            iPhone 4</th> <th>
+            iPad Mini Retina</th> <th>
+            iPad Retina</th> <th>
+            iPad</th> <th>
+            iPad Mini</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>App Icon</td>
+            <td>120px x 120px</td>
+            <td>120px x 120px</td>
+            <td>120px x 120px</td>
+            <td>120px x 120px</td>
+            <td>120px x 120px</td>
+            <td>120px x 120px</td>
+            <td>120px x 120px</td>
+            <td>120px x 120px</td>
+          </tr>
+          <tr>
+            <td>Launch Screen</td>
+            <td>1200px x 1200px</td>
+            <td>1200px x 1200px</td>
+            <td>1200px x 1200px</td>
+            <td>1200px x 1200px</td>
+            <td><ol><li>1200px x 1200px</li><li>1200px x 1200px</li></ol></td>
+            <td><ol><li>1200px x 1200px</li><li>1200px x 1200px</li></ol></td>
+            <td><ol><li>1200px x 1200px</li><li>1200px x 1200px</li></ol></td>
+            <td><ol><li>1200px x 1200px</li><li>1200px x 1200px</li></ol></td>
+          </tr>
+          <tr class="inactive">
+            <td>Navigation Bar Height</td>
+            <td>120px</td>
+            <td>120px</td>
+            <td>120px</td>
+            <td>120px</td>
+            <td>120px</td>
+            <td>120px</td>
+            <td>120px</td>
+            <td>120px</td>
+          </tr>
+          <tr>
+            <td>Resolution</td>
+            <td>@1x</td>
+            <td>@1x</td>
+            <td>@1x</td>
+            <td>@1x</td>
+            <td>@1x</td>
+            <td>@1x</td>
+            <td>@1x</td>
+            <td>@1x</td>
+          </tr>
+        </tbody>
+      </table>
+      <ol>
+        <li>
+          <div class="asset">App Icons</div>
+          <ol>
+            <li><input type="checkbox" id="asset_appicon_1"><label for="asset_appicon_1"><div class="object">Image File</div><div class="specs">120px x 120px</div> <ol class="devices"><li>iPhone 6</li><li>iPhone 5</li><li>iPhone 4</li></ol></label></li>
+            <li><input type="checkbox" id="asset_appicon_2"><label for="asset_appicon_2"><div class="object">Image File</div><div class="specs">120px x 120px</div><ol class="devices"><li>iPhone 6</li><li>iPhone 5</li><li>iPhone 4</li></ol></label></li>
+            <li><input type="checkbox" id="asset_appicon_3"><label for="asset_appicon_3"><div class="object">Image File</div><div class="specs">120px x 120px</div><ol class="devices"><li>iPhone 6</li><li>iPhone 5</li><li>iPhone 4</li></ol></label></li>
+          </ol>
+        </li>
+        <li>
+          <div class="asset">Launch Screen</div>
+          <ol>
+            <li><input type="checkbox" id="asset_appicon_1"><label for="asset_appicon_1"><div class="object">Image File</div><div class="specs">120px x 120px</div> <div class="details">portrait</div><ol class="devices"><li>iPhone 6</li><li>iPhone 5</li><li>iPhone 4</li></ol></label></li>
+            <li><input type="checkbox" id="asset_appicon_2"><label for="asset_appicon_2"><div class="object">Image File</div><div class="specs">120px x 120px</div><ol class="devices"><li>iPhone 6</li><li>iPhone 5</li><li>iPhone 4</li></ol></label></li>
+            <li><input type="checkbox" id="asset_appicon_3"><label for="asset_appicon_3"><div class="object">Image File</div><div class="specs">120px x 120px</div><ol class="devices"><li>iPhone 6</li><li>iPhone 5</li><li>iPhone 4</li></ol></label></li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; BrightDigit,LLC 2014</p>
+  </footer>
+</body>
 </html>
