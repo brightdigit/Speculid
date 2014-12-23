@@ -30,9 +30,16 @@ html, body {
     clear: both;
     margin: 20px;
     table {
+      tr {
+        td:first-child {
+          font-weight: bold;
+          border: none;
+        }
+      }
       td {
         padding: 20px 5px;
-        margin: 5px;
+        margin: 0;
+        border: solid 1px;
         ol {
           list-style: none;
           margin: 0;
@@ -53,7 +60,8 @@ html, body {
         cursor: pointer;
       }
       &[disabled] + label {
-        hp-opacity: 0.5;
+        @include hp-opacity(0.5);
+        color: desaturate($blue, 20%);
       }
       &[name=view] + label {
         color: $yellow;
