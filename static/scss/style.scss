@@ -1,39 +1,90 @@
 @import "bourbon";
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,700);
 
+@mixin hp-opacity($trans) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+  -moz-opacity: $trans;
+  -khtml-opacity: $trans;
+  opacity: $trans;
+}
+
+$blue: #007AFF;
+$yellow: #BEDB00;
+$smoke: #eee;
+$oil: #222;
+
 html, body {
-  background-color: #eee;
-  color: #333;
+  background-color: $smoke;
+  color: $oil;
   margin: 0;
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
   font-weight: 100;
-  font-size: 1.333em;
+  font-size: 1em;
   footer {
     clear: both;
-    margin: 20px;
+    margin: 10px 30px;
   }
   main {
     display: block;
     clear: both;
     margin: 20px;
-  #menu  {
+    table {
+      td {
+        padding: 20px 5px;
+        margin: 5px;
+        ol {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
 
-    input[type=checkbox] {
+  #menu  {
+    display: table;
+    input[type=checkbox],input[type=radio] {
       display: none;
-      & + label {
-        color: #007aff;
+      & + label, &[disabled] + label {
+        color: $blue;
         padding: 10px;
         margin: 5px;
         display: block;
+        cursor: pointer;
+      }
+      &[disabled] + label {
+        hp-opacity: 0.5;
+      }
+      &[name=view] + label {
+        color: $yellow;
       }
       &:checked + label {
-        background-color: #007aff;
-        color: #FFF;
+        background-color: $blue;
+        color: $smoke;
+      }
+
+      &[name=view]:checked + label {
+        color: $smoke;
+        background-color: $yellow;
       }
     }
     ol, li {
 
+    }
+    & > ol > li {
+      border: solid $blue 1px;
+      margin: 10px;
+      &#views {
+        border-color: $yellow;
+        clear: both;
+        & + li {
+          clear: left;
+        }
+      }
+    }
+    & > ol {
+
+    display: table-row;
     }
     ol {
       display: block;
@@ -41,6 +92,7 @@ html, body {
       margin: 0;
       clear: both;
       padding: 0;
+      float: left;
       li {
         display: block;
       text-indent: none;
