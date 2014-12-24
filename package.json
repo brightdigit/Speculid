@@ -1,6 +1,6 @@
 {
   "name": "speculid",
-  "version": "0.0.31",
+  "version": "0.0.34",
   "prerelease": "alpha",
   "description": "sample project",
   "main": "server",
