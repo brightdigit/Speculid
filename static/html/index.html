@@ -17,28 +17,34 @@
   <main>
     <div id="menu">
       <ol>
+      <!--
         <li id="views">
           <ol>
             <li><input type="radio" name="view" id="view_table" checked><label for="view_table">Table</label></li>
             <li><input type="radio" name="view" id="view_checklist"><label for="view_checklist">Checklist</label></li>
           </ol>
         </li>
+        -->
         <li>
           <ol>
-            <li><input type="checkbox" id="os_8"><label for="os_8">iOS 8</label></li>
+            <li><input type="checkbox" id="os_8" checked><label for="os_8" checked>iOS 8</label></li>
             <li><input type="checkbox" id="os_7"><label for="os_7">iOS 7</label></li>
           </ol>
         </li>
         <li>
           <ol>
-            <li><input type="checkbox" id="dev_n6+" disabled><label for="dev_n6+" >iPhone 6+</label></li>
-            <li><input type="checkbox" id="dev_n6" disabled><label for="dev_n6" >iPhone 6</label></li>
+            <li><input type="checkbox" id="dev_n6+" checked><label for="dev_n6+" >iPhone 6+</label></li>
+            <li><input type="checkbox" id="dev_n6" checked><label for="dev_n6" >iPhone 6</label></li>
+            <li><input type="checkbox" id="dev_n5s" checked><label for="dev_n5s">iPhone 5s</label></li>
+            <li><input type="checkbox" id="dev_n5c" checked><label for="dev_n5c">iPhone 5c</label></li>
             <li><input type="checkbox" id="dev_n5"><label for="dev_n5">iPhone 5</label></li>
-            <li><input type="checkbox" id="dev_n4"><label for="dev_n4">iPhone 4</label></li>
-            <li><input type="checkbox" id="dev_drm"><label for="dev_drm">iPad Mini Retina</label></li>
-            <li><input type="checkbox" id="dev_dr"><label for="dev_dr">iPad Retina</label></li>
-            <li><input type="checkbox" id="dev_d"><label for="dev_d">iPad</label></li>
+            <li><input type="checkbox" id="dev_n4s"><label for="dev_n4s">iPhone 4s</label></li>
+            <li><input type="checkbox" id="dev_n4" disabled><label for="dev_n4">iPhone 4</label></li>
+            <li><input type="checkbox" id="dev_da" checked><label for="dev_da">iPad Air</label></li>
+            <li><input type="checkbox" id="dev_dr" checked><label for="dev_dr">iPad Retina</label></li>
+            <li><input type="checkbox" id="dev_drm" checked><label for="dev_drm">iPad Mini Retina</label></li>
             <li><input type="checkbox" id="dev_dm"><label for="dev_dm">iPad Mini</label></li>
+            <li><input type="checkbox" id="dev_d"><label for="dev_d">iPad 2</label></li>
           </ol>
         </li>
         <li>
@@ -51,16 +57,18 @@
       </ol>
     </div>
     <div id="data">
-      <table style="display: none">
+      <table>
         <thead>
           <tr>
             <th></th>
             <th>iPhone 6+</th> <th>
             iPhone 6</th> <th>
             iPhone 5</th> <th>
+            iPhone 4s</th> <th>
             iPhone 4</th> <th>
-            iPad Mini Retina</th> <th>
+            iPad Air</th> <th>
             iPad Retina</th> <th>
+            iPad Mini Retina</th> <th>
             iPad</th> <th>
             iPad Mini</th>
           </tr>
@@ -76,9 +84,13 @@
             <td>120px x 120px</td>
             <td>120px x 120px</td>
             <td>120px x 120px</td>
+            <td>120px x 120px</td>
+            <td>120px x 120px</td>
           </tr>
           <tr>
             <td>Launch Screen</td>
+            <td>1200px x 1200px</td>
+            <td>1200px x 1200px</td>
             <td>1200px x 1200px</td>
             <td>1200px x 1200px</td>
             <td>1200px x 1200px</td>
@@ -98,6 +110,8 @@
             <td>120px</td>
             <td>120px</td>
             <td>120px</td>
+            <td>120px</td>
+            <td>120px</td>
           </tr>
           <tr>
             <td>Resolution</td>
@@ -109,10 +123,12 @@
             <td>@1x</td>
             <td>@1x</td>
             <td>@1x</td>
+            <td>@1x</td>
+            <td>@1x</td>
           </tr>
         </tbody>
       </table>
-      <ol>
+      <ol style="display: none">
         <li>
           <div class="asset">App Icons</div>
           <ol>
