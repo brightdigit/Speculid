@@ -29,8 +29,16 @@ function get (value) {
   return (typeof(value) === 'string') ? value : (Object.keys(value)[0]);
 }
 
+function formatCellText (value) {
+  if (Array.isArray(value)) {
+    return value[0] + "px x " + value[1] + "px"
+  } else {
+    return value + "px";
+  }
+}
+
 function updateUI (e) {
-  console.log('updateUI')
+  console.log('updateUI');
   var type = $(this).closest('ol').attr('id');
 
   if (type === "os") {
@@ -48,7 +56,32 @@ function updateUI (e) {
     });
   }
 
+  var devices = $('input[name="devices"]:checked').map(function () {return $(this).val();});
+  console.log(devices);
+  var table = $('<table></table>');
+  
+  $("<thead></thead>").appendTo(table).append($("<tr></tr>").append($.map(devices, function (device) {
+    console.log(device);
+    return $("<th>"+device+"</th>");
+  })).prepend("<th></th>"));
+  var tbody = $("<tbody></tbody>").appendTo(table);
+/*  $("<tbody></tbody>").appendTo(table).append(
+    Object.keys(data.images).map(function (name) {
+      console.log(name);
+      return $("<tr></tr>");
+    })
+  );*/
 
+  var rows = $.map(Object.keys(data.images),function (name) {
+      return $("<tr><td>" + name + "</td></tr>").append(
+        $.map(devices, function (device) {
+          return $("<td>"+formatCellText(data.images[name][device])+"</td>");
+        })
+      );
+    });
+  tbody.append(rows);
+  $('#data').empty();
+  $('#data').append(table);
 }
 
 var $os = $("#os");
@@ -61,5 +94,7 @@ forEach(data.devices, function (key) {
 });
 
 $('#menu input').on('change', updateUI);
+
+updateUI();
 
 

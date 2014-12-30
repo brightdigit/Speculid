@@ -39,14 +39,14 @@ devices:
   - iPad 2
   - iPod Touch
 types:
-  - iPod Touch
-  - iPhone:
+  iPhone:
     - iPhone 6+
     - iPhone 6
     - iPhone 5
     - iPhone 4s
     - iPhone 4
-  - iPad:
+    - iPod Touch
+  iPad:
     - iPad Retina
     - iPad Mini Retina
     - iPad Mini
@@ -98,39 +98,26 @@ resolutions:
     - iPad 2
 images:
   App Icon :
-    iPod Touch:
-      - [60]
     iPhone:
-      - [60]
+      [60]
     iPad:
-      - [76]
-  Launch Image :
-    iPod Touch:
-      - [1136,640]
-    iPhone :
-      - [1136,640]
-      - iPhone 6:
-      	- note: use a launch file
-      - iPhone 6+:
-      	- note: use a launch file
-    iPad :
-      - [1024,768]	
+      [76]
   Spotlight Icon:
-    - [40]
+    [40]
   Settings Icon:
-    - [29]
+    [29]
   Status Bar :
-    - 20
+    20
   Navigation Bar :
-    - 44
+    44
   Tab Bar Icon :
-    - [25]
+    [25]
   Tab Bar :
-    - 49
+    49
   Table Row : 
-    - 43
+    43
   Segment Control :
-    - 29
+    29
 orientation:
   - portrait:
     - iPad:
