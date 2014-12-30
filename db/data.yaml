@@ -1,0 +1,141 @@
+os:
+  iOS 8:
+    - iPhone 6+
+    - iPhone 6
+    - iPhone 5
+    - iPhone 4s
+    - iPad Retina
+    - iPad Mini Retina
+    - iPad Mini
+    - iPad 2
+    - iPod Touch
+  iOS 7:
+    - iPhone 5
+    - iPhone 4s
+    - iPhone 4
+    - iPad Retina
+    - iPad Mini Retina
+    - iPad Mini
+    - iPad 2
+    - iPod Touch
+devices:
+  - iPhone 6+
+  - iPhone 6
+  - iPhone 5:
+    - iPhone 5s
+    - iPhone 5c
+    - iPhone 5
+  - iPhone 4s
+  - iPhone 4
+  - iPad Retina:
+    - iPad 3
+    - iPad 4
+    - iPad Air
+    - iPad Air 2
+  - iPad Mini Retina:
+    - iPad Mini 2
+    - iPad Mini 3
+  - iPad Mini
+  - iPad 2
+  - iPod Touch
+types:
+  - iPod Touch
+  - iPhone:
+    - iPhone 6+
+    - iPhone 6
+    - iPhone 5
+    - iPhone 4s
+    - iPhone 4
+  - iPad:
+    - iPad Retina
+    - iPad Mini Retina
+    - iPad Mini
+    - iPad 2
+hardware:
+  architecture:
+    64-bit:
+      - iPhone 6+
+      - iPhone 6
+      - iPhone 5s
+      - iPad Air
+      - iPad Air 2
+      - iPad Mini 2
+      - iPad Mini 3
+    32-bit:
+      - iPod Touch
+      - iPhone 5c
+      - iPhone 5
+      - iPhone 4s
+      - iPhone 4
+      - iPad 3
+      - iPad 4
+      - iPad Mini
+      - iPad 2
+display:
+  iPhone 6+: [1920,1080]
+  iPhone 6: [1334,750]
+  iPhone 5: [1136,640]
+  iPhone 4s: [960,640]
+  iPhone 4: [960,640]
+  iPad Retina: [2048,1536]
+  iPad Mini Retina: [2048,1536]
+  iPod Touch: [1136,640]
+  iPad Mini: [1024,768]
+  iPad 2: [1024,768]
+resolutions:
+  3:
+    - iPhone 6+
+  2:
+    - iPhone 6
+    - iPhone 5
+    - iPhone 4s
+    - iPhone 4
+    - iPad Retina
+    - iPad Mini Retina
+    - iPod Touch
+  1:
+    - iPad Mini
+    - iPad 2
+images:
+  App Icon :
+    iPod Touch:
+      - [60]
+    iPhone:
+      - [60]
+    iPad:
+      - [76]
+  Launch Image :
+    iPod Touch:
+      - [1136,640]
+    iPhone :
+      - [1136,640]
+      - iPhone 6:
+      	- note: use a launch file
+      - iPhone 6+:
+      	- note: use a launch file
+    iPad :
+      - [1024,768]	
+  Spotlight Icon:
+    - [40]
+  Settings Icon:
+    - [29]
+  Status Bar :
+    - 20
+  Navigation Bar :
+    - 44
+  Tab Bar Icon :
+    - [25]
+  Tab Bar :
+    - 49
+  Table Row : 
+    - 43
+  Segment Control :
+    - 29
+orientation:
+  - portrait:
+    - iPad:
+      - Launch Image
+  - landscape:
+    - iPad:
+      - Launch Image
+

@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    fs = require('fs'),
     bump = require('gulp-bump'),
     jshint = require('gulp-jshint'),
     beautify = require('gulp-beautify'),
@@ -10,7 +11,8 @@ var gulp = require('gulp'),
     browserify = require('browserify');
     transform = require('vinyl-transform'),
     nstatic = require('node-static'),
-    jstConcat = require('gulp-jst-concat');
+    browserifyHandlebars = require('browserify-handlebars'),
+    yaml = require('js-yaml');
 
 
 var httpServer;
@@ -34,12 +36,18 @@ gulp.task('serve', ['default'], function () {
   }
 });
 
-gulp.task('JST', function () {
-  gulp.src('static/templates/*.html')
-    .pipe(jstConcat('jst.js', {
-      renameKeys: ['^.*templates[/|\\\\](.*).html$', '$1']
-    }))
-    .pipe(gulp.dest('./.tmp/'))
+gulp.task('yaml', ['clean'],   function (cb) {
+  if (!fs.existsSync('./.tmp')) {
+    fs.mkdirSync('./.tmp');
+  }
+  fs.readFile('./db/data.yaml', 'utf8', function (error, data) {
+    var data = yaml.load(data);
+    var result = {};
+    result["os"] = data.os;
+    result["devices"] = data.devices;
+    fs.writeFileSync('./.tmp/data.json', JSON.stringify(result));
+    cb();
+  });
 });
 
 gulp.task('watch', ['default'], function () {
@@ -59,7 +67,7 @@ gulp.task('sass', ['clean'], function () {
   return gulp.src('static/scss/**/*.scss').pipe(sass({includePaths: require('node-bourbon').includePaths})).pipe(gulp.dest('public/css'));
 });
 
-gulp.task('browserify', ['JST'], function () {
+gulp.task('browserify', ['yaml'], function () {
   var browserified = transform(function(filename) {
     var b = browserify(filename);
     return b.bundle();
