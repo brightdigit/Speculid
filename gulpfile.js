@@ -9,7 +9,9 @@ var gulp = require('gulp'),
     rename = require('gulp-rename')
     browserify = require('browserify');
     transform = require('vinyl-transform'),
-    nstatic = require('node-static');
+    nstatic = require('node-static'),
+    jstConcat = require('gulp-jst-concat');
+
 
 var httpServer;
 gulp.task('default', ['build', 'bump']);
@@ -32,6 +34,14 @@ gulp.task('serve', ['default'], function () {
   }
 });
 
+gulp.task('JST', function () {
+  gulp.src('static/templates/*.html')
+    .pipe(jstConcat('jst.js', {
+      renameKeys: ['^.*templates[/|\\\\](.*).html$', '$1']
+    }))
+    .pipe(gulp.dest('./.tmp/'))
+});
+
 gulp.task('watch', ['default'], function () {
   gulp.watch('static/**/*', ['build']);
 });
@@ -49,7 +59,7 @@ gulp.task('sass', ['clean'], function () {
   return gulp.src('static/scss/**/*.scss').pipe(sass({includePaths: require('node-bourbon').includePaths})).pipe(gulp.dest('public/css'));
 });
 
-gulp.task('browserify', function () {
+gulp.task('browserify', ['JST'], function () {
   var browserified = transform(function(filename) {
     var b = browserify(filename);
     return b.bundle();

@@ -1,4 +1,5 @@
-var $ = require("browserify-zepto");
+var $ = require("browserify-zepto"),
+  JST = require('JST').JST;
 
 /*
   http://ivomynttinen.com/blog/the-ios-7-design-cheat-sheet/
@@ -6,4 +7,5 @@ var $ = require("browserify-zepto");
   https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1
   http://ipad.about.com/od/Tablet_Computers_eReaders/a/The-iPad-Comparison-Chart.htm
 */
-console.log('Hello World');
+
+console.log(JST);

@@ -1,6 +1,6 @@
 {
   "name": "speculid",
-  "version": "0.0.34",
+  "version": "0.0.36",
   "prerelease": "alpha",
   "description": "sample project",
   "main": "server",
@@ -23,6 +23,7 @@
     "gulp-beautify": "^1.1.0",
     "gulp-bump": "^0.1.11",
     "gulp-jshint": "^1.8.4",
+    "gulp-jst-concat": "0.0.1",
     "gulp-mocha": "^0.5.2",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^1.2.4",
@@ -34,5 +35,8 @@
   "dependencies": {
     "browserify-zepto": "^1.1.4",
     "node-bourbon": "^1.2.3"
+  },
+  "browser": {
+    "JST": ".tmp/jst.js"
   }
 }
