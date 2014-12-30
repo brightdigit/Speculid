@@ -33,7 +33,6 @@
     "js-yaml": "^3.2.5",
     "node-static": "^0.7.6",
     "rimraf": "^2.2.8",
-    "sqlite3": "^3.0.4",
     "vinyl-transform": "^1.0.0"
   },
   "dependencies": {
