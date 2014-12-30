@@ -10,6 +10,9 @@ var $ = require("browserify-zepto"),
   http://ipad.about.com/od/Tablet_Computers_eReaders/a/The-iPad-Comparison-Chart.htm
 */
 
+var images = {},
+  resolutions = {};
+
 function id (value) {
   return value.replace(/\s/, "_");
 }
@@ -26,11 +29,37 @@ function get (value) {
   return (typeof(value) === 'string') ? value : (Object.keys(value)[0]);
 }
 
-forEach(data.os, function (key, value) {
-  $("#os").append(checkbox_option(opt("os", key)));
+function updateUI (e) {
+  console.log('updateUI')
+  var type = $(this).closest('ol').attr('id');
 
+  if (type === "os") {
+    var oses = $.map($('[name="os"]:checked'), function (item) {return $(item).val(); });
+    var devices = oses.reduce(function (memo, value) {
+      return data.os[value].reduce(function (memo, value) {
+        memo[value] = true;
+        return memo;
+
+      }, memo);
+    }, {});
+    $('input[name="devices"]').each(function () {
+      $(this).prop('disabled', !devices[$(this).val()]);
+      $(this).prop('checked', $(this).prop('checked') && devices[$(this).val()]);
+    });
+  }
+
+
+}
+
+var $os = $("#os");
+forEach(data.os, function (key, value) {
+  $(checkbox_option(opt("os", key))).appendTo($os);
 });
 
 forEach(data.devices, function (key) {
-  $("#devices").append(checkbox_option(opt("dev",get(key))));
+  $("#devices").append(checkbox_option(opt("devices",get(key))));
 });
+
+$('#menu input').on('change', updateUI);
+
+

@@ -45,6 +45,7 @@ gulp.task('yaml', ['clean'],   function (cb) {
     var result = {};
     result["os"] = data.os;
     result["devices"] = data.devices;
+    
     fs.writeFileSync('./.tmp/data.json', JSON.stringify(result));
     cb();
   });
