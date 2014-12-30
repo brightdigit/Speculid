@@ -5,7 +5,6 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/style.css">
-  <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
   <header>
@@ -27,29 +26,15 @@
         </li>
         -->
         <li>
-          <ol>
-            <li><input type="checkbox" id="os_8" checked><label for="os_8" checked>iOS 8</label></li>
-            <li><input type="checkbox" id="os_7"><label for="os_7">iOS 7</label></li>
+          <ol id="os">
           </ol>
         </li>
         <li>
-          <ol>
-            <li><input type="checkbox" id="dev_n6+" checked><label for="dev_n6+" >iPhone 6+</label></li>
-            <li><input type="checkbox" id="dev_n6" checked><label for="dev_n6" >iPhone 6</label></li>
-            <li><input type="checkbox" id="dev_n5s" checked><label for="dev_n5s">iPhone 5s</label></li>
-            <li><input type="checkbox" id="dev_n5c" checked><label for="dev_n5c">iPhone 5c</label></li>
-            <li><input type="checkbox" id="dev_n5"><label for="dev_n5">iPhone 5</label></li>
-            <li><input type="checkbox" id="dev_n4s"><label for="dev_n4s">iPhone 4s</label></li>
-            <li><input type="checkbox" id="dev_n4" disabled><label for="dev_n4">iPhone 4</label></li>
-            <li><input type="checkbox" id="dev_da" checked><label for="dev_da">iPad Air</label></li>
-            <li><input type="checkbox" id="dev_dr" checked><label for="dev_dr">iPad Retina</label></li>
-            <li><input type="checkbox" id="dev_drm" checked><label for="dev_drm">iPad Mini Retina</label></li>
-            <li><input type="checkbox" id="dev_dm"><label for="dev_dm">iPad Mini</label></li>
-            <li><input type="checkbox" id="dev_d"><label for="dev_d">iPad 2</label></li>
+          <ol id="devices">
           </ol>
         </li>
         <li>
-          <ol>
+          <ol id="orientation">
             <li><input type="radio" name="orient" id="orient_landscape"><label for="orient_landscape">Landscape</label></li>
             <li><input type="radio" name="orient" id="orient_portrait"><label for="orient_portrait">Portait</label></li>
             <li><input type="radio" name="orient" id="orient_both" checked><label for="orient_both">Both</label></li>
@@ -152,5 +137,6 @@
   <footer>
     <p>&copy; BrightDigit,LLC 2014</p>
   </footer>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
