@@ -4,11 +4,11 @@ os:
     - iPhone 6
     - iPhone 5
     - iPhone 4s
+    - iPod Touch
     - iPad Retina
     - iPad Mini Retina
     - iPad Mini
     - iPad 2
-    - iPod Touch
   iOS 7:
     - iPhone 5
     - iPhone 4s
@@ -27,6 +27,7 @@ devices:
     - iPhone 5
   - iPhone 4s
   - iPhone 4
+  - iPod Touch
   - iPad Retina:
     - iPad 3
     - iPad 4
@@ -37,7 +38,6 @@ devices:
     - iPad Mini 3
   - iPad Mini
   - iPad 2
-  - iPod Touch
 types:
   iPhone:
     - iPhone 6+
@@ -106,12 +106,12 @@ images:
     [40]
   Settings Icon:
     [29]
+  Tab Bar Icon :
+    [25]
   Status Bar :
     20
   Navigation Bar :
     44
-  Tab Bar Icon :
-    [25]
   Tab Bar :
     49
   Table Row : 
@@ -125,4 +125,12 @@ orientation:
   - landscape:
     - iPad:
       - Launch Image
+assets:
+  - Launch Image
+  - App Icon
+  - Spotlight Icon
+  - Settings Icon
+  - Tab Bar Icon
+  - Navigation Bar
+
 
