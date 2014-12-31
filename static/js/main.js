@@ -37,8 +37,18 @@ function formatCellText (value) {
   }
 }
 
+function highlight (e) {
+  var $td = $(this);
+  var $tr = $td.parent('tr');
+  $('td').remove($td).removeClass("hover");
+  $td.addClass("hover");
+  $('tr').remove($tr).removeClass("hover");
+  $tr.addClass("hover");
+  $('')
+}
+
 function updateUI (e) {
-  console.log('updateUI');
+
   var type = $(this).closest('ol').attr('id');
 
   if (type === "os") {
@@ -52,36 +62,41 @@ function updateUI (e) {
     }, {});
     $('input[name="devices"]').each(function () {
       $(this).prop('disabled', !devices[$(this).val()]);
-      $(this).prop('checked', $(this).prop('checked') && devices[$(this).val()]);
+      $(this).prop('checked',  devices[$(this).val()]);
     });
   }
 
   var devices = $('input[name="devices"]:checked').map(function () {return $(this).val();});
-  console.log(devices);
   var table = $('<table></table>');
   
   $("<thead></thead>").appendTo(table).append($("<tr></tr>").append($.map(devices, function (device) {
-    console.log(device);
     return $("<th>"+device+"</th>");
   })).prepend("<th></th>"));
   var tbody = $("<tbody></tbody>").appendTo(table);
-/*  $("<tbody></tbody>").appendTo(table).append(
-    Object.keys(data.images).map(function (name) {
-      console.log(name);
-      return $("<tr></tr>");
-    })
-  );*/
-
+  $("<tr></tr>").append($.map(devices, function (device){
+    return $("<td>" + formatCellText(data.display[device]) + "</td>");
+  })).prepend("<td>Display Resolution</td>").appendTo(tbody);
   var rows = $.map(Object.keys(data.images),function (name) {
+    var sizes = {};
+        $.each(devices, function (device){
+          var val = formatCellText(data.images[name][this]);
+          if (!sizes[val]) {
+            sizes[val] = 1;
+          } else {
+            sizes[val]++;
+          }
+        });
       return $("<tr><td>" + name + "</td></tr>").append(
-        $.map(devices, function (device) {
-          return $("<td>"+formatCellText(data.images[name][device])+"</td>");
+        
+        $.map(Object.keys(sizes), function (device) {
+          return $('<td colspan="' + sizes[device] + '">'+device+"</td>");
         })
       );
     });
   tbody.append(rows);
   $('#data').empty();
   $('#data').append(table);
+  //table.find("td").on('mouseover', highlight);
 }
 
 var $os = $("#os");
