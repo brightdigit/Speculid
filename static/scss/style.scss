@@ -132,6 +132,10 @@ html, body {
           td:first-child, th:first-child {
             max-width: 80px;
           }
+          td.column-hover, th.column-hover {
+            background-color: darken($smoke, 40%);
+            color: #FFF;            
+          }
           thead {
             tr {
               th {
@@ -142,12 +146,20 @@ html, body {
           }
           tbody {
             tr {
+              &.hover {
+                background-color: darken($smoke, 40%);
+                color: #FFF;
+                td {
+                  border: none;
+                }
+              }
               td:first-child {
                 font-weight: bold;
                 border: none;
                 padding-right: 20px;
                 text-align: right;
                 font-size: 0.75em;
+                cursor: default;
               }
               td:nth-child(2) {
                 border-left: none;
@@ -168,7 +180,6 @@ html, body {
                 }
               }
             }
-
             tr:first-child {
               td {
                 border-top: none;
@@ -187,6 +198,11 @@ html, body {
               border: solid darken(#FFF, 10%) 1px;
               text-align: center;
               font-weight: 300;
+              cursor: pointer;
+              &.hover {
+                background-color: #333;
+                color: #FFF;
+              }
               ol {
                 list-style: none;
                 margin: 0;
