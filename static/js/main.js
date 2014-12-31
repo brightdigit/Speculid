@@ -38,13 +38,15 @@ function formatCellText (value) {
 }
 
 function highlight (e) {
+  $('td').removeClass("hover");
+  $('tr').removeClass("hover");
   var $td = $(this);
   var $tr = $td.parent('tr');
-  $('td').remove($td).removeClass("hover");
-  $td.addClass("hover");
-  $('tr').remove($tr).removeClass("hover");
-  $tr.addClass("hover");
-  $('')
+  if (e.type="mouseover" && $td.index() > 0) {
+    $td.addClass("hover");
+    $tr.addClass("hover");
+  }
+  
 }
 
 function updateUI (e) {
@@ -68,7 +70,9 @@ function updateUI (e) {
 
   var devices = $('input[name="devices"]:checked').map(function () {return $(this).val();});
   var table = $('<table></table>');
-  
+  for (var index = 0; index < devices.length; index++) {
+    table.append("<colgroup></colgroup>");
+  }
   $("<thead></thead>").appendTo(table).append($("<tr></tr>").append($.map(devices, function (device) {
     return $("<th>"+device+"</th>");
   })).prepend("<th></th>"));
@@ -96,7 +100,7 @@ function updateUI (e) {
   tbody.append(rows);
   $('#data').empty();
   $('#data').append(table);
-  //table.find("td").on('mouseover', highlight);
+  table.on('mouseover mouseleave', 'td,th', highlight);
 }
 
 var $os = $("#os");
