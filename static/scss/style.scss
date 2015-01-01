@@ -36,12 +36,19 @@ html, body {
     }
     .logo {
       float: left;
-      margin-right: 10px;
+      margin-right: 15px;
       &.bd {
         position: absolute;
         top: 10px;
-        right: 70px;
+        right: 65px;
 
+      }
+    }
+    #social {
+      margin-top: 5px;
+      .fb-share-button {
+        position: relative;
+        top: -3px;
       }
     }
   }
@@ -50,7 +57,7 @@ html, body {
     margin: 10px 30px;
   }
   main {
-    margin-top: 80px;
+    margin-top: 100px;
     display: block;
     clear: both;
     & > div {
