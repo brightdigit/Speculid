@@ -1,9 +1,8 @@
 {
   "name": "speculid",
-  "version": "0.0.148",
-  "prerelease": "alpha",
-  "description": "sample project",
-  "main": "server",
+  "version": "0.1.0",
+  "description": "Specifications for Mobile Application Development",
+  "main": "gulp",
   "repository": {
     "type": "git",
     "url": "https://github.com/brightdigit/speculid.git"
