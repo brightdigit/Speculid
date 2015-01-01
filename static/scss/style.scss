@@ -28,6 +28,7 @@ html, body {
     margin: 0px;
     width: 100%;
     position: fixed;
+    border-bottom: transparentize(darken($oil, 20%), 0.66) solid 2px;
     & > div {
       width: auto;
     }
@@ -55,9 +56,16 @@ html, body {
   footer {
     clear: both;
     margin: 10px 30px;
+    a {
+      text-decoration: none;
+      color: $oil;
+      a:hover {
+        font-weight: bold;
+      }
+    }
   }
   main {
-    margin-top: 100px;
+    margin-top: 110px;
     display: block;
     clear: both;
     & > div {
@@ -231,6 +239,8 @@ html, body {
 
       &#menu  {
         display: table;
+        width: 100%;
+        border-bottom: 2px solid darken($smoke, 20%);
         input[type=checkbox],input[type=radio] {
           display: none;
           & + label, &[disabled] + label {
