@@ -1,6 +1,8 @@
 speculid
 ========
 
-Mobile Size and Specification Page
+Specifications for Mobile Application Development
+
+www.speculid.com
 
 [![Build Status](https://travis-ci.org/brightdigit/speculid.svg)](https://travis-ci.org/brightdigit/speculid)
