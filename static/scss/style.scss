@@ -59,6 +59,7 @@ html, body {
       color: transparentize(darken($oil, 20%), 0.66);
       margin-top: 5px;
       display: inline-block;
+      text-decoration: none;
     }
     #filter-expand {
       position: relative;
