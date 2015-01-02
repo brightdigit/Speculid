@@ -121,12 +121,15 @@ updateUI();
 
 $('.minimize,.expand').empty().on('click', function () {
   var $this = $(this);
-  var inHeader = !!$this.parents('header').length;inHeader 
-  $('header').toggleClass('minimized', ($this.hasClass('minimize') ? inHeader : !inHeader));
+  var inHeader = !!$this.parents('header').length;
+  var minimized = ($this.hasClass('minimize') ? inHeader : !inHeader);
+  $('header').toggleClass('minimized',minimized );
   var expandButton = $('.expand');
   var minimizeButton = $('.minimize');
-  minimizeButton.addClass('expand').removeClass('minimize');
-  expandButton.addClass('minimize').removeClass('expand');
+  minimizeButton.addClass('expand').removeClass('minimize').attr('title', minimized ?
+   'Expand the header bar.' : 'Minimize the header bar');
+  expandButton.addClass('minimize').removeClass('expand').attr('title',minimized ?
+   'Expand the header bar.' : 'Minimize the header bar');
 });
 
 $('#menu').on('mouseover mouseleave', 'label', function (e) {
