@@ -14,8 +14,12 @@ var gulp = require('gulp'),
     yaml = require('js-yaml'),
     uglify = require('gulp-uglify')
     uglifycss = require('gulp-uglifycss')
-    htmlmin = require('gulp-htmlmin');
+    htmlmin = require('gulp-htmlmin'),
+    htmlreplace = require('gulp-html-replace');
 
+var getPackageJson = function () {
+  return JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+};
 var httpServer;
 gulp.task('default', ['build', 'bump']);
 gulp.task('build', ['clean', 'browserify', 'sass', 'htmlminify', 'copy']);
@@ -105,11 +109,19 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('copy', ['clean'], function () {
-  return es.merge(gulp.src('static/fonts/**/*.*').pipe(gulp.dest('public/fonts')), gulp.src('static/images/**/*.*').pipe(gulp.dest('public/images')));
+  return es.merge(
+    gulp.src('static/fonts/**/*.*').pipe(gulp.dest('public/fonts')), 
+    gulp.src('static/images/**/*.*').pipe(gulp.dest('public/images')),
+    gulp.src('CNAME').pipe(gulp.dest('public')));
 });
 
-gulp.task('htmlminify', ['clean'], function() {
+gulp.task('htmlminify', ['clean', 'bump'], function() {
+  
   gulp.src('static/html/**/*.html')
+    .pipe(htmlreplace({version: {
+      src: getPackageJson().version
+      //tpl: '<img src="%s" align="left" />'
+    }}))
     .pipe(htmlmin({collapseWhitespace: true, removeComments: true, removeEmptyAttributes: true}))
     .pipe(gulp.dest('public'))
 });

@@ -1,6 +1,6 @@
 {
   "name": "speculid",
-  "version": "0.1.22",
+  "version": "0.1.51",
   "description": "Specifications for Mobile Application Development",
   "main": "gulp",
   "repository": {
@@ -22,6 +22,7 @@
     "gulp": "^3.8.7",
     "gulp-beautify": "^1.1.0",
     "gulp-bump": "^0.1.11",
+    "gulp-html-replace": "^1.4.1",
     "gulp-htmlmin": "^0.2.0",
     "gulp-jshint": "^1.8.4",
     "gulp-rename": "^1.2.0",

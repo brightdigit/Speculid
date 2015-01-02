@@ -53,6 +53,13 @@ html, body {
     width: 100%;
     position: fixed;
     border-bottom: transparentize(darken($oil, 20%), 0.66) solid 2px;
+    #version {
+      font-size: 0.25em;
+      vertical-align: top;
+      color: transparentize(darken($oil, 20%), 0.66);
+      margin-top: 5px;
+      display: inline-block;
+    }
     #filter-expand {
       position: relative;
       top: -5px;
@@ -134,7 +141,7 @@ html, body {
       #social {
         position: absolute;
         top: 5px;
-        left: 150px;
+        left: 175px;
       }
       .tiny-button {
         margin: 0px 5px;
