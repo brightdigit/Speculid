@@ -296,6 +296,17 @@ html, body {
                 text-align: right;
                 font-size: 0.75em;
                 cursor: default;
+                a {
+                  text-decoration: none;
+                  color: $oil;
+                  &:hover {
+                    color: $blue;
+                    @include hp-opacity(1.0);
+                    &:after {
+                      background-color: #fff;
+                    }
+                  }
+                }
               }
               td:nth-child(2) {
                 border-left: none;
@@ -308,15 +319,21 @@ html, body {
                 td {
                   display: none;
                   padding: 0px;
-                  @include hp-opacity(0.5);
+                  a, &:after {
+
+                    &:after {
+                      content: "+";
+                      font-weight: bold;
+                      font-size: 1.25em;
+                      padding: 2px;
+                    }
+                    @include hp-opacity(0.5);
+                  }
                 }
                 td:first-child {
                   display: block;
                 padding: 5px 20px;
                   visibility: visible;
-                  &:after {
-                    content: "+";
-                  }
                 }
               }
             }
