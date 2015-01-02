@@ -278,7 +278,7 @@ html, body {
                 background-color: darken($smoke, 40%);
                 color: #FFF;
                 td {
-                  border: none;
+                  border-color: darken($smoke, 40%);
                 }
               }
               td:first-child {

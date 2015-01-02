@@ -11,13 +11,14 @@ var gulp = require('gulp'),
     browserify = require('browserify');
     transform = require('vinyl-transform'),
     nstatic = require('node-static'),
-    browserifyHandlebars = require('browserify-handlebars'),
-    yaml = require('js-yaml');
-
+    yaml = require('js-yaml'),
+    uglify = require('gulp-uglify')
+    uglifycss = require('gulp-uglifycss')
+    htmlmin = require('gulp-htmlmin');
 
 var httpServer;
 gulp.task('default', ['build', 'bump']);
-gulp.task('build', ['clean', 'browserify', 'sass', 'copy']);
+gulp.task('build', ['clean', 'browserify', 'sass', 'htmlminify', 'copy']);
 
 gulp.task('serve', ['default'], function () {
   function startServer () {
@@ -104,12 +105,20 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('copy', ['clean'], function () {
-  return es.merge(
-  gulp.src('static/html/*.html').pipe(gulp.dest('public')), gulp.src('static/fonts/**/*.*').pipe(gulp.dest('public/fonts')), gulp.src('static/images/**/*.*').pipe(gulp.dest('public/images')));
+  return es.merge(gulp.src('static/fonts/**/*.*').pipe(gulp.dest('public/fonts')), gulp.src('static/images/**/*.*').pipe(gulp.dest('public/images')));
+});
+
+gulp.task('htmlminify', ['clean'], function() {
+  gulp.src('static/html/**/*.html')
+    .pipe(htmlmin({collapseWhitespace: true, removeComments: true, removeEmptyAttributes: true}))
+    .pipe(gulp.dest('public'))
 });
 
 gulp.task('sass', ['clean'], function () {
-  return gulp.src('static/scss/**/*.scss').pipe(sass({includePaths: require('node-bourbon').includePaths})).pipe(gulp.dest('public/css'));
+  return gulp.src('static/scss/**/*.scss')
+  .pipe(sass({includePaths: require('node-bourbon').includePaths}))
+  .pipe(uglifycss())
+  .pipe(gulp.dest('public/css'));
 });
 
 gulp.task('browserify', ['yaml'], function () {
@@ -120,7 +129,7 @@ gulp.task('browserify', ['yaml'], function () {
   
   return gulp.src(['./static/js/main.js'])
     .pipe(browserified)
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('./public/js'));
 });
 
