@@ -25,9 +25,9 @@ devices:
     - iPhone 5s
     - iPhone 5c
     - iPhone 5
+  - iPod Touch
   - iPhone 4s
   - iPhone 4
-  - iPod Touch
   - iPad Retina:
     - iPad 3
     - iPad 4
@@ -130,7 +130,12 @@ assets:
   - App Icon
   - Spotlight Icon
   - Settings Icon
-  - Tab Bar Icon
-  - Navigation Bar
-
-
+launch:
+  orientation:
+    - iPad Retina
+    - iPad Mini Retina
+    - iPad Mini
+    - iPad 2
+  file:
+    - iPhone 6+
+    - iPhone 6

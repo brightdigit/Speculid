@@ -50,6 +50,7 @@ gulp.task('yaml', ['clean'],   function (cb) {
     result["os"] = data.os;
     result["devices"] = data.devices;
     result["display"] = data.display;
+    result["assets"] = data.assets;
     var images = {};
     var resolutions = {};
 

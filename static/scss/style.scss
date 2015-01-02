@@ -22,6 +22,30 @@ html, body {
   font-family: 'Lato', sans-serif;
   font-weight: 100;
   font-size: 1em;
+  .minimize:before {
+    content: '\203E\203E';
+  }
+  .expand:before {
+    content: '+';
+  }
+  h1, h2 {
+    display: inline-block;
+  }
+    .tiny-button {
+      display: inline-block;
+      text-decoration: none;
+      background-color: $oil;
+      color: $light-smoke;
+      text-align: center;
+      margin: 5px;
+      font-size: 0.9em;
+      padding: 1px;
+      width: 15px;
+      &:hover {
+        color: $oil;
+        background-color: $blue;
+      }
+    }
   header {
     padding: 10px 30px;
     background-color: $light-smoke;
@@ -29,15 +53,59 @@ html, body {
     width: 100%;
     position: fixed;
     border-bottom: transparentize(darken($oil, 20%), 0.66) solid 2px;
+    #filter-expand {
+      position: relative;
+      top: -5px;
+      margin: 0px 10px;
+      font-size: 1em;
+      background-color: $oil;
+      color: $light-smoke;
+      border: none;
+      @include hp-opacity(0.5);
+      &:active,&:focus {
+      outline: none;
+      border: none;
+      }
+    }
+    &.filter-hidden {
+      #filter-expand {
+        cursor: pointer;
+        @include hp-opacity(1.0);
+        &:hover {
+          color: $oil;
+          background-color: $blue;
+        }
+      }
+
+    }
     & > div {
       width: auto;
     }
     h1 {
       margin: 0px;
     }
+    .tiny-button {
+      display: inline-block;
+      text-decoration: none;
+      background-color: $oil;
+      color: $light-smoke;
+      text-align: center;
+      font-size: 0.33em;
+      vertical-align: top;
+      padding: 4px;
+      /*
+      margin: 5px;
+      font-size: 0.5em;
+      width: 15px;
+      height: 15px;
+      padding: 1px;
+      */
+    }
     .logo {
       float: left;
       margin-right: 15px;
+      height: 86px;
+      width: 86px;
       &.bd {
         position: absolute;
         top: 10px;
@@ -50,6 +118,37 @@ html, body {
       .fb-share-button {
         position: relative;
         top: -3px;
+      }
+    }
+    &.minimized {
+      h1 {
+        font-size: 0.9em;
+      }
+      .tag {
+        display: none;
+      }
+      .logo {
+        width: 20px;
+        height: 20px;
+      }
+      #social {
+        position: absolute;
+        top: 5px;
+        left: 150px;
+      }
+      .tiny-button {
+        margin: 0px 5px;
+        padding: 0px;
+        font-size: 1em;
+      }
+      & + main {
+        margin-top: 30px;
+        & > #menu {
+          display: none;
+        }
+      }
+      #filter-expand {
+        display: none;
       }
     }
   }
@@ -70,9 +169,14 @@ html, body {
     clear: both;
     & > div {
       padding: 20px;
+      h2 {
+        font-size: 0.75em;
+        text-decoration: underline;
+        font-weight: 300;
+      }
       &#data {
         display: block;
-        padding: 5px 25px;
+        padding: 15px 25px;
         background-color: $light-smoke;
         & > ol {
           list-style: none;
@@ -163,7 +267,7 @@ html, body {
           thead {
             tr {
               th {
-                padding-bottom: 10px;
+                padding: 1px 20px 10px;
                 font-size: 0.75em;
               }
             }
@@ -192,6 +296,7 @@ html, body {
                 border-right: none;
               }
               &.inactive {
+
                 td {
                   display: none;
                   padding: 0px;
@@ -199,8 +304,11 @@ html, body {
                 }
                 td:first-child {
                   display: block;
-                padding-right: 20px;
+                padding: 5px 20px;
                   visibility: visible;
+                  &:after {
+                    content: "+";
+                  }
                 }
               }
             }
@@ -249,6 +357,13 @@ html, body {
             margin: 5px;
             display: block;
             cursor: pointer;
+          }
+          &:checked + label.hover {
+            background-color: $oil;
+          }
+          & + label.hover {
+            color: $oil;
+            background-color: $light-smoke;
           }
           &[disabled] + label {
             @include hp-opacity(0.5);

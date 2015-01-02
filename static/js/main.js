@@ -79,7 +79,7 @@ function updateUI (e) {
   var tbody = $("<tbody></tbody>").appendTo(table);
   $("<tr></tr>").append($.map(devices, function (device){
     return $("<td>" + formatCellText(data.display[device]) + "</td>");
-  })).prepend("<td>Display Resolution</td>").appendTo(tbody);
+  })).prepend("<td><a href=\"#\">Display Resolution</a></td>").appendTo(tbody);
   var rows = $.map(Object.keys(data.images),function (name) {
     var sizes = {};
         $.each(devices, function (device){
@@ -90,17 +90,20 @@ function updateUI (e) {
             sizes[val]++;
           }
         });
-      return $("<tr><td>" + name + "</td></tr>").append(
-        
+      return $("<tr><td><a href=\"#\">" + name + "</a></td></tr>").append(
         $.map(Object.keys(sizes), function (device) {
           return $('<td colspan="' + sizes[device] + '">'+device+"</td>");
         })
-      );
+      ).toggleClass('inactive', data.assets.indexOf(name) < 0);
     });
   tbody.append(rows);
-  $('#data').empty();
+  $('#data table').remove();
   $('#data').append(table);
   table.on('mouseover mouseleave', 'td,th', highlight);
+  table.on('click', 'td:first-child a', function (e) {
+    $(this).closest('tr').toggleClass('inactive');
+    return false;
+  });
 }
 
 var $os = $("#os");
@@ -116,4 +119,27 @@ $('#menu input').on('change', updateUI);
 
 updateUI();
 
+$('.minimize,.expand').empty().on('click', function () {
+  var $this = $(this);
+  var inHeader = !!$this.parents('header').length;inHeader 
+  $('header').toggleClass('minimized', ($this.hasClass('minimize') ? inHeader : !inHeader));
+  var expandButton = $('.expand');
+  var minimizeButton = $('.minimize');
+  minimizeButton.addClass('expand').removeClass('minimize');
+  expandButton.addClass('minimize').removeClass('expand');
+});
 
+$('#menu').on('mouseover mouseleave', 'label', function (e) {
+  $(this).toggleClass('hover', e.type === "mouseover");
+});
+
+$(window).on('scroll', function (e) {
+  var top = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+  $('header').toggleClass('filter-hidden',  top > $('header').height());
+});
+
+$('#filter-expand').on('click', function (e) {
+  if ($('header').hasClass('filter-hidden')) {
+    window.scrollTo(0, 0);
+  }
+});
