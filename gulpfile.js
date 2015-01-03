@@ -145,7 +145,7 @@ gulp.task('browserify', ['yaml'], function () {
     .pipe(gulp.dest('./public/js'));
 });
 
-gulp.task('bump', function () {
+gulp.task('bump', ['clean'], function () {
   gulp.src(['./package.json']).pipe(bump({
     type: 'patch'
   })).pipe(gulp.dest('./'));
