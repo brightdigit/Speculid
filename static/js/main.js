@@ -79,7 +79,7 @@ function updateUI (e) {
   var tbody = $("<tbody></tbody>").appendTo(table);
   $("<tr></tr>").append($.map(devices, function (device){
     return $("<td>" + formatCellText(data.display[device]) + "</td>");
-  })).prepend("<td><a href=\"#\">Display Resolution</a></td>").appendTo(tbody);
+  })).prepend("<td>Display Resolution</td>").appendTo(tbody);
   var rows = $.map(Object.keys(data.images),function (name) {
     var sizes = {};
         $.each(devices, function (device){
@@ -90,20 +90,22 @@ function updateUI (e) {
             sizes[val]++;
           }
         });
-      return $("<tr><td><a href=\"#\">" + name + "</a></td></tr>").append(
+      return $("<tr><td>" + name + "</td></tr>").append(
         $.map(Object.keys(sizes), function (device) {
           return $('<td colspan="' + sizes[device] + '">'+device+"</td>");
         })
-      ).toggleClass('inactive', data.assets.indexOf(name) < 0);
+      );//.toggleClass('inactive', data.assets.indexOf(name) < 0);
     });
   tbody.append(rows);
   $('#data table').remove();
   $('#data').append(table);
   table.on('mouseover mouseleave', 'td,th', highlight);
+  /*
   table.on('click', 'td:first-child a', function (e) {
     $(this).closest('tr').toggleClass('inactive');
     return false;
   });
+*/
 }
 
 var $os = $("#os");
