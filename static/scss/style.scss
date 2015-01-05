@@ -20,7 +20,7 @@ html, body {
   margin: 0;
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1em;
   .minimize:before {
     content: '\203E\203E';
@@ -30,6 +30,7 @@ html, body {
   }
   h1, h2 {
     display: inline-block;
+    float: left;
   }
     .tiny-button {
       display: inline-block;
@@ -355,7 +356,6 @@ html, body {
               border: solid darken(#FFF, 10%) 1px;
               text-align: center;
               font-weight: 300;
-              cursor: pointer;
               &.hover {
                 background-color: #333;
                 color: #FFF;
