@@ -17,12 +17,19 @@ function id (value) {
   return value.replace(/\s/, "_");
 }
 
+function badge (field, value) {
+  if (data.badge[field].indexOf(value) >= 0) {
+    return '<img src="/images/star.png" class="star">';
+  }
+}
+
 function opt (field, value) {
   return {
     "field" : field,
     "label" : value,
-    "id" : id(value)
-  }
+    "id" : id(value),
+    "badge" : badge(field, value)
+  };
 }
 
 function get (value) {
@@ -91,7 +98,6 @@ function updateUI (e) {
             sizes[val]++;
           }
         });
-        console.log(sizes);
       return $("<tr><td>" + name + "</td></tr>").append(
         $.map(Object.keys(sizes), function (device) {
           if (device) {
@@ -119,7 +125,6 @@ forEach(data.os, function (key, value) {
   $(checkbox_option(opt("os", key))).appendTo($os);
 });
 
-console.log(data.devices);
 forEach(data.devices, function (key) {
   $("#devices").append(checkbox_option(opt("devices",get(key))));
 });

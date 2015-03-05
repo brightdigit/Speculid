@@ -56,6 +56,7 @@ gulp.task('yaml', ['clean'],   function (cb) {
     result["devices"] = data.devices;
     result["display"] = data.display;
     result["assets"] = data.assets;
+    result["badge"] = data.badge;
     var images = {};
     var resolutions = {};
 
@@ -149,7 +150,7 @@ gulp.task('browserify', ['yaml'], function () {
   
   return gulp.src(['./static/js/main.js'])
     .pipe(browserified)
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest('./public/js'));
 });
 
