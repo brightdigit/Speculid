@@ -32,7 +32,7 @@ function get (value) {
 function formatCellText (value) {
   if (Array.isArray(value)) {
     return value[0] + "px x " + value[1] + "px"
-  } else {
+  } else if (value) {
     return value + "px";
   }
 }
@@ -84,15 +84,21 @@ function updateUI (e) {
     var sizes = {};
         $.each(devices, function (device){
           var val = formatCellText(data.images[name][this]);
+          val = val || "";
           if (!sizes[val]) {
             sizes[val] = 1;
           } else {
             sizes[val]++;
           }
         });
+        console.log(sizes);
       return $("<tr><td>" + name + "</td></tr>").append(
         $.map(Object.keys(sizes), function (device) {
-          return $('<td colspan="' + sizes[device] + '">'+device+"</td>");
+          if (device) {
+            return $('<td colspan="' + sizes[device] + '">'+device+"</td>");
+          } else {
+            return $('<td class="empty" colspan="' + sizes[device] + '"></td>');
+          }
         })
       );//.toggleClass('inactive', data.assets.indexOf(name) < 0);
     });
@@ -113,6 +119,7 @@ forEach(data.os, function (key, value) {
   $(checkbox_option(opt("os", key))).appendTo($os);
 });
 
+console.log(data.devices);
 forEach(data.devices, function (key) {
   $("#devices").append(checkbox_option(opt("devices",get(key))));
 });
