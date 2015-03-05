@@ -1,5 +1,5 @@
 os:
-  iOS 8.2:
+  iOS 8.2 Watch:
     - iPhone 6+
     - iPhone 6
     - iPhone 5
@@ -194,3 +194,9 @@ launch:
   file:
     - iPhone 6+
     - iPhone 6
+badge:
+  os:
+    - iOS 8.2 Watch
+  devices:
+    - Apple Watch 38mm
+    - Apple Watch 42mm
