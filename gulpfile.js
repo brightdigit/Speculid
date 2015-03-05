@@ -80,7 +80,15 @@ gulp.task('yaml', ['clean'],   function (cb) {
         sizes = {};
         for (var type in data.types) {
           for (var index = 0; index < data.types[type].length; index++) {
-            sizes[data.types[type][index]] = getSize(value[type],data.types[type][index]); 
+            if (value[type]) {
+              sizes[data.types[type][index]] = getSize(value[type],data.types[type][index]); 
+            }
+          }
+        }
+        for (var index = 0; index < data.devices.length; index++) {
+          var device = data.devices[index];
+          if (value[device]) {
+            sizes[device] = getSize(value[device],device); 
           }
         }
       } else {
