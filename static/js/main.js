@@ -44,6 +44,14 @@ function formatCellText (value) {
   }
 }
 
+function formatCellTextPoint (value) {
+  if (Array.isArray(value)) {
+    return value[0] + "pt x " + value[1] + "pt"
+  } else if (value) {
+    return value + "pt";
+  }
+}
+
 function highlight (e) {
   $('td').removeClass("hover");
   $('tr').removeClass("hover");
@@ -73,7 +81,7 @@ function updateUI (e) {
       $(this).prop('disabled', !devices[$(this).val()]);
       $(this).prop('checked',  devices[$(this).val()]);
     });
-  }
+  } 
 
   var devices = $('input[name="devices"]:checked').map(function () {return $(this).val();});
   var table = $('<table></table>');
@@ -87,27 +95,49 @@ function updateUI (e) {
   $("<tr></tr>").append($.map(devices, function (device){
     return $("<td>" + formatCellText(data.display[device]) + "</td>");
   })).prepend("<td>Display Resolution</td>").appendTo(tbody);
-  var rows = $.map(Object.keys(data.images),function (name) {
-    var sizes = {};
+  var rows = $.map(Object.keys(data.images.pixels),function (name) {
+    var sizes = {}, points = {};
         $.each(devices, function (device){
-          var val = formatCellText(data.images[name][this]);
+          var val = formatCellText(data.images.pixels[name][this]);
           val = val || "";
           if (!sizes[val]) {
             sizes[val] = 1;
           } else {
             sizes[val]++;
           }
-        });
-      return $("<tr><td>" + name + "</td></tr>").append(
-        $.map(Object.keys(sizes), function (device) {
-          if (device) {
-            return $('<td colspan="' + sizes[device] + '">'+device+"</td>");
+          var valPt = formatCellTextPoint(data.images.points[name][this]);
+          valPt = valPt || "";
+          if (!points[valPt]) {
+            points[valPt] = 1;
           } else {
-            return $('<td class="empty" colspan="' + sizes[device] + '"></td>');
+            points[valPt]++;
           }
-        })
-      );//.toggleClass('inactive', data.assets.indexOf(name) < 0);
+        });
+      if ($('input[name="units"]:checked').val() == "points") {
+        return  $('<tr class="points"><td>' + name + "</td></tr>").append(
+          $.map(Object.keys(points), function (device) {
+            if (device) {
+              return $('<td colspan="' + points[device] + '">'+device+"</td>");
+            } else {
+              return $('<td class="empty" colspan="' + points[device] + '"></td>');
+            }
+          })
+        ); 
+      } else  {
+        return $('<tr class="pixels"><td>' + name + "</td></tr>").append(
+          $.map(Object.keys(sizes), function (device) {
+            if (device) {
+              return $('<td colspan="' + sizes[device] + '">'+device+"</td>");
+            } else {
+              return $('<td class="empty" colspan="' + sizes[device] + '"></td>');
+            }
+          })
+        )
+      }
     });
+ /* rows = rows.reduce(function (prev, current) {
+    return prev.add(current);
+  });*/
   tbody.append(rows);
   $('#data table').remove();
   $('#data').append(table);
@@ -160,3 +190,4 @@ $('#filter-expand').on('click', function (e) {
     window.scrollTo(0, 0);
   }
 });
+
