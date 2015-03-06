@@ -281,8 +281,12 @@ html, body {
               }
             }
           }
-          tbody {
+          & > tbody {
             tr {
+              &.points {
+                td {
+                }
+              }
               &.hover {
                 background-color: darken($smoke, 40%);
                 color: #FFF;
