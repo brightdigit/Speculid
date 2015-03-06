@@ -10,7 +10,7 @@ os:
     - iPhone 6
     - iPhone 5
     - iPhone 4s
-    - iPod Touch
+    - iPod Touch 5g
     - iPad Retina
     - iPad Mini Retina
     - iPad Mini
@@ -23,7 +23,7 @@ os:
     - iPad Mini Retina
     - iPad Mini
     - iPad 2
-    - iPod Touch
+    - iPod Touch 5g
 devices:
   - iPhone 6+
   - iPhone 6
@@ -31,7 +31,7 @@ devices:
     - iPhone 5s
     - iPhone 5c
     - iPhone 5
-  - iPod Touch
+  - iPod Touch 5g
   - iPhone 4s
   - iPhone 4
   - iPad Retina:
@@ -53,7 +53,7 @@ types:
     - iPhone 5
     - iPhone 4s
     - iPhone 4
-    - iPod Touch
+    - iPod Touch 5g
   iPad:
     - iPad Retina
     - iPad Mini Retina
@@ -75,7 +75,7 @@ hardware:
       - Apple Watch 38mm
       - Apple Watch 42mm
     32-bit:
-      - iPod Touch
+      - iPod Touch 5g
       - iPhone 5c
       - iPhone 5
       - iPhone 4s

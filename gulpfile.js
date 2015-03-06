@@ -122,7 +122,11 @@ gulp.task('yaml', ['clean'],   function (cb) {
         images.points[name] = points;
       }
     }
+
+    var types = data.types;
+
     result["images"] = images;
+    result["resolutions"] = resolutions;
     fs.writeFileSync('./.tmp/data.json', JSON.stringify(result));
     cb();
   });
