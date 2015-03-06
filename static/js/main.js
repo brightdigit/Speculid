@@ -44,9 +44,10 @@ function formatCellText (value) {
   }
 }
 
-function formatCellTextPoint (value) {
+function formatCellTextPoint (value, factor) {
+  factor = factor || 1.0;
   if (Array.isArray(value)) {
-    return value[0] + "pt x " + value[1] + "pt"
+    return value[0] * factor + "pt x " + value[1] * factor + "pt"
   } else if (value) {
     return value + "pt";
   }
@@ -92,8 +93,9 @@ function updateUI (e) {
     return $("<th>"+device+"</th>");
   })).prepend("<th></th>"));
   var tbody = $("<tbody></tbody>").appendTo(table);
+  var formatText = $('input[name="units"]:checked').val() == "points" ? formatCellTextPoint : formatCellText;
   $("<tr></tr>").append($.map(devices, function (device){
-    return $("<td>" + formatCellText(data.display[device]) + "</td>");
+    return $("<td>" + formatText(data.display[device], 1/data.resolutions[device]) + "</td>");
   })).prepend("<td>Display Resolution</td>").appendTo(tbody);
   var rows = $.map(Object.keys(data.images.pixels),function (name) {
     var sizes = {}, points = {};
@@ -154,6 +156,8 @@ var $os = $("#os");
 forEach(data.os, function (key, value) {
   $(checkbox_option(opt("os", key))).appendTo($os);
 });
+
+var deviceGroups = [];
 
 forEach(data.devices, function (key) {
   $("#devices").append(checkbox_option(opt("devices",get(key))));
