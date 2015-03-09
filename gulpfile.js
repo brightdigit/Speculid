@@ -123,8 +123,15 @@ gulp.task('yaml', ['clean'],   function (cb) {
       }
     }
 
-    var types = data.types;
+    var types = {};
 
+    for (var type in  data.types) {
+      for (var index = 0; index < data.types[type].length; index++) {
+        types[data.types[type][index]] = type;
+      }
+    }
+
+    result["types"] = types;
     result["images"] = images;
     result["resolutions"] = resolutions;
     fs.writeFileSync('./.tmp/data.json', JSON.stringify(result));
@@ -173,7 +180,7 @@ gulp.task('browserify', ['yaml'], function () {
   
   return gulp.src(['./static/js/main.js'])
     .pipe(browserified)
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('./public/js'));
 });
 
