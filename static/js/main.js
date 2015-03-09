@@ -96,7 +96,7 @@ function updateUI (e) {
   var formatText = $('input[name="units"]:checked').val() == "points" ? formatCellTextPoint : formatCellText;
   $("<tr></tr>").append($.map(devices, function (device){
     return $("<td>" + formatText(data.display[device], 1/data.resolutions[device]) + "</td>");
-  })).prepend("<td>Display Resolution</td>").appendTo(tbody);
+  })).prepend("<td>Screen Size</td>").appendTo(tbody);
   var rows = $.map(Object.keys(data.images.pixels),function (name) {
     var sizes = {}, points = {};
         $.each(devices, function (device){
@@ -157,11 +157,21 @@ forEach(data.os, function (key, value) {
   $(checkbox_option(opt("os", key))).appendTo($os);
 });
 
-var deviceGroups = [];
+var deviceGroups = {};
 
 forEach(data.devices, function (key) {
-  $("#devices").append(checkbox_option(opt("devices",get(key))));
+  var type = data.types[get(key)];
+  if (!(type in deviceGroups)) {
+    deviceGroups[type] = {};
+    deviceGroups[type].li = $('<li></li>').attr('id', 'device_type_' + type).addClass('device_type');
+    deviceGroups[type].ol = $("<ol></ol>").appendTo(deviceGroups[type].li);
+  }
+   deviceGroups[type].ol.append(checkbox_option(opt("devices",get(key))));
 });
+
+for (var type in deviceGroups) {
+  $("#devices").append(deviceGroups[type].li);
+}
 
 $('#menu input').on('change', updateUI);
 

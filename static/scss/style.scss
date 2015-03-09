@@ -20,7 +20,7 @@ html, body {
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 0.9em;
   .minimize:before {
     content: '\203E\203E';
   }
@@ -245,7 +245,6 @@ html, body {
                     list-style: none;
                     clear: none;
                     font-size: 0.75em;
-                    width: 100%;
                     li {
                       float: left;
                       display: inline;
@@ -378,6 +377,7 @@ html, body {
         display: table;
         width: 100%;
         border-bottom: 2px solid darken($smoke, 20%);
+
         input[type=checkbox],input[type=radio] {
           display: none;
           & + label, &[disabled] + label {
@@ -386,6 +386,7 @@ html, body {
             margin: 5px;
             display: block;
             cursor: pointer;
+            font-size: 0.9em;
           }
           &:checked + label.hover {
             background-color: $oil;
@@ -437,8 +438,10 @@ html, body {
           }
         }
         & > ol {
-
           display: table-row;
+          & > li > ol {
+            margin-right: 40px;
+          }
         }
         ol {
           display: block;
