@@ -1,6 +1,6 @@
 {
   "name": "speculid",
-  "version": "0.1.103",
+  "version": "1.0.77",
   "description": "Specifications for Mobile Application Development",
   "main": "gulp",
   "repository": {
@@ -11,7 +11,7 @@
     "deploy": "./deploy-ghpages.sh"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "0.12.x"
   },
   "author": "Leo G. Dion, BrightDigit, LLC <leogdion@brightdigit.com>",
   "devDependencies": {

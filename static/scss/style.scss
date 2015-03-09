@@ -20,7 +20,7 @@ html, body {
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 0.9em;
   .minimize:before {
     content: '\203E\203E';
   }
@@ -53,6 +53,7 @@ html, body {
     width: 100%;
     position: fixed;
     border-bottom: transparentize(darken($oil, 20%), 0.66) solid 2px;
+    z-index: 1000;
     #version {
       font-size: 0.25em;
       vertical-align: top;
@@ -189,7 +190,7 @@ html, body {
         & > ol {
           list-style: none;
           padding: 5px;
-          li {
+          li {       
             .asset {
               font-size: 1.1em;
               font-weight: 300;
@@ -244,7 +245,6 @@ html, body {
                     list-style: none;
                     clear: none;
                     font-size: 0.75em;
-                    width: 100%;
                     li {
                       float: left;
                       display: inline;
@@ -280,8 +280,12 @@ html, body {
               }
             }
           }
-          tbody {
+          & > tbody {
             tr {
+              &.points {
+                td {
+                }
+              }
               &.hover {
                 background-color: darken($smoke, 40%);
                 color: #FFF;
@@ -373,6 +377,7 @@ html, body {
         display: table;
         width: 100%;
         border-bottom: 2px solid darken($smoke, 20%);
+
         input[type=checkbox],input[type=radio] {
           display: none;
           & + label, &[disabled] + label {
@@ -381,6 +386,7 @@ html, body {
             margin: 5px;
             display: block;
             cursor: pointer;
+            font-size: 0.9em;
           }
           &:checked + label.hover {
             background-color: $oil;
@@ -393,12 +399,24 @@ html, body {
             @include hp-opacity(0.5);
             color: desaturate($blue, 50%);
           }
+
+          &[disabled] + label + img.star {
+            @include hp-opacity(0.5);
+          }
+
           &[name=view] + label {
             color: $yellow;
           }
           &:checked + label {
             background-color: $blue;
             color: $smoke;
+          }
+          &:checked + label + img.star {
+            filter: none;
+            -webkit-filter: grayscale(0%);
+            -moz-filter:    grayscale(0%);
+            -ms-filter:     grayscale(0%);
+            -o-filter:      grayscale(0%);
           }
           &[name=view]:checked + label {
             color: $smoke;
@@ -420,8 +438,10 @@ html, body {
           }
         }
         & > ol {
-
           display: table-row;
+          & > li > ol {
+            margin-right: 40px;
+          }
         }
         ol {
           display: block;
@@ -436,6 +456,18 @@ html, body {
             margin: none;
             float: left;
 
+            position: relative;     
+                img.star {
+                  position: absolute;
+                  top: 3px;
+                  right: 0px;
+                  width: 18px;
+                  filter: url(~"data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+                  -webkit-filter: grayscale(100%);
+                  -moz-filter:    grayscale(100%);
+                  -ms-filter:     grayscale(100%);
+                  -o-filter:      grayscale(100%);
+                }
           }
         }
       }

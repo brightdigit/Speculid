@@ -5,7 +5,7 @@
   <meta name="description" content="Specifications for Mobile Application Development">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,700">
-  <meta name="viewport" content="user-scalable=no,width=1024" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
   <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
@@ -78,6 +78,12 @@
     <div id="menu">
     <h2>Choose Operating Systems and Devices</h2>
       <ol>
+        <li>
+          <ol id="units">
+            <li><input type="radio" name="units" id="units_pixels" value="pixels" checked><label for="units_pixels">Pixels</label></li>
+            <li><input type="radio" name="units" id="units_points" value="points"><label for="units_points">Points</label></li>
+          </ol>
+        </li>
       <!--
         <li id="views">
           <ol>
