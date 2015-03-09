@@ -56,7 +56,8 @@ gulp.task('yaml', ['clean'],   function (cb) {
     result["devices"] = data.devices;
     result["display"] = data.display;
     result["assets"] = data.assets;
-    var images = {};
+    result["badge"] = data.badge;
+    var images = {pixels : {}, points : {}};
     var resolutions = {};
 
     function getSize (value, device) {
@@ -67,6 +68,15 @@ gulp.task('yaml', ['clean'],   function (cb) {
       }
       
     }
+
+    function getPoints (value, device) {
+      if (Array.isArray(value)) {
+        return [value[0], value[value.length-1]];
+      } else {
+        return value;
+      }      
+    }
+
     for (var resolution in data.resolutions) {
       for (var index = 0; index < data.resolutions[resolution].length; index++) {
         resolutions[data.resolutions[resolution][index]] = resolution;
@@ -75,12 +85,23 @@ gulp.task('yaml', ['clean'],   function (cb) {
 
     for (var name in data.images) {
       var value = data.images[name];
-      var sizes;
+      var sizes, points;
       if (typeof(value) === 'object' && !Array.isArray(value)) {
         sizes = {};
+        points = {};
         for (var type in data.types) {
           for (var index = 0; index < data.types[type].length; index++) {
-            sizes[data.types[type][index]] = getSize(value[type],data.types[type][index]); 
+            if (value[type]) {
+              sizes[data.types[type][index]] = getSize(value[type],data.types[type][index]); 
+              points[data.types[type][index]] = getPoints(value[type],data.types[type][index]); 
+            }
+          }
+        }
+        for (var index = 0; index < data.devices.length; index++) {
+          var device = data.devices[index];
+          if (value[device]) {
+            sizes[device] = getSize(value[device],device); 
+            points[device] = getPoints(value[device],device); 
           }
         }
       } else {
@@ -89,12 +110,30 @@ gulp.task('yaml', ['clean'],   function (cb) {
           memo[get(device)] = getSize(value,get(device));
           return memo;
         }, {});
+        points = data.devices.reduce(function (memo, device) {
+          memo[get(device)] = getPoints(value,get(device));
+          return memo;
+        }, {});
       }
       if (sizes) {
-        images[name] = sizes;
+        images.pixels[name] = sizes;
+      }
+      if (points) {
+        images.points[name] = points;
       }
     }
+
+    var types = {};
+
+    for (var type in  data.types) {
+      for (var index = 0; index < data.types[type].length; index++) {
+        types[data.types[type][index]] = type;
+      }
+    }
+
+    result["types"] = types;
     result["images"] = images;
+    result["resolutions"] = resolutions;
     fs.writeFileSync('./.tmp/data.json', JSON.stringify(result));
     cb();
   });

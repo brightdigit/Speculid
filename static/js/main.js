@@ -17,12 +17,19 @@ function id (value) {
   return value.replace(/\s/, "_");
 }
 
+function badge (field, value) {
+  if (data.badge[field].indexOf(value) >= 0) {
+    return '<img src="/images/star.png" class="star">';
+  }
+}
+
 function opt (field, value) {
   return {
     "field" : field,
     "label" : value,
-    "id" : id(value)
-  }
+    "id" : id(value),
+    "badge" : badge(field, value)
+  };
 }
 
 function get (value) {
@@ -32,8 +39,17 @@ function get (value) {
 function formatCellText (value) {
   if (Array.isArray(value)) {
     return value[0] + "px x " + value[1] + "px"
-  } else {
+  } else if (value) {
     return value + "px";
+  }
+}
+
+function formatCellTextPoint (value, factor) {
+  factor = factor || 1.0;
+  if (Array.isArray(value)) {
+    return value[0] * factor + "pt x " + value[1] * factor + "pt"
+  } else if (value) {
+    return value + "pt";
   }
 }
 
@@ -66,7 +82,7 @@ function updateUI (e) {
       $(this).prop('disabled', !devices[$(this).val()]);
       $(this).prop('checked',  devices[$(this).val()]);
     });
-  }
+  } 
 
   var devices = $('input[name="devices"]:checked').map(function () {return $(this).val();});
   var table = $('<table></table>');
@@ -77,25 +93,53 @@ function updateUI (e) {
     return $("<th>"+device+"</th>");
   })).prepend("<th></th>"));
   var tbody = $("<tbody></tbody>").appendTo(table);
+  var formatText = $('input[name="units"]:checked').val() == "points" ? formatCellTextPoint : formatCellText;
   $("<tr></tr>").append($.map(devices, function (device){
-    return $("<td>" + formatCellText(data.display[device]) + "</td>");
-  })).prepend("<td>Display Resolution</td>").appendTo(tbody);
-  var rows = $.map(Object.keys(data.images),function (name) {
-    var sizes = {};
+    return $("<td>" + formatText(data.display[device], 1/data.resolutions[device]) + "</td>");
+  })).prepend("<td>Screen Size</td>").appendTo(tbody);
+  var rows = $.map(Object.keys(data.images.pixels),function (name) {
+    var sizes = {}, points = {};
         $.each(devices, function (device){
-          var val = formatCellText(data.images[name][this]);
+          var val = formatCellText(data.images.pixels[name][this]);
+          val = val || "";
           if (!sizes[val]) {
             sizes[val] = 1;
           } else {
             sizes[val]++;
           }
+          var valPt = formatCellTextPoint(data.images.points[name][this]);
+          valPt = valPt || "";
+          if (!points[valPt]) {
+            points[valPt] = 1;
+          } else {
+            points[valPt]++;
+          }
         });
-      return $("<tr><td>" + name + "</td></tr>").append(
-        $.map(Object.keys(sizes), function (device) {
-          return $('<td colspan="' + sizes[device] + '">'+device+"</td>");
-        })
-      );//.toggleClass('inactive', data.assets.indexOf(name) < 0);
+      if ($('input[name="units"]:checked').val() == "points") {
+        return  $('<tr class="points"><td>' + name + "</td></tr>").append(
+          $.map(Object.keys(points), function (device) {
+            if (device) {
+              return $('<td colspan="' + points[device] + '">'+device+"</td>");
+            } else {
+              return $('<td class="empty" colspan="' + points[device] + '"></td>');
+            }
+          })
+        ); 
+      } else  {
+        return $('<tr class="pixels"><td>' + name + "</td></tr>").append(
+          $.map(Object.keys(sizes), function (device) {
+            if (device) {
+              return $('<td colspan="' + sizes[device] + '">'+device+"</td>");
+            } else {
+              return $('<td class="empty" colspan="' + sizes[device] + '"></td>');
+            }
+          })
+        )
+      }
     });
+ /* rows = rows.reduce(function (prev, current) {
+    return prev.add(current);
+  });*/
   tbody.append(rows);
   $('#data table').remove();
   $('#data').append(table);
@@ -113,9 +157,21 @@ forEach(data.os, function (key, value) {
   $(checkbox_option(opt("os", key))).appendTo($os);
 });
 
+var deviceGroups = {};
+
 forEach(data.devices, function (key) {
-  $("#devices").append(checkbox_option(opt("devices",get(key))));
+  var type = data.types[get(key)];
+  if (!(type in deviceGroups)) {
+    deviceGroups[type] = {};
+    deviceGroups[type].li = $('<li></li>').attr('id', 'device_type_' + type).addClass('device_type');
+    deviceGroups[type].ol = $("<ol></ol>").appendTo(deviceGroups[type].li);
+  }
+   deviceGroups[type].ol.append(checkbox_option(opt("devices",get(key))));
 });
+
+for (var type in deviceGroups) {
+  $("#devices").append(deviceGroups[type].li);
+}
 
 $('#menu input').on('change', updateUI);
 
@@ -148,3 +204,4 @@ $('#filter-expand').on('click', function (e) {
     window.scrollTo(0, 0);
   }
 });
+
