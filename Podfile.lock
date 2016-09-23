@@ -1,21 +1,12 @@
 PODS:
-  - SwiftSVG (1.1.5)
+  - PocketSVG (0.7)
 
 DEPENDENCIES:
-  - SwiftSVG (from `https://github.com/brightdigit/SwiftSVG.git`)
-
-EXTERNAL SOURCES:
-  SwiftSVG:
-    :git: https://github.com/brightdigit/SwiftSVG.git
-
-CHECKOUT OPTIONS:
-  SwiftSVG:
-    :commit: b1de2883abbab6c2970d5538820344758984030f
-    :git: https://github.com/brightdigit/SwiftSVG.git
+  - PocketSVG (~> 0.7)
 
 SPEC CHECKSUMS:
-  SwiftSVG: 79d3c15af0899d05bffc927e902e0d0738326511
+  PocketSVG: e05e6b008c6232d7b6410bb1ff34db71957b776d
 
-PODFILE CHECKSUM: e21e45cfa824429f9bba861389d1947e453b6ff8
+PODFILE CHECKSUM: 3498de5b657b141fd9eb6efca7af3af1e9f082b9
 
 COCOAPODS: 1.1.0.rc.2

@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import SwiftSVG
+import PocketSVG
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
