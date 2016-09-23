@@ -9,7 +9,7 @@ target 'Speculid-App' do
   target 'Speculid' do
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
-    pod 'PocketSVG', '~> 0.7'
+    #pod 'PocketSVG', '~> 0.7'
 
     # Pods for Speculid
 
