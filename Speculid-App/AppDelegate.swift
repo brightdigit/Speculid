@@ -29,10 +29,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 
                 if let contentsJSONData = try? Data(contentsOf: contentsJSONURL) {
                   if let contentsJSON = try? JSONSerialization.jsonObject(with: contentsJSONData, options: []) as? [String : Any] {
-                    //SVGParser().
-                    
                     if let images = contentsJSON?["images"] as? [[String : String]] {
-                      print(images)
+                      //inkscape --export-id=Release --export-id-only --without-gui --export-png Media.xcassets/AppIcon-Production-Release.appiconset/appicon_${x}.png -w ${x} -b white graphics/logo.svg
+                      //for x in 29 40 58 76 87 80 120 152 167 180 ; do inkscape --without-gui --export-png tictalktoc-app/tictalktoc/Images.xcassets/AppIcon-lite.appiconset/lite${x}.png -w ${x} graphics/icons/logo.svg >/dev/null && echo "exporting appicon_${x}.png" & done
+                      let destinationURL = contentsJSONURL.deletingLastPathComponent().appendingPathComponent(sourcePath.deletingPathExtension().lastPathComponent).appendingPathExtension(".png")
+                      let process = Process()
+                      process.launchPath = "/usr/local/bin/inkscape"
+                      process.arguments = ["--without-gui","--export-png",destinationURL.path,"-w","${x}",sourcePath.absoluteString]
+                      process.launch()
                     }
                   }
                 }
