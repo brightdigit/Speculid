@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SwiftSVG
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -28,6 +29,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 
                 if let contentsJSONData = try? Data(contentsOf: contentsJSONURL) {
                   if let contentsJSON = try? JSONSerialization.jsonObject(with: contentsJSONData, options: []) as? [String : Any] {
+                    //SVGParser().
+                    
                     if let images = contentsJSON?["images"] as? [[String : String]] {
                       print(images)
                     }
