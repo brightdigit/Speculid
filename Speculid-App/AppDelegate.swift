@@ -15,7 +15,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     // Insert code here to initialize your application
-    print(ProcessInfo.processInfo.arguments)
+    #if DEBUG
+    print("DEBUG")
+    let speculidURL = Bundle.main.url(forResource: "speculid", withExtension: "spcld")
+      
+      
+    #endif
   }
 
   func applicationWillTerminate(_ aNotification: Notification) {

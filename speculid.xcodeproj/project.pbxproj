@@ -15,10 +15,14 @@
 		B310EE591D94C08600C4A30E /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = B310EE581D94C08600C4A30E /* Document.swift */; };
 		B310EE5B1D94C08600C4A30E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B310EE5A1D94C08600C4A30E /* Assets.xcassets */; };
 		B310EE5E1D94C08600C4A30E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B310EE5C1D94C08600C4A30E /* Main.storyboard */; };
-		B310EE631D94C09000C4A30E /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
-		B310EE641D94C09000C4A30E /* Speculid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B310EE6D1D94C6CE00C4A30E /* layers.svg in Resources */ = {isa = PBXBuildFile; fileRef = B310EE6C1D94C6CE00C4A30E /* layers.svg */; };
 		B310EE6E1D94C8C600C4A30E /* speculid.spcld in Resources */ = {isa = PBXBuildFile; fileRef = B310EE6A1D94C69E00C4A30E /* speculid.spcld */; };
+		B3EA0C971D953B0700646879 /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
+		B3EA0C981D953B0700646879 /* Speculid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3EA0C9E1D95422400646879 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = B3EA0C9D1D95422400646879 /* Contents.json */; };
+		CC2DFA873751C8008DC82D2D /* Pods_Speculid_App_Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC520A8970A2E1F5FF3B9C49 /* Pods_Speculid_App_Speculid.framework */; };
+		CF9A8D52E23654FB06FC6D53 /* Pods_Speculid_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5FDD2509E8D8521403401B /* Pods_Speculid_App.framework */; };
+		FAAF619CADC28856C97D6811 /* Pods_SpeculidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35511F933FE5743E292D9307 /* Pods_SpeculidTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +33,7 @@
 			remoteGlobalIDString = B310EE351D94BF6D00C4A30E;
 			remoteInfo = Speculid;
 		};
-		B310EE651D94C09000C4A30E /* PBXContainerItemProxy */ = {
+		B3EA0C991D953B0700646879 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B310EE2B1D94BF5000C4A30E /* Project object */;
 			proxyType = 1;
@@ -39,13 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B310EE671D94C09000C4A30E /* Embed Frameworks */ = {
+		B3EA0C9B1D953B0700646879 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B310EE641D94C09000C4A30E /* Speculid.framework in Embed Frameworks */,
+				B3EA0C981D953B0700646879 /* Speculid.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +57,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		35511F933FE5743E292D9307 /* Pods_SpeculidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeculidTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DA03062EEC0E3EF2A2A1170 /* Pods-SpeculidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeculidTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests.release.xcconfig"; sourceTree = "<group>"; };
+		672BD9D8D3FB93EE5F9F65C9 /* Pods-SpeculidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeculidTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6AF92184D614028A9352A6EE /* Pods-Speculid-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-App/Pods-Speculid-App.release.xcconfig"; sourceTree = "<group>"; };
+		7F7C4F17B56321562A4233DF /* Pods-Speculid-App-Speculid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-App-Speculid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-App-Speculid/Pods-Speculid-App-Speculid.release.xcconfig"; sourceTree = "<group>"; };
+		9794EDBE14EC85DE7443CDC4 /* Pods-Speculid-App-Speculid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-App-Speculid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-App-Speculid/Pods-Speculid-App-Speculid.debug.xcconfig"; sourceTree = "<group>"; };
 		B310EE361D94BF6D00C4A30E /* Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B310EE391D94BF6D00C4A30E /* Speculid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid.h; sourceTree = "<group>"; };
 		B310EE3A1D94BF6D00C4A30E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,6 +78,10 @@
 		B310EE5F1D94C08600C4A30E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B310EE6A1D94C69E00C4A30E /* speculid.spcld */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = speculid.spcld; sourceTree = "<group>"; };
 		B310EE6C1D94C6CE00C4A30E /* layers.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = layers.svg; sourceTree = "<group>"; };
+		B3EA0C9D1D95422400646879 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		DC5FDD2509E8D8521403401B /* Pods_Speculid_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5FC796D4A74C8856DC8AD6E /* Pods-Speculid-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-App/Pods-Speculid-App.debug.xcconfig"; sourceTree = "<group>"; };
+		FC520A8970A2E1F5FF3B9C49 /* Pods_Speculid_App_Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid_App_Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2DFA873751C8008DC82D2D /* Pods_Speculid_App_Speculid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B310EE401D94BF6D00C4A30E /* Speculid.framework in Frameworks */,
+				FAAF619CADC28856C97D6811 /* Pods_SpeculidTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B310EE631D94C09000C4A30E /* Speculid.framework in Frameworks */,
+				B3EA0C971D953B0700646879 /* Speculid.framework in Frameworks */,
+				CF9A8D52E23654FB06FC6D53 /* Pods_Speculid_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +121,8 @@
 				B310EE431D94BF6D00C4A30E /* SpeculidTests */,
 				B310EE531D94C08600C4A30E /* Speculid-App */,
 				B310EE371D94BF6D00C4A30E /* Products */,
+				BE9F5C517D9A45F9247718BD /* Pods */,
+				F2CD6FE767BD8701874761F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +157,7 @@
 		B310EE531D94C08600C4A30E /* Speculid-App */ = {
 			isa = PBXGroup;
 			children = (
+				B3EA0C9C1D95422400646879 /* AppIcon.appiconset */,
 				B310EE6A1D94C69E00C4A30E /* speculid.spcld */,
 				B310EE541D94C08600C4A30E /* AppDelegate.swift */,
 				B310EE561D94C08600C4A30E /* ViewController.swift */,
@@ -148,6 +168,38 @@
 				B310EE6C1D94C6CE00C4A30E /* layers.svg */,
 			);
 			path = "Speculid-App";
+			sourceTree = "<group>";
+		};
+		B3EA0C9C1D95422400646879 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				B3EA0C9D1D95422400646879 /* Contents.json */,
+			);
+			name = AppIcon.appiconset;
+			path = Assets.xcassets/AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
+		BE9F5C517D9A45F9247718BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5FC796D4A74C8856DC8AD6E /* Pods-Speculid-App.debug.xcconfig */,
+				6AF92184D614028A9352A6EE /* Pods-Speculid-App.release.xcconfig */,
+				9794EDBE14EC85DE7443CDC4 /* Pods-Speculid-App-Speculid.debug.xcconfig */,
+				7F7C4F17B56321562A4233DF /* Pods-Speculid-App-Speculid.release.xcconfig */,
+				672BD9D8D3FB93EE5F9F65C9 /* Pods-SpeculidTests.debug.xcconfig */,
+				3DA03062EEC0E3EF2A2A1170 /* Pods-SpeculidTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F2CD6FE767BD8701874761F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC5FDD2509E8D8521403401B /* Pods_Speculid_App.framework */,
+				FC520A8970A2E1F5FF3B9C49 /* Pods_Speculid_App_Speculid.framework */,
+				35511F933FE5743E292D9307 /* Pods_SpeculidTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,10 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B310EE481D94BF6D00C4A30E /* Build configuration list for PBXNativeTarget "Speculid" */;
 			buildPhases = (
+				A27E73BB3DDA3FDBE424380D /* [CP] Check Pods Manifest.lock */,
 				B310EE311D94BF6D00C4A30E /* Sources */,
 				B310EE321D94BF6D00C4A30E /* Frameworks */,
 				B310EE331D94BF6D00C4A30E /* Headers */,
 				B310EE341D94BF6D00C4A30E /* Resources */,
+				E1116373799FF4D327B768CF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B310EE4B1D94BF6D00C4A30E /* Build configuration list for PBXNativeTarget "SpeculidTests" */;
 			buildPhases = (
+				C2CC2B2532C120817B8F7DCC /* [CP] Check Pods Manifest.lock */,
 				B310EE3B1D94BF6D00C4A30E /* Sources */,
 				B310EE3C1D94BF6D00C4A30E /* Frameworks */,
 				B310EE3D1D94BF6D00C4A30E /* Resources */,
+				3F4D955EA4F1CC7DF523F4F8 /* [CP] Embed Pods Frameworks */,
+				53350A58365EAB5B4DE0ADC4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,15 +261,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B310EE601D94C08600C4A30E /* Build configuration list for PBXNativeTarget "Speculid-App" */;
 			buildPhases = (
+				E1B894686D1E6D88FF244C87 /* [CP] Check Pods Manifest.lock */,
 				B310EE4E1D94C08600C4A30E /* Sources */,
 				B310EE4F1D94C08600C4A30E /* Frameworks */,
 				B310EE501D94C08600C4A30E /* Resources */,
-				B310EE671D94C09000C4A30E /* Embed Frameworks */,
+				B3EA0C9B1D953B0700646879 /* Embed Frameworks */,
+				AFA1D2252F78DF7A1A47C0DB /* [CP] Embed Pods Frameworks */,
+				C37DE9A4F68E75FB5EFA4188 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B310EE661D94C09000C4A30E /* PBXTargetDependency */,
+				B3EA0C9A1D953B0700646879 /* PBXTargetDependency */,
 			);
 			name = "Speculid-App";
 			productName = "Speculid-App";
@@ -284,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3EA0C9E1D95422400646879 /* Contents.json in Resources */,
 				B310EE6E1D94C8C600C4A30E /* speculid.spcld in Resources */,
 				B310EE6D1D94C6CE00C4A30E /* layers.svg in Resources */,
 				B310EE5B1D94C08600C4A30E /* Assets.xcassets in Resources */,
@@ -292,6 +353,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F4D955EA4F1CC7DF523F4F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53350A58365EAB5B4DE0ADC4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A27E73BB3DDA3FDBE424380D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AFA1D2252F78DF7A1A47C0DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Speculid-App/Pods-Speculid-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2CC2B2532C120817B8F7DCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C37DE9A4F68E75FB5EFA4188 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Speculid-App/Pods-Speculid-App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1116373799FF4D327B768CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Speculid-App-Speculid/Pods-Speculid-App-Speculid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1B894686D1E6D88FF244C87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B310EE311D94BF6D00C4A30E /* Sources */ = {
@@ -327,10 +511,10 @@
 			target = B310EE351D94BF6D00C4A30E /* Speculid */;
 			targetProxy = B310EE411D94BF6D00C4A30E /* PBXContainerItemProxy */;
 		};
-		B310EE661D94C09000C4A30E /* PBXTargetDependency */ = {
+		B3EA0C9A1D953B0700646879 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B310EE351D94BF6D00C4A30E /* Speculid */;
-			targetProxy = B310EE651D94C09000C4A30E /* PBXContainerItemProxy */;
+			targetProxy = B3EA0C991D953B0700646879 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -362,6 +546,7 @@
 		};
 		B310EE491D94BF6D00C4A30E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9794EDBE14EC85DE7443CDC4 /* Pods-Speculid-App-Speculid.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -428,6 +613,7 @@
 		};
 		B310EE4A1D94BF6D00C4A30E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F7C4F17B56321562A4233DF /* Pods-Speculid-App-Speculid.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -486,6 +672,7 @@
 		};
 		B310EE4C1D94BF6D00C4A30E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 672BD9D8D3FB93EE5F9F65C9 /* Pods-SpeculidTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -542,6 +729,7 @@
 		};
 		B310EE4D1D94BF6D00C4A30E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DA03062EEC0E3EF2A2A1170 /* Pods-SpeculidTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -590,6 +778,7 @@
 		};
 		B310EE611D94C08600C4A30E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5FC796D4A74C8856DC8AD6E /* Pods-Speculid-App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -646,6 +835,7 @@
 		};
 		B310EE621D94C08600C4A30E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AF92184D614028A9352A6EE /* Pods-Speculid-App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -711,6 +901,7 @@
 				B310EE4A1D94BF6D00C4A30E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B310EE4B1D94BF6D00C4A30E /* Build configuration list for PBXNativeTarget "SpeculidTests" */ = {
 			isa = XCConfigurationList;
@@ -719,6 +910,7 @@
 				B310EE4D1D94BF6D00C4A30E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B310EE601D94C08600C4A30E /* Build configuration list for PBXNativeTarget "Speculid-App" */ = {
 			isa = XCConfigurationList;
@@ -727,6 +919,7 @@
 				B310EE621D94C08600C4A30E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
