@@ -15,6 +15,8 @@
 		B310EE591D94C08600C4A30E /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = B310EE581D94C08600C4A30E /* Document.swift */; };
 		B310EE5B1D94C08600C4A30E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B310EE5A1D94C08600C4A30E /* Assets.xcassets */; };
 		B310EE5E1D94C08600C4A30E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B310EE5C1D94C08600C4A30E /* Main.storyboard */; };
+		B3B746FE1D974C4A0044809F /* SpeculidDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B746FD1D974C4A0044809F /* SpeculidDocument.swift */; };
+		B3B747001D9751080044809F /* ImageSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B746FF1D9751080044809F /* ImageSpecification.swift */; };
 		B3EA0C971D953B0700646879 /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
 		B3EA0C981D953B0700646879 /* Speculid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC2DFA873751C8008DC82D2D /* Pods_Speculid_App_Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC520A8970A2E1F5FF3B9C49 /* Pods_Speculid_App_Speculid.framework */; };
@@ -82,6 +84,8 @@
 		B3A3D0BD1D95D3EA0083AF39 /* Raster Image.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Raster Image.imageset"; path = "Assets.xcassets/Raster Image.imageset"; sourceTree = "<group>"; };
 		B3A3D0BE1D95D3EA0083AF39 /* Vector Image.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Vector Image.imageset"; path = "Assets.xcassets/Vector Image.imageset"; sourceTree = "<group>"; };
 		B3A3D0BF1D95D3EA0083AF39 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = Assets.xcassets/AppIcon.appiconset; sourceTree = "<group>"; };
+		B3B746FD1D974C4A0044809F /* SpeculidDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidDocument.swift; sourceTree = "<group>"; };
+		B3B746FF1D9751080044809F /* ImageSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSpecification.swift; sourceTree = "<group>"; };
 		DC5FDD2509E8D8521403401B /* Pods_Speculid_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5FC796D4A74C8856DC8AD6E /* Pods-Speculid-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-App/Pods-Speculid-App.debug.xcconfig"; sourceTree = "<group>"; };
 		FC520A8970A2E1F5FF3B9C49 /* Pods_Speculid_App_Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid_App_Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +148,8 @@
 			children = (
 				B310EE391D94BF6D00C4A30E /* Speculid.h */,
 				B310EE3A1D94BF6D00C4A30E /* Info.plist */,
+				B3B746FD1D974C4A0044809F /* SpeculidDocument.swift */,
+				B3B746FF1D9751080044809F /* ImageSpecification.swift */,
 			);
 			path = Speculid;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 					B310EE351D94BF6D00C4A30E = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MLT7M394S7;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					B310EE3E1D94BF6D00C4A30E = {
@@ -519,6 +526,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B746FE1D974C4A0044809F /* SpeculidDocument.swift in Sources */,
+				B3B747001D9751080044809F /* ImageSpecification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,6 +756,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 672BD9D8D3FB93EE5F9F65C9 /* Pods-SpeculidTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -804,6 +814,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3DA03062EEC0E3EF2A2A1170 /* Pods-SpeculidTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -853,6 +864,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E5FC796D4A74C8856DC8AD6E /* Pods-Speculid-App.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -910,6 +922,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6AF92184D614028A9352A6EE /* Pods-Speculid-App.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
