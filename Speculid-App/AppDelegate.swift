@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Speculid
 
 extension Double {
   var cleanValue: String {
@@ -81,8 +82,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       print("DEBUG")
       let path = CommandLine.arguments[1]
       let speculidURL = URL(fileURLWithPath: path)
+      
       let document = SpeculidDocument(url: speculidURL)
-      document.build{
+      document!.build{
         (error) in
       }
       print(speculidURL)

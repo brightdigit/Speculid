@@ -63,7 +63,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "${SRCROOT}/Speculid-App/speculid.spcld"
+            argument = "${SRCROOT}/Speculid-App/svg-appicon.spcld"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
