@@ -72,19 +72,11 @@ let numberRegex = try! NSRegularExpression(pattern: "\\d", options: [])
 
 public struct SpeculidDocument {
   public let specifications : SpeculidSpecifications
+  public let images : [ImageSpecification]
+  public let configuration: SpeculidConfiguration
   
-  public init?(url: URL) {
-    guard let specifications = SpeculidSpecifications(url: url) else {
-      return nil
-    }
-    
-    self.specifications = specifications
-  }
-  
-  public func build (closure: ((Error?) -> Void)?) {
-    //inkscape --export-id=Release --export-id-only --without-gui --export-png Media.xcassets/AppIcon-Production-Release.appiconset/appicon_${x}.png -w ${x} -b white graphics/logo.svg
-    //for x in 29 40 58 76 87 80 120 152 167 180 ; do inkscape --without-gui --export-png tictalktoc-app/tictalktoc/Images.xcassets/AppIcon-lite.appiconset/lite${x}.png -w ${x} graphics/icons/logo.svg >/dev/null && echo "exporting appicon_${x}.png" & done
-    let maxScale = self.specifications.images.reduce(nil, { (maxScale, image) -> CGFloat? in
+  public var maxScale : CGFloat? {
+    return self.images.reduce(nil, { (maxScale, image) -> CGFloat? in
       
       
       guard let scale = image.scale else {
@@ -95,9 +87,74 @@ public struct SpeculidDocument {
         return scale
       }
       
+      
       return max(scale, maxScale)
     })
-    for image in self.specifications.images {
+  }
+  
+  public init?(url: URL, configuration: SpeculidConfiguration? = nil) {
+    
+    guard let specifications = SpeculidSpecifications(url: url) else {
+      return nil
+    }
+    
+    guard let contentsJSONData = try? Data(contentsOf: specifications.contentsDirectoryUrl.appendingPathComponent("Contents.json")) else {
+      return nil
+    }
+    
+    guard let contentsJSON = try? JSONSerialization.jsonObject(with: contentsJSONData, options: []) as? [String : Any] else {
+      return nil
+    }
+    
+    guard let images = contentsJSON?["images"] as? [[String : String]]  else {
+      return nil
+    }
+    
+    self.images = images.flatMap { (dictionary) -> ImageSpecification? in
+      let scale: CGFloat?
+      let size: CGSize?
+      
+      if let scaleString = dictionary["scale"]?.firstMatchGroups(regex: scaleRegex)?[1], let value = Double(scaleString) {
+        scale = CGFloat(value)
+      } else {
+        scale = nil
+      }
+      
+      guard let idiomString = dictionary["idiom"], let idiom = ImageIdiom(rawValue: idiomString) else {
+        return nil
+      }
+      
+      if let dimensionStrings = dictionary["size"]?.firstMatchGroups(regex: sizeRegex), let width = Double(dimensionStrings[1]), let height = Double(dimensionStrings[2]) {
+        size = CGSize(width: width, height: height)
+      } else {
+        size = nil
+      }
+      
+      let filename = dictionary["filename"]
+      
+      return ImageSpecification(idiom: idiom, scale: scale, size: size, filename: filename)
+    }
+
+    
+    self.specifications = specifications
+    self.configuration = configuration ?? SpeculidConfiguration()
+    
+    
+  }
+  
+  
+  
+  public func build (closure: ((Error?) -> Void)?) {
+    //inkscape --export-id=Release --export-id-only --without-gui --export-png Media.xcassets/AppIcon-Production-Release.appiconset/appicon_${x}.png -w ${x} -b white graphics/logo.svg
+    //for x in 29 40 58 76 87 80 120 152 167 180 ; do inkscape --without-gui --export-png tictalktoc-app/tictalktoc/Images.xcassets/AppIcon-lite.appiconset/lite${x}.png -w ${x} graphics/icons/logo.svg >/dev/null && echo "exporting appicon_${x}.png" & done
+    
+    let tasks = self.images.flatMap{ (image) -> ImageConversionTaskProtocol? in
+      return ImageConversionBuilder.sharedInstance.conversion(forImage: image, withSpecifications: self.specifications, andConfiguration: self.configuration)
+      
+    }
+    
+    for image in self.images {
+      
       let process: Process?
       if let scale = image.scale {
         
