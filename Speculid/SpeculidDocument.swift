@@ -71,86 +71,20 @@ let sizeRegex = try! NSRegularExpression(pattern: "(\\d+\\.?\\d*)x(\\d+\\.?\\d*)
 let numberRegex = try! NSRegularExpression(pattern: "\\d", options: [])
 
 public struct SpeculidDocument {
-  public let contentsUrl : URL
-  public let sourceImageUrl : URL
-  public let sizePoints : Int?
-  public let images : [ImageSpecification]
+  public let specifications : SpeculidSpecifications
   
   public init?(url: URL) {
-    let sizePoints : Int?
-    
-    guard let data = try? Data(contentsOf: url) else {
+    guard let specifications = SpeculidSpecifications(url: url) else {
       return nil
     }
     
-    guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else {
-      return nil
-    }
-    
-    guard let dictionary = json as? [String : String] else {
-      return nil
-    }
-    
-    guard let setRelativePath = dictionary["set"], let sourceRelativePath = dictionary["source"] else {
-      return nil
-    }
-    
-    if let sizePointsString = dictionary["size"] {
-      sizePoints = Int(sizePointsString)
-    } else {
-      sizePoints = nil
-    }
-    
-    let contentsJSONURL = url.deletingLastPathComponent().appendingPathComponent(setRelativePath, isDirectory: true).appendingPathComponent("Contents.json")
-    
-    let sourceImageUrl = url.deletingLastPathComponent().appendingPathComponent(sourceRelativePath)
-    
-    guard let contentsJSONData = try? Data(contentsOf: contentsJSONURL) else {
-      return nil
-    }
-    
-    guard let contentsJSON = try? JSONSerialization.jsonObject(with: contentsJSONData, options: []) as? [String : Any] else {
-      return nil
-    }
-    
-    guard let images = contentsJSON?["images"] as? [[String : String]]  else {
-      return nil
-    }
-    
-    self.contentsUrl = contentsJSONURL
-    self.sourceImageUrl = sourceImageUrl
-    self.sizePoints = sizePoints
-    
-    self.images = images.flatMap { (dictionary) -> ImageSpecification? in
-      let scale: CGFloat?
-      let size: CGSize?
-      
-      if let scaleString = dictionary["scale"]?.firstMatchGroups(regex: scaleRegex)?[1], let value = Double(scaleString) {
-        scale = CGFloat(value)
-      } else {
-        scale = nil
-      }
-      
-      guard let idiomString = dictionary["idiom"], let idiom = ImageIdiom(rawValue: idiomString) else {
-        return nil
-      }
-      
-      if let dimensionStrings = dictionary["size"]?.firstMatchGroups(regex: sizeRegex), let width = Double(dimensionStrings[1]), let height = Double(dimensionStrings[2]) {
-        size = CGSize(width: width, height: height)
-      } else {
-        size = nil
-      }
-      
-      let filename = dictionary["filename"]
-      
-      return ImageSpecification(idiom: idiom, scale: scale, size: size, filename: filename)
-    }
+    self.specifications = specifications
   }
   
   public func build (closure: ((Error?) -> Void)?) {
     //inkscape --export-id=Release --export-id-only --without-gui --export-png Media.xcassets/AppIcon-Production-Release.appiconset/appicon_${x}.png -w ${x} -b white graphics/logo.svg
     //for x in 29 40 58 76 87 80 120 152 167 180 ; do inkscape --without-gui --export-png tictalktoc-app/tictalktoc/Images.xcassets/AppIcon-lite.appiconset/lite${x}.png -w ${x} graphics/icons/logo.svg >/dev/null && echo "exporting appicon_${x}.png" & done
-    let maxScale = self.images.reduce(nil, { (maxScale, image) -> CGFloat? in
+    let maxScale = self.specifications.images.reduce(nil, { (maxScale, image) -> CGFloat? in
       
       
       guard let scale = image.scale else {
@@ -163,23 +97,23 @@ public struct SpeculidDocument {
       
       return max(scale, maxScale)
     })
-    for image in self.images {
+    for image in self.specifications.images {
       let process: Process?
       if let scale = image.scale {
         
-        if self.sourceImageUrl.pathExtension.compare("svg", options: .caseInsensitive, range: nil, locale: nil) == .orderedSame {
-          var arguments = ["--without-gui","--export-png"]
+        if self.specifications.sourceImageUrl.pathExtension.compare("svg", options: .caseInsensitive, range: nil, locale: nil) == .orderedSame {
+          var arguments : [String] = ["--without-gui","--export-png"]
           if let size = image.size {
             
             let dimension = size.height > size.width ? "-h" : "-w"
             let length = Int(round(max(size.width, size.height) * scale))
-            let destinationURL = self.contentsUrl.deletingLastPathComponent().appendingPathComponent(self.sourceImageUrl.deletingPathExtension().lastPathComponent).appendingPathExtension("\(size.width.cleanValue)x\(size.height.cleanValue).\(scale.cleanValue)x.png")
-            arguments.append(contentsOf: [destinationURL.path,dimension,"\(length)", self.sourceImageUrl.absoluteURL.path])
+            let destinationURL = self.specifications.contentsDirectoryUrl.appendingPathComponent(self.specifications.sourceImageUrl.deletingPathExtension().lastPathComponent).appendingPathExtension("\(size.width.cleanValue)x\(size.height.cleanValue).\(scale.cleanValue)x.png")
+            arguments.append(contentsOf: [destinationURL.path,dimension,"\(length)", self.specifications.sourceImageUrl.absoluteURL.path])
             //process.waitUntilExit()
           } else {
             // convert to
-            let destinationURL = self.contentsUrl.deletingLastPathComponent().appendingPathComponent(self.sourceImageUrl.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
-            arguments.append(contentsOf: [destinationURL.path,self.sourceImageUrl.absoluteURL.path])
+            let destinationURL = self.specifications.contentsDirectoryUrl.appendingPathComponent(self.specifications.sourceImageUrl.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
+            arguments.append(contentsOf: [destinationURL.path,self.specifications.sourceImageUrl.absoluteURL.path])
             
             // if svg
             //process = nil
@@ -192,7 +126,7 @@ public struct SpeculidDocument {
           process = Process.launchedProcess(launchPath: "/usr/local/bin/inkscape", arguments:
             arguments)
         } else {
-          let destinationURL = self.contentsUrl.deletingLastPathComponent().appendingPathComponent(self.sourceImageUrl.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
+          let destinationURL = self.specifications.contentsDirectoryUrl.appendingPathComponent(self.specifications.sourceImageUrl.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
           let resizeValue : String
           if let resize1x = image.size {
             resizeValue = "\(resize1x.width * scale)x\(resize1x.height * scale)"
@@ -201,13 +135,13 @@ public struct SpeculidDocument {
           } else {
             fatalError()
           }
-          process = Process.launchedProcess(launchPath: "/usr/local/bin/convert", arguments: [self.sourceImageUrl.path,"-resize",resizeValue,destinationURL.path])
+          process = Process.launchedProcess(launchPath: "/usr/local/bin/convert", arguments: [self.specifications.sourceImageUrl.path,"-resize",resizeValue,destinationURL.path])
         }
       } else {
         // convert to pdf
         // inkscape --without-gui --export-area-drawing --export-pdf $ASSET_ROOT/$packname/$imagename-$packname.imageset/icon.pdf $file 2> /dev/null > /dev/null  &
-        let destinationURL = self.contentsUrl.deletingLastPathComponent().appendingPathComponent(self.sourceImageUrl.deletingPathExtension().lastPathComponent).appendingPathExtension("pdf")
-        process = Process.launchedProcess(launchPath: "/usr/local/bin/inkscape", arguments: ["--without-gui","--export-area-drawing","--export-pdf",destinationURL.path,self.sourceImageUrl.absoluteURL.path])
+        let destinationURL = self.specifications.contentsDirectoryUrl.appendingPathComponent(self.specifications.sourceImageUrl.deletingPathExtension().lastPathComponent).appendingPathExtension("pdf")
+        process = Process.launchedProcess(launchPath: "/usr/local/bin/inkscape", arguments: ["--without-gui","--export-area-drawing","--export-pdf",destinationURL.path,self.specifications.sourceImageUrl.absoluteURL.path])
       }
       
       process?.waitUntilExit()
