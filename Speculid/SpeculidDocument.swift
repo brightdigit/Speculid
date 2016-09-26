@@ -13,9 +13,17 @@ let sizeRegex = try! NSRegularExpression(pattern: "(\\d+\\.?\\d*)x(\\d+\\.?\\d*)
 
 let numberRegex = try! NSRegularExpression(pattern: "\\d", options: [])
 
-public struct SpeculidDocument {
-  public let specifications : SpeculidSpecifications
-  public let images : [ImageSpecification]
+public struct SpeculidDocument : SpeculidDocumentProtocol {
+  public let _specifications : SpeculidSpecifications
+  public let _images : [ImageSpecification]
+  
+  public var specifications: SpeculidSpecificationsProtocol {
+    return self._specifications
+  }
+  
+  public var images: [ImageSpecificationProtocol] {
+    return self._images
+  }
   
   public init?(url: URL, configuration: SpeculidConfiguration? = nil) {
     
@@ -35,7 +43,7 @@ public struct SpeculidDocument {
       return nil
     }
     
-    self.images = images.flatMap { (dictionary) -> ImageSpecification? in
+    self._images = images.flatMap { (dictionary) -> ImageSpecification? in
       let scale: CGFloat?
       let size: CGSize?
       
@@ -62,6 +70,6 @@ public struct SpeculidDocument {
     
     
     
-    self.specifications = specifications
+    self._specifications = specifications
   }
 }

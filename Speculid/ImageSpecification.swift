@@ -8,16 +8,7 @@
 
 import Foundation
 
-public enum ImageIdiom : String {
-  case universal = "universal",
-  iphone = "iphone",
-  ipad = "ipad",
-  mac = "mac",
-  tv = "tv",
-  watch = "watch"
-}
-
-public struct ImageSpecification {
+public struct ImageSpecification : ImageSpecificationProtocol{
   public let idiom : ImageIdiom
   public let scale : CGFloat?
   public let size : CGSize?

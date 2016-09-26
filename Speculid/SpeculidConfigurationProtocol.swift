@@ -10,4 +10,5 @@ import Foundation
 
 public protocol SpeculidConfigurationProtocol {
   var inkscapeURL : URL? { get }
+  var convertURL : URL? { get }
 }

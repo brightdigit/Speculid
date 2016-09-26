@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B342017F1D998D39004C49D6"
-               BuildableName = "spcld"
-               BlueprintName = "spcld"
+               BlueprintIdentifier = "B34201BD1D999309004C49D6"
+               BuildableName = "Speculid.bundle"
+               BlueprintName = "SpeculidBundle"
                ReferencedContainer = "container:speculid.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B342017F1D998D39004C49D6"
+            BlueprintIdentifier = "B34201B21D9992FD004C49D6"
             BuildableName = "spcld"
             BlueprintName = "spcld"
             ReferencedContainer = "container:speculid.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B342017F1D998D39004C49D6"
+            BlueprintIdentifier = "B34201B21D9992FD004C49D6"
             BuildableName = "spcld"
             BlueprintName = "spcld"
             ReferencedContainer = "container:speculid.xcodeproj">
@@ -63,7 +63,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "${SRCROOT}/Speculid-App/jpg-imageset.spcld"
+            argument = "${SRCROOT}/Speculid-App/svg-imageset.spcld"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
@@ -76,16 +76,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B342017F1D998D39004C49D6"
-            BuildableName = "spcld"
-            BlueprintName = "spcld"
+            BlueprintIdentifier = "B34201BD1D999309004C49D6"
+            BuildableName = "Speculid.bundle"
+            BlueprintName = "SpeculidBundle"
             ReferencedContainer = "container:speculid.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

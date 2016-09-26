@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct SpeculidSpecifications {
+public struct SpeculidSpecifications : SpeculidSpecificationsProtocol {
   public let contentsDirectoryURL : URL
   public let sourceImageURL : URL
   public let sizePoints : Int?

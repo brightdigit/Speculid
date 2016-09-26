@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B310EE511D94C08600C4A30E"
-               BuildableName = "Speculid-App.app"
-               BlueprintName = "Speculid-App"
+               BlueprintIdentifier = "B34201BD1D999309004C49D6"
+               BuildableName = "Speculid.bundle"
+               BlueprintName = "SpeculidBundle"
                ReferencedContainer = "container:speculid.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B310EE511D94C08600C4A30E"
-            BuildableName = "Speculid-App.app"
-            BlueprintName = "Speculid-App"
+            BlueprintIdentifier = "B34201B21D9992FD004C49D6"
+            BuildableName = "spcld"
+            BlueprintName = "spcld"
             ReferencedContainer = "container:speculid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B310EE511D94C08600C4A30E"
-            BuildableName = "Speculid-App.app"
-            BlueprintName = "Speculid-App"
+            BlueprintIdentifier = "B34201B21D9992FD004C49D6"
+            BuildableName = "spcld"
+            BlueprintName = "spcld"
             ReferencedContainer = "container:speculid.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -76,16 +76,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B310EE511D94C08600C4A30E"
-            BuildableName = "Speculid-App.app"
-            BlueprintName = "Speculid-App"
+            BlueprintIdentifier = "B34201BD1D999309004C49D6"
+            BuildableName = "Speculid.bundle"
+            BlueprintName = "SpeculidBundle"
             ReferencedContainer = "container:speculid.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
