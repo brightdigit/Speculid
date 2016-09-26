@@ -10,11 +10,6 @@
 		B310EE401D94BF6D00C4A30E /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
 		B310EE451D94BF6D00C4A30E /* SpeculidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B310EE441D94BF6D00C4A30E /* SpeculidTests.swift */; };
 		B310EE471D94BF6D00C4A30E /* Speculid.h in Headers */ = {isa = PBXBuildFile; fileRef = B310EE391D94BF6D00C4A30E /* Speculid.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B310EE551D94C08600C4A30E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B310EE541D94C08600C4A30E /* AppDelegate.swift */; };
-		B310EE571D94C08600C4A30E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B310EE561D94C08600C4A30E /* ViewController.swift */; };
-		B310EE591D94C08600C4A30E /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = B310EE581D94C08600C4A30E /* Document.swift */; };
-		B310EE5B1D94C08600C4A30E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B310EE5A1D94C08600C4A30E /* Assets.xcassets */; };
-		B310EE5E1D94C08600C4A30E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B310EE5C1D94C08600C4A30E /* Main.storyboard */; };
 		B32AD7C41D98112100B871CE /* SpeculidSpecifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7C31D98112100B871CE /* SpeculidSpecifications.swift */; };
 		B32AD7C61D982E8D00B871CE /* ProcessImageConversionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7C51D982E8D00B871CE /* ProcessImageConversionTask.swift */; };
 		B32AD7C81D982E9F00B871CE /* ImageConversionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7C71D982E9F00B871CE /* ImageConversionBuilder.swift */; };
@@ -23,10 +18,12 @@
 		B32AD7CE1D98453E00B871CE /* SpeculidConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7CD1D98453E00B871CE /* SpeculidConfiguration.swift */; };
 		B34201691D9975DC004C49D6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34201681D9975DC004C49D6 /* String.swift */; };
 		B342016B1D997602004C49D6 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342016A1D997602004C49D6 /* CGFloat.swift */; };
+		B34201B61D9992FD004C49D6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34201B51D9992FD004C49D6 /* main.swift */; };
+		B34201C51D999320004C49D6 /* spcld in CopyFiles */ = {isa = PBXBuildFile; fileRef = B34201B31D9992FD004C49D6 /* spcld */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B34201C71D99932B004C49D6 /* Speculid.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B34201C81D999367004C49D6 /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
 		B3B746FE1D974C4A0044809F /* SpeculidDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B746FD1D974C4A0044809F /* SpeculidDocument.swift */; };
 		B3B747001D9751080044809F /* ImageSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B746FF1D9751080044809F /* ImageSpecification.swift */; };
-		B3EA0C971D953B0700646879 /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
-		B3EA0C981D953B0700646879 /* Speculid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3EDA6601D985ACA00F4E77F /* SpeculidConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDA65F1D985ACA00F4E77F /* SpeculidConfigurationProtocol.swift */; };
 		B3EDA6621D98A13F00F4E77F /* SpeculidBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDA6611D98A13F00F4E77F /* SpeculidBuilder.swift */; };
 		B3EDA6641D98A16A00F4E77F /* SpeculidBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDA6631D98A16A00F4E77F /* SpeculidBuilderProtocol.swift */; };
@@ -40,25 +37,36 @@
 			remoteGlobalIDString = B310EE351D94BF6D00C4A30E;
 			remoteInfo = Speculid;
 		};
-		B3EA0C991D953B0700646879 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B310EE2B1D94BF5000C4A30E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B310EE351D94BF6D00C4A30E;
-			remoteInfo = Speculid;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B3EA0C9B1D953B0700646879 /* Embed Frameworks */ = {
+		B34201B11D9992FD004C49D6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B34201C41D999314004C49D6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				B34201C51D999320004C49D6 /* spcld in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B34201C61D999323004C49D6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B3EA0C981D953B0700646879 /* Speculid.framework in Embed Frameworks */,
+				B34201C71D99932B004C49D6 /* Speculid.framework in CopyFiles */,
 			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -70,13 +78,7 @@
 		B310EE3F1D94BF6D00C4A30E /* SpeculidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeculidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B310EE441D94BF6D00C4A30E /* SpeculidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidTests.swift; sourceTree = "<group>"; };
 		B310EE461D94BF6D00C4A30E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B310EE521D94C08600C4A30E /* Speculid-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speculid-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B310EE541D94C08600C4A30E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B310EE561D94C08600C4A30E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B310EE581D94C08600C4A30E /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		B310EE5A1D94C08600C4A30E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B310EE5D1D94C08600C4A30E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B310EE5F1D94C08600C4A30E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B310EE6A1D94C69E00C4A30E /* svg-appicon.spcld */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-appicon.spcld"; sourceTree = "<group>"; };
 		B310EE6C1D94C6CE00C4A30E /* layers.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = layers.svg; sourceTree = "<group>"; };
 		B32AD7C31D98112100B871CE /* SpeculidSpecifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SpeculidSpecifications.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -87,6 +89,10 @@
 		B32AD7CD1D98453E00B871CE /* SpeculidConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SpeculidConfiguration.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B34201681D9975DC004C49D6 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B342016A1D997602004C49D6 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		B34201B31D9992FD004C49D6 /* spcld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = spcld; sourceTree = BUILT_PRODUCTS_DIR; };
+		B34201B51D9992FD004C49D6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B34201BE1D999309004C49D6 /* Speculid.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Speculid.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B34201C01D999309004C49D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3A3D0B51D95CFCE0083AF39 /* graphics.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = graphics.sh; sourceTree = "<group>"; };
 		B3A3D0B61D95D2920083AF39 /* jpg-imageset.spcld */ = {isa = PBXFileReference; lastKnownFileType = text; path = "jpg-imageset.spcld"; sourceTree = "<group>"; };
 		B3A3D0B71D95D2920083AF39 /* svg-imageset.spcld */ = {isa = PBXFileReference; lastKnownFileType = text; path = "svg-imageset.spcld"; sourceTree = "<group>"; };
@@ -117,11 +123,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B310EE4F1D94C08600C4A30E /* Frameworks */ = {
+		B34201B01D9992FD004C49D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3EA0C971D953B0700646879 /* Speculid.framework in Frameworks */,
+				B34201C81D999367004C49D6 /* Speculid.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B34201BB1D999309004C49D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +147,8 @@
 				B310EE381D94BF6D00C4A30E /* Speculid */,
 				B310EE431D94BF6D00C4A30E /* SpeculidTests */,
 				B310EE531D94C08600C4A30E /* Speculid-App */,
+				B34201B41D9992FD004C49D6 /* spcld */,
+				B34201BF1D999309004C49D6 /* SpeculidBundle */,
 				B310EE371D94BF6D00C4A30E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,7 +158,8 @@
 			children = (
 				B310EE361D94BF6D00C4A30E /* Speculid.framework */,
 				B310EE3F1D94BF6D00C4A30E /* SpeculidTests.xctest */,
-				B310EE521D94C08600C4A30E /* Speculid-App.app */,
+				B34201B31D9992FD004C49D6 /* spcld */,
+				B34201BE1D999309004C49D6 /* Speculid.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,14 +201,25 @@
 				B3A3D0C41D95D4770083AF39 /* Raster Sources */,
 				B3A3D0C31D95D4670083AF39 /* Vector Sources */,
 				B3A3D0B51D95CFCE0083AF39 /* graphics.sh */,
-				B310EE541D94C08600C4A30E /* AppDelegate.swift */,
-				B310EE561D94C08600C4A30E /* ViewController.swift */,
-				B310EE581D94C08600C4A30E /* Document.swift */,
 				B310EE5A1D94C08600C4A30E /* Assets.xcassets */,
-				B310EE5C1D94C08600C4A30E /* Main.storyboard */,
-				B310EE5F1D94C08600C4A30E /* Info.plist */,
 			);
 			path = "Speculid-App";
+			sourceTree = "<group>";
+		};
+		B34201B41D9992FD004C49D6 /* spcld */ = {
+			isa = PBXGroup;
+			children = (
+				B34201B51D9992FD004C49D6 /* main.swift */,
+			);
+			path = spcld;
+			sourceTree = "<group>";
+		};
+		B34201BF1D999309004C49D6 /* SpeculidBundle */ = {
+			isa = PBXGroup;
+			children = (
+				B34201C01D999309004C49D6 /* Info.plist */,
+			);
+			path = SpeculidBundle;
 			sourceTree = "<group>";
 		};
 		B3A3D0C01D95D4180083AF39 /* Raster Image Set */ = {
@@ -291,24 +318,41 @@
 			productReference = B310EE3F1D94BF6D00C4A30E /* SpeculidTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B310EE511D94C08600C4A30E /* Speculid-App */ = {
+		B34201B21D9992FD004C49D6 /* spcld */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B310EE601D94C08600C4A30E /* Build configuration list for PBXNativeTarget "Speculid-App" */;
+			buildConfigurationList = B34201B91D9992FD004C49D6 /* Build configuration list for PBXNativeTarget "spcld" */;
 			buildPhases = (
-				B310EE4E1D94C08600C4A30E /* Sources */,
-				B310EE4F1D94C08600C4A30E /* Frameworks */,
-				B310EE501D94C08600C4A30E /* Resources */,
-				B3EA0C9B1D953B0700646879 /* Embed Frameworks */,
+				B34201AF1D9992FD004C49D6 /* Sources */,
+				B34201B01D9992FD004C49D6 /* Frameworks */,
+				B34201B11D9992FD004C49D6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B3EA0C9A1D953B0700646879 /* PBXTargetDependency */,
 			);
-			name = "Speculid-App";
-			productName = "Speculid-App";
-			productReference = B310EE521D94C08600C4A30E /* Speculid-App.app */;
-			productType = "com.apple.product-type.application";
+			name = spcld;
+			productName = spcld;
+			productReference = B34201B31D9992FD004C49D6 /* spcld */;
+			productType = "com.apple.product-type.tool";
+		};
+		B34201BD1D999309004C49D6 /* SpeculidBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B34201C11D999309004C49D6 /* Build configuration list for PBXNativeTarget "SpeculidBundle" */;
+			buildPhases = (
+				B34201BA1D999309004C49D6 /* Sources */,
+				B34201BB1D999309004C49D6 /* Frameworks */,
+				B34201BC1D999309004C49D6 /* Resources */,
+				B34201C41D999314004C49D6 /* CopyFiles */,
+				B34201C61D999323004C49D6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpeculidBundle;
+			productName = SpeculidBundle;
+			productReference = B34201BE1D999309004C49D6 /* Speculid.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -330,7 +374,12 @@
 						DevelopmentTeam = MLT7M394S7;
 						ProvisioningStyle = Automatic;
 					};
-					B310EE511D94C08600C4A30E = {
+					B34201B21D9992FD004C49D6 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = MLT7M394S7;
+						ProvisioningStyle = Automatic;
+					};
+					B34201BD1D999309004C49D6 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MLT7M394S7;
 						ProvisioningStyle = Automatic;
@@ -352,7 +401,8 @@
 			targets = (
 				B310EE351D94BF6D00C4A30E /* Speculid */,
 				B310EE3E1D94BF6D00C4A30E /* SpeculidTests */,
-				B310EE511D94C08600C4A30E /* Speculid-App */,
+				B34201B21D9992FD004C49D6 /* spcld */,
+				B34201BD1D999309004C49D6 /* SpeculidBundle */,
 			);
 		};
 /* End PBXProject section */
@@ -372,12 +422,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B310EE501D94C08600C4A30E /* Resources */ = {
+		B34201BC1D999309004C49D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B310EE5B1D94C08600C4A30E /* Assets.xcassets in Resources */,
-				B310EE5E1D94C08600C4A30E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,13 +460,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B310EE4E1D94C08600C4A30E /* Sources */ = {
+		B34201AF1D9992FD004C49D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B310EE571D94C08600C4A30E /* ViewController.swift in Sources */,
-				B310EE551D94C08600C4A30E /* AppDelegate.swift in Sources */,
-				B310EE591D94C08600C4A30E /* Document.swift in Sources */,
+				B34201B61D9992FD004C49D6 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B34201BA1D999309004C49D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,23 +483,7 @@
 			target = B310EE351D94BF6D00C4A30E /* Speculid */;
 			targetProxy = B310EE411D94BF6D00C4A30E /* PBXContainerItemProxy */;
 		};
-		B3EA0C9A1D953B0700646879 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B310EE351D94BF6D00C4A30E /* Speculid */;
-			targetProxy = B3EA0C991D953B0700646879 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		B310EE5C1D94C08600C4A30E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B310EE5D1D94C08600C4A30E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B310EE2F1D94BF5000C4A30E /* Debug */ = {
@@ -729,109 +766,144 @@
 			};
 			name = Release;
 		};
-		B310EE611D94C08600C4A30E /* Debug */ = {
+		B34201B71D9992FD004C49D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = MLT7M394S7;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Speculid-App/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/Speculid.bundle/Contents/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		B310EE621D94C08600C4A30E /* Release */ = {
+		B34201B81D9992FD004C49D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B34201C21D999309004C49D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = SpeculidBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SpeculidBundle;
+				PRODUCT_NAME = Speculid;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B34201C31D999309004C49D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = MLT7M394S7;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Speculid-App/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				INFOPLIST_FILE = SpeculidBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-App";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SpeculidBundle;
+				PRODUCT_NAME = Speculid;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -865,14 +937,21 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B310EE601D94C08600C4A30E /* Build configuration list for PBXNativeTarget "Speculid-App" */ = {
+		B34201B91D9992FD004C49D6 /* Build configuration list for PBXNativeTarget "spcld" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B310EE611D94C08600C4A30E /* Debug */,
-				B310EE621D94C08600C4A30E /* Release */,
+				B34201B71D9992FD004C49D6 /* Debug */,
+				B34201B81D9992FD004C49D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+		};
+		B34201C11D999309004C49D6 /* Build configuration list for PBXNativeTarget "SpeculidBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B34201C21D999309004C49D6 /* Debug */,
+				B34201C31D999309004C49D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
