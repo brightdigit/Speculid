@@ -9,9 +9,9 @@
 import Foundation
 
 public struct ImageConversionBuilder : ImageConversionBuilderProtocol {
-  public static let sharedInstance:ImageConversionBuilderProtocol = ImageConversionBuilder(builders: [ImageConversionBuilderProtocol]())
+  public static let sharedInstance:ImageConversionBuilderProtocol = ImageConversionBuilder()
   
-  public let builders : [ImageConversionBuilderProtocol]
+  public let builders : [ImageConversionBuilderProtocol] = [PDFConversionBuilder(), SVGImageConversionBuilder(), RasterConversionBuilder()]
   
   public func conversion(forImage imageSpecification: ImageSpecification, withSpecifications specifications: SpeculidSpecifications, andConfiguration configuration: SpeculidConfiguration) -> ImageConversionTaskProtocol? {
     for builders in builders {

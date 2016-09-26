@@ -75,22 +75,6 @@ public struct SpeculidDocument {
   public let images : [ImageSpecification]
   //public let configuration: SpeculidConfiguration
   
-  public var maxScale : CGFloat? {
-    return self.images.reduce(nil, { (maxScale, image) -> CGFloat? in
-      
-      
-      guard let scale = image.scale else {
-        return maxScale
-      }
-      
-      guard let maxScale = maxScale else {
-        return scale
-      }
-      
-      
-      return max(scale, maxScale)
-    })
-  }
   
   public init?(url: URL, configuration: SpeculidConfiguration? = nil) {
     
@@ -134,9 +118,25 @@ public struct SpeculidDocument {
       
       return ImageSpecification(idiom: idiom, scale: scale, size: size, filename: filename)
     }
-
+    
+    let maxScale = self.images.reduce(nil, { (maxScale, image) -> CGFloat? in
+      
+      
+      guard let scale = image.scale else {
+        return maxScale
+      }
+      
+      guard let maxScale = maxScale else {
+        return scale
+      }
+      
+      
+      return max(scale, maxScale)
+    })
+    
     
     self.specifications = specifications
+    
     //self.configuration = configuration ?? SpeculidConfiguration.default
     
     

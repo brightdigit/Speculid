@@ -18,11 +18,9 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
       return nil
     }
     
-    if let scale = imageSpecification.scale {
-      if specifications.sourceImageURL.pathExtension.compare("svg", options: .caseInsensitive, range: nil, locale: nil) == .orderedSame {
+
         var arguments : [String] = ["--without-gui","--export-png"]
-        if let size = imageSpecification.size {
-          
+        if let size = imageSpecification.size {          
           let dimension = size.height > size.width ? "-h" : "-w"
           let length = Int(round(max(size.width, size.height) * scale))
           let destinationURL = specifications.contentsDirectoryURL.appendingPathComponent(specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(size.width.cleanValue)x\(size.height.cleanValue).\(scale.cleanValue)x.png")
@@ -47,10 +45,8 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
         process.arguments = arguments
         //process = Process.launchedProcess(launchPath: "/usr/local/bin/inkscape", arguments: arguments)
         return ProcessImageConversionTask(process: process)
-      }
-    }
+
     
-    return nil
   }
   
   
@@ -58,15 +54,47 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
 
 public struct PDFConversionBuilder : ImageConversionBuilderProtocol {
   public func conversion(forImage imageSpecification: ImageSpecification, withSpecifications specifications: SpeculidSpecifications, andConfiguration configuration: SpeculidConfiguration) -> ImageConversionTaskProtocol? {
-    return nil
+    
+    if imageSpecification.scale != nil {
+      return nil
+    }
+    
+    let destinationURL = specifications.contentsDirectoryURL.appendingPathComponent(specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("pdf")
+    let process = Process()
+    
+    process.launchPath = configuration.inkscapeURL?.path
+    process.arguments = ["--without-gui","--export-area-drawing","--export-pdf",destinationURL.path,specifications.sourceImageURL.absoluteURL.path]
+    
+    return ProcessImageConversionTask(process: process)
+      //Process.launchedProcess(launchPath: "/usr/local/bin/inkscape", arguments: ["--without-gui","--export-area-drawing","--export-pdf",destinationURL.path,self.specifications.sourceImageURL.absoluteURL.path])
+  
+  
   }
-  
-  
 }
 
 public struct RasterConversionBuilder :ImageConversionBuilderProtocol {
   public func conversion(forImage imageSpecification: ImageSpecification, withSpecifications specifications: SpeculidSpecifications, andConfiguration configuration: SpeculidConfiguration) -> ImageConversionTaskProtocol? {
-    return nil
+    
+    guard let scale = imageSpecification.scale else {
+      return nil
+    }
+    
+    guard specifications.sourceImageURL.pathExtension.compare("svg", options: .caseInsensitive, range: nil, locale: nil) != .orderedSame else {
+      return nil
+    }
+    
+    guard let size = imageSpecification.size else {
+      return nil
+    }
+    
+    let process = Process()
+    
+    let destinationURL = specifications.contentsDirectoryURL.appendingPathComponent(specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
+    let resizeValue = "\(size.width * scale)x\(size.height * scale)"
+    
+    process.launchPath = configuration.convertURL?.path
+    process.arguments = [specifications.sourceImageURL.path,"-resize",resizeValue,destinationURL.path]
+    return ProcessImageConversionTask(process: process)
   }
   
   

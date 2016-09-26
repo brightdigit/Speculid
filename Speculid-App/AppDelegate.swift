@@ -92,6 +92,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         */
       SpeculidBuilder.shared.build(document: document, callback: {
         (error) in
+        
+        exit(error == nil ? 0 : 1)
       })
       }
       

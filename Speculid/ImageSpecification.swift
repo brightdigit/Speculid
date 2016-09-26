@@ -22,4 +22,5 @@ public struct ImageSpecification {
   public let scale : CGFloat?
   public let size : CGSize?
   public let filename : String?
+  
 }

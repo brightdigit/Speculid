@@ -13,7 +13,7 @@ public struct SpeculidSpecifications {
   public let sourceImageURL : URL
   public let sizePoints : Int?
  
-  public init?(url: URL) {
+  public init?(url: URL, maxScale: CGFloat? = nil) {
     let sizePoints : Int?
     
     guard let data = try? Data(contentsOf: url) else {

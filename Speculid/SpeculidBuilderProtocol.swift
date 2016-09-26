@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol SpeculidBuilderProtocol {
-  func build (document: SpeculidDocument, callback: ((Error?) -> Void))
+  func build (document: SpeculidDocument, callback: @escaping ((Error?) -> Void))
 }
