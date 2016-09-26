@@ -73,7 +73,7 @@ let numberRegex = try! NSRegularExpression(pattern: "\\d", options: [])
 public struct SpeculidDocument {
   public let specifications : SpeculidSpecifications
   public let images : [ImageSpecification]
-  public let configuration: SpeculidConfiguration
+  //public let configuration: SpeculidConfiguration
   
   public var maxScale : CGFloat? {
     return self.images.reduce(nil, { (maxScale, image) -> CGFloat? in
@@ -98,7 +98,7 @@ public struct SpeculidDocument {
       return nil
     }
     
-    guard let contentsJSONData = try? Data(contentsOf: specifications.contentsDirectoryUrl.appendingPathComponent("Contents.json")) else {
+    guard let contentsJSONData = try? Data(contentsOf: specifications.contentsDirectoryURL.appendingPathComponent("Contents.json")) else {
       return nil
     }
     
@@ -137,13 +137,13 @@ public struct SpeculidDocument {
 
     
     self.specifications = specifications
-    self.configuration = configuration ?? SpeculidConfiguration()
+    //self.configuration = configuration ?? SpeculidConfiguration.default
     
     
   }
   
   
-  
+  /*
   public func build (closure: ((Error?) -> Void)?) {
     //inkscape --export-id=Release --export-id-only --without-gui --export-png Media.xcassets/AppIcon-Production-Release.appiconset/appicon_${x}.png -w ${x} -b white graphics/logo.svg
     //for x in 29 40 58 76 87 80 120 152 167 180 ; do inkscape --without-gui --export-png tictalktoc-app/tictalktoc/Images.xcassets/AppIcon-lite.appiconset/lite${x}.png -w ${x} graphics/icons/logo.svg >/dev/null && echo "exporting appicon_${x}.png" & done
@@ -158,19 +158,19 @@ public struct SpeculidDocument {
       let process: Process?
       if let scale = image.scale {
         
-        if self.specifications.sourceImageUrl.pathExtension.compare("svg", options: .caseInsensitive, range: nil, locale: nil) == .orderedSame {
+        if self.specifications.sourceImageURL.pathExtension.compare("svg", options: .caseInsensitive, range: nil, locale: nil) == .orderedSame {
           var arguments : [String] = ["--without-gui","--export-png"]
           if let size = image.size {
             
             let dimension = size.height > size.width ? "-h" : "-w"
             let length = Int(round(max(size.width, size.height) * scale))
-            let destinationURL = self.specifications.contentsDirectoryUrl.appendingPathComponent(self.specifications.sourceImageUrl.deletingPathExtension().lastPathComponent).appendingPathExtension("\(size.width.cleanValue)x\(size.height.cleanValue).\(scale.cleanValue)x.png")
-            arguments.append(contentsOf: [destinationURL.path,dimension,"\(length)", self.specifications.sourceImageUrl.absoluteURL.path])
+            let destinationURL = self.specifications.contentsDirectoryURL.appendingPathComponent(self.specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(size.width.cleanValue)x\(size.height.cleanValue).\(scale.cleanValue)x.png")
+            arguments.append(contentsOf: [destinationURL.path,dimension,"\(length)", self.specifications.sourceImageURL.absoluteURL.path])
             //process.waitUntilExit()
           } else {
             // convert to
-            let destinationURL = self.specifications.contentsDirectoryUrl.appendingPathComponent(self.specifications.sourceImageUrl.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
-            arguments.append(contentsOf: [destinationURL.path,self.specifications.sourceImageUrl.absoluteURL.path])
+            let destinationURL = self.specifications.contentsDirectoryURL.appendingPathComponent(self.specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
+            arguments.append(contentsOf: [destinationURL.path,self.specifications.sourceImageURL.absoluteURL.path])
             
             // if svg
             //process = nil
@@ -183,7 +183,7 @@ public struct SpeculidDocument {
           process = Process.launchedProcess(launchPath: "/usr/local/bin/inkscape", arguments:
             arguments)
         } else {
-          let destinationURL = self.specifications.contentsDirectoryUrl.appendingPathComponent(self.specifications.sourceImageUrl.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
+          let destinationURL = self.specifications.contentsDirectoryURL.appendingPathComponent(self.specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
           let resizeValue : String
           if let resize1x = image.size {
             resizeValue = "\(resize1x.width * scale)x\(resize1x.height * scale)"
@@ -192,18 +192,19 @@ public struct SpeculidDocument {
           } else {
             fatalError()
           }
-          process = Process.launchedProcess(launchPath: "/usr/local/bin/convert", arguments: [self.specifications.sourceImageUrl.path,"-resize",resizeValue,destinationURL.path])
+          process = Process.launchedProcess(launchPath: "/usr/local/bin/convert", arguments: [self.specifications.sourceImageURL.path,"-resize",resizeValue,destinationURL.path])
         }
       } else {
         // convert to pdf
         // inkscape --without-gui --export-area-drawing --export-pdf $ASSET_ROOT/$packname/$imagename-$packname.imageset/icon.pdf $file 2> /dev/null > /dev/null  &
-        let destinationURL = self.specifications.contentsDirectoryUrl.appendingPathComponent(self.specifications.sourceImageUrl.deletingPathExtension().lastPathComponent).appendingPathExtension("pdf")
-        process = Process.launchedProcess(launchPath: "/usr/local/bin/inkscape", arguments: ["--without-gui","--export-area-drawing","--export-pdf",destinationURL.path,self.specifications.sourceImageUrl.absoluteURL.path])
+        let destinationURL = self.specifications.contentsDirectoryURL.appendingPathComponent(self.specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("pdf")
+        process = Process.launchedProcess(launchPath: "/usr/local/bin/inkscape", arguments: ["--without-gui","--export-area-drawing","--export-pdf",destinationURL.path,self.specifications.sourceImageURL.absoluteURL.path])
       }
       
       process?.waitUntilExit()
     }
     
   }
+ */
   
 }

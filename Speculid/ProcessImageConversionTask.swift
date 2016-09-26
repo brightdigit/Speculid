@@ -8,6 +8,6 @@
 
 import Foundation
 
-public struct ProcessImageConversionTask {
-  
+public struct ProcessImageConversionTask : ImageConversionTaskProtocol {
+  public let process: Process
 }

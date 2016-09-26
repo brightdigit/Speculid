@@ -83,12 +83,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       let path = CommandLine.arguments[1]
       let speculidURL = URL(fileURLWithPath: path)
       
-      let document = SpeculidDocument(url: speculidURL)
+      if let document = SpeculidDocument(url: speculidURL) {
+      /*
       document!.build{
         (error) in
       }
       print(speculidURL)
-            
+        */
+      SpeculidBuilder.shared.build(document: document, callback: {
+        (error) in
+      })
+      }
       
     #endif
   }

@@ -9,8 +9,8 @@
 import Foundation
 
 public struct SpeculidSpecifications {
-  public let contentsDirectoryUrl : URL
-  public let sourceImageUrl : URL
+  public let contentsDirectoryURL : URL
+  public let sourceImageURL : URL
   public let sizePoints : Int?
  
   public init?(url: URL) {
@@ -40,11 +40,11 @@ public struct SpeculidSpecifications {
     
     let contentsJSONURL = url.deletingLastPathComponent().appendingPathComponent(setRelativePath, isDirectory: true).appendingPathComponent("Contents.json")
     
-    let sourceImageUrl = url.deletingLastPathComponent().appendingPathComponent(sourceRelativePath)
+    let sourceImageURL = url.deletingLastPathComponent().appendingPathComponent(sourceRelativePath)
     
     
-    self.contentsDirectoryUrl = contentsJSONURL.deletingLastPathComponent()
-    self.sourceImageUrl = sourceImageUrl
+    self.contentsDirectoryURL = contentsJSONURL.deletingLastPathComponent()
+    self.sourceImageURL = sourceImageURL
     self.sizePoints = sizePoints
   }
   
