@@ -9,7 +9,7 @@
 import Foundation
 
 public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
-  public func conversion(forImage imageSpecification: ImageSpecificationProtocol, withSpecifications specifications: SpeculidSpecificationsProtocol, andConfiguration configuration: SpeculidConfigurationProtocol) -> ImageConversionTaskProtocol? {
+  public func conversion(forImage imageSpecification: ImageSpecificationProtocol, withSpecifications specifications: SpeculidSpecificationsProtocol, andConfiguration configuration: SpeculidConfigurationProtocol) -> ConversionResult? {
     guard let scale = imageSpecification.scale else {
       return nil
     }
@@ -18,6 +18,9 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
       return nil
     }
     
+    guard let inkscapeURL = configuration.inkscapeURL else {
+      return .Error(MissingRequiredInstallationError(name: "inkscape"))
+    }
     
     var arguments : [String] = ["--without-gui","--export-png"]
     if let size = imageSpecification.size {
@@ -30,21 +33,13 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
       // convert to
       let destinationURL = specifications.contentsDirectoryURL.appendingPathComponent(specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
       arguments.append(contentsOf: [destinationURL.path, specifications.sourceImageURL.absoluteURL.path])
-      
-      // if svg
-      //process = nil
-      // else
-      //convert graphics/pexels-photo.jpg -resize ${x} Media.xcassets/Backgrounds/Wrist-Watch.imageset/Write-Watch_${x}.jpg 2> /dev/null > /dev/null
     }
     
-    
-    //convert graphics/pexels-photo.jpg -resize ${x} Media.xcassets/Backgrounds/Wrist-Watch.imageset/Write-Watch_${x}.jpg 2> /dev/null > /dev/null
     let process = Process()
-    
-    process.launchPath = configuration.inkscapeURL?.path
+    process.launchPath = inkscapeURL.path
     process.arguments = arguments
-    //process = Process.launchedProcess(launchPath: "/usr/local/bin/inkscape", arguments: arguments)
-    return ProcessImageConversionTask(process: process)
+    
+    return .Task(ProcessImageConversionTask(process: process))
     
     
   }

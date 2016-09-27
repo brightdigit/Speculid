@@ -9,7 +9,7 @@
 import Foundation
 
 public struct RasterConversionBuilder :ImageConversionBuilderProtocol {
-  public func conversion(forImage imageSpecification: ImageSpecificationProtocol, withSpecifications specifications: SpeculidSpecificationsProtocol, andConfiguration configuration: SpeculidConfigurationProtocol) -> ImageConversionTaskProtocol? {
+  public func conversion(forImage imageSpecification: ImageSpecificationProtocol, withSpecifications specifications: SpeculidSpecificationsProtocol, andConfiguration configuration: SpeculidConfigurationProtocol) -> ConversionResult? {
     guard let scale = imageSpecification.scale else {
       return nil
     }
@@ -22,14 +22,18 @@ public struct RasterConversionBuilder :ImageConversionBuilderProtocol {
       return nil
     }
     
+    guard let convertURL = configuration.convertURL else {
+      return .Error(MissingRequiredInstallationError(name: "imagemagick"))
+    }
+    
     let process = Process()
     
     let destinationURL = specifications.contentsDirectoryURL.appendingPathComponent(specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
     let resizeValue = "\(size.width * scale)x\(size.height * scale)"
     
-    process.launchPath = configuration.convertURL?.path
+    process.launchPath = convertURL.path
     process.arguments = [specifications.sourceImageURL.path,"-resize",resizeValue,destinationURL.path]
-    return ProcessImageConversionTask(process: process)
+    return .Task(ProcessImageConversionTask(process: process))
   }
   
   

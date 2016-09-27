@@ -8,14 +8,22 @@
 
 import Foundation
 
-public struct ArrayError : Error {
-  public let errors : [Error]
-  
-  public static func error (for errors: [Error]) -> Error? {
-    if errors.count > 1 {
-      return ArrayError(errors: errors)
+public typealias ImageConversionPair = (image: ImageSpecificationProtocol,conversion: ConversionResult?)
+public typealias ImageConversionDictionary = [String:ImageConversionPair]
+
+extension SpeculidSpecificationsProtocol {
+  public func destination(forImage image: ImageSpecificationProtocol) -> String {
+    if let filename = image.filename {
+      return filename
+    } else if let scale = image.scale {
+      if let size = image.size {
+        return self.sourceImageURL.deletingPathExtension().appendingPathExtension("\(size.width.cleanValue)x\(size.height.cleanValue).\(scale.cleanValue)x.png").lastPathComponent
+        //return self.contentsDirectoryURL.appendingPathComponent(self.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(size.width.cleanValue)x\(size.height.cleanValue).\(scale.cleanValue)x.png")
+      } else {
+        return self.sourceImageURL.deletingPathExtension().appendingPathExtension("\(scale.cleanValue)x.png").lastPathComponent
+      }
     } else {
-      return errors.first
+      return self.sourceImageURL.deletingPathExtension().appendingPathExtension("pdf").lastPathComponent
     }
   }
 }
@@ -27,20 +35,26 @@ public struct SpeculidBuilder : SpeculidBuilderProtocol {
   public func build (document: SpeculidDocumentProtocol, callback: @escaping ((Error?) -> Void)) {
     
     var errors = [Error]()
-    let tasks = document.images.flatMap{ (image) -> ImageConversionTaskProtocol? in
-      return ImageConversionBuilder.sharedInstance.conversion(forImage: image, withSpecifications: document.specifications, andConfiguration: self.configuration)
-      
+    
+    let taskDictionary = document.images.reduce(ImageConversionDictionary()) { (dictionary, image) -> ImageConversionDictionary in
+      let conversion = ImageConversionBuilder.sharedInstance.conversion(forImage: image, withSpecifications: document.specifications, andConfiguration: self.configuration)
+      var dictionary = dictionary
+      let destinationFileName = document.specifications.destination(forImage: image)
+      dictionary[destinationFileName] = ImageConversionPair(image: image, conversion: conversion)
+      return dictionary
     }
     
     let group = DispatchGroup()
     
-    for task in tasks {
-      group.enter()
-      task.start{error in
-        if let error = error {
-          errors.append(error)
+    for entry in taskDictionary {
+      if let conversion = entry.value.conversion, case .Task(let task) = conversion {
+        group.enter()
+        task.start{error in
+          if let error = error {
+            errors.append(error)
+          }
+          group.leave()
         }
-        group.leave()
       }
     }
     
@@ -48,5 +62,19 @@ public struct SpeculidBuilder : SpeculidBuilderProtocol {
       callback(ArrayError.error(for: errors))
     }
     
+  }
+}
+
+
+public extension SpeculidBuilder {
+  func build(document : SpeculidDocumentProtocol) -> Error? {
+    var result: Error?
+    let semaphone = DispatchSemaphore(value: 0)
+    self.build(document: document) { (error) in
+      result = error
+      semaphone.signal()
+    }
+    semaphone.wait()
+    return result
   }
 }

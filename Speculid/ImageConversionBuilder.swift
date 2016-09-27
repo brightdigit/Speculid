@@ -13,7 +13,7 @@ public struct ImageConversionBuilder : ImageConversionBuilderProtocol {
   
   public let builders : [ImageConversionBuilderProtocol] = [PDFConversionBuilder(), SVGImageConversionBuilder(), RasterConversionBuilder()]
   
-  public func conversion(forImage imageSpecification: ImageSpecificationProtocol, withSpecifications specifications: SpeculidSpecificationsProtocol, andConfiguration configuration: SpeculidConfigurationProtocol) -> ImageConversionTaskProtocol? {
+  public func conversion(forImage imageSpecification: ImageSpecificationProtocol, withSpecifications specifications: SpeculidSpecificationsProtocol, andConfiguration configuration: SpeculidConfigurationProtocol) -> ConversionResult? {
     for builders in builders {
       if let conversion = builders.conversion(forImage: imageSpecification, withSpecifications: specifications, andConfiguration: configuration) {
         return conversion

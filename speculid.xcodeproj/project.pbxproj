@@ -36,6 +36,8 @@
 		B380860B1D9AA7B2000BC05A /* Speculid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3B746FE1D974C4A0044809F /* SpeculidDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B746FD1D974C4A0044809F /* SpeculidDocument.swift */; };
 		B3B747001D9751080044809F /* ImageSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B746FF1D9751080044809F /* ImageSpecification.swift */; };
+		B3DC29A41D9AAC4E00646E86 /* ArrayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC29A31D9AAC4E00646E86 /* ArrayError.swift */; };
+		B3DC29A81D9AAE1D00646E86 /* MissingRequiredInstallationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC29A71D9AAE1D00646E86 /* MissingRequiredInstallationError.swift */; };
 		B3EDA6601D985ACA00F4E77F /* SpeculidConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDA65F1D985ACA00F4E77F /* SpeculidConfigurationProtocol.swift */; };
 		B3EDA6621D98A13F00F4E77F /* SpeculidBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDA6611D98A13F00F4E77F /* SpeculidBuilder.swift */; };
 		B3EDA6641D98A16A00F4E77F /* SpeculidBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDA6631D98A16A00F4E77F /* SpeculidBuilderProtocol.swift */; };
@@ -144,6 +146,8 @@
 		B3A3D0BF1D95D3EA0083AF39 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = Assets.xcassets/AppIcon.appiconset; sourceTree = "<group>"; };
 		B3B746FD1D974C4A0044809F /* SpeculidDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SpeculidDocument.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B3B746FF1D9751080044809F /* ImageSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSpecification.swift; sourceTree = "<group>"; };
+		B3DC29A31D9AAC4E00646E86 /* ArrayError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayError.swift; sourceTree = "<group>"; };
+		B3DC29A71D9AAE1D00646E86 /* MissingRequiredInstallationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissingRequiredInstallationError.swift; sourceTree = "<group>"; };
 		B3EDA65F1D985ACA00F4E77F /* SpeculidConfigurationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SpeculidConfigurationProtocol.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B3EDA6611D98A13F00F4E77F /* SpeculidBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidBuilder.swift; sourceTree = "<group>"; };
 		B3EDA6631D98A16A00F4E77F /* SpeculidBuilderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidBuilderProtocol.swift; sourceTree = "<group>"; };
@@ -238,10 +242,8 @@
 				B34201CB1D99A3BD004C49D6 /* SpeculidSpecificationsProtocol.swift */,
 				B34201CD1D99A3F5004C49D6 /* ImageSpecificationProtocol.swift */,
 				B34201CF1D99A5CD004C49D6 /* ImageIdiom.swift */,
-				B34201D11D99A5EA004C49D6 /* ProcessError.swift */,
-				B34201D31D99A604004C49D6 /* SVGImageConversionBuilder.swift */,
-				B34201D51D99A61B004C49D6 /* PDFConversionBuilder.swift */,
-				B34201D71D99A62D004C49D6 /* RasterConversionBuilder.swift */,
+				B3DC29A61D9AAD0300646E86 /* Errors */,
+				B3DC29A51D9AACFA00646E86 /* Builders */,
 			);
 			path = Speculid;
 			sourceTree = "<group>";
@@ -336,6 +338,26 @@
 				B3A3D0B81D95D36B0083AF39 /* layers.png */,
 			);
 			name = "Raster Sources";
+			sourceTree = "<group>";
+		};
+		B3DC29A51D9AACFA00646E86 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				B34201D31D99A604004C49D6 /* SVGImageConversionBuilder.swift */,
+				B34201D51D99A61B004C49D6 /* PDFConversionBuilder.swift */,
+				B34201D71D99A62D004C49D6 /* RasterConversionBuilder.swift */,
+			);
+			name = Builders;
+			sourceTree = "<group>";
+		};
+		B3DC29A61D9AAD0300646E86 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				B34201D11D99A5EA004C49D6 /* ProcessError.swift */,
+				B3DC29A31D9AAC4E00646E86 /* ArrayError.swift */,
+				B3DC29A71D9AAE1D00646E86 /* MissingRequiredInstallationError.swift */,
+			);
+			name = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -554,10 +576,12 @@
 				B32AD7CA1D982F7F00B871CE /* ImageConversionBuilderProtocol.swift in Sources */,
 				B34201691D9975DC004C49D6 /* String.swift in Sources */,
 				B34201CA1D99A379004C49D6 /* SpeculidDocumentProtocol.swift in Sources */,
+				B3DC29A81D9AAE1D00646E86 /* MissingRequiredInstallationError.swift in Sources */,
 				B32AD7CE1D98453E00B871CE /* SpeculidConfiguration.swift in Sources */,
 				B32AD7C41D98112100B871CE /* SpeculidSpecifications.swift in Sources */,
 				B342016B1D997602004C49D6 /* CGFloat.swift in Sources */,
 				B34201D21D99A5EA004C49D6 /* ProcessError.swift in Sources */,
+				B3DC29A41D9AAC4E00646E86 /* ArrayError.swift in Sources */,
 				B32AD7C81D982E9F00B871CE /* ImageConversionBuilder.swift in Sources */,
 				B3EDA6621D98A13F00F4E77F /* SpeculidBuilder.swift in Sources */,
 				B3EDA6601D985ACA00F4E77F /* SpeculidConfigurationProtocol.swift in Sources */,
@@ -1155,6 +1179,7 @@
 				B38086071D9AA76E000BC05A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
