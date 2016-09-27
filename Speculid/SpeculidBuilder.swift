@@ -24,7 +24,7 @@ public struct SpeculidBuilder : SpeculidBuilderProtocol {
   public static let shared = SpeculidBuilder(configuration: SpeculidConfiguration.main)
   public let configuration: SpeculidConfiguration
   
-  public func build (document: SpeculidDocument, callback: @escaping ((Error?) -> Void)) {
+  public func build (document: SpeculidDocumentProtocol, callback: @escaping ((Error?) -> Void)) {
     
     var errors = [Error]()
     let tasks = document.images.flatMap{ (image) -> ImageConversionTaskProtocol? in
