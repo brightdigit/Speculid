@@ -18,7 +18,6 @@
 		B32AD7CE1D98453E00B871CE /* SpeculidConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7CD1D98453E00B871CE /* SpeculidConfiguration.swift */; };
 		B34201691D9975DC004C49D6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34201681D9975DC004C49D6 /* String.swift */; };
 		B342016B1D997602004C49D6 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342016A1D997602004C49D6 /* CGFloat.swift */; };
-		B34201B61D9992FD004C49D6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34201B51D9992FD004C49D6 /* main.swift */; };
 		B34201C51D999320004C49D6 /* spcld in CopyFiles */ = {isa = PBXBuildFile; fileRef = B34201B31D9992FD004C49D6 /* spcld */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B34201C71D99932B004C49D6 /* Speculid.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B34201C81D999367004C49D6 /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
@@ -110,7 +109,6 @@
 		B310EE3F1D94BF6D00C4A30E /* SpeculidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeculidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B310EE441D94BF6D00C4A30E /* SpeculidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidTests.swift; sourceTree = "<group>"; };
 		B310EE461D94BF6D00C4A30E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B310EE5A1D94C08600C4A30E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B310EE6A1D94C69E00C4A30E /* svg-appicon.spcld */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-appicon.spcld"; sourceTree = "<group>"; };
 		B310EE6C1D94C6CE00C4A30E /* layers.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = layers.svg; sourceTree = "<group>"; };
 		B32AD7C31D98112100B871CE /* SpeculidSpecifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SpeculidSpecifications.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -122,9 +120,7 @@
 		B34201681D9975DC004C49D6 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B342016A1D997602004C49D6 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		B34201B31D9992FD004C49D6 /* spcld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = spcld; sourceTree = BUILT_PRODUCTS_DIR; };
-		B34201B51D9992FD004C49D6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B34201BE1D999309004C49D6 /* Speculid.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Speculid.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		B34201C01D999309004C49D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B34201C91D99A379004C49D6 /* SpeculidDocumentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidDocumentProtocol.swift; sourceTree = "<group>"; };
 		B34201CB1D99A3BD004C49D6 /* SpeculidSpecificationsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidSpecificationsProtocol.swift; sourceTree = "<group>"; };
 		B34201CD1D99A3F5004C49D6 /* ImageSpecificationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSpecificationProtocol.swift; sourceTree = "<group>"; };
@@ -133,7 +129,7 @@
 		B34201D31D99A604004C49D6 /* SVGImageConversionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGImageConversionBuilder.swift; sourceTree = "<group>"; };
 		B34201D51D99A61B004C49D6 /* PDFConversionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFConversionBuilder.swift; sourceTree = "<group>"; };
 		B34201D71D99A62D004C49D6 /* RasterConversionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RasterConversionBuilder.swift; sourceTree = "<group>"; };
-		B38085F91D9AA76E000BC05A /* Speculid-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speculid-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38085F91D9AA76E000BC05A /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38085FF1D9AA76E000BC05A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B38086041D9AA76E000BC05A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B38086081D9AA78E000BC05A /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -200,9 +196,6 @@
 			children = (
 				B310EE381D94BF6D00C4A30E /* Speculid */,
 				B310EE431D94BF6D00C4A30E /* SpeculidTests */,
-				B310EE531D94C08600C4A30E /* Speculid-App */,
-				B34201B41D9992FD004C49D6 /* spcld */,
-				B34201BF1D999309004C49D6 /* SpeculidBundle */,
 				B38085FA1D9AA76E000BC05A /* Speculid-App */,
 				B310EE371D94BF6D00C4A30E /* Products */,
 			);
@@ -215,7 +208,7 @@
 				B310EE3F1D94BF6D00C4A30E /* SpeculidTests.xctest */,
 				B34201B31D9992FD004C49D6 /* spcld */,
 				B34201BE1D999309004C49D6 /* Speculid.bundle */,
-				B38085F91D9AA76E000BC05A /* Speculid-App.app */,
+				B38085F91D9AA76E000BC05A /* Speculid.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -257,39 +250,15 @@
 			path = SpeculidTests;
 			sourceTree = "<group>";
 		};
-		B310EE531D94C08600C4A30E /* Speculid-App */ = {
-			isa = PBXGroup;
-			children = (
-				B3A3D0C41D95D4770083AF39 /* Raster Sources */,
-				B3A3D0C31D95D4670083AF39 /* Vector Sources */,
-				B3A3D0B51D95CFCE0083AF39 /* graphics.sh */,
-				B310EE5A1D94C08600C4A30E /* Assets.xcassets */,
-			);
-			path = "Speculid-App";
-			sourceTree = "<group>";
-		};
-		B34201B41D9992FD004C49D6 /* spcld */ = {
-			isa = PBXGroup;
-			children = (
-				B34201B51D9992FD004C49D6 /* main.swift */,
-			);
-			path = spcld;
-			sourceTree = "<group>";
-		};
-		B34201BF1D999309004C49D6 /* SpeculidBundle */ = {
-			isa = PBXGroup;
-			children = (
-				B34201C01D999309004C49D6 /* Info.plist */,
-			);
-			path = SpeculidBundle;
-			sourceTree = "<group>";
-		};
 		B38085FA1D9AA76E000BC05A /* Speculid-App */ = {
 			isa = PBXGroup;
 			children = (
 				B38085FF1D9AA76E000BC05A /* Assets.xcassets */,
 				B38086041D9AA76E000BC05A /* Info.plist */,
 				B38086081D9AA78E000BC05A /* main.swift */,
+				B3A3D0C41D95D4770083AF39 /* Raster Sources */,
+				B3A3D0C31D95D4670083AF39 /* Vector Sources */,
+				B3A3D0B51D95CFCE0083AF39 /* graphics.sh */,
 			);
 			path = "Speculid-App";
 			sourceTree = "<group>";
@@ -462,7 +431,7 @@
 			);
 			name = "Speculid-App";
 			productName = "Speculid-App";
-			productReference = B38085F91D9AA76E000BC05A /* Speculid-App.app */;
+			productReference = B38085F91D9AA76E000BC05A /* Speculid.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -600,7 +569,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B34201B61D9992FD004C49D6 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1063,7 +1031,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1081,7 +1049,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-App";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Speculid;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1104,7 +1073,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1117,7 +1086,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-App";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Speculid;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;

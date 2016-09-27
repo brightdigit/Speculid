@@ -7,27 +7,29 @@
 //
 
 import Foundation
-
 import Speculid
 
+let speculidURL: URL?
 
-if CommandLine.arguments.count > 1 {
-  
-  
-  let path = CommandLine.arguments[1]
-  let speculidURL = URL(fileURLWithPath: path)
-  
+if let path = CommandLine.arguments.last , CommandLine.arguments.count > 1 {
+  speculidURL = URL(fileURLWithPath: path)
+} else {
+  let openPanel = NSOpenPanel()
+  openPanel.allowsMultipleSelection = false
+  openPanel.canChooseDirectories = false
+  openPanel.canChooseFiles = true
+  openPanel.allowedFileTypes = ["spcld"]
+  openPanel.runModal()
+  openPanel.title = "Select File"
+  speculidURL = openPanel.url
+  openPanel.close()
+}
+
+if let speculidURL = speculidURL {
   if let document = SpeculidDocument(url: speculidURL) {
-    /*
-     document!.build{
-     (error) in
-     }
-     print(speculidURL)
-     */
     if let error = SpeculidBuilder.shared.build(document: document) {
       print(error)
       exit(1)
     }
-    
   }
 }
