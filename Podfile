@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :osx, '10.10'
 
 target 'Speculid-App' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -9,9 +9,9 @@ target 'Speculid-App' do
   target 'Speculid' do
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
-    #pod 'PocketSVG', '~> 0.7'
 
     # Pods for Speculid
+    pod 'SwiftVer', '~> 1.0'
 
     target 'SpeculidTests' do
       inherit! :search_paths

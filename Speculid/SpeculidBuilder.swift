@@ -18,7 +18,6 @@ extension SpeculidSpecificationsProtocol {
     } else if let scale = image.scale {
       if let size = image.size {
         return self.sourceImageURL.deletingPathExtension().appendingPathExtension("\(size.width.cleanValue)x\(size.height.cleanValue).\(scale.cleanValue)x.png").lastPathComponent
-        //return self.contentsDirectoryURL.appendingPathComponent(self.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(size.width.cleanValue)x\(size.height.cleanValue).\(scale.cleanValue)x.png")
       } else {
         return self.sourceImageURL.deletingPathExtension().appendingPathExtension("\(scale.cleanValue)x.png").lastPathComponent
       }
