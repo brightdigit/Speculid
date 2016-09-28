@@ -11,10 +11,10 @@ import Foundation
 public struct SpeculidSpecifications : SpeculidSpecificationsProtocol {
   public let contentsDirectoryURL : URL
   public let sourceImageURL : URL
-  public let sizePoints : Int?
+  public let geometry: Geometry?
  
   public init?(url: URL, maxScale: CGFloat? = nil) {
-    let sizePoints : Int?
+    let geometry : Geometry?
     
     guard let data = try? Data(contentsOf: url) else {
       return nil
@@ -32,10 +32,10 @@ public struct SpeculidSpecifications : SpeculidSpecificationsProtocol {
       return nil
     }
     
-    if let sizePointsString = dictionary["size"] {
-      sizePoints = Int(sizePointsString)
+    if let geometryString = dictionary["geometry"] {
+      geometry = Geometry(string: geometryString)
     } else {
-      sizePoints = nil
+      geometry = nil
     }
     
     let contentsJSONURL = url.deletingLastPathComponent().appendingPathComponent(setRelativePath, isDirectory: true).appendingPathComponent("Contents.json")
@@ -45,7 +45,7 @@ public struct SpeculidSpecifications : SpeculidSpecificationsProtocol {
     
     self.contentsDirectoryURL = contentsJSONURL.deletingLastPathComponent()
     self.sourceImageURL = sourceImageURL
-    self.sizePoints = sizePoints
+    self.geometry = geometry
   }
   
 }

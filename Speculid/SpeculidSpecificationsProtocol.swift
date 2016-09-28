@@ -11,5 +11,5 @@ import Cocoa
 public protocol SpeculidSpecificationsProtocol {
   var contentsDirectoryURL : URL { get }
   var sourceImageURL : URL { get }
-  var sizePoints : Int? { get }
+  var geometry : Geometry? { get }
 }

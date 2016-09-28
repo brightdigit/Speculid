@@ -45,11 +45,9 @@ extension String {
     guard let result = regex.firstMatch(in: self, options: [], range: range)  else {
       return nil
     }
-    //print(result.range)
+    
     return (0..<result.numberOfRanges).map({ (index) -> String in
       self.substring(with: self.range(from: result.rangeAt(index))!)
     })
-    //print(scale.substring(with: scale.range(from: result.rangeAt(1))!))
-    
   }
 }

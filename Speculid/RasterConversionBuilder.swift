@@ -18,7 +18,7 @@ public struct RasterConversionBuilder :ImageConversionBuilderProtocol {
       return nil
     }
     
-    guard let size = imageSpecification.size else {
+    guard let geometry = specifications.geometry else {
       return nil
     }
     
@@ -29,7 +29,7 @@ public struct RasterConversionBuilder :ImageConversionBuilderProtocol {
     let process = Process()
     
     let destinationURL = specifications.contentsDirectoryURL.appendingPathComponent(specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
-    let resizeValue = "\(size.width * scale)x\(size.height * scale)"
+    let resizeValue = geometry.text(scaledBy: Int(scale))
     
     process.launchPath = convertURL.path
     process.arguments = [specifications.sourceImageURL.path,"-resize",resizeValue,destinationURL.path]
