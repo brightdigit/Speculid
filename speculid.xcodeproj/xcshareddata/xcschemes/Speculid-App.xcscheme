@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B38085F81D9AA76E000BC05A"
-               BuildableName = "Speculid-App.app"
+               BuildableName = "Speculid.app"
                BlueprintName = "Speculid-App"
                ReferencedContainer = "container:speculid.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B38085F81D9AA76E000BC05A"
-            BuildableName = "Speculid-App.app"
+            BuildableName = "Speculid.app"
             BlueprintName = "Speculid-App"
             ReferencedContainer = "container:speculid.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B38085F81D9AA76E000BC05A"
-            BuildableName = "Speculid-App.app"
+            BuildableName = "Speculid.app"
             BlueprintName = "Speculid-App"
             ReferencedContainer = "container:speculid.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B38085F81D9AA76E000BC05A"
-            BuildableName = "Speculid-App.app"
+            BuildableName = "Speculid.app"
             BlueprintName = "Speculid-App"
             ReferencedContainer = "container:speculid.xcodeproj">
          </BuildableReference>
