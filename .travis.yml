@@ -2,3 +2,4 @@ language: objective-c
 osx_image: xcode8
 xcode_workspace: speculid.xcworkspace # path to your xcodeproj folder
 xcode_scheme: Speculid
+script: xcodebuild -workspace speculid.xcworkspace -scheme Speculid -derivedDataPath ./build  build -configuration "Release"
