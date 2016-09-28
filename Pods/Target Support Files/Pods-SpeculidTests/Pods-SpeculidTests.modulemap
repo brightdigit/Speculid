@@ -1,0 +1,6 @@
+framework module Pods_SpeculidTests {
+  umbrella header "Pods-SpeculidTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

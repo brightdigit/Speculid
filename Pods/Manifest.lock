@@ -1,0 +1,12 @@
+PODS:
+  - SwiftVer (1.0.0)
+
+DEPENDENCIES:
+  - SwiftVer (~> 1.0)
+
+SPEC CHECKSUMS:
+  SwiftVer: 5a3cf6ae27a079efab5575d0161e5319cb7fbe15
+
+PODFILE CHECKSUM: f2fbb68b862ea27796c46f97b172bebc30e18ebe
+
+COCOAPODS: 1.1.0.rc.2
