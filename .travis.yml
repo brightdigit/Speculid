@@ -2,4 +2,9 @@ language: objective-c
 osx_image: xcode8
 xcode_workspace: speculid.xcworkspace # path to your xcodeproj folder
 xcode_scheme: Speculid
-script: xcodebuild -workspace speculid.xcworkspace -scheme Speculid -derivedDataPath ./build  build -configuration "Release"
+before_install:
+  - brew update
+  - brew install homebrew/gui/inkscape imagemagick
+script: 
+  - xcodebuild -workspace speculid.xcworkspace -scheme Speculid -derivedDataPath ./build  build -configuration "Release" CODE_SIGNING_REQUIRED=NO
+  - hdiutil create -format UDZO -srcfolder build/Build/Products/Release/Speculid.app Speculid.dmg
