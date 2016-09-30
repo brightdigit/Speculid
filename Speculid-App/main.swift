@@ -8,7 +8,15 @@
 
 import Foundation
 import Speculid
+import SwiftVer
 
+public enum CommandLineParameter : String {
+  case Help = "help", Version = "version"
+}
+
+let output = FileHandle.standardOutput
+
+let regex = try! NSRegularExpression(pattern: "\\-\\-(\\w+)", options: [])
 let speculidURL: URL?
 
 if let path = CommandLine.arguments.last , CommandLine.arguments.count > 1 {
@@ -31,5 +39,21 @@ if let speculidURL = speculidURL {
       print(error)
       exit(1)
     }
+  } else if let parameter = CommandLine.arguments.dropFirst().first {
+    let range = NSRange(0..<parameter.characters.count)
+    let match = regex.firstMatch(in: parameter, options: [], range: range)
+    let rangeIndex = parameter.range(from: match!.rangeAt(1))
+    if let param = CommandLineParameter(rawValue: parameter.substring(with: rangeIndex!)) {
+      switch param {
+      case .Version :
+        output.write(Speculid.version.debugDescription.data(using: .utf8)!)
+        output.write("example".data(using: .utf8)!)
+        print("test")
+        break
+      default:
+        break
+      }
+    }
   }
 }
+exit(0)

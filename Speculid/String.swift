@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-  func nsRange(from range: Range<String.Index>) -> NSRange {
+  public func nsRange(from range: Range<String.Index>) -> NSRange {
     let utf16view = self.utf16
     let from = range.lowerBound.samePosition(in: utf16view)
     let to = range.upperBound.samePosition(in: utf16view)
@@ -17,7 +17,7 @@ extension String {
                        utf16view.distance(from: from, to: to))
   }
   
-  func range(from nsRange: NSRange) -> Range<String.Index>? {
+  public func range(from nsRange: NSRange) -> Range<String.Index>? {
     guard
       let from16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location, limitedBy: utf16.endIndex),
       let to16 = utf16.index(from16, offsetBy: nsRange.length, limitedBy: utf16.endIndex),
@@ -27,7 +27,7 @@ extension String {
     return from ..< to
   }
   
-  func replaceRegex(regex: NSRegularExpression, replace: ((String, NSTextCheckingResult) -> String)) -> String {
+  public func replaceRegex(regex: NSRegularExpression, replace: ((String, NSTextCheckingResult) -> String)) -> String {
     let range = NSRange(0..<self.characters.count)
     let results = regex.matches(in: self, options: [], range: range).reversed()
     var newString = self
@@ -39,7 +39,7 @@ extension String {
     return newString
   }
   
-  func firstMatchGroups (regex: NSRegularExpression) -> [String]? {
+  public func firstMatchGroups (regex: NSRegularExpression) -> [String]? {
     let range = NSRange(0..<self.characters.count)
     
     guard let result = regex.firstMatch(in: self, options: [], range: range)  else {
