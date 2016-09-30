@@ -10,6 +10,21 @@ import Foundation
 import Speculid
 import SwiftVer
 
+extension Version : CustomStringConvertible {
+  public var extra:Double {
+    if let extraString = self.versionControl?.EXTRA {
+      return Double(extraString) ?? 0
+    } else {
+      return 0
+    }
+  }
+  public var description:String {
+    let suffix = (Double(self.build) + (Double(self.versionControl?.TICK ?? 0) + self.extra/1000.0)/10000.0)/100.0
+    let suffixString = String(stringInterpolationSegment: suffix).components(separatedBy: ".")[1]
+    return "\(self.semver)\(suffixString)"
+  }
+}
+
 public enum CommandLineParameter : String {
   case Help = "help", Version = "version"
 }
@@ -46,9 +61,7 @@ if let speculidURL = speculidURL {
     if let param = CommandLineParameter(rawValue: parameter.substring(with: rangeIndex!)) {
       switch param {
       case .Version :
-        output.write(Speculid.version.debugDescription.data(using: .utf8)!)
-        output.write("example".data(using: .utf8)!)
-        print("test")
+        print("v\(Speculid.version)")
         break
       default:
         break
