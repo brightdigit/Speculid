@@ -403,8 +403,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B38086051D9AA76E000BC05A /* Build configuration list for PBXNativeTarget "Speculid-App" */;
 			buildPhases = (
-				B34507801D9E8E5800C80225 /* Autorevision */,
 				A3F8F713D1C9A7C6203C9A7E /* [CP] Check Pods Manifest.lock */,
+				B34507801D9E8E5800C80225 /* Autorevision */,
 				B38085F51D9AA76E000BC05A /* Sources */,
 				B38085F61D9AA76E000BC05A /* Frameworks */,
 				B38085F71D9AA76E000BC05A /* Resources */,

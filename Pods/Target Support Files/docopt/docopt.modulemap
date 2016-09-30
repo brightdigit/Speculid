@@ -1,0 +1,6 @@
+framework module Docopt {
+  umbrella header "docopt-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,12 +1,15 @@
 PODS:
+  - docopt (0.6.4)
   - SwiftVer (1.0.0)
 
 DEPENDENCIES:
+  - docopt (~> 0.6)
   - SwiftVer (~> 1.0)
 
 SPEC CHECKSUMS:
+  docopt: dc166d7c49b423436635271bbdbc79c4923c2ae9
   SwiftVer: 5a3cf6ae27a079efab5575d0161e5319cb7fbe15
 
-PODFILE CHECKSUM: f2fbb68b862ea27796c46f97b172bebc30e18ebe
+PODFILE CHECKSUM: 3dd66ed44c9ef1a2010cc1c424a152f972eee099
 
 COCOAPODS: 1.1.0.rc.2
