@@ -53,7 +53,7 @@ The `.splcd` file is a `json` file with the image set or app icon path, the grap
 
 #### Set
 
-![Xcode Project Assets](https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/SetExample.png)
+<img src="https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/SetExample.png" width="320" height="240" alt="Image Set Examples from Xcode">
 
 A set is an image set or app icon set used by Xcode. That path specified in the json could be relative to the `.spcld` file.
 
