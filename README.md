@@ -39,34 +39,48 @@ Options:
   --version     Show version.
 ```
 
-## Related projects
+### File Format
 
-### Dependencies
+The `.splcd` file is a `json` file with the image set or app icon path, the graphic file source, and the basic image geometry (width or height).
 
-* `Requests <http://python-requests.org>`_
-  — Python HTTP library for humans
-* `Pygments <http://pygments.org/>`_
-  — Python syntax highlighter
+```json
+{
+  "set" : "Assets.xcassets/Raster Image.imageset",
+  "source" : "layers.png",
+  "geometry" : "128"
+}
+```
 
-### Friends
+#### Set
 
-* `jq <https://stedolan.github.io/jq/>`_
-  — CLI JSON processor that
-  works great in conjunction with HTTPie
-* `http-prompt <https://github.com/eliangcs/http-prompt>`_
-  —  interactive shell for HTTPie featuring autocomplete
-  and command syntax highlighting
+![Xcode Project Assets](https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/SetExample.png)
 
+A set is an image set or app icon set used by Xcode. That path specified in the json could be relative to the `.spcld` file.
 
-### Thanks
+#### Source 
 
-**hicat** © 2014+, Rico Sta. Cruz. Released under the [MIT License].<br>
-Authored and maintained by Rico Sta. Cruz with help from [contributors].
+The image source file which could be a SVG or any bitmap image type compatible with [imagemagick](http://www.imagemagick.org).
 
-> [ricostacruz.com](http://ricostacruz.com) &nbsp;&middot;&nbsp;
-> GitHub [@rstacruz](https://github.com/rstacruz) &nbsp;&middot;&nbsp;
-> Twitter [@rstacruz](https://twitter.com/rstacruz)
+#### Geometry
+
+The destination geometry of image if needed (i.e. image set). It must be in the format of:
+
+* *width* (ex. "128") - for specifying the width of the destination image
+* x*height* (ex. "x128") - for specifying the height of the destination image
+
+You can only specify the height or the width. The other dimension is automatically calculated based on the aspect ration of the image.
+
+## Dependencies
+
+* [Inkscape](https://inkscape.org) — a professional vector graphics editor
+* [Imagemagick](http://www.imagemagick.org) - a software suite to create, edit, compose, or convert bitmap images
+
+## Thanks
+
+**Speculid** © 2016, BrightDigit, LLC. Released under the [MIT License].<br>
+
+> [brightdigit.com](http://brightdigit.com) &nbsp;&middot;&nbsp;
+> GitHub [@brightdigit](https://github.com/brightdigit) &nbsp;&middot;&nbsp;
+> Twitter [@brightdigit](https://twitter.com/brightdigit)
 
 [MIT License]: http://mit-license.org/
-[contributors]: http://github.com/rstacruz/hicat/contributors
-[highlight.js]: http://highlightjs.org
