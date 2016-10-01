@@ -28,11 +28,23 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
       let length = Int(round(max(size.width, size.height) * scale))
       let destinationURL = specifications.contentsDirectoryURL.appendingPathComponent(specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(size.width.cleanValue)x\(size.height.cleanValue).\(scale.cleanValue)x.png")
       arguments.append(contentsOf: [destinationURL.path,dimension,"\(length)", specifications.sourceImageURL.absoluteURL.path])
-      //process.waitUntilExit()
+    } else if let geometryValue = specifications.geometry?.value {
+      let dimension: String
+      let length: Int
+      switch geometryValue {
+      case .Width(let value):
+        dimension = "-w"
+        length = value
+      case .Height(let value):
+        dimension = "-h"
+        length = value
+      }
+      let destinationURL = specifications.contentsDirectoryURL.appendingPathComponent(specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(length).\(scale.cleanValue)x.png")
+      arguments.append(contentsOf: [destinationURL.path,dimension,"\(length)", specifications.sourceImageURL.absoluteURL.path])
     } else {
       // convert to
       let destinationURL = specifications.contentsDirectoryURL.appendingPathComponent(specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
-      arguments.append(contentsOf: [destinationURL.path, specifications.sourceImageURL.absoluteURL.path])
+      arguments.append(contentsOf: [destinationURL.path, "-d", "\(90*scale)" ,specifications.sourceImageURL.absoluteURL.path])
     }
     
     let process = Process()

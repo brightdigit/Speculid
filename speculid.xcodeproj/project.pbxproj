@@ -363,6 +363,7 @@
 			buildConfigurationList = B310EE481D94BF6D00C4A30E /* Build configuration list for PBXNativeTarget "Speculid" */;
 			buildPhases = (
 				B90673C66D6CDE5A62FD8FB7 /* [CP] Check Pods Manifest.lock */,
+				B3F795961D9F7C9500FC557C /* Autorevision */,
 				B310EE311D94BF6D00C4A30E /* Sources */,
 				B310EE321D94BF6D00C4A30E /* Frameworks */,
 				B310EE331D94BF6D00C4A30E /* Headers */,
@@ -555,6 +556,20 @@
 			showEnvVarsInLog = 0;
 		};
 		B34507801D9E8E5800C80225 /* Autorevision */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Autorevision;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+		B3F795961D9F7C9500FC557C /* Autorevision */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
