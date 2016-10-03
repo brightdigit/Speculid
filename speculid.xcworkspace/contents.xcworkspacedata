@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:examples/examples.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:speculid.xcodeproj">
    </FileRef>
    <FileRef

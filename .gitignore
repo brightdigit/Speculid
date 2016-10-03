@@ -102,8 +102,6 @@ fastlane/screenshots
 fastlane/test_output
 __PROJECT_NAME__.framework.zip
 
-VCS.swift
-
-*/*.xcassets/*/*.png
-*/*.xcassets/*/*.pdf
+examples/*/*.xcassets/*/*.png
+examples/*/*.xcassets/*/*.pdf
 VCS.swift
