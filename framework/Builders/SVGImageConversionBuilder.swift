@@ -26,8 +26,7 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
     if let size = imageSpecification.size {
       let dimension = size.height > size.width ? "-h" : "-w"
       let length = Int(round(max(size.width, size.height) * scale))
-      let destinationURL = specifications.contentsDirectoryURL.appendingPathComponent(specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(size.width.cleanValue)x\(size.height.cleanValue).\(scale.cleanValue)x.png")
-      arguments.append(contentsOf: [destinationURL.path,dimension,"\(length)", specifications.sourceImageURL.absoluteURL.path])
+      arguments.append(contentsOf: [specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path,dimension,"\(length)", specifications.sourceImageURL.absoluteURL.path])
     } else if let geometryValue = specifications.geometry?.value {
       let dimension: String
       let length: Int
@@ -39,22 +38,15 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
         dimension = "-h"
         length = value
       }
-      let destinationURL = specifications.contentsDirectoryURL.appendingPathComponent(specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(length).\(scale.cleanValue)x.png")
-      arguments.append(contentsOf: [destinationURL.path,dimension,"\(length)", specifications.sourceImageURL.absoluteURL.path])
+      arguments.append(contentsOf: [specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path,dimension,"\(length)", specifications.sourceImageURL.absoluteURL.path])
     } else {
       // convert to
-      let destinationURL = specifications.contentsDirectoryURL.appendingPathComponent(specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
-      arguments.append(contentsOf: [destinationURL.path, "-d", "\(90*scale)" ,specifications.sourceImageURL.absoluteURL.path])
+      arguments.append(contentsOf: [specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path, "-d", "\(90*scale)" ,specifications.sourceImageURL.absoluteURL.path])
     }
     
     let process = Process()
     process.launchPath = inkscapeURL.path
     process.arguments = arguments
-    
     return .Task(ProcessImageConversionTask(process: process))
-    
-    
   }
-  
-  
 }
