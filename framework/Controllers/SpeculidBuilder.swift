@@ -17,9 +17,9 @@ extension SpeculidSpecificationsProtocol {
       return filename
     } else if let scale = image.scale {
       if let size = image.size {
-        return self.sourceImageURL.deletingPathExtension().appendingPathExtension("\(size.width.cleanValue)x\(size.height.cleanValue).\(scale.cleanValue)x.png").lastPathComponent
+        return self.sourceImageURL.deletingPathExtension().appendingPathExtension("\(size.width.cleanValue)x\(size.height.cleanValue)@\(scale.cleanValue)x~\(image.idiom.rawValue).png").lastPathComponent
       } else {
-        return self.sourceImageURL.deletingPathExtension().appendingPathExtension("\(scale.cleanValue)x.png").lastPathComponent
+        return self.sourceImageURL.deletingPathExtension().appendingPathExtension("\(scale.cleanValue)x~\(image.idiom.rawValue).png").lastPathComponent
       }
     } else {
       return self.sourceImageURL.deletingPathExtension().appendingPathExtension("pdf").lastPathComponent

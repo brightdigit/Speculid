@@ -47,6 +47,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		B38DDF3B1DA2E5AE005AA837 /* watchOS AppIcon.spcld in Resources */ = {isa = PBXBuildFile; fileRef = B38DDF391DA2E5AE005AA837 /* watchOS AppIcon.spcld */; };
+		B38DDF3C1DA2E5AE005AA837 /* iOS AppIcon.spcld in Resources */ = {isa = PBXBuildFile; fileRef = B38DDF3A1DA2E5AE005AA837 /* iOS AppIcon.spcld */; };
 		B38F735F1DA2B357008469FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F735E1DA2B357008469FE /* AppDelegate.swift */; };
 		B38F73641DA2B358008469FE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B38F73621DA2B358008469FE /* MainMenu.xib */; };
 		B38F73701DA2B37B008469FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F736F1DA2B37B008469FE /* AppDelegate.swift */; };
@@ -58,9 +60,6 @@
 		B38F73931DA2B38C008469FE /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F73921DA2B38C008469FE /* InterfaceController.swift */; };
 		B38F73951DA2B38C008469FE /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F73941DA2B38C008469FE /* ExtensionDelegate.swift */; };
 		B38F739B1DA2B38C008469FE /* speculid-example-watchos.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B38F73811DA2B38C008469FE /* speculid-example-watchos.app */; };
-		B38F73BE1DA2B3AD008469FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F73BD1DA2B3AD008469FE /* AppDelegate.swift */; };
-		B38F73C01DA2B3AD008469FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F73BF1DA2B3AD008469FE /* ViewController.swift */; };
-		B38F73C31DA2B3AD008469FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B38F73C11DA2B3AD008469FE /* Main.storyboard */; };
 		B38F73D11DA2B600008469FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D01DA2B600008469FE /* Assets.xcassets */; };
 		B38F73D81DA2C1F1008469FE /* layers.svg in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D71DA2C1F1008469FE /* layers.svg */; };
 /* End PBXBuildFile section */
@@ -122,13 +121,6 @@
 			remoteGlobalIDString = B38DDF1E1DA2E339005AA837;
 			remoteInfo = assets;
 		};
-		B38DDF371DA2E47A005AA837 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B38DDF1E1DA2E339005AA837;
-			remoteInfo = assets;
-		};
 		B38F738F1DA2B38C008469FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
@@ -171,6 +163,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B38DDF391DA2E5AE005AA837 /* watchOS AppIcon.spcld */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "watchOS AppIcon.spcld"; sourceTree = "<group>"; };
+		B38DDF3A1DA2E5AE005AA837 /* iOS AppIcon.spcld */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iOS AppIcon.spcld"; sourceTree = "<group>"; };
 		B38F735B1DA2B357008469FE /* speculid-example-macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "speculid-example-macos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38F735E1DA2B357008469FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B38F73631DA2B358008469FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -188,11 +182,6 @@
 		B38F73921DA2B38C008469FE /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		B38F73941DA2B38C008469FE /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		B38F73981DA2B38C008469FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B38F73BB1DA2B3AD008469FE /* speculid-example-tvos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "speculid-example-tvos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B38F73BD1DA2B3AD008469FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B38F73BF1DA2B3AD008469FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B38F73C21DA2B3AD008469FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B38F73C61DA2B3AE008469FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B38F73D01DA2B600008469FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B38F73D51DA2C1AB008469FE /* macOS AppIcon.spcld */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "macOS AppIcon.spcld"; sourceTree = "<group>"; };
 		B38F73D71DA2C1F1008469FE /* layers.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = layers.svg; sourceTree = "<group>"; };
@@ -220,13 +209,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B38F73B81DA2B3AD008469FE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -237,7 +219,6 @@
 				B38F735D1DA2B357008469FE /* macos */,
 				B38F736E1DA2B37B008469FE /* ios */,
 				B38F73D21DA2B832008469FE /* watchos */,
-				B38F73BC1DA2B3AD008469FE /* tvos */,
 				B38F735C1DA2B357008469FE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -249,7 +230,6 @@
 				B38F736D1DA2B37B008469FE /* speculid-example-ios.app */,
 				B38F73811DA2B38C008469FE /* speculid-example-watchos.app */,
 				B38F738D1DA2B38C008469FE /* speculid-example-watchos Extension.appex */,
-				B38F73BB1DA2B3AD008469FE /* speculid-example-tvos.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,17 +275,6 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
-		B38F73BC1DA2B3AD008469FE /* tvos */ = {
-			isa = PBXGroup;
-			children = (
-				B38F73BD1DA2B3AD008469FE /* AppDelegate.swift */,
-				B38F73BF1DA2B3AD008469FE /* ViewController.swift */,
-				B38F73C11DA2B3AD008469FE /* Main.storyboard */,
-				B38F73C61DA2B3AE008469FE /* Info.plist */,
-			);
-			path = tvos;
-			sourceTree = "<group>";
-		};
 		B38F73D21DA2B832008469FE /* watchos */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +287,8 @@
 		B38F73D41DA2C149008469FE /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B38DDF391DA2E5AE005AA837 /* watchOS AppIcon.spcld */,
+				B38DDF3A1DA2E5AE005AA837 /* iOS AppIcon.spcld */,
 				B38F73D71DA2C1F1008469FE /* layers.svg */,
 				B38F73D51DA2C1AB008469FE /* macOS AppIcon.spcld */,
 				B38F73D01DA2B600008469FE /* Assets.xcassets */,
@@ -401,24 +372,6 @@
 			productReference = B38F738D1DA2B38C008469FE /* speculid-example-watchos Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
-		B38F73BA1DA2B3AD008469FE /* speculid-example-tvos */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B38F73C71DA2B3AE008469FE /* Build configuration list for PBXNativeTarget "speculid-example-tvos" */;
-			buildPhases = (
-				B38F73B71DA2B3AD008469FE /* Sources */,
-				B38F73B81DA2B3AD008469FE /* Frameworks */,
-				B38F73B91DA2B3AD008469FE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B38DDF381DA2E47A005AA837 /* PBXTargetDependency */,
-			);
-			name = "speculid-example-tvos";
-			productName = "speculid-example-tvos";
-			productReference = B38F73BB1DA2B3AD008469FE /* speculid-example-tvos.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -463,10 +416,6 @@
 						DevelopmentTeam = MLT7M394S7;
 						ProvisioningStyle = Automatic;
 					};
-					B38F73BA1DA2B3AD008469FE = {
-						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Manual;
-					};
 				};
 			};
 			buildConfigurationList = B38F73541DA2AF53008469FE /* Build configuration list for PBXProject "examples" */;
@@ -486,7 +435,6 @@
 				B38F736C1DA2B37B008469FE /* speculid-example-ios */,
 				B38F73801DA2B38C008469FE /* speculid-example-watchos */,
 				B38F738C1DA2B38C008469FE /* speculid-example-watchos Extension */,
-				B38F73BA1DA2B3AD008469FE /* speculid-example-tvos */,
 				B38DDF171DA2DF0D005AA837 /* speculid */,
 				B38DDF1E1DA2E339005AA837 /* assets */,
 				B38DDF251DA2E3E3005AA837 /* examples */,
@@ -499,9 +447,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38DDF3B1DA2E5AE005AA837 /* watchOS AppIcon.spcld in Resources */,
 				B38F73D11DA2B600008469FE /* Assets.xcassets in Resources */,
 				B38F73641DA2B358008469FE /* MainMenu.xib in Resources */,
 				B38F73D81DA2C1F1008469FE /* layers.svg in Resources */,
+				B38DDF3C1DA2E5AE005AA837 /* iOS AppIcon.spcld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,14 +476,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B38F73B91DA2B3AD008469FE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B38F73C31DA2B3AD008469FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,7 +506,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "find \"${SRCROOT}\" -name \"*.spcld\" -print0 |\nwhile IFS= read -r -d $'\\0' line; do\n\"${PROJECT_TEMP_DIR}/speculid/Release/Speculid.app/Contents/MacOS/Speculid\" \"$line\"\ndone";
+			shellScript = "find \"${SRCROOT}\" -name \"*.spcld\" -print0 |\nwhile IFS= read -r -d $'\\0' line; do\n\"${PROJECT_TEMP_DIR}/speculid/Release/Speculid.app/Contents/MacOS/Speculid\" \"$line\" &\ndone\nwait";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -592,15 +534,6 @@
 			files = (
 				B38F73951DA2B38C008469FE /* ExtensionDelegate.swift in Sources */,
 				B38F73931DA2B38C008469FE /* InterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B38F73B71DA2B3AD008469FE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B38F73C01DA2B3AD008469FE /* ViewController.swift in Sources */,
-				B38F73BE1DA2B3AD008469FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,11 +580,6 @@
 			target = B38DDF1E1DA2E339005AA837 /* assets */;
 			targetProxy = B38DDF351DA2E476005AA837 /* PBXContainerItemProxy */;
 		};
-		B38DDF381DA2E47A005AA837 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B38DDF1E1DA2E339005AA837 /* assets */;
-			targetProxy = B38DDF371DA2E47A005AA837 /* PBXContainerItemProxy */;
-		};
 		B38F73901DA2B38C008469FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B38F738C1DA2B38C008469FE /* speculid-example-watchos Extension */;
@@ -695,14 +623,6 @@
 				B38F73841DA2B38C008469FE /* Base */,
 			);
 			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
-		B38F73C11DA2B3AD008469FE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B38F73C21DA2B3AD008469FE /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1233,113 +1153,6 @@
 			};
 			name = Release;
 		};
-		B38F73C81DA2B3AE008469FE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "tvOS LaunchImage";
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/tvos/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.speculid-example-tvos";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Debug;
-		};
-		B38F73C91DA2B3AE008469FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "tvOS LaunchImage";
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/tvos/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.speculid-example-tvos";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1408,15 +1221,6 @@
 			buildConfigurations = (
 				B38F73A11DA2B38C008469FE /* Debug */,
 				B38F73A21DA2B38C008469FE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B38F73C71DA2B3AE008469FE /* Build configuration list for PBXNativeTarget "speculid-example-tvos" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B38F73C81DA2B3AE008469FE /* Debug */,
-				B38F73C91DA2B3AE008469FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

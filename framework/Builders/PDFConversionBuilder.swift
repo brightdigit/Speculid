@@ -19,11 +19,11 @@ public struct PDFConversionBuilder : ImageConversionBuilderProtocol {
       return .Error(MissingRequiredInstallationError(name: "inkscape"))
     }
     
-    let destinationURL = specifications.contentsDirectoryURL.appendingPathComponent(specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("pdf")
     let process = Process()
     
     process.launchPath = inkscapeURL.path
-    process.arguments = ["--without-gui","--export-area-drawing","--export-pdf",destinationURL.path,specifications.sourceImageURL.absoluteURL.path]
+    process.arguments = ["--without-gui","--export-area-drawing","--export-pdf",
+                        specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path,specifications.sourceImageURL.absoluteURL.path]
     
     return .Task(ProcessImageConversionTask(process: process))
   }

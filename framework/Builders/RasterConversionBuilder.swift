@@ -27,12 +27,9 @@ public struct RasterConversionBuilder :ImageConversionBuilderProtocol {
     }
     
     let process = Process()
-    
-    let destinationURL = specifications.contentsDirectoryURL.appendingPathComponent(specifications.sourceImageURL.deletingPathExtension().lastPathComponent).appendingPathExtension("\(scale.cleanValue)x.png")
-    let resizeValue = geometry.text(scaledBy: Int(scale))
-    
+    let resizeValue = geometry.text(scaledBy: Int(scale))    
     process.launchPath = convertURL.path
-    process.arguments = [specifications.sourceImageURL.path,"-resize",resizeValue,destinationURL.path]
+    process.arguments = [specifications.sourceImageURL.path,"-resize",resizeValue,specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path]
     return .Task(ProcessImageConversionTask(process: process))
   }
   
