@@ -6,6 +6,46 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B38DDF171DA2DF0D005AA837 /* speculid */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B38DDF1A1DA2DF0D005AA837 /* Build configuration list for PBXAggregateTarget "speculid" */;
+			buildPhases = (
+				B38DDF1B1DA2DF23005AA837 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = speculid;
+			productName = speculid;
+		};
+		B38DDF1E1DA2E339005AA837 /* assets */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B38DDF1F1DA2E339005AA837 /* Build configuration list for PBXAggregateTarget "assets" */;
+			buildPhases = (
+				B38DDF241DA2E344005AA837 /* ShellScript */,
+			);
+			dependencies = (
+				B38DDF231DA2E342005AA837 /* PBXTargetDependency */,
+			);
+			name = assets;
+			productName = assets;
+		};
+		B38DDF251DA2E3E3005AA837 /* examples */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B38DDF261DA2E3E3005AA837 /* Build configuration list for PBXAggregateTarget "examples" */;
+			buildPhases = (
+			);
+			dependencies = (
+				B38DDF2A1DA2E3EE005AA837 /* PBXTargetDependency */,
+				B38DDF2C1DA2E3EE005AA837 /* PBXTargetDependency */,
+				B38DDF2E1DA2E3EE005AA837 /* PBXTargetDependency */,
+				B38DDF301DA2E3EE005AA837 /* PBXTargetDependency */,
+			);
+			name = examples;
+			productName = examples;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		B38F735F1DA2B357008469FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F735E1DA2B357008469FE /* AppDelegate.swift */; };
 		B38F73641DA2B358008469FE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B38F73621DA2B358008469FE /* MainMenu.xib */; };
@@ -26,6 +66,69 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B38DDF1C1DA2DF2D005AA837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38DDF171DA2DF0D005AA837;
+			remoteInfo = speculid;
+		};
+		B38DDF221DA2E342005AA837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38DDF171DA2DF0D005AA837;
+			remoteInfo = speculid;
+		};
+		B38DDF291DA2E3EE005AA837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38F735A1DA2B357008469FE;
+			remoteInfo = "speculid-example-macos";
+		};
+		B38DDF2B1DA2E3EE005AA837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38F736C1DA2B37B008469FE;
+			remoteInfo = "speculid-example-ios";
+		};
+		B38DDF2D1DA2E3EE005AA837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38F73801DA2B38C008469FE;
+			remoteInfo = "speculid-example-watchos";
+		};
+		B38DDF2F1DA2E3EE005AA837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38F738C1DA2B38C008469FE;
+			remoteInfo = "speculid-example-watchos Extension";
+		};
+		B38DDF331DA2E45D005AA837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38DDF1E1DA2E339005AA837;
+			remoteInfo = assets;
+		};
+		B38DDF351DA2E476005AA837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38DDF1E1DA2E339005AA837;
+			remoteInfo = assets;
+		};
+		B38DDF371DA2E47A005AA837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38DDF1E1DA2E339005AA837;
+			remoteInfo = assets;
+		};
 		B38F738F1DA2B38C008469FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
@@ -229,7 +332,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B38F73661DA2B358008469FE /* Build configuration list for PBXNativeTarget "speculid-example-macos" */;
 			buildPhases = (
-				B38F73D31DA2BAD7008469FE /* ShellScript */,
 				B38F73571DA2B357008469FE /* Sources */,
 				B38F73581DA2B357008469FE /* Frameworks */,
 				B38F73591DA2B357008469FE /* Resources */,
@@ -237,6 +339,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B38DDF1D1DA2DF2D005AA837 /* PBXTargetDependency */,
 			);
 			name = "speculid-example-macos";
 			productName = "speculid-example-macos";
@@ -255,6 +358,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B38DDF341DA2E45D005AA837 /* PBXTargetDependency */,
 				B38F739A1DA2B38C008469FE /* PBXTargetDependency */,
 			);
 			name = "speculid-example-ios";
@@ -290,6 +394,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B38DDF361DA2E476005AA837 /* PBXTargetDependency */,
 			);
 			name = "speculid-example-watchos Extension";
 			productName = "speculid-example-watchos Extension";
@@ -307,6 +412,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B38DDF381DA2E47A005AA837 /* PBXTargetDependency */,
 			);
 			name = "speculid-example-tvos";
 			productName = "speculid-example-tvos";
@@ -322,6 +428,21 @@
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				TargetAttributes = {
+					B38DDF171DA2DF0D005AA837 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = MLT7M394S7;
+						ProvisioningStyle = Automatic;
+					};
+					B38DDF1E1DA2E339005AA837 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = MLT7M394S7;
+						ProvisioningStyle = Automatic;
+					};
+					B38DDF251DA2E3E3005AA837 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = MLT7M394S7;
+						ProvisioningStyle = Automatic;
+					};
 					B38F735A1DA2B357008469FE = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MLT7M394S7;
@@ -366,6 +487,9 @@
 				B38F73801DA2B38C008469FE /* speculid-example-watchos */,
 				B38F738C1DA2B38C008469FE /* speculid-example-watchos Extension */,
 				B38F73BA1DA2B3AD008469FE /* speculid-example-tvos */,
+				B38DDF171DA2DF0D005AA837 /* speculid */,
+				B38DDF1E1DA2E339005AA837 /* assets */,
+				B38DDF251DA2E3E3005AA837 /* examples */,
 			);
 		};
 /* End PBXProject section */
@@ -416,7 +540,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B38F73D31DA2BAD7008469FE /* ShellScript */ = {
+		B38DDF1B1DA2DF23005AA837 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -427,7 +551,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "xcodebuild -workspace \"${SRCROOT}/../speculid.xcworkspace\" -scheme \"Speculid Application\" -derivedDataPath \"${PROJECT_TEMP_DIR}/speculid\" build -configuration Release SYMROOT=build CODE_SIGNING_REQUIRED=NO OBJROOT=\"${PROJECT_TEMP_DIR}/speculid\" SYMROOT=\"${PROJECT_TEMP_DIR}/speculid\"\n\n\"${PROJECT_TEMP_DIR}/speculid/Release/Speculid.app/Contents/MacOS/Speculid\" \"${SRCROOT}/Assets/macOS AppIcon.spcld\"";
+			shellScript = "xcodebuild -workspace \"${SRCROOT}/../speculid.xcworkspace\" -scheme \"Speculid Application\" -derivedDataPath \"${PROJECT_TEMP_DIR}/speculid\" build -configuration Release SYMROOT=build CODE_SIGNING_REQUIRED=NO OBJROOT=\"${PROJECT_TEMP_DIR}/speculid\" SYMROOT=\"${PROJECT_TEMP_DIR}/speculid\"";
+		};
+		B38DDF241DA2E344005AA837 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "find \"${SRCROOT}\" -name \"*.spcld\" -print0 |\nwhile IFS= read -r -d $'\\0' line; do\n\"${PROJECT_TEMP_DIR}/speculid/Release/Speculid.app/Contents/MacOS/Speculid\" \"$line\"\ndone";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -470,6 +607,51 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B38DDF1D1DA2DF2D005AA837 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38DDF171DA2DF0D005AA837 /* speculid */;
+			targetProxy = B38DDF1C1DA2DF2D005AA837 /* PBXContainerItemProxy */;
+		};
+		B38DDF231DA2E342005AA837 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38DDF171DA2DF0D005AA837 /* speculid */;
+			targetProxy = B38DDF221DA2E342005AA837 /* PBXContainerItemProxy */;
+		};
+		B38DDF2A1DA2E3EE005AA837 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38F735A1DA2B357008469FE /* speculid-example-macos */;
+			targetProxy = B38DDF291DA2E3EE005AA837 /* PBXContainerItemProxy */;
+		};
+		B38DDF2C1DA2E3EE005AA837 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38F736C1DA2B37B008469FE /* speculid-example-ios */;
+			targetProxy = B38DDF2B1DA2E3EE005AA837 /* PBXContainerItemProxy */;
+		};
+		B38DDF2E1DA2E3EE005AA837 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38F73801DA2B38C008469FE /* speculid-example-watchos */;
+			targetProxy = B38DDF2D1DA2E3EE005AA837 /* PBXContainerItemProxy */;
+		};
+		B38DDF301DA2E3EE005AA837 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38F738C1DA2B38C008469FE /* speculid-example-watchos Extension */;
+			targetProxy = B38DDF2F1DA2E3EE005AA837 /* PBXContainerItemProxy */;
+		};
+		B38DDF341DA2E45D005AA837 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38DDF1E1DA2E339005AA837 /* assets */;
+			targetProxy = B38DDF331DA2E45D005AA837 /* PBXContainerItemProxy */;
+		};
+		B38DDF361DA2E476005AA837 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38DDF1E1DA2E339005AA837 /* assets */;
+			targetProxy = B38DDF351DA2E476005AA837 /* PBXContainerItemProxy */;
+		};
+		B38DDF381DA2E47A005AA837 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38DDF1E1DA2E339005AA837 /* assets */;
+			targetProxy = B38DDF371DA2E47A005AA837 /* PBXContainerItemProxy */;
+		};
 		B38F73901DA2B38C008469FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B38F738C1DA2B38C008469FE /* speculid-example-watchos Extension */;
@@ -526,6 +708,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B38DDF181DA2DF0D005AA837 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B38DDF191DA2DF0D005AA837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B38DDF201DA2E339005AA837 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B38DDF211DA2E339005AA837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B38DDF271DA2E3E3005AA837 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B38DDF281DA2E3E3005AA837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		B38F73551DA2AF53008469FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1026,9 +1256,9 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1083,9 +1313,9 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1113,6 +1343,30 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B38DDF1A1DA2DF0D005AA837 /* Build configuration list for PBXAggregateTarget "speculid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38DDF181DA2DF0D005AA837 /* Debug */,
+				B38DDF191DA2DF0D005AA837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B38DDF1F1DA2E339005AA837 /* Build configuration list for PBXAggregateTarget "assets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38DDF201DA2E339005AA837 /* Debug */,
+				B38DDF211DA2E339005AA837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B38DDF261DA2E3E3005AA837 /* Build configuration list for PBXAggregateTarget "examples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38DDF271DA2E3E3005AA837 /* Debug */,
+				B38DDF281DA2E3E3005AA837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		B38F73541DA2AF53008469FE /* Build configuration list for PBXProject "examples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
