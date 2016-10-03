@@ -22,6 +22,7 @@
 		B38F73C01DA2B3AD008469FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F73BF1DA2B3AD008469FE /* ViewController.swift */; };
 		B38F73C31DA2B3AD008469FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B38F73C11DA2B3AD008469FE /* Main.storyboard */; };
 		B38F73D11DA2B600008469FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D01DA2B600008469FE /* Assets.xcassets */; };
+		B38F73D81DA2C1F1008469FE /* layers.svg in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D71DA2C1F1008469FE /* layers.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		B38F73C21DA2B3AD008469FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B38F73C61DA2B3AE008469FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B38F73D01DA2B600008469FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B38F73D51DA2C1AB008469FE /* macOS AppIcon.spcld */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "macOS AppIcon.spcld"; sourceTree = "<group>"; };
+		B38F73D71DA2C1F1008469FE /* layers.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = layers.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +130,7 @@
 		B38F73501DA2AF53008469FE = {
 			isa = PBXGroup;
 			children = (
-				B38F73D01DA2B600008469FE /* Assets.xcassets */,
+				B38F73D41DA2C149008469FE /* Assets */,
 				B38F735D1DA2B357008469FE /* macos */,
 				B38F736E1DA2B37B008469FE /* ios */,
 				B38F73D21DA2B832008469FE /* watchos */,
@@ -209,6 +212,16 @@
 			path = watchos;
 			sourceTree = "<group>";
 		};
+		B38F73D41DA2C149008469FE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B38F73D71DA2C1F1008469FE /* layers.svg */,
+				B38F73D51DA2C1AB008469FE /* macOS AppIcon.spcld */,
+				B38F73D01DA2B600008469FE /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,6 +229,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B38F73661DA2B358008469FE /* Build configuration list for PBXNativeTarget "speculid-example-macos" */;
 			buildPhases = (
+				B38F73D31DA2BAD7008469FE /* ShellScript */,
 				B38F73571DA2B357008469FE /* Sources */,
 				B38F73581DA2B357008469FE /* Frameworks */,
 				B38F73591DA2B357008469FE /* Resources */,
@@ -363,6 +377,7 @@
 			files = (
 				B38F73D11DA2B600008469FE /* Assets.xcassets in Resources */,
 				B38F73641DA2B358008469FE /* MainMenu.xib in Resources */,
+				B38F73D81DA2C1F1008469FE /* layers.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +414,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B38F73D31DA2BAD7008469FE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xcodebuild -workspace \"${SRCROOT}/../speculid.xcworkspace\" -scheme \"Speculid Application\" -derivedDataPath \"${PROJECT_TEMP_DIR}/speculid\" build -configuration Release SYMROOT=build CODE_SIGNING_REQUIRED=NO OBJROOT=\"${PROJECT_TEMP_DIR}/speculid\" SYMROOT=\"${PROJECT_TEMP_DIR}/speculid\"\n\n\"${PROJECT_TEMP_DIR}/speculid/Release/Speculid.app/Contents/MacOS/Speculid\" \"${SRCROOT}/Assets/macOS AppIcon.spcld\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B38F73571DA2B357008469FE /* Sources */ = {
