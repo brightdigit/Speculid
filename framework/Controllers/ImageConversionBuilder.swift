@@ -9,9 +9,10 @@
 import Foundation
 
 public struct ImageConversionBuilder : ImageConversionBuilderProtocol {
+  public static let defaultBuilders : [ImageConversionBuilderProtocol] = [PDFConversionBuilder(), SVGImageConversionBuilder(), RasterConversionBuilder()]
   public static let sharedInstance:ImageConversionBuilderProtocol = ImageConversionBuilder()
   
-  public let builders : [ImageConversionBuilderProtocol] = [PDFConversionBuilder(), SVGImageConversionBuilder(), RasterConversionBuilder()]
+  public let builders : [ImageConversionBuilderProtocol]
   
   public func conversion(forImage imageSpecification: ImageSpecificationProtocol, withSpecifications specifications: SpeculidSpecificationsProtocol, andConfiguration configuration: SpeculidConfigurationProtocol) -> ConversionResult? {
     for builders in builders {
@@ -20,5 +21,9 @@ public struct ImageConversionBuilder : ImageConversionBuilderProtocol {
       }
     }
     return nil
+  }
+  
+  public init (builders: [ImageConversionBuilderProtocol]? = nil) {
+    self.builders = builders ?? ImageConversionBuilder.defaultBuilders
   }
 }
