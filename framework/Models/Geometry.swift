@@ -30,7 +30,6 @@ public struct Geometry : GeometryProtocol {
     return value!.scaledBy(scale).description
   }
   
-  
   public struct Regex {
     public static let Geometry = try! NSRegularExpression(pattern: "x?(\\d+)", options: [.caseInsensitive])
     public static let Integer = try! NSRegularExpression(pattern: "\\d+", options: [])

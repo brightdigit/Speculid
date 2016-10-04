@@ -10,7 +10,6 @@ import Foundation
 
 let scaleRegex = try! NSRegularExpression(pattern: "(\\d+)x", options: [])
 let sizeRegex = try! NSRegularExpression(pattern: "(\\d+\\.?\\d*)x(\\d+\\.?\\d*)", options: [])
-
 let numberRegex = try! NSRegularExpression(pattern: "\\d", options: [])
 
 public struct SpeculidDocument : SpeculidDocumentProtocol {

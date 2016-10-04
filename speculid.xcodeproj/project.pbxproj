@@ -412,7 +412,6 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MLT7M394S7;
 						ProvisioningStyle = Automatic;
-						TestTargetID = B38085F81D9AA76E000BC05A;
 					};
 					B38085F81D9AA76E000BC05A = {
 						CreatedOnToolsVersion = 8.0;
@@ -915,7 +914,6 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Speculid.app/Contents/MacOS/Speculid";
 			};
 			name = Debug;
 		};
@@ -964,7 +962,6 @@
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Speculid.app/Contents/MacOS/Speculid";
 			};
 			name = Release;
 		};

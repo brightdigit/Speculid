@@ -13,5 +13,4 @@ public struct ImageSpecification : ImageSpecificationProtocol{
   public let scale : CGFloat?
   public let size : CGSize?
   public let filename : String?
-  
 }
