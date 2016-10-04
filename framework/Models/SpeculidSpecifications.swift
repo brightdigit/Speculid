@@ -12,8 +12,16 @@ public struct SpeculidSpecifications : SpeculidSpecificationsProtocol {
   public let contentsDirectoryURL : URL
   public let sourceImageURL : URL
   public let geometry: Geometry?
+  
+  public init (contentsDirectoryURL : URL,
+    sourceImageURL : URL,
+    geometry: Geometry? = nil) {
+    self.contentsDirectoryURL = contentsDirectoryURL
+    self.geometry = geometry
+    self.sourceImageURL = sourceImageURL
+  }
  
-  public init?(url: URL, maxScale: CGFloat? = nil) {
+  public init?(url: URL) {
     let geometry : Geometry?
     
     guard let data = try? Data(contentsOf: url) else {
