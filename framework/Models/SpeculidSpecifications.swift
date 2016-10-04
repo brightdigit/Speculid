@@ -42,7 +42,6 @@ public struct SpeculidSpecifications : SpeculidSpecificationsProtocol {
     
     let sourceImageURL = url.deletingLastPathComponent().appendingPathComponent(sourceRelativePath)
     
-    
     self.contentsDirectoryURL = contentsJSONURL.deletingLastPathComponent()
     self.sourceImageURL = sourceImageURL
     self.geometry = geometry

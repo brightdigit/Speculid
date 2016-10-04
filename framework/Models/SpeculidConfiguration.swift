@@ -15,7 +15,6 @@ extension FileManager {
 }
 
 public struct SpeculidConfiguration : SpeculidConfigurationProtocol {
-  
   public static let main = SpeculidConfiguration()
   
   public let inkscapeURL : URL?
@@ -25,6 +24,4 @@ public struct SpeculidConfiguration : SpeculidConfigurationProtocol {
     self.inkscapeURL = FileManager.default.url(ifExistsAtPath: "/usr/local/bin/inkscape")
     self.convertURL =  FileManager.default.url(ifExistsAtPath: "/usr/local/bin/convert")
   }
-  
-  
 }

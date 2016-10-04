@@ -7,6 +7,5 @@ before_install:
   - brew install homebrew/gui/inkscape imagemagick
 script: 
   - xcodebuild -workspace speculid.xcworkspace -scheme Speculid -derivedDataPath ./build  build -configuration "Release" CODE_SIGNING_REQUIRED=NO
-  - hdiutil create -format UDZO -srcfolder build/Build/Products/Release/Speculid.app Speculid.dmg
 after_success:
   - bash <(curl -s https://codecov.io/bash)
