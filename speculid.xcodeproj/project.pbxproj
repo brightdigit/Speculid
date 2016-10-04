@@ -37,6 +37,9 @@
 		B380860A1D9AA7B2000BC05A /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
 		B380860B1D9AA7B2000BC05A /* Speculid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B38F734D1DA2A928008469FE /* Speculid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F734C1DA2A928008469FE /* Speculid.swift */; };
+		B3951DA11DA4319B00A6FCF2 /* ProcessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3951DA01DA4319B00A6FCF2 /* ProcessProtocol.swift */; };
+		B3951DA41DA4334A00A6FCF2 /* ProcessImageConversionTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3951DA31DA4334A00A6FCF2 /* ProcessImageConversionTaskTests.swift */; };
+		B3951DA61DA4395600A6FCF2 /* ImageConversionBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3951DA51DA4395600A6FCF2 /* ImageConversionBuilderTests.swift */; };
 		B3B746FE1D974C4A0044809F /* SpeculidDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B746FD1D974C4A0044809F /* SpeculidDocument.swift */; };
 		B3B747001D9751080044809F /* ImageSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B746FF1D9751080044809F /* ImageSpecification.swift */; };
 		B3DC29A41D9AAC4E00646E86 /* ArrayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC29A31D9AAC4E00646E86 /* ArrayError.swift */; };
@@ -125,6 +128,9 @@
 		B38086041D9AA76E000BC05A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B38086081D9AA78E000BC05A /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = ../application/main.swift; sourceTree = "<group>"; };
 		B38F734C1DA2A928008469FE /* Speculid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speculid.swift; sourceTree = "<group>"; };
+		B3951DA01DA4319B00A6FCF2 /* ProcessProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessProtocol.swift; sourceTree = "<group>"; };
+		B3951DA31DA4334A00A6FCF2 /* ProcessImageConversionTaskTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessImageConversionTaskTests.swift; sourceTree = "<group>"; };
+		B3951DA51DA4395600A6FCF2 /* ImageConversionBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConversionBuilderTests.swift; sourceTree = "<group>"; };
 		B3B746FD1D974C4A0044809F /* SpeculidDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SpeculidDocument.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B3B746FF1D9751080044809F /* ImageSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSpecification.swift; sourceTree = "<group>"; };
 		B3DC29A31D9AAC4E00646E86 /* ArrayError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayError.swift; sourceTree = "<group>"; };
@@ -219,7 +225,7 @@
 		B310EE431D94BF6D00C4A30E /* tests */ = {
 			isa = PBXGroup;
 			children = (
-				B310EE441D94BF6D00C4A30E /* SpeculidTests.swift */,
+				B3951DA21DA432FB00A6FCF2 /* Controllers */,
 				B310EE461D94BF6D00C4A30E /* Info.plist */,
 			);
 			path = tests;
@@ -266,6 +272,7 @@
 				B34201C91D99A379004C49D6 /* SpeculidDocumentProtocol.swift */,
 				B34201CB1D99A3BD004C49D6 /* SpeculidSpecificationsProtocol.swift */,
 				B362A4271D9C0B4C00FF74FC /* GeometryProtocol.swift */,
+				B3951DA01DA4319B00A6FCF2 /* ProcessProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -282,6 +289,16 @@
 				B362A4251D9C0B4000FF74FC /* ScaledGeometry.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B3951DA21DA432FB00A6FCF2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B310EE441D94BF6D00C4A30E /* SpeculidTests.swift */,
+				B3951DA31DA4334A00A6FCF2 /* ProcessImageConversionTaskTests.swift */,
+				B3951DA51DA4395600A6FCF2 /* ImageConversionBuilderTests.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		B3DC29A51D9AACFA00646E86 /* Builders */ = {
@@ -638,6 +655,7 @@
 				B362A4241D9BFCCB00FF74FC /* Geometry.swift in Sources */,
 				B34201CA1D99A379004C49D6 /* SpeculidDocumentProtocol.swift in Sources */,
 				B3DC29A81D9AAE1D00646E86 /* MissingRequiredInstallationError.swift in Sources */,
+				B3951DA11DA4319B00A6FCF2 /* ProcessProtocol.swift in Sources */,
 				B32AD7CE1D98453E00B871CE /* SpeculidConfiguration.swift in Sources */,
 				B32AD7C41D98112100B871CE /* SpeculidSpecifications.swift in Sources */,
 				B342016B1D997602004C49D6 /* CGFloat.swift in Sources */,
@@ -656,7 +674,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3951DA41DA4334A00A6FCF2 /* ProcessImageConversionTaskTests.swift in Sources */,
 				B310EE451D94BF6D00C4A30E /* SpeculidTests.swift in Sources */,
+				B3951DA61DA4395600A6FCF2 /* ImageConversionBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

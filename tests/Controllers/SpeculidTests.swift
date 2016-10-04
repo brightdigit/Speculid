@@ -21,10 +21,11 @@ class SpeculidTests: XCTestCase {
     super.tearDown()
   }
   
-  func testExample() {
+  func testValidVersion() {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    XCTFail()
+    XCTAssertNotNil(Speculid.version)
+    XCTAssertNotNil(Speculid.version.versionControl)
   }
   
 }
