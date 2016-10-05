@@ -31,9 +31,9 @@ Speculid can be installed via `Homebrew <http://brew.sh/>`:
 ## Usage
 
 ```bash
-$ spcld <file>
-$ spcld -h | --help
-$ spcld --version
+$ speculid <file>
+$ speculid -h | --help
+$ speculid --version
 
 Options:
   -h --help     Show this screen.
