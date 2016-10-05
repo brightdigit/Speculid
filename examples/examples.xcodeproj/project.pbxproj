@@ -38,8 +38,6 @@
 			dependencies = (
 				B38DDF2A1DA2E3EE005AA837 /* PBXTargetDependency */,
 				B38DDF2C1DA2E3EE005AA837 /* PBXTargetDependency */,
-				B38DDF2E1DA2E3EE005AA837 /* PBXTargetDependency */,
-				B38DDF301DA2E3EE005AA837 /* PBXTargetDependency */,
 			);
 			name = examples;
 			productName = examples;
@@ -83,7 +81,6 @@
 		B38F738E1DA2B38C008469FE /* speculid-example-watchos Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B38F738D1DA2B38C008469FE /* speculid-example-watchos Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B38F73931DA2B38C008469FE /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F73921DA2B38C008469FE /* InterfaceController.swift */; };
 		B38F73951DA2B38C008469FE /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F73941DA2B38C008469FE /* ExtensionDelegate.swift */; };
-		B38F739B1DA2B38C008469FE /* speculid-example-watchos.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B38F73811DA2B38C008469FE /* speculid-example-watchos.app */; };
 		B38F73D11DA2B600008469FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D01DA2B600008469FE /* Assets.xcassets */; };
 		B38F73D81DA2C1F1008469FE /* geometry.svg in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D71DA2C1F1008469FE /* geometry.svg */; };
 		B3AF65CE1DA3F6F900BD008B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D01DA2B600008469FE /* Assets.xcassets */; };
@@ -120,20 +117,6 @@
 			remoteGlobalIDString = B38F736C1DA2B37B008469FE;
 			remoteInfo = "speculid-example-ios";
 		};
-		B38DDF2D1DA2E3EE005AA837 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B38F73801DA2B38C008469FE;
-			remoteInfo = "speculid-example-watchos";
-		};
-		B38DDF2F1DA2E3EE005AA837 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B38F738C1DA2B38C008469FE;
-			remoteInfo = "speculid-example-watchos Extension";
-		};
 		B38DDF331DA2E45D005AA837 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
@@ -154,13 +137,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = B38F738C1DA2B38C008469FE;
 			remoteInfo = "speculid-example-watchos Extension";
-		};
-		B38F73991DA2B38C008469FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B38F73801DA2B38C008469FE;
-			remoteInfo = "speculid-example-watchos";
 		};
 		B3AF65D61DA4055E00BD008B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -188,17 +164,6 @@
 				B38F738E1DA2B38C008469FE /* speculid-example-watchos Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B38F73A31DA2B38C008469FE /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				B38F739B1DA2B38C008469FE /* speculid-example-watchos.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -365,13 +330,11 @@
 				B38F73691DA2B37B008469FE /* Sources */,
 				B38F736A1DA2B37B008469FE /* Frameworks */,
 				B38F736B1DA2B37B008469FE /* Resources */,
-				B38F73A31DA2B38C008469FE /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				B38DDF341DA2E45D005AA837 /* PBXTargetDependency */,
-				B38F739A1DA2B38C008469FE /* PBXTargetDependency */,
 			);
 			name = "speculid-example-ios";
 			productName = "speculid-example-ios";
@@ -637,16 +600,6 @@
 			target = B38F736C1DA2B37B008469FE /* speculid-example-ios */;
 			targetProxy = B38DDF2B1DA2E3EE005AA837 /* PBXContainerItemProxy */;
 		};
-		B38DDF2E1DA2E3EE005AA837 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B38F73801DA2B38C008469FE /* speculid-example-watchos */;
-			targetProxy = B38DDF2D1DA2E3EE005AA837 /* PBXContainerItemProxy */;
-		};
-		B38DDF301DA2E3EE005AA837 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B38F738C1DA2B38C008469FE /* speculid-example-watchos Extension */;
-			targetProxy = B38DDF2F1DA2E3EE005AA837 /* PBXContainerItemProxy */;
-		};
 		B38DDF341DA2E45D005AA837 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B38DDF1E1DA2E339005AA837 /* assets */;
@@ -661,11 +614,6 @@
 			isa = PBXTargetDependency;
 			target = B38F738C1DA2B38C008469FE /* speculid-example-watchos Extension */;
 			targetProxy = B38F738F1DA2B38C008469FE /* PBXContainerItemProxy */;
-		};
-		B38F739A1DA2B38C008469FE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B38F73801DA2B38C008469FE /* speculid-example-watchos */;
-			targetProxy = B38F73991DA2B38C008469FE /* PBXContainerItemProxy */;
 		};
 		B3AF65D71DA4055E00BD008B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -958,7 +906,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.speculid-example-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
