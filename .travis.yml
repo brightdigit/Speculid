@@ -9,12 +9,12 @@ before_install:
 install: bundle install --without=documentation --path ../travis_bundle_dir
 script: 
   #- xcodebuild -workspace speculid.xcworkspace -scheme "shasum diff" build -configuration "Release" ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+  - xcodebuild -workspace speculid.xcworkspace -scheme "Speculid Application" -derivedDataPath ./build  build -configuration "Release"
+  - diff examples/shasum <(./shasum.sh)
   - xcodebuild -workspace speculid.xcworkspace -scheme Speculid test
 after_success:
   - slather
   - bash <(curl -s https://codecov.io/bash)
-after_failure:
-  - find "/Users/leo/Library/Developer/Xcode/DerivedData/speculid-ajohoygimvuwdmeovcaebfallhav/Build/Products" -type f \( -iname \*.icns -o -iname \*.png \) -print0 | sort -z | xargs -0 shasum -a 512
 notifications:
   webhooks:
     urls:
