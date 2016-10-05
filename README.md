@@ -6,6 +6,7 @@
 [![Codecov](https://img.shields.io/codecov/c/github/brightdigit/speculid/release%2F1.0.0.svg?maxAge=2592000)]((https://codecov.io/gh/brightdigit/speuclid))
 [![homebrew](https://img.shields.io/homebrew/v/speculid.svg?maxAge=2592000)](brew.sh)
 [![Travis](https://img.shields.io/travis/brightdigit/speculid/release%2F1.0.0.svg)](https://travis-ci.org/brightdigit/speculid)
+[![Beerpay](https://img.shields.io/beerpay/brightdigit/speculid.svg?maxAge=2592000)](https://beerpay.io/brightdigit/speculid)
 [![Analytics](https://ga-beacon.appspot.com/UA-33667276-5/brightdigit/speculid)](https://github.com/igrigorik/ga-beacon)
 
 Easily Build Xcode Assets from Image Files
