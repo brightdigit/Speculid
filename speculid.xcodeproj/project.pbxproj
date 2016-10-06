@@ -18,6 +18,7 @@
 		B32AD7CA1D982F7F00B871CE /* ImageConversionBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7C91D982F7F00B871CE /* ImageConversionBuilderProtocol.swift */; };
 		B32AD7CC1D98307200B871CE /* ImageConversionTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7CB1D98307200B871CE /* ImageConversionTaskProtocol.swift */; };
 		B32AD7CE1D98453E00B871CE /* SpeculidConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7CD1D98453E00B871CE /* SpeculidConfiguration.swift */; };
+		B33C70371DA6E72D002BC291 /* help.txt in Resources */ = {isa = PBXBuildFile; fileRef = B33C70361DA6E72D002BC291 /* help.txt */; };
 		B34201691D9975DC004C49D6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34201681D9975DC004C49D6 /* String.swift */; };
 		B342016B1D997602004C49D6 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342016A1D997602004C49D6 /* CGFloat.swift */; };
 		B34201CA1D99A379004C49D6 /* SpeculidDocumentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34201C91D99A379004C49D6 /* SpeculidDocumentProtocol.swift */; };
@@ -109,6 +110,7 @@
 		B32AD7C91D982F7F00B871CE /* ImageConversionBuilderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ImageConversionBuilderProtocol.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B32AD7CB1D98307200B871CE /* ImageConversionTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConversionTaskProtocol.swift; sourceTree = "<group>"; };
 		B32AD7CD1D98453E00B871CE /* SpeculidConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SpeculidConfiguration.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B33C70361DA6E72D002BC291 /* help.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = help.txt; sourceTree = "<group>"; };
 		B34201681D9975DC004C49D6 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B342016A1D997602004C49D6 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		B34201C91D99A379004C49D6 /* SpeculidDocumentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidDocumentProtocol.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				B38085FF1D9AA76E000BC05A /* Assets.xcassets */,
 				B38086041D9AA76E000BC05A /* Info.plist */,
 				B38086081D9AA78E000BC05A /* main.swift */,
+				B33C70361DA6E72D002BC291 /* help.txt */,
 			);
 			path = application;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B38086001D9AA76E000BC05A /* Assets.xcassets in Resources */,
+				B33C70371DA6E72D002BC291 /* help.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

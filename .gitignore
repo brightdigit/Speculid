@@ -104,3 +104,5 @@ __PROJECT_NAME__.framework.zip
 
 examples/*/*.xcassets/*/*.png
 examples/*/*.xcassets/*/*.pdf
+
+.version

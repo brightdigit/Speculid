@@ -10,6 +10,7 @@ import Foundation
 import Speculid
 import SwiftVer
 
+let helpText = try! String(contentsOf: Bundle.main.url(forResource: "help", withExtension: "txt")!)
 
 let formatter: NumberFormatter = {
   let formatter = NumberFormatter()
@@ -49,7 +50,7 @@ if let path = CommandLine.arguments.last , CommandLine.arguments.count > 1 {
   openPanel.allowsMultipleSelection = false
   openPanel.canChooseDirectories = false
   openPanel.canChooseFiles = true
-  openPanel.allowedFileTypes = ["spcld"]
+  openPanel.allowedFileTypes = ["spcld","speculid"]
   openPanel.runModal()
   openPanel.title = "Select File"
   speculidURL = openPanel.url
@@ -69,9 +70,10 @@ if let speculidURL = speculidURL {
       if let param = CommandLineParameter(rawValue: parameter.substring(with: rangeIndex!)) {
         switch param {
         case .Version :
-          print("v\(Speculid.vcs.TAG!) [\(Speculid.version)]")
+          print("Speculid v\(Speculid.vcs.TAG!) [\(Speculid.version)]")
           break
         default:
+          print(helpText)
           break
         }
       }
