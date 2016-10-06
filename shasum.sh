@@ -8,4 +8,4 @@ while IFS= read -r -d $'\0' line; do
  $speculid_path "$line" >/dev/null
 done
 wait
-find $assets_dir -type f \( -iname \*.icns -o -iname \*.png \) -print0 | sort -z | xargs -0 shasum -a 512 | shasum -a 512
+(cd $assets_dir && find . -type f \( -iname \*.icns -o -iname \*.png \) -print0 | sort -z | xargs -0 shasum -a 512 | shasum -a 512)
