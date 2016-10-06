@@ -19,6 +19,29 @@ let formatter: NumberFormatter = {
   return formatter
 }()
 
+enum Stage : CustomStringConvertible {
+  case Alpha, Beta, Production
+  static var current : Stage {
+  #if ALPHA
+    return .Alpha
+  #elseif BETA
+    return .Beta
+  #else
+    return .Production
+  #endif
+  }
+  var description: String {
+    switch self {
+    case .Alpha:
+      return "alpha"
+    case .Beta:
+      return "beta"
+    case .Production:
+      return "production"
+    }
+  }
+}
+
 extension Version : CustomStringConvertible {
   public var extra:Double {
     if let extraString = self.versionControl?.EXTRA {
@@ -31,6 +54,14 @@ extension Version : CustomStringConvertible {
     let suffix = (Double(self.build) + (Double(self.versionControl?.TICK ?? 0) + self.extra/1000.0)/10000.0)/100.0
     let suffixString = formatter.string(for: suffix)!.components(separatedBy: ".")[1]
     return "\(self.semver)\(suffixString)"
+  }
+  func descriptionWithStage (_ stage: Stage) -> String {
+    switch stage {
+    case .Production:
+      return self.semver.description
+    default:
+      return "\(self.semver)-\(stage)\(self.build)"
+    }
   }
 }
 
@@ -70,7 +101,7 @@ if let speculidURL = speculidURL {
       if let param = CommandLineParameter(rawValue: parameter.substring(with: rangeIndex!)) {
         switch param {
         case .Version :
-          print("Speculid v\(Speculid.vcs.TAG!) [\(Speculid.version)]")
+          print("Speculid v\(Speculid.version.descriptionWithStage(Stage.current)) [\(Speculid.version)]")
           break
         default:
           print(helpText)
