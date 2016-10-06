@@ -1,11 +1,11 @@
-![header](https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/Logo.png)
+![header](https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/Logo.png)
 
 # Speculid
 
 [![Twitter](https://img.shields.io/badge/Twitter-@BrightDigit-blue.svg?style=flat)](http://twitter.com/brightdigit)
-[![Codecov](https://img.shields.io/codecov/c/github/brightdigit/speculid/release%2F1.0.0.svg?maxAge=2592000)]((https://codecov.io/gh/brightdigit/speuclid))
+[![Codecov](https://img.shields.io/codecov/c/github/brightdigit/speculid.svg?maxAge=2592000)]((https://codecov.io/gh/brightdigit/speuclid))
 [![homebrew](https://img.shields.io/homebrew/v/speculid.svg?maxAge=2592000)](brew.sh)
-[![Travis](https://img.shields.io/travis/brightdigit/speculid/release%2F1.0.0.svg)](https://travis-ci.org/brightdigit/speculid)
+[![Travis](https://img.shields.io/travis/brightdigit/speculid.svg)](https://travis-ci.org/brightdigit/speculid)
 [![Beerpay](https://img.shields.io/beerpay/brightdigit/speculid.svg?maxAge=2592000)](https://beerpay.io/brightdigit/speculid)
 [![Gitter](https://img.shields.io/gitter/room/speculid/Lobby.js.svg?maxAge=2592000)](https://gitter.im/speculid/Lobby)
 [![Analytics](https://ga-beacon.appspot.com/UA-33667276-5/brightdigit/speculid)](https://github.com/igrigorik/ga-beacon)
@@ -54,7 +54,7 @@ The `.splcd` file is a `json` file with the image set or app icon path, the grap
 
 #### Set
 
-<img src="https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/SetExample.png" width="320" height="240" alt="Image Set Examples from Xcode">
+<img src="https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/SetExample.png" width="320" height="240" alt="Image Set Examples from Xcode">
 
 A set is an image set or app icon set used by Xcode. That path specified in the json could be relative to the `.spcld` file.
 
