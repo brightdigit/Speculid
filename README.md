@@ -16,7 +16,7 @@ Build Xcode Image and App Icon Assets from Graphic Files.
 
 Speculid can be installed via `Homebrew <http://brew.sh/>`:
 
-    $ brew tap brightdigit/brightdigit
+    $ brew tap brightdigit/speculid
     $ brew install speculid
 
 ## Features
