@@ -554,7 +554,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "touch ${SRCROOT}/.version\nstart=1\nversion_file=`< ${SRCROOT}/.version`\nversion=${version_file:-${start}}\nexport VCS_EXTRA=$version\necho \"Incrementing Version Number\"\n\"${SRCROOT}/autorevision.sh\" -t swift > \"${SRCROOT}/framework/VCS.swift\"\necho `expr ${VCS_EXTRA} + 1` >${SRCROOT}/.version\n";
+			shellScript = "if git rev-parse --git-dir > /dev/null 2>&1; then\ntouch ${SRCROOT}/.version\nstart=1\nversion_file=`< ${SRCROOT}/.version`\nversion=${version_file:-${start}}\nexport VCS_EXTRA=$version\necho \"Incrementing Version Number\"\n\"${SRCROOT}/autorevision.sh\" -t swift > \"${SRCROOT}/framework/VCS.swift\"\necho `expr ${VCS_EXTRA} + 1` >${SRCROOT}/.version\nfi";
 		};
 		B90673C66D6CDE5A62FD8FB7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
