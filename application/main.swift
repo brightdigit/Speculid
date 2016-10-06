@@ -10,6 +10,14 @@ import Foundation
 import Speculid
 import SwiftVer
 
+
+let formatter: NumberFormatter = {
+  let formatter = NumberFormatter()
+  formatter.minimumFractionDigits = 9
+  formatter.minimumIntegerDigits = 1
+  return formatter
+}()
+
 extension Version : CustomStringConvertible {
   public var extra:Double {
     if let extraString = self.versionControl?.EXTRA {
@@ -20,7 +28,7 @@ extension Version : CustomStringConvertible {
   }
   public var description:String {
     let suffix = (Double(self.build) + (Double(self.versionControl?.TICK ?? 0) + self.extra/1000.0)/10000.0)/100.0
-    let suffixString = String(stringInterpolationSegment: suffix).components(separatedBy: ".")[1]
+    let suffixString = formatter.string(for: suffix)!.components(separatedBy: ".")[1]
     return "\(self.semver)\(suffixString)"
   }
 }
@@ -61,7 +69,7 @@ if let speculidURL = speculidURL {
       if let param = CommandLineParameter(rawValue: parameter.substring(with: rangeIndex!)) {
         switch param {
         case .Version :
-          print("v\(Speculid.version)")
+          print("v\(Speculid.vcs.TAG!) [\(Speculid.version)]")
           break
         default:
           break
