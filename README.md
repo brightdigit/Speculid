@@ -10,7 +10,7 @@
 [![Gitter](https://img.shields.io/gitter/room/speculid/Lobby.js.svg?maxAge=2592000)](https://gitter.im/speculid/Lobby)
 [![Analytics](https://ga-beacon.appspot.com/UA-33667276-5/brightdigit/speculid)](https://github.com/igrigorik/ga-beacon)
 
-Easily Build Xcode Assets from Image Files
+Build Xcode Image and App Icon Assets from Graphic Files.
 
 ## Installation
 
@@ -32,7 +32,7 @@ Speculid can be installed via `Homebrew <http://brew.sh/>`:
 
 ```bash
 $ speculid <file>
-$ speculid -h | --help
+$ speculid --help
 $ speculid --version
 
 Options:
@@ -42,13 +42,20 @@ Options:
 
 ### File Format
 
-The `.splcd` file is a `json` file with the image set or app icon path, the graphic file source, and the basic image geometry (width or height).
+The `.speculid` file is a `json` file with the image set or app icon path, the graphic file source, and optionally the basic image geometry (width or height). Such as
 
 ```json
 {
   "set" : "Assets.xcassets/Raster Image.imageset",
   "source" : "layers.png",
   "geometry" : "128"
+}
+```
+or
+```json
+{
+"set" : "Assets.xcassets/iOS AppIcon.appiconset",
+"source" : "geometry.svg"
 }
 ```
 
