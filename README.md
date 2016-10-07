@@ -81,6 +81,9 @@ You can only specify the height or the width. The other dimension is automatical
 ### Xcode Integration
 
 1. Add the speculid files to your source root as well as your source graphic files. 
+
+![Xcode Target Membership](https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/XcodeTargetMembership.png)
+
   * *Note: you don't need to add these files to your target membership*
 
 2. Add the *Run Script* Build Phase to the top of your project with the following code:
@@ -92,8 +95,11 @@ You can only specify the height or the width. The other dimension is automatical
   done
   wait
   ```
+![Xcode Build Phase Run Script](https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/XcodeBuildPhaseRunScript.png)
 
 3. Build the application. This will create the graphics which you will use in your asset image set or app icon.
+
+![Xcode Unorganized Assets](https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/XcodeUnorganizedAssets.png)
 
 4. Drag the images to the correct asset slot. Each rendered image file is suffixed denoting its slot.
 
