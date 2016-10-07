@@ -12,6 +12,11 @@
 
 Easily Build Xcode Image and App Icon Assets from Graphic Files.
 
+## Requirements
+
+* **macOS 10.10 Yosemite**
+* **Xcode 8.0**
+
 ## Installation
 
 Speculid can be installed via `Homebrew <http://brew.sh/>`:
@@ -22,11 +27,9 @@ Speculid can be installed via `Homebrew <http://brew.sh/>`:
 ## Features
 
 * Parse App Icon and Image Sets
-* Convert SVG Files to Designated Size
-* Resize Raster Images to Designated Size
+* Convert SVG Files to Designated Sizes
+* Resize Raster Images to Designated Sizes
 * Command-Line Capabilities for Creating Build Phase Scripts
-* Mac OS X 10.10+ support
-* Documentation
     
 ## Usage
 
