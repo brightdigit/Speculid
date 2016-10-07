@@ -18,13 +18,12 @@ extension String : ResourceSource {
   func url(forResource name: String?, withExtension ext: String?) -> URL? {
     if let bundle = Bundle(path: self){
       if let url = bundle.url(forResource: name, withExtension: ext) {
-        //print("url", self, "bundle")
         return url
       } else {
         return bundle.executablePath?.url(forResource: name, withExtension: ext)
       }
     } else if let destinationPath = try? FileManager.default.destinationOfSymbolicLink(atPath: self) {
-      return destinationPath.url(forResource: name, withExtension: ext)
+      return URL(fileURLWithPath: self).deletingLastPathComponent().appendingPathComponent(destinationPath).path.url(forResource: name, withExtension: ext)
     } else if FileManager.default.isExecutableFile(atPath: self) {
       var url = URL(fileURLWithPath: self).deletingLastPathComponent()
       while url.path != "/" {
