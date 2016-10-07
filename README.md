@@ -17,6 +17,18 @@ Easily Build Xcode Image and App Icon Assets from Graphic Files.
 * **macOS 10.10 Yosemite**
 * **Xcode 8.0**
 
+## Synopsis
+
+![diagram](https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/Diagram.png)
+
+Part of the process of building an app for **watchOS**, **iOS**, or **macOS** is including all the image assets in your application. That could be done by exporting the various sizes from your graphics application. However including the exporting process in the app build, would provide many benefits:
+
+* **Saving time on pulling the repository**: exported graphics don't need to be including source control
+* **New graphic will be automatically used after build**, every time a modification is made to the source graphic, the 
+* **No longer includes the process of exporting the image assets** when editing the source graphic 
+
+**Speculid** gives you the ability to run a script which builds those assets from a **jpeg**, **png**, or even vector graphics file like **svg**.
+
 ## Installation
 
 Speculid can be installed via `Homebrew <http://brew.sh/>`:
