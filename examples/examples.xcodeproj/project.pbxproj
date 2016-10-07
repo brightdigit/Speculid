@@ -82,7 +82,6 @@
 		B38F73931DA2B38C008469FE /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F73921DA2B38C008469FE /* InterfaceController.swift */; };
 		B38F73951DA2B38C008469FE /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F73941DA2B38C008469FE /* ExtensionDelegate.swift */; };
 		B38F73D11DA2B600008469FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D01DA2B600008469FE /* Assets.xcassets */; };
-		B38F73D81DA2C1F1008469FE /* geometry.svg in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D71DA2C1F1008469FE /* geometry.svg */; };
 		B3AF65CE1DA3F6F900BD008B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D01DA2B600008469FE /* Assets.xcassets */; };
 		B3AF65CF1DA3F6F900BD008B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D01DA2B600008469FE /* Assets.xcassets */; };
 		B3AF65D01DA3F6FA00BD008B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D01DA2B600008469FE /* Assets.xcassets */; };
@@ -461,7 +460,6 @@
 				B38DDF3B1DA2E5AE005AA837 /* watchOS AppIcon.spcld in Resources */,
 				B38F73D11DA2B600008469FE /* Assets.xcassets in Resources */,
 				B38F73641DA2B358008469FE /* MainMenu.xib in Resources */,
-				B38F73D81DA2C1F1008469FE /* geometry.svg in Resources */,
 				B38DDF3C1DA2E5AE005AA837 /* iOS AppIcon.spcld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
