@@ -10,7 +10,7 @@
 [![Gitter](https://img.shields.io/gitter/room/speculid/Lobby.js.svg?maxAge=2592000)](https://gitter.im/speculid/Lobby)
 [![Analytics](https://ga-beacon.appspot.com/UA-33667276-5/brightdigit/speculid)](https://github.com/igrigorik/ga-beacon)
 
-Build Xcode Image and App Icon Assets from Graphic Files.
+Easily Build Xcode Image and App Icon Assets from Graphic Files.
 
 ## Installation
 
@@ -69,7 +69,7 @@ A set is an image set or app icon set used by Xcode. That path specified in the 
 
 The image source file which could be a SVG or any bitmap image type compatible with [imagemagick](http://www.imagemagick.org).
 
-#### Geometry
+#### Geometry *optional*
 
 The destination geometry of image if needed (i.e. image set). It must be in the format of:
 
@@ -78,6 +78,54 @@ The destination geometry of image if needed (i.e. image set). It must be in the 
 
 You can only specify the height or the width. The other dimension is automatically calculated based on the aspect ration of the image.
 
+### Xcode Integration
+
+1. Add the speculid files to your source root as well as your source graphic files. 
+  * *Note: you don't need to add these files to your target membership*
+
+2. Add the *Run Script* Build Phase to the top of your project with the following code:
+
+  ```bash
+  find "${SRCROOT}" -name "*.speculid" -print0 |
+  while IFS= read -r -d $'\0' line; do
+  speculid "$line" &
+  done
+  wait
+  ```
+
+3. Build the application. This will create the graphics which you will use in your asset image set or app icon.
+
+4. Drag the images to the correct asset slot. Each rendered image file is suffixed denoting its slot.
+
+  *(source file base name)*.*(size)*@*(scale)*~*(idiom)*.(extension)
+
+  **Examples**
+
+  * **logo.20x20@1x~ipad.png** - 20x20 size 1x scale for iPad
+  * **logo.60x60@3x~iphone.png** - 60x60 size 3x scale for iPhone
+  * **logo.83.5x83.5@2x~ipad.png** - 83.5x83.5 size 2x scale for iPad
+
+5. Build and Run. Done.
+
+<!--
+## Tutorial
+
+### Importing a SVG File as an App Icon
+
+#### 1. Export the Grpahic File (SVG, JPEG, PNG, etc...)
+
+From your graphics application, export your source graphic to whichever format you choose. If you are exporting a **Raster Image** *(jpeg, png, etc...)*, use the highest resolution possible. 
+
+
+
+#### 2. Create a `.speculid` File
+
+#### 3. Add a Run Script Phase to Xcode and Build
+
+#### 4. Drag Each File to the Correct Image
+
+#### 5. Build and Run
+-->
 ## Dependencies
 
 * [Inkscape](https://inkscape.org) — a professional vector graphics editor
