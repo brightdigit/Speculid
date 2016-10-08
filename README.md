@@ -23,9 +23,12 @@ Easily Build Xcode Image and App Icon Assets from Graphic Files.
 
 Part of the process of building an app for **watchOS**, **iOS**, or **macOS** is including all the image assets in your application. That could be done by exporting the various sizes from your graphics application. However including the exporting process in the app build, would provide many benefits:
 
-* **Saving time on pulling the repository**: exported graphics don't need to be including source control
-* **New graphic will be automatically used after build**, every time a modification is made to the source graphic, the 
-* **No longer includes the process of exporting the image assets** when editing the source graphic 
+* **Saving Time On Pulling The Repository**: 
+  * *exported graphics don't need to be included with source control*
+* **New Graphic Will Be Automatically Used After Build**: 
+  * *every time a modification is made to the source graphic, the build process will update the assets*
+* **Exporting The Image Assets No Longer Part of Graphic Design Process**: 
+  * *when editing the source graphic, exporting is moved to build process*
 
 **Speculid** gives you the ability to run a script which builds those assets from a **jpeg**, **png**, or even vector graphics file like **svg**.
 
