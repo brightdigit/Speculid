@@ -21,7 +21,7 @@ Easily Build Xcode Image and App Icon Assets from Graphic Files.
 
 ![diagram](https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/Diagram.png)
 
-Part of the process of building an app for **watchOS**, **iOS**, or **macOS** is including all the image assets in your application. That could be done by exporting the various sizes from your graphics application. However including the exporting process in the app build, would provide many benefits:
+Part of the process of building an app for **watchOS**, **iOS**, or **macOS** is including all the image assets in your application. That could be done by exporting the various sizes from your graphics application. However including the exporting process in the app build, provides many benefits:
 
 * **Saving Time On Pulling The Repository**: 
   * *exported graphics don't need to be included with source control*
