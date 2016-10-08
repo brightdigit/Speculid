@@ -8,7 +8,7 @@
 [![Travis](https://img.shields.io/travis/brightdigit/speculid/release%2F1.0.0.svg)](https://travis-ci.org/brightdigit/speculid)
 [![Beerpay](https://img.shields.io/beerpay/brightdigit/speculid.svg?maxAge=2592000)](https://beerpay.io/brightdigit/speculid)
 [![Gitter](https://img.shields.io/gitter/room/speculid/Lobby.js.svg?maxAge=2592000)](https://gitter.im/speculid/Lobby)
-[![Analytics](https://ga-beacon.appspot.com/UA-33667276-5/brightdigit/speculid)](https://github.com/igrigorik/ga-beacon)
+[![Analytics](https://ga-beacon.appspot.com/UA-33667276-5/brightdigit/speculid?flat&useReferer)](https://github.com/igrigorik/ga-beacon)
 
 Easily Build Xcode Image and App Icon Assets from Graphic Files.
 
