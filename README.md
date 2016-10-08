@@ -10,29 +10,47 @@
 [![Gitter](https://img.shields.io/gitter/room/speculid/Lobby.js.svg?maxAge=2592000)](https://gitter.im/speculid/Lobby)
 [![Analytics](https://ga-beacon.appspot.com/UA-33667276-5/brightdigit/speculid)](https://github.com/igrigorik/ga-beacon)
 
-Easily Build Xcode Assets from Image Files
+Easily Build Xcode Image and App Icon Assets from Graphic Files.
+
+## Requirements
+
+* **macOS 10.10 Yosemite**
+* **Xcode 8.0**
+
+## Synopsis
+
+![diagram](https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/Diagram.png)
+
+Part of the process of building an app for **watchOS**, **iOS**, or **macOS** is including all the image assets in your application. That could be done by exporting the various sizes from your graphics application. However including the exporting process in the app build, provides many benefits:
+
+* **Saving Time On Pulling The Repository**: 
+  * *exported graphics don't need to be included with source control*
+* **New Graphic Will Be Automatically Used After Build**: 
+  * *every time a modification is made to the source graphic, the build process will update the assets*
+* **Exporting The Image Assets No Longer Part of Graphic Design Process**: 
+  * *when editing the source graphic, exporting is moved to build process*
+
+**Speculid** gives you the ability to run a script which builds those assets from a **jpeg**, **png**, or even vector graphics file like **svg**.
 
 ## Installation
 
 Speculid can be installed via `Homebrew <http://brew.sh/>`:
 
-    $ brew tap brightdigit/brightdigit
+    $ brew tap brightdigit/speculid
     $ brew install speculid
 
 ## Features
 
 * Parse App Icon and Image Sets
-* Convert SVG Files to Designated Size
-* Resize Raster Images to Designated Size
+* Convert SVG Files to Designated Sizes
+* Resize Raster Images to Designated Sizes
 * Command-Line Capabilities for Creating Build Phase Scripts
-* Mac OS X 10.10+ support
-* Documentation
     
 ## Usage
 
 ```bash
 $ speculid <file>
-$ speculid -h | --help
+$ speculid --help
 $ speculid --version
 
 Options:
@@ -42,13 +60,20 @@ Options:
 
 ### File Format
 
-The `.splcd` file is a `json` file with the image set or app icon path, the graphic file source, and the basic image geometry (width or height).
+The `.speculid` file is a `json` file with the image set or app icon path, the graphic file source, and optionally the basic image geometry (width or height). Such as
 
 ```json
 {
   "set" : "Assets.xcassets/Raster Image.imageset",
   "source" : "layers.png",
   "geometry" : "128"
+}
+```
+or
+```json
+{
+"set" : "Assets.xcassets/iOS AppIcon.appiconset",
+"source" : "geometry.svg"
 }
 ```
 
@@ -62,7 +87,7 @@ A set is an image set or app icon set used by Xcode. That path specified in the 
 
 The image source file which could be a SVG or any bitmap image type compatible with [imagemagick](http://www.imagemagick.org).
 
-#### Geometry
+#### Geometry *optional*
 
 The destination geometry of image if needed (i.e. image set). It must be in the format of:
 
@@ -71,6 +96,60 @@ The destination geometry of image if needed (i.e. image set). It must be in the 
 
 You can only specify the height or the width. The other dimension is automatically calculated based on the aspect ration of the image.
 
+### Xcode Integration
+
+1. Add the speculid files to your source root as well as your source graphic files. 
+
+![Xcode Target Membership](https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/XcodeTargetMembership.png)
+
+  * *Note: you don't need to add these files to your target membership*
+
+2. Add the *Run Script* Build Phase to the top of your project with the following code:
+
+  ```bash
+  find "${SRCROOT}" -name "*.speculid" -print0 |
+  while IFS= read -r -d $'\0' line; do
+  speculid "$line" &
+  done
+  wait
+  ```
+![Xcode Build Phase Run Script](https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/XcodeBuildPhaseRunScript.png)
+
+3. Build the application. This will create the graphics which you will use in your asset image set or app icon.
+
+![Xcode Unorganized Assets](https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/XcodeUnorganizedAssets.png)
+
+4. Drag the images to the correct asset slot. Each rendered image file is suffixed denoting its slot.
+
+  *(source file base name)*.*(size)*@*(scale)*~*(idiom)*.(extension)
+
+  **Examples**
+
+  * **logo.20x20@1x~ipad.png** - 20x20 size 1x scale for iPad
+  * **logo.60x60@3x~iphone.png** - 60x60 size 3x scale for iPhone
+  * **logo.83.5x83.5@2x~ipad.png** - 83.5x83.5 size 2x scale for iPad
+
+5. Build and Run. Done.
+
+<!--
+## Tutorial
+
+### Importing a SVG File as an App Icon
+
+#### 1. Export the Grpahic File (SVG, JPEG, PNG, etc...)
+
+From your graphics application, export your source graphic to whichever format you choose. If you are exporting a **Raster Image** *(jpeg, png, etc...)*, use the highest resolution possible. 
+
+
+
+#### 2. Create a `.speculid` File
+
+#### 3. Add a Run Script Phase to Xcode and Build
+
+#### 4. Drag Each File to the Correct Image
+
+#### 5. Build and Run
+-->
 ## Dependencies
 
 * [Inkscape](https://inkscape.org) — a professional vector graphics editor
