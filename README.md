@@ -12,6 +12,22 @@
 
 Easily Build Xcode Image and App Icon Assets from Graphic Files.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Table of Contents
+
+- [Requirements](#requirements)
+- [Synopsis](#synopsis)
+- [Installation](#installation)
+- [Features](#features)
+- [Usage](#usage)
+  - [File Format](#file-format)
+  - [Application Configuration](#application-configuration)
+  - [Xcode Integration](#xcode-integration)
+- [Thanks](#thanks)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Requirements
 
 * **macOS 10.10 Yosemite**
@@ -96,7 +112,31 @@ The destination geometry of image if needed (i.e. image set). It must be in the 
 
 You can only specify the height or the width. The other dimension is automatically calculated based on the aspect ration of the image.
 
+### Application Configuration
+
+If you install **Speculid** using the standard homebrew path, it should be able to find the nessacary applications needed. However if you need to set the path to the dependency applications, create a `json` file in your home directory `/Users/username/` named `speculid.json`. Then specify the paths to the application dependencies:
+
+```json
+{
+  "paths" : {
+    "inkscape" : "/usr/local/bin/inkscape",
+    "convert": "/usr/local/bin/convert"
+  }
+}
+```
+
+If you are uncertain the paths, in your terminal run `which <command>` and it will tell you the complete path to the application.
+
+```bash
+$ which inkscape
+/usr/local/bin/inkscape
+```
+
+If you are interested in a more automated method, up vote [the issue here](https://github.com/brightdigit/speculid/issues/8).
+
 ### Xcode Integration
+
+With **Speculid**, the process of building image assets can be automated in **Xcode**.
 
 1. Add the speculid files to your source root as well as your source graphic files. 
 
