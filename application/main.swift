@@ -47,26 +47,39 @@ let formatter: NumberFormatter = {
 }()
 
 enum Stage : CustomStringConvertible {
-  case Alpha, Beta, Production
+  case alpha, beta, production
   static var current : Stage {
   #if ALPHA
-    return .Alpha
+    return .alpha
   #elseif BETA
-    return .Beta
+    return .beta
   #else
-    return .Production
+    return .production
   #endif
   }
+  
+  static let minimumBuildVersions : [Stage: UInt8] = [.beta : 15]
+  
   var description: String {
     switch self {
-    case .Alpha:
+    case .alpha:
       return "alpha"
-    case .Beta:
+    case .beta:
       return "beta"
-    case .Production:
+    case .production:
       return "production"
     }
   }
+  var minimumBuildVersion : UInt8? {
+    return type(of: self).minimumBuildVersions[self]
+  }
+}
+
+func -(a: UInt8?, b: UInt8?) -> UInt8? {
+  guard let a = a, let b = b else {
+    return nil
+  }
+  return a - b
 }
 
 extension Version : CustomStringConvertible {
@@ -84,10 +97,10 @@ extension Version : CustomStringConvertible {
   }
   func descriptionWithStage (_ stage: Stage) -> String {
     switch stage {
-    case .Production:
+    case .production:
       return self.semver.description
     default:
-      return "\(self.semver)-\(stage)\(self.build)"
+      return "\(self.semver)-\(stage)\(self.build - ((stage.minimumBuildVersion - 1) ?? 0))"
     }
   }
 }
