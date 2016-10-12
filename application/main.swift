@@ -48,6 +48,8 @@ let formatter: NumberFormatter = {
 
 enum Stage : CustomStringConvertible {
   case alpha, beta, production
+  
+  @available(*, deprecated: 1.0.0, message: "Preprocessor directive should be replaced. Instead use build number minimum.")
   static var current : Stage {
   #if ALPHA
     return .alpha
