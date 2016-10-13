@@ -25,6 +25,7 @@ extension FileManager {
 public typealias ApplicationPathDictionary = [ApplicationPath : URL]
 
 public struct SpeculidConfiguration : SpeculidConfigurationProtocol {
+  @available (*, deprecated: 1.0.0)
   public static let main = SpeculidConfiguration()
   
   public let applicationPaths : ApplicationPathDictionary
@@ -85,13 +86,15 @@ public struct SpeculidConfiguration : SpeculidConfigurationProtocol {
     }
   }
   
-  
+  @available (*, deprecated: 1.0.0)
   public init () {
     var applicationPaths = SearchPaths.urls()
     
     for pair in ApplicationPath.defaultPaths {
-      if applicationPaths[pair.key] == nil, let url = FileManager.default.url(ifExistsAtPath: pair.value) {
-        applicationPaths[pair.key] = url
+      if applicationPaths[pair.key] == nil {
+        if let url = FileManager.default.url(ifExistsAtPath: pair.value) {
+          applicationPaths[pair.key] = url
+        }
       }
     }
     
