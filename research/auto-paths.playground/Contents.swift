@@ -40,12 +40,13 @@ if let outputURL = try? temporaryURL(), let resourceURL = Bundle.main.url(forRes
   
   let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
     
-    if let string = try? String(contentsOf: outputURL) {
+    if let string = (try? String(contentsOf: outputURL))?.trimmingCharacters(
+      in: NSCharacterSet.whitespacesAndNewlines
+      ) {
       print("running... \(string)")
       if FileManager.default.fileExists(atPath: string) {
         print(string)
         timer.invalidate()
-        
         PlaygroundPage.current.finishExecution()
       }
     }
