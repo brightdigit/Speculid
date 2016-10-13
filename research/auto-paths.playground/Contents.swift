@@ -1,0 +1,39 @@
+//: Playground - noun: a place where people can play
+
+import Cocoa
+
+var str = "Hello, playground"
+
+public struct CError : Error {
+  public let errno : Int32
+}
+
+func temporaryURL () throws -> URL {
+  
+  let template = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("file.XXXXXX") as NSURL
+  
+  // Fill buffer with a C string representing the local file system path.
+  var buffer = [Int8](repeating: 0, count: Int(PATH_MAX))
+  template.getFileSystemRepresentation(&buffer, maxLength: buffer.count)
+  
+  // Create unique file name (and open file):
+  let fd = mkstemp(&buffer)
+  if fd != -1 {
+    
+    // Create URL from file system string:
+    return URL(fileURLWithFileSystemRepresentation: buffer, isDirectory: false, relativeTo: nil)
+    
+    
+  } else {
+    //print("Error: " + String(cString: strerror(errno)))
+    throw CError(errno: errno)
+  }
+}
+
+
+if let outputURL = try? temporaryURL(), let resourceURL = Bundle.main.url(forResource: "terminal", withExtension: "scpt") {
+  do {
+    Process.launchedProcess(launchPath: "/usr/bin/osascript", arguments: [resourceURL.path, "echo -n -e \"\\033]0;Finding inkscape..\\007\"; which inkscape > \"\(outputURL.path)\" & exit"])
+  }
+}
+
