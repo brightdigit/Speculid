@@ -1,9 +1,11 @@
 //: Playground - noun: a place where people can play
 
 import Cocoa
+import PlaygroundSupport
 
 var str = "Hello, playground"
 
+PlaygroundPage.current.needsIndefiniteExecution = true
 public struct CError : Error {
   public let errno : Int32
 }
@@ -32,8 +34,24 @@ func temporaryURL () throws -> URL {
 
 
 if let outputURL = try? temporaryURL(), let resourceURL = Bundle.main.url(forResource: "terminal", withExtension: "scpt") {
-  do {
-    Process.launchedProcess(launchPath: "/usr/bin/osascript", arguments: [resourceURL.path, "echo -n -e \"\\033]0;Finding inkscape..\\007\"; which inkscape > \"\(outputURL.path)\" & exit"])
-  }
+ 
+    Process.launchedProcess(launchPath: "/usr/bin/osascript", arguments: [resourceURL.path, "echo -n -e \"\\033]0;Finding inkscape..\\007\"; which inkscape > \"\(outputURL.path)\"; exit"])
+ 
+  
+  let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
+    
+    if let string = try? String(contentsOf: outputURL) {
+      print("running... \(string)")
+      if FileManager.default.fileExists(atPath: string) {
+        print(string)
+        timer.invalidate()
+        
+        PlaygroundPage.current.finishExecution()
+      }
+    }
+    
+  })
+  
+  timer.fire()
 }
 
