@@ -3,9 +3,12 @@
    version = "1.0">
    <Group
       location = "container:"
-      name = "playgrounds">
+      name = "research">
       <FileRef
          location = "group:research/auto-paths.playground">
+      </FileRef>
+      <FileRef
+         location = "group:research/running-process/running-process.xcodeproj">
       </FileRef>
    </Group>
    <FileRef

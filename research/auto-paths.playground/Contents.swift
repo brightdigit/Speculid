@@ -37,7 +37,6 @@ if let outputURL = try? temporaryURL(), let resourceURL = Bundle.main.url(forRes
  
     Process.launchedProcess(launchPath: "/usr/bin/osascript", arguments: [resourceURL.path, "echo -n -e \"\\033]0;Finding inkscape..\\007\"; which inkscape > \"\(outputURL.path)\"; exit"])
  
-  
   let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
     
     if let string = (try? String(contentsOf: outputURL))?.trimmingCharacters(
@@ -47,6 +46,8 @@ if let outputURL = try? temporaryURL(), let resourceURL = Bundle.main.url(forRes
       if FileManager.default.fileExists(atPath: string) {
         print(string)
         timer.invalidate()
+        //osascript -e 'tell application "Terminal" to close (every window whose name contains "inkscape")' &
+        Process.launchedProcess(launchPath: "/usr/bin/osascript", arguments: ["-e", "tell application \"Terminal\" to close (every window whose name contains \"inkscape\")", "&"])
         PlaygroundPage.current.finishExecution()
       }
     }
