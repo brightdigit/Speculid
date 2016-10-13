@@ -67,7 +67,7 @@ public struct SpeculidBuilder : SpeculidBuilderProtocol {
 }
 
 
-public extension SpeculidBuilder {
+public extension SpeculidBuilderProtocol {
   func build(document : SpeculidDocumentProtocol) -> Error? {
     var result: Error?
     let semaphone = DispatchSemaphore(value: 0)
