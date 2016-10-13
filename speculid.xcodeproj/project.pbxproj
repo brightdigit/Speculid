@@ -31,6 +31,7 @@
 		B34201D81D99A62D004C49D6 /* RasterConversionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34201D71D99A62D004C49D6 /* RasterConversionBuilder.swift */; };
 		B34388771DB0061C003CB3BC /* SpeculidApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34388761DB0061C003CB3BC /* SpeculidApplicationProtocol.swift */; };
 		B34388791DB006BE003CB3BC /* SpeculidArgumentsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34388781DB006BE003CB3BC /* SpeculidArgumentsProtocol.swift */; };
+		B343887B1DB035C3003CB3BC /* SpeculidApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B343887A1DB035C3003CB3BC /* SpeculidApplication.swift */; };
 		B34507841D9E9FD900C80225 /* VCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34507831D9E9FD900C80225 /* VCS.swift */; };
 		B362A4241D9BFCCB00FF74FC /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362A4231D9BFCCB00FF74FC /* Geometry.swift */; };
 		B362A4261D9C0B4000FF74FC /* ScaledGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362A4251D9C0B4000FF74FC /* ScaledGeometry.swift */; };
@@ -125,6 +126,7 @@
 		B34201D71D99A62D004C49D6 /* RasterConversionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RasterConversionBuilder.swift; sourceTree = "<group>"; };
 		B34388761DB0061C003CB3BC /* SpeculidApplicationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationProtocol.swift; sourceTree = "<group>"; };
 		B34388781DB006BE003CB3BC /* SpeculidArgumentsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidArgumentsProtocol.swift; sourceTree = "<group>"; };
+		B343887A1DB035C3003CB3BC /* SpeculidApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidApplication.swift; sourceTree = "<group>"; };
 		B34507831D9E9FD900C80225 /* VCS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VCS.swift; path = ../framework/VCS.swift; sourceTree = "<group>"; };
 		B362A4231D9BFCCB00FF74FC /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		B362A4251D9C0B4000FF74FC /* ScaledGeometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledGeometry.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				B32AD7C51D982E8D00B871CE /* ProcessImageConversionTask.swift */,
 				B32AD7C71D982E9F00B871CE /* ImageConversionBuilder.swift */,
 				B3EDA6611D98A13F00F4E77F /* SpeculidBuilder.swift */,
+				B343887A1DB035C3003CB3BC /* SpeculidApplication.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -634,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B34201D61D99A61B004C49D6 /* PDFConversionBuilder.swift in Sources */,
+				B343887B1DB035C3003CB3BC /* SpeculidApplication.swift in Sources */,
 				B32AD7CC1D98307200B871CE /* ImageConversionTaskProtocol.swift in Sources */,
 				B38F734D1DA2A928008469FE /* Speculid.swift in Sources */,
 				B34201CC1D99A3BD004C49D6 /* SpeculidSpecificationsProtocol.swift in Sources */,

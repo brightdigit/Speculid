@@ -24,7 +24,7 @@ public struct SpeculidDocument : SpeculidDocumentProtocol {
     return self._images
   }
   
-  public init?(url: URL, configuration: SpeculidConfiguration? = nil) {
+  public init?(url: URL, configuration: SpeculidConfigurationProtocol? = nil) {
     
     guard let specifications = SpeculidSpecifications(url: url) else {
       return nil
