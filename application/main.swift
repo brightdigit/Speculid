@@ -9,7 +9,6 @@
 import Foundation
 import Speculid
 import SwiftVer
-import GoogleAnalyticsTracker
 
 protocol ResourceSource {
   func url(forResource name: String?, withExtension ext: String?) -> URL?
