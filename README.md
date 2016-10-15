@@ -1,16 +1,32 @@
-![header](https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/Logo.png)
+![header](https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/Logo.png)
 
 # Speculid
 
 [![Twitter](https://img.shields.io/badge/Twitter-@BrightDigit-blue.svg?style=flat)](http://twitter.com/brightdigit)
-[![Codecov](https://img.shields.io/codecov/c/github/brightdigit/speculid.svg?maxAge=2592000)](https://codecov.io/gh/brightdigit/speculid)
-[![homebrew](https://img.shields.io/badge/homebrew-v1.0.0alpha12-orange.svg)](https://github.com/brightdigit/homebrew-brightdigit)
-[![Travis](https://img.shields.io/travis/brightdigit/speculid.svg)](https://travis-ci.org/brightdigit/speculid)
+[![Codecov](https://img.shields.io/codecov/c/github/brightdigit/speculid/release%2F1.0.0.svg?maxAge=2592000)]((https://codecov.io/gh/brightdigit/speuclid))
+[![homebrew](https://img.shields.io/badge/homebrew-v1.0.0beta1-yellow.svg)](https://github.com/brightdigit/homebrew-brightdigit)
+[![Travis](https://img.shields.io/travis/brightdigit/speculid/release%2F1.0.0.svg)](https://travis-ci.org/brightdigit/speculid)
 [![Beerpay](https://img.shields.io/beerpay/brightdigit/speculid.svg?maxAge=2592000)](https://beerpay.io/brightdigit/speculid)
 [![Gitter](https://img.shields.io/gitter/room/speculid/Lobby.js.svg?maxAge=2592000)](https://gitter.im/speculid/Lobby)
 [![Analytics](https://ga-beacon.appspot.com/UA-33667276-5/brightdigit/speculid?flat&useReferer)](https://github.com/igrigorik/ga-beacon)
 
 Easily Build Xcode Image and App Icon Assets from Graphic Files.
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Table of Contents
+
+- [Requirements](#requirements)
+- [Synopsis](#synopsis)
+- [Installation](#installation)
+- [Features](#features)
+- [Usage](#usage)
+  - [File Format](#file-format)
+  - [Application Configuration](#application-configuration)
+  - [Xcode Integration](#xcode-integration)
+- [Thanks](#thanks)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Requirements
 
@@ -19,7 +35,7 @@ Easily Build Xcode Image and App Icon Assets from Graphic Files.
 
 ## Synopsis
 
-![diagram](https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/Diagram.png)
+![diagram](https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/Diagram.png)
 
 Part of the process of building an app for **watchOS**, **iOS**, or **macOS** is including all the image assets in your application. That could be done by exporting the various sizes from your graphics application. However including the exporting process in the app build, provides many benefits:
 
@@ -79,7 +95,7 @@ or
 
 #### Set
 
-<img src="https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/SetExample.png" width="320" height="240" alt="Image Set Examples from Xcode">
+<img src="https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/SetExample.png" width="320" height="240" alt="Image Set Examples from Xcode">
 
 A set is an image set or app icon set used by Xcode. That path specified in the json could be relative to the `.spcld` file.
 
@@ -96,11 +112,35 @@ The destination geometry of image if needed (i.e. image set). It must be in the 
 
 You can only specify the height or the width. The other dimension is automatically calculated based on the aspect ration of the image.
 
+### Application Configuration
+
+If you install **Speculid** using the standard homebrew path, it should be able to find the nessacary applications needed. However if you need to set the path to the dependency applications, create a `json` file in your home directory `/Users/username/` named `speculid.json`. Then specify the paths to the application dependencies:
+
+```json
+{
+  "paths" : {
+    "inkscape" : "/usr/local/bin/inkscape",
+    "convert": "/usr/local/bin/convert"
+  }
+}
+```
+
+If you are uncertain the paths, in your terminal run `which <command>` and it will tell you the complete path to the application.
+
+```bash
+$ which inkscape
+/usr/local/bin/inkscape
+```
+
+If you are interested in a more automated method, up vote [the issue here](https://github.com/brightdigit/speculid/issues/8).
+
 ### Xcode Integration
+
+With **Speculid**, the process of building image assets can be automated in **Xcode**.
 
 1. Add the speculid files to your source root as well as your source graphic files. 
 
-![Xcode Target Membership](https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/XcodeTargetMembership.png)
+![Xcode Target Membership](https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/XcodeTargetMembership.png)
 
   * *Note: you don't need to add these files to your target membership*
 
@@ -113,11 +153,11 @@ You can only specify the height or the width. The other dimension is automatical
   done
   wait
   ```
-![Xcode Build Phase Run Script](https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/XcodeBuildPhaseRunScript.png)
+![Xcode Build Phase Run Script](https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/XcodeBuildPhaseRunScript.png)
 
 3. Build the application. This will create the graphics which you will use in your asset image set or app icon.
 
-![Xcode Unorganized Assets](https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/XcodeUnorganizedAssets.png)
+![Xcode Unorganized Assets](https://raw.githubusercontent.com/brightdigit/speculid/release/1.0.0/assets/images/XcodeUnorganizedAssets.png)
 
 4. Drag the images to the correct asset slot. Each rendered image file is suffixed denoting its slot.
 
