@@ -1,4 +1,8 @@
 language: objective-c
+branches:
+  except: 
+    - /^feature\/.+$/
+    - develop
 osx_image: xcode8
 xcode_workspace: speculid.xcworkspace # path to your xcodeproj folder
 xcode_scheme: Speculid
