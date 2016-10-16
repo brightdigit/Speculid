@@ -25,18 +25,8 @@ extension FileManager {
 public typealias ApplicationPathDictionary = [ApplicationPath : URL]
 
 public struct SpeculidConfiguration : SpeculidConfigurationProtocol {
-  @available (*, deprecated: 1.0.0)
-  public static let main = SpeculidConfiguration()
   
   public let applicationPaths : ApplicationPathDictionary
-  
-  public var inkscapeURL : URL? {
-    return self.applicationPaths[ApplicationPath.inkscape]
-  }
-  
-  public var convertURL : URL? {
-    return self.applicationPaths[ApplicationPath.convert]
-  }
   
   public struct SearchPaths {
     public static let defaultSearchPaths = [FileManager.default.currentDirectoryPath, NSHomeDirectory()]

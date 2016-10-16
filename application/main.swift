@@ -45,18 +45,15 @@ let formatter: NumberFormatter = {
   return formatter
 }()
 
+
 enum Stage : CustomStringConvertible {
   case alpha, beta, production
   
-  @available(*, deprecated: 1.0.0, message: "Preprocessor directive should be replaced. Instead use build number minimum.")
-  static var current : Stage {
-  #if ALPHA
-    return .alpha
-  #elseif BETA
-    return .beta
-  #else
-    return .production
-  #endif
+  public static func current (for version: Version) -> Stage {
+    let result = self.minimumBuildVersions.filter{
+      $0.value < version.build
+      }.max(by: {$0.value < $1.value})
+    return result?.key ?? .alpha
   }
   
   static let minimumBuildVersions : [Stage: UInt8] = [.beta : 15]
@@ -71,6 +68,7 @@ enum Stage : CustomStringConvertible {
       return "production"
     }
   }
+  
   var minimumBuildVersion : UInt8? {
     return type(of: self).minimumBuildVersions[self]
   }
@@ -150,7 +148,7 @@ Speculid.begin(withArguments: CommandLine.arguments,{
         if let param = CommandLineParameter(rawValue: parameter.substring(with: rangeIndex!)) {
           switch param {
           case .Version :
-            print("Speculid v\(speculid.version.descriptionWithStage(Stage.current)) [\(speculid.version)]")
+            print("Speculid v\(speculid.version.descriptionWithStage(Stage.current(for: speculid.version))) [\(speculid.version)]")
             break
           default:
             print(helpText)

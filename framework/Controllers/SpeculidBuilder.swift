@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GoogleAnalyticsTracker
 
 public typealias ImageConversionPair = (image: ImageSpecificationProtocol,conversion: ConversionResult?)
 public typealias ImageConversionDictionary = [String:ImageConversionPair]
@@ -29,8 +30,6 @@ extension SpeculidSpecificationsProtocol {
 
 public struct SpeculidBuilder : SpeculidBuilderProtocol {
   
-  @available (*, deprecated: 1.0.0)
-  public static let shared = SpeculidBuilder(configuration: SpeculidConfiguration.main)
   public let configuration: SpeculidConfigurationProtocol
   
   public func build (document: SpeculidDocumentProtocol, callback: @escaping ((Error?) -> Void)) {
