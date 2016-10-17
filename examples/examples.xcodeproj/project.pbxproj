@@ -49,7 +49,7 @@
 				B3AF65D51DA4055900BD008B /* ShellScript */,
 			);
 			dependencies = (
-				B3AF65D71DA4055E00BD008B /* PBXTargetDependency */,
+				B30005C71DB53691000A8166 /* PBXTargetDependency */,
 			);
 			name = shasum;
 			productName = shasum;
@@ -61,7 +61,7 @@
 				B3AF65DB1DA407DD00BD008B /* ShellScript */,
 			);
 			dependencies = (
-				B3AF65E21DA4084D00BD008B /* PBXTargetDependency */,
+				B30005CD1DB5500D000A8166 /* PBXTargetDependency */,
 			);
 			name = "shasum diff";
 			productName = shasum;
@@ -69,8 +69,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		B38DDF3B1DA2E5AE005AA837 /* watchOS AppIcon.spcld in Resources */ = {isa = PBXBuildFile; fileRef = B38DDF391DA2E5AE005AA837 /* watchOS AppIcon.spcld */; };
-		B38DDF3C1DA2E5AE005AA837 /* iOS AppIcon.spcld in Resources */ = {isa = PBXBuildFile; fileRef = B38DDF3A1DA2E5AE005AA837 /* iOS AppIcon.spcld */; };
+		B30005CB1DB54EB1000A8166 /* Image Set.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B30005CA1DB54EB1000A8166 /* Image Set.speculid */; };
+		B38DDF3C1DA2E5AE005AA837 /* iOS AppIcon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B38DDF3A1DA2E5AE005AA837 /* iOS AppIcon.speculid */; };
 		B38F735F1DA2B357008469FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F735E1DA2B357008469FE /* AppDelegate.swift */; };
 		B38F73641DA2B358008469FE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B38F73621DA2B358008469FE /* MainMenu.xib */; };
 		B38F73701DA2B37B008469FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F736F1DA2B37B008469FE /* AppDelegate.swift */; };
@@ -88,6 +88,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B30005C61DB53691000A8166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38DDF1E1DA2E339005AA837;
+			remoteInfo = assets;
+		};
+		B30005CC1DB5500D000A8166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38DDF171DA2DF0D005AA837;
+			remoteInfo = speculid;
+		};
 		B38DDF1C1DA2DF2D005AA837 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
@@ -137,20 +151,6 @@
 			remoteGlobalIDString = B38F738C1DA2B38C008469FE;
 			remoteInfo = "speculid-example-watchos Extension";
 		};
-		B3AF65D61DA4055E00BD008B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B38DDF251DA2E3E3005AA837;
-			remoteInfo = examples;
-		};
-		B3AF65E11DA4084D00BD008B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B38F73511DA2AF53008469FE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B38DDF251DA2E3E3005AA837;
-			remoteInfo = examples;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -168,8 +168,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B38DDF391DA2E5AE005AA837 /* watchOS AppIcon.spcld */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "watchOS AppIcon.spcld"; sourceTree = "<group>"; };
-		B38DDF3A1DA2E5AE005AA837 /* iOS AppIcon.spcld */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iOS AppIcon.spcld"; sourceTree = "<group>"; };
+		B30005CA1DB54EB1000A8166 /* Image Set.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Image Set.speculid"; sourceTree = "<group>"; };
+		B38DDF3A1DA2E5AE005AA837 /* iOS AppIcon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iOS AppIcon.speculid"; sourceTree = "<group>"; };
 		B38F735B1DA2B357008469FE /* speculid-example-macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "speculid-example-macos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38F735E1DA2B357008469FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B38F73631DA2B358008469FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 		B38F73941DA2B38C008469FE /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		B38F73981DA2B38C008469FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B38F73D01DA2B600008469FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B38F73D51DA2C1AB008469FE /* macOS AppIcon.spcld */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "macOS AppIcon.spcld"; sourceTree = "<group>"; };
+		B38F73D51DA2C1AB008469FE /* macOS AppIcon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "macOS AppIcon.speculid"; sourceTree = "<group>"; };
 		B38F73D71DA2C1F1008469FE /* geometry.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = geometry.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -292,11 +292,11 @@
 		B38F73D41DA2C149008469FE /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				B38DDF391DA2E5AE005AA837 /* watchOS AppIcon.spcld */,
-				B38DDF3A1DA2E5AE005AA837 /* iOS AppIcon.spcld */,
+				B38DDF3A1DA2E5AE005AA837 /* iOS AppIcon.speculid */,
 				B38F73D71DA2C1F1008469FE /* geometry.svg */,
-				B38F73D51DA2C1AB008469FE /* macOS AppIcon.spcld */,
+				B38F73D51DA2C1AB008469FE /* macOS AppIcon.speculid */,
 				B38F73D01DA2B600008469FE /* Assets.xcassets */,
+				B30005CA1DB54EB1000A8166 /* Image Set.speculid */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -457,10 +457,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B38DDF3B1DA2E5AE005AA837 /* watchOS AppIcon.spcld in Resources */,
+				B30005CB1DB54EB1000A8166 /* Image Set.speculid in Resources */,
 				B38F73D11DA2B600008469FE /* Assets.xcassets in Resources */,
 				B38F73641DA2B358008469FE /* MainMenu.xib in Resources */,
-				B38DDF3C1DA2E5AE005AA837 /* iOS AppIcon.spcld in Resources */,
+				B38DDF3C1DA2E5AE005AA837 /* iOS AppIcon.speculid in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +531,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "find \"${BUILD_ROOT}\" -type f \\( -iname \\*.icns -o -iname \\*.png \\) -print0 | sort -z | xargs -0 shasum -a 512 | shasum -a 512 > \"${SRCROOT}/shasum\"";
+			shellScript = "\"${SRCROOT}/../shasum.sh\" \"${PROJECT_TEMP_DIR}/speculid/Release/Speculid.app/Contents/MacOS/Speculid\" \"${SRCROOT}/Assets/.\" > \"${SRCROOT}/shasum\"";
 		};
 		B3AF65DB1DA407DD00BD008B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -543,8 +543,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "TMPFILE=`mktemp`\nfind \"${BUILD_ROOT}\" -type f \\( -iname \\*.icns -o -iname \\*.png \\) -print0 | sort -z | xargs -0 shasum -a 512 | shasum -a 512 > \"$TMPFILE\"\ndiff \"$TMPFILE\" \"${SRCROOT}/shasum\"";
+			shellPath = /bin/bash;
+			shellScript = "diff \"${SRCROOT}/shasum\" <(\"${SRCROOT}/../shasum.sh\" \"${PROJECT_TEMP_DIR}/speculid/Release/Speculid.app/Contents/MacOS/Speculid\" \"${SRCROOT}/Assets/.\")";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -578,6 +578,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B30005C71DB53691000A8166 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38DDF1E1DA2E339005AA837 /* assets */;
+			targetProxy = B30005C61DB53691000A8166 /* PBXContainerItemProxy */;
+		};
+		B30005CD1DB5500D000A8166 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38DDF171DA2DF0D005AA837 /* speculid */;
+			targetProxy = B30005CC1DB5500D000A8166 /* PBXContainerItemProxy */;
+		};
 		B38DDF1D1DA2DF2D005AA837 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B38DDF171DA2DF0D005AA837 /* speculid */;
@@ -612,16 +622,6 @@
 			isa = PBXTargetDependency;
 			target = B38F738C1DA2B38C008469FE /* speculid-example-watchos Extension */;
 			targetProxy = B38F738F1DA2B38C008469FE /* PBXContainerItemProxy */;
-		};
-		B3AF65D71DA4055E00BD008B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B38DDF251DA2E3E3005AA837 /* examples */;
-			targetProxy = B3AF65D61DA4055E00BD008B /* PBXContainerItemProxy */;
-		};
-		B3AF65E21DA4084D00BD008B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B38DDF251DA2E3E3005AA837 /* examples */;
-			targetProxy = B3AF65E11DA4084D00BD008B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

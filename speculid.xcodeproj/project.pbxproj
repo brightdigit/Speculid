@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		3A1ABCFA753C493935FD8F95 /* Pods_Speculid_App_Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8C8B36DBAD28741A274EDD /* Pods_Speculid_App_Speculid.framework */; };
 		90A44E85D7852C743AC3ED1B /* Pods_SpeculidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386203CFE7D8B9BA4D80ADA4 /* Pods_SpeculidTests.framework */; };
+		B30005BC1DB51310000A8166 /* SpeculidConfigurationLoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30005BB1DB51310000A8166 /* SpeculidConfigurationLoaderProtocol.swift */; };
+		B30005BE1DB51446000A8166 /* SpeculidConfigurationLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30005BD1DB51446000A8166 /* SpeculidConfigurationLoader.swift */; };
+		B30005C01DB518B2000A8166 /* ApplicationPathDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30005BF1DB518B2000A8166 /* ApplicationPathDataSource.swift */; };
+		B30005C31DB52F84000A8166 /* DefaultApplicationPathDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30005C21DB52F84000A8166 /* DefaultApplicationPathDataSource.swift */; };
+		B30005C51DB52FCD000A8166 /* ConfiguredApplicationPathDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30005C41DB52FCD000A8166 /* ConfiguredApplicationPathDataSource.swift */; };
 		B310EE401D94BF6D00C4A30E /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
 		B310EE451D94BF6D00C4A30E /* SpeculidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B310EE441D94BF6D00C4A30E /* SpeculidTests.swift */; };
 		B310EE471D94BF6D00C4A30E /* Speculid.h in Headers */ = {isa = PBXBuildFile; fileRef = B310EE391D94BF6D00C4A30E /* Speculid.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -101,6 +106,11 @@
 		407E8C50424541751746E1EB /* Pods-Speculid-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-App/Pods-Speculid-App.debug.xcconfig"; sourceTree = "<group>"; };
 		4931B3201EAC0FD92C614AF8 /* Pods-Speculid-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-App/Pods-Speculid-App.release.xcconfig"; sourceTree = "<group>"; };
 		769F32ABB131CDEE204D90AC /* Pods_Speculid_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30005BB1DB51310000A8166 /* SpeculidConfigurationLoaderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidConfigurationLoaderProtocol.swift; sourceTree = "<group>"; };
+		B30005BD1DB51446000A8166 /* SpeculidConfigurationLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidConfigurationLoader.swift; sourceTree = "<group>"; };
+		B30005BF1DB518B2000A8166 /* ApplicationPathDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationPathDataSource.swift; sourceTree = "<group>"; };
+		B30005C21DB52F84000A8166 /* DefaultApplicationPathDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultApplicationPathDataSource.swift; sourceTree = "<group>"; };
+		B30005C41DB52FCD000A8166 /* ConfiguredApplicationPathDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguredApplicationPathDataSource.swift; sourceTree = "<group>"; };
 		B310EE361D94BF6D00C4A30E /* Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B310EE391D94BF6D00C4A30E /* Speculid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Speculid.h; path = ../framework/Speculid.h; sourceTree = "<group>"; };
 		B310EE3A1D94BF6D00C4A30E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../framework/Info.plist; sourceTree = "<group>"; };
@@ -192,6 +202,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B30005C11DB52F6E000A8166 /* ApplicationPathDataSources */ = {
+			isa = PBXGroup;
+			children = (
+				B30005C21DB52F84000A8166 /* DefaultApplicationPathDataSource.swift */,
+				B30005C41DB52FCD000A8166 /* ConfiguredApplicationPathDataSource.swift */,
+			);
+			name = ApplicationPathDataSources;
+			sourceTree = "<group>";
+		};
 		B310EE2A1D94BF5000C4A30E = {
 			isa = PBXGroup;
 			children = (
@@ -262,11 +281,13 @@
 		B38F73491DA2A6B9008469FE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B30005C11DB52F6E000A8166 /* ApplicationPathDataSources */,
 				B38F734C1DA2A928008469FE /* Speculid.swift */,
 				B32AD7C51D982E8D00B871CE /* ProcessImageConversionTask.swift */,
 				B32AD7C71D982E9F00B871CE /* ImageConversionBuilder.swift */,
 				B3EDA6611D98A13F00F4E77F /* SpeculidBuilder.swift */,
 				B343887A1DB035C3003CB3BC /* SpeculidApplication.swift */,
+				B30005BD1DB51446000A8166 /* SpeculidConfigurationLoader.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -285,6 +306,8 @@
 				B3951DA01DA4319B00A6FCF2 /* ProcessProtocol.swift */,
 				B34388761DB0061C003CB3BC /* SpeculidApplicationProtocol.swift */,
 				B34388781DB006BE003CB3BC /* SpeculidArgumentsProtocol.swift */,
+				B30005BB1DB51310000A8166 /* SpeculidConfigurationLoaderProtocol.swift */,
+				B30005BF1DB518B2000A8166 /* ApplicationPathDataSource.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -640,7 +663,9 @@
 				B343887B1DB035C3003CB3BC /* SpeculidApplication.swift in Sources */,
 				B32AD7CC1D98307200B871CE /* ImageConversionTaskProtocol.swift in Sources */,
 				B38F734D1DA2A928008469FE /* Speculid.swift in Sources */,
+				B30005BE1DB51446000A8166 /* SpeculidConfigurationLoader.swift in Sources */,
 				B34201CC1D99A3BD004C49D6 /* SpeculidSpecificationsProtocol.swift in Sources */,
+				B30005C51DB52FCD000A8166 /* ConfiguredApplicationPathDataSource.swift in Sources */,
 				B34201CE1D99A3F5004C49D6 /* ImageSpecificationProtocol.swift in Sources */,
 				B34201D81D99A62D004C49D6 /* RasterConversionBuilder.swift in Sources */,
 				B34201D41D99A604004C49D6 /* SVGImageConversionBuilder.swift in Sources */,
@@ -649,9 +674,11 @@
 				B3EDA6641D98A16A00F4E77F /* SpeculidBuilderProtocol.swift in Sources */,
 				B3B746FE1D974C4A0044809F /* SpeculidDocument.swift in Sources */,
 				B3B747001D9751080044809F /* ImageSpecification.swift in Sources */,
+				B30005C31DB52F84000A8166 /* DefaultApplicationPathDataSource.swift in Sources */,
 				B32AD7CA1D982F7F00B871CE /* ImageConversionBuilderProtocol.swift in Sources */,
 				B34201691D9975DC004C49D6 /* String.swift in Sources */,
 				B362A4241D9BFCCB00FF74FC /* Geometry.swift in Sources */,
+				B30005BC1DB51310000A8166 /* SpeculidConfigurationLoaderProtocol.swift in Sources */,
 				B34201CA1D99A379004C49D6 /* SpeculidDocumentProtocol.swift in Sources */,
 				B3DC29A81D9AAE1D00646E86 /* MissingRequiredInstallationError.swift in Sources */,
 				B3951DA11DA4319B00A6FCF2 /* ProcessProtocol.swift in Sources */,
@@ -668,6 +695,7 @@
 				B3EDA6621D98A13F00F4E77F /* SpeculidBuilder.swift in Sources */,
 				B3EDA6601D985ACA00F4E77F /* SpeculidConfigurationProtocol.swift in Sources */,
 				B362A4261D9C0B4000FF74FC /* ScaledGeometry.swift in Sources */,
+				B30005C01DB518B2000A8166 /* ApplicationPathDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

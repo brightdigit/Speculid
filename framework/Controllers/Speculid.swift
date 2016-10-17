@@ -18,7 +18,12 @@ public struct Speculid {
   public static let version = Version(bundle: Bundle(for: _VersionHandler.self), versionControl: vcs)!
   
   
-  public static func begin (withArguments arguments: SpeculidArgumentsProtocol, _ callback: (SpeculidApplicationProtocol) -> Void) {
+  public static func begin (withArguments arguments: SpeculidArgumentsProtocol, _ callback: @escaping (SpeculidApplicationProtocol) -> Void) {
+    let configLoader = SpeculidConfigurationLoader(dataSources: [ConfiguredApplicationPathDataSource(), DefaultApplicationPathDataSource()])
     
+    configLoader.load { (configuration) in
+      let application = SpeculidApplication(configuration: configuration)
+      callback(application)
+    }
   }
 }

@@ -161,4 +161,5 @@ Speculid.begin(withArguments: CommandLine.arguments,{
   exit(0)
   })
 
-
+// TODO: use a semaphore
+RunLoop.main.run()

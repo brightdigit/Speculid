@@ -20,7 +20,7 @@ after_success:
   - slather
   - bash <(curl -s https://codecov.io/bash)
 after_failure:
-  - find "examples/Assets/." -type f \( -iname \*.icns -o -iname \*.png \) -print0 | sort -z | xargs -0 shasum -a 512
+  - find "examples/Assets/." -type f \( -iname \*.icns -o -iname \*.png -o -iname \*.pdf \) -print0 | sort -z | xargs -0 shasum -a 512
 notifications:
   webhooks:
     urls:
