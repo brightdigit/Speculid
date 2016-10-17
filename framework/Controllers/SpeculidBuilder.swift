@@ -33,7 +33,7 @@ public struct SpeculidBuilder : SpeculidBuilderProtocol {
   public let configuration: SpeculidConfigurationProtocol
   
   public func build (document: SpeculidDocumentProtocol, callback: @escaping ((Error?) -> Void)) {
-    
+    let start = Date()
     var errors = [Error]()
     
     let taskDictionary = document.images.reduce(ImageConversionDictionary()) { (dictionary, image) -> ImageConversionDictionary in
@@ -58,7 +58,9 @@ public struct SpeculidBuilder : SpeculidBuilderProtocol {
       }
     }
     
-    group.notify(queue: .global()) { 
+    group.notify(queue: .global()) {
+      let difference = -start.timeIntervalSinceNow
+      MPGoogleAnalyticsTracker.trackTiming(ofCategory: "Timing", variable: "Build Process Time", time: NSNumber(value: difference), label: "")
       callback(ArrayError.error(for: errors))
     }
     
