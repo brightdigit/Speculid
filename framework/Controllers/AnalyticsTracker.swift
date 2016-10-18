@@ -9,7 +9,7 @@
 import Foundation
 
 public enum AnalyticsHitType : String, CustomStringConvertible {
-  case timing = "timing", event = "event"
+  case timing = "timing", event = "event", exception = "exception"
   
   public var description: String {
     return self.rawValue
@@ -31,6 +31,16 @@ public struct AnalyticsEvent : AnalyticsEventProtocol {
 }
 
 public struct AnalyticsTracker : AnalyticsTrackerProtocol {
+  public func track(error: Error, isFatal: Bool) {
+    var parameters = configuration.parameters
+    
+    parameters[.hitType] = AnalyticsHitType.exception
+    parameters[.exceptionDescription] = error.localizedDescription
+    parameters[.exceptionFatal] = isFatal ? 1 : 0
+    
+    sessionManager.send(parameters)
+  }
+  
   public func track(event: AnalyticsEventProtocol) {
     var parameters = configuration.parameters
     

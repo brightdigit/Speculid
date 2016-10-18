@@ -7,7 +7,7 @@
 //
 
 public struct AnalyticsSessionManager: AnalyticsSessionManagerProtocol {
-  #if false && DEBUG
+  #if DEBUG && false
   public static let defaultBaseUrl = URL(string: "https://www.google-analytics.com/debug/collect")!
   #else
   public static let defaultBaseUrl = URL(string: "https://www.google-analytics.com/collect")!
@@ -48,7 +48,9 @@ public struct AnalyticsSessionManager: AnalyticsSessionManagerProtocol {
         print(error)
       }
       print(parameterString)
-      print(result)
+      if let data = data {
+      print(String(data: data, encoding: .utf8))
+      }
       semaphore.signal()
     })
     #else
