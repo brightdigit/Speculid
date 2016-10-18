@@ -62,6 +62,8 @@
 		B3EDA6601D985ACA00F4E77F /* SpeculidConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDA65F1D985ACA00F4E77F /* SpeculidConfigurationProtocol.swift */; };
 		B3EDA6621D98A13F00F4E77F /* SpeculidBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDA6611D98A13F00F4E77F /* SpeculidBuilder.swift */; };
 		B3EDA6641D98A16A00F4E77F /* SpeculidBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDA6631D98A16A00F4E77F /* SpeculidBuilderProtocol.swift */; };
+		B3EE812D1DB6624A00F0D9A7 /* ClientIdentifierDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EE812C1DB6624A00F0D9A7 /* ClientIdentifierDelegate.swift */; };
+		B3EE812F1DB6626900F0D9A7 /* ClientIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EE812E1DB6626900F0D9A7 /* ClientIdentifier.swift */; };
 		FA2CD792E10A6102D66AEB00 /* Pods_Speculid_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769F32ABB131CDEE204D90AC /* Pods_Speculid_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +171,8 @@
 		B3EDA65F1D985ACA00F4E77F /* SpeculidConfigurationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SpeculidConfigurationProtocol.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B3EDA6611D98A13F00F4E77F /* SpeculidBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidBuilder.swift; sourceTree = "<group>"; };
 		B3EDA6631D98A16A00F4E77F /* SpeculidBuilderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidBuilderProtocol.swift; sourceTree = "<group>"; };
+		B3EE812C1DB6624A00F0D9A7 /* ClientIdentifierDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientIdentifierDelegate.swift; sourceTree = "<group>"; };
+		B3EE812E1DB6626900F0D9A7 /* ClientIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientIdentifier.swift; sourceTree = "<group>"; };
 		DA8C8B36DBAD28741A274EDD /* Pods_Speculid_App_Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid_App_Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -312,6 +316,7 @@
 				B30005BD1DB51446000A8166 /* SpeculidConfigurationLoader.swift */,
 				B33D98231DB5A74A00CB21C3 /* AnalyticsTracker.swift */,
 				B33D982B1DB5B17300CB21C3 /* AnalyticsSessionManager.swift */,
+				B3EE812E1DB6626900F0D9A7 /* ClientIdentifier.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 				B33D98211DB5A28200CB21C3 /* AnalyticsTrackerProtocol.swift */,
 				B33D98251DB5AEBE00CB21C3 /* AnalyticsConfigurationProtocol.swift */,
 				B33D98271DB5AED400CB21C3 /* AnalyticsSessionManagerProtocol.swift */,
+				B3EE812C1DB6624A00F0D9A7 /* ClientIdentifierDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -712,6 +718,7 @@
 				B34201CA1D99A379004C49D6 /* SpeculidDocumentProtocol.swift in Sources */,
 				B33D982A1DB5B0A700CB21C3 /* AnalyticsConfiguration.swift in Sources */,
 				B3DC29A81D9AAE1D00646E86 /* MissingRequiredInstallationError.swift in Sources */,
+				B3EE812F1DB6626900F0D9A7 /* ClientIdentifier.swift in Sources */,
 				B3951DA11DA4319B00A6FCF2 /* ProcessProtocol.swift in Sources */,
 				B34388791DB006BE003CB3BC /* SpeculidArgumentsProtocol.swift in Sources */,
 				B32AD7CE1D98453E00B871CE /* SpeculidConfiguration.swift in Sources */,
@@ -729,6 +736,7 @@
 				B362A4261D9C0B4000FF74FC /* ScaledGeometry.swift in Sources */,
 				B33D98241DB5A74A00CB21C3 /* AnalyticsTracker.swift in Sources */,
 				B30005C01DB518B2000A8166 /* ApplicationPathDataSource.swift in Sources */,
+				B3EE812D1DB6624A00F0D9A7 /* ClientIdentifierDelegate.swift in Sources */,
 				B33D982C1DB5B17300CB21C3 /* AnalyticsSessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
