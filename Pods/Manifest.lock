@@ -1,15 +1,12 @@
 PODS:
-  - Google-Analytics-for-OS-X (1.0)
   - SwiftVer (1.0.0)
 
 DEPENDENCIES:
-  - Google-Analytics-for-OS-X
   - SwiftVer (~> 1.0)
 
 SPEC CHECKSUMS:
-  Google-Analytics-for-OS-X: d009e4522493f32db58f6e65c635ededa2ffc370
   SwiftVer: 5a3cf6ae27a079efab5575d0161e5319cb7fbe15
 
-PODFILE CHECKSUM: 07710bcc6c166e920c36d224d566918535d37c1b
+PODFILE CHECKSUM: f2fbb68b862ea27796c46f97b172bebc30e18ebe
 
 COCOAPODS: 1.1.0.rc.2

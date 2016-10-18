@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import GoogleAnalyticsTracker
 
 public typealias ImageConversionPair = (image: ImageSpecificationProtocol,conversion: ConversionResult?)
 public typealias ImageConversionDictionary = [String:ImageConversionPair]
@@ -30,6 +29,7 @@ extension SpeculidSpecificationsProtocol {
 
 public struct SpeculidBuilder : SpeculidBuilderProtocol {
   
+  public let tracker : AnalyticsTrackerProtocol?
   public let configuration: SpeculidConfigurationProtocol
   
   public func build (document: SpeculidDocumentProtocol, callback: @escaping ((Error?) -> Void)) {
@@ -60,7 +60,8 @@ public struct SpeculidBuilder : SpeculidBuilderProtocol {
     
     group.notify(queue: .global()) {
       let difference = -start.timeIntervalSinceNow
-      MPGoogleAnalyticsTracker.trackTiming(ofCategory: "Timing", variable: "Build Process Time", time: NSNumber(value: difference), label: "")
+      self.tracker?.track(time: difference, withCategory: "Timing", withLabel: "")
+      //self.tracker?.trackTiming(ofCategory: "Timing", variable: "Build Process Time", time: NSNumber(value: difference), label: "")
       callback(ArrayError.error(for: errors))
     }
     

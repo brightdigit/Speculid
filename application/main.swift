@@ -10,10 +10,6 @@ import Foundation
 import Speculid
 import SwiftVer
 
-#if DEBUG
-import GoogleAnalyticsTracker
-#endif
-
 protocol ResourceSource {
   func url(forResource name: String?, withExtension ext: String?) -> URL?
 }
@@ -116,11 +112,6 @@ extension Array: SpeculidArgumentsProtocol {
   
 }
 
-
-#if DEBUG
-MPAnalyticsDebugWindowController.showWindow(nil)
-#endif
-
 Speculid.begin(withArguments: CommandLine.arguments,{
   (speculid) in
   let helpText = try! String(contentsOf: Bundle.main.bundlePath.url(forResource: "help", withExtension: "txt")!)
@@ -167,9 +158,7 @@ Speculid.begin(withArguments: CommandLine.arguments,{
       }
     }
   }
-  #if !DEBUG
   exit(0)
-  #endif
 })
 
 // TODO: use a semaphore
