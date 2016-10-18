@@ -18,14 +18,13 @@ public struct Speculid {
   public static let version = Version(bundle: Bundle(for: _VersionHandler.self), versionControl: vcs)!
   
   
-  public static func begin (withArguments arguments: SpeculidArgumentsProtocol, _ callback: @escaping (SpeculidApplicationProtocol) -> Void) {    
-    let analyticsConfiguration = AnalyticsConfiguration(trackingIdentifier: "UA-33667276-6", applicationName: "speculid", applicationVersion : String(describing: self.version))
+  public static func begin (withArguments arguments: SpeculidArgumentsProtocol, _ callback: @escaping (SpeculidApplicationProtocol) -> Void) {
+    let operatingSystem = ProcessInfo.processInfo.operatingSystemVersionString
+    let analyticsConfiguration = AnalyticsConfiguration(trackingIdentifier: "UA-33667276-6", applicationName: "speculid", applicationVersion : String(describing: self.version), customParameters : [.operatingSystemVersion : operatingSystem])
     let tracker = AnalyticsTracker(configuration: analyticsConfiguration, sessionManager: AnalyticsSessionManager())
     let configLoader = SpeculidConfigurationLoader(dataSources: [ConfiguredApplicationPathDataSource(), DefaultApplicationPathDataSource()])
     
-    tracker.track(event: AnalyticsEvent(category: "Launch", action: "Application Launch"))
-    //tracker.track(event: Analytics)
-    //tracker.trackEvent(ofCategory: "Launch", action: "Application Launch", label: "Launch Event", value: nil)
+    tracker.track(event: AnalyticsEvent(category: "main", action: "launch", label: "application"))
     
     configLoader.load { (configuration) in
       let application = SpeculidApplication(configuration: configuration, tracker: tracker)
