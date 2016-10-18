@@ -28,11 +28,12 @@ extension SpeculidSpecificationsProtocol {
 }
 
 public struct SpeculidBuilder : SpeculidBuilderProtocol {
-  public static let shared = SpeculidBuilder(configuration: SpeculidConfiguration.main)
-  public let configuration: SpeculidConfiguration
+  
+  public let tracker : AnalyticsTrackerProtocol?
+  public let configuration: SpeculidConfigurationProtocol
   
   public func build (document: SpeculidDocumentProtocol, callback: @escaping ((Error?) -> Void)) {
-    
+    let start = Date()
     var errors = [Error]()
     
     let taskDictionary = document.images.reduce(ImageConversionDictionary()) { (dictionary, image) -> ImageConversionDictionary in
@@ -57,7 +58,10 @@ public struct SpeculidBuilder : SpeculidBuilderProtocol {
       }
     }
     
-    group.notify(queue: .global()) { 
+    group.notify(queue: .global()) {
+      let difference = -start.timeIntervalSinceNow
+      self.tracker?.track(time: difference, withCategory: "operations", withVariable: "building", withLabel: nil)
+      //self.tracker?.trackTiming(ofCategory: "Timing", variable: "Build Process Time", time: NSNumber(value: difference), label: "")
       callback(ArrayError.error(for: errors))
     }
     
@@ -65,7 +69,7 @@ public struct SpeculidBuilder : SpeculidBuilderProtocol {
 }
 
 
-public extension SpeculidBuilder {
+public extension SpeculidBuilderProtocol {
   func build(document : SpeculidDocumentProtocol) -> Error? {
     var result: Error?
     let semaphone = DispatchSemaphore(value: 0)

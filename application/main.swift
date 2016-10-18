@@ -37,7 +37,6 @@ extension String : ResourceSource {
   }
 }
 
-let helpText = try! String(contentsOf: Bundle.main.bundlePath.url(forResource: "help", withExtension: "txt")!)
 
 let formatter: NumberFormatter = {
   let formatter = NumberFormatter()
@@ -46,18 +45,15 @@ let formatter: NumberFormatter = {
   return formatter
 }()
 
+
 enum Stage : CustomStringConvertible {
   case alpha, beta, production
   
-  @available(*, deprecated: 1.0.0, message: "Preprocessor directive should be replaced. Instead use build number minimum.")
-  static var current : Stage {
-  #if ALPHA
-    return .alpha
-  #elseif BETA
-    return .beta
-  #else
-    return .production
-  #endif
+  public static func current (for version: Version) -> Stage {
+    let result = self.minimumBuildVersions.filter{
+      $0.value < version.build
+      }.max(by: {$0.value < $1.value})
+    return result?.key ?? .alpha
   }
   
   static let minimumBuildVersions : [Stage: UInt8] = [.beta : 15]
@@ -72,6 +68,7 @@ enum Stage : CustomStringConvertible {
       return "production"
     }
   }
+  
   var minimumBuildVersion : UInt8? {
     return type(of: self).minimumBuildVersions[self]
   }
@@ -111,46 +108,58 @@ public enum CommandLineParameter : String {
   case Help = "help", Version = "version"
 }
 
-let output = FileHandle.standardOutput
-
-let regex = try! NSRegularExpression(pattern: "\\-\\-(\\w+)", options: [])
-let speculidURL: URL?
-
-if let path = CommandLine.arguments.last , CommandLine.arguments.count > 1 {
-  speculidURL = URL(fileURLWithPath: path)
-} else {
-  let openPanel = NSOpenPanel()
-  openPanel.allowsMultipleSelection = false
-  openPanel.canChooseDirectories = false
-  openPanel.canChooseFiles = true
-  openPanel.allowedFileTypes = ["spcld","speculid"]
-  openPanel.runModal()
-  openPanel.title = "Select File"
-  speculidURL = openPanel.url
-  openPanel.close()
+extension Array: SpeculidArgumentsProtocol {
+  
 }
 
-if let speculidURL = speculidURL {
-  if let document = SpeculidDocument(url: speculidURL) {
-    if let error = SpeculidBuilder.shared.build(document: document) {
-      print(error)
-      exit(1)
-    }
-  } else if let parameter = CommandLine.arguments.dropFirst().first {
-    let range = NSRange(0..<parameter.characters.count)
-    if let match = regex.firstMatch(in: parameter, options: [], range: range) {
-      let rangeIndex = parameter.range(from: match.rangeAt(1))
-      if let param = CommandLineParameter(rawValue: parameter.substring(with: rangeIndex!)) {
-        switch param {
-        case .Version :
-          print("Speculid v\(Speculid.version.descriptionWithStage(Stage.current)) [\(Speculid.version)]")
-          break
-        default:
-          print(helpText)
-          break
+Speculid.begin(withArguments: CommandLine.arguments,{
+  (speculid) in
+  let helpText = try! String(contentsOf: Bundle.main.bundlePath.url(forResource: "help", withExtension: "txt")!)
+  
+  let output = FileHandle.standardOutput
+  
+  let regex = try! NSRegularExpression(pattern: "\\-\\-(\\w+)", options: [])
+  let speculidURL: URL?
+  
+  if let path = CommandLine.arguments.last , CommandLine.arguments.count > 1 {
+    speculidURL = URL(fileURLWithPath: path)
+  } else {
+    let openPanel = NSOpenPanel()
+    openPanel.allowsMultipleSelection = false
+    openPanel.canChooseDirectories = false
+    openPanel.canChooseFiles = true
+    openPanel.allowedFileTypes = ["spcld","speculid"]
+    openPanel.runModal()
+    openPanel.title = "Select File"
+    speculidURL = openPanel.url
+    openPanel.close()
+  }
+  
+  if let speculidURL = speculidURL {
+    if let document = speculid.document(url: speculidURL) {
+      if let error = speculid.builder.build(document: document) {
+        print(error)
+        exit(1)
+      }
+    } else if let parameter = CommandLine.arguments.dropFirst().first {
+      let range = NSRange(0..<parameter.characters.count)
+      if let match = regex.firstMatch(in: parameter, options: [], range: range) {
+        let rangeIndex = parameter.range(from: match.rangeAt(1))
+        if let param = CommandLineParameter(rawValue: parameter.substring(with: rangeIndex!)) {
+          switch param {
+          case .Version :
+            print("Speculid v\(speculid.version.descriptionWithStage(Stage.current(for: speculid.version))) [\(speculid.version)]")
+            break
+          default:
+            print(helpText)
+            break
+          }
         }
       }
     }
   }
-}
-exit(0)
+  exit(0)
+})
+
+// TODO: use a semaphore
+RunLoop.main.run()

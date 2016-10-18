@@ -2,12 +2,25 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:examples/examples.xcodeproj">
+      location = "group:README.md">
    </FileRef>
    <FileRef
       location = "group:speculid.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:examples/examples.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <Group
+      location = "container:"
+      name = "research">
+      <FileRef
+         location = "group:research/auto-paths.playground">
+      </FileRef>
+      <FileRef
+         location = "group:research/running-process/running-process.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>
