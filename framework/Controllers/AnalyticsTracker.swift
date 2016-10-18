@@ -20,9 +20,9 @@ public struct AnalyticsEvent : AnalyticsEventProtocol {
   public let category: String
   public let action: String
   public let label: String?
-  public let value: String?
+  public let value: Int?
   
-  public init (category: String, action: String, label: String? = nil, value: String? = nil) {
+  public init (category: String, action: String, label: String? = nil, value: Int? = nil) {
     self.category = category
     self.action = action
     self.label = label
@@ -52,18 +52,18 @@ public struct AnalyticsTracker : AnalyticsTrackerProtocol {
   let configuration : AnalyticsConfigurationProtocol
   let sessionManager : AnalyticsSessionManagerProtocol
   
-  public func track(time: TimeInterval, withCategory category: String?, withLabel label: String?) {
+  public func track(time: TimeInterval, withCategory category: String, withVariable variable: String, withLabel label: String?) {
     var parameters = configuration.parameters
     
     parameters[.hitType] = AnalyticsHitType.timing
-    if let category = category {
-      parameters[.userTimingCategory] = category
-    }
+    parameters[.userTimingCategory] = category
+    parameters[.userTimingVariable] = variable
+    parameters[.timing] = Int(round(time * 1000.0))
+
     if let label = label {
       parameters[.userTimingLabel] = label
     }
-    parameters[.timing] = time
-    
+
     print(parameters)
     
     sessionManager.send(parameters)

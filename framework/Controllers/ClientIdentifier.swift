@@ -27,6 +27,16 @@ public struct ClientIdentifier: ClientIdentifierDelegate {
   }
 
   public static func calculateIdentifier () -> String {
+    
+    
+    guard let _clientIdentifier = UserDefaults.standard.string(forKey: "clientIdentifier") else {
+      let uuid = UUID()
+      UserDefaults.standard.set(uuid.uuidString, forKey: "clientIdentifier")
+      return uuid.uuidString
+    }
+    
+    return _clientIdentifier
+    
 //    NSString *serialNumber = NULL;
 //    io_service_t platformExpert = IOServiceGetMatchingService(kIOMasterPortDefault, IOServiceMatching("IOPlatformExpertDevice"));
     
