@@ -8,18 +8,11 @@
 
 import Foundation
 
-public enum ApplicationPath : String {
-  case inkscape = "inkscape",
-  convert  = "convert"
-}
-
 extension FileManager {
   func url (ifExistsAtPath path: String) -> URL? {
     return FileManager.default.fileExists(atPath: path) ? URL(fileURLWithPath: path) : nil
   }
 }
-
-public typealias ApplicationPathDictionary = [ApplicationPath : URL]
 
 public struct SpeculidConfiguration : SpeculidConfigurationProtocol {
   public let applicationPaths : ApplicationPathDictionary
