@@ -6,7 +6,6 @@
 //
 //
 
-import Foundation
 import SwiftVer
 
 public protocol SpeculidApplicationProtocol {

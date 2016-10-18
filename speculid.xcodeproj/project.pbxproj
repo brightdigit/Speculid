@@ -47,6 +47,13 @@
 		B362A4241D9BFCCB00FF74FC /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362A4231D9BFCCB00FF74FC /* Geometry.swift */; };
 		B362A4261D9C0B4000FF74FC /* ScaledGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362A4251D9C0B4000FF74FC /* ScaledGeometry.swift */; };
 		B362A4281D9C0B4C00FF74FC /* GeometryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362A4271D9C0B4C00FF74FC /* GeometryProtocol.swift */; };
+		B36AD1B81DB6C19D00D33AD7 /* AnalyticsParameterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1B71DB6C19D00D33AD7 /* AnalyticsParameterKey.swift */; };
+		B36AD1BA1DB6C1B400D33AD7 /* AnalyticsParameterDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1B91DB6C1B400D33AD7 /* AnalyticsParameterDictionary.swift */; };
+		B36AD1BC1DB6C1E100D33AD7 /* AnalyticsEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1BB1DB6C1E100D33AD7 /* AnalyticsEventProtocol.swift */; };
+		B36AD1BE1DB6C20900D33AD7 /* GeometryValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1BD1DB6C20900D33AD7 /* GeometryValue.swift */; };
+		B36AD1C01DB6C24600D33AD7 /* ConversionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1BF1DB6C24600D33AD7 /* ConversionResult.swift */; };
+		B36AD1C21DB6C3AB00D33AD7 /* ApplicationPathDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1C11DB6C3AB00D33AD7 /* ApplicationPathDictionary.swift */; };
+		B36AD1C41DB6C3C100D33AD7 /* ApplicationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1C31DB6C3C100D33AD7 /* ApplicationPath.swift */; };
 		B38086001D9AA76E000BC05A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38085FF1D9AA76E000BC05A /* Assets.xcassets */; };
 		B38086091D9AA78E000BC05A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38086081D9AA78E000BC05A /* main.swift */; };
 		B380860A1D9AA7B2000BC05A /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
@@ -156,6 +163,13 @@
 		B362A4231D9BFCCB00FF74FC /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		B362A4251D9C0B4000FF74FC /* ScaledGeometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledGeometry.swift; sourceTree = "<group>"; };
 		B362A4271D9C0B4C00FF74FC /* GeometryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryProtocol.swift; sourceTree = "<group>"; };
+		B36AD1B71DB6C19D00D33AD7 /* AnalyticsParameterKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsParameterKey.swift; sourceTree = "<group>"; };
+		B36AD1B91DB6C1B400D33AD7 /* AnalyticsParameterDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsParameterDictionary.swift; sourceTree = "<group>"; };
+		B36AD1BB1DB6C1E100D33AD7 /* AnalyticsEventProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsEventProtocol.swift; sourceTree = "<group>"; };
+		B36AD1BD1DB6C20900D33AD7 /* GeometryValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryValue.swift; sourceTree = "<group>"; };
+		B36AD1BF1DB6C24600D33AD7 /* ConversionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionResult.swift; sourceTree = "<group>"; };
+		B36AD1C11DB6C3AB00D33AD7 /* ApplicationPathDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationPathDictionary.swift; sourceTree = "<group>"; };
+		B36AD1C31DB6C3C100D33AD7 /* ApplicationPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationPath.swift; sourceTree = "<group>"; };
 		B38085F91D9AA76E000BC05A /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38085FF1D9AA76E000BC05A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B38086041D9AA76E000BC05A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -341,6 +355,7 @@
 				B33D98251DB5AEBE00CB21C3 /* AnalyticsConfigurationProtocol.swift */,
 				B33D98271DB5AED400CB21C3 /* AnalyticsSessionManagerProtocol.swift */,
 				B3EE812C1DB6624A00F0D9A7 /* ClientIdentifierDelegate.swift */,
+				B36AD1BB1DB6C1E100D33AD7 /* AnalyticsEventProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -356,6 +371,12 @@
 				B362A4231D9BFCCB00FF74FC /* Geometry.swift */,
 				B362A4251D9C0B4000FF74FC /* ScaledGeometry.swift */,
 				B33D98291DB5B0A700CB21C3 /* AnalyticsConfiguration.swift */,
+				B36AD1B71DB6C19D00D33AD7 /* AnalyticsParameterKey.swift */,
+				B36AD1B91DB6C1B400D33AD7 /* AnalyticsParameterDictionary.swift */,
+				B36AD1BD1DB6C20900D33AD7 /* GeometryValue.swift */,
+				B36AD1BF1DB6C24600D33AD7 /* ConversionResult.swift */,
+				B36AD1C11DB6C3AB00D33AD7 /* ApplicationPathDictionary.swift */,
+				B36AD1C31DB6C3C100D33AD7 /* ApplicationPath.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -696,19 +717,24 @@
 				B34201D61D99A61B004C49D6 /* PDFConversionBuilder.swift in Sources */,
 				B343887B1DB035C3003CB3BC /* SpeculidApplication.swift in Sources */,
 				B32AD7CC1D98307200B871CE /* ImageConversionTaskProtocol.swift in Sources */,
+				B36AD1BC1DB6C1E100D33AD7 /* AnalyticsEventProtocol.swift in Sources */,
 				B38F734D1DA2A928008469FE /* Speculid.swift in Sources */,
 				B30005BE1DB51446000A8166 /* SpeculidConfigurationLoader.swift in Sources */,
 				B34201CC1D99A3BD004C49D6 /* SpeculidSpecificationsProtocol.swift in Sources */,
 				B30005C51DB52FCD000A8166 /* ConfiguredApplicationPathDataSource.swift in Sources */,
 				B34201CE1D99A3F5004C49D6 /* ImageSpecificationProtocol.swift in Sources */,
 				B34201D81D99A62D004C49D6 /* RasterConversionBuilder.swift in Sources */,
+				B36AD1BA1DB6C1B400D33AD7 /* AnalyticsParameterDictionary.swift in Sources */,
 				B34201D41D99A604004C49D6 /* SVGImageConversionBuilder.swift in Sources */,
+				B36AD1C01DB6C24600D33AD7 /* ConversionResult.swift in Sources */,
 				B32AD7C61D982E8D00B871CE /* ProcessImageConversionTask.swift in Sources */,
 				B34201D01D99A5CD004C49D6 /* ImageIdiom.swift in Sources */,
 				B3EDA6641D98A16A00F4E77F /* SpeculidBuilderProtocol.swift in Sources */,
 				B3B746FE1D974C4A0044809F /* SpeculidDocument.swift in Sources */,
+				B36AD1B81DB6C19D00D33AD7 /* AnalyticsParameterKey.swift in Sources */,
 				B3B747001D9751080044809F /* ImageSpecification.swift in Sources */,
 				B30005C31DB52F84000A8166 /* DefaultApplicationPathDataSource.swift in Sources */,
+				B36AD1BE1DB6C20900D33AD7 /* GeometryValue.swift in Sources */,
 				B32AD7CA1D982F7F00B871CE /* ImageConversionBuilderProtocol.swift in Sources */,
 				B33D98281DB5AED400CB21C3 /* AnalyticsSessionManagerProtocol.swift in Sources */,
 				B34201691D9975DC004C49D6 /* String.swift in Sources */,
@@ -723,6 +749,7 @@
 				B34388791DB006BE003CB3BC /* SpeculidArgumentsProtocol.swift in Sources */,
 				B32AD7CE1D98453E00B871CE /* SpeculidConfiguration.swift in Sources */,
 				B32AD7C41D98112100B871CE /* SpeculidSpecifications.swift in Sources */,
+				B36AD1C21DB6C3AB00D33AD7 /* ApplicationPathDictionary.swift in Sources */,
 				B342016B1D997602004C49D6 /* CGFloat.swift in Sources */,
 				B362A4281D9C0B4C00FF74FC /* GeometryProtocol.swift in Sources */,
 				B34201D21D99A5EA004C49D6 /* ProcessError.swift in Sources */,
@@ -736,6 +763,7 @@
 				B362A4261D9C0B4000FF74FC /* ScaledGeometry.swift in Sources */,
 				B33D98241DB5A74A00CB21C3 /* AnalyticsTracker.swift in Sources */,
 				B30005C01DB518B2000A8166 /* ApplicationPathDataSource.swift in Sources */,
+				B36AD1C41DB6C3C100D33AD7 /* ApplicationPath.swift in Sources */,
 				B3EE812D1DB6624A00F0D9A7 /* ClientIdentifierDelegate.swift in Sources */,
 				B33D982C1DB5B17300CB21C3 /* AnalyticsSessionManager.swift in Sources */,
 			);

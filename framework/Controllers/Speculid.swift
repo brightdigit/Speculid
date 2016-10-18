@@ -40,7 +40,7 @@ public struct Speculid {
     
     configLoader.load { (configuration) in
       let application = SpeculidApplication(configuration: configuration, tracker: tracker)
-      fatalError("test")
+      callback(application)
     }
   }
 }

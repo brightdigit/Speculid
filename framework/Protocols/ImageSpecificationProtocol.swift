@@ -6,8 +6,6 @@
 //
 //
 
-import Cocoa
-
 public protocol ImageSpecificationProtocol {
   var idiom : ImageIdiom { get }
   var scale : CGFloat? { get }

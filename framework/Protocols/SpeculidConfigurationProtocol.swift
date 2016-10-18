@@ -6,8 +6,6 @@
 //
 //
 
-import Foundation
-
 public protocol SpeculidConfigurationProtocol {
   var applicationPaths : ApplicationPathDictionary { get }
 }
