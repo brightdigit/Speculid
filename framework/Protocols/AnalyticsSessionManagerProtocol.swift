@@ -9,10 +9,10 @@
 import Foundation
 
 public enum AnalyticsParameterKey : String {
-  
   case hitType = "t", version = "v", trackingId = "tid",
-  category = "utc", label = "utl", timing = "utt"
-  
+  userTimingCategory = "utc", userTimingLabel = "utl", timing = "utt", clientId = "cid",
+  applicationName = "an", applicationVersion = "av", eventAction = "ea",
+  eventCategory = "ec", eventLabel = "el", eventValue = "ev"
 }
 
 public typealias AnalyticsParameterDictionary = [AnalyticsParameterKey : Any]

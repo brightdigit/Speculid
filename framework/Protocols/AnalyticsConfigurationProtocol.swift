@@ -9,12 +9,15 @@
 import Foundation
 
 public protocol AnalyticsConfigurationProtocol {
-  var identifier : String { get }
+  var applicationVersion : String { get }
+  var applicationName : String { get }
+  var trackingIdentifier : String { get }
+  var clientIdentifier : String { get }
   var version : Int { get }
 }
 
 public extension AnalyticsConfigurationProtocol {
   public var parameters : AnalyticsParameterDictionary {
-    return [.trackingId : self.identifier, .version : self.version]
+    return [.trackingId : self.trackingIdentifier, .clientId: self.clientIdentifier, .version : self.version, .applicationName: self.applicationName, .applicationVersion : self.applicationVersion]
   }
 }
