@@ -17,7 +17,7 @@ extension FileManager {
 public struct SpeculidConfiguration : SpeculidConfigurationProtocol {
   public let applicationPaths : ApplicationPathDictionary
   
-  public init (applicationPaths : ApplicationPathDictionary) {
-    self.applicationPaths = applicationPaths
+  public init (applicationPaths : ApplicationPathDictionary? = nil) {
+    self.applicationPaths = applicationPaths ?? ApplicationPathDictionary()
   }
 }
