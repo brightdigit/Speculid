@@ -42,40 +42,11 @@ public struct AnalyticsSessionManager: AnalyticsSessionManagerProtocol {
     request.httpBody = parameterString.data(using: .utf8)
     request.httpMethod = "POST"
     
-    #if DEBUG
     let dataTask = self.session.dataTask(with: request, completionHandler: { (data, result, error) in
-      if let error = error {
-        print(error)
-      }
-      print(parameterString)
-      if let data = data {
-      print(String(data: data, encoding: .utf8))
-      }
       semaphore.signal()
     })
-    #else
-    let dataTask = self.session.dataTask(with: request)
-    #endif
     
     dataTask.resume()
-    
     semaphore.wait()
-    
-    
-//    
-//    for (NSString *identifier in allIdentifiers)
-//    {
-//      NSString *requestString = [self requestStringForDictionary:parameters GAID:identifier];
-//      NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:analyticsURL];
-//      request.HTTPBody = [requestString dataUsingEncoding:NSUTF8StringEncoding];
-//      request.HTTPMethod = @"POST";
-//      NSURLSessionDataTask *analyticsTask = [self.session dataTaskWithRequest:request];
-//      [analyticsTask resume];
-//      
-//      if (self.debugEnabled)
-//      {
-//        [self debugEvent:parameters forGAID:identifier];
-//      }
-//    }
   }
 }
