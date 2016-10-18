@@ -9,6 +9,15 @@
 import Foundation
 
 public protocol SpeculidConfigurationProtocol {
-  var inkscapeURL : URL? { get }
-  var convertURL : URL? { get }
+  var applicationPaths : ApplicationPathDictionary { get }
+}
+
+public extension SpeculidConfigurationProtocol {
+  var inkscapeURL : URL? {
+    return self.applicationPaths[.inkscape]
+  }
+  
+  var convertURL : URL? {
+    return self.applicationPaths[.convert]
+  }
 }
