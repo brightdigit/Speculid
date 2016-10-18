@@ -8,7 +8,6 @@
 
 import Foundation
 import SwiftVer
-import GoogleAnalyticsTracker
 
 public struct Speculid {
   private class _VersionHandler {
@@ -20,15 +19,15 @@ public struct Speculid {
   
   
   public static func begin (withArguments arguments: SpeculidArgumentsProtocol, _ callback: @escaping (SpeculidApplicationProtocol) -> Void) {
-    let analyticsConfiguration = MPAnalyticsConfiguration(analyticsIdentifier: "UA-33667276-6")
     
-    MPGoogleAnalyticsTracker.activate(analyticsConfiguration)
+    let analyticsConfiguration = AnalyticsConfiguration(identifier: "UA-33667276-6")
+    let tracker = AnalyticsTracker(configuration: analyticsConfiguration, sessionManager: AnalyticsSessionManager())
     let configLoader = SpeculidConfigurationLoader(dataSources: [ConfiguredApplicationPathDataSource(), DefaultApplicationPathDataSource()])
     
-    MPGoogleAnalyticsTracker.trackEvent(ofCategory: "Launch", action: "Application Launch", label: "Launch Event", value: NSNumber(value: 0))
+    //tracker.trackEvent(ofCategory: "Launch", action: "Application Launch", label: "Launch Event", value: NSNumber(value: 0))
     
     configLoader.load { (configuration) in
-      let application = SpeculidApplication(configuration: configuration)
+      let application = SpeculidApplication(configuration: configuration, tracker: tracker)
       callback(application)
     }
   }
