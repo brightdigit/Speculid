@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:research/random-string.playground">
+   </FileRef>
+   <FileRef
       location = "group:README.md">
    </FileRef>
    <FileRef
@@ -13,14 +16,4 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
-   <Group
-      location = "container:"
-      name = "research">
-      <FileRef
-         location = "group:research/auto-paths.playground">
-      </FileRef>
-      <FileRef
-         location = "group:research/running-process/running-process.xcodeproj">
-      </FileRef>
-   </Group>
 </Workspace>

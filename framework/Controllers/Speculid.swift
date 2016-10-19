@@ -22,8 +22,9 @@ public struct Speculid {
     
   }
   
+  public static let bundle = Bundle(for: _VersionHandler.self)
   public static let vcs = VersionControlInfo(TYPE: VCS_TYPE, BASENAME: VCS_BASENAME, UUID: VCS_UUID, NUM: VCS_NUM, DATE: VCS_DATE, BRANCH: VCS_BRANCH, TAG: VCS_TAG, TICK: VCS_TICK, EXTRA: VCS_EXTRA, FULL_HASH: VCS_FULL_HASH, SHORT_HASH: VCS_SHORT_HASH, WC_MODIFIED: VCS_WC_MODIFIED)
-  public static let version = Version(bundle: Bundle(for: _VersionHandler.self), versionControl: vcs)!
+  public static let version = Version(bundle: bundle, versionControl: vcs)!
   
   
   public static func begin (withArguments arguments: SpeculidArgumentsProtocol, _ callback: @escaping (SpeculidApplicationProtocol) -> Void) {
@@ -34,7 +35,7 @@ public struct Speculid {
     
     exceptionHandler = tracker.track
     
-    let configLoader = SpeculidConfigurationLoader(dataSources: [ConfiguredApplicationPathDataSource(), DefaultApplicationPathDataSource()])
+    let configLoader = SpeculidConfigurationLoader(dataSources: [SearchApplicationPathDataSource(), ConfiguredApplicationPathDataSource(), DefaultApplicationPathDataSource()])
     
     tracker.track(event: AnalyticsEvent(category: "main", action: "launch", label: "application"))
     
