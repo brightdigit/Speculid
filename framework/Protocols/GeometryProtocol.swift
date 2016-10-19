@@ -8,10 +8,6 @@
 
 import Foundation
 
-public enum GeometryValue {
-  case Width(Int), Height(Int)
-}
-
 public protocol GeometryProtocol : CustomStringConvertible {
   func text (scaledBy scale: Int) -> String
 }

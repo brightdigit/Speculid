@@ -3,16 +3,16 @@
 let VCS_TYPE			= "git"
 let VCS_BASENAME		= "speculid"
 let VCS_UUID:	String?	= "b6fd659a7d2088d5420f962a307b1f7f7e5d0604"
-let VCS_NUM:	Int		= 412
-let VCS_DATE			= "2016-10-18T18:53:59Z"
-let VCS_BRANCH:	String	= "feature/desktop-analytics"
+let VCS_NUM:	Int		= 419
+let VCS_DATE			= "2016-10-19T12:46:12Z"
+let VCS_BRANCH:	String	= "release/1.0.0"
 let VCS_TAG:	String?	= "1.0.0-beta1"
-let VCS_TICK:	Int?	= 20
-let VCS_EXTRA:	String?	= "18"
+let VCS_TICK:	Int?	= 27
+let VCS_EXTRA:	String?	= "2"
 
-let VCS_ACTION_STAMP:	String?	= "2016-10-18T18:53:59Z!leogdion@brightdigit.com"
-let VCS_FULL_HASH:		String	= "b7a892847dd1c3bbcb1fe6bd802bd9bb4b74a30f"
-let VCS_SHORT_HASH:		String	= "b7a8928"
+let VCS_ACTION_STAMP:	String?	= "2016-10-19T12:46:12Z!leogdion@brightdigit.com"
+let VCS_FULL_HASH:		String	= "7ffbfd3c971d6b6d36cd6bea19ef1c5d91ae1a0b"
+let VCS_SHORT_HASH:		String	= "7ffbfd3"
 
 let VCS_WC_MODIFIED:	Bool	= true
 

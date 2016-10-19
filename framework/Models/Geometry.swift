@@ -6,8 +6,6 @@
 //
 //
 
-import Cocoa
-
 extension GeometryValue : CustomStringConvertible {
   func scaledBy(_ scale: Int) -> GeometryValue {
     switch self {

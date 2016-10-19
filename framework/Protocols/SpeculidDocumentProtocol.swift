@@ -6,8 +6,6 @@
 //
 //
 
-import Cocoa
-
 public protocol SpeculidDocumentProtocol {
   var specifications : SpeculidSpecificationsProtocol { get }
   var images : [ImageSpecificationProtocol] { get }
