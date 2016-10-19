@@ -54,6 +54,7 @@
 		B36AD1C01DB6C24600D33AD7 /* ConversionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1BF1DB6C24600D33AD7 /* ConversionResult.swift */; };
 		B36AD1C21DB6C3AB00D33AD7 /* ApplicationPathDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1C11DB6C3AB00D33AD7 /* ApplicationPathDictionary.swift */; };
 		B36AD1C41DB6C3C100D33AD7 /* ApplicationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1C31DB6C3C100D33AD7 /* ApplicationPath.swift */; };
+		B36AD1C71DB6E9DF00D33AD7 /* PDFConversionBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1C61DB6E9DF00D33AD7 /* PDFConversionBuilderTest.swift */; };
 		B38086001D9AA76E000BC05A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38085FF1D9AA76E000BC05A /* Assets.xcassets */; };
 		B38086091D9AA78E000BC05A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38086081D9AA78E000BC05A /* main.swift */; };
 		B380860A1D9AA7B2000BC05A /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
@@ -170,6 +171,7 @@
 		B36AD1BF1DB6C24600D33AD7 /* ConversionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionResult.swift; sourceTree = "<group>"; };
 		B36AD1C11DB6C3AB00D33AD7 /* ApplicationPathDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationPathDictionary.swift; sourceTree = "<group>"; };
 		B36AD1C31DB6C3C100D33AD7 /* ApplicationPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationPath.swift; sourceTree = "<group>"; };
+		B36AD1C61DB6E9DF00D33AD7 /* PDFConversionBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFConversionBuilderTest.swift; path = Builders/PDFConversionBuilderTest.swift; sourceTree = "<group>"; };
 		B38085F91D9AA76E000BC05A /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38085FF1D9AA76E000BC05A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B38086041D9AA76E000BC05A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 		B310EE431D94BF6D00C4A30E /* tests */ = {
 			isa = PBXGroup;
 			children = (
+				B36AD1C51DB6E9C300D33AD7 /* Builders */,
 				B3951DA21DA432FB00A6FCF2 /* Controllers */,
 				B310EE461D94BF6D00C4A30E /* Info.plist */,
 			);
@@ -305,6 +308,14 @@
 				B342016A1D997602004C49D6 /* CGFloat.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B36AD1C51DB6E9C300D33AD7 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				B36AD1C61DB6E9DF00D33AD7 /* PDFConversionBuilderTest.swift */,
+			);
+			name = Builders;
 			sourceTree = "<group>";
 		};
 		B38085FA1D9AA76E000BC05A /* application */ = {
@@ -773,6 +784,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B36AD1C71DB6E9DF00D33AD7 /* PDFConversionBuilderTest.swift in Sources */,
 				B3951DA41DA4334A00A6FCF2 /* ProcessImageConversionTaskTests.swift in Sources */,
 				B310EE451D94BF6D00C4A30E /* SpeculidTests.swift in Sources */,
 				B3951DA61DA4395600A6FCF2 /* ImageConversionBuilderTests.swift in Sources */,
