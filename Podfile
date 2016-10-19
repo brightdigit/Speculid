@@ -16,6 +16,7 @@ target 'Speculid-App' do
     target 'SpeculidTests' do
       inherit! :search_paths
       # Pods for testing
+      pod 'RandomKit', :git => 'https://github.com/nvzqz/RandomKit.git', :branch => 'master'
     end
 
   end
