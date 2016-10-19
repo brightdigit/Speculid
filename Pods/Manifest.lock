@@ -1,12 +1,25 @@
 PODS:
+  - RandomKit (1.6.0)
   - SwiftVer (1.0.0)
 
 DEPENDENCIES:
+  - RandomKit (from `https://github.com/nvzqz/RandomKit.git`, branch `master`)
   - SwiftVer (~> 1.0)
 
+EXTERNAL SOURCES:
+  RandomKit:
+    :branch: master
+    :git: https://github.com/nvzqz/RandomKit.git
+
+CHECKOUT OPTIONS:
+  RandomKit:
+    :commit: c4c8649dd2eeafaed72d07c988936819e4617c82
+    :git: https://github.com/nvzqz/RandomKit.git
+
 SPEC CHECKSUMS:
+  RandomKit: 193d11478a87943021780e38f3be07a1c7c8419e
   SwiftVer: 5a3cf6ae27a079efab5575d0161e5319cb7fbe15
 
-PODFILE CHECKSUM: f2fbb68b862ea27796c46f97b172bebc30e18ebe
+PODFILE CHECKSUM: 303e38c4e8692b7a8020ae6a60bb9cd05c73ac0a
 
 COCOAPODS: 1.1.0.rc.2
