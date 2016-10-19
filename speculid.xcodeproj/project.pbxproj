@@ -141,7 +141,6 @@
 		B32AD7CB1D98307200B871CE /* ImageConversionTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConversionTaskProtocol.swift; sourceTree = "<group>"; };
 		B32AD7CD1D98453E00B871CE /* SpeculidConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SpeculidConfiguration.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B33C70361DA6E72D002BC291 /* help.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = help.txt; sourceTree = "<group>"; };
-		B33D981F1DB59DE100CB21C3 /* Google-Analytics-for-OS-X */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Google-Analytics-for-OS-X"; sourceTree = "<group>"; };
 		B33D98211DB5A28200CB21C3 /* AnalyticsTrackerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsTrackerProtocol.swift; sourceTree = "<group>"; };
 		B33D98231DB5A74A00CB21C3 /* AnalyticsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsTracker.swift; sourceTree = "<group>"; };
 		B33D98251DB5AEBE00CB21C3 /* AnalyticsConfigurationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsConfigurationProtocol.swift; sourceTree = "<group>"; };
@@ -249,7 +248,6 @@
 		B310EE2A1D94BF5000C4A30E = {
 			isa = PBXGroup;
 			children = (
-				B33D981F1DB59DE100CB21C3 /* Google-Analytics-for-OS-X */,
 				B310EE381D94BF6D00C4A30E /* framework */,
 				B310EE431D94BF6D00C4A30E /* tests */,
 				B38085FA1D9AA76E000BC05A /* application */,
@@ -836,7 +834,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -864,7 +862,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
