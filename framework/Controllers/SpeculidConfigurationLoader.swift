@@ -18,18 +18,37 @@ public struct SpeculidConfigurationLoader : SpeculidConfigurationLoaderProtocol 
   
   public func load(_ closure: @escaping (SpeculidConfigurationProtocol) -> Void) {
     DispatchQueue.main.async {
-      var applicationPaths = ApplicationPathDictionary()
+      var applicationPathSets = Array(repeating: ApplicationPathDictionary(), count: self.dataSources.count)
+      let group = DispatchGroup()
       
-      for dataSource in self.dataSources {
-        let newPaths = dataSource.applicationPaths(oldPaths: applicationPaths)
-        for (type, url) in newPaths {
-          if applicationPaths[type] == nil {
-            applicationPaths[type] = url
-          }
-        }
+      /*
+      DispatchQueue.main.async(group: group, qos: DispatchQoS.default, flags: DispatchWorkItemFlags(), execute: { 
+        
+      })
+ */
+      
+      
+      for (index,dataSource) in self.dataSources.enumerated() {
+        group.enter()
+        dataSource.applicationPaths({ (newPaths) in
+          applicationPathSets[index] = newPaths
+          group.leave()
+        })
       }
       
-      closure(SpeculidConfiguration(applicationPaths: applicationPaths))
+      var applicationPaths = ApplicationPathDictionary()
+      group.notify(queue: .main, execute: { 
+        for paths in applicationPathSets {
+          
+          for (type, url) in paths {
+            if applicationPaths[type] == nil {
+              applicationPaths[type] = url
+            }
+          }
+        }
+        
+        closure(SpeculidConfiguration(applicationPaths: applicationPaths))
+      })
     }
   }
 }
