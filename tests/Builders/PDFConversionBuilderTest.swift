@@ -50,8 +50,6 @@ class PDFConversionBuilderTest: XCTestCase {
     let specs = SpeculidSpecifications(contentsDirectoryURL: contentsDirectoryURL, sourceImageURL: sourceImageURL)
     let builder = PDFConversionBuilder()
     
-    
-    
     XCTAssertNil(imageSpec.scale)
     XCTAssertNil(configuration.inkscapeURL)
     
@@ -74,6 +72,41 @@ class PDFConversionBuilderTest: XCTestCase {
   }
   
   func testConversionSuccess () {
+    let inkscapeURL = URL.random()
+    let imageSpecification = ImageSpecification(idiom: .universal, scale: nil, size: nil, filename: nil)
     
+    let configuration = SpeculidConfiguration(applicationPaths : [.inkscape : inkscapeURL])
+    let contentsDirectoryURL = URL.random()
+    let sourceImageURL = URL.random()
+    let specifications = SpeculidSpecifications(contentsDirectoryURL: contentsDirectoryURL, sourceImageURL: sourceImageURL)
+    let builder = PDFConversionBuilder()
+    
+    
+    guard let result = builder.conversion(forImage: imageSpecification, withSpecifications: specifications, andConfiguration: configuration)  else {
+      XCTFail("no result returned")
+      return
+    }
+    
+    guard case .Task(let task) = result else {
+      XCTFail("result is not task")
+      return
+    }
+    
+    
+    guard let processTask = task as? ProcessImageConversionTask else {
+      XCTFail("task is not a process task")
+      return
+    }
+    
+    guard let process = processTask.process as? Process else {
+      XCTFail("process task is not a process")
+      return
+    }
+    
+    
+    XCTAssertEqual(process.launchPath, inkscapeURL.path)
+    
+    XCTAssertEqual(process.arguments!, ["--without-gui","--export-area-drawing","--export-pdf",
+                   specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path,specifications.sourceImageURL.absoluteURL.path])
   }
 }
