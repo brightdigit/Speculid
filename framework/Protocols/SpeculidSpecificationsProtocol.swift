@@ -6,8 +6,6 @@
 //
 //
 
-import Cocoa
-
 public protocol SpeculidSpecificationsProtocol {
   var contentsDirectoryURL : URL { get }
   var sourceImageURL : URL { get }

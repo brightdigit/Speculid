@@ -6,8 +6,6 @@
 //
 //
 
-import Foundation
-
 public struct ScaledGeometry : GeometryProtocol {
   public func text(scaledBy scale: Int) -> String {
     return self.base.scaling(by: scale * self.scale).description

@@ -73,8 +73,6 @@ public struct AnalyticsTracker : AnalyticsTrackerProtocol {
     if let label = label {
       parameters[.userTimingLabel] = label
     }
-
-    print(parameters)
     
     sessionManager.send(parameters)
   }
