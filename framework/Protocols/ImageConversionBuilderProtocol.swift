@@ -6,12 +6,6 @@
 //
 //
 
-import Foundation
-
-public enum ConversionResult {
-  case Task(ImageConversionTaskProtocol), Error(Error)
-}
-
 public protocol ImageConversionBuilderProtocol {
   func conversion(forImage imageSpecification: ImageSpecificationProtocol, withSpecifications specifications: SpeculidSpecificationsProtocol, andConfiguration configuration: SpeculidConfigurationProtocol) -> ConversionResult?
 }
