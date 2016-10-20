@@ -10,11 +10,12 @@ import XCTest
 @testable import Speculid
 
 public struct MockApplicationPathDataSource : ApplicationPathDataSource {
+  public func applicationPaths(_ closure: @escaping (ApplicationPathDictionary) -> Void) {
+    closure(self.applicationPaths)
+  }
+
   public let applicationPaths : ApplicationPathDictionary
   
-  public func applicationPaths(oldPaths: ApplicationPathDictionary?) -> ApplicationPathDictionary {
-    return self.applicationPaths
-  }
 }
 
 class ApplicationPathDataSourceTest: XCTestCase {
