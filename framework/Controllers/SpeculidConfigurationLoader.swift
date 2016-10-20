@@ -18,37 +18,35 @@ public struct SpeculidConfigurationLoader : SpeculidConfigurationLoaderProtocol 
   
   public func load(_ closure: @escaping (SpeculidConfigurationProtocol) -> Void) {
     DispatchQueue.main.async {
-      var applicationPathSets = Array(repeating: ApplicationPathDictionary(), count: self.dataSources.count)
-      let group = DispatchGroup()
       
-      /*
-      DispatchQueue.main.async(group: group, qos: DispatchQoS.default, flags: DispatchWorkItemFlags(), execute: { 
-        
-      })
- */
+      var valuesSet = false
+      let queue = DispatchQueue(label: Speculid.bundle.bundleIdentifier!+".configuration.queue")
+      var applicationPaths = ApplicationPathDictionary()
       
-      
-      for (index,dataSource) in self.dataSources.enumerated() {
-        group.enter()
-        dataSource.applicationPaths({ (newPaths) in
-          applicationPathSets[index] = newPaths
-          group.leave()
+      for dataSource in self.dataSources {
+        queue.sync(execute: {
+          if valuesSet {
+            return
+          }
+          dataSource.applicationPaths({ (paths) in
+            for (type, url) in paths {
+              if applicationPaths[type] == nil {
+                applicationPaths[type] = url
+              }
+            }
+            var allSet = true
+            for type in ApplicationPath.values {
+              if applicationPaths[type] == nil {
+                allSet = false
+                break
+              }
+            }
+            valuesSet = allSet
+          })
         })
       }
       
-      var applicationPaths = ApplicationPathDictionary()
-      group.notify(queue: .main, execute: { 
-        for paths in applicationPathSets {
-          
-          for (type, url) in paths {
-            if applicationPaths[type] == nil {
-              applicationPaths[type] = url
-            }
-          }
-        }
-        
-        closure(SpeculidConfiguration(applicationPaths: applicationPaths))
-      })
+      closure(SpeculidConfiguration(applicationPaths: applicationPaths))
     }
   }
 }
