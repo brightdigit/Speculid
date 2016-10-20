@@ -35,7 +35,7 @@ public struct Speculid {
     
     exceptionHandler = tracker.track
     
-    let configLoader = SpeculidConfigurationLoader(dataSources: [SearchApplicationPathDataSource(), ConfiguredApplicationPathDataSource(), DefaultApplicationPathDataSource()])
+    let configLoader = SpeculidConfigurationLoader(dataSources: [ConfiguredApplicationPathDataSource(), DefaultApplicationPathDataSource(), SearchApplicationPathDataSource()])
     
     tracker.track(event: AnalyticsEvent(category: "main", action: "launch", label: "application"))
     
