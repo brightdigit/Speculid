@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol ApplicationPathDataSource {
-  func applicationPaths (oldPaths: ApplicationPathDictionary?) -> ApplicationPathDictionary
+  func applicationPaths (_ closure: @escaping (ApplicationPathDictionary) -> Void)
 }
