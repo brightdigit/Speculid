@@ -9,6 +9,10 @@
 import Foundation
 
 public struct ConfiguredApplicationPathDataSource : ApplicationPathDataSource {
+  public func applicationPaths(_ closure: @escaping (ApplicationPathDictionary) -> Void) {
+    closure(ConfiguredApplicationPathDataSource.urls(in: self.searchPaths, for: self.fileName))
+  }
+
   
   public let searchPaths:[String]
   public let fileName: String
@@ -62,7 +66,4 @@ public struct ConfiguredApplicationPathDataSource : ApplicationPathDataSource {
     return result
   }
 
-  public func applicationPaths(oldPaths: ApplicationPathDictionary?) -> ApplicationPathDictionary {
-    return ConfiguredApplicationPathDataSource.urls(in: self.searchPaths, for: self.fileName)
-  }
 }
