@@ -3,16 +3,16 @@
 let VCS_TYPE			= "git"
 let VCS_BASENAME		= "speculid"
 let VCS_UUID:	String?	= "b6fd659a7d2088d5420f962a307b1f7f7e5d0604"
-let VCS_NUM:	Int		= 426
-let VCS_DATE			= "2016-10-20T05:40:19Z"
+let VCS_NUM:	Int		= 428
+let VCS_DATE			= "2016-10-20T14:54:01Z"
 let VCS_BRANCH:	String	= "release/1.0.0"
 let VCS_TAG:	String?	= "1.0.0-beta2"
-let VCS_TICK:	Int?	= 3
-let VCS_EXTRA:	String?	= "4"
+let VCS_TICK:	Int?	= 5
+let VCS_EXTRA:	String?	= "11"
 
-let VCS_ACTION_STAMP:	String?	= "2016-10-20T05:40:19Z!leogdion@brightdigit.com"
-let VCS_FULL_HASH:		String	= "d25001ea0d50fad725a068ecd3e4744d85a18e4f"
-let VCS_SHORT_HASH:		String	= "d25001e"
+let VCS_ACTION_STAMP:	String?	= "2016-10-20T14:54:01Z!leogdion@brightdigit.com"
+let VCS_FULL_HASH:		String	= "1fb2d82ba3ebff406f51a14ecc14bbcd65267a28"
+let VCS_SHORT_HASH:		String	= "1fb2d82"
 
 let VCS_WC_MODIFIED:	Bool	= true
 

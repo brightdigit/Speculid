@@ -45,8 +45,8 @@ extension CFRunLoopTimer {
     return timer
   }
 }
+
 public struct SearchApplicationPathDataSource : ApplicationPathDataSource {
-  
   
   public struct CError : Error {
     public let errno : Int32

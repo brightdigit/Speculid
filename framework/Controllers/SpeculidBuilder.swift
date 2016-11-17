@@ -61,7 +61,6 @@ public struct SpeculidBuilder : SpeculidBuilderProtocol {
     group.notify(queue: .global()) {
       let difference = -start.timeIntervalSinceNow
       self.tracker?.track(time: difference, withCategory: "operations", withVariable: "building", withLabel: nil)
-      //self.tracker?.trackTiming(ofCategory: "Timing", variable: "Build Process Time", time: NSNumber(value: difference), label: "")
       callback(ArrayError.error(for: errors))
     }
     
