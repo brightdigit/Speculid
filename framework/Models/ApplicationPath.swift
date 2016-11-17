@@ -9,4 +9,6 @@
 public enum ApplicationPath : String {
   case inkscape = "inkscape",
   convert  = "convert"
+  
+  public static let values : [ApplicationPath] = [.inkscape, .convert]
 }

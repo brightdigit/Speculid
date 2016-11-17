@@ -9,15 +9,16 @@
 import Foundation
 
 public struct DefaultApplicationPathDataSource : ApplicationPathDataSource {
-   public static let defaultPaths : [ApplicationPath : String] = [.inkscape : "/usr/local/bin/inkscape", .convert :  "/usr/local/bin/convert"]
-  
-  public func applicationPaths(oldPaths: ApplicationPathDictionary?) -> ApplicationPathDictionary {
+  public func applicationPaths(_ closure: @escaping (ApplicationPathDictionary) -> Void) {
     var applicationPaths = ApplicationPathDictionary()
     for pair in DefaultApplicationPathDataSource.defaultPaths {
-        if let url = FileManager.default.url(ifExistsAtPath: pair.value) {
-          applicationPaths[pair.key] = url
-        }
+      if let url = FileManager.default.url(ifExistsAtPath: pair.value) {
+        applicationPaths[pair.key] = url
+      }
     }
-    return applicationPaths
+    closure(applicationPaths)
   }
+
+   public static let defaultPaths : [ApplicationPath : String] = [.inkscape : "/usr/local/bin/inkscape", .convert :  "/usr/local/bin/convert"]
+  
 }
