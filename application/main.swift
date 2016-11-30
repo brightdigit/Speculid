@@ -51,12 +51,12 @@ enum Stage : CustomStringConvertible {
   
   public static func current (for version: Version) -> Stage {
     let result = self.minimumBuildVersions.filter{
-      $0.value < version.build
+      $0.value <= version.build
       }.max(by: {$0.value < $1.value})
     return result?.key ?? .alpha
   }
   
-  static let minimumBuildVersions : [Stage: UInt8] = [.beta : 15, .production : 17]
+  static let minimumBuildVersions : [Stage: UInt8] = [.production : 2]
   
   var description: String {
     switch self {
