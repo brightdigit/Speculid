@@ -515,6 +515,7 @@
 				B380860E1D9AA7B2000BC05A /* Embed Frameworks */,
 				A6C6CB2D563329968516A76B /* [CP] Embed Pods Frameworks */,
 				1CB5FABA6E870350CEEDEC8E /* [CP] Copy Pods Resources */,
+				B3B1F1761DEF3A4D008B6646 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -659,6 +660,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Speculid-App/Pods-Speculid-App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B3B1F1761DEF3A4D008B6646 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 5125321d001d35d7a64b3987a0391f13992f8c75 b968c88b365631c0a46b6b419e5de16b7d58be8bf4438ac40900b4831ccc5b95";
 		};
 		B3F795961D9F7C9500FC557C /* Autorevision */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -850,7 +865,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 2;
+				DEFAULT_VERSION_SEMVER = 1.0.1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -878,7 +894,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 2;
+				DEFAULT_VERSION_SEMVER = 1.0.1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
