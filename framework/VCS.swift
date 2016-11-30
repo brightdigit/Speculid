@@ -8,11 +8,11 @@ let VCS_DATE			= "2016-11-30T16:49:15Z"
 let VCS_BRANCH:	String	= "release/1.0.1"
 let VCS_TAG:	String?	= "1.0.0-beta2"
 let VCS_TICK:	Int?	= 12
-let VCS_EXTRA:	String?	= "28"
+let VCS_EXTRA:	String?	= "32"
 
 let VCS_ACTION_STAMP:	String?	= "2016-11-30T16:49:15Z!leogdion@brightdigit.com"
-let VCS_FULL_HASH:		String	= "1fc4160f61c69a1fd6d3753df27e3921a2ba161f"
-let VCS_SHORT_HASH:		String	= "1fc4160"
+let VCS_FULL_HASH:		String	= "0ed3ae74206ae7ce2b0668ba3cc90a1c3ef93df7"
+let VCS_SHORT_HASH:		String	= "0ed3ae7"
 
 let VCS_WC_MODIFIED:	Bool	= true
 
