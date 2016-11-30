@@ -12,6 +12,8 @@ target 'Speculid-App' do
 
     # Pods for Speculid
     pod 'SwiftVer', '~> 1.0'
+    pod 'Fabric'
+    pod 'Crashlytics'
 
     target 'SpeculidTests' do
       inherit! :search_paths
