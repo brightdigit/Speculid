@@ -112,8 +112,6 @@ extension Array: SpeculidArgumentsProtocol {
   
 }
 
-print(Bundle.main.infoDictionary)
-
 Speculid.begin(withArguments: CommandLine.arguments,{
   (speculid) in
   
