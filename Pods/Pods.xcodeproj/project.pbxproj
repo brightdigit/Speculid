@@ -9,49 +9,49 @@
 /* Begin PBXBuildFile section */
 		005A936EC81AE376BBC9D558F8C19CD7 /* Pods-SpeculidTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD42AE3191B7A5ED41E37EB8CDFA7250 /* Pods-SpeculidTests-dummy.m */; };
 		06BC86125FCCF51D4F94EA2F7D9F81A3 /* Pods-SpeculidTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9ACAAFE1918C36DED1733A8BBEB3913 /* Pods-SpeculidTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A8685D6E4073BF292A98A8BD1F944DE /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD33A3A2B1390838D0B247CFE623EC /* VersionControlType.swift */; };
-		11896BE65DB906623399E2EB9F778039 /* Collection+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D446CED711FC7873B36BB23AA9C8D46A /* Collection+RandomKit.swift */; };
-		249768C0B08DFC1502A6D8AB54100112 /* Array+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6A7EBFE52E37E6DA8A337E521A8BFA /* Array+RandomKit.swift */; };
-		2A70D9DC67B1971CCCB1E67DAC71730E /* Character+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940C85EA7F1C05D0209BCA9F6F2C1D6 /* Character+RandomKit.swift */; };
-		3955304E433BC86498DF54FC71702CE9 /* Color+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F04FA731DA690C72850AF28EB8AA2 /* Color+RandomKit.swift */; };
-		3D95F927D306EBAA8B4221D701209918 /* CGFloat+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FE826E21B045AA22E3B2CD44369FE6 /* CGFloat+RandomKit.swift */; };
-		408C40C19D28E156900913218268F71A /* NSNumber+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD87B973EBBBE6D607B68B89B64BF0 /* NSNumber+RandomKit.swift */; };
+		0A8685D6E4073BF292A98A8BD1F944DE /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E8ABE9D6C59EDA90D8BCD2F050DAFF /* VersionControlType.swift */; };
+		11896BE65DB906623399E2EB9F778039 /* Collection+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C32AA0083E0536285549A047C6FFA96 /* Collection+RandomKit.swift */; };
+		249768C0B08DFC1502A6D8AB54100112 /* Array+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B800B70631563FB2D4C43ED9AF33F /* Array+RandomKit.swift */; };
+		2A70D9DC67B1971CCCB1E67DAC71730E /* Character+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AD8AB4265B6D35E3111DECBDD27921 /* Character+RandomKit.swift */; };
+		3955304E433BC86498DF54FC71702CE9 /* Color+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0CA11780D7060AD13D221CFC80FCB /* Color+RandomKit.swift */; };
+		3D95F927D306EBAA8B4221D701209918 /* CGFloat+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5C3871CB6BA47C60C078C0EF73980C /* CGFloat+RandomKit.swift */; };
+		408C40C19D28E156900913218268F71A /* NSNumber+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B517E9C0FE89A2BB63698B2E07BC63 /* NSNumber+RandomKit.swift */; };
 		49EECDBF068D518FAA61711F3C39D778 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
 		4A7B132D54CF97B55B2493863002D8D6 /* Pods-Speculid-App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 291F6BED9AEFBE48174D0576127A5B23 /* Pods-Speculid-App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4FF4F8B3183DDFC421D810C2990E72EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
-		53DAF3CF1743BA167E84FF9747204E53 /* SwiftVer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFA0435763D8C94F12FAF8CCFA022892 /* SwiftVer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5655AF7C28F37EF2900F64EF46DB2E9F /* Float80+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06EBB361E79579AE53F9FFA6B88F65 /* Float80+RandomKit.swift */; };
-		5940CABE6D284DB357A3A7BBB27E6F3C /* Sequence+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88370BA3954F5384F278140BD0F4DC34 /* Sequence+RandomKit.swift */; };
-		5C77EBF34CD77C3AF9EB81400DB66063 /* String+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D869C959340837B158FDAD975E994F /* String+RandomKit.swift */; };
-		606F21F8B7920101386435ACCDC9C6BF /* CGPoint+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DEEFE209C68AF21F237BC937AE88B5 /* CGPoint+RandomKit.swift */; };
-		63026CC806DBBA86EF2B11EF58A35651 /* Float+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C69A0DD2DAA17B1A568BDE9144C301C /* Float+RandomKit.swift */; };
-		667FC3EBB472BD755584F5B836316808 /* Date+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF0437F3A3BC58B786D087F9FE08CB8 /* Date+RandomKit.swift */; };
-		6A3648833EB7DB16C104118624531EDF /* CharacterSet+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE48B00C69E7B6D6196CFF9F3E04642A /* CharacterSet+RandomKit.swift */; };
-		6FD753B68375C9E28168586BA40B07E9 /* VersionContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB1C3D0F3D9D8205CD3971938D0D13 /* VersionContainerProtocol.swift */; };
-		71CF1052D3ED507CB2F9F473EAC665F0 /* Set+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AD15883034657CA8F80FFC6790E1DA /* Set+RandomKit.swift */; };
-		783628C3D8872B2CF8A1575AD5B2E660 /* CGSize+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E7A20931089CD021C8092283124933 /* CGSize+RandomKit.swift */; };
-		7EF64A8E1CA26F618F8913B507D041BC /* RandomKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2AF13F2D55D5D8485C1A9B8615F1F1 /* RandomKit-dummy.m */; };
-		7FFEB120BAA97DF937AEC2E000C07D0F /* URL+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA42A19897D3CA0A5231E66DC58B48 /* URL+RandomKit.swift */; };
-		8561A8771715305ECE124BBA63C8BF4E /* CGVector+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5842B8A6230F7911673BF51218E0599 /* CGVector+RandomKit.swift */; };
-		8612FDE9D8CD651D128645E5D9DF3214 /* Dictionary+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677959FD98D905D47880826B05D9910 /* Dictionary+RandomKit.swift */; };
+		53DAF3CF1743BA167E84FF9747204E53 /* SwiftVer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C9499206C0A3E97616EAC8CF9FAE0C /* SwiftVer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5655AF7C28F37EF2900F64EF46DB2E9F /* Float80+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E92454A0FCD877E7DB39404E088601 /* Float80+RandomKit.swift */; };
+		5940CABE6D284DB357A3A7BBB27E6F3C /* Sequence+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F0329E7FF66B97DB1B61FE2F62339 /* Sequence+RandomKit.swift */; };
+		5C77EBF34CD77C3AF9EB81400DB66063 /* String+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28351ED24E5E9302AC1022C8C268ADF0 /* String+RandomKit.swift */; };
+		606F21F8B7920101386435ACCDC9C6BF /* CGPoint+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55EB03AF7DCD6A928BAC312A9568E9D /* CGPoint+RandomKit.swift */; };
+		63026CC806DBBA86EF2B11EF58A35651 /* Float+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1531D495CFB3FF169709D5264AAF6A /* Float+RandomKit.swift */; };
+		667FC3EBB472BD755584F5B836316808 /* Date+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75C1D052B9A06B8928782A87AC2E4 /* Date+RandomKit.swift */; };
+		6A3648833EB7DB16C104118624531EDF /* CharacterSet+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401D182289F7CD30085A9A1565E2CB05 /* CharacterSet+RandomKit.swift */; };
+		6FD753B68375C9E28168586BA40B07E9 /* VersionContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2DDAA82105F4A221BC2D3826483265 /* VersionContainerProtocol.swift */; };
+		71CF1052D3ED507CB2F9F473EAC665F0 /* Set+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7DBF8D5E2B0064D2EE324576B6A222 /* Set+RandomKit.swift */; };
+		783628C3D8872B2CF8A1575AD5B2E660 /* CGSize+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D826C3982E53E43ECC31DDDEB5E9C65 /* CGSize+RandomKit.swift */; };
+		7EF64A8E1CA26F618F8913B507D041BC /* RandomKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D9D6EC8BB6A4A83B98B2B14ABEDEF7 /* RandomKit-dummy.m */; };
+		7FFEB120BAA97DF937AEC2E000C07D0F /* URL+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3186EDFE301F2DCE8C5CE407615EFF08 /* URL+RandomKit.swift */; };
+		8561A8771715305ECE124BBA63C8BF4E /* CGVector+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE9FBF24E41E19C0001BC720C881192 /* CGVector+RandomKit.swift */; };
+		8612FDE9D8CD651D128645E5D9DF3214 /* Dictionary+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC4E8FE2FF3F55D82FDB24EEDBAD8AD /* Dictionary+RandomKit.swift */; };
 		8BBEB05A0D606613CCF94AE9A5322790 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
 		929B72A8EA8C3B0FBE369696DA41F835 /* Pods-Speculid-App-Speculid-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 835921A9A6FFB61DEB25F4146F9F1810 /* Pods-Speculid-App-Speculid-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A968548695BD745AED7FDBA536A06431 /* SemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B5F723D1D2E381F82D43734EFA747 /* SemVer.swift */; };
+		A968548695BD745AED7FDBA536A06431 /* SemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA30BE76FED0A2776FC0826B3C295DF /* SemVer.swift */; };
 		ABC34C3041848CC393029101DFE7BC59 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
-		ACD35C58495B749EF900BF90FF2ABDE2 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505C1BC501C389DDE2714143A4FEED7B /* Version.swift */; };
-		BAC6711FB8EBD8EC7FA5291B9C015D3F /* ShuffleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A640463E95B738C1D4D219A2BD74CC0 /* ShuffleType.swift */; };
-		BC6EC7058D224F53AD9892EB86F75AFA /* RandomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303E549111A4CCA1585C4F8E2002F26E /* RandomType.swift */; };
-		C53958448F8141102C8891967274CE36 /* Bool+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE633E34E686C9F634AD595533FC29FA /* Bool+RandomKit.swift */; };
-		D300ACC12196EDB4B65B8376A6E963CE /* VersionControlInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C660AB0D3257B09A687C0EC809A1C57 /* VersionControlInfo.swift */; };
+		ACD35C58495B749EF900BF90FF2ABDE2 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B988998C412A31E9D94141A4E2763 /* Version.swift */; };
+		BAC6711FB8EBD8EC7FA5291B9C015D3F /* ShuffleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093F66D0FD029BDD36943210A32FC36 /* ShuffleType.swift */; };
+		BC6EC7058D224F53AD9892EB86F75AFA /* RandomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FFCCD0BC1E4641D177A4C510207A0C /* RandomType.swift */; };
+		C53958448F8141102C8891967274CE36 /* Bool+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3F7DE954BC5BE80A4C4ABC9147FA9D /* Bool+RandomKit.swift */; };
+		D300ACC12196EDB4B65B8376A6E963CE /* VersionControlInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338C074F5C1BB72C98E491DAE61E191 /* VersionControlInfo.swift */; };
 		D312C42C1D8499C074258B6496B2F1D0 /* Pods-Speculid-App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 022ACAC6E8FD9FF44D37120C1F578CD6 /* Pods-Speculid-App-dummy.m */; };
 		E3A692FAA3746240C00EB7B15B48CBB2 /* Pods-Speculid-App-Speculid-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C75B3F2B821A046D1593DD1B1329BD89 /* Pods-Speculid-App-Speculid-dummy.m */; };
-		E55D1A92945A8DC8C0AF93AD18AF225C /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EBF0FD00017E4F764269683729D830 /* rfc3339.swift */; };
-		E6BC052E317B0E09820777F5CD8E918D /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18A2A142B372E2CC6707BA16B765C43 /* Random.swift */; };
-		F5FD67E482D0D3BEAA19468E3EB0162D /* CGRect+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038593C0002A310CF1049B701F8342CE /* CGRect+RandomKit.swift */; };
-		F6CBE088DFBAD81A76818DC6066381AB /* Double+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E6688E690DC061A4587D3CC4C31E1 /* Double+RandomKit.swift */; };
-		F70618F8CB7B3BBF1991723D957FBA7A /* SwiftVer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D8C11FBE5EC9301FD33C3940BDFD61 /* SwiftVer-dummy.m */; };
-		FAB892D135B1184E061E61D4A811E548 /* RandomKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E36E68869CB3316E59DAD1BCFF720C60 /* RandomKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB2AB1BD85D212497E4A22445FECFB80 /* Int+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B3F88AA88B39204FB963A620C1765F /* Int+RandomKit.swift */; };
+		E55D1A92945A8DC8C0AF93AD18AF225C /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2F37A94D7C6BCF8AA811D40A12AC97 /* rfc3339.swift */; };
+		E6BC052E317B0E09820777F5CD8E918D /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06164A34B563191CAB3565739217187B /* Random.swift */; };
+		F5FD67E482D0D3BEAA19468E3EB0162D /* CGRect+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B2A9EE746842C58A1C543CF5A23EB6 /* CGRect+RandomKit.swift */; };
+		F6CBE088DFBAD81A76818DC6066381AB /* Double+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1DBA066E76E54E4435A28F760F8E2 /* Double+RandomKit.swift */; };
+		F70618F8CB7B3BBF1991723D957FBA7A /* SwiftVer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 401F6CDF163571DDF3571463B0367256 /* SwiftVer-dummy.m */; };
+		FAB892D135B1184E061E61D4A811E548 /* RandomKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A28343DD8B08857A03FC8AA9B5162F1D /* RandomKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2AB1BD85D212497E4A22445FECFB80 /* Int+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486DF70FF7CED02C2BCEFC76C633FFB /* Int+RandomKit.swift */; };
 		FF08851D2E82B7A9F8444CDC43D717F5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,96 +87,85 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		004F0329E7FF66B97DB1B61FE2F62339 /* Sequence+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Sequence+RandomKit.swift"; path = "Sources/Sequence+RandomKit.swift"; sourceTree = "<group>"; };
 		022ACAC6E8FD9FF44D37120C1F578CD6 /* Pods-Speculid-App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Speculid-App-dummy.m"; sourceTree = "<group>"; };
-		038593C0002A310CF1049B701F8342CE /* CGRect+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+RandomKit.swift"; path = "Sources/CGRect+RandomKit.swift"; sourceTree = "<group>"; };
-		04D869C959340837B158FDAD975E994F /* String+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+RandomKit.swift"; path = "Sources/String+RandomKit.swift"; sourceTree = "<group>"; };
+		02B1DBA066E76E54E4435A28F760F8E2 /* Double+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Double+RandomKit.swift"; path = "Sources/Double+RandomKit.swift"; sourceTree = "<group>"; };
+		03B75C1D052B9A06B8928782A87AC2E4 /* Date+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+RandomKit.swift"; path = "Sources/Date+RandomKit.swift"; sourceTree = "<group>"; };
+		04C9499206C0A3E97616EAC8CF9FAE0C /* SwiftVer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftVer-umbrella.h"; sourceTree = "<group>"; };
+		06164A34B563191CAB3565739217187B /* Random.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Random.swift; path = Sources/Random.swift; sourceTree = "<group>"; };
+		0C32AA0083E0536285549A047C6FFA96 /* Collection+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+RandomKit.swift"; path = "Sources/Collection+RandomKit.swift"; sourceTree = "<group>"; };
+		10B2A9EE746842C58A1C543CF5A23EB6 /* CGRect+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+RandomKit.swift"; path = "Sources/CGRect+RandomKit.swift"; sourceTree = "<group>"; };
+		1338C074F5C1BB72C98E491DAE61E191 /* VersionControlInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VersionControlInfo.swift; path = Source/VersionControlInfo.swift; sourceTree = "<group>"; };
 		153D488EFDD4970D0C0C38F0C4AB0AB4 /* Pods-SpeculidTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SpeculidTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		15996322066B29F90775748D85C57973 /* Pods-SpeculidTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SpeculidTests-resources.sh"; sourceTree = "<group>"; };
-		1A640463E95B738C1D4D219A2BD74CC0 /* ShuffleType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShuffleType.swift; path = Sources/ShuffleType.swift; sourceTree = "<group>"; };
-		1BEA1158A1B6C8F7D64DC43EB7E4C392 /* RandomKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RandomKit-prefix.pch"; sourceTree = "<group>"; };
-		1D86E5D9EE54A7E760C1DE8850A928A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		204F04FA731DA690C72850AF28EB8AA2 /* Color+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Color+RandomKit.swift"; path = "Sources/Color+RandomKit.swift"; sourceTree = "<group>"; };
-		243542F1427DF2ACB781F25AF321545C /* SwiftVer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftVer-prefix.pch"; sourceTree = "<group>"; };
+		2093F66D0FD029BDD36943210A32FC36 /* ShuffleType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShuffleType.swift; path = Sources/ShuffleType.swift; sourceTree = "<group>"; };
+		2486DF70FF7CED02C2BCEFC76C633FFB /* Int+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+RandomKit.swift"; path = "Sources/Int+RandomKit.swift"; sourceTree = "<group>"; };
+		265B800B70631563FB2D4C43ED9AF33F /* Array+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+RandomKit.swift"; path = "Sources/Array+RandomKit.swift"; sourceTree = "<group>"; };
 		270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		27E6E192F1EB379CFE599E55509876A3 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSLogging.h; sourceTree = "<group>"; };
+		27AED05CB2E9CB0AF773075DBC8A782B /* RandomKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RandomKit-prefix.pch"; sourceTree = "<group>"; };
+		27B517E9C0FE89A2BB63698B2E07BC63 /* NSNumber+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNumber+RandomKit.swift"; path = "Sources/NSNumber+RandomKit.swift"; sourceTree = "<group>"; };
+		28351ED24E5E9302AC1022C8C268ADF0 /* String+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+RandomKit.swift"; path = "Sources/String+RandomKit.swift"; sourceTree = "<group>"; };
 		291F6BED9AEFBE48174D0576127A5B23 /* Pods-Speculid-App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Speculid-App-umbrella.h"; sourceTree = "<group>"; };
-		2C660AB0D3257B09A687C0EC809A1C57 /* VersionControlInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VersionControlInfo.swift; path = Source/VersionControlInfo.swift; sourceTree = "<group>"; };
-		303E549111A4CCA1585C4F8E2002F26E /* RandomType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomType.swift; path = Sources/RandomType.swift; sourceTree = "<group>"; };
-		38BD33A3A2B1390838D0B247CFE623EC /* VersionControlType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VersionControlType.swift; path = Source/VersionControlType.swift; sourceTree = "<group>"; };
-		3F06EBB361E79579AE53F9FFA6B88F65 /* Float80+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Float80+RandomKit.swift"; path = "Sources/Float80+RandomKit.swift"; sourceTree = "<group>"; };
-		424B5F723D1D2E381F82D43734EFA747 /* SemVer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SemVer.swift; path = Source/SemVer.swift; sourceTree = "<group>"; };
+		2C1531D495CFB3FF169709D5264AAF6A /* Float+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Float+RandomKit.swift"; path = "Sources/Float+RandomKit.swift"; sourceTree = "<group>"; };
+		2F2F37A94D7C6BCF8AA811D40A12AC97 /* rfc3339.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = rfc3339.swift; path = Source/rfc3339.swift; sourceTree = "<group>"; };
+		3186EDFE301F2DCE8C5CE407615EFF08 /* URL+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+RandomKit.swift"; path = "Sources/URL+RandomKit.swift"; sourceTree = "<group>"; };
+		31AD8AB4265B6D35E3111DECBDD27921 /* Character+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Character+RandomKit.swift"; path = "Sources/Character+RandomKit.swift"; sourceTree = "<group>"; };
+		401D182289F7CD30085A9A1565E2CB05 /* CharacterSet+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CharacterSet+RandomKit.swift"; path = "Sources/CharacterSet+RandomKit.swift"; sourceTree = "<group>"; };
+		401F6CDF163571DDF3571463B0367256 /* SwiftVer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftVer-dummy.m"; sourceTree = "<group>"; };
 		45C2A49780BC8178289DB2E9140621E6 /* Pods-SpeculidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpeculidTests.release.xcconfig"; sourceTree = "<group>"; };
-		45EBF0FD00017E4F764269683729D830 /* rfc3339.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = rfc3339.swift; path = Source/rfc3339.swift; sourceTree = "<group>"; };
 		4B9027F477AE5EC96D118E37BB55A67B /* Pods-Speculid-App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Speculid-App-acknowledgements.plist"; sourceTree = "<group>"; };
-		4CB1F634C9B33E3A0041BF86DA36CFD3 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = OSX/Fabric.framework/Versions/A/Headers/FABAttributes.h; sourceTree = "<group>"; };
-		4E7C1ABCFC2E5B174F6FDE8610CDDD90 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = OSX/Fabric.framework; sourceTree = "<group>"; };
-		505C1BC501C389DDE2714143A4FEED7B /* Version.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Version.swift; path = Source/Version.swift; sourceTree = "<group>"; };
-		5677959FD98D905D47880826B05D9910 /* Dictionary+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+RandomKit.swift"; path = "Sources/Dictionary+RandomKit.swift"; sourceTree = "<group>"; };
-		587036830C7FE596CFC52EB9B3FFDE09 /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = OSX/Crashlytics.framework/Versions/A/Headers/Answers.h; sourceTree = "<group>"; };
-		5B6A7EBFE52E37E6DA8A337E521A8BFA /* Array+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+RandomKit.swift"; path = "Sources/Array+RandomKit.swift"; sourceTree = "<group>"; };
-		5BFB58D211925DF19B6105BA7FEA612D /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
-		62D8C11FBE5EC9301FD33C3940BDFD61 /* SwiftVer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftVer-dummy.m"; sourceTree = "<group>"; };
-		63AD15883034657CA8F80FFC6790E1DA /* Set+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Set+RandomKit.swift"; path = "Sources/Set+RandomKit.swift"; sourceTree = "<group>"; };
+		508889B4D5A01594474811CCE19C5665 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B5C3871CB6BA47C60C078C0EF73980C /* CGFloat+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGFloat+RandomKit.swift"; path = "Sources/CGFloat+RandomKit.swift"; sourceTree = "<group>"; };
+		5D2DDAA82105F4A221BC2D3826483265 /* VersionContainerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VersionContainerProtocol.swift; path = Source/VersionContainerProtocol.swift; sourceTree = "<group>"; };
 		640C0481775673994087BFBD93D1DF45 /* Pods_Speculid_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Speculid_App.framework; path = "Pods-Speculid-App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		688B988998C412A31E9D94141A4E2763 /* Version.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Version.swift; path = Source/Version.swift; sourceTree = "<group>"; };
 		6F16EA13EBF9CB101BF42FE7E2CC052B /* Pods-Speculid-App-Speculid-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Speculid-App-Speculid-acknowledgements.markdown"; sourceTree = "<group>"; };
 		74A13FD9CD8CA0785B03A0711A7F8A76 /* Pods_Speculid_App_Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Speculid_App_Speculid.framework; path = "Pods-Speculid-App-Speculid.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C2DD9D23FC539B049B47E5900917BA /* Pods-Speculid-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Speculid-App.release.xcconfig"; sourceTree = "<group>"; };
 		76F0F426B67709C63AA6AC575DBB1348 /* Pods-SpeculidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpeculidTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7B2AF13F2D55D5D8485C1A9B8615F1F1 /* RandomKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RandomKit-dummy.m"; sourceTree = "<group>"; };
-		7C69A0DD2DAA17B1A568BDE9144C301C /* Float+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Float+RandomKit.swift"; path = "Sources/Float+RandomKit.swift"; sourceTree = "<group>"; };
 		7D250FF4409A5196DDE944E63D7FEB3C /* Pods-SpeculidTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SpeculidTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		7F5CB9BDB6F3F04DD51A70C8EC8993C3 /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = OSX/Crashlytics.framework/Versions/A/Headers/Crashlytics.h; sourceTree = "<group>"; };
+		7D826C3982E53E43ECC31DDDEB5E9C65 /* CGSize+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+RandomKit.swift"; path = "Sources/CGSize+RandomKit.swift"; sourceTree = "<group>"; };
 		7F5DA1FA93FC5368A6EC9E975BF7597C /* RandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RandomKit.framework; path = RandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FA30BE76FED0A2776FC0826B3C295DF /* SemVer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SemVer.swift; path = Source/SemVer.swift; sourceTree = "<group>"; };
 		835921A9A6FFB61DEB25F4146F9F1810 /* Pods-Speculid-App-Speculid-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Speculid-App-Speculid-umbrella.h"; sourceTree = "<group>"; };
-		83CD87B973EBBBE6D607B68B89B64BF0 /* NSNumber+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNumber+RandomKit.swift"; path = "Sources/NSNumber+RandomKit.swift"; sourceTree = "<group>"; };
-		88370BA3954F5384F278140BD0F4DC34 /* Sequence+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Sequence+RandomKit.swift"; path = "Sources/Sequence+RandomKit.swift"; sourceTree = "<group>"; };
-		8B38FA6649EA06DB123BBF1D537F00C7 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSReport.h; sourceTree = "<group>"; };
-		8B763BEDCAF6AEDE7176A872B181FF13 /* SwiftVer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftVer.modulemap; sourceTree = "<group>"; };
+		86C9E842C30A7FCBCB4F3CEE71052B73 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F3F7DE954BC5BE80A4C4ABC9147FA9D /* Bool+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bool+RandomKit.swift"; path = "Sources/Bool+RandomKit.swift"; sourceTree = "<group>"; };
+		8FC4E8FE2FF3F55D82FDB24EEDBAD8AD /* Dictionary+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+RandomKit.swift"; path = "Sources/Dictionary+RandomKit.swift"; sourceTree = "<group>"; };
+		91C057B907E9DC56C0F57FE1F38BB7F1 /* RandomKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RandomKit.xcconfig; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		941D2B28CC16BE41D2E49D822346EA7E /* Pods-Speculid-App-Speculid-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Speculid-App-Speculid-acknowledgements.plist"; sourceTree = "<group>"; };
+		990B4DA87204E82371D676BE799CE81E /* RandomKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RandomKit.modulemap; sourceTree = "<group>"; };
 		9BD8E876F98A7917E1F93FF6ECD6A801 /* Pods-Speculid-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Speculid-App.debug.xcconfig"; sourceTree = "<group>"; };
-		9FAB2DF150AFFB4A8F7BB41A0FE6EAF7 /* SwiftVer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftVer.xcconfig; sourceTree = "<group>"; };
+		9FE9FBF24E41E19C0001BC720C881192 /* CGVector+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGVector+RandomKit.swift"; path = "Sources/CGVector+RandomKit.swift"; sourceTree = "<group>"; };
 		A1E6A1087E507A0ACF14BEDD2DE3C4DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA3E6688E690DC061A4587D3CC4C31E1 /* Double+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Double+RandomKit.swift"; path = "Sources/Double+RandomKit.swift"; sourceTree = "<group>"; };
-		ACEB1C261F7AF64BAA9992AABE5D1291 /* RandomKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RandomKit.xcconfig; sourceTree = "<group>"; };
-		B1E0F5EB7349A6C0D3C06EAD6C777969 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSAttributes.h; sourceTree = "<group>"; };
+		A28343DD8B08857A03FC8AA9B5162F1D /* RandomKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RandomKit-umbrella.h"; sourceTree = "<group>"; };
+		A47E4DEFC97C767B0D6CB7B284392141 /* SwiftVer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftVer.modulemap; sourceTree = "<group>"; };
 		B2477086C9E8C95BF42A80CB4DAAE9BB /* Pods_SpeculidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SpeculidTests.framework; path = "Pods-SpeculidTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B81B8F9B67B6234D653F667986A7A627 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9ACAAFE1918C36DED1733A8BBEB3913 /* Pods-SpeculidTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SpeculidTests-umbrella.h"; sourceTree = "<group>"; };
 		BA13D1D67FB778EFA378D6897A4C4758 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB98A5E27EEE21BD7584BFD1E1CE1374 /* Pods-Speculid-App-Speculid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Speculid-App-Speculid.modulemap"; sourceTree = "<group>"; };
 		BD42AE3191B7A5ED41E37EB8CDFA7250 /* Pods-SpeculidTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SpeculidTests-dummy.m"; sourceTree = "<group>"; };
-		BE633E34E686C9F634AD595533FC29FA /* Bool+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bool+RandomKit.swift"; path = "Sources/Bool+RandomKit.swift"; sourceTree = "<group>"; };
 		C0E4D3221AAEDEA247864AD2D2F41294 /* Pods-Speculid-App-Speculid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Speculid-App-Speculid.debug.xcconfig"; sourceTree = "<group>"; };
-		C37FD4CC0AD8E34EB8BD8955502085EA /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = OSX/Crashlytics.framework/Versions/A/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
+		C55EB03AF7DCD6A928BAC312A9568E9D /* CGPoint+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGPoint+RandomKit.swift"; path = "Sources/CGPoint+RandomKit.swift"; sourceTree = "<group>"; };
 		C56B9E6A924CB2DABC8461EA5D0ED05D /* Pods-Speculid-App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Speculid-App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C659030EF04E589EBCEB532A55FB7BC2 /* SwiftVer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftVer.xcconfig; sourceTree = "<group>"; };
 		C75B3F2B821A046D1593DD1B1329BD89 /* Pods-Speculid-App-Speculid-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Speculid-App-Speculid-dummy.m"; sourceTree = "<group>"; };
+		C9E8ABE9D6C59EDA90D8BCD2F050DAFF /* VersionControlType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VersionControlType.swift; path = Source/VersionControlType.swift; sourceTree = "<group>"; };
+		CA7DBF8D5E2B0064D2EE324576B6A222 /* Set+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Set+RandomKit.swift"; path = "Sources/Set+RandomKit.swift"; sourceTree = "<group>"; };
 		CA8E53055D64E3059F55DD8E02FB0495 /* Pods-Speculid-App-Speculid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Speculid-App-Speculid.release.xcconfig"; sourceTree = "<group>"; };
-		CBF0437F3A3BC58B786D087F9FE08CB8 /* Date+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+RandomKit.swift"; path = "Sources/Date+RandomKit.swift"; sourceTree = "<group>"; };
-		CE35D6266A7198884910B86B73FADF6C /* RandomKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RandomKit.modulemap; sourceTree = "<group>"; };
 		CE7F61E4AB8BF4771DD94F0071CDB1DD /* Pods-Speculid-App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Speculid-App.modulemap"; sourceTree = "<group>"; };
 		D1059B8D867BE717235AB56443596C35 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftVer.framework; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D446CED711FC7873B36BB23AA9C8D46A /* Collection+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+RandomKit.swift"; path = "Sources/Collection+RandomKit.swift"; sourceTree = "<group>"; };
 		D55D4F4EC67EEAE276A1D7BFB7D9C84F /* Pods-Speculid-App-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Speculid-App-resources.sh"; sourceTree = "<group>"; };
-		D5B3F88AA88B39204FB963A620C1765F /* Int+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+RandomKit.swift"; path = "Sources/Int+RandomKit.swift"; sourceTree = "<group>"; };
-		DE48B00C69E7B6D6196CFF9F3E04642A /* CharacterSet+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CharacterSet+RandomKit.swift"; path = "Sources/CharacterSet+RandomKit.swift"; sourceTree = "<group>"; };
-		E18A2A142B372E2CC6707BA16B765C43 /* Random.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Random.swift; path = Sources/Random.swift; sourceTree = "<group>"; };
+		D7E92454A0FCD877E7DB39404E088601 /* Float80+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Float80+RandomKit.swift"; path = "Sources/Float80+RandomKit.swift"; sourceTree = "<group>"; };
 		E27CC09E6D4B60552CC4B95E4D4EDEE2 /* Pods-SpeculidTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SpeculidTests.modulemap"; sourceTree = "<group>"; };
-		E36E68869CB3316E59DAD1BCFF720C60 /* RandomKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RandomKit-umbrella.h"; sourceTree = "<group>"; };
-		E5842B8A6230F7911673BF51218E0599 /* CGVector+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGVector+RandomKit.swift"; path = "Sources/CGVector+RandomKit.swift"; sourceTree = "<group>"; };
-		E5FE826E21B045AA22E3B2CD44369FE6 /* CGFloat+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGFloat+RandomKit.swift"; path = "Sources/CGFloat+RandomKit.swift"; sourceTree = "<group>"; };
+		E4F0CA11780D7060AD13D221CFC80FCB /* Color+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Color+RandomKit.swift"; path = "Sources/Color+RandomKit.swift"; sourceTree = "<group>"; };
 		E683CBBDDB09DB9223EA40FF9D6C7D74 /* Pods-Speculid-App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Speculid-App-frameworks.sh"; sourceTree = "<group>"; };
-		E6DEEFE209C68AF21F237BC937AE88B5 /* CGPoint+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGPoint+RandomKit.swift"; path = "Sources/CGPoint+RandomKit.swift"; sourceTree = "<group>"; };
-		EB55872D766FAD46CE422EB4152BCEBD /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = OSX/Fabric.framework/Versions/A/Headers/Fabric.h; sourceTree = "<group>"; };
-		EBDB1C3D0F3D9D8205CD3971938D0D13 /* VersionContainerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VersionContainerProtocol.swift; path = Source/VersionContainerProtocol.swift; sourceTree = "<group>"; };
+		E8FFCCD0BC1E4641D177A4C510207A0C /* RandomType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomType.swift; path = Sources/RandomType.swift; sourceTree = "<group>"; };
 		F3F236A3F1770B5133C9DB681AE97104 /* Pods-Speculid-App-Speculid-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Speculid-App-Speculid-resources.sh"; sourceTree = "<group>"; };
-		F5E7A20931089CD021C8092283124933 /* CGSize+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+RandomKit.swift"; path = "Sources/CGSize+RandomKit.swift"; sourceTree = "<group>"; };
-		F65BBC74F9C42C3C8D3C07696939A9EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F940C85EA7F1C05D0209BCA9F6F2C1D6 /* Character+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Character+RandomKit.swift"; path = "Sources/Character+RandomKit.swift"; sourceTree = "<group>"; };
+		F8D9D6EC8BB6A4A83B98B2B14ABEDEF7 /* RandomKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RandomKit-dummy.m"; sourceTree = "<group>"; };
 		FA5A0A518FCDEC46731E70CA3638F78B /* Pods-SpeculidTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SpeculidTests-frameworks.sh"; sourceTree = "<group>"; };
-		FAFA42A19897D3CA0A5231E66DC58B48 /* URL+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+RandomKit.swift"; path = "Sources/URL+RandomKit.swift"; sourceTree = "<group>"; };
-		FBD8524FD7B8C75A2F7947625190C5FD /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = OSX/Crashlytics.framework; sourceTree = "<group>"; };
-		FFA0435763D8C94F12FAF8CCFA022892 /* SwiftVer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftVer-umbrella.h"; sourceTree = "<group>"; };
+		FC30B81B2B53ACE06C11740EB370CB47 /* SwiftVer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftVer-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,18 +220,19 @@
 			name = "OS X";
 			sourceTree = "<group>";
 		};
-		0792E6C6E3CD31FBA8562B0A9B30B385 /* Support Files */ = {
+		35D163A2698FA876629B4E7D49AC1A47 /* SwiftVer */ = {
 			isa = PBXGroup;
 			children = (
-				F65BBC74F9C42C3C8D3C07696939A9EF /* Info.plist */,
-				8B763BEDCAF6AEDE7176A872B181FF13 /* SwiftVer.modulemap */,
-				9FAB2DF150AFFB4A8F7BB41A0FE6EAF7 /* SwiftVer.xcconfig */,
-				62D8C11FBE5EC9301FD33C3940BDFD61 /* SwiftVer-dummy.m */,
-				243542F1427DF2ACB781F25AF321545C /* SwiftVer-prefix.pch */,
-				FFA0435763D8C94F12FAF8CCFA022892 /* SwiftVer-umbrella.h */,
+				2F2F37A94D7C6BCF8AA811D40A12AC97 /* rfc3339.swift */,
+				7FA30BE76FED0A2776FC0826B3C295DF /* SemVer.swift */,
+				688B988998C412A31E9D94141A4E2763 /* Version.swift */,
+				5D2DDAA82105F4A221BC2D3826483265 /* VersionContainerProtocol.swift */,
+				1338C074F5C1BB72C98E491DAE61E191 /* VersionControlInfo.swift */,
+				C9E8ABE9D6C59EDA90D8BCD2F050DAFF /* VersionControlType.swift */,
+				CC9C447A168964A8A2600872E49905A7 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftVer";
+			name = SwiftVer;
+			path = SwiftVer;
 			sourceTree = "<group>";
 		};
 		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
@@ -265,17 +255,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5A948B1B99F9F0D0330EB7B9F23DA016 /* Fabric */ = {
-			isa = PBXGroup;
-			children = (
-				4CB1F634C9B33E3A0041BF86DA36CFD3 /* FABAttributes.h */,
-				EB55872D766FAD46CE422EB4152BCEBD /* Fabric.h */,
-				D80C40FB19E0ACDE843EA3E8BDE8D84F /* Frameworks */,
-			);
-			name = Fabric;
-			path = Fabric;
-			sourceTree = "<group>";
-		};
 		5E8E73CF14A60C2517A118E3C038988A /* Pods-SpeculidTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,13 +273,11 @@
 			path = "Target Support Files/Pods-SpeculidTests";
 			sourceTree = "<group>";
 		};
-		7288961DFACE33C277A1980C89C7BD71 /* Pods */ = {
+		5FCEF7D1CB4DBE90F7D2CE7A23D938A8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F99F90773D442257BDF3F51BD686E268 /* Crashlytics */,
-				5A948B1B99F9F0D0330EB7B9F23DA016 /* Fabric */,
-				A35914EB04BE409374CF869164C807BD /* RandomKit */,
-				E22F1BAB13C8747A61A6825F524AB3E3 /* SwiftVer */,
+				FBC86BCC0292E1A15C79A172FD0090C1 /* RandomKit */,
+				35D163A2698FA876629B4E7D49AC1A47 /* SwiftVer */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -310,21 +287,21 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
-				7288961DFACE33C277A1980C89C7BD71 /* Pods */,
+				5FCEF7D1CB4DBE90F7D2CE7A23D938A8 /* Pods */,
 				3BFB4D5DB7832C2EEBEE1BCD2E7AC109 /* Products */,
 				9A76FAEDF72C8F42AF4E9C75D39F1600 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8D32501DF3B5981BE7E13CD9D0ECB609 /* Support Files */ = {
+		96670B039762A9E498C0863F13A61A8A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1D86E5D9EE54A7E760C1DE8850A928A4 /* Info.plist */,
-				CE35D6266A7198884910B86B73FADF6C /* RandomKit.modulemap */,
-				ACEB1C261F7AF64BAA9992AABE5D1291 /* RandomKit.xcconfig */,
-				7B2AF13F2D55D5D8485C1A9B8615F1F1 /* RandomKit-dummy.m */,
-				1BEA1158A1B6C8F7D64DC43EB7E4C392 /* RandomKit-prefix.pch */,
-				E36E68869CB3316E59DAD1BCFF720C60 /* RandomKit-umbrella.h */,
+				86C9E842C30A7FCBCB4F3CEE71052B73 /* Info.plist */,
+				990B4DA87204E82371D676BE799CE81E /* RandomKit.modulemap */,
+				91C057B907E9DC56C0F57FE1F38BB7F1 /* RandomKit.xcconfig */,
+				F8D9D6EC8BB6A4A83B98B2B14ABEDEF7 /* RandomKit-dummy.m */,
+				27AED05CB2E9CB0AF773075DBC8A782B /* RandomKit-prefix.pch */,
+				A28343DD8B08857A03FC8AA9B5162F1D /* RandomKit-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/RandomKit";
@@ -338,40 +315,6 @@
 				5E8E73CF14A60C2517A118E3C038988A /* Pods-SpeculidTests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		A35914EB04BE409374CF869164C807BD /* RandomKit */ = {
-			isa = PBXGroup;
-			children = (
-				5B6A7EBFE52E37E6DA8A337E521A8BFA /* Array+RandomKit.swift */,
-				BE633E34E686C9F634AD595533FC29FA /* Bool+RandomKit.swift */,
-				E5FE826E21B045AA22E3B2CD44369FE6 /* CGFloat+RandomKit.swift */,
-				E6DEEFE209C68AF21F237BC937AE88B5 /* CGPoint+RandomKit.swift */,
-				038593C0002A310CF1049B701F8342CE /* CGRect+RandomKit.swift */,
-				F5E7A20931089CD021C8092283124933 /* CGSize+RandomKit.swift */,
-				E5842B8A6230F7911673BF51218E0599 /* CGVector+RandomKit.swift */,
-				F940C85EA7F1C05D0209BCA9F6F2C1D6 /* Character+RandomKit.swift */,
-				DE48B00C69E7B6D6196CFF9F3E04642A /* CharacterSet+RandomKit.swift */,
-				D446CED711FC7873B36BB23AA9C8D46A /* Collection+RandomKit.swift */,
-				204F04FA731DA690C72850AF28EB8AA2 /* Color+RandomKit.swift */,
-				CBF0437F3A3BC58B786D087F9FE08CB8 /* Date+RandomKit.swift */,
-				5677959FD98D905D47880826B05D9910 /* Dictionary+RandomKit.swift */,
-				AA3E6688E690DC061A4587D3CC4C31E1 /* Double+RandomKit.swift */,
-				7C69A0DD2DAA17B1A568BDE9144C301C /* Float+RandomKit.swift */,
-				3F06EBB361E79579AE53F9FFA6B88F65 /* Float80+RandomKit.swift */,
-				D5B3F88AA88B39204FB963A620C1765F /* Int+RandomKit.swift */,
-				83CD87B973EBBBE6D607B68B89B64BF0 /* NSNumber+RandomKit.swift */,
-				E18A2A142B372E2CC6707BA16B765C43 /* Random.swift */,
-				303E549111A4CCA1585C4F8E2002F26E /* RandomType.swift */,
-				88370BA3954F5384F278140BD0F4DC34 /* Sequence+RandomKit.swift */,
-				63AD15883034657CA8F80FFC6790E1DA /* Set+RandomKit.swift */,
-				1A640463E95B738C1D4D219A2BD74CC0 /* ShuffleType.swift */,
-				04D869C959340837B158FDAD975E994F /* String+RandomKit.swift */,
-				FAFA42A19897D3CA0A5231E66DC58B48 /* URL+RandomKit.swift */,
-				8D32501DF3B5981BE7E13CD9D0ECB609 /* Support Files */,
-			);
-			name = RandomKit;
-			path = RandomKit;
 			sourceTree = "<group>";
 		};
 		B4C74BAC14A656F785FD4920CA2C60E1 /* Pods-Speculid-App-Speculid */ = {
@@ -409,51 +352,52 @@
 			path = "Target Support Files/Pods-Speculid-App";
 			sourceTree = "<group>";
 		};
-		C97C24758DEF6EF51188931B844987A3 /* Frameworks */ = {
+		CC9C447A168964A8A2600872E49905A7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FBD8524FD7B8C75A2F7947625190C5FD /* Crashlytics.framework */,
+				508889B4D5A01594474811CCE19C5665 /* Info.plist */,
+				A47E4DEFC97C767B0D6CB7B284392141 /* SwiftVer.modulemap */,
+				C659030EF04E589EBCEB532A55FB7BC2 /* SwiftVer.xcconfig */,
+				401F6CDF163571DDF3571463B0367256 /* SwiftVer-dummy.m */,
+				FC30B81B2B53ACE06C11740EB370CB47 /* SwiftVer-prefix.pch */,
+				04C9499206C0A3E97616EAC8CF9FAE0C /* SwiftVer-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftVer";
 			sourceTree = "<group>";
 		};
-		D80C40FB19E0ACDE843EA3E8BDE8D84F /* Frameworks */ = {
+		FBC86BCC0292E1A15C79A172FD0090C1 /* RandomKit */ = {
 			isa = PBXGroup;
 			children = (
-				4E7C1ABCFC2E5B174F6FDE8610CDDD90 /* Fabric.framework */,
+				265B800B70631563FB2D4C43ED9AF33F /* Array+RandomKit.swift */,
+				8F3F7DE954BC5BE80A4C4ABC9147FA9D /* Bool+RandomKit.swift */,
+				5B5C3871CB6BA47C60C078C0EF73980C /* CGFloat+RandomKit.swift */,
+				C55EB03AF7DCD6A928BAC312A9568E9D /* CGPoint+RandomKit.swift */,
+				10B2A9EE746842C58A1C543CF5A23EB6 /* CGRect+RandomKit.swift */,
+				7D826C3982E53E43ECC31DDDEB5E9C65 /* CGSize+RandomKit.swift */,
+				9FE9FBF24E41E19C0001BC720C881192 /* CGVector+RandomKit.swift */,
+				31AD8AB4265B6D35E3111DECBDD27921 /* Character+RandomKit.swift */,
+				401D182289F7CD30085A9A1565E2CB05 /* CharacterSet+RandomKit.swift */,
+				0C32AA0083E0536285549A047C6FFA96 /* Collection+RandomKit.swift */,
+				E4F0CA11780D7060AD13D221CFC80FCB /* Color+RandomKit.swift */,
+				03B75C1D052B9A06B8928782A87AC2E4 /* Date+RandomKit.swift */,
+				8FC4E8FE2FF3F55D82FDB24EEDBAD8AD /* Dictionary+RandomKit.swift */,
+				02B1DBA066E76E54E4435A28F760F8E2 /* Double+RandomKit.swift */,
+				2C1531D495CFB3FF169709D5264AAF6A /* Float+RandomKit.swift */,
+				D7E92454A0FCD877E7DB39404E088601 /* Float80+RandomKit.swift */,
+				2486DF70FF7CED02C2BCEFC76C633FFB /* Int+RandomKit.swift */,
+				27B517E9C0FE89A2BB63698B2E07BC63 /* NSNumber+RandomKit.swift */,
+				06164A34B563191CAB3565739217187B /* Random.swift */,
+				E8FFCCD0BC1E4641D177A4C510207A0C /* RandomType.swift */,
+				004F0329E7FF66B97DB1B61FE2F62339 /* Sequence+RandomKit.swift */,
+				CA7DBF8D5E2B0064D2EE324576B6A222 /* Set+RandomKit.swift */,
+				2093F66D0FD029BDD36943210A32FC36 /* ShuffleType.swift */,
+				28351ED24E5E9302AC1022C8C268ADF0 /* String+RandomKit.swift */,
+				3186EDFE301F2DCE8C5CE407615EFF08 /* URL+RandomKit.swift */,
+				96670B039762A9E498C0863F13A61A8A /* Support Files */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E22F1BAB13C8747A61A6825F524AB3E3 /* SwiftVer */ = {
-			isa = PBXGroup;
-			children = (
-				45EBF0FD00017E4F764269683729D830 /* rfc3339.swift */,
-				424B5F723D1D2E381F82D43734EFA747 /* SemVer.swift */,
-				505C1BC501C389DDE2714143A4FEED7B /* Version.swift */,
-				EBDB1C3D0F3D9D8205CD3971938D0D13 /* VersionContainerProtocol.swift */,
-				2C660AB0D3257B09A687C0EC809A1C57 /* VersionControlInfo.swift */,
-				38BD33A3A2B1390838D0B247CFE623EC /* VersionControlType.swift */,
-				0792E6C6E3CD31FBA8562B0A9B30B385 /* Support Files */,
-			);
-			name = SwiftVer;
-			path = SwiftVer;
-			sourceTree = "<group>";
-		};
-		F99F90773D442257BDF3F51BD686E268 /* Crashlytics */ = {
-			isa = PBXGroup;
-			children = (
-				C37FD4CC0AD8E34EB8BD8955502085EA /* ANSCompatibility.h */,
-				587036830C7FE596CFC52EB9B3FFDE09 /* Answers.h */,
-				B1E0F5EB7349A6C0D3C06EAD6C777969 /* CLSAttributes.h */,
-				27E6E192F1EB379CFE599E55509876A3 /* CLSLogging.h */,
-				8B38FA6649EA06DB123BBF1D537F00C7 /* CLSReport.h */,
-				5BFB58D211925DF19B6105BA7FEA612D /* CLSStackFrame.h */,
-				7F5CB9BDB6F3F04DD51A70C8EC8993C3 /* Crashlytics.h */,
-				C97C24758DEF6EF51188931B844987A3 /* Frameworks */,
-			);
-			name = Crashlytics;
-			path = Crashlytics;
+			name = RandomKit;
+			path = RandomKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -725,7 +669,7 @@
 /* Begin XCBuildConfiguration section */
 		05A8AED1F11DD17092FD5AD0BDC6690F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACEB1C261F7AF64BAA9992AABE5D1291 /* RandomKit.xcconfig */;
+			baseConfigurationReference = 91C057B907E9DC56C0F57FE1F38BB7F1 /* RandomKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -796,7 +740,7 @@
 		};
 		151AE9C8ECD2C1C5982C4A8692125172 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACEB1C261F7AF64BAA9992AABE5D1291 /* RandomKit.xcconfig */;
+			baseConfigurationReference = 91C057B907E9DC56C0F57FE1F38BB7F1 /* RandomKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -869,7 +813,7 @@
 		};
 		4F868C0F96A0AA793AB81B6F6E4D25BD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FAB2DF150AFFB4A8F7BB41A0FE6EAF7 /* SwiftVer.xcconfig */;
+			baseConfigurationReference = C659030EF04E589EBCEB532A55FB7BC2 /* SwiftVer.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -1059,7 +1003,7 @@
 		};
 		A58D15CFDF502864459CD823AE6630B8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FAB2DF150AFFB4A8F7BB41A0FE6EAF7 /* SwiftVer.xcconfig */;
+			baseConfigurationReference = C659030EF04E589EBCEB532A55FB7BC2 /* SwiftVer.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "-";
