@@ -114,6 +114,7 @@ extension Array: SpeculidArgumentsProtocol {
 
 Speculid.begin(withArguments: CommandLine.arguments,{
   (speculid) in
+  
   let helpText = try! String(contentsOf: Bundle.main.bundlePath.url(forResource: "help", withExtension: "txt")!)
   
   let output = FileHandle.standardOutput

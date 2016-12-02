@@ -8,8 +8,6 @@
 
 import Foundation
 import SwiftVer
-import Fabric
-import Crashlytics
 
 var exceptionHandler : ((NSException) -> Void)?
 
@@ -31,7 +29,7 @@ public struct Speculid {
   
   public static func begin (withArguments arguments: SpeculidArgumentsProtocol, _ callback: @escaping (SpeculidApplicationProtocol) -> Void) {
     let operatingSystem = ProcessInfo.processInfo.operatingSystemVersionString
-    Fabric.with([Crashlytics.self])
+  
     let analyticsConfiguration = AnalyticsConfiguration(trackingIdentifier: "UA-33667276-6", applicationName: "speculid", applicationVersion : String(describing: self.version), customParameters : [.operatingSystemVersion : operatingSystem])
     let tracker = AnalyticsTracker(configuration: analyticsConfiguration, sessionManager: AnalyticsSessionManager())
     NSSetUncaughtExceptionHandler(exceptionHandlerMethod)
