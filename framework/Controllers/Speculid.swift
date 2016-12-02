@@ -31,7 +31,9 @@ public struct Speculid {
   
   public static func begin (withArguments arguments: SpeculidArgumentsProtocol, _ callback: @escaping (SpeculidApplicationProtocol) -> Void) {
     let operatingSystem = ProcessInfo.processInfo.operatingSystemVersionString
-    Fabric.with([Crashlytics.self])
+    Crashlytics.start(withAPIKey: "5125321d001d35d7a64b3987a0391f13992f8c75")
+    Answers.logCustomEvent(withName: "start", customAttributes: nil)
+  
     let analyticsConfiguration = AnalyticsConfiguration(trackingIdentifier: "UA-33667276-6", applicationName: "speculid", applicationVersion : String(describing: self.version), customParameters : [.operatingSystemVersion : operatingSystem])
     let tracker = AnalyticsTracker(configuration: analyticsConfiguration, sessionManager: AnalyticsSessionManager())
     NSSetUncaughtExceptionHandler(exceptionHandlerMethod)
