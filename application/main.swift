@@ -56,7 +56,7 @@ enum Stage : CustomStringConvertible {
     return result?.key ?? .alpha
   }
   
-  static let minimumBuildVersions : [Stage: UInt8] = [.production : 2]
+  static let minimumBuildVersions : [Stage: UInt8] = [:]
   
   var description: String {
     switch self {
