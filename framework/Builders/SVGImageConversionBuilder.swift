@@ -29,16 +29,16 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
       arguments.append(contentsOf: [specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path,dimension,"\(length)", specifications.sourceImageURL.absoluteURL.path])
     } else if let geometryValue = specifications.geometry?.value {
       let dimension: String
-      let length: Int
+      let length: CGFloat
       switch geometryValue {
       case .Width(let value):
         dimension = "-w"
-        length = value
+        length = CGFloat(value) * scale
       case .Height(let value):
         dimension = "-h"
-        length = value
+        length = CGFloat(value) * scale
       }
-      arguments.append(contentsOf: [specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path,dimension,"\(length)", specifications.sourceImageURL.absoluteURL.path])
+      arguments.append(contentsOf: [specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path,dimension,"\(Int(length))", specifications.sourceImageURL.absoluteURL.path])
     } else {
       // convert to
       arguments.append(contentsOf: [specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path, "-d", "\(90*scale)" ,specifications.sourceImageURL.absoluteURL.path])
