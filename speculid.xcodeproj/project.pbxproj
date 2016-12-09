@@ -56,6 +56,7 @@
 		B36AD1C21DB6C3AB00D33AD7 /* ApplicationPathDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1C11DB6C3AB00D33AD7 /* ApplicationPathDictionary.swift */; };
 		B36AD1C41DB6C3C100D33AD7 /* ApplicationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1C31DB6C3C100D33AD7 /* ApplicationPath.swift */; };
 		B36AD1C71DB6E9DF00D33AD7 /* PDFConversionBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1C61DB6E9DF00D33AD7 /* PDFConversionBuilderTest.swift */; };
+		B370914C1DFB020E007DD54C /* versions.plist in Resources */ = {isa = PBXBuildFile; fileRef = B370914B1DFB020E007DD54C /* versions.plist */; };
 		B37996B91DB7E36C00B8CA3B /* SearchApplicationPathDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37996B81DB7E36C00B8CA3B /* SearchApplicationPathDataSource.swift */; };
 		B38086001D9AA76E000BC05A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38085FF1D9AA76E000BC05A /* Assets.xcassets */; };
 		B38086091D9AA78E000BC05A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38086081D9AA78E000BC05A /* main.swift */; };
@@ -175,6 +176,7 @@
 		B36AD1C11DB6C3AB00D33AD7 /* ApplicationPathDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationPathDictionary.swift; sourceTree = "<group>"; };
 		B36AD1C31DB6C3C100D33AD7 /* ApplicationPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationPath.swift; sourceTree = "<group>"; };
 		B36AD1C61DB6E9DF00D33AD7 /* PDFConversionBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFConversionBuilderTest.swift; path = Builders/PDFConversionBuilderTest.swift; sourceTree = "<group>"; };
+		B370914B1DFB020E007DD54C /* versions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = versions.plist; sourceTree = "<group>"; };
 		B37996B81DB7E36C00B8CA3B /* SearchApplicationPathDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchApplicationPathDataSource.swift; sourceTree = "<group>"; };
 		B38085F91D9AA76E000BC05A /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38085FF1D9AA76E000BC05A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				B38086041D9AA76E000BC05A /* Info.plist */,
 				B38086081D9AA78E000BC05A /* main.swift */,
 				B33C70361DA6E72D002BC291 /* help.txt */,
+				B370914B1DFB020E007DD54C /* versions.plist */,
 			);
 			path = application;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B38086001D9AA76E000BC05A /* Assets.xcassets in Resources */,
+				B370914C1DFB020E007DD54C /* versions.plist in Resources */,
 				B33C70371DA6E72D002BC291 /* help.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -850,7 +854,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 5;
+				DEFAULT_VERSION_SEMVER = 1.0.1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -878,7 +883,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 5;
+				DEFAULT_VERSION_SEMVER = 1.0.1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1011,7 +1017,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2DB7226F66B034963BD7F05D /* Pods-SpeculidTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1066,7 +1071,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B8747C1F338E0ADE9DFD69B /* Pods-SpeculidTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1114,7 +1118,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 407E8C50424541751746E1EB /* Pods-Speculid-App.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1154,7 +1157,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4931B3201EAC0FD92C614AF8 /* Pods-Speculid-App.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;

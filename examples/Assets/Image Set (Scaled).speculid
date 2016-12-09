@@ -1,0 +1,5 @@
+{
+"set" : "Assets.xcassets/ImageSetScaled.imageset",
+"source" : "geometry.svg",
+"geometry" : "25"
+}

@@ -85,6 +85,7 @@
 		B3AF65CE1DA3F6F900BD008B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D01DA2B600008469FE /* Assets.xcassets */; };
 		B3AF65CF1DA3F6F900BD008B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D01DA2B600008469FE /* Assets.xcassets */; };
 		B3AF65D01DA3F6FA00BD008B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F73D01DA2B600008469FE /* Assets.xcassets */; };
+		B3D744331DF8ED18007A1216 /* Image Set (Scaled).speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3D744321DF8ED18007A1216 /* Image Set (Scaled).speculid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +191,7 @@
 		B38F73D01DA2B600008469FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B38F73D51DA2C1AB008469FE /* macOS AppIcon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "macOS AppIcon.speculid"; sourceTree = "<group>"; };
 		B38F73D71DA2C1F1008469FE /* geometry.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = geometry.svg; sourceTree = "<group>"; };
+		B3D744321DF8ED18007A1216 /* Image Set (Scaled).speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Image Set (Scaled).speculid"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +294,7 @@
 		B38F73D41DA2C149008469FE /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B3D744321DF8ED18007A1216 /* Image Set (Scaled).speculid */,
 				B38DDF3A1DA2E5AE005AA837 /* iOS AppIcon.speculid */,
 				B38F73D71DA2C1F1008469FE /* geometry.svg */,
 				B38F73D51DA2C1AB008469FE /* macOS AppIcon.speculid */,
@@ -458,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B30005CB1DB54EB1000A8166 /* Image Set.speculid in Resources */,
+				B3D744331DF8ED18007A1216 /* Image Set (Scaled).speculid in Resources */,
 				B38F73D11DA2B600008469FE /* Assets.xcassets in Resources */,
 				B38F73641DA2B358008469FE /* MainMenu.xib in Resources */,
 				B38DDF3C1DA2E5AE005AA837 /* iOS AppIcon.speculid in Resources */,
