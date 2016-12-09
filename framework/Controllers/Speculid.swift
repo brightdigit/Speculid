@@ -29,6 +29,7 @@ public struct Speculid {
   
   public static func begin (withArguments arguments: SpeculidArgumentsProtocol, _ callback: @escaping (SpeculidApplicationProtocol) -> Void) {
     let operatingSystem = ProcessInfo.processInfo.operatingSystemVersionString
+  
     let analyticsConfiguration = AnalyticsConfiguration(trackingIdentifier: "UA-33667276-6", applicationName: "speculid", applicationVersion : String(describing: self.version), customParameters : [.operatingSystemVersion : operatingSystem])
     let tracker = AnalyticsTracker(configuration: analyticsConfiguration, sessionManager: AnalyticsSessionManager())
     NSSetUncaughtExceptionHandler(exceptionHandlerMethod)
