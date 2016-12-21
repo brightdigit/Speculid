@@ -10,17 +10,21 @@ public struct SpeculidSpecifications : SpeculidSpecificationsProtocol {
   public let contentsDirectoryURL : URL
   public let sourceImageURL : URL
   public let geometry: Geometry?
+  public let background: NSColor?
   
   public init (contentsDirectoryURL : URL,
     sourceImageURL : URL,
-    geometry: Geometry? = nil) {
+    geometry: Geometry? = nil,
+    background: NSColor? = nil) {
     self.contentsDirectoryURL = contentsDirectoryURL
     self.geometry = geometry
     self.sourceImageURL = sourceImageURL
+    self.background = background
   }
  
   public init?(url: URL) {
     let geometry : Geometry?
+    let background : NSColor?
     
     guard let data = try? Data(contentsOf: url) else {
       return nil
@@ -38,6 +42,12 @@ public struct SpeculidSpecifications : SpeculidSpecificationsProtocol {
       return nil
     }
     
+    if let backgroundString = dictionary["background"] {
+      background = NSColor(backgroundString)
+    } else {
+      background = nil
+    }
+    
     if let geometryString = dictionary["geometry"] {
       geometry = Geometry(string: geometryString)
     } else {
@@ -51,6 +61,7 @@ public struct SpeculidSpecifications : SpeculidSpecificationsProtocol {
     self.contentsDirectoryURL = contentsJSONURL.deletingLastPathComponent()
     self.sourceImageURL = sourceImageURL
     self.geometry = geometry
+    self.background = background
   }
   
 }
