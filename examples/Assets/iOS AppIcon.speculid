@@ -1,5 +1,6 @@
 {
 "set" : "Assets.xcassets/iOS AppIcon.appiconset",
 "source" : "geometry.svg",
-"background" : "#FFFFFF"
+"background" : "#FFFFFF",
+"remove-alpha" : true
 }

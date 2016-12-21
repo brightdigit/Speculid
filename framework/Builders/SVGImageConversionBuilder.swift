@@ -10,6 +10,9 @@ import Foundation
 
 public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
   public func conversion(forImage imageSpecification: ImageSpecificationProtocol, withSpecifications specifications: SpeculidSpecificationsProtocol, andConfiguration configuration: SpeculidConfigurationProtocol) -> ConversionResult? {
+    
+    let removeAlphaProcess: Process?
+    
     guard let scale = imageSpecification.scale else {
       return nil
     }
@@ -22,7 +25,24 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
       return .Error(MissingRequiredInstallationError(name: "inkscape"))
     }
     
-    var arguments : [String] = ["--without-gui","--export-png", specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path]
+    let temporaryUrl = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent(UUID().uuidString)
+    
+    let inkScapeDestinationPath = specifications.removeAlpha ? temporaryUrl.path : specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path
+    
+    if specifications.removeAlpha {
+      if let convertURL = configuration.convertURL {
+      let process = Process()
+      process.launchPath = convertURL.path
+      process.arguments = [inkScapeDestinationPath,"-alpha","remove","-alpha","off",specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path]
+      removeAlphaProcess = process
+      } else {
+        return .Error(MissingRequiredInstallationError(name: "imagemagick"))
+      }
+    } else {
+      removeAlphaProcess = nil
+    }
+    
+    var arguments : [String] = ["--without-gui","--export-png", inkScapeDestinationPath]
     
     
     if let background = specifications.background {
@@ -50,10 +70,18 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
       arguments.append(contentsOf: ["-d", "\(90*scale)" ,specifications.sourceImageURL.absoluteURL.path])
     }
     
+    //
+    
+    
     let process = Process()
     process.launchPath = inkscapeURL.path
     process.arguments = arguments
     print(arguments.joined(separator: " "))
-    return .Task(ProcessImageConversionTask(process: process))
+    
+    if let removeAlphaProcess = removeAlphaProcess {
+      return .Task(ProcessImageConversionTask(process: SerialProcess(processes: [process, removeAlphaProcess]) ))
+    } else {
+      return .Task(ProcessImageConversionTask(process: process))
+    }
   }
 }
