@@ -33,7 +33,7 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
       if let convertURL = configuration.convertURL {
       let process = Process()
       process.launchPath = convertURL.path
-      process.arguments = [inkScapeDestinationPath,"-alpha","remove","-alpha","off",specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path]
+      process.arguments = [inkScapeDestinationPath,"-alpha","remove","-define","png:include-chunk=none",specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path]
       removeAlphaProcess = process
       } else {
         return .Error(MissingRequiredInstallationError(name: "imagemagick"))

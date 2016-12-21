@@ -74,10 +74,6 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "--version"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "&quot;/Users/leo/Documents/Projects/speculid/examples/Assets/iOS AppIcon.speculid&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
