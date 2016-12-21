@@ -22,11 +22,17 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
       return .Error(MissingRequiredInstallationError(name: "inkscape"))
     }
     
-    var arguments : [String] = ["--without-gui","--export-png"]
+    var arguments : [String] = ["--without-gui","--export-png", specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path]
+    
+    
+    if let background = specifications.background {
+      arguments.append(contentsOf: ["-b", background.hexString(false), "-y", "\(background.alphaComponent)"])
+    }
+    
     if let size = imageSpecification.size {
       let dimension = size.height > size.width ? "-h" : "-w"
       let length = Int(round(max(size.width, size.height) * scale))
-      arguments.append(contentsOf: [specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path,dimension,"\(length)", specifications.sourceImageURL.absoluteURL.path])
+      arguments.append(contentsOf: [dimension,"\(length)", specifications.sourceImageURL.absoluteURL.path])
     } else if let geometryValue = specifications.geometry?.value {
       let dimension: String
       let length: CGFloat
@@ -38,15 +44,16 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
         dimension = "-h"
         length = CGFloat(value) * scale
       }
-      arguments.append(contentsOf: [specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path,dimension,"\(Int(length))", specifications.sourceImageURL.absoluteURL.path])
+      arguments.append(contentsOf: [dimension,"\(Int(length))", specifications.sourceImageURL.absoluteURL.path])
     } else {
       // convert to
-      arguments.append(contentsOf: [specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path, "-d", "\(90*scale)" ,specifications.sourceImageURL.absoluteURL.path])
+      arguments.append(contentsOf: ["-d", "\(90*scale)" ,specifications.sourceImageURL.absoluteURL.path])
     }
     
     let process = Process()
     process.launchPath = inkscapeURL.path
     process.arguments = arguments
+    print(arguments.joined(separator: " "))
     return .Task(ProcessImageConversionTask(process: process))
   }
 }
