@@ -32,6 +32,7 @@ Temporary Items
 ## Build generated
 build/
 DerivedData/
+Products/
 
 ## Various settings
 # Xcode

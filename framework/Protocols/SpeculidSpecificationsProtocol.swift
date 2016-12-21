@@ -11,4 +11,5 @@ public protocol SpeculidSpecificationsProtocol {
   var sourceImageURL : URL { get }
   var geometry : Geometry? { get }
   var background : NSColor? { get }
+  var removeAlpha : Bool { get }
 }
