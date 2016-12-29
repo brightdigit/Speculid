@@ -7,7 +7,15 @@ xcode_workspace: speculid.xcworkspace # path to your xcodeproj folder
 xcode_scheme: Speculid
 before_install:
   - brew update
-  - travis_wait brew install homebrew/gui/inkscape imagemagick
+  - travis_wait brew install homebrew/gui/inkscape imagemagick &
+while true; do
+  ps -p$! 2>& 1>/dev/null
+  if [ $? = 0 ]; then
+    echo "still going"; sleep 10
+  else
+    break
+  fi
+done
   - rvm use $RVM_RUBY_VERSION
 install: bundle install --without=documentation
 script: 
