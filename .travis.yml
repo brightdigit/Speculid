@@ -7,7 +7,8 @@ xcode_workspace: speculid.xcworkspace # path to your xcodeproj folder
 xcode_scheme: Speculid
 before_install:
   - brew update
-  - travis_wait brew install homebrew/gui/inkscape imagemagick &
+  - brew-install homebrew/gui/inkscape 
+  - brew-install imagemagick
 while true; do
   ps -p$! 2>& 1>/dev/null
   if [ $? = 0 ]; then
