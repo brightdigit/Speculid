@@ -1,4 +1,6 @@
 {
 "set" : "Assets.xcassets/macOS AppIcon.appiconset",
-"source" : "geometry.svg"
+"source" : "geometry.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
 }

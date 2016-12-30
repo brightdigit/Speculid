@@ -89,21 +89,23 @@ or
 ```json
 {
 "set" : "Assets.xcassets/iOS AppIcon.appiconset",
-"source" : "geometry.svg"
+"source" : "geometry.svg",
+"background" : "#FFFFFFFF",
+"remove-alpha" : true
 }
 ```
 
-#### Set
+#### Set `set`
 
 <img src="https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/SetExample.png" width="320" height="240" alt="Image Set Examples from Xcode">
 
 A set is an image set or app icon set used by Xcode. That path specified in the json could be relative to the `.spcld` file.
 
-#### Source 
+#### Source `source`
 
 The image source file which could be a SVG or any bitmap image type compatible with [imagemagick](http://www.imagemagick.org).
 
-#### Geometry *optional*
+#### Geometry *optional* `geometry`
 
 The destination geometry of image if needed (i.e. image set). It must be in the format of:
 
@@ -111,6 +113,14 @@ The destination geometry of image if needed (i.e. image set). It must be in the 
 * x*height* (ex. "x128") - for specifying the height of the destination image
 
 You can only specify the height or the width. The other dimension is automatically calculated based on the aspect ration of the image.
+
+#### Background *optional* `background`
+
+As a requirement, **App Icons are required to exclude any alpha channels**. In order to remove a transparency from a source png or svg file, you can specify to remove the alpha channel and add a background color. The background color can be set with a string in a standard rgb, rgba, or hex code format (#RRGGBB or #AARRGGBB). If no alpha is specified an alpha of 1.0 is assumed.
+
+#### Remove Alpha *optional*  `remove-alpha`
+
+To specifically remove the alpha channel, a true boolean value must be specified. This will remove the alpha channel from the file. Make sure to specify an opaque background color when removing the alpha channel.
 
 ### Application Configuration
 
