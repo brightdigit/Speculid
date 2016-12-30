@@ -4,7 +4,7 @@
 
 [![Twitter](https://img.shields.io/badge/Twitter-@BrightDigit-blue.svg?style=flat)](http://twitter.com/brightdigit)
 [![Codecov](https://img.shields.io/codecov/c/github/brightdigit/speculid.svg?maxAge=2592000)](https://codecov.io/gh/brightdigit/speculid/branch)
-[![homebrew](https://img.shields.io/badge/homebrew-v1.0.0beta1-yellow.svg)](https://github.com/brightdigit/homebrew-brightdigit)
+[![homebrew](https://img.shields.io/badge/homebrew-v1.0.2-green.svg)](https://github.com/brightdigit/homebrew-brightdigit)
 [![Travis](https://img.shields.io/travis/brightdigit/speculid.svg)](https://travis-ci.org/brightdigit/speculid)
 [![Beerpay](https://img.shields.io/beerpay/brightdigit/speculid.svg?maxAge=2592000)](https://beerpay.io/brightdigit/speculid)
 [![Gitter](https://img.shields.io/gitter/room/speculid/Lobby.js.svg?maxAge=2592000)](https://gitter.im/speculid/Lobby)
