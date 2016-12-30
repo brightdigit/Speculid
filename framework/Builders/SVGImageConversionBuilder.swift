@@ -10,6 +10,9 @@ import Foundation
 
 public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
   public func conversion(forImage imageSpecification: ImageSpecificationProtocol, withSpecifications specifications: SpeculidSpecificationsProtocol, andConfiguration configuration: SpeculidConfigurationProtocol) -> ConversionResult? {
+    
+    let removeAlphaProcess: Process?
+    
     guard let scale = imageSpecification.scale else {
       return nil
     }
@@ -22,11 +25,34 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
       return .Error(MissingRequiredInstallationError(name: "inkscape"))
     }
     
-    var arguments : [String] = ["--without-gui","--export-png"]
+    let temporaryUrl = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent(UUID().uuidString)
+    
+    let inkScapeDestinationPath = specifications.removeAlpha ? temporaryUrl.path : specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path
+    
+    if specifications.removeAlpha {
+      if let convertURL = configuration.convertURL {
+      let process = Process()
+      process.launchPath = convertURL.path
+      process.arguments = [inkScapeDestinationPath,"-alpha","remove","-define","png:include-chunk=none",specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path]
+      removeAlphaProcess = process
+      } else {
+        return .Error(MissingRequiredInstallationError(name: "imagemagick"))
+      }
+    } else {
+      removeAlphaProcess = nil
+    }
+    
+    var arguments : [String] = ["--without-gui","--export-png", inkScapeDestinationPath]
+    
+    
+    if let background = specifications.background {
+      arguments.append(contentsOf: ["-b", background.hexString(false), "-y", "\(background.alphaComponent)"])
+    }
+    
     if let size = imageSpecification.size {
       let dimension = size.height > size.width ? "-h" : "-w"
       let length = Int(round(max(size.width, size.height) * scale))
-      arguments.append(contentsOf: [specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path,dimension,"\(length)", specifications.sourceImageURL.absoluteURL.path])
+      arguments.append(contentsOf: [dimension,"\(length)", specifications.sourceImageURL.absoluteURL.path])
     } else if let geometryValue = specifications.geometry?.value {
       let dimension: String
       let length: CGFloat
@@ -38,15 +64,24 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
         dimension = "-h"
         length = CGFloat(value) * scale
       }
-      arguments.append(contentsOf: [specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path,dimension,"\(Int(length))", specifications.sourceImageURL.absoluteURL.path])
+      arguments.append(contentsOf: [dimension,"\(Int(length))", specifications.sourceImageURL.absoluteURL.path])
     } else {
       // convert to
-      arguments.append(contentsOf: [specifications.contentsDirectoryURL.appendingPathComponent(specifications.destination(forImage: imageSpecification)).path, "-d", "\(90*scale)" ,specifications.sourceImageURL.absoluteURL.path])
+      arguments.append(contentsOf: ["-d", "\(90*scale)" ,specifications.sourceImageURL.absoluteURL.path])
     }
+    
+    //
+    
     
     let process = Process()
     process.launchPath = inkscapeURL.path
     process.arguments = arguments
-    return .Task(ProcessImageConversionTask(process: process))
+    print(arguments.joined(separator: " "))
+    
+    if let removeAlphaProcess = removeAlphaProcess {
+      return .Task(ProcessImageConversionTask(process: SerialProcess(processes: [process, removeAlphaProcess]) ))
+    } else {
+      return .Task(ProcessImageConversionTask(process: process))
+    }
   }
 }

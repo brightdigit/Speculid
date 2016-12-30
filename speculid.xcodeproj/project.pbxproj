@@ -62,6 +62,7 @@
 		B38086091D9AA78E000BC05A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38086081D9AA78E000BC05A /* main.swift */; };
 		B380860A1D9AA7B2000BC05A /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
 		B380860B1D9AA7B2000BC05A /* Speculid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3880DE41E0AB5180093117D /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3880DE31E0AB5180093117D /* NSColor.swift */; };
 		B38F734D1DA2A928008469FE /* Speculid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F734C1DA2A928008469FE /* Speculid.swift */; };
 		B3951DA11DA4319B00A6FCF2 /* ProcessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3951DA01DA4319B00A6FCF2 /* ProcessProtocol.swift */; };
 		B3951DA41DA4334A00A6FCF2 /* ProcessImageConversionTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3951DA31DA4334A00A6FCF2 /* ProcessImageConversionTaskTests.swift */; };
@@ -182,6 +183,7 @@
 		B38085FF1D9AA76E000BC05A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B38086041D9AA76E000BC05A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B38086081D9AA78E000BC05A /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = ../application/main.swift; sourceTree = "<group>"; };
+		B3880DE31E0AB5180093117D /* NSColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
 		B38F734C1DA2A928008469FE /* Speculid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speculid.swift; sourceTree = "<group>"; };
 		B3951DA01DA4319B00A6FCF2 /* ProcessProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessProtocol.swift; sourceTree = "<group>"; };
 		B3951DA31DA4334A00A6FCF2 /* ProcessImageConversionTaskTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessImageConversionTaskTests.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 			children = (
 				B34201681D9975DC004C49D6 /* String.swift */,
 				B342016A1D997602004C49D6 /* CGFloat.swift */,
+				B3880DE31E0AB5180093117D /* NSColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -785,6 +788,7 @@
 				B362A4281D9C0B4C00FF74FC /* GeometryProtocol.swift in Sources */,
 				B34201D21D99A5EA004C49D6 /* ProcessError.swift in Sources */,
 				B3DC29A41D9AAC4E00646E86 /* ArrayError.swift in Sources */,
+				B3880DE41E0AB5180093117D /* NSColor.swift in Sources */,
 				B37996B91DB7E36C00B8CA3B /* SearchApplicationPathDataSource.swift in Sources */,
 				B32AD7C81D982E9F00B871CE /* ImageConversionBuilder.swift in Sources */,
 				B34388771DB0061C003CB3BC /* SpeculidApplicationProtocol.swift in Sources */,
@@ -854,8 +858,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CURRENT_PROJECT_VERSION = 5;
-				DEFAULT_VERSION_SEMVER = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFAULT_VERSION_SEMVER = 1.0.2;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -883,8 +887,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CURRENT_PROJECT_VERSION = 5;
-				DEFAULT_VERSION_SEMVER = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFAULT_VERSION_SEMVER = 1.0.2;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
