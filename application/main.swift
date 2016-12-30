@@ -157,7 +157,7 @@ extension Version : CustomStringConvertible {
       stage = stagebuild.stage
       build = stagebuild.minimum
     } else {
-      stage = .alpha
+      stage = .production
       build = nil
     }
     switch stage {
