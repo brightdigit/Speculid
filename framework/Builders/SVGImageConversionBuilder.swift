@@ -76,7 +76,6 @@ public struct SVGImageConversionBuilder : ImageConversionBuilderProtocol {
     let process = Process()
     process.launchPath = inkscapeURL.path
     process.arguments = arguments
-    print(arguments.joined(separator: " "))
     
     if let removeAlphaProcess = removeAlphaProcess {
       return .Task(ProcessImageConversionTask(process: SerialProcess(processes: [process, removeAlphaProcess]) ))
