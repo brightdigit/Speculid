@@ -11,10 +11,12 @@ public protocol SpeculidConfigurationProtocol {
 }
 
 public extension SpeculidConfigurationProtocol {
+  @available (*, deprecated: 1.1.0, message: "Use library instead.")
   var inkscapeURL : URL? {
     return self.applicationPaths[.inkscape]
   }
   
+  @available (*, deprecated: 1.1.0, message: "Use library instead.")
   var convertURL : URL? {
     return self.applicationPaths[.convert]
   }
