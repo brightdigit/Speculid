@@ -115,7 +115,7 @@ public struct SearchApplicationPathDataSource : ApplicationPathDataSource {
     
     Process.launchedProcess(launchPath: "/usr/bin/osascript", arguments: [resourceURL.path, arguments.joined(separator: "; ")])
     
-    CFRunLoopTimer.schedule(repeatInterval: 1.0) { (timer) in
+    let _ = CFRunLoopTimer.schedule(repeatInterval: 1.0) { (timer) in
       for pair in whichParameters {
         if locations[pair.command] == nil {
           if let string = (try? String(contentsOf: pair.output))?.trimmingCharacters(
