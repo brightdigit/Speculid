@@ -15,9 +15,7 @@ open class Application : NSApplication {
     
     let menu = NSMenu(title: "Speculid")
     let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-    item.title = "Speculid"
     item.image = #imageLiteral(resourceName: "TrayIcon")
-    item.image?.isTemplate = true
     item.menu = menu
     self.statusItem = item
   }
