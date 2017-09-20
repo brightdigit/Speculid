@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B340B8AF1F71936400E7BB47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340B8AE1F71936400E7BB47 /* AppDelegate.swift */; };
-		B340B8B11F71936400E7BB47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B340B8B01F71936400E7BB47 /* Assets.xcassets */; };
-		B340B8B41F71936400E7BB47 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B340B8B21F71936400E7BB47 /* MainMenu.xib */; };
 		B340B8C81F71937B00E7BB47 /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B340B8BF1F71937B00E7BB47 /* Speculid.framework */; };
 		B340B8CF1F71937B00E7BB47 /* SpeculidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340B8CE1F71937B00E7BB47 /* SpeculidTests.swift */; };
 		B340B8D11F71937B00E7BB47 /* Speculid.h in Headers */ = {isa = PBXBuildFile; fileRef = B340B8C11F71937B00E7BB47 /* Speculid.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B340B8D41F71937B00E7BB47 /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B340B8BF1F71937B00E7BB47 /* Speculid.framework */; };
 		B340B8D51F71937B00E7BB47 /* Speculid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B340B8BF1F71937B00E7BB47 /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B340B8DE1F71939E00E7BB47 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340B8DD1F71939E00E7BB47 /* Application.swift */; };
+		B3CEE65F1F71BFB8001A45DA /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEE65E1F71BFB8001A45DA /* Application.swift */; };
+		B3CEE6651F71CE2D001A45DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CEE6611F71CE2D001A45DA /* Assets.xcassets */; };
+		B3CEE6671F71CE2D001A45DA /* svg-appicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3CEE6631F71CE2D001A45DA /* svg-appicon.speculid */; };
+		B3CEE66C1F71D6AC001A45DA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEE66B1F71D6AC001A45DA /* main.swift */; };
+		B3CEE66E1F71EB04001A45DA /* layers.svg in Resources */ = {isa = PBXBuildFile; fileRef = B3CEE66D1F71EB04001A45DA /* layers.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +60,6 @@
 
 /* Begin PBXFileReference section */
 		B340B8AB1F71936400E7BB47 /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B340B8AE1F71936400E7BB47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B340B8B01F71936400E7BB47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B340B8B31F71936400E7BB47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B340B8B51F71936400E7BB47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B340B8B61F71936400E7BB47 /* Speculid_Mac_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speculid_Mac_App.entitlements; sourceTree = "<group>"; };
 		B340B8BF1F71937B00E7BB47 /* Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +69,12 @@
 		B340B8CE1F71937B00E7BB47 /* SpeculidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidTests.swift; sourceTree = "<group>"; };
 		B340B8D01F71937B00E7BB47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B340B8DD1F71939E00E7BB47 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		B3CEE65E1F71BFB8001A45DA /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		B3CEE6611F71CE2D001A45DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3CEE6631F71CE2D001A45DA /* svg-appicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-appicon.speculid"; sourceTree = "<group>"; };
+		B3CEE66A1F71D116001A45DA /* svg-trayicon.speculid */ = {isa = PBXFileReference; lastKnownFileType = text; path = "svg-trayicon.speculid"; sourceTree = "<group>"; };
+		B3CEE66B1F71D6AC001A45DA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B3CEE66D1F71EB04001A45DA /* layers.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = layers.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +127,11 @@
 		B340B8AD1F71936400E7BB47 /* Speculid_Mac_App */ = {
 			isa = PBXGroup;
 			children = (
-				B340B8AE1F71936400E7BB47 /* AppDelegate.swift */,
-				B340B8B01F71936400E7BB47 /* Assets.xcassets */,
-				B340B8B21F71936400E7BB47 /* MainMenu.xib */,
+				B3CEE6601F71CE2D001A45DA /* assets */,
 				B340B8B51F71936400E7BB47 /* Info.plist */,
 				B340B8B61F71936400E7BB47 /* Speculid_Mac_App.entitlements */,
+				B3CEE65E1F71BFB8001A45DA /* Application.swift */,
+				B3CEE66B1F71D6AC001A45DA /* main.swift */,
 			);
 			path = Speculid_Mac_App;
 			sourceTree = "<group>";
@@ -150,6 +155,17 @@
 			path = SpeculidTests;
 			sourceTree = "<group>";
 		};
+		B3CEE6601F71CE2D001A45DA /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				B3CEE66D1F71EB04001A45DA /* layers.svg */,
+				B3CEE6611F71CE2D001A45DA /* Assets.xcassets */,
+				B3CEE66A1F71D116001A45DA /* svg-trayicon.speculid */,
+				B3CEE6631F71CE2D001A45DA /* svg-appicon.speculid */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -168,6 +184,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B340B8B71F71936400E7BB47 /* Build configuration list for PBXNativeTarget "Speculid_Mac_App" */;
 			buildPhases = (
+				B3CEE6691F71CED1001A45DA /* ShellScript */,
 				B340B8A71F71936400E7BB47 /* Sources */,
 				B340B8A81F71936400E7BB47 /* Frameworks */,
 				B340B8A91F71936400E7BB47 /* Resources */,
@@ -270,8 +287,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B340B8B11F71936400E7BB47 /* Assets.xcassets in Resources */,
-				B340B8B41F71936400E7BB47 /* MainMenu.xib in Resources */,
+				B3CEE6651F71CE2D001A45DA /* Assets.xcassets in Resources */,
+				B3CEE6671F71CE2D001A45DA /* svg-appicon.speculid in Resources */,
+				B3CEE66E1F71EB04001A45DA /* layers.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,12 +309,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B3CEE6691F71CED1001A45DA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "find \"${SRCROOT}\" -name \"*.speculid\" -print0 |\nwhile IFS= read -r -d $'\\0' line; do\nspeculid \"$line\" &\ndone\nwait";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B340B8A71F71936400E7BB47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B340B8AF1F71936400E7BB47 /* AppDelegate.swift in Sources */,
+				B3CEE66C1F71D6AC001A45DA /* main.swift in Sources */,
+				B3CEE65F1F71BFB8001A45DA /* Application.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,17 +370,6 @@
 			targetProxy = B340B8D21F71937B00E7BB47 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		B340B8B21F71936400E7BB47 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B340B8B31F71936400E7BB47 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B340B8A51F71932800E7BB47 /* Debug */ = {
