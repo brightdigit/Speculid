@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface RSVG : NSObject
-+ (NSObject*)classMethod;
++ (void)createPNGFromSVG;
++ (void)createPDFFromSVG;
 @end
