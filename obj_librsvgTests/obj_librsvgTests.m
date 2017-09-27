@@ -28,8 +28,8 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-  //[RSVG createPNGFromSVG];
-  [RSVG createPDFFromSVG];
+  [RSVG createPNGFromSVG];
+  //[RSVG createPDFFromSVG];
 }
 
 - (void)testPerformanceExample {

@@ -21,7 +21,12 @@
   NSLog(@"%d %d", dimensions.width, dimensions.height);
   cairo_surface_t*  surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, dimensions.width * 0.5, dimensions.height * 0.5);
   
+  
   cairo_t* cr = cairo_create(surface);
+  cairo_set_source_rgb (cr, 1, 0, 0);
+  cairo_rectangle (cr, 0, 0, dimensions.width * 0.5, dimensions.height * 0.5);
+  cairo_fill (cr);
+
   cairo_scale(cr, 0.5, 0.5);
   BOOL result = rsvg_handle_render_cairo(handle, cr);
   cairo_status_t status = cairo_surface_write_to_png(surface, "/Users/leo/Documents/Projects/obj-librsvg/obj_librsvgTests/geometry.png");
