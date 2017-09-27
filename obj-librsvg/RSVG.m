@@ -52,11 +52,16 @@
 
 + (void)createPNGFromPNG
 {
-  cairo_surface_t*  surface = cairo_image_surface_create_from_png("/Users/leo/Documents/Projects/obj-librsvg/obj_librsvgTests/geometry.png");
-  cairo_t* cr = cairo_create(surface);
+  
+  
+  cairo_surface_t*  sourceSurface = cairo_image_surface_create_from_png("/Users/leo/Documents/Projects/obj-librsvg/obj_librsvgTests/geometry.png");
+  cairo_surface_t*  destinationSurface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, cairo_image_surface_get_width(sourceSurface) * 2, cairo_image_surface_get_height(sourceSurface) * 2);
+  cairo_t* cr = cairo_create(destinationSurface);
   
   
   cairo_scale(cr, 2, 2);
-  cairo_status_t status = cairo_surface_write_to_png(surface, "/Users/leo/Documents/Projects/obj-librsvg/obj_librsvgTests/geometry@2x.png");
+  cairo_set_source_surface(cr, sourceSurface, 0, 0);
+  cairo_paint(cr);
+  cairo_status_t status = cairo_surface_write_to_png(destinationSurface, "/Users/leo/Documents/Projects/obj-librsvg/obj_librsvgTests/geometry@2x.png");
 }
 @end

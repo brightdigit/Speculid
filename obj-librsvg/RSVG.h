@@ -11,4 +11,5 @@
 @interface RSVG : NSObject
 + (void)createPNGFromSVG;
 + (void)createPDFFromSVG;
++ (void)createPNGFromPNG;
 @end
