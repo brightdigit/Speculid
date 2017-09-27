@@ -8,12 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		B30906931F740FB700C438FC /* obj_librsvg.h in Headers */ = {isa = PBXBuildFile; fileRef = B30906911F740FB700C438FC /* obj_librsvg.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B30906AC1F7410C100C438FC /* RSVG.h in Headers */ = {isa = PBXBuildFile; fileRef = B30906AA1F7410C100C438FC /* RSVG.h */; };
+		B30906AD1F7410C100C438FC /* RSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = B30906AB1F7410C100C438FC /* RSVG.m */; };
+		B30906B51F74137F00C438FC /* obj_librsvgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30906B41F74137F00C438FC /* obj_librsvgTests.m */; };
+		B30906B71F74137F00C438FC /* obj_librsvg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B309068E1F740FB700C438FC /* obj_librsvg.framework */; };
+		B3976AFB1F7AFAA500F52F10 /* geometry.svg in Resources */ = {isa = PBXBuildFile; fileRef = B3976AFA1F7AFAA500F52F10 /* geometry.svg */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B30906B81F74137F00C438FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B30906851F740FB700C438FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B309068D1F740FB700C438FC;
+			remoteInfo = "obj-librsvg";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B309068E1F740FB700C438FC /* obj_librsvg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = obj_librsvg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30906911F740FB700C438FC /* obj_librsvg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = obj_librsvg.h; sourceTree = "<group>"; };
 		B30906921F740FB700C438FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B30906AA1F7410C100C438FC /* RSVG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSVG.h; sourceTree = "<group>"; };
+		B30906AB1F7410C100C438FC /* RSVG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSVG.m; sourceTree = "<group>"; };
+		B30906B21F74137F00C438FC /* obj_librsvgTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = obj_librsvgTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30906B41F74137F00C438FC /* obj_librsvgTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = obj_librsvgTests.m; sourceTree = "<group>"; };
+		B30906B61F74137F00C438FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3976AFA1F7AFAA500F52F10 /* geometry.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = geometry.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +45,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B30906AF1F74137F00C438FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B30906B71F74137F00C438FC /* obj_librsvg.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -31,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				B30906901F740FB700C438FC /* obj-librsvg */,
+				B30906B31F74137F00C438FC /* obj_librsvgTests */,
 				B309068F1F740FB700C438FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				B309068E1F740FB700C438FC /* obj_librsvg.framework */,
+				B30906B21F74137F00C438FC /* obj_librsvgTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,8 +79,20 @@
 			children = (
 				B30906911F740FB700C438FC /* obj_librsvg.h */,
 				B30906921F740FB700C438FC /* Info.plist */,
+				B30906AA1F7410C100C438FC /* RSVG.h */,
+				B30906AB1F7410C100C438FC /* RSVG.m */,
 			);
 			path = "obj-librsvg";
+			sourceTree = "<group>";
+		};
+		B30906B31F74137F00C438FC /* obj_librsvgTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3976AFA1F7AFAA500F52F10 /* geometry.svg */,
+				B30906B41F74137F00C438FC /* obj_librsvgTests.m */,
+				B30906B61F74137F00C438FC /* Info.plist */,
+			);
+			path = obj_librsvgTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,6 +102,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B30906AC1F7410C100C438FC /* RSVG.h in Headers */,
 				B30906931F740FB700C438FC /* obj_librsvg.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +128,24 @@
 			productReference = B309068E1F740FB700C438FC /* obj_librsvg.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		B30906B11F74137F00C438FC /* obj_librsvgTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B30906BA1F74137F00C438FC /* Build configuration list for PBXNativeTarget "obj_librsvgTests" */;
+			buildPhases = (
+				B30906AE1F74137F00C438FC /* Sources */,
+				B30906AF1F74137F00C438FC /* Frameworks */,
+				B30906B01F74137F00C438FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B30906B91F74137F00C438FC /* PBXTargetDependency */,
+			);
+			name = obj_librsvgTests;
+			productName = obj_librsvgTests;
+			productReference = B30906B21F74137F00C438FC /* obj_librsvgTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -94,6 +156,10 @@
 				ORGANIZATIONNAME = "Leo Dion";
 				TargetAttributes = {
 					B309068D1F740FB700C438FC = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					B30906B11F74137F00C438FC = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -112,6 +178,7 @@
 			projectRoot = "";
 			targets = (
 				B309068D1F740FB700C438FC /* obj-librsvg */,
+				B30906B11F74137F00C438FC /* obj_librsvgTests */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +191,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B30906B01F74137F00C438FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3976AFB1F7AFAA500F52F10 /* geometry.svg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -131,10 +206,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B30906AD1F7410C100C438FC /* RSVG.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B30906AE1F74137F00C438FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B30906B51F74137F00C438FC /* obj_librsvgTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B30906B91F74137F00C438FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B309068D1F740FB700C438FC /* obj-librsvg */;
+			targetProxy = B30906B81F74137F00C438FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B30906941F740FB700C438FC /* Debug */ = {
@@ -261,6 +353,55 @@
 				INFOPLIST_FILE = "obj-librsvg/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = (
+					"-D_REENTRANT",
+					"-I/usr/local/Cellar/librsvg/2.40.18/include/librsvg-2.0",
+					"-I/usr/local/Cellar/gdk-pixbuf/2.36.7/include/gdk-pixbuf-2.0",
+					"-I/usr/local/Cellar/libpng/1.6.30/include/libpng16",
+					"-I/usr/local/Cellar/cairo/1.14.10/include/cairo",
+					"-I/usr/local/Cellar/glib/2.52.3/include/glib-2.0",
+					"-I/usr/local/Cellar/glib/2.52.3/lib/glib-2.0/include",
+					"-I/usr/local/opt/gettext/include",
+					"-I/usr/local/Cellar/pcre/8.41/include",
+					"-I/usr/local/Cellar/pixman/0.34.0_1/include/pixman-1",
+					"-I/usr/local/Cellar/fontconfig/2.12.4/include",
+					"-I/usr/local/opt/freetype/include/freetype2",
+					"-I/usr/local/Cellar/libpng/1.6.30/include/libpng16",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-D_REENTRANT",
+					"-I/usr/local/Cellar/librsvg/2.40.18/include/librsvg-2.0",
+					"-I/usr/local/Cellar/gdk-pixbuf/2.36.7/include/gdk-pixbuf-2.0",
+					"-I/usr/local/Cellar/libpng/1.6.30/include/libpng16",
+					"-I/usr/local/Cellar/cairo/1.14.10/include/cairo",
+					"-I/usr/local/Cellar/glib/2.52.3/include/glib-2.0",
+					"-I/usr/local/Cellar/glib/2.52.3/lib/glib-2.0/include",
+					"-I/usr/local/opt/gettext/include",
+					"-I/usr/local/Cellar/pcre/8.41/include",
+					"-I/usr/local/Cellar/pixman/0.34.0_1/include/pixman-1",
+					"-I/usr/local/Cellar/fontconfig/2.12.4/include",
+					"-I/usr/local/opt/freetype/include/freetype2",
+					"-I/usr/local/Cellar/libpng/1.6.30/include/libpng16",
+				);
+				OTHER_LDFLAGS = (
+					"-L/usr/local/Cellar/librsvg/2.40.18/lib",
+					"-L/usr/local/Cellar/glib/2.52.3/lib",
+					"-L/usr/local/Cellar/gdk-pixbuf/2.36.7/lib",
+					"-L/usr/local/Cellar/glib/2.52.3/lib",
+					"-L/usr/local/opt/gettext/lib",
+					"-L/usr/local/Cellar/cairo/1.14.10/lib",
+					"-lrsvg-2",
+					"-lm",
+					"-lgio-2.0",
+					"-lgdk_pixbuf-2.0",
+					"-lgobject-2.0",
+					"-lglib-2.0",
+					"-lintl",
+					"-Wl,-framework",
+					"-Wl,CoreFoundation",
+					"-lcairo",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.obj-librsvg";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -282,9 +423,84 @@
 				INFOPLIST_FILE = "obj-librsvg/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = (
+					"-D_REENTRANT",
+					"-I/usr/local/Cellar/librsvg/2.40.18/include/librsvg-2.0",
+					"-I/usr/local/Cellar/gdk-pixbuf/2.36.7/include/gdk-pixbuf-2.0",
+					"-I/usr/local/Cellar/libpng/1.6.30/include/libpng16",
+					"-I/usr/local/Cellar/cairo/1.14.10/include/cairo",
+					"-I/usr/local/Cellar/glib/2.52.3/include/glib-2.0",
+					"-I/usr/local/Cellar/glib/2.52.3/lib/glib-2.0/include",
+					"-I/usr/local/opt/gettext/include",
+					"-I/usr/local/Cellar/pcre/8.41/include",
+					"-I/usr/local/Cellar/pixman/0.34.0_1/include/pixman-1",
+					"-I/usr/local/Cellar/fontconfig/2.12.4/include",
+					"-I/usr/local/opt/freetype/include/freetype2",
+					"-I/usr/local/Cellar/libpng/1.6.30/include/libpng16",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-D_REENTRANT",
+					"-I/usr/local/Cellar/librsvg/2.40.18/include/librsvg-2.0",
+					"-I/usr/local/Cellar/gdk-pixbuf/2.36.7/include/gdk-pixbuf-2.0",
+					"-I/usr/local/Cellar/libpng/1.6.30/include/libpng16",
+					"-I/usr/local/Cellar/cairo/1.14.10/include/cairo",
+					"-I/usr/local/Cellar/glib/2.52.3/include/glib-2.0",
+					"-I/usr/local/Cellar/glib/2.52.3/lib/glib-2.0/include",
+					"-I/usr/local/opt/gettext/include",
+					"-I/usr/local/Cellar/pcre/8.41/include",
+					"-I/usr/local/Cellar/pixman/0.34.0_1/include/pixman-1",
+					"-I/usr/local/Cellar/fontconfig/2.12.4/include",
+					"-I/usr/local/opt/freetype/include/freetype2",
+					"-I/usr/local/Cellar/libpng/1.6.30/include/libpng16",
+				);
+				OTHER_LDFLAGS = (
+					"-L/usr/local/Cellar/librsvg/2.40.18/lib",
+					"-L/usr/local/Cellar/glib/2.52.3/lib",
+					"-L/usr/local/Cellar/gdk-pixbuf/2.36.7/lib",
+					"-L/usr/local/Cellar/glib/2.52.3/lib",
+					"-L/usr/local/opt/gettext/lib",
+					"-L/usr/local/Cellar/cairo/1.14.10/lib",
+					"-lrsvg-2",
+					"-lm",
+					"-lgio-2.0",
+					"-lgdk_pixbuf-2.0",
+					"-lgobject-2.0",
+					"-lglib-2.0",
+					"-lintl",
+					"-Wl,-framework",
+					"-Wl,CoreFoundation",
+					"-lcairo",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.obj-librsvg";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B30906BB1F74137F00C438FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				INFOPLIST_FILE = obj_librsvgTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.obj-librsvgTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B30906BC1F74137F00C438FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				INFOPLIST_FILE = obj_librsvgTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.obj-librsvgTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -305,6 +521,15 @@
 			buildConfigurations = (
 				B30906971F740FB700C438FC /* Debug */,
 				B30906981F740FB700C438FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B30906BA1F74137F00C438FC /* Build configuration list for PBXNativeTarget "obj_librsvgTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B30906BB1F74137F00C438FC /* Debug */,
+				B30906BC1F74137F00C438FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
