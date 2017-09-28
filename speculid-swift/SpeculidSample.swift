@@ -10,11 +10,11 @@ import Foundation
 
 import obj_librsvg
 
-class SwiftClass {
-  func test () {
+public class SwiftClass {
+  public static func test () {
+    RSVG.createPNGFromSVG()
     RSVG.createPDFFromSVG()
     RSVG.createPNGFromPNG()
-    RSVG.createPNGFromSVG()
   }
 }
 
