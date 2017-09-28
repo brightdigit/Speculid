@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		B30906931F740FB700C438FC /* obj_librsvg.h in Headers */ = {isa = PBXBuildFile; fileRef = B30906911F740FB700C438FC /* obj_librsvg.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B30906AC1F7410C100C438FC /* RSVG.h in Headers */ = {isa = PBXBuildFile; fileRef = B30906AA1F7410C100C438FC /* RSVG.h */; };
+		B30906AC1F7410C100C438FC /* RSVG.h in Headers */ = {isa = PBXBuildFile; fileRef = B30906AA1F7410C100C438FC /* RSVG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30906AD1F7410C100C438FC /* RSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = B30906AB1F7410C100C438FC /* RSVG.m */; };
 		B30906B51F74137F00C438FC /* obj_librsvgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30906B41F74137F00C438FC /* obj_librsvgTests.m */; };
 		B30906B71F74137F00C438FC /* obj_librsvg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B309068E1F740FB700C438FC /* obj_librsvg.framework */; };
 		B3976AFB1F7AFAA500F52F10 /* geometry.svg in Resources */ = {isa = PBXBuildFile; fileRef = B3976AFA1F7AFAA500F52F10 /* geometry.svg */; };
+		B3D7E2C31F7C84A100C997C3 /* speculid_cpp.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B3D7E2C21F7C84A100C997C3 /* speculid_cpp.hpp */; };
+		B3D7E2C51F7C84A100C997C3 /* speculid_cppPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B3D7E2C41F7C84A100C997C3 /* speculid_cppPriv.hpp */; };
+		B3D7E2C71F7C84A100C997C3 /* speculid_cpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3D7E2C61F7C84A100C997C3 /* speculid_cpp.cpp */; };
+		B3D7E2D41F7C854F00C997C3 /* speculid_swift.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D7E2D21F7C854F00C997C3 /* speculid_swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3D7E2DB1F7C862100C997C3 /* SpeculidSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7E2DA1F7C862100C997C3 /* SpeculidSample.swift */; };
+		B3D7E2DD1F7C870000C997C3 /* speculid_header.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D7E2DC1F7C870000C997C3 /* speculid_header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3D7E2DE1F7C872800C997C3 /* obj_librsvg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B309068E1F740FB700C438FC /* obj_librsvg.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,15 @@
 		B30906B41F74137F00C438FC /* obj_librsvgTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = obj_librsvgTests.m; sourceTree = "<group>"; };
 		B30906B61F74137F00C438FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3976AFA1F7AFAA500F52F10 /* geometry.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = geometry.svg; sourceTree = "<group>"; };
+		B3D7E2C01F7C84A100C997C3 /* libspeculid-cpp.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libspeculid-cpp.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3D7E2C21F7C84A100C997C3 /* speculid_cpp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = speculid_cpp.hpp; sourceTree = "<group>"; };
+		B3D7E2C41F7C84A100C997C3 /* speculid_cppPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = speculid_cppPriv.hpp; sourceTree = "<group>"; };
+		B3D7E2C61F7C84A100C997C3 /* speculid_cpp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = speculid_cpp.cpp; sourceTree = "<group>"; };
+		B3D7E2D01F7C854F00C997C3 /* speculid_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = speculid_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3D7E2D21F7C854F00C997C3 /* speculid_swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = speculid_swift.h; sourceTree = "<group>"; };
+		B3D7E2D31F7C854F00C997C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3D7E2DA1F7C862100C997C3 /* SpeculidSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidSample.swift; sourceTree = "<group>"; };
+		B3D7E2DC1F7C870000C997C3 /* speculid_header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = speculid_header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +69,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3D7E2BD1F7C84A100C997C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D7E2CC1F7C854F00C997C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3D7E2DE1F7C872800C997C3 /* obj_librsvg.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,7 +92,10 @@
 			children = (
 				B30906901F740FB700C438FC /* obj-librsvg */,
 				B30906B31F74137F00C438FC /* obj_librsvgTests */,
+				B3D7E2C11F7C84A100C997C3 /* speculid-cpp */,
+				B3D7E2D11F7C854F00C997C3 /* speculid-swift */,
 				B309068F1F740FB700C438FC /* Products */,
+				B3D7E2D81F7C855800C997C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +104,8 @@
 			children = (
 				B309068E1F740FB700C438FC /* obj_librsvg.framework */,
 				B30906B21F74137F00C438FC /* obj_librsvgTests.xctest */,
+				B3D7E2C01F7C84A100C997C3 /* libspeculid-cpp.dylib */,
+				B3D7E2D01F7C854F00C997C3 /* speculid_swift.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +131,34 @@
 			path = obj_librsvgTests;
 			sourceTree = "<group>";
 		};
+		B3D7E2C11F7C84A100C997C3 /* speculid-cpp */ = {
+			isa = PBXGroup;
+			children = (
+				B3D7E2C21F7C84A100C997C3 /* speculid_cpp.hpp */,
+				B3D7E2C41F7C84A100C997C3 /* speculid_cppPriv.hpp */,
+				B3D7E2C61F7C84A100C997C3 /* speculid_cpp.cpp */,
+				B3D7E2DC1F7C870000C997C3 /* speculid_header.h */,
+			);
+			path = "speculid-cpp";
+			sourceTree = "<group>";
+		};
+		B3D7E2D11F7C854F00C997C3 /* speculid-swift */ = {
+			isa = PBXGroup;
+			children = (
+				B3D7E2D21F7C854F00C997C3 /* speculid_swift.h */,
+				B3D7E2D31F7C854F00C997C3 /* Info.plist */,
+				B3D7E2DA1F7C862100C997C3 /* SpeculidSample.swift */,
+			);
+			path = "speculid-swift";
+			sourceTree = "<group>";
+		};
+		B3D7E2D81F7C855800C997C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,6 +168,24 @@
 			files = (
 				B30906AC1F7410C100C438FC /* RSVG.h in Headers */,
 				B30906931F740FB700C438FC /* obj_librsvg.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D7E2BE1F7C84A100C997C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3D7E2C51F7C84A100C997C3 /* speculid_cppPriv.hpp in Headers */,
+				B3D7E2C31F7C84A100C997C3 /* speculid_cpp.hpp in Headers */,
+				B3D7E2DD1F7C870000C997C3 /* speculid_header.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D7E2CD1F7C854F00C997C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3D7E2D41F7C854F00C997C3 /* speculid_swift.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +228,41 @@
 			productReference = B30906B21F74137F00C438FC /* obj_librsvgTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B3D7E2BF1F7C84A100C997C3 /* speculid-cpp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3D7E2CA1F7C84A100C997C3 /* Build configuration list for PBXNativeTarget "speculid-cpp" */;
+			buildPhases = (
+				B3D7E2BC1F7C84A100C997C3 /* Sources */,
+				B3D7E2BD1F7C84A100C997C3 /* Frameworks */,
+				B3D7E2BE1F7C84A100C997C3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "speculid-cpp";
+			productName = "speculid-cpp";
+			productReference = B3D7E2C01F7C84A100C997C3 /* libspeculid-cpp.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		B3D7E2CF1F7C854F00C997C3 /* speculid-swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3D7E2D51F7C854F00C997C3 /* Build configuration list for PBXNativeTarget "speculid-swift" */;
+			buildPhases = (
+				B3D7E2CB1F7C854F00C997C3 /* Sources */,
+				B3D7E2CC1F7C854F00C997C3 /* Frameworks */,
+				B3D7E2CD1F7C854F00C997C3 /* Headers */,
+				B3D7E2CE1F7C854F00C997C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "speculid-swift";
+			productName = "speculid-swift";
+			productReference = B3D7E2D01F7C854F00C997C3 /* speculid_swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,6 +278,15 @@
 					};
 					B30906B11F74137F00C438FC = {
 						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					B3D7E2BF1F7C84A100C997C3 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					B3D7E2CF1F7C854F00C997C3 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -179,6 +305,8 @@
 			targets = (
 				B309068D1F740FB700C438FC /* obj-librsvg */,
 				B30906B11F74137F00C438FC /* obj_librsvgTests */,
+				B3D7E2BF1F7C84A100C997C3 /* speculid-cpp */,
+				B3D7E2CF1F7C854F00C997C3 /* speculid-swift */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +327,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3D7E2CE1F7C854F00C997C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -215,6 +350,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				B30906B51F74137F00C438FC /* obj_librsvgTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D7E2BC1F7C84A100C997C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3D7E2C71F7C84A100C997C3 /* speculid_cpp.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D7E2CB1F7C854F00C997C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3D7E2DB1F7C862100C997C3 /* SpeculidSample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +655,85 @@
 			};
 			name = Release;
 		};
+		B3D7E2C81F7C84A100C997C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B3D7E2C91F7C84A100C997C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B3D7E2D61F7C854F00C997C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "speculid-swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.speculid-swift";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		B3D7E2D71F7C854F00C997C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "speculid-swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.speculid-swift";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -530,6 +760,24 @@
 			buildConfigurations = (
 				B30906BB1F74137F00C438FC /* Debug */,
 				B30906BC1F74137F00C438FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3D7E2CA1F7C84A100C997C3 /* Build configuration list for PBXNativeTarget "speculid-cpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3D7E2C81F7C84A100C997C3 /* Debug */,
+				B3D7E2C91F7C84A100C997C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3D7E2D51F7C854F00C997C3 /* Build configuration list for PBXNativeTarget "speculid-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3D7E2D61F7C854F00C997C3 /* Debug */,
+				B3D7E2D71F7C854F00C997C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

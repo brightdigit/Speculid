@@ -15,5 +15,5 @@ FOUNDATION_EXPORT double obj_librsvgVersionNumber;
 FOUNDATION_EXPORT const unsigned char obj_librsvgVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <obj_librsvg/PublicHeader.h>
-
+#import "RSVG.h"
 
