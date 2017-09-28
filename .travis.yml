@@ -8,8 +8,8 @@ xcode_scheme: Speculid
 before_install:
   - brew update
   - brew install librsvg cairo
-  - rvm use $RVM_RUBY_VERSION
-install: bundle install --without=documentation
+  #- rvm use $RVM_RUBY_VERSION
+#install: bundle install --without=documentation
 script:
   - xcodebuild -workspace speculid.xcworkspace -scheme "Speculid Application" -derivedDataPath ./build  build -configuration "Release"
   #- diff examples/shasum <(./shasum.sh)
