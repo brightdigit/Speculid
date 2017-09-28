@@ -8,10 +8,12 @@
 
 import Foundation
 
+@available(*, deprecated: 2.0.0)
 public protocol ProcessProtocol {
   func launch (_ callback: @escaping (Error?) -> Void)
 }
 
+@available(*, deprecated: 2.0.0)
 public class SerialProcessCollection {
   public let processes : [ProcessProtocol]
   public var index = -1
@@ -38,6 +40,7 @@ public class SerialProcessCollection {
   }
 }
 
+@available(*, deprecated: 2.0.0)
 public struct SerialProcess : ProcessProtocol {
   public let processes : [ProcessProtocol]
   
