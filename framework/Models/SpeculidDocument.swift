@@ -44,6 +44,7 @@ public struct SpeculidDocument : SpeculidDocumentProtocol {
       let scale: CGFloat?
       let size: CGSize?
       
+      
       if let scaleString = dictionary["scale"]?.firstMatchGroups(regex: scaleRegex)?[1], let value = Double(scaleString) {
         scale = CGFloat(value)
       } else {

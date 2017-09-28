@@ -87,7 +87,7 @@ public struct SearchApplicationPathDataSource : ApplicationPathDataSource {
   }
   
   func which (_ commands : [String], closure: @escaping (([String : URL]) -> Void)) {
-    let terminalLaunched = NSWorkspace.shared().runningApplications.index(where: isTerminal) == nil
+    let terminalLaunched = NSWorkspace.shared.runningApplications.index(where: isTerminal) == nil
     
     
     guard let resourceURL = Speculid.bundle.url(forResource: "terminal", withExtension: "scpt") else {

@@ -3,16 +3,16 @@
 let VCS_TYPE			= "git"
 let VCS_BASENAME		= "speculid"
 let VCS_UUID:	String?	= "b6fd659a7d2088d5420f962a307b1f7f7e5d0604"
-let VCS_NUM:	Int		= 484
-let VCS_DATE			= "2017-09-28T17:04:46Z"
+let VCS_NUM:	Int		= 485
+let VCS_DATE			= "2017-09-28T18:32:33Z"
 let VCS_BRANCH:	String	= "feature/remove-inkscape-imagick"
 let VCS_TAG:	String?	= "1.0.2"
-let VCS_TICK:	Int?	= 15
-let VCS_EXTRA:	String?	= "22"
+let VCS_TICK:	Int?	= 16
+let VCS_EXTRA:	String?	= "35"
 
-let VCS_ACTION_STAMP:	String?	= "2017-09-28T17:04:46Z!leogdion@brightdigit.com"
-let VCS_FULL_HASH:		String	= "9431d0c3a3da3f17e142a855aeb9136dd82914aa"
-let VCS_SHORT_HASH:		String	= "9431d0c"
+let VCS_ACTION_STAMP:	String?	= "2017-09-28T18:32:33Z!leogdion@brightdigit.com"
+let VCS_FULL_HASH:		String	= "4cd37c31ab5d636b63b260009beb57466520b651"
+let VCS_SHORT_HASH:		String	= "4cd37c3"
 
 let VCS_WC_MODIFIED:	Bool	= true
 

@@ -36,13 +36,16 @@ public struct Geometry : GeometryProtocol {
   
   public init?(string: String) {
     let range = NSRange(0..<string.characters.count)
+    
     guard (Geometry.Regex.Geometry.firstMatch(in: string, options: [], range: range) != nil) else {
       return nil
     }
     let value : GeometryValue
     let results = Geometry.Regex.Integer.matches(in: string, options: [], range: range)
     let intValue = results.map { (result) -> Int in
-      return Int(string.substring(with: string.range(from: result.range)!))!
+      //string.substring(with: result.)
+      //return Int(string.substring(with: string.range(of: result.range)!))!
+      return 0
       }.first!
     if string.lowercased().characters.first == "x" {
       value = .Height(intValue)

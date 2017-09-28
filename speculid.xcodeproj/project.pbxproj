@@ -26,6 +26,7 @@
 		B32AD7CA1D982F7F00B871CE /* ImageConversionBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7C91D982F7F00B871CE /* ImageConversionBuilderProtocol.swift */; };
 		B32AD7CC1D98307200B871CE /* ImageConversionTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7CB1D98307200B871CE /* ImageConversionTaskProtocol.swift */; };
 		B32AD7CE1D98453E00B871CE /* SpeculidConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7CD1D98453E00B871CE /* SpeculidConfiguration.swift */; };
+		B3314EFB1F7D7A2F0084AB6D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34201681D9975DC004C49D6 /* String.swift */; };
 		B33C70371DA6E72D002BC291 /* help.txt in Resources */ = {isa = PBXBuildFile; fileRef = B33C70361DA6E72D002BC291 /* help.txt */; };
 		B33D98221DB5A28200CB21C3 /* AnalyticsTrackerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33D98211DB5A28200CB21C3 /* AnalyticsTrackerProtocol.swift */; };
 		B33D98241DB5A74A00CB21C3 /* AnalyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33D98231DB5A74A00CB21C3 /* AnalyticsTracker.swift */; };
@@ -33,7 +34,6 @@
 		B33D98281DB5AED400CB21C3 /* AnalyticsSessionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33D98271DB5AED400CB21C3 /* AnalyticsSessionManagerProtocol.swift */; };
 		B33D982A1DB5B0A700CB21C3 /* AnalyticsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33D98291DB5B0A700CB21C3 /* AnalyticsConfiguration.swift */; };
 		B33D982C1DB5B17300CB21C3 /* AnalyticsSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33D982B1DB5B17300CB21C3 /* AnalyticsSessionManager.swift */; };
-		B34201691D9975DC004C49D6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34201681D9975DC004C49D6 /* String.swift */; };
 		B342016B1D997602004C49D6 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342016A1D997602004C49D6 /* CGFloat.swift */; };
 		B34201CA1D99A379004C49D6 /* SpeculidDocumentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34201C91D99A379004C49D6 /* SpeculidDocumentProtocol.swift */; };
 		B34201CC1D99A3BD004C49D6 /* SpeculidSpecificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34201CB1D99A3BD004C49D6 /* SpeculidSpecificationsProtocol.swift */; };
@@ -55,7 +55,6 @@
 		B36AD1C01DB6C24600D33AD7 /* ConversionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1BF1DB6C24600D33AD7 /* ConversionResult.swift */; };
 		B36AD1C21DB6C3AB00D33AD7 /* ApplicationPathDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1C11DB6C3AB00D33AD7 /* ApplicationPathDictionary.swift */; };
 		B36AD1C41DB6C3C100D33AD7 /* ApplicationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1C31DB6C3C100D33AD7 /* ApplicationPath.swift */; };
-		B36AD1C71DB6E9DF00D33AD7 /* PDFConversionBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36AD1C61DB6E9DF00D33AD7 /* PDFConversionBuilderTest.swift */; };
 		B370914C1DFB020E007DD54C /* versions.plist in Resources */ = {isa = PBXBuildFile; fileRef = B370914B1DFB020E007DD54C /* versions.plist */; };
 		B37996B91DB7E36C00B8CA3B /* SearchApplicationPathDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37996B81DB7E36C00B8CA3B /* SearchApplicationPathDataSource.swift */; };
 		B38086001D9AA76E000BC05A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38085FF1D9AA76E000BC05A /* Assets.xcassets */; };
@@ -179,7 +178,6 @@
 		B36AD1BF1DB6C24600D33AD7 /* ConversionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionResult.swift; sourceTree = "<group>"; };
 		B36AD1C11DB6C3AB00D33AD7 /* ApplicationPathDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationPathDictionary.swift; sourceTree = "<group>"; };
 		B36AD1C31DB6C3C100D33AD7 /* ApplicationPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationPath.swift; sourceTree = "<group>"; };
-		B36AD1C61DB6E9DF00D33AD7 /* PDFConversionBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFConversionBuilderTest.swift; path = Builders/PDFConversionBuilderTest.swift; sourceTree = "<group>"; };
 		B370914B1DFB020E007DD54C /* versions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = versions.plist; sourceTree = "<group>"; };
 		B37996B81DB7E36C00B8CA3B /* SearchApplicationPathDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchApplicationPathDataSource.swift; sourceTree = "<group>"; };
 		B38085F91D9AA76E000BC05A /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -310,7 +308,6 @@
 		B310EE431D94BF6D00C4A30E /* tests */ = {
 			isa = PBXGroup;
 			children = (
-				B36AD1C51DB6E9C300D33AD7 /* Builders */,
 				B3951DA21DA432FB00A6FCF2 /* Controllers */,
 				B310EE461D94BF6D00C4A30E /* Info.plist */,
 			);
@@ -343,14 +340,6 @@
 				B3880DE31E0AB5180093117D /* NSColor.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		B36AD1C51DB6E9C300D33AD7 /* Builders */ = {
-			isa = PBXGroup;
-			children = (
-				B36AD1C61DB6E9DF00D33AD7 /* PDFConversionBuilderTest.swift */,
-			);
-			name = Builders;
 			sourceTree = "<group>";
 		};
 		B38085FA1D9AA76E000BC05A /* application */ = {
@@ -587,16 +576,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0900;
 				TargetAttributes = {
 					B310EE351D94BF6D00C4A30E = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
 					};
 					B310EE3E1D94BF6D00C4A30E = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MLT7M394S7;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					B31E04CE1F7D39F10087889E = {
@@ -606,7 +596,7 @@
 					};
 					B38085F81D9AA76E000BC05A = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -832,8 +822,8 @@
 				B30005C31DB52F84000A8166 /* DefaultApplicationPathDataSource.swift in Sources */,
 				B36AD1BE1DB6C20900D33AD7 /* GeometryValue.swift in Sources */,
 				B32AD7CA1D982F7F00B871CE /* ImageConversionBuilderProtocol.swift in Sources */,
+				B3314EFB1F7D7A2F0084AB6D /* String.swift in Sources */,
 				B33D98281DB5AED400CB21C3 /* AnalyticsSessionManagerProtocol.swift in Sources */,
-				B34201691D9975DC004C49D6 /* String.swift in Sources */,
 				B33D98221DB5A28200CB21C3 /* AnalyticsTrackerProtocol.swift in Sources */,
 				B362A4241D9BFCCB00FF74FC /* Geometry.swift in Sources */,
 				B34201CA1D99A379004C49D6 /* SpeculidDocumentProtocol.swift in Sources */,
@@ -870,7 +860,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B36AD1C71DB6E9DF00D33AD7 /* PDFConversionBuilderTest.swift in Sources */,
 				B3951DA41DA4334A00A6FCF2 /* ProcessImageConversionTaskTests.swift in Sources */,
 				B310EE451D94BF6D00C4A30E /* SpeculidTests.swift in Sources */,
 				B3951DA61DA4395600A6FCF2 /* ImageConversionBuilderTests.swift in Sources */,
@@ -919,12 +908,18 @@
 		B310EE2F1D94BF5000C4A30E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -948,12 +943,18 @@
 		B310EE301D94BF5000C4A30E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -969,6 +970,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = BETA;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -1027,7 +1029,8 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1081,7 +1084,8 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1091,6 +1095,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2DB7226F66B034963BD7F05D /* Pods-SpeculidTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1137,7 +1142,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1145,6 +1151,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B8747C1F338E0ADE9DFD69B /* Pods-SpeculidTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1184,7 +1191,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1277,6 +1285,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 407E8C50424541751746E1EB /* Pods-Speculid-App.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1308,7 +1317,8 @@
 				PRODUCT_NAME = Speculid;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1316,6 +1326,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4931B3201EAC0FD92C614AF8 /* Pods-Speculid-App.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1342,7 +1353,8 @@
 				PRODUCT_NAME = Speculid;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

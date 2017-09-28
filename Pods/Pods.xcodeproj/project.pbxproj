@@ -117,34 +117,34 @@
 		508889B4D5A01594474811CCE19C5665 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B5C3871CB6BA47C60C078C0EF73980C /* CGFloat+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGFloat+RandomKit.swift"; path = "Sources/CGFloat+RandomKit.swift"; sourceTree = "<group>"; };
 		5D2DDAA82105F4A221BC2D3826483265 /* VersionContainerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VersionContainerProtocol.swift; path = Source/VersionContainerProtocol.swift; sourceTree = "<group>"; };
-		640C0481775673994087BFBD93D1DF45 /* Pods_Speculid_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Speculid_App.framework; path = "Pods-Speculid-App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		640C0481775673994087BFBD93D1DF45 /* Pods_Speculid_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		688B988998C412A31E9D94141A4E2763 /* Version.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Version.swift; path = Source/Version.swift; sourceTree = "<group>"; };
 		6F16EA13EBF9CB101BF42FE7E2CC052B /* Pods-Speculid-App-Speculid-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Speculid-App-Speculid-acknowledgements.markdown"; sourceTree = "<group>"; };
-		74A13FD9CD8CA0785B03A0711A7F8A76 /* Pods_Speculid_App_Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Speculid_App_Speculid.framework; path = "Pods-Speculid-App-Speculid.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74A13FD9CD8CA0785B03A0711A7F8A76 /* Pods_Speculid_App_Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid_App_Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C2DD9D23FC539B049B47E5900917BA /* Pods-Speculid-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Speculid-App.release.xcconfig"; sourceTree = "<group>"; };
 		76F0F426B67709C63AA6AC575DBB1348 /* Pods-SpeculidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpeculidTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D250FF4409A5196DDE944E63D7FEB3C /* Pods-SpeculidTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SpeculidTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		7D826C3982E53E43ECC31DDDEB5E9C65 /* CGSize+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+RandomKit.swift"; path = "Sources/CGSize+RandomKit.swift"; sourceTree = "<group>"; };
-		7F5DA1FA93FC5368A6EC9E975BF7597C /* RandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RandomKit.framework; path = RandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F5DA1FA93FC5368A6EC9E975BF7597C /* RandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA30BE76FED0A2776FC0826B3C295DF /* SemVer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SemVer.swift; path = Source/SemVer.swift; sourceTree = "<group>"; };
 		835921A9A6FFB61DEB25F4146F9F1810 /* Pods-Speculid-App-Speculid-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Speculid-App-Speculid-umbrella.h"; sourceTree = "<group>"; };
 		86C9E842C30A7FCBCB4F3CEE71052B73 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F3F7DE954BC5BE80A4C4ABC9147FA9D /* Bool+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bool+RandomKit.swift"; path = "Sources/Bool+RandomKit.swift"; sourceTree = "<group>"; };
 		8FC4E8FE2FF3F55D82FDB24EEDBAD8AD /* Dictionary+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+RandomKit.swift"; path = "Sources/Dictionary+RandomKit.swift"; sourceTree = "<group>"; };
 		91C057B907E9DC56C0F57FE1F38BB7F1 /* RandomKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RandomKit.xcconfig; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		941D2B28CC16BE41D2E49D822346EA7E /* Pods-Speculid-App-Speculid-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Speculid-App-Speculid-acknowledgements.plist"; sourceTree = "<group>"; };
-		990B4DA87204E82371D676BE799CE81E /* RandomKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RandomKit.modulemap; sourceTree = "<group>"; };
+		990B4DA87204E82371D676BE799CE81E /* RandomKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RandomKit.modulemap; sourceTree = "<group>"; };
 		9BD8E876F98A7917E1F93FF6ECD6A801 /* Pods-Speculid-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Speculid-App.debug.xcconfig"; sourceTree = "<group>"; };
 		9FE9FBF24E41E19C0001BC720C881192 /* CGVector+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGVector+RandomKit.swift"; path = "Sources/CGVector+RandomKit.swift"; sourceTree = "<group>"; };
 		A1E6A1087E507A0ACF14BEDD2DE3C4DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A28343DD8B08857A03FC8AA9B5162F1D /* RandomKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RandomKit-umbrella.h"; sourceTree = "<group>"; };
-		A47E4DEFC97C767B0D6CB7B284392141 /* SwiftVer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftVer.modulemap; sourceTree = "<group>"; };
-		B2477086C9E8C95BF42A80CB4DAAE9BB /* Pods_SpeculidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SpeculidTests.framework; path = "Pods-SpeculidTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A47E4DEFC97C767B0D6CB7B284392141 /* SwiftVer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftVer.modulemap; sourceTree = "<group>"; };
+		B2477086C9E8C95BF42A80CB4DAAE9BB /* Pods_SpeculidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeculidTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B81B8F9B67B6234D653F667986A7A627 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9ACAAFE1918C36DED1733A8BBEB3913 /* Pods-SpeculidTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SpeculidTests-umbrella.h"; sourceTree = "<group>"; };
 		BA13D1D67FB778EFA378D6897A4C4758 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB98A5E27EEE21BD7584BFD1E1CE1374 /* Pods-Speculid-App-Speculid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Speculid-App-Speculid.modulemap"; sourceTree = "<group>"; };
+		BB98A5E27EEE21BD7584BFD1E1CE1374 /* Pods-Speculid-App-Speculid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Speculid-App-Speculid.modulemap"; sourceTree = "<group>"; };
 		BD42AE3191B7A5ED41E37EB8CDFA7250 /* Pods-SpeculidTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SpeculidTests-dummy.m"; sourceTree = "<group>"; };
 		C0E4D3221AAEDEA247864AD2D2F41294 /* Pods-Speculid-App-Speculid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Speculid-App-Speculid.debug.xcconfig"; sourceTree = "<group>"; };
 		C55EB03AF7DCD6A928BAC312A9568E9D /* CGPoint+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGPoint+RandomKit.swift"; path = "Sources/CGPoint+RandomKit.swift"; sourceTree = "<group>"; };
@@ -154,11 +154,11 @@
 		C9E8ABE9D6C59EDA90D8BCD2F050DAFF /* VersionControlType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VersionControlType.swift; path = Source/VersionControlType.swift; sourceTree = "<group>"; };
 		CA7DBF8D5E2B0064D2EE324576B6A222 /* Set+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Set+RandomKit.swift"; path = "Sources/Set+RandomKit.swift"; sourceTree = "<group>"; };
 		CA8E53055D64E3059F55DD8E02FB0495 /* Pods-Speculid-App-Speculid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Speculid-App-Speculid.release.xcconfig"; sourceTree = "<group>"; };
-		CE7F61E4AB8BF4771DD94F0071CDB1DD /* Pods-Speculid-App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Speculid-App.modulemap"; sourceTree = "<group>"; };
-		D1059B8D867BE717235AB56443596C35 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftVer.framework; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7F61E4AB8BF4771DD94F0071CDB1DD /* Pods-Speculid-App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Speculid-App.modulemap"; sourceTree = "<group>"; };
+		D1059B8D867BE717235AB56443596C35 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55D4F4EC67EEAE276A1D7BFB7D9C84F /* Pods-Speculid-App-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Speculid-App-resources.sh"; sourceTree = "<group>"; };
 		D7E92454A0FCD877E7DB39404E088601 /* Float80+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Float80+RandomKit.swift"; path = "Sources/Float80+RandomKit.swift"; sourceTree = "<group>"; };
-		E27CC09E6D4B60552CC4B95E4D4EDEE2 /* Pods-SpeculidTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SpeculidTests.modulemap"; sourceTree = "<group>"; };
+		E27CC09E6D4B60552CC4B95E4D4EDEE2 /* Pods-SpeculidTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SpeculidTests.modulemap"; sourceTree = "<group>"; };
 		E4F0CA11780D7060AD13D221CFC80FCB /* Color+RandomKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Color+RandomKit.swift"; path = "Sources/Color+RandomKit.swift"; sourceTree = "<group>"; };
 		E683CBBDDB09DB9223EA40FF9D6C7D74 /* Pods-Speculid-App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Speculid-App-frameworks.sh"; sourceTree = "<group>"; };
 		E8FFCCD0BC1E4641D177A4C510207A0C /* RandomType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomType.swift; path = Sources/RandomType.swift; sourceTree = "<group>"; };
@@ -231,7 +231,6 @@
 				C9E8ABE9D6C59EDA90D8BCD2F050DAFF /* VersionControlType.swift */,
 				CC9C447A168964A8A2600872E49905A7 /* Support Files */,
 			);
-			name = SwiftVer;
 			path = SwiftVer;
 			sourceTree = "<group>";
 		};
@@ -396,7 +395,6 @@
 				3186EDFE301F2DCE8C5CE407615EFF08 /* URL+RandomKit.swift */,
 				96670B039762A9E498C0863F13A61A8A /* Support Files */,
 			);
-			name = RandomKit;
 			path = RandomKit;
 			sourceTree = "<group>";
 		};
@@ -543,6 +541,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					6B4186CE44A8ABF7BE40C3D93E6C2575 = {
+						LastSwiftMigration = 0900;
+					};
+					6D15953639425373453EC29444BEB0B9 = {
+						LastSwiftMigration = 0900;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
