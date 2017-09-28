@@ -31,7 +31,7 @@ public struct Geometry : GeometryProtocol {
   public struct Regex {
     public static let Geometry = try! NSRegularExpression(pattern: "x?(\\d+)", options: [.caseInsensitive])
     public static let Integer = try! NSRegularExpression(pattern: "\\d+", options: [])
-    
+    private init () {}
   }
   
   public init?(string: String) {
@@ -42,10 +42,11 @@ public struct Geometry : GeometryProtocol {
     }
     let value : GeometryValue
     let results = Geometry.Regex.Integer.matches(in: string, options: [], range: range)
-    let intValue = results.map { (result) -> Int in
-      //string.substring(with: result.)
-      //return Int(string.substring(with: string.range(of: result.range)!))!
-      return 0
+    let intValue = results.flatMap { (result) -> Int? in
+      guard let range = Range(result.range, in: string) else {
+        return nil
+      }
+      return Int(string[range])
       }.first!
     if string.lowercased().characters.first == "x" {
       value = .Height(intValue)

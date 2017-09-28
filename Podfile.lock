@@ -1,25 +1,21 @@
 PODS:
-  - RandomKit (1.6.0)
-  - SwiftVer (1.0.0)
+  - RandomKit (5.2.3):
+    - ShiftOperations (~> 1.0.2)
+    - Threadly (~> 1.0)
+  - ShiftOperations (1.0.2)
+  - SwiftVer (2.0.3)
+  - Threadly (1.2.0)
 
 DEPENDENCIES:
-  - RandomKit (from `https://github.com/nvzqz/RandomKit.git`, branch `master`)
-  - SwiftVer (~> 1.0)
-
-EXTERNAL SOURCES:
-  RandomKit:
-    :branch: master
-    :git: https://github.com/nvzqz/RandomKit.git
-
-CHECKOUT OPTIONS:
-  RandomKit:
-    :commit: c4c8649dd2eeafaed72d07c988936819e4617c82
-    :git: https://github.com/nvzqz/RandomKit.git
+  - RandomKit (~> 5.2.3)
+  - SwiftVer (~> 2.0)
 
 SPEC CHECKSUMS:
-  RandomKit: 193d11478a87943021780e38f3be07a1c7c8419e
-  SwiftVer: 5a3cf6ae27a079efab5575d0161e5319cb7fbe15
+  RandomKit: 380745911c4f7989707489b2ce297194bfcf5031
+  ShiftOperations: 702c9aa98d3b20d98dceb71dd8437b562f7ab3ad
+  SwiftVer: 881cecd16a6bdb4e36a01d1f621802c9683dcf29
+  Threadly: b772ed7c1ff4a3f03eb4600bbc5ef83b3be5cb29
 
-PODFILE CHECKSUM: 303e38c4e8692b7a8020ae6a60bb9cd05c73ac0a
+PODFILE CHECKSUM: 6a6b0f028a6f61f8e8ba9f2090427f55ae2b0d28
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

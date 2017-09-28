@@ -23,8 +23,27 @@ public struct Speculid {
   }
   
   public static let bundle = Bundle(for: _VersionHandler.self)
-  public static let vcs = VersionControlInfo(TYPE: VCS_TYPE, BASENAME: VCS_BASENAME, UUID: VCS_UUID, NUM: VCS_NUM, DATE: VCS_DATE, BRANCH: VCS_BRANCH, TAG: VCS_TAG, TICK: VCS_TICK, EXTRA: VCS_EXTRA, FULL_HASH: VCS_FULL_HASH, SHORT_HASH: VCS_SHORT_HASH, WC_MODIFIED: VCS_WC_MODIFIED)
-  public static let version = Version(bundle: bundle, versionControl: vcs)!
+  
+  public static let vcs = VersionControlInfo(type: VCS_TYPE,
+                                             baseName: VCS_BASENAME,
+                                             uuid: Hash(string: VCS_UUID!),
+                                             number: VCS_NUM,
+                                             date: VCS_DATE,
+                                             branch: VCS_BRANCH,
+                                             tag: VCS_TAG,
+                                             tick: VCS_TICK,
+                                             extra: VCS_EXTRA,
+                                             hash: Hash(string:VCS_FULL_HASH)!,
+                                             
+                                             isWorkingCopyModified: VCS_WC_MODIFIED)
+  
+  public static let sbd = Stage.dictionary(fromPlistAtURL: Speculid.bundle.url(forResource: "versions", withExtension: "plist")!)!
+  //StageBuildDictionaryProtocol! = nil
+  
+  public static let version = Version(
+    bundle: bundle,
+    dictionary: sbd,
+    versionControl: vcs)!
   
   
   public static func begin (withArguments arguments: SpeculidArgumentsProtocol, _ callback: @escaping (SpeculidApplicationProtocol) -> Void) {
