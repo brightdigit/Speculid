@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(*, deprecated: 2.0.0)
 public struct DefaultApplicationPathDataSource : ApplicationPathDataSource {
   public func applicationPaths(_ closure: @escaping (ApplicationPathDictionary) -> Void) {
     var applicationPaths = ApplicationPathDictionary()
