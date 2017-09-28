@@ -188,3 +188,5 @@ playgrounds
 Products
 *tests/*.png
 *tests/*.pdf
+
+SpecCarioInterop.xcconfig
