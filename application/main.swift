@@ -222,7 +222,7 @@ Speculid.begin(withArguments: CommandLine.arguments,{
     } else if let parameter = CommandLine.arguments.dropFirst().first {
       let range = NSRange(0..<parameter.characters.count)
       if let match = regex.firstMatch(in: parameter, options: [], range: range) {
-        let rangeIndex = parameter.range(from: match.rangeAt(1))
+        let rangeIndex = parameter.range(from: match.range(at: 1))
         if let param = CommandLineParameter(rawValue: parameter.substring(with: rangeIndex!)) {
           switch param {
           case .Version :
