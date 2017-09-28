@@ -61,6 +61,7 @@
 		B38086091D9AA78E000BC05A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38086081D9AA78E000BC05A /* main.swift */; };
 		B380860A1D9AA7B2000BC05A /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
 		B380860B1D9AA7B2000BC05A /* Speculid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B385F34A1F7DB7D200AC6B85 /* versions.plist in Resources */ = {isa = PBXBuildFile; fileRef = B385F3491F7DB7D200AC6B85 /* versions.plist */; };
 		B3880DE41E0AB5180093117D /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3880DE31E0AB5180093117D /* NSColor.swift */; };
 		B38F734D1DA2A928008469FE /* Speculid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F734C1DA2A928008469FE /* Speculid.swift */; };
 		B3951DA11DA4319B00A6FCF2 /* ProcessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3951DA01DA4319B00A6FCF2 /* ProcessProtocol.swift */; };
@@ -184,6 +185,7 @@
 		B38085FF1D9AA76E000BC05A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B38086041D9AA76E000BC05A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B38086081D9AA78E000BC05A /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = ../application/main.swift; sourceTree = "<group>"; };
+		B385F3491F7DB7D200AC6B85 /* versions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = versions.plist; sourceTree = "<group>"; };
 		B3880DE31E0AB5180093117D /* NSColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
 		B38F734C1DA2A928008469FE /* Speculid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speculid.swift; sourceTree = "<group>"; };
 		B3951DA01DA4319B00A6FCF2 /* ProcessProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessProtocol.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				B310EE391D94BF6D00C4A30E /* Speculid.h */,
 				B310EE3A1D94BF6D00C4A30E /* Info.plist */,
 				B34507831D9E9FD900C80225 /* VCS.swift */,
+				B385F3491F7DB7D200AC6B85 /* versions.plist */,
 			);
 			path = framework;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B385F34A1F7DB7D200AC6B85 /* versions.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,7 +696,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A6C6CB2D563329968516A76B /* [CP] Embed Pods Frameworks */ = {
@@ -749,7 +753,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BF7DD1E83825C1D52B868983 /* [CP] Copy Pods Resources */ = {
@@ -794,7 +798,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
