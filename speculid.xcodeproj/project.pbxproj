@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B3F9253B1F7E793A00FFD4B8 /* SpecCarioInterop-Flags */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B3F9253E1F7E793A00FFD4B8 /* Build configuration list for PBXAggregateTarget "SpecCarioInterop-Flags" */;
+			buildPhases = (
+				B3F9253F1F7E793F00FFD4B8 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "SpecCarioInterop-Flags";
+			productName = "SpecCarioInterop-Flags";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		3A1ABCFA753C493935FD8F95 /* Pods_Speculid_App_Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8C8B36DBAD28741A274EDD /* Pods_Speculid_App_Speculid.framework */; };
 		90A44E85D7852C743AC3ED1B /* Pods_SpeculidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386203CFE7D8B9BA4D80ADA4 /* Pods_SpeculidTests.framework */; };
@@ -100,6 +114,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B38085F81D9AA76E000BC05A;
 			remoteInfo = "Speculid-App";
+		};
+		B3F925401F7E79BC00FFD4B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B310EE2B1D94BF5000C4A30E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3F9253B1F7E793A00FFD4B8;
+			remoteInfo = "SpecCarioInterop-Flags";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -536,7 +557,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B31E04D71F7D39F10087889E /* Build configuration list for PBXNativeTarget "SpecCarioInterop" */;
 			buildPhases = (
-				B31E04DC1F7D3AAB0087889E /* ShellScript */,
 				B31E04CB1F7D39F10087889E /* Sources */,
 				B31E04CC1F7D39F10087889E /* Frameworks */,
 				B31E04CD1F7D39F10087889E /* Headers */,
@@ -544,6 +564,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B3F925411F7E79BC00FFD4B8 /* PBXTargetDependency */,
 			);
 			name = SpecCarioInterop;
 			productName = SpecCarioInterop;
@@ -602,6 +623,11 @@
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
 					};
+					B3F9253B1F7E793A00FFD4B8 = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = MLT7M394S7;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = B310EE2E1D94BF5000C4A30E /* Build configuration list for PBXProject "speculid" */;
@@ -621,6 +647,7 @@
 				B310EE3E1D94BF6D00C4A30E /* SpeculidTests */,
 				B38085F81D9AA76E000BC05A /* Speculid-App */,
 				B31E04CE1F7D39F10087889E /* SpecCarioInterop */,
+				B3F9253B1F7E793A00FFD4B8 /* SpecCarioInterop-Flags */,
 			);
 		};
 /* End PBXProject section */
@@ -714,19 +741,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Speculid-App/Pods-Speculid-App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B31E04DC1F7D3AAB0087889E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "OTHER_CFLAGS=\"$(pkg-config --cflags cairo librsvg-2.0)\"\nOTHER_LDFLAGS=\"$(pkg-config --libs cairo librsvg-2.0)\"\necho -e \"OTHER_CFLAGS = \\$(inherited) ${OTHER_CFLAGS}\" > SpecCarioInterop.xcconfig\necho -e \"OTHER_LDFLAGS = \\$(inherited) ${OTHER_LDFLAGS}\" >> SpecCarioInterop.xcconfig";
-		};
 		B3F795961D9F7C9500FC557C /* Autorevision */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -740,6 +754,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if git rev-parse --git-dir > /dev/null 2>&1; then\ntouch ${SRCROOT}/.version\nstart=1\nversion_file=`< ${SRCROOT}/.version`\nversion=${version_file:-${start}}\nexport VCS_EXTRA=$version\necho \"Incrementing Version Number\"\n\"${SRCROOT}/autorevision.sh\" -t swift > \"${SRCROOT}/framework/VCS.swift\"\necho `expr ${VCS_EXTRA} + 1` >${SRCROOT}/.version\nfi";
+		};
+		B3F9253F1F7E793F00FFD4B8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "OTHER_CFLAGS=\"$(pkg-config --cflags cairo librsvg-2.0)\"\nOTHER_LDFLAGS=\"$(pkg-config --libs cairo librsvg-2.0)\"\necho -e \"OTHER_CFLAGS = \\$(inherited) ${OTHER_CFLAGS}\" > SpecCarioInterop.xcconfig\necho -e \"OTHER_LDFLAGS = \\$(inherited) ${OTHER_LDFLAGS}\" >> SpecCarioInterop.xcconfig";
 		};
 		B90673C66D6CDE5A62FD8FB7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -905,6 +932,11 @@
 			isa = PBXTargetDependency;
 			target = B38085F81D9AA76E000BC05A /* Speculid-App */;
 			targetProxy = B38F734E1DA2AA2B008469FE /* PBXContainerItemProxy */;
+		};
+		B3F925411F7E79BC00FFD4B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3F9253B1F7E793A00FFD4B8 /* SpecCarioInterop-Flags */;
+			targetProxy = B3F925401F7E79BC00FFD4B8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1362,6 +1394,24 @@
 			};
 			name = Release;
 		};
+		B3F9253C1F7E793A00FFD4B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B3F9253D1F7E793A00FFD4B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1406,6 +1456,15 @@
 			buildConfigurations = (
 				B38086061D9AA76E000BC05A /* Debug */,
 				B38086071D9AA76E000BC05A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3F9253E1F7E793A00FFD4B8 /* Build configuration list for PBXAggregateTarget "SpecCarioInterop-Flags" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F9253C1F7E793A00FFD4B8 /* Debug */,
+				B3F9253D1F7E793A00FFD4B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
