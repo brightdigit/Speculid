@@ -11,6 +11,7 @@ before_install:
   #- rvm use $RVM_RUBY_VERSION
 #install: bundle install --without=documentation
 script:
+  - xcodebuild -workspace speculid.xcworkspace -scheme "SpecCarioInterop-Flags" -derivedDataPath ./build  build -configuration "Release"
   - xcodebuild -workspace speculid.xcworkspace -scheme "Speculid Application" -derivedDataPath ./build  build -configuration "Release"
   #- diff examples/shasum <(./shasum.sh)
   #- xcodebuild -workspace speculid.xcworkspace -scheme Speculid test
