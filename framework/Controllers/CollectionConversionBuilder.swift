@@ -8,11 +8,11 @@
 
 import Foundation
 
+@available(*, deprecated: 2.0.0)
 public struct CollectionConversionBuilder : ImageConversionSetBuilderProtocol {
 
 public func buildConversions(forDocument document: SpeculidDocumentProtocol, withConfiguration configuration: SpeculidConfigurationProtocol) -> ImageConversionSetProtocol? {
-    var errors = [Error]()
-    
+  
     let taskDictionary = document.images.reduce(ImageConversionDictionary()) { (dictionary, image) -> ImageConversionDictionary in
       let conversion = ImageConversionBuilder.sharedInstance.conversion(forImage: image, withSpecifications: document.specifications, andConfiguration: configuration)
       var dictionary = dictionary
@@ -33,18 +33,3 @@ public func buildConversions(forDocument document: SpeculidDocumentProtocol, wit
     
   }
 }
-//
-//
-//public extension SpeculidBuilderProtocol {
-//  func build(document : SpeculidDocumentProtocol) -> Error? {
-//    var result: Error?
-//    let semaphone = DispatchSemaphore(value: 0)
-//    self.build(document: document) { (error) in
-//      result = error
-//      semaphone.signal()
-//    }
-//    semaphone.wait()
-//    return result
-//  }
-//}
-

@@ -39,6 +39,16 @@
                ReferencedContainer = "container:speculid.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B319630F1F7FD36B006B0172"
+               BuildableName = "SpeculidCairoTests.xctest"
+               BlueprintName = "SpeculidCairoTests"
+               ReferencedContainer = "container:speculid.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
