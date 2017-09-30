@@ -59,6 +59,7 @@
 		B343887B1DB035C3003CB3BC /* SpeculidApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B343887A1DB035C3003CB3BC /* SpeculidApplication.swift */; };
 		B34507841D9E9FD900C80225 /* VCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34507831D9E9FD900C80225 /* VCS.swift */; };
 		B346F7071DB7A35000CA74C0 /* ApplicationPathDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B346F7061DB7A35000CA74C0 /* ApplicationPathDataSourceTest.swift */; };
+		B351B8161F7FB0BB00D02F78 /* CollectionConversionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38751C81F7FADAB00032196 /* CollectionConversionBuilder.swift */; };
 		B362A4241D9BFCCB00FF74FC /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362A4231D9BFCCB00FF74FC /* Geometry.swift */; };
 		B362A4261D9C0B4000FF74FC /* ScaledGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362A4251D9C0B4000FF74FC /* ScaledGeometry.swift */; };
 		B362A4281D9C0B4C00FF74FC /* GeometryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362A4271D9C0B4C00FF74FC /* GeometryProtocol.swift */; };
@@ -76,6 +77,9 @@
 		B380860A1D9AA7B2000BC05A /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
 		B380860B1D9AA7B2000BC05A /* Speculid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B385F34A1F7DB7D200AC6B85 /* versions.plist in Resources */ = {isa = PBXBuildFile; fileRef = B385F3491F7DB7D200AC6B85 /* versions.plist */; };
+		B38751C31F7FAB7700032196 /* ImageConversionSetBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38751C21F7FAB7700032196 /* ImageConversionSetBuilderProtocol.swift */; };
+		B38751C51F7FAB9400032196 /* ImageConversionSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38751C41F7FAB9400032196 /* ImageConversionSetProtocol.swift */; };
+		B38751C71F7FAC2C00032196 /* ImageConversionSetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38751C61F7FAC2C00032196 /* ImageConversionSetBuilder.swift */; };
 		B3880DE41E0AB5180093117D /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3880DE31E0AB5180093117D /* NSColor.swift */; };
 		B38F734D1DA2A928008469FE /* Speculid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F734C1DA2A928008469FE /* Speculid.swift */; };
 		B3951DA11DA4319B00A6FCF2 /* ProcessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3951DA01DA4319B00A6FCF2 /* ProcessProtocol.swift */; };
@@ -207,6 +211,10 @@
 		B38086041D9AA76E000BC05A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B38086081D9AA78E000BC05A /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = ../application/main.swift; sourceTree = "<group>"; };
 		B385F3491F7DB7D200AC6B85 /* versions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = versions.plist; sourceTree = "<group>"; };
+		B38751C21F7FAB7700032196 /* ImageConversionSetBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConversionSetBuilderProtocol.swift; sourceTree = "<group>"; };
+		B38751C41F7FAB9400032196 /* ImageConversionSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConversionSetProtocol.swift; sourceTree = "<group>"; };
+		B38751C61F7FAC2C00032196 /* ImageConversionSetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConversionSetBuilder.swift; sourceTree = "<group>"; };
+		B38751C81F7FADAB00032196 /* CollectionConversionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionConversionBuilder.swift; sourceTree = "<group>"; };
 		B3880DE31E0AB5180093117D /* NSColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
 		B38F734C1DA2A928008469FE /* Speculid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speculid.swift; sourceTree = "<group>"; };
 		B3951DA01DA4319B00A6FCF2 /* ProcessProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessProtocol.swift; sourceTree = "<group>"; };
@@ -315,7 +323,6 @@
 			children = (
 				B3D7382C1F7D6B19004EC261 /* Obsolete */,
 				B33D98201DB5A26800CB21C3 /* Analytics */,
-				B3DC29A51D9AACFA00646E86 /* Builders */,
 				B38F73491DA2A6B9008469FE /* Controllers */,
 				B3DC29A61D9AAD0300646E86 /* Errors */,
 				B362A4221D9BF8BC00FF74FC /* Extensions */,
@@ -386,7 +393,9 @@
 				B32AD7C51D982E8D00B871CE /* ProcessImageConversionTask.swift */,
 				B32AD7C71D982E9F00B871CE /* ImageConversionBuilder.swift */,
 				B3EDA6611D98A13F00F4E77F /* SpeculidBuilder.swift */,
+				B38751C61F7FAC2C00032196 /* ImageConversionSetBuilder.swift */,
 				B343887A1DB035C3003CB3BC /* SpeculidApplication.swift */,
+				B38751C81F7FADAB00032196 /* CollectionConversionBuilder.swift */,
 				B33D98231DB5A74A00CB21C3 /* AnalyticsTracker.swift */,
 				B33D982B1DB5B17300CB21C3 /* AnalyticsSessionManager.swift */,
 				B3EE812E1DB6626900F0D9A7 /* ClientIdentifier.swift */,
@@ -414,6 +423,8 @@
 				B33D98271DB5AED400CB21C3 /* AnalyticsSessionManagerProtocol.swift */,
 				B3EE812C1DB6624A00F0D9A7 /* ClientIdentifierDelegate.swift */,
 				B36AD1BB1DB6C1E100D33AD7 /* AnalyticsEventProtocol.swift */,
+				B38751C21F7FAB7700032196 /* ImageConversionSetBuilderProtocol.swift */,
+				B38751C41F7FAB9400032196 /* ImageConversionSetProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -458,13 +469,6 @@
 				B34201D71D99A62D004C49D6 /* RasterConversionBuilder.swift */,
 			);
 			path = Obsolete;
-			sourceTree = "<group>";
-		};
-		B3DC29A51D9AACFA00646E86 /* Builders */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Builders;
 			sourceTree = "<group>";
 		};
 		B3DC29A61D9AAD0300646E86 /* Errors */ = {
@@ -614,7 +618,8 @@
 					};
 					B31E04CE1F7D39F10087889E = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = MLT7M394S7;
+						ProvisioningStyle = Automatic;
 					};
 					B38085F81D9AA76E000BC05A = {
 						CreatedOnToolsVersion = 8.0;
@@ -835,6 +840,7 @@
 			files = (
 				B343887B1DB035C3003CB3BC /* SpeculidApplication.swift in Sources */,
 				B32AD7CC1D98307200B871CE /* ImageConversionTaskProtocol.swift in Sources */,
+				B38751C31F7FAB7700032196 /* ImageConversionSetBuilderProtocol.swift in Sources */,
 				B36AD1BC1DB6C1E100D33AD7 /* AnalyticsEventProtocol.swift in Sources */,
 				B38F734D1DA2A928008469FE /* Speculid.swift in Sources */,
 				B34201CC1D99A3BD004C49D6 /* SpeculidSpecificationsProtocol.swift in Sources */,
@@ -849,6 +855,7 @@
 				B36AD1B81DB6C19D00D33AD7 /* AnalyticsParameterKey.swift in Sources */,
 				B3B747001D9751080044809F /* ImageSpecification.swift in Sources */,
 				B30005C31DB52F84000A8166 /* DefaultApplicationPathDataSource.swift in Sources */,
+				B38751C51F7FAB9400032196 /* ImageConversionSetProtocol.swift in Sources */,
 				B36AD1BE1DB6C20900D33AD7 /* GeometryValue.swift in Sources */,
 				B32AD7CA1D982F7F00B871CE /* ImageConversionBuilderProtocol.swift in Sources */,
 				B3314EFB1F7D7A2F0084AB6D /* String.swift in Sources */,
@@ -873,12 +880,14 @@
 				B32AD7C81D982E9F00B871CE /* ImageConversionBuilder.swift in Sources */,
 				B34388771DB0061C003CB3BC /* SpeculidApplicationProtocol.swift in Sources */,
 				B33D98261DB5AEBE00CB21C3 /* AnalyticsConfigurationProtocol.swift in Sources */,
+				B38751C71F7FAC2C00032196 /* ImageConversionSetBuilder.swift in Sources */,
 				B34507841D9E9FD900C80225 /* VCS.swift in Sources */,
 				B3EDA6621D98A13F00F4E77F /* SpeculidBuilder.swift in Sources */,
 				B3EDA6601D985ACA00F4E77F /* SpeculidConfigurationProtocol.swift in Sources */,
 				B362A4261D9C0B4000FF74FC /* ScaledGeometry.swift in Sources */,
 				B33D98241DB5A74A00CB21C3 /* AnalyticsTracker.swift in Sources */,
 				B30005C01DB518B2000A8166 /* ApplicationPathDataSource.swift in Sources */,
+				B351B8161F7FB0BB00D02F78 /* CollectionConversionBuilder.swift in Sources */,
 				B36AD1C41DB6C3C100D33AD7 /* ApplicationPath.swift in Sources */,
 				B3EE812D1DB6624A00F0D9A7 /* ClientIdentifierDelegate.swift in Sources */,
 				B33D982C1DB5B17300CB21C3 /* AnalyticsSessionManager.swift in Sources */,
@@ -1258,10 +1267,10 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MLT7M394S7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
@@ -1304,10 +1313,10 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MLT7M394S7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = NO;
