@@ -31,11 +31,28 @@
 		B310EE471D94BF6D00C4A30E /* Speculid.h in Headers */ = {isa = PBXBuildFile; fileRef = B310EE391D94BF6D00C4A30E /* Speculid.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B31962F51F7FBAD9006B0172 /* CollectionConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31962F41F7FBAD9006B0172 /* CollectionConversion.swift */; };
 		B31962F71F7FBEBE006B0172 /* UnknownConversionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31962F61F7FBEBE006B0172 /* UnknownConversionError.swift */; };
-		B31E04D21F7D39F10087889E /* SpecCarioInterop.h in Headers */ = {isa = PBXBuildFile; fileRef = B31E04D11F7D39F10087889E /* SpecCarioInterop.h */; };
-		B31E04D41F7D39F10087889E /* SpecCarioInterop.m in Sources */ = {isa = PBXBuildFile; fileRef = B31E04D31F7D39F10087889E /* SpecCarioInterop.m */; };
-		B31E04DA1F7D3A130087889E /* RSVG.h in Headers */ = {isa = PBXBuildFile; fileRef = B31E04D81F7D3A130087889E /* RSVG.h */; };
-		B31E04DB1F7D3A130087889E /* RSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = B31E04D91F7D3A130087889E /* RSVG.m */; };
-		B31E04DE1F7D3C540087889E /* libSpecCarioInterop.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31E04CF1F7D39F10087889E /* libSpecCarioInterop.dylib */; };
+		B31962F91F7FBFFE006B0172 /* CairoConversionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31962F81F7FBFFE006B0172 /* CairoConversionSet.swift */; };
+		B31962FB1F7FC042006B0172 /* CairoConversionSetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31962FA1F7FC042006B0172 /* CairoConversionSetBuilder.swift */; };
+		B31963111F7FD36B006B0172 /* SpeculidCairo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31963081F7FD36B006B0172 /* SpeculidCairo.framework */; };
+		B31963181F7FD36B006B0172 /* SpeculidCairoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B31963171F7FD36B006B0172 /* SpeculidCairoTests.m */; };
+		B319631A1F7FD36B006B0172 /* SpeculidCairo.h in Headers */ = {isa = PBXBuildFile; fileRef = B319630A1F7FD36B006B0172 /* SpeculidCairo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B319631D1F7FD36B006B0172 /* SpeculidCairo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31963081F7FD36B006B0172 /* SpeculidCairo.framework */; };
+		B319631E1F7FD36B006B0172 /* SpeculidCairo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B31963081F7FD36B006B0172 /* SpeculidCairo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B31963251F7FD3A8006B0172 /* SpeculidCairo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31963081F7FD36B006B0172 /* SpeculidCairo.framework */; };
+		B31963261F7FD3B4006B0172 /* ImageHandleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B31962FF1F7FC565006B0172 /* ImageHandleBuilder.m */; };
+		B31963271F7FD3BA006B0172 /* RSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = B31E04D91F7D3A130087889E /* RSVG.m */; };
+		B31963291F7FEA83006B0172 /* SurfaceHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B31963281F7FEA83006B0172 /* SurfaceHandle.h */; };
+		B319632E1F7FEDA1006B0172 /* SVGImageHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B319632C1F7FEDA1006B0172 /* SVGImageHandle.h */; };
+		B319632F1F7FEDA1006B0172 /* SVGImageHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = B319632D1F7FEDA1006B0172 /* SVGImageHandle.m */; };
+		B31963321F7FEDB0006B0172 /* PNGImageHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B31963301F7FEDB0006B0172 /* PNGImageHandle.h */; };
+		B31963331F7FEDB0006B0172 /* PNGImageHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = B31963311F7FEDB0006B0172 /* PNGImageHandle.m */; };
+		B31963361F7FEDC2006B0172 /* PNGSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = B31963341F7FEDC2006B0172 /* PNGSurface.h */; };
+		B31963371F7FEDC2006B0172 /* PNGSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = B31963351F7FEDC2006B0172 /* PNGSurface.m */; };
+		B319633A1F7FEE28006B0172 /* PDFSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = B31963381F7FEE28006B0172 /* PDFSurface.h */; };
+		B319633B1F7FEE28006B0172 /* PDFSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = B31963391F7FEE28006B0172 /* PDFSurface.m */; };
+		B319633E1F7FEE70006B0172 /* Conversion.h in Headers */ = {isa = PBXBuildFile; fileRef = B319633C1F7FEE70006B0172 /* Conversion.h */; };
+		B319633F1F7FEE70006B0172 /* Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = B319633D1F7FEE70006B0172 /* Conversion.m */; };
+		B31963411F7FEEC0006B0172 /* ImageSpecification.h in Headers */ = {isa = PBXBuildFile; fileRef = B31963401F7FEEC0006B0172 /* ImageSpecification.h */; };
 		B32AD7C41D98112100B871CE /* SpeculidSpecifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7C31D98112100B871CE /* SpeculidSpecifications.swift */; };
 		B32AD7C61D982E8D00B871CE /* ProcessImageConversionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7C51D982E8D00B871CE /* ProcessImageConversionTask.swift */; };
 		B32AD7C81D982E9F00B871CE /* ImageConversionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7C71D982E9F00B871CE /* ImageConversionBuilder.swift */; };
@@ -107,6 +124,27 @@
 			remoteGlobalIDString = B310EE351D94BF6D00C4A30E;
 			remoteInfo = Speculid;
 		};
+		B31963121F7FD36B006B0172 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B310EE2B1D94BF5000C4A30E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B31963071F7FD36B006B0172;
+			remoteInfo = SpeculidCairo;
+		};
+		B31963141F7FD36B006B0172 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B310EE2B1D94BF5000C4A30E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38085F81D9AA76E000BC05A;
+			remoteInfo = "Speculid-App";
+		};
+		B319631B1F7FD36B006B0172 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B310EE2B1D94BF5000C4A30E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B31963071F7FD36B006B0172;
+			remoteInfo = SpeculidCairo;
+		};
 		B380860C1D9AA7B2000BC05A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B310EE2B1D94BF5000C4A30E /* Project object */;
@@ -121,13 +159,6 @@
 			remoteGlobalIDString = B38085F81D9AA76E000BC05A;
 			remoteInfo = "Speculid-App";
 		};
-		B3F925401F7E79BC00FFD4B8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B310EE2B1D94BF5000C4A30E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B3F9253B1F7E793A00FFD4B8;
-			remoteInfo = "SpecCarioInterop-Flags";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -137,6 +168,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B319631E1F7FD36B006B0172 /* SpeculidCairo.framework in Embed Frameworks */,
 				B380860B1D9AA7B2000BC05A /* Speculid.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -164,9 +196,30 @@
 		B310EE461D94BF6D00C4A30E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B31962F41F7FBAD9006B0172 /* CollectionConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionConversion.swift; sourceTree = "<group>"; };
 		B31962F61F7FBEBE006B0172 /* UnknownConversionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownConversionError.swift; sourceTree = "<group>"; };
-		B31E04CF1F7D39F10087889E /* libSpecCarioInterop.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSpecCarioInterop.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		B31E04D11F7D39F10087889E /* SpecCarioInterop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecCarioInterop.h; sourceTree = "<group>"; };
-		B31E04D31F7D39F10087889E /* SpecCarioInterop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecCarioInterop.m; sourceTree = "<group>"; };
+		B31962F81F7FBFFE006B0172 /* CairoConversionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CairoConversionSet.swift; sourceTree = "<group>"; };
+		B31962FA1F7FC042006B0172 /* CairoConversionSetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CairoConversionSetBuilder.swift; sourceTree = "<group>"; };
+		B31962FC1F7FC53C006B0172 /* ImageHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageHandle.h; sourceTree = "<group>"; };
+		B31962FE1F7FC565006B0172 /* ImageHandleBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageHandleBuilder.h; sourceTree = "<group>"; };
+		B31962FF1F7FC565006B0172 /* ImageHandleBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageHandleBuilder.m; sourceTree = "<group>"; };
+		B31963081F7FD36B006B0172 /* SpeculidCairo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpeculidCairo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B319630A1F7FD36B006B0172 /* SpeculidCairo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeculidCairo.h; sourceTree = "<group>"; };
+		B319630B1F7FD36B006B0172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B31963101F7FD36B006B0172 /* SpeculidCairoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeculidCairoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31963171F7FD36B006B0172 /* SpeculidCairoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeculidCairoTests.m; sourceTree = "<group>"; };
+		B31963191F7FD36B006B0172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B31963281F7FEA83006B0172 /* SurfaceHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurfaceHandle.h; sourceTree = "<group>"; };
+		B319632A1F7FEC0B006B0172 /* _Conversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _Conversion.h; sourceTree = "<group>"; };
+		B319632C1F7FEDA1006B0172 /* SVGImageHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVGImageHandle.h; sourceTree = "<group>"; };
+		B319632D1F7FEDA1006B0172 /* SVGImageHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVGImageHandle.m; sourceTree = "<group>"; };
+		B31963301F7FEDB0006B0172 /* PNGImageHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNGImageHandle.h; sourceTree = "<group>"; };
+		B31963311F7FEDB0006B0172 /* PNGImageHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNGImageHandle.m; sourceTree = "<group>"; };
+		B31963341F7FEDC2006B0172 /* PNGSurface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNGSurface.h; sourceTree = "<group>"; };
+		B31963351F7FEDC2006B0172 /* PNGSurface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNGSurface.m; sourceTree = "<group>"; };
+		B31963381F7FEE28006B0172 /* PDFSurface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFSurface.h; sourceTree = "<group>"; };
+		B31963391F7FEE28006B0172 /* PDFSurface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFSurface.m; sourceTree = "<group>"; };
+		B319633C1F7FEE70006B0172 /* Conversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Conversion.h; sourceTree = "<group>"; };
+		B319633D1F7FEE70006B0172 /* Conversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Conversion.m; sourceTree = "<group>"; };
+		B31963401F7FEEC0006B0172 /* ImageSpecification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageSpecification.h; sourceTree = "<group>"; };
 		B31E04D81F7D3A130087889E /* RSVG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSVG.h; sourceTree = "<group>"; };
 		B31E04D91F7D3A130087889E /* RSVG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSVG.m; sourceTree = "<group>"; };
 		B31E04DD1F7D3B3F0087889E /* SpecCarioInterop.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SpecCarioInterop.xcconfig; sourceTree = "<group>"; };
@@ -241,7 +294,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31E04DE1F7D3C540087889E /* libSpecCarioInterop.dylib in Frameworks */,
+				B31963251F7FD3A8006B0172 /* SpeculidCairo.framework in Frameworks */,
 				3A1ABCFA753C493935FD8F95 /* Pods_Speculid_App_Speculid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,10 +308,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B31E04CC1F7D39F10087889E /* Frameworks */ = {
+		B31963041F7FD36B006B0172 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B319630D1F7FD36B006B0172 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B31963111F7FD36B006B0172 /* SpeculidCairo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B380860A1D9AA7B2000BC05A /* Speculid.framework in Frameworks */,
+				B319631D1F7FD36B006B0172 /* SpeculidCairo.framework in Frameworks */,
 				FA2CD792E10A6102D66AEB00 /* Pods_Speculid_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +366,8 @@
 				B310EE381D94BF6D00C4A30E /* framework */,
 				B310EE431D94BF6D00C4A30E /* tests */,
 				B38085FA1D9AA76E000BC05A /* application */,
-				B31E04D01F7D39F10087889E /* SpecCarioInterop */,
+				B31963091F7FD36B006B0172 /* SpeculidCairo */,
+				B31963161F7FD36B006B0172 /* SpeculidCairoTests */,
 				B310EE371D94BF6D00C4A30E /* Products */,
 				2B9D3D68E4619D5AB016A80F /* Pods */,
 				F3EDEE6E94F5A50D64872E46 /* Frameworks */,
@@ -317,7 +380,8 @@
 				B310EE361D94BF6D00C4A30E /* Speculid.framework */,
 				B310EE3F1D94BF6D00C4A30E /* SpeculidTests.xctest */,
 				B38085F91D9AA76E000BC05A /* Speculid.app */,
-				B31E04CF1F7D39F10087889E /* libSpecCarioInterop.dylib */,
+				B31963081F7FD36B006B0172 /* SpeculidCairo.framework */,
+				B31963101F7FD36B006B0172 /* SpeculidCairoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -349,15 +413,40 @@
 			path = tests;
 			sourceTree = "<group>";
 		};
-		B31E04D01F7D39F10087889E /* SpecCarioInterop */ = {
+		B31963091F7FD36B006B0172 /* SpeculidCairo */ = {
 			isa = PBXGroup;
 			children = (
 				B31E04D81F7D3A130087889E /* RSVG.h */,
 				B31E04D91F7D3A130087889E /* RSVG.m */,
-				B31E04D11F7D39F10087889E /* SpecCarioInterop.h */,
-				B31E04D31F7D39F10087889E /* SpecCarioInterop.m */,
+				B31962FC1F7FC53C006B0172 /* ImageHandle.h */,
+				B31962FE1F7FC565006B0172 /* ImageHandleBuilder.h */,
+				B31962FF1F7FC565006B0172 /* ImageHandleBuilder.m */,
+				B319630A1F7FD36B006B0172 /* SpeculidCairo.h */,
+				B319630B1F7FD36B006B0172 /* Info.plist */,
+				B31963281F7FEA83006B0172 /* SurfaceHandle.h */,
+				B319632A1F7FEC0B006B0172 /* _Conversion.h */,
+				B319632C1F7FEDA1006B0172 /* SVGImageHandle.h */,
+				B319632D1F7FEDA1006B0172 /* SVGImageHandle.m */,
+				B31963301F7FEDB0006B0172 /* PNGImageHandle.h */,
+				B31963311F7FEDB0006B0172 /* PNGImageHandle.m */,
+				B31963341F7FEDC2006B0172 /* PNGSurface.h */,
+				B31963351F7FEDC2006B0172 /* PNGSurface.m */,
+				B31963381F7FEE28006B0172 /* PDFSurface.h */,
+				B31963391F7FEE28006B0172 /* PDFSurface.m */,
+				B319633C1F7FEE70006B0172 /* Conversion.h */,
+				B319633D1F7FEE70006B0172 /* Conversion.m */,
+				B31963401F7FEEC0006B0172 /* ImageSpecification.h */,
 			);
-			path = SpecCarioInterop;
+			path = SpeculidCairo;
+			sourceTree = "<group>";
+		};
+		B31963161F7FD36B006B0172 /* SpeculidCairoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B31963171F7FD36B006B0172 /* SpeculidCairoTests.m */,
+				B31963191F7FD36B006B0172 /* Info.plist */,
+			);
+			path = SpeculidCairoTests;
 			sourceTree = "<group>";
 		};
 		B33D98201DB5A26800CB21C3 /* Analytics */ = {
@@ -392,18 +481,20 @@
 		B38F73491DA2A6B9008469FE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B30005C11DB52F6E000A8166 /* ApplicationPathDataSources */,
-				B38F734C1DA2A928008469FE /* Speculid.swift */,
-				B31962F41F7FBAD9006B0172 /* CollectionConversion.swift */,
-				B32AD7C51D982E8D00B871CE /* ProcessImageConversionTask.swift */,
-				B32AD7C71D982E9F00B871CE /* ImageConversionBuilder.swift */,
-				B3EDA6611D98A13F00F4E77F /* SpeculidBuilder.swift */,
-				B38751C61F7FAC2C00032196 /* ImageConversionSetBuilder.swift */,
-				B343887A1DB035C3003CB3BC /* SpeculidApplication.swift */,
-				B38751C81F7FADAB00032196 /* CollectionConversionBuilder.swift */,
-				B33D98231DB5A74A00CB21C3 /* AnalyticsTracker.swift */,
 				B33D982B1DB5B17300CB21C3 /* AnalyticsSessionManager.swift */,
+				B33D98231DB5A74A00CB21C3 /* AnalyticsTracker.swift */,
+				B31962F81F7FBFFE006B0172 /* CairoConversionSet.swift */,
 				B3EE812E1DB6626900F0D9A7 /* ClientIdentifier.swift */,
+				B31962F41F7FBAD9006B0172 /* CollectionConversion.swift */,
+				B38751C81F7FADAB00032196 /* CollectionConversionBuilder.swift */,
+				B32AD7C71D982E9F00B871CE /* ImageConversionBuilder.swift */,
+				B38751C61F7FAC2C00032196 /* ImageConversionSetBuilder.swift */,
+				B32AD7C51D982E8D00B871CE /* ProcessImageConversionTask.swift */,
+				B38F734C1DA2A928008469FE /* Speculid.swift */,
+				B343887A1DB035C3003CB3BC /* SpeculidApplication.swift */,
+				B3EDA6611D98A13F00F4E77F /* SpeculidBuilder.swift */,
+				B30005C11DB52F6E000A8166 /* ApplicationPathDataSources */,
+				B31962FA1F7FC042006B0172 /* CairoConversionSetBuilder.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -508,12 +599,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B31E04CD1F7D39F10087889E /* Headers */ = {
+		B31963051F7FD36B006B0172 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31E04DA1F7D3A130087889E /* RSVG.h in Headers */,
-				B31E04D21F7D39F10087889E /* SpecCarioInterop.h in Headers */,
+				B31963361F7FEDC2006B0172 /* PNGSurface.h in Headers */,
+				B319633E1F7FEE70006B0172 /* Conversion.h in Headers */,
+				B31963291F7FEA83006B0172 /* SurfaceHandle.h in Headers */,
+				B319632E1F7FEDA1006B0172 /* SVGImageHandle.h in Headers */,
+				B31963321F7FEDB0006B0172 /* PNGImageHandle.h in Headers */,
+				B319633A1F7FEE28006B0172 /* PDFSurface.h in Headers */,
+				B31963411F7FEEC0006B0172 /* ImageSpecification.h in Headers */,
+				B319631A1F7FD36B006B0172 /* SpeculidCairo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,23 +660,42 @@
 			productReference = B310EE3F1D94BF6D00C4A30E /* SpeculidTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B31E04CE1F7D39F10087889E /* SpecCarioInterop */ = {
+		B31963071F7FD36B006B0172 /* SpeculidCairo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B31E04D71F7D39F10087889E /* Build configuration list for PBXNativeTarget "SpecCarioInterop" */;
+			buildConfigurationList = B319631F1F7FD36B006B0172 /* Build configuration list for PBXNativeTarget "SpeculidCairo" */;
 			buildPhases = (
-				B31E04CB1F7D39F10087889E /* Sources */,
-				B31E04CC1F7D39F10087889E /* Frameworks */,
-				B31E04CD1F7D39F10087889E /* Headers */,
+				B31963031F7FD36B006B0172 /* Sources */,
+				B31963041F7FD36B006B0172 /* Frameworks */,
+				B31963051F7FD36B006B0172 /* Headers */,
+				B31963061F7FD36B006B0172 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B3F925411F7E79BC00FFD4B8 /* PBXTargetDependency */,
 			);
-			name = SpecCarioInterop;
-			productName = SpecCarioInterop;
-			productReference = B31E04CF1F7D39F10087889E /* libSpecCarioInterop.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
+			name = SpeculidCairo;
+			productName = SpeculidCairo;
+			productReference = B31963081F7FD36B006B0172 /* SpeculidCairo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B319630F1F7FD36B006B0172 /* SpeculidCairoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B31963221F7FD36B006B0172 /* Build configuration list for PBXNativeTarget "SpeculidCairoTests" */;
+			buildPhases = (
+				B319630C1F7FD36B006B0172 /* Sources */,
+				B319630D1F7FD36B006B0172 /* Frameworks */,
+				B319630E1F7FD36B006B0172 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B31963131F7FD36B006B0172 /* PBXTargetDependency */,
+				B31963151F7FD36B006B0172 /* PBXTargetDependency */,
+			);
+			name = SpeculidCairoTests;
+			productName = SpeculidCairoTests;
+			productReference = B31963101F7FD36B006B0172 /* SpeculidCairoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		B38085F81D9AA76E000BC05A /* Speculid-App */ = {
 			isa = PBXNativeTarget;
@@ -597,6 +713,7 @@
 			);
 			dependencies = (
 				B380860D1D9AA7B2000BC05A /* PBXTargetDependency */,
+				B319631C1F7FD36B006B0172 /* PBXTargetDependency */,
 			);
 			name = "Speculid-App";
 			productName = "Speculid-App";
@@ -622,10 +739,15 @@
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
 					};
-					B31E04CE1F7D39F10087889E = {
+					B31963071F7FD36B006B0172 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					B319630F1F7FD36B006B0172 = {
 						CreatedOnToolsVersion = 9.0;
 						DevelopmentTeam = MLT7M394S7;
 						ProvisioningStyle = Automatic;
+						TestTargetID = B38085F81D9AA76E000BC05A;
 					};
 					B38085F81D9AA76E000BC05A = {
 						CreatedOnToolsVersion = 8.0;
@@ -655,8 +777,9 @@
 				B310EE351D94BF6D00C4A30E /* Speculid */,
 				B310EE3E1D94BF6D00C4A30E /* SpeculidTests */,
 				B38085F81D9AA76E000BC05A /* Speculid-App */,
-				B31E04CE1F7D39F10087889E /* SpecCarioInterop */,
 				B3F9253B1F7E793A00FFD4B8 /* SpecCarioInterop-Flags */,
+				B31963071F7FD36B006B0172 /* SpeculidCairo */,
+				B319630F1F7FD36B006B0172 /* SpeculidCairoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -671,6 +794,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B310EE3D1D94BF6D00C4A30E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B31963061F7FD36B006B0172 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B319630E1F7FD36B006B0172 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -891,7 +1028,9 @@
 				B33D98221DB5A28200CB21C3 /* AnalyticsTrackerProtocol.swift in Sources */,
 				B362A4241D9BFCCB00FF74FC /* Geometry.swift in Sources */,
 				B34201CA1D99A379004C49D6 /* SpeculidDocumentProtocol.swift in Sources */,
+				B31962FB1F7FC042006B0172 /* CairoConversionSetBuilder.swift in Sources */,
 				B33D982A1DB5B0A700CB21C3 /* AnalyticsConfiguration.swift in Sources */,
+				B31962F91F7FBFFE006B0172 /* CairoConversionSet.swift in Sources */,
 				B3DC29A81D9AAE1D00646E86 /* MissingRequiredInstallationError.swift in Sources */,
 				B3EE812F1DB6626900F0D9A7 /* ClientIdentifier.swift in Sources */,
 				B3951DA11DA4319B00A6FCF2 /* ProcessProtocol.swift in Sources */,
@@ -934,12 +1073,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B31E04CB1F7D39F10087889E /* Sources */ = {
+		B31963031F7FD36B006B0172 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31E04D41F7D39F10087889E /* SpecCarioInterop.m in Sources */,
-				B31E04DB1F7D3A130087889E /* RSVG.m in Sources */,
+				B319632F1F7FEDA1006B0172 /* SVGImageHandle.m in Sources */,
+				B31963261F7FD3B4006B0172 /* ImageHandleBuilder.m in Sources */,
+				B31963271F7FD3BA006B0172 /* RSVG.m in Sources */,
+				B31963371F7FEDC2006B0172 /* PNGSurface.m in Sources */,
+				B319633F1F7FEE70006B0172 /* Conversion.m in Sources */,
+				B319633B1F7FEE28006B0172 /* PDFSurface.m in Sources */,
+				B31963331F7FEDB0006B0172 /* PNGImageHandle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B319630C1F7FD36B006B0172 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B31963181F7FD36B006B0172 /* SpeculidCairoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -959,6 +1111,21 @@
 			target = B310EE351D94BF6D00C4A30E /* Speculid */;
 			targetProxy = B310EE411D94BF6D00C4A30E /* PBXContainerItemProxy */;
 		};
+		B31963131F7FD36B006B0172 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B31963071F7FD36B006B0172 /* SpeculidCairo */;
+			targetProxy = B31963121F7FD36B006B0172 /* PBXContainerItemProxy */;
+		};
+		B31963151F7FD36B006B0172 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38085F81D9AA76E000BC05A /* Speculid-App */;
+			targetProxy = B31963141F7FD36B006B0172 /* PBXContainerItemProxy */;
+		};
+		B319631C1F7FD36B006B0172 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B31963071F7FD36B006B0172 /* SpeculidCairo */;
+			targetProxy = B319631B1F7FD36B006B0172 /* PBXContainerItemProxy */;
+		};
 		B380860D1D9AA7B2000BC05A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B310EE351D94BF6D00C4A30E /* Speculid */;
@@ -968,11 +1135,6 @@
 			isa = PBXTargetDependency;
 			target = B38085F81D9AA76E000BC05A /* Speculid-App */;
 			targetProxy = B38F734E1DA2AA2B008469FE /* PBXContainerItemProxy */;
-		};
-		B3F925411F7E79BC00FFD4B8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B3F9253B1F7E793A00FFD4B8 /* SpecCarioInterop-Flags */;
-			targetProxy = B3F925401F7E79BC00FFD4B8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1274,35 +1436,32 @@
 			};
 			name = Release;
 		};
-		B31E04D51F7D39F10087889E /* Debug */ = {
+		B31963201F7FD36B006B0172 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B31E04DD1F7D3B3F0087889E /* SpecCarioInterop.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = MLT7M394S7;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1312,52 +1471,138 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				INFOPLIST_FILE = SpeculidCairo/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SpeculidCairo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		B31E04D61F7D39F10087889E /* Release */ = {
+		B31963211F7FD36B006B0172 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B31E04DD1F7D3B3F0087889E /* SpecCarioInterop.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = MLT7M394S7;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
-				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				INFOPLIST_FILE = SpeculidCairo/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SpeculidCairo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B31963231F7FD36B006B0172 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = SpeculidCairoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SpeculidCairoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Speculid.app/Contents/MacOS/Speculid";
+			};
+			name = Debug;
+		};
+		B31963241F7FD36B006B0172 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = SpeculidCairoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SpeculidCairoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Speculid.app/Contents/MacOS/Speculid";
 			};
 			name = Release;
 		};
@@ -1377,6 +1622,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1418,6 +1664,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1486,11 +1733,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B31E04D71F7D39F10087889E /* Build configuration list for PBXNativeTarget "SpecCarioInterop" */ = {
+		B319631F1F7FD36B006B0172 /* Build configuration list for PBXNativeTarget "SpeculidCairo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B31E04D51F7D39F10087889E /* Debug */,
-				B31E04D61F7D39F10087889E /* Release */,
+				B31963201F7FD36B006B0172 /* Debug */,
+				B31963211F7FD36B006B0172 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B31963221F7FD36B006B0172 /* Build configuration list for PBXNativeTarget "SpeculidCairoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B31963231F7FD36B006B0172 /* Debug */,
+				B31963241F7FD36B006B0172 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

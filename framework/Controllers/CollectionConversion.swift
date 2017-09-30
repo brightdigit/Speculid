@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(*, deprecated: 2.0.0)
 public struct CollectionConversion : ImageConversionSetProtocol {
   let tasks : [ImageConversionTaskProtocol]
   
@@ -32,18 +33,3 @@ public struct CollectionConversion : ImageConversionSetProtocol {
     
   }
 }
-//
-//
-//public extension SpeculidBuilderProtocol {
-//  func build(document : SpeculidDocumentProtocol) -> Error? {
-//    var result: Error?
-//    let semaphone = DispatchSemaphore(value: 0)
-//    self.build(document: document) { (error) in
-//      result = error
-//      semaphone.signal()
-//    }
-//    semaphone.wait()
-//    return result
-//  }
-//}
-
