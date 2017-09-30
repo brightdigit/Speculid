@@ -34,49 +34,59 @@ public struct SpeculidBuilder : SpeculidBuilderProtocol {
   
   public func build (document: SpeculidDocumentProtocol, callback: @escaping ((Error?) -> Void)) {
     let start = Date()
-    var errors = [Error]()
     
-    let taskDictionary = document.images.reduce(ImageConversionDictionary()) { (dictionary, image) -> ImageConversionDictionary in
-      let conversion = ImageConversionBuilder.sharedInstance.conversion(forImage: image, withSpecifications: document.specifications, andConfiguration: self.configuration)
-      var dictionary = dictionary
-      let destinationFileName = document.specifications.destination(forImage: image)
-      dictionary[destinationFileName] = ImageConversionPair(image: image, conversion: conversion)
-      return dictionary
+    guard let conversionSet = ImageConversionSetBuilder.sharedInstance.buildConversions(forDocument: document, withConfiguration: self.configuration) else {
+      return callback(UnknownConversionError(fromDocument: document))
     }
     
-    let group = DispatchGroup()
-    
-    for entry in taskDictionary {
-      if let conversion = entry.value.conversion, case .Task(let task) = conversion {
-        group.enter()
-        task.start{error in
-          if let error = error {
-            errors.append(error)
-          }
-          group.leave()
-        }
-      }
-    }
-    
-    group.notify(queue: .global()) {
+    conversionSet.run{
+      error in
       let difference = -start.timeIntervalSinceNow
       self.tracker?.track(time: difference, withCategory: "operations", withVariable: "building", withLabel: nil)
-      callback(ArrayError.error(for: errors))
+      callback(error)
     }
+//    var errors = [Error]()
+//    
+//    let taskDictionary = document.images.reduce(ImageConversionDictionary()) { (dictionary, image) -> ImageConversionDictionary in
+//      let conversion = ImageConversionBuilder.sharedInstance.conversion(forImage: image, withSpecifications: document.specifications, andConfiguration: self.configuration)
+//      var dictionary = dictionary
+//      let destinationFileName = document.specifications.destination(forImage: image)
+//      dictionary[destinationFileName] = ImageConversionPair(image: image, conversion: conversion)
+//      return dictionary
+//    }
+//    
+//    let group = DispatchGroup()
+//    
+//    for entry in taskDictionary {
+//      if let conversion = entry.value.conversion, case .Task(let task) = conversion {
+//        group.enter()
+//        task.start{error in
+//          if let error = error {
+//            errors.append(error)
+//          }
+//          group.leave()
+//        }
+//      }
+//    }
+//    
+//    group.notify(queue: .global()) {
+//      callback(ArrayError.error(for: errors))
+//    }
     
   }
 }
 
+//
+//public extension SpeculidBuilderProtocol {
+//  func build(document : SpeculidDocumentProtocol) -> Error? {
+//    var result: Error?
+//    let semaphone = DispatchSemaphore(value: 0)
+//    self.build(document: document) { (error) in
+//      result = error
+//      semaphone.signal()
+//    }
+//    semaphone.wait()
+//    return result
+//  }
+//}
 
-public extension SpeculidBuilderProtocol {
-  func build(document : SpeculidDocumentProtocol) -> Error? {
-    var result: Error?
-    let semaphone = DispatchSemaphore(value: 0)
-    self.build(document: document) { (error) in
-      result = error
-      semaphone.signal()
-    }
-    semaphone.wait()
-    return result
-  }
-}
