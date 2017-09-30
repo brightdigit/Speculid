@@ -76,17 +76,17 @@ public struct SpeculidBuilder : SpeculidBuilderProtocol {
   }
 }
 
-//
-//public extension SpeculidBuilderProtocol {
-//  func build(document : SpeculidDocumentProtocol) -> Error? {
-//    var result: Error?
-//    let semaphone = DispatchSemaphore(value: 0)
-//    self.build(document: document) { (error) in
-//      result = error
-//      semaphone.signal()
-//    }
-//    semaphone.wait()
-//    return result
-//  }
-//}
+
+public extension SpeculidBuilderProtocol {
+  func build(document : SpeculidDocumentProtocol) -> Error? {
+    var result: Error?
+    let semaphone = DispatchSemaphore(value: 0)
+    self.build(document: document) { (error) in
+      result = error
+      semaphone.signal()
+    }
+    semaphone.wait()
+    return result
+  }
+}
 

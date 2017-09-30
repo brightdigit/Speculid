@@ -29,6 +29,8 @@
 		B310EE401D94BF6D00C4A30E /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310EE361D94BF6D00C4A30E /* Speculid.framework */; };
 		B310EE451D94BF6D00C4A30E /* SpeculidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B310EE441D94BF6D00C4A30E /* SpeculidTests.swift */; };
 		B310EE471D94BF6D00C4A30E /* Speculid.h in Headers */ = {isa = PBXBuildFile; fileRef = B310EE391D94BF6D00C4A30E /* Speculid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B31962F51F7FBAD9006B0172 /* CollectionConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31962F41F7FBAD9006B0172 /* CollectionConversion.swift */; };
+		B31962F71F7FBEBE006B0172 /* UnknownConversionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31962F61F7FBEBE006B0172 /* UnknownConversionError.swift */; };
 		B31E04D21F7D39F10087889E /* SpecCarioInterop.h in Headers */ = {isa = PBXBuildFile; fileRef = B31E04D11F7D39F10087889E /* SpecCarioInterop.h */; };
 		B31E04D41F7D39F10087889E /* SpecCarioInterop.m in Sources */ = {isa = PBXBuildFile; fileRef = B31E04D31F7D39F10087889E /* SpecCarioInterop.m */; };
 		B31E04DA1F7D3A130087889E /* RSVG.h in Headers */ = {isa = PBXBuildFile; fileRef = B31E04D81F7D3A130087889E /* RSVG.h */; };
@@ -160,6 +162,8 @@
 		B310EE3F1D94BF6D00C4A30E /* SpeculidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeculidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B310EE441D94BF6D00C4A30E /* SpeculidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidTests.swift; sourceTree = "<group>"; };
 		B310EE461D94BF6D00C4A30E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B31962F41F7FBAD9006B0172 /* CollectionConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionConversion.swift; sourceTree = "<group>"; };
+		B31962F61F7FBEBE006B0172 /* UnknownConversionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownConversionError.swift; sourceTree = "<group>"; };
 		B31E04CF1F7D39F10087889E /* libSpecCarioInterop.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSpecCarioInterop.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31E04D11F7D39F10087889E /* SpecCarioInterop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecCarioInterop.h; sourceTree = "<group>"; };
 		B31E04D31F7D39F10087889E /* SpecCarioInterop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecCarioInterop.m; sourceTree = "<group>"; };
@@ -390,6 +394,7 @@
 			children = (
 				B30005C11DB52F6E000A8166 /* ApplicationPathDataSources */,
 				B38F734C1DA2A928008469FE /* Speculid.swift */,
+				B31962F41F7FBAD9006B0172 /* CollectionConversion.swift */,
 				B32AD7C51D982E8D00B871CE /* ProcessImageConversionTask.swift */,
 				B32AD7C71D982E9F00B871CE /* ImageConversionBuilder.swift */,
 				B3EDA6611D98A13F00F4E77F /* SpeculidBuilder.swift */,
@@ -406,25 +411,25 @@
 		B38F734A1DA2A6E4008469FE /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B33D98251DB5AEBE00CB21C3 /* AnalyticsConfigurationProtocol.swift */,
+				B36AD1BB1DB6C1E100D33AD7 /* AnalyticsEventProtocol.swift */,
+				B33D98271DB5AED400CB21C3 /* AnalyticsSessionManagerProtocol.swift */,
+				B33D98211DB5A28200CB21C3 /* AnalyticsTrackerProtocol.swift */,
+				B30005BF1DB518B2000A8166 /* ApplicationPathDataSource.swift */,
+				B3EE812C1DB6624A00F0D9A7 /* ClientIdentifierDelegate.swift */,
+				B362A4271D9C0B4C00FF74FC /* GeometryProtocol.swift */,
 				B32AD7C91D982F7F00B871CE /* ImageConversionBuilderProtocol.swift */,
+				B38751C21F7FAB7700032196 /* ImageConversionSetBuilderProtocol.swift */,
+				B38751C41F7FAB9400032196 /* ImageConversionSetProtocol.swift */,
 				B32AD7CB1D98307200B871CE /* ImageConversionTaskProtocol.swift */,
 				B34201CD1D99A3F5004C49D6 /* ImageSpecificationProtocol.swift */,
+				B3951DA01DA4319B00A6FCF2 /* ProcessProtocol.swift */,
+				B34388761DB0061C003CB3BC /* SpeculidApplicationProtocol.swift */,
+				B34388781DB006BE003CB3BC /* SpeculidArgumentsProtocol.swift */,
 				B3EDA6631D98A16A00F4E77F /* SpeculidBuilderProtocol.swift */,
 				B3EDA65F1D985ACA00F4E77F /* SpeculidConfigurationProtocol.swift */,
 				B34201C91D99A379004C49D6 /* SpeculidDocumentProtocol.swift */,
 				B34201CB1D99A3BD004C49D6 /* SpeculidSpecificationsProtocol.swift */,
-				B362A4271D9C0B4C00FF74FC /* GeometryProtocol.swift */,
-				B3951DA01DA4319B00A6FCF2 /* ProcessProtocol.swift */,
-				B34388761DB0061C003CB3BC /* SpeculidApplicationProtocol.swift */,
-				B34388781DB006BE003CB3BC /* SpeculidArgumentsProtocol.swift */,
-				B30005BF1DB518B2000A8166 /* ApplicationPathDataSource.swift */,
-				B33D98211DB5A28200CB21C3 /* AnalyticsTrackerProtocol.swift */,
-				B33D98251DB5AEBE00CB21C3 /* AnalyticsConfigurationProtocol.swift */,
-				B33D98271DB5AED400CB21C3 /* AnalyticsSessionManagerProtocol.swift */,
-				B3EE812C1DB6624A00F0D9A7 /* ClientIdentifierDelegate.swift */,
-				B36AD1BB1DB6C1E100D33AD7 /* AnalyticsEventProtocol.swift */,
-				B38751C21F7FAB7700032196 /* ImageConversionSetBuilderProtocol.swift */,
-				B38751C41F7FAB9400032196 /* ImageConversionSetProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -477,6 +482,7 @@
 				B34201D11D99A5EA004C49D6 /* ProcessError.swift */,
 				B3DC29A31D9AAC4E00646E86 /* ArrayError.swift */,
 				B3DC29A71D9AAE1D00646E86 /* MissingRequiredInstallationError.swift */,
+				B31962F61F7FBEBE006B0172 /* UnknownConversionError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -705,9 +711,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RandomKit/RandomKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ShiftOperations/ShiftOperations.framework",
+				"${BUILT_PRODUCTS_DIR}/Threadly/Threadly.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftVer/SwiftVer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RandomKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ShiftOperations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Threadly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftVer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -720,13 +735,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Speculid-App-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A6C6CB2D563329968516A76B /* [CP] Embed Pods Frameworks */ = {
@@ -735,9 +753,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Speculid-App/Pods-Speculid-App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftVer/SwiftVer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftVer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -777,13 +798,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Speculid-App-Speculid-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BF7DD1E83825C1D52B868983 /* [CP] Copy Pods Resources */ = {
@@ -822,13 +846,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpeculidTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -859,6 +886,7 @@
 				B36AD1BE1DB6C20900D33AD7 /* GeometryValue.swift in Sources */,
 				B32AD7CA1D982F7F00B871CE /* ImageConversionBuilderProtocol.swift in Sources */,
 				B3314EFB1F7D7A2F0084AB6D /* String.swift in Sources */,
+				B31962F51F7FBAD9006B0172 /* CollectionConversion.swift in Sources */,
 				B33D98281DB5AED400CB21C3 /* AnalyticsSessionManagerProtocol.swift in Sources */,
 				B33D98221DB5A28200CB21C3 /* AnalyticsTrackerProtocol.swift in Sources */,
 				B362A4241D9BFCCB00FF74FC /* Geometry.swift in Sources */,
@@ -883,6 +911,7 @@
 				B38751C71F7FAC2C00032196 /* ImageConversionSetBuilder.swift in Sources */,
 				B34507841D9E9FD900C80225 /* VCS.swift in Sources */,
 				B3EDA6621D98A13F00F4E77F /* SpeculidBuilder.swift in Sources */,
+				B31962F71F7FBEBE006B0172 /* UnknownConversionError.swift in Sources */,
 				B3EDA6601D985ACA00F4E77F /* SpeculidConfigurationProtocol.swift in Sources */,
 				B362A4261D9C0B4000FF74FC /* ScaledGeometry.swift in Sources */,
 				B33D98241DB5A74A00CB21C3 /* AnalyticsTracker.swift in Sources */,

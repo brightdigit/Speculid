@@ -14,30 +14,22 @@ public func buildConversions(forDocument document: SpeculidDocumentProtocol, wit
     var errors = [Error]()
     
     let taskDictionary = document.images.reduce(ImageConversionDictionary()) { (dictionary, image) -> ImageConversionDictionary in
-      let conversion = ImageConversionBuilder.sharedInstance.conversion(forImage: image, withSpecifications: document.specifications, andConfiguration: self.configuration)
+      let conversion = ImageConversionBuilder.sharedInstance.conversion(forImage: image, withSpecifications: document.specifications, andConfiguration: configuration)
       var dictionary = dictionary
       let destinationFileName = document.specifications.destination(forImage: image)
       dictionary[destinationFileName] = ImageConversionPair(image: image, conversion: conversion)
       return dictionary
     }
-    
-    let group = DispatchGroup()
-    
-    for entry in taskDictionary {
-      if let conversion = entry.value.conversion, case .Task(let task) = conversion {
-        group.enter()
-        task.start{error in
-          if let error = error {
-            errors.append(error)
-          }
-          group.leave()
-        }
-      }
+  
+  let tasks = taskDictionary.flatMap { (pair) -> ImageConversionTaskProtocol? in
+    guard let conversion = pair.value.conversion, case .Task(let task) = conversion else {
+      return nil
     }
     
-    group.notify(queue: .global()) {
-      callback(ArrayError.error(for: errors))
-    }
+    return task
+  }
+    
+  return CollectionConversion(tasks: tasks)
     
   }
 }
