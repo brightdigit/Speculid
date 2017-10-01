@@ -9,7 +9,7 @@
 import Foundation
 
 public struct ImageConversionBuilder : ImageConversionBuilderProtocol {
-  public static let defaultBuilders : [ImageConversionBuilderProtocol] = [PDFConversionBuilder(), SVGImageConversionBuilder(), RasterConversionBuilder()]
+  public static let defaultBuilders : [ImageConversionBuilderProtocol] = []
   public static let sharedInstance:ImageConversionBuilderProtocol = ImageConversionBuilder()
   
   public let builders : [ImageConversionBuilderProtocol]

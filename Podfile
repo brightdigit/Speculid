@@ -11,12 +11,12 @@ target 'Speculid-App' do
     use_frameworks!
 
     # Pods for Speculid
-    pod 'SwiftVer', '~> 1.0'
+    pod 'SwiftVer', '~> 2.0'
 
     target 'SpeculidTests' do
       inherit! :search_paths
       # Pods for testing
-      pod 'RandomKit', :git => 'https://github.com/nvzqz/RandomKit.git', :branch => 'master'
+      pod 'RandomKit', '~> 5.2.3'
     end
 
   end

@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(*, deprecated: 2.0.0)
 extension CFRunLoopTimer {
   /**
    Creates and schedules a one-time `NSTimer` instance.
@@ -46,6 +47,7 @@ extension CFRunLoopTimer {
   }
 }
 
+@available(*, deprecated: 2.0.0)
 public struct SearchApplicationPathDataSource : ApplicationPathDataSource {
   
   public struct CError : Error {
@@ -85,7 +87,7 @@ public struct SearchApplicationPathDataSource : ApplicationPathDataSource {
   }
   
   func which (_ commands : [String], closure: @escaping (([String : URL]) -> Void)) {
-    let terminalLaunched = NSWorkspace.shared().runningApplications.index(where: isTerminal) == nil
+    let terminalLaunched = NSWorkspace.shared.runningApplications.index(where: isTerminal) == nil
     
     
     guard let resourceURL = Speculid.bundle.url(forResource: "terminal", withExtension: "scpt") else {
@@ -115,7 +117,7 @@ public struct SearchApplicationPathDataSource : ApplicationPathDataSource {
     
     Process.launchedProcess(launchPath: "/usr/bin/osascript", arguments: [resourceURL.path, arguments.joined(separator: "; ")])
     
-    let _ = CFRunLoopTimer.schedule(repeatInterval: 1.0) { (timer) in
+    _ = CFRunLoopTimer.schedule(repeatInterval: 1.0) { (timer) in
       for pair in whichParameters {
         if locations[pair.command] == nil {
           if let string = (try? String(contentsOf: pair.output))?.trimmingCharacters(
