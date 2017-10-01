@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import SpeculidCairo
 
 public struct CairoConversionSet : ImageConversionSetProtocol {
+
   public func run(_ callback: @escaping (Error?) -> Void) {
+    
     
   }
 }
