@@ -10,5 +10,5 @@
 
 @interface ImageHandleBuilder : NSObject
 + (ImageHandleBuilder*) shared;
-- (id<ImageHandle>) imageHandleFromURL:(NSURL*)url;
+- (id<ImageHandle>) imageHandleFromURL:(NSURL*)url error:(NSError**) error;
 @end

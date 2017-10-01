@@ -10,6 +10,8 @@
 #import <cairo-pdf.h>
 
 #import "RSVG.h"
+#import "ImageHandle.h"
+#import "ImageHandleBuilder.h"
 
 typedef NS_ENUM(NSUInteger, Dimension) {
   kWidth,
@@ -33,35 +35,34 @@ struct GeometryDimension {
   }
 }
 
-+ (void)exportImageAtURL:(NSURL*) sourceURL toURL:(NSURL*) destinationURL withDimensions: (struct GeometryDimension) dimensions shouldRemoveAlphaChannel: (BOOL) removeAlphaChannel setBackgroundColor: (CGColorRef) backgroundColor error: (NSError**) errorptr {
++ (void)exportImage:(id<ImageHandle>) sourceHandle toURL:(NSURL*) destinationURL withDimensions: (struct GeometryDimension) dimensions shouldRemoveAlphaChannel: (BOOL) removeAlphaChannel setBackgroundColor: (CGColorRef) backgroundColor error: (NSError**) errorptr {
 
-  RsvgHandle * rsvgHandle;
-  cairo_surface_t*  sourceSurface;
+  //RsvgHandle * rsvgHandle;
+  //cairo_surface_t*  sourceSurface;
   cairo_surface_t*  destinationSurface;
-  CGSize originalSize;
   
-  if ([sourceURL.pathExtension caseInsensitiveCompare:@"svg"] == NSOrderedSame) {
-    
-    RsvgDimensionData rsvgDimensions;
-    GError * error = nil;
-    rsvgHandle = rsvg_handle_new_from_file(sourceURL.absoluteString.UTF8String , &error);
-    rsvg_handle_get_dimensions(rsvgHandle, &rsvgDimensions);
-    originalSize = CGSizeMake(rsvgDimensions.width, rsvgDimensions.height);
-    
-  } else if ([sourceURL.pathExtension caseInsensitiveCompare:@"png"] == NSOrderedSame) {
-    sourceSurface = cairo_image_surface_create_from_png("/Users/leo/Documents/Projects/obj-librsvg/obj_librsvgTests/geometry.png");
-    originalSize = CGSizeMake(cairo_image_surface_get_width(sourceSurface), cairo_image_surface_get_height(sourceSurface));
-    
-  }
+//  if ([sourceURL.pathExtension caseInsensitiveCompare:@"svg"] == NSOrderedSame) {
+//
+//    RsvgDimensionData rsvgDimensions;
+//    GError * error = nil;
+//    rsvgHandle = rsvg_handle_new_from_file(sourceURL.absoluteString.UTF8String , &error);
+//    rsvg_handle_get_dimensions(rsvgHandle, &rsvgDimensions);
+//    originalSize = CGSizeMake(rsvgDimensions.width, rsvgDimensions.height);
+//
+//  } else if ([sourceURL.pathExtension caseInsensitiveCompare:@"png"] == NSOrderedSame) {
+//    sourceSurface = cairo_image_surface_create_from_png("/Users/leo/Documents/Projects/obj-librsvg/obj_librsvgTests/geometry.png");
+//    originalSize = CGSizeMake(cairo_image_surface_get_width(sourceSurface), cairo_image_surface_get_height(sourceSurface));
+//
+//  }
   
-  double scale = [self mapSize: originalSize toDimension: dimensions];
+  double scale = [self mapSize: sourceHandle.size toDimension: dimensions];
   cairo_format_t format = CAIRO_FORMAT_INVALID;
   
   if ([destinationURL.pathExtension caseInsensitiveCompare:@"png"] == NSOrderedSame) {
     format = removeAlphaChannel ? CAIRO_FORMAT_ARGB32 : CAIRO_FORMAT_RGB24;
-    destinationSurface = cairo_image_surface_create(format, originalSize.width * scale, originalSize.height * scale);
+    destinationSurface = cairo_image_surface_create(format, sourceHandle.size.width * scale, sourceHandle.size.height * scale);
   } else if ([destinationURL.pathExtension caseInsensitiveCompare:@"pdf"] == NSOrderedSame) {
-    destinationSurface = cairo_pdf_surface_create(destinationURL.absoluteString.UTF8String,originalSize.width * scale, originalSize.height * scale);
+    destinationSurface = cairo_pdf_surface_create(destinationURL.absoluteString.UTF8String,sourceHandle.size.width * scale, sourceHandle.size.height * scale);
   }
   
   cairo_t* cr = cairo_create(destinationSurface);
@@ -74,12 +75,13 @@ struct GeometryDimension {
     cairo_paint(cr);
   }
   
-  if (sourceSurface != nil) {
-    cairo_set_source_surface(cr, sourceSurface, 0, 0);
-    cairo_paint(cr);
-  } else if (rsvgHandle != nil) {
-    BOOL result = rsvg_handle_render_cairo(rsvgHandle, cr);
-  }
+  [sourceHandle paintTo:cr];
+//  if (sourceSurface != nil) {
+//    cairo_set_source_surface(cr, sourceSurface, 0, 0);
+//    cairo_paint(cr);
+//  } else if (rsvgHandle != nil) {
+//    BOOL result = rsvg_handle_render_cairo(rsvgHandle, cr);
+//  }
   
   if (format != CAIRO_FORMAT_INVALID) {
     cairo_status_t status = cairo_surface_write_to_png(destinationSurface, destinationURL.absoluteString.UTF8String);

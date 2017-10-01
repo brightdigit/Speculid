@@ -6,7 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <librsvg/rsvg.h>
+#import "ImageHandle.h"
 
-@interface SVGImageHandle : NSObject
-
+@interface SVGImageHandle : NSObject<ImageHandle>
+@property RsvgHandle * rsvgHandle;
 @end
