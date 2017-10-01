@@ -12,4 +12,5 @@
 + (void)createPNGFromSVG;
 + (void)createPDFFromSVG;
 + (void)createPNGFromPNG;
++ (void)exportImageAtURL:(NSURL*) sourceURL toURL:(NSURL*) destinationURL error: (NSError**) errorptr;
 @end

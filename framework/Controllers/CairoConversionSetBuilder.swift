@@ -10,7 +10,7 @@ import SpeculidCairo
 
 public struct CairoConversionSetBuilder : ImageConversionSetBuilderProtocol {
   public func buildConversions(forDocument document: SpeculidDocumentProtocol, withConfiguration configuration: SpeculidConfigurationProtocol) -> ImageConversionSetProtocol? {
-    let imageHandle = ImageHandleBuilder.shared.imageHandleFromUrl(document.specifications.sourceImageURL)
-    document.specifications.geometry
+    
+    return nil
   }
 }
