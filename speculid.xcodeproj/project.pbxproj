@@ -38,7 +38,6 @@
 		B319631A1F7FD36B006B0172 /* SpeculidCairo.h in Headers */ = {isa = PBXBuildFile; fileRef = B319630A1F7FD36B006B0172 /* SpeculidCairo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B319631D1F7FD36B006B0172 /* SpeculidCairo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31963081F7FD36B006B0172 /* SpeculidCairo.framework */; };
 		B319631E1F7FD36B006B0172 /* SpeculidCairo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B31963081F7FD36B006B0172 /* SpeculidCairo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B31963251F7FD3A8006B0172 /* SpeculidCairo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31963081F7FD36B006B0172 /* SpeculidCairo.framework */; };
 		B31963261F7FD3B4006B0172 /* ImageHandleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B31962FF1F7FC565006B0172 /* ImageHandleBuilder.m */; };
 		B31963271F7FD3BA006B0172 /* RSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = B31E04D91F7D3A130087889E /* RSVG.m */; };
 		B31963291F7FEA83006B0172 /* SurfaceHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B31963281F7FEA83006B0172 /* SurfaceHandle.h */; };
@@ -50,8 +49,6 @@
 		B31963371F7FEDC2006B0172 /* PNGSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = B31963351F7FEDC2006B0172 /* PNGSurface.m */; };
 		B319633A1F7FEE28006B0172 /* PDFSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = B31963381F7FEE28006B0172 /* PDFSurface.h */; };
 		B319633B1F7FEE28006B0172 /* PDFSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = B31963391F7FEE28006B0172 /* PDFSurface.m */; };
-		B319633E1F7FEE70006B0172 /* Conversion.h in Headers */ = {isa = PBXBuildFile; fileRef = B319633C1F7FEE70006B0172 /* Conversion.h */; };
-		B319633F1F7FEE70006B0172 /* Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = B319633D1F7FEE70006B0172 /* Conversion.m */; };
 		B31963411F7FEEC0006B0172 /* ImageSpecification.h in Headers */ = {isa = PBXBuildFile; fileRef = B31963401F7FEEC0006B0172 /* ImageSpecification.h */; };
 		B32AD7C41D98112100B871CE /* SpeculidSpecifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7C31D98112100B871CE /* SpeculidSpecifications.swift */; };
 		B32AD7C61D982E8D00B871CE /* ProcessImageConversionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AD7C51D982E8D00B871CE /* ProcessImageConversionTask.swift */; };
@@ -78,6 +75,7 @@
 		B343887B1DB035C3003CB3BC /* SpeculidApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B343887A1DB035C3003CB3BC /* SpeculidApplication.swift */; };
 		B34507841D9E9FD900C80225 /* VCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34507831D9E9FD900C80225 /* VCS.swift */; };
 		B346F7071DB7A35000CA74C0 /* ApplicationPathDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B346F7061DB7A35000CA74C0 /* ApplicationPathDataSourceTest.swift */; };
+		B34B1FAB1F812D270064815B /* ImageHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B31962FC1F7FC53C006B0172 /* ImageHandle.h */; };
 		B351B8161F7FB0BB00D02F78 /* CollectionConversionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38751C81F7FADAB00032196 /* CollectionConversionBuilder.swift */; };
 		B362A4241D9BFCCB00FF74FC /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362A4231D9BFCCB00FF74FC /* Geometry.swift */; };
 		B362A4261D9C0B4000FF74FC /* ScaledGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362A4251D9C0B4000FF74FC /* ScaledGeometry.swift */; };
@@ -113,6 +111,7 @@
 		B3EDA6641D98A16A00F4E77F /* SpeculidBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDA6631D98A16A00F4E77F /* SpeculidBuilderProtocol.swift */; };
 		B3EE812D1DB6624A00F0D9A7 /* ClientIdentifierDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EE812C1DB6624A00F0D9A7 /* ClientIdentifierDelegate.swift */; };
 		B3EE812F1DB6626900F0D9A7 /* ClientIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EE812E1DB6626900F0D9A7 /* ClientIdentifier.swift */; };
+		B3FD0B791F813933003F569E /* SpeculidCairo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31963081F7FD36B006B0172 /* SpeculidCairo.framework */; };
 		FA2CD792E10A6102D66AEB00 /* Pods_Speculid_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769F32ABB131CDEE204D90AC /* Pods_Speculid_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -217,8 +216,6 @@
 		B31963351F7FEDC2006B0172 /* PNGSurface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNGSurface.m; sourceTree = "<group>"; };
 		B31963381F7FEE28006B0172 /* PDFSurface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFSurface.h; sourceTree = "<group>"; };
 		B31963391F7FEE28006B0172 /* PDFSurface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFSurface.m; sourceTree = "<group>"; };
-		B319633C1F7FEE70006B0172 /* Conversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Conversion.h; sourceTree = "<group>"; };
-		B319633D1F7FEE70006B0172 /* Conversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Conversion.m; sourceTree = "<group>"; };
 		B31963401F7FEEC0006B0172 /* ImageSpecification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageSpecification.h; sourceTree = "<group>"; };
 		B31E04D81F7D3A130087889E /* RSVG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSVG.h; sourceTree = "<group>"; };
 		B31E04D91F7D3A130087889E /* RSVG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSVG.m; sourceTree = "<group>"; };
@@ -294,7 +291,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31963251F7FD3A8006B0172 /* SpeculidCairo.framework in Frameworks */,
+				B3FD0B791F813933003F569E /* SpeculidCairo.framework in Frameworks */,
 				3A1ABCFA753C493935FD8F95 /* Pods_Speculid_App_Speculid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,8 +430,6 @@
 				B31963351F7FEDC2006B0172 /* PNGSurface.m */,
 				B31963381F7FEE28006B0172 /* PDFSurface.h */,
 				B31963391F7FEE28006B0172 /* PDFSurface.m */,
-				B319633C1F7FEE70006B0172 /* Conversion.h */,
-				B319633D1F7FEE70006B0172 /* Conversion.m */,
 				B31963401F7FEEC0006B0172 /* ImageSpecification.h */,
 			);
 			path = SpeculidCairo;
@@ -604,8 +599,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B31963361F7FEDC2006B0172 /* PNGSurface.h in Headers */,
-				B319633E1F7FEE70006B0172 /* Conversion.h in Headers */,
 				B31963291F7FEA83006B0172 /* SurfaceHandle.h in Headers */,
+				B34B1FAB1F812D270064815B /* ImageHandle.h in Headers */,
 				B319632E1F7FEDA1006B0172 /* SVGImageHandle.h in Headers */,
 				B31963321F7FEDB0006B0172 /* PNGImageHandle.h in Headers */,
 				B319633A1F7FEE28006B0172 /* PDFSurface.h in Headers */,
@@ -1081,7 +1076,6 @@
 				B31963261F7FD3B4006B0172 /* ImageHandleBuilder.m in Sources */,
 				B31963271F7FD3BA006B0172 /* RSVG.m in Sources */,
 				B31963371F7FEDC2006B0172 /* PNGSurface.m in Sources */,
-				B319633F1F7FEE70006B0172 /* Conversion.m in Sources */,
 				B319633B1F7FEE28006B0172 /* PDFSurface.m in Sources */,
 				B31963331F7FEDB0006B0172 /* PNGImageHandle.m in Sources */,
 			);
@@ -1452,7 +1446,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1500,7 +1494,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
