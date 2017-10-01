@@ -6,6 +6,7 @@
 //
 //
 
+@available(*, deprecated: 2.0.0)
 public enum ApplicationPath : String {
   case inkscape = "inkscape",
   convert  = "convert"
