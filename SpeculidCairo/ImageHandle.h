@@ -6,7 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <cairo.h>
 
 @protocol ImageHandle <NSObject>
-
+-(CGSize) size;
+-(BOOL) paintTo:(cairo_t*) renderer;
 @end

@@ -6,7 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ImageHandle.h"
+#import <cairo.h>
 
-@interface PNGImageHandle : NSObject
-
+@interface PNGImageHandle : NSObject<ImageHandle>
+@property cairo_surface_t * cairoHandle;
 @end
