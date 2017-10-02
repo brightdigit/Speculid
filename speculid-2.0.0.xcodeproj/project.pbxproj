@@ -6,6 +6,20 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B399B8721F82D43B00B37B43 /* Speculid-Flags */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B399B8731F82D43B00B37B43 /* Build configuration list for PBXAggregateTarget "Speculid-Flags" */;
+			buildPhases = (
+				B399B8761F82D43E00B37B43 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Speculid-Flags";
+			productName = "Speculid-Flags";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		B340B8C81F71937B00E7BB47 /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B340B8BF1F71937B00E7BB47 /* Speculid.framework */; };
 		B340B8CF1F71937B00E7BB47 /* SpeculidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340B8CE1F71937B00E7BB47 /* SpeculidTests.swift */; };
@@ -13,6 +27,15 @@
 		B340B8DE1F71939E00E7BB47 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340B8DD1F71939E00E7BB47 /* Application.swift */; };
 		B3555ED11F814F9900363080 /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B340B8BF1F71937B00E7BB47 /* Speculid.framework */; };
 		B3555ED21F814F9900363080 /* Speculid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B340B8BF1F71937B00E7BB47 /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B399B8701F82D3BC00B37B43 /* ExampleClass.h in Headers */ = {isa = PBXBuildFile; fileRef = B399B86E1F82D3BC00B37B43 /* ExampleClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B399B8711F82D3BC00B37B43 /* ExampleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B399B86F1F82D3BC00B37B43 /* ExampleClass.m */; };
+		B399B8781F82D49000B37B43 /* CarioInterop.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B399B8771F82D49000B37B43 /* CarioInterop.xcconfig */; };
+		B399B88A1F82D72600B37B43 /* ImageHandleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B399B87A1F82D72400B37B43 /* ImageHandleBuilder.m */; };
+		B399B88B1F82D72600B37B43 /* PNGImageHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = B399B87B1F82D72400B37B43 /* PNGImageHandle.m */; };
+		B399B88C1F82D72600B37B43 /* PDFSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = B399B87C1F82D72400B37B43 /* PDFSurface.m */; };
+		B399B88D1F82D72600B37B43 /* RSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = B399B8821F82D72500B37B43 /* RSVG.m */; };
+		B399B88E1F82D72600B37B43 /* PNGSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = B399B8851F82D72500B37B43 /* PNGSurface.m */; };
+		B399B88F1F82D72600B37B43 /* SVGImageHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = B399B8881F82D72600B37B43 /* SVGImageHandle.m */; };
 		B3CEE65F1F71BFB8001A45DA /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CEE65E1F71BFB8001A45DA /* Application.swift */; };
 		B3CEE6651F71CE2D001A45DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CEE6611F71CE2D001A45DA /* Assets.xcassets */; };
 		B3CEE6671F71CE2D001A45DA /* svg-appicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3CEE6631F71CE2D001A45DA /* svg-appicon.speculid */; };
@@ -69,6 +92,26 @@
 		B340B8CE1F71937B00E7BB47 /* SpeculidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidTests.swift; sourceTree = "<group>"; };
 		B340B8D01F71937B00E7BB47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B340B8DD1F71939E00E7BB47 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		B399B86E1F82D3BC00B37B43 /* ExampleClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleClass.h; sourceTree = "<group>"; };
+		B399B86F1F82D3BC00B37B43 /* ExampleClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleClass.m; sourceTree = "<group>"; };
+		B399B8771F82D49000B37B43 /* CarioInterop.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CarioInterop.xcconfig; sourceTree = "<group>"; };
+		B399B8791F82D72300B37B43 /* Speculid_Mac_App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Speculid_Mac_App-Bridging-Header.h"; sourceTree = "<group>"; };
+		B399B87A1F82D72400B37B43 /* ImageHandleBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageHandleBuilder.m; path = SpeculidCairo/ImageHandleBuilder.m; sourceTree = SOURCE_ROOT; };
+		B399B87B1F82D72400B37B43 /* PNGImageHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PNGImageHandle.m; path = SpeculidCairo/PNGImageHandle.m; sourceTree = SOURCE_ROOT; };
+		B399B87C1F82D72400B37B43 /* PDFSurface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFSurface.m; path = SpeculidCairo/PDFSurface.m; sourceTree = SOURCE_ROOT; };
+		B399B87D1F82D72400B37B43 /* PNGImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PNGImageHandle.h; path = SpeculidCairo/PNGImageHandle.h; sourceTree = SOURCE_ROOT; };
+		B399B87E1F82D72400B37B43 /* RSVG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSVG.h; path = SpeculidCairo/RSVG.h; sourceTree = SOURCE_ROOT; };
+		B399B87F1F82D72400B37B43 /* SurfaceHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SurfaceHandle.h; path = SpeculidCairo/SurfaceHandle.h; sourceTree = SOURCE_ROOT; };
+		B399B8801F82D72500B37B43 /* PDFSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFSurface.h; path = SpeculidCairo/PDFSurface.h; sourceTree = SOURCE_ROOT; };
+		B399B8811F82D72500B37B43 /* SpeculidCairo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeculidCairo.h; path = SpeculidCairo/SpeculidCairo.h; sourceTree = SOURCE_ROOT; };
+		B399B8821F82D72500B37B43 /* RSVG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSVG.m; path = SpeculidCairo/RSVG.m; sourceTree = SOURCE_ROOT; };
+		B399B8831F82D72500B37B43 /* ImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageHandle.h; path = SpeculidCairo/ImageHandle.h; sourceTree = SOURCE_ROOT; };
+		B399B8841F82D72500B37B43 /* PNGSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PNGSurface.h; path = SpeculidCairo/PNGSurface.h; sourceTree = SOURCE_ROOT; };
+		B399B8851F82D72500B37B43 /* PNGSurface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PNGSurface.m; path = SpeculidCairo/PNGSurface.m; sourceTree = SOURCE_ROOT; };
+		B399B8861F82D72500B37B43 /* ImageSpecification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageSpecification.h; path = SpeculidCairo/ImageSpecification.h; sourceTree = SOURCE_ROOT; };
+		B399B8871F82D72500B37B43 /* ImageHandleBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageHandleBuilder.h; path = SpeculidCairo/ImageHandleBuilder.h; sourceTree = SOURCE_ROOT; };
+		B399B8881F82D72600B37B43 /* SVGImageHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVGImageHandle.m; path = SpeculidCairo/SVGImageHandle.m; sourceTree = SOURCE_ROOT; };
+		B399B8891F82D72600B37B43 /* SVGImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVGImageHandle.h; path = SpeculidCairo/SVGImageHandle.h; sourceTree = SOURCE_ROOT; };
 		B3CEE65E1F71BFB8001A45DA /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		B3CEE6611F71CE2D001A45DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3CEE6631F71CE2D001A45DA /* svg-appicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-appicon.speculid"; sourceTree = "<group>"; };
@@ -107,6 +150,7 @@
 		B340B8A01F71932800E7BB47 = {
 			isa = PBXGroup;
 			children = (
+				B399B8771F82D49000B37B43 /* CarioInterop.xcconfig */,
 				B340B8AD1F71936400E7BB47 /* Speculid_Mac_App */,
 				B340B8C01F71937B00E7BB47 /* Speculid */,
 				B340B8CD1F71937B00E7BB47 /* SpeculidTests */,
@@ -127,11 +171,28 @@
 		B340B8AD1F71936400E7BB47 /* Speculid_Mac_App */ = {
 			isa = PBXGroup;
 			children = (
+				B399B8831F82D72500B37B43 /* ImageHandle.h */,
+				B399B8871F82D72500B37B43 /* ImageHandleBuilder.h */,
+				B399B87A1F82D72400B37B43 /* ImageHandleBuilder.m */,
+				B399B8861F82D72500B37B43 /* ImageSpecification.h */,
+				B399B8801F82D72500B37B43 /* PDFSurface.h */,
+				B399B87C1F82D72400B37B43 /* PDFSurface.m */,
+				B399B87D1F82D72400B37B43 /* PNGImageHandle.h */,
+				B399B87B1F82D72400B37B43 /* PNGImageHandle.m */,
+				B399B8841F82D72500B37B43 /* PNGSurface.h */,
+				B399B8851F82D72500B37B43 /* PNGSurface.m */,
+				B399B87E1F82D72400B37B43 /* RSVG.h */,
+				B399B8821F82D72500B37B43 /* RSVG.m */,
+				B399B8811F82D72500B37B43 /* SpeculidCairo.h */,
+				B399B87F1F82D72400B37B43 /* SurfaceHandle.h */,
+				B399B8891F82D72600B37B43 /* SVGImageHandle.h */,
+				B399B8881F82D72600B37B43 /* SVGImageHandle.m */,
 				B3CEE6601F71CE2D001A45DA /* assets */,
 				B340B8B51F71936400E7BB47 /* Info.plist */,
 				B340B8B61F71936400E7BB47 /* Speculid_Mac_App.entitlements */,
 				B3CEE65E1F71BFB8001A45DA /* Application.swift */,
 				B3CEE66B1F71D6AC001A45DA /* main.swift */,
+				B399B8791F82D72300B37B43 /* Speculid_Mac_App-Bridging-Header.h */,
 			);
 			path = Speculid_Mac_App;
 			sourceTree = "<group>";
@@ -142,6 +203,8 @@
 				B340B8C11F71937B00E7BB47 /* Speculid.h */,
 				B340B8C21F71937B00E7BB47 /* Info.plist */,
 				B340B8DD1F71939E00E7BB47 /* Application.swift */,
+				B399B86E1F82D3BC00B37B43 /* ExampleClass.h */,
+				B399B86F1F82D3BC00B37B43 /* ExampleClass.m */,
 			);
 			path = Speculid;
 			sourceTree = "<group>";
@@ -173,6 +236,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B399B8701F82D3BC00B37B43 /* ExampleClass.h in Headers */,
 				B340B8D11F71937B00E7BB47 /* Speculid.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +312,7 @@
 				TargetAttributes = {
 					B340B8AA1F71936400E7BB47 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					B340B8BE1F71937B00E7BB47 = {
@@ -259,6 +324,10 @@
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B340B8AA1F71936400E7BB47;
+					};
+					B399B8721F82D43B00B37B43 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -278,6 +347,7 @@
 				B340B8AA1F71936400E7BB47 /* Speculid_Mac_App */,
 				B340B8BE1F71937B00E7BB47 /* Speculid */,
 				B340B8C61F71937B00E7BB47 /* SpeculidTests */,
+				B399B8721F82D43B00B37B43 /* Speculid-Flags */,
 			);
 		};
 /* End PBXProject section */
@@ -297,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B399B8781F82D49000B37B43 /* CarioInterop.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +381,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B399B8761F82D43E00B37B43 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
 		B3CEE6691F71CED1001A45DA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,7 +405,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "find \"${SRCROOT}\" -name \"*.speculid\" -print0 |\nwhile IFS= read -r -d $'\\0' line; do\nspeculid \"$line\" &\ndone\nwait";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -330,8 +414,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B399B88C1F82D72600B37B43 /* PDFSurface.m in Sources */,
+				B399B88E1F82D72600B37B43 /* PNGSurface.m in Sources */,
+				B399B88F1F82D72600B37B43 /* SVGImageHandle.m in Sources */,
 				B3CEE66C1F71D6AC001A45DA /* main.swift in Sources */,
+				B399B88A1F82D72600B37B43 /* ImageHandleBuilder.m in Sources */,
 				B3CEE65F1F71BFB8001A45DA /* Application.swift in Sources */,
+				B399B88B1F82D72600B37B43 /* PNGImageHandle.m in Sources */,
+				B399B88D1F82D72600B37B43 /* RSVG.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B340B8DE1F71939E00E7BB47 /* Application.swift in Sources */,
+				B399B8711F82D3BC00B37B43 /* ExampleClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +477,7 @@
 		};
 		B340B8B81F71936400E7BB47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B399B8771F82D49000B37B43 /* CarioInterop.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -438,6 +530,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/Cellar/librsvg/2.40.18/include/librsvg-2.0",
+					"/usr/local/Cellar/gdk-pixbuf/2.36.7/include/gdk-pixbuf-2.0",
+					/usr/local/Cellar/libpng/1.6.30/include/libpng16,
+					/usr/local/Cellar/cairo/1.14.10/include/cairo,
+					"/usr/local/Cellar/glib/2.52.3/include/glib-2.0",
+					"/usr/local/Cellar/glib/2.52.3/lib/glib-2.0/include",
+					/usr/local/opt/gettext/include,
+					/usr/local/Cellar/pcre/8.41/include,
+					"/usr/local/Cellar/pixman/0.34.0_1/include/pixman-1",
+					/usr/local/Cellar/fontconfig/2.12.4/include,
+					/usr/local/opt/freetype/include/freetype2,
+					/usr/local/Cellar/libpng/1.6.30/include/libpng16,
+				);
 				INFOPLIST_FILE = Speculid_Mac_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -448,6 +554,7 @@
 				PRODUCT_NAME = Speculid;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Speculid_Mac_App/Speculid_Mac_App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
@@ -455,6 +562,7 @@
 		};
 		B340B8B91F71936400E7BB47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B399B8771F82D49000B37B43 /* CarioInterop.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -501,6 +609,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/Cellar/librsvg/2.40.18/include/librsvg-2.0",
+					"/usr/local/Cellar/gdk-pixbuf/2.36.7/include/gdk-pixbuf-2.0",
+					/usr/local/Cellar/libpng/1.6.30/include/libpng16,
+					/usr/local/Cellar/cairo/1.14.10/include/cairo,
+					"/usr/local/Cellar/glib/2.52.3/include/glib-2.0",
+					"/usr/local/Cellar/glib/2.52.3/lib/glib-2.0/include",
+					/usr/local/opt/gettext/include,
+					/usr/local/Cellar/pcre/8.41/include,
+					"/usr/local/Cellar/pixman/0.34.0_1/include/pixman-1",
+					/usr/local/Cellar/fontconfig/2.12.4/include,
+					/usr/local/opt/freetype/include/freetype2,
+					/usr/local/Cellar/libpng/1.6.30/include/libpng16,
+				);
 				INFOPLIST_FILE = Speculid_Mac_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -509,6 +631,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = Speculid;
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Speculid_Mac_App/Speculid_Mac_App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 			};
@@ -516,8 +639,10 @@
 		};
 		B340B8D71F71937B00E7BB47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B399B8771F82D49000B37B43 /* CarioInterop.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -571,6 +696,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = Speculid/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -591,8 +717,10 @@
 		};
 		B340B8D81F71937B00E7BB47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B399B8771F82D49000B37B43 /* CarioInterop.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -640,6 +768,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = Speculid/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -782,6 +911,24 @@
 			};
 			name = Release;
 		};
+		B399B8741F82D43B00B37B43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B399B8751F82D43B00B37B43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -817,6 +964,15 @@
 			buildConfigurations = (
 				B340B8DB1F71937B00E7BB47 /* Debug */,
 				B340B8DC1F71937B00E7BB47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B399B8731F82D43B00B37B43 /* Build configuration list for PBXAggregateTarget "Speculid-Flags" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B399B8741F82D43B00B37B43 /* Debug */,
+				B399B8751F82D43B00B37B43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
