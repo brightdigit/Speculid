@@ -11,4 +11,5 @@
 
 @interface SVGImageHandle : NSObject<ImageHandle>
 @property RsvgHandle * rsvgHandle;
+- (id) initWithRsvgHandle:(RsvgHandle *) rsvgHandle;
 @end

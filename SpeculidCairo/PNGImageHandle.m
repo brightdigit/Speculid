@@ -17,4 +17,9 @@
   cairo_paint(renderer);
   return true;
 }
+
+- (id) init:(cairo_surface_t *) cairoHandle {
+  self.cairoHandle = cairoHandle;
+  return [super init];
+}
 @end
