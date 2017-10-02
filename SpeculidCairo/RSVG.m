@@ -13,15 +13,6 @@
 #import "ImageHandle.h"
 #import "ImageHandleBuilder.h"
 
-typedef NS_ENUM(NSUInteger, Dimension) {
-  kWidth,
-  kHeight
-};
-
-struct GeometryDimension {
-  double value;
-  Dimension dimension;
-};
 
 @implementation RSVG
 
