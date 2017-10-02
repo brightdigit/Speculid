@@ -17,4 +17,9 @@
 -(BOOL)paintTo:(cairo_t *)renderer {
   return rsvg_handle_render_cairo([self rsvgHandle], renderer);
 }
+
+- (id) initWithRsvgHandle:(RsvgHandle *) rsvgHandle {
+  self.rsvgHandle = rsvgHandle;
+  return [super init];
+}
 @end

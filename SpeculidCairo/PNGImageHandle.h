@@ -11,4 +11,5 @@
 
 @interface PNGImageHandle : NSObject<ImageHandle>
 @property cairo_surface_t * cairoHandle;
+- (id) initWithSurface:(cairo_surface_t *) cairoHandle;
 @end
