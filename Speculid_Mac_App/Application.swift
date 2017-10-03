@@ -10,9 +10,11 @@ import Speculid
 
 open class Application: Speculid.Application {
   public func test () {
+    RSVG.createPNGFromSVG()
     let url = Bundle.main.url(forResource: "layers", withExtension: "svg")!
-    let destination = URL(fileURLWithPath: "/Users/leo/Documents/Projects/speculid/Speculid_Mac_App/layers.png")
-    print(destination)
+    let destination = URL(fileURLWithPath: "/Users/leo/Documents/Projects/speculid/layers.png")
+    print(url.path)
+    print(destination.path)
     let handle = try! ImageHandleBuilder.shared().imageHandle(from: url)
     let dimension = GeometryDimension(value: 900, dimension: .height)
     var error : NSError?
