@@ -112,6 +112,7 @@
 		B399B8871F82D72500B37B43 /* ImageHandleBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageHandleBuilder.h; path = SpeculidCairo/ImageHandleBuilder.h; sourceTree = SOURCE_ROOT; };
 		B399B8881F82D72600B37B43 /* SVGImageHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVGImageHandle.m; path = SpeculidCairo/SVGImageHandle.m; sourceTree = SOURCE_ROOT; };
 		B399B8891F82D72600B37B43 /* SVGImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVGImageHandle.h; path = SpeculidCairo/SVGImageHandle.h; sourceTree = SOURCE_ROOT; };
+		B399B8901F83155E00B37B43 /* Speculid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speculid.entitlements; sourceTree = "<group>"; };
 		B3CEE65E1F71BFB8001A45DA /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		B3CEE6611F71CE2D001A45DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3CEE6631F71CE2D001A45DA /* svg-appicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-appicon.speculid"; sourceTree = "<group>"; };
@@ -171,6 +172,7 @@
 		B340B8AD1F71936400E7BB47 /* Speculid_Mac_App */ = {
 			isa = PBXGroup;
 			children = (
+				B399B8901F83155E00B37B43 /* Speculid.entitlements */,
 				B399B8831F82D72500B37B43 /* ImageHandle.h */,
 				B399B8871F82D72500B37B43 /* ImageHandleBuilder.h */,
 				B399B87A1F82D72400B37B43 /* ImageHandleBuilder.m */,
@@ -314,6 +316,11 @@
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					B340B8BE1F71937B00E7BB47 = {
 						CreatedOnToolsVersion = 9.0;
@@ -507,7 +514,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = Speculid_Mac_App/Speculid_Mac_App.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Speculid_Mac_App/Speculid.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -592,7 +599,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = Speculid_Mac_App/Speculid_Mac_App.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Speculid_Mac_App/Speculid.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

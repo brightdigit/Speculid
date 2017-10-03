@@ -50,15 +50,13 @@
   cairo_format_t format = CAIRO_FORMAT_INVALID;
   
   if ([destinationURL.pathExtension caseInsensitiveCompare:@"png"] == NSOrderedSame) {
-    format = removeAlphaChannel ? CAIRO_FORMAT_ARGB32 : CAIRO_FORMAT_RGB24;
-    destinationSurface = cairo_image_surface_create(format, sourceHandle.size.width * scale, sourceHandle.size.height * scale);
+    format = removeAlphaChannel ? CAIRO_FORMAT_RGB24 : CAIRO_FORMAT_ARGB32;
+    destinationSurface = cairo_image_surface_create(format, (int)(sourceHandle.size.width * scale), (int)(sourceHandle.size.height * scale));
   } else if ([destinationURL.pathExtension caseInsensitiveCompare:@"pdf"] == NSOrderedSame) {
-    destinationSurface = cairo_pdf_surface_create(destinationURL.absoluteString.UTF8String,sourceHandle.size.width * scale, sourceHandle.size.height * scale);
+    destinationSurface = cairo_pdf_surface_create(destinationURL.path.UTF8String,sourceHandle.size.width * scale, sourceHandle.size.height * scale);
   }
   
   cairo_t* cr = cairo_create(destinationSurface);
-  
-  cairo_scale(cr, scale, scale);
   
   if (backgroundColor != nil) {
     const CGFloat* components = CGColorGetComponents(backgroundColor);
@@ -66,7 +64,9 @@
     cairo_paint(cr);
   }
   
-  [sourceHandle paintTo:cr];
+  cairo_scale(cr, scale, scale);
+  
+  BOOL result = [sourceHandle paintTo:cr];
 //  if (sourceSurface != nil) {
 //    cairo_set_source_surface(cr, sourceSurface, 0, 0);
 //    cairo_paint(cr);
@@ -75,7 +75,9 @@
 //  }
   
   if (format != CAIRO_FORMAT_INVALID) {
-    cairo_status_t status = cairo_surface_write_to_png(destinationSurface, destinationURL.absoluteString.UTF8String);
+    
+    cairo_status_t status = cairo_surface_write_to_png(destinationSurface, destinationURL.path.UTF8String);
+    NSLog(@"%@, %@", destinationURL.path.UTF8String, status);
   }
   
   
@@ -85,7 +87,7 @@
 {
   GError * error = nil;
   RsvgDimensionData dimensions;
-  RsvgHandle * handle = rsvg_handle_new_from_file( "/Users/leo/Documents/Projects/obj-librsvg/obj_librsvgTests/geometry.svg", &error);
+  RsvgHandle * handle = rsvg_handle_new_from_file( "/Users/leo/Documents/Projects/speculid/examples/Assets/geometry.svg", &error);
   rsvg_handle_get_dimensions(handle, &dimensions);
   NSLog(@"%d %d", dimensions.width, dimensions.height);
   cairo_surface_t*  surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, dimensions.width * 0.5, dimensions.height * 0.5);
@@ -99,7 +101,7 @@
   
   cairo_scale(cr, 0.5, 0.5);
   BOOL result = rsvg_handle_render_cairo(handle, cr);
-  cairo_status_t status = cairo_surface_write_to_png(surface, "/Users/leo/Documents/Projects/obj-librsvg/obj_librsvgTests/geometry.png");
+  cairo_status_t status = cairo_surface_write_to_png(surface, "/Users/leo/Documents/Projects/speculid/Speculid_Mac_App/assets/layers.png");
 }
 
 + (void)createPDFFromSVG

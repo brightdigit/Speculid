@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:speculid.xcodeproj">
+      location = "self:Speculid.xcodeproj">
    </FileRef>
 </Workspace>

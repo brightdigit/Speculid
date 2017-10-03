@@ -18,7 +18,7 @@
   return true;
 }
 
-- (id) init:(cairo_surface_t *) cairoHandle {
+- (id) initWithSurface:(cairo_surface_t *) cairoHandle {
   self.cairoHandle = cairoHandle;
   return [super init];
 }

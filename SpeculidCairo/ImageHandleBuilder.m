@@ -27,13 +27,13 @@ ImageHandleBuilder * _shared = nil;
   
       RsvgDimensionData rsvgDimensions;
       GError * error = nil;
-      RsvgHandle * rsvgHandle = rsvg_handle_new_from_file(url.absoluteString.UTF8String , &error);
+      RsvgHandle * rsvgHandle = rsvg_handle_new_from_file(url.path.UTF8String , &error);
 //      rsvg_handle_get_dimensions(rsvgHandle, &rsvgDimensions);
 //      originalSize = CGSizeMake(rsvgDimensions.width, rsvgDimensions.height);
       return [[SVGImageHandle alloc] initWithRsvgHandle: rsvgHandle];
   
     } else if ([url.pathExtension caseInsensitiveCompare:@"png"] == NSOrderedSame) {
-      cairo_surface_t * sourceSurface = cairo_image_surface_create_from_png(url.absoluteString.UTF8String);
+      cairo_surface_t * sourceSurface = cairo_image_surface_create_from_png(url.path.UTF8String);
 //      originalSize = CGSizeMake(cairo_image_surface_get_width(sourceSurface), cairo_image_surface_get_height(sourceSurface));
       return [[PNGImageHandle alloc] initWithSurface: sourceSurface];
   
