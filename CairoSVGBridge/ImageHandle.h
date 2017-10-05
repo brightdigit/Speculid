@@ -6,7 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <cairo.h>
+
+typedef struct _cairo cairo_t;
 
 @protocol ImageHandle <NSObject>
 -(CGSize) size;

@@ -192,4 +192,4 @@ Products
 *tests/*.png
 *tests/*.pdf
 
-SpecCarioInterop.xcconfig
+CairoSVGBridge.xcconfig
