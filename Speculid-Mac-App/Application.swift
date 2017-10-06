@@ -9,12 +9,19 @@ import Cocoa
 import Speculid
 import CairoSVGBridge
 
-open class Application: Speculid.Application {
-  public func test () {
-    
-  }
+open class Application : Speculid.Application {
   open override func finishLaunching() {
+    let interface = NSXPCInterface(with: SpeculidServiceProtocol.self)
+    let connection = NSXPCConnection(serviceName: "com.brightdigit.Speculid-Mac-XPC")
+    connection.remoteObjectInterface = interface
+    connection.resume()
+    
+    if let service = connection.remoteObjectProxy as? SpeculidServiceProtocol{
+      
+      service.uppercaseString("test", withReply: { (result) in
+        print(result)
+      })
+    }
     super.finishLaunching()
-    self.test()
   }
 }

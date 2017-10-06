@@ -28,6 +28,10 @@
 		B31575D11F867BC000B9F1DB /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31575D01F867BBF00B9F1DB /* Application.swift */; };
 		B31575D41F867BF300B9F1DB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31575D21F867BF300B9F1DB /* main.swift */; };
 		B31575D51F867BF300B9F1DB /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31575D31F867BF300B9F1DB /* Application.swift */; };
+		B34058341F87044300D8CB0B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34057F21F86F48600D8CB0B /* main.swift */; };
+		B34058361F87045A00D8CB0B /* SpeculidServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34058351F87045A00D8CB0B /* SpeculidServiceProtocol.swift */; };
+		B34058371F87045A00D8CB0B /* SpeculidServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34058351F87045A00D8CB0B /* SpeculidServiceProtocol.swift */; };
+		B376689D1F86B27C008A8722 /* Speculid-Mac-XPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = B37668921F86B27C008A8722 /* Speculid-Mac-XPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B3E9A9BD1F85BD3200322888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E9A9BC1F85BD3200322888 /* Assets.xcassets */; };
 		B3E9A9E11F85BE2E00322888 /* CairoSVGBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E9A9DF1F85BE2E00322888 /* CairoSVGBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3E9A9E41F85BE2E00322888 /* CairoSVGBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E9A9DD1F85BE2E00322888 /* CairoSVGBridge.framework */; };
@@ -58,6 +62,13 @@
 			remoteGlobalIDString = B31575BD1F8679A300B9F1DB;
 			remoteInfo = Speculid;
 		};
+		B376689B1F86B27C008A8722 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3E9A9AD1F85BCF500322888 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B37668911F86B27C008A8722;
+			remoteInfo = "Speculid-Mac-XPC";
+		};
 		B3E9A9E21F85BE2E00322888 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B3E9A9AD1F85BCF500322888 /* Project object */;
@@ -68,6 +79,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B37668A11F86B27C008A8722 /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				B376689D1F86B27C008A8722 /* Speculid-Mac-XPC.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3E9A9D71F85BD9800322888 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,6 +111,15 @@
 		B31575D01F867BBF00B9F1DB /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		B31575D21F867BF300B9F1DB /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B31575D31F867BF300B9F1DB /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		B34057F21F86F48600D8CB0B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B34058351F87045A00D8CB0B /* SpeculidServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidServiceProtocol.swift; sourceTree = "<group>"; };
+		B34058381F8708B000D8CB0B /* libswiftFoundation.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftFoundation.tbd; path = System/Library/PrivateFrameworks/Swift/libswiftFoundation.tbd; sourceTree = SDKROOT; };
+		B37668921F86B27C008A8722 /* Speculid-Mac-XPC.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = "Speculid-Mac-XPC.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B37668941F86B27C008A8722 /* Speculid_Mac_XPCProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid_Mac_XPCProtocol.h; sourceTree = "<group>"; };
+		B37668951F86B27C008A8722 /* Speculid_Mac_XPC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid_Mac_XPC.h; sourceTree = "<group>"; };
+		B37668961F86B27C008A8722 /* Speculid_Mac_XPC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Speculid_Mac_XPC.m; sourceTree = "<group>"; };
+		B37668981F86B27C008A8722 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B376689A1F86B27C008A8722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3E9A9B71F85BD3200322888 /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E9A9BC1F85BD3200322888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3E9A9C11F85BD3200322888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,6 +151,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B31575CB1F867AD600B9F1DB /* CairoSVGBridge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B376688F1F86B27C008A8722 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,8 +193,23 @@
 		B31575CA1F867AD600B9F1DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B34058381F8708B000D8CB0B /* libswiftFoundation.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B37668931F86B27C008A8722 /* Speculid-Mac-XPC */ = {
+			isa = PBXGroup;
+			children = (
+				B37668941F86B27C008A8722 /* Speculid_Mac_XPCProtocol.h */,
+				B37668951F86B27C008A8722 /* Speculid_Mac_XPC.h */,
+				B37668961F86B27C008A8722 /* Speculid_Mac_XPC.m */,
+				B37668981F86B27C008A8722 /* main.m */,
+				B376689A1F86B27C008A8722 /* Info.plist */,
+				B34057F21F86F48600D8CB0B /* main.swift */,
+				B34058351F87045A00D8CB0B /* SpeculidServiceProtocol.swift */,
+			);
+			path = "Speculid-Mac-XPC";
 			sourceTree = "<group>";
 		};
 		B3E9A9AC1F85BCF500322888 = {
@@ -165,6 +218,7 @@
 				B3E9A9B91F85BD3200322888 /* Speculid-Mac-App */,
 				B3E9A9DE1F85BE2E00322888 /* CairoSVGBridge */,
 				B31575BF1F8679A300B9F1DB /* Speculid */,
+				B37668931F86B27C008A8722 /* Speculid-Mac-XPC */,
 				B3E9A9B81F85BD3200322888 /* Products */,
 				B31575CA1F867AD600B9F1DB /* Frameworks */,
 			);
@@ -176,6 +230,7 @@
 				B3E9A9B71F85BD3200322888 /* Speculid.app */,
 				B3E9A9DD1F85BE2E00322888 /* CairoSVGBridge.framework */,
 				B31575BE1F8679A300B9F1DB /* Speculid.framework */,
+				B37668921F86B27C008A8722 /* Speculid-Mac-XPC.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,6 +321,23 @@
 			productReference = B31575BE1F8679A300B9F1DB /* Speculid.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		B37668911F86B27C008A8722 /* Speculid-Mac-XPC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B37668A01F86B27C008A8722 /* Build configuration list for PBXNativeTarget "Speculid-Mac-XPC" */;
+			buildPhases = (
+				B376688E1F86B27C008A8722 /* Sources */,
+				B376688F1F86B27C008A8722 /* Frameworks */,
+				B37668901F86B27C008A8722 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Speculid-Mac-XPC";
+			productName = "Speculid-Mac-XPC";
+			productReference = B37668921F86B27C008A8722 /* Speculid-Mac-XPC.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
 		B3E9A9B61F85BD3200322888 /* Speculid-Mac-App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3E9A9C51F85BD3200322888 /* Build configuration list for PBXNativeTarget "Speculid-Mac-App" */;
@@ -274,12 +346,14 @@
 				B3E9A9B41F85BD3200322888 /* Frameworks */,
 				B3E9A9B51F85BD3200322888 /* Resources */,
 				B3E9A9D71F85BD9800322888 /* Embed Frameworks */,
+				B37668A11F86B27C008A8722 /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				B3E9A9E31F85BE2E00322888 /* PBXTargetDependency */,
 				B31575C41F8679A300B9F1DB /* PBXTargetDependency */,
+				B376689C1F86B27C008A8722 /* PBXTargetDependency */,
 			);
 			name = "Speculid-Mac-App";
 			productName = "Speculid-Mac-App";
@@ -318,6 +392,11 @@
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
+					B37668911F86B27C008A8722 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
 					B3E9A9B61F85BD3200322888 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -349,12 +428,20 @@
 				B3E9A9DC1F85BE2E00322888 /* CairoSVGBridge */,
 				B3E9AA071F85BFEF00322888 /* CairoSVGBridge-Flags */,
 				B31575BD1F8679A300B9F1DB /* Speculid */,
+				B37668911F86B27C008A8722 /* Speculid-Mac-XPC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B31575BC1F8679A300B9F1DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B37668901F86B27C008A8722 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -404,10 +491,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B376688E1F86B27C008A8722 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B34058371F87045A00D8CB0B /* SpeculidServiceProtocol.swift in Sources */,
+				B34058341F87044300D8CB0B /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3E9A9B31F85BD3200322888 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B34058361F87045A00D8CB0B /* SpeculidServiceProtocol.swift in Sources */,
 				B31575D51F867BF300B9F1DB /* Application.swift in Sources */,
 				B31575D41F867BF300B9F1DB /* main.swift in Sources */,
 			);
@@ -433,6 +530,11 @@
 			isa = PBXTargetDependency;
 			target = B31575BD1F8679A300B9F1DB /* Speculid */;
 			targetProxy = B31575C31F8679A300B9F1DB /* PBXContainerItemProxy */;
+		};
+		B376689C1F86B27C008A8722 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B37668911F86B27C008A8722 /* Speculid-Mac-XPC */;
+			targetProxy = B376689B1F86B27C008A8722 /* PBXContainerItemProxy */;
 		};
 		B3E9A9E31F85BE2E00322888 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -511,7 +613,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -578,9 +679,136 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B376689E1F86B27C008A8722 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Speculid-Mac-XPC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/Swift",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-XPC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B376689F1F86B27C008A8722 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Speculid-Mac-XPC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/Swift",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-XPC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -588,6 +816,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -595,6 +824,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -663,7 +893,6 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -724,7 +953,6 @@
 				PRODUCT_NAME = Speculid;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -893,6 +1121,15 @@
 			buildConfigurations = (
 				B31575C81F8679A300B9F1DB /* Debug */,
 				B31575C91F8679A300B9F1DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B37668A01F86B27C008A8722 /* Build configuration list for PBXNativeTarget "Speculid-Mac-XPC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B376689E1F86B27C008A8722 /* Debug */,
+				B376689F1F86B27C008A8722 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
