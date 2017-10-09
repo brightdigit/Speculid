@@ -8,5 +8,5 @@
 import Foundation
 
 @objc public protocol SpeculidServiceProtocol {
-  func uppercaseString(_ string: String, withReply callback: (String) -> Void) 
+  func upperCaseString(_ string: String, withReply callback: (String) -> Void) 
 }

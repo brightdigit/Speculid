@@ -18,7 +18,7 @@ open class Application : Speculid.Application {
     
     if let service = connection.remoteObjectProxy as? SpeculidServiceProtocol{
       
-      service.uppercaseString("test", withReply: { (result) in
+      service.upperCaseString("test", withReply: { (result) in
         print(result)
       })
     }
