@@ -19,4 +19,4 @@ FOUNDATION_EXPORT const unsigned char CairoSVG_Mac_FrameworkVersionString[];
 
 #import "ImageHandleBuilder.h"
 #import "ImageHandle.h"
-#import "RSVG.h"
+#import "CairoInterface.h"
