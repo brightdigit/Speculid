@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import CairoSVG_Mac_Framework
+import CairoSVG
 
 public final class Service: NSObject, ServiceProtocol {
   public func multiply(_ value: Double, by factor: Double, withReply reply: (Double) -> Void) {

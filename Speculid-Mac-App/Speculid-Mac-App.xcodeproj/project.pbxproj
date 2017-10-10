@@ -30,14 +30,14 @@
 		B37C74671F8C594E00DF505B /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C74651F8C594E00DF505B /* ServiceProtocol.swift */; };
 		B37C746B1F8C598500DF505B /* ServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C74681F8C598500DF505B /* ServiceDelegate.swift */; };
 		B37C74771F8C5ADA00DF505B /* Speculid_Mac_Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74751F8C5ADA00DF505B /* Speculid_Mac_Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B37C747A1F8C5ADA00DF505B /* Speculid_Mac_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid_Mac_Framework.framework */; };
-		B37C747B1F8C5ADA00DF505B /* Speculid_Mac_Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid_Mac_Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B37C74811F8C5AE200DF505B /* Speculid_Mac_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid_Mac_Framework.framework */; };
+		B37C747A1F8C5ADA00DF505B /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; };
+		B37C747B1F8C5ADA00DF505B /* Speculid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B37C74811F8C5AE200DF505B /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; };
 		B37C74821F8C5AF600DF505B /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C74651F8C594E00DF505B /* ServiceProtocol.swift */; };
 		B37C74831F8C5AF900DF505B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C74691F8C598500DF505B /* Service.swift */; };
-		B37C748D1F8C5B5C00DF505B /* CairoSVG_Mac_Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C748B1F8C5B5C00DF505B /* CairoSVG_Mac_Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B37C74901F8C5B5C00DF505B /* CairoSVG_Mac_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG_Mac_Framework.framework */; };
-		B37C74911F8C5B5C00DF505B /* CairoSVG_Mac_Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG_Mac_Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B37C748D1F8C5B5C00DF505B /* CairoSVG.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C748B1F8C5B5C00DF505B /* CairoSVG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B37C74901F8C5B5C00DF505B /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
+		B37C74911F8C5B5C00DF505B /* CairoSVG.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B37C74A41F8C5C7400DF505B /* SVGImageHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74951F8C5C7200DF505B /* SVGImageHandle.h */; };
 		B37C74A51F8C5C7400DF505B /* PNGImageHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C74961F8C5C7200DF505B /* PNGImageHandle.m */; };
 		B37C74A61F8C5C7400DF505B /* CairoInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C74971F8C5C7300DF505B /* CairoInterface.m */; };
@@ -54,7 +54,7 @@
 		B37C74B11F8C5C7400DF505B /* PNGSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A21F8C5C7400DF505B /* PNGSurface.h */; };
 		B37C74B21F8C5C7400DF505B /* PNGImageHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */; };
 		B37C74BB1F8C5CDA00DF505B /* CairoSVGBridge.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B37C74BA1F8C5CDA00DF505B /* CairoSVGBridge.xcconfig */; };
-		B37C74BC1F8C5D2A00DF505B /* CairoSVG_Mac_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG_Mac_Framework.framework */; };
+		B37C74BC1F8C5D2A00DF505B /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
 		B37C74BE1F8C653B00DF505B /* layers.svg in Resources */ = {isa = PBXBuildFile; fileRef = B37C74BD1F8C653B00DF505B /* layers.svg */; };
 /* End PBXBuildFile section */
 
@@ -107,8 +107,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B37C74911F8C5B5C00DF505B /* CairoSVG_Mac_Framework.framework in Embed Frameworks */,
-				B37C747B1F8C5ADA00DF505B /* Speculid_Mac_Framework.framework in Embed Frameworks */,
+				B37C74911F8C5B5C00DF505B /* CairoSVG.framework in Embed Frameworks */,
+				B37C747B1F8C5ADA00DF505B /* Speculid.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,11 +128,11 @@
 		B37C74651F8C594E00DF505B /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		B37C74681F8C598500DF505B /* ServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
 		B37C74691F8C598500DF505B /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		B37C74731F8C5ADA00DF505B /* Speculid_Mac_Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Speculid_Mac_Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B37C74731F8C5ADA00DF505B /* Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37C74751F8C5ADA00DF505B /* Speculid_Mac_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid_Mac_Framework.h; sourceTree = "<group>"; };
 		B37C74761F8C5ADA00DF505B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B37C74891F8C5B5C00DF505B /* CairoSVG_Mac_Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CairoSVG_Mac_Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B37C748B1F8C5B5C00DF505B /* CairoSVG_Mac_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CairoSVG_Mac_Framework.h; sourceTree = "<group>"; };
+		B37C74891F8C5B5C00DF505B /* CairoSVG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CairoSVG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B37C748B1F8C5B5C00DF505B /* CairoSVG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CairoSVG.h; sourceTree = "<group>"; };
 		B37C748C1F8C5B5C00DF505B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B37C74951F8C5C7200DF505B /* SVGImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGImageHandle.h; sourceTree = "<group>"; };
 		B37C74961F8C5C7200DF505B /* PNGImageHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNGImageHandle.m; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37C74901F8C5B5C00DF505B /* CairoSVG_Mac_Framework.framework in Frameworks */,
-				B37C747A1F8C5ADA00DF505B /* Speculid_Mac_Framework.framework in Frameworks */,
+				B37C74901F8C5B5C00DF505B /* CairoSVG.framework in Frameworks */,
+				B37C747A1F8C5ADA00DF505B /* Speculid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37C74811F8C5AE200DF505B /* Speculid_Mac_Framework.framework in Frameworks */,
+				B37C74811F8C5AE200DF505B /* Speculid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37C74BC1F8C5D2A00DF505B /* CairoSVG_Mac_Framework.framework in Frameworks */,
+				B37C74BC1F8C5D2A00DF505B /* CairoSVG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,8 +207,8 @@
 			children = (
 				B37C743E1F8C58F300DF505B /* Speculid-Mac-App.app */,
 				B37C74531F8C590D00DF505B /* Speculid-Mac-XPC.xpc */,
-				B37C74731F8C5ADA00DF505B /* Speculid_Mac_Framework.framework */,
-				B37C74891F8C5B5C00DF505B /* CairoSVG_Mac_Framework.framework */,
+				B37C74731F8C5ADA00DF505B /* Speculid.framework */,
+				B37C74891F8C5B5C00DF505B /* CairoSVG.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 				B37C749B1F8C5C7300DF505B /* SurfaceHandle.h */,
 				B37C74951F8C5C7200DF505B /* SVGImageHandle.h */,
 				B37C749E1F8C5C7300DF505B /* SVGImageHandle.m */,
-				B37C748B1F8C5B5C00DF505B /* CairoSVG_Mac_Framework.h */,
+				B37C748B1F8C5B5C00DF505B /* CairoSVG.h */,
 				B37C748C1F8C5B5C00DF505B /* Info.plist */,
 			);
 			path = "CairoSVG-Mac-Framework";
@@ -297,7 +297,7 @@
 				B37C74A71F8C5C7400DF505B /* PDFSurface.h in Headers */,
 				B37C74B21F8C5C7400DF505B /* PNGImageHandle.h in Headers */,
 				B37C74B01F8C5C7400DF505B /* ImageHandle.h in Headers */,
-				B37C748D1F8C5B5C00DF505B /* CairoSVG_Mac_Framework.h in Headers */,
+				B37C748D1F8C5B5C00DF505B /* CairoSVG.h in Headers */,
 				B37C74A81F8C5C7400DF505B /* ImageSpecification.h in Headers */,
 				B37C74AA1F8C5C7400DF505B /* SurfaceHandle.h in Headers */,
 				B37C74B11F8C5C7400DF505B /* PNGSurface.h in Headers */,
@@ -348,9 +348,9 @@
 			productReference = B37C74531F8C590D00DF505B /* Speculid-Mac-XPC.xpc */;
 			productType = "com.apple.product-type.xpc-service";
 		};
-		B37C74721F8C5ADA00DF505B /* Speculid-Mac-Framework */ = {
+		B37C74721F8C5ADA00DF505B /* Speculid */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B37C747C1F8C5ADA00DF505B /* Build configuration list for PBXNativeTarget "Speculid-Mac-Framework" */;
+			buildConfigurationList = B37C747C1F8C5ADA00DF505B /* Build configuration list for PBXNativeTarget "Speculid" */;
 			buildPhases = (
 				B37C746E1F8C5ADA00DF505B /* Sources */,
 				B37C746F1F8C5ADA00DF505B /* Frameworks */,
@@ -361,14 +361,14 @@
 			);
 			dependencies = (
 			);
-			name = "Speculid-Mac-Framework";
+			name = Speculid;
 			productName = "Speculid-Mac-Framework";
-			productReference = B37C74731F8C5ADA00DF505B /* Speculid_Mac_Framework.framework */;
+			productReference = B37C74731F8C5ADA00DF505B /* Speculid.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B37C74881F8C5B5C00DF505B /* CairoSVG-Mac-Framework */ = {
+		B37C74881F8C5B5C00DF505B /* CairoSVG */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B37C74921F8C5B5C00DF505B /* Build configuration list for PBXNativeTarget "CairoSVG-Mac-Framework" */;
+			buildConfigurationList = B37C74921F8C5B5C00DF505B /* Build configuration list for PBXNativeTarget "CairoSVG" */;
 			buildPhases = (
 				B37C74841F8C5B5C00DF505B /* Sources */,
 				B37C74851F8C5B5C00DF505B /* Frameworks */,
@@ -380,9 +380,9 @@
 			dependencies = (
 				B37C74B91F8C5CC400DF505B /* PBXTargetDependency */,
 			);
-			name = "CairoSVG-Mac-Framework";
+			name = CairoSVG;
 			productName = "CairoSVG-Mac-Framework";
-			productReference = B37C74891F8C5B5C00DF505B /* CairoSVG_Mac_Framework.framework */;
+			productReference = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -433,8 +433,8 @@
 			targets = (
 				B37C743D1F8C58F300DF505B /* Speculid-Mac-App */,
 				B37C74521F8C590D00DF505B /* Speculid-Mac-XPC */,
-				B37C74721F8C5ADA00DF505B /* Speculid-Mac-Framework */,
-				B37C74881F8C5B5C00DF505B /* CairoSVG-Mac-Framework */,
+				B37C74721F8C5ADA00DF505B /* Speculid */,
+				B37C74881F8C5B5C00DF505B /* CairoSVG */,
 				B37C74B31F8C5CB000DF505B /* CairoSVG-Flags */,
 			);
 		};
@@ -543,12 +543,12 @@
 		};
 		B37C74791F8C5ADA00DF505B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B37C74721F8C5ADA00DF505B /* Speculid-Mac-Framework */;
+			target = B37C74721F8C5ADA00DF505B /* Speculid */;
 			targetProxy = B37C74781F8C5ADA00DF505B /* PBXContainerItemProxy */;
 		};
 		B37C748F1F8C5B5C00DF505B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B37C74881F8C5B5C00DF505B /* CairoSVG-Mac-Framework */;
+			target = B37C74881F8C5B5C00DF505B /* CairoSVG */;
 			targetProxy = B37C748E1F8C5B5C00DF505B /* PBXContainerItemProxy */;
 		};
 		B37C74B91F8C5CC400DF505B /* PBXTargetDependency */ = {
@@ -895,7 +895,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B37C747C1F8C5ADA00DF505B /* Build configuration list for PBXNativeTarget "Speculid-Mac-Framework" */ = {
+		B37C747C1F8C5ADA00DF505B /* Build configuration list for PBXNativeTarget "Speculid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B37C747D1F8C5ADA00DF505B /* Debug */,
@@ -904,7 +904,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B37C74921F8C5B5C00DF505B /* Build configuration list for PBXNativeTarget "CairoSVG-Mac-Framework" */ = {
+		B37C74921F8C5B5C00DF505B /* Build configuration list for PBXNativeTarget "CairoSVG" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B37C74931F8C5B5C00DF505B /* Debug */,
