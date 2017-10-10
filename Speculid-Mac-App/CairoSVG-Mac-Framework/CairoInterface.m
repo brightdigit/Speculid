@@ -9,12 +9,12 @@
 #import <librsvg/rsvg.h>
 #import <cairo-pdf.h>
 
-#import "RSVG.h"
+#import "CairoInterface.h"
 #import "ImageHandle.h"
 #import "ImageHandleBuilder.h"
 
 
-@implementation RSVG
+@implementation CairoInterface
 
 + (double) mapSize: (CGSize) size toDimension: (struct GeometryDimension) dimensions {
   double result = NAN;

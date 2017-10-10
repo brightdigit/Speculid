@@ -19,7 +19,7 @@ struct GeometryDimension {
   Dimension dimension;
 };
 
-@interface RSVG : NSObject
+@interface CairoInterface : NSObject
 + (void)createPNGFromSVG;
 + (void)createPDFFromSVG;
 + (void)createPNGFromPNG;

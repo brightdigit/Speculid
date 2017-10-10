@@ -15,7 +15,7 @@ public final class Service: NSObject, ServiceProtocol {
     let geometry = GeometryDimension(value: 50, dimension: .width)
     let imageHandle = try? ImageHandleBuilder.shared().imageHandle(from: url)
     var error : NSError?
-    RSVG.exportImage(imageHandle, to: Bundle.main.bundleURL.deletingLastPathComponent().appendingPathComponent("layers.png"), withDimensions: geometry, shouldRemoveAlphaChannel: true, setBackgroundColor: CGColor.init(red: 1, green: 0, blue: 1, alpha: 1), error: &error)
+    CairoInterface.exportImage(imageHandle, to: Bundle.main.bundleURL.deletingLastPathComponent().appendingPathComponent("layers.png"), withDimensions: geometry, shouldRemoveAlphaChannel: true, setBackgroundColor: CGColor.init(red: 1, green: 0, blue: 1, alpha: 1), error: &error)
     reply(value * factor)
     
   }

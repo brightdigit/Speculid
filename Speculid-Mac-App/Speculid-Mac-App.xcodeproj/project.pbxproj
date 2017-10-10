@@ -40,10 +40,10 @@
 		B37C74911F8C5B5C00DF505B /* CairoSVG_Mac_Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG_Mac_Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B37C74A41F8C5C7400DF505B /* SVGImageHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74951F8C5C7200DF505B /* SVGImageHandle.h */; };
 		B37C74A51F8C5C7400DF505B /* PNGImageHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C74961F8C5C7200DF505B /* PNGImageHandle.m */; };
-		B37C74A61F8C5C7400DF505B /* RSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C74971F8C5C7300DF505B /* RSVG.m */; };
+		B37C74A61F8C5C7400DF505B /* CairoInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C74971F8C5C7300DF505B /* CairoInterface.m */; };
 		B37C74A71F8C5C7400DF505B /* PDFSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74981F8C5C7300DF505B /* PDFSurface.h */; };
 		B37C74A81F8C5C7400DF505B /* ImageSpecification.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74991F8C5C7300DF505B /* ImageSpecification.h */; };
-		B37C74A91F8C5C7400DF505B /* RSVG.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C749A1F8C5C7300DF505B /* RSVG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B37C74A91F8C5C7400DF505B /* CairoInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C749A1F8C5C7300DF505B /* CairoInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B37C74AA1F8C5C7400DF505B /* SurfaceHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C749B1F8C5C7300DF505B /* SurfaceHandle.h */; };
 		B37C74AB1F8C5C7400DF505B /* ImageHandleBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C749C1F8C5C7300DF505B /* ImageHandleBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B37C74AC1F8C5C7400DF505B /* PDFSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C749D1F8C5C7300DF505B /* PDFSurface.m */; };
@@ -136,10 +136,10 @@
 		B37C748C1F8C5B5C00DF505B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B37C74951F8C5C7200DF505B /* SVGImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGImageHandle.h; sourceTree = "<group>"; };
 		B37C74961F8C5C7200DF505B /* PNGImageHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNGImageHandle.m; sourceTree = "<group>"; };
-		B37C74971F8C5C7300DF505B /* RSVG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSVG.m; sourceTree = "<group>"; };
+		B37C74971F8C5C7300DF505B /* CairoInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CairoInterface.m; sourceTree = "<group>"; };
 		B37C74981F8C5C7300DF505B /* PDFSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSurface.h; sourceTree = "<group>"; };
 		B37C74991F8C5C7300DF505B /* ImageSpecification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSpecification.h; sourceTree = "<group>"; };
-		B37C749A1F8C5C7300DF505B /* RSVG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSVG.h; sourceTree = "<group>"; };
+		B37C749A1F8C5C7300DF505B /* CairoInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CairoInterface.h; sourceTree = "<group>"; };
 		B37C749B1F8C5C7300DF505B /* SurfaceHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurfaceHandle.h; sourceTree = "<group>"; };
 		B37C749C1F8C5C7300DF505B /* ImageHandleBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHandleBuilder.h; sourceTree = "<group>"; };
 		B37C749D1F8C5C7300DF505B /* PDFSurface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSurface.m; sourceTree = "<group>"; };
@@ -267,8 +267,8 @@
 				B37C74961F8C5C7200DF505B /* PNGImageHandle.m */,
 				B37C74A21F8C5C7400DF505B /* PNGSurface.h */,
 				B37C749F1F8C5C7300DF505B /* PNGSurface.m */,
-				B37C749A1F8C5C7300DF505B /* RSVG.h */,
-				B37C74971F8C5C7300DF505B /* RSVG.m */,
+				B37C749A1F8C5C7300DF505B /* CairoInterface.h */,
+				B37C74971F8C5C7300DF505B /* CairoInterface.m */,
 				B37C749B1F8C5C7300DF505B /* SurfaceHandle.h */,
 				B37C74951F8C5C7200DF505B /* SVGImageHandle.h */,
 				B37C749E1F8C5C7300DF505B /* SVGImageHandle.m */,
@@ -293,7 +293,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37C74A91F8C5C7400DF505B /* RSVG.h in Headers */,
+				B37C74A91F8C5C7400DF505B /* CairoInterface.h in Headers */,
 				B37C74A71F8C5C7400DF505B /* PDFSurface.h in Headers */,
 				B37C74B21F8C5C7400DF505B /* PNGImageHandle.h in Headers */,
 				B37C74B01F8C5C7400DF505B /* ImageHandle.h in Headers */,
@@ -529,7 +529,7 @@
 				B37C74AC1F8C5C7400DF505B /* PDFSurface.m in Sources */,
 				B37C74AD1F8C5C7400DF505B /* SVGImageHandle.m in Sources */,
 				B37C74AE1F8C5C7400DF505B /* PNGSurface.m in Sources */,
-				B37C74A61F8C5C7400DF505B /* RSVG.m in Sources */,
+				B37C74A61F8C5C7400DF505B /* CairoInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
