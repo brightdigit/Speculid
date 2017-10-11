@@ -34,7 +34,6 @@
 		B37C747B1F8C5ADA00DF505B /* Speculid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B37C74811F8C5AE200DF505B /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; };
 		B37C74821F8C5AF600DF505B /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C74651F8C594E00DF505B /* ServiceProtocol.swift */; };
-		B37C74831F8C5AF900DF505B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C74691F8C598500DF505B /* Service.swift */; };
 		B37C748D1F8C5B5C00DF505B /* CairoSVG.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C748B1F8C5B5C00DF505B /* CairoSVG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B37C74901F8C5B5C00DF505B /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
 		B37C74911F8C5B5C00DF505B /* CairoSVG.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -56,6 +55,7 @@
 		B37C74BB1F8C5CDA00DF505B /* CairoSVGBridge.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B37C74BA1F8C5CDA00DF505B /* CairoSVGBridge.xcconfig */; };
 		B37C74BC1F8C5D2A00DF505B /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
 		B37C74BE1F8C653B00DF505B /* layers.svg in Resources */ = {isa = PBXBuildFile; fileRef = B37C74BD1F8C653B00DF505B /* layers.svg */; };
+		B39DE2891F8D965700BBA751 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DE2881F8D965600BBA751 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,7 +127,6 @@
 		B37C74631F8C592400DF505B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B37C74651F8C594E00DF505B /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		B37C74681F8C598500DF505B /* ServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
-		B37C74691F8C598500DF505B /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B37C74731F8C5ADA00DF505B /* Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37C74751F8C5ADA00DF505B /* Speculid_Mac_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid_Mac_Framework.h; sourceTree = "<group>"; };
 		B37C74761F8C5ADA00DF505B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,6 +150,7 @@
 		B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGImageHandle.h; sourceTree = "<group>"; };
 		B37C74BA1F8C5CDA00DF505B /* CairoSVGBridge.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CairoSVGBridge.xcconfig; sourceTree = "<group>"; };
 		B37C74BD1F8C653B00DF505B /* layers.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = layers.svg; path = ../../__badxpc/layers.svg; sourceTree = "<group>"; };
+		B39DE2881F8D965600BBA751 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,7 +229,6 @@
 		B37C74541F8C590D00DF505B /* Speculid-Mac-XPC */ = {
 			isa = PBXGroup;
 			children = (
-				B37C74691F8C598500DF505B /* Service.swift */,
 				B37C74681F8C598500DF505B /* ServiceDelegate.swift */,
 				B37C745B1F8C590D00DF505B /* Info.plist */,
 				B37C74631F8C592400DF505B /* main.swift */,
@@ -240,6 +239,7 @@
 		B37C74741F8C5ADA00DF505B /* Speculid-Mac-Framework */ = {
 			isa = PBXGroup;
 			children = (
+				B39DE2881F8D965600BBA751 /* Service.swift */,
 				B37C74BD1F8C653B00DF505B /* layers.svg */,
 				B37C74751F8C5ADA00DF505B /* Speculid_Mac_Framework.h */,
 				B37C74761F8C5ADA00DF505B /* Info.plist */,
@@ -516,7 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B37C74821F8C5AF600DF505B /* ServiceProtocol.swift in Sources */,
-				B37C74831F8C5AF900DF505B /* Service.swift in Sources */,
+				B39DE2891F8D965700BBA751 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,9 +19,8 @@ struct GeometryDimension {
   Dimension dimension;
 };
 
+NS_ASSUME_NONNULL_BEGIN
 @interface CairoInterface : NSObject
-+ (void)createPNGFromSVG;
-+ (void)createPDFFromSVG;
-+ (void)createPNGFromPNG;
-+  (void)exportImage:(id<ImageHandle>) sourceHandle toURL:(NSURL*) destinationURL withDimensions: (struct GeometryDimension) dimensions shouldRemoveAlphaChannel: (BOOL) removeAlphaChannel setBackgroundColor: (CGColorRef) backgroundColor error: (NSError**) errorptr;
++  (BOOL)exportImage:(id<ImageHandle> _Nonnull) sourceHandle toURL:(NSURL* _Nonnull) destinationURL withDimensions: (struct GeometryDimension) dimensions shouldRemoveAlphaChannel: (BOOL) removeAlphaChannel setBackgroundColor: (CGColorRef _Nullable) backgroundColor error: (NSError **) error;
 @end
+NS_ASSUME_NONNULL_END
