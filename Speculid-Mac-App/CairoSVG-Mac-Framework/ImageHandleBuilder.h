@@ -8,7 +8,9 @@
 #import <Foundation/Foundation.h>
 #import "ImageHandle.h"
 
+NS_ASSUME_NONNULL_BEGIN
 @interface ImageHandleBuilder : NSObject
-+ (ImageHandleBuilder*) shared;
-- (id<ImageHandle>) imageHandleFromURL:(NSURL*)url error:(NSError**) error;
++ (ImageHandleBuilder* _Nonnull) shared;
+- (id<ImageHandle> _Nullable) imageHandleFromURL:(NSURL* _Nonnull)url error:(NSError**) error;
 @end
+NS_ASSUME_NONNULL_END

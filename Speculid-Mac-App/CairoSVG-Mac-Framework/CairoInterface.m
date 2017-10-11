@@ -26,25 +26,9 @@
   }
 }
 
-+ (void)exportImage:(id<ImageHandle>) sourceHandle toURL:(NSURL*) destinationURL withDimensions: (struct GeometryDimension) dimensions shouldRemoveAlphaChannel: (BOOL) removeAlphaChannel setBackgroundColor: (CGColorRef) backgroundColor error: (NSError**) errorptr {
++ (BOOL)exportImage:(id<ImageHandle>) sourceHandle toURL:(NSURL*) destinationURL withDimensions: (struct GeometryDimension) dimensions shouldRemoveAlphaChannel: (BOOL) removeAlphaChannel setBackgroundColor: (CGColorRef) backgroundColor error: (NSError**) error {
 
-  //RsvgHandle * rsvgHandle;
-  //cairo_surface_t*  sourceSurface;
   cairo_surface_t*  destinationSurface;
-  
-//  if ([sourceURL.pathExtension caseInsensitiveCompare:@"svg"] == NSOrderedSame) {
-//
-//    RsvgDimensionData rsvgDimensions;
-//    GError * error = nil;
-//    rsvgHandle = rsvg_handle_new_from_file(sourceURL.absoluteString.UTF8String , &error);
-//    rsvg_handle_get_dimensions(rsvgHandle, &rsvgDimensions);
-//    originalSize = CGSizeMake(rsvgDimensions.width, rsvgDimensions.height);
-//
-//  } else if ([sourceURL.pathExtension caseInsensitiveCompare:@"png"] == NSOrderedSame) {
-//    sourceSurface = cairo_image_surface_create_from_png("/Users/leo/Documents/Projects/obj-librsvg/obj_librsvgTests/geometry.png");
-//    originalSize = CGSizeMake(cairo_image_surface_get_width(sourceSurface), cairo_image_surface_get_height(sourceSurface));
-//
-//  }
   
   double scale = [self mapSize: sourceHandle.size toDimension: dimensions];
   cairo_format_t format = CAIRO_FORMAT_INVALID;
@@ -67,12 +51,6 @@
   cairo_scale(cr, scale, scale);
   
   BOOL result = [sourceHandle paintTo:cr];
-//  if (sourceSurface != nil) {
-//    cairo_set_source_surface(cr, sourceSurface, 0, 0);
-//    cairo_paint(cr);
-//  } else if (rsvgHandle != nil) {
-//    BOOL result = rsvg_handle_render_cairo(rsvgHandle, cr);
-//  }
   
   if (format != CAIRO_FORMAT_INVALID) {
     
@@ -80,7 +58,7 @@
     NSLog(@"%@, %@", destinationURL.path.UTF8String, status);
   }
   
-  
+  return result;
 }
 
 + (void)createPNGFromSVG
