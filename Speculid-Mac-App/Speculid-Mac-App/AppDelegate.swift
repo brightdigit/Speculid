@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Speculid
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -21,9 +22,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     connection.remoteObjectInterface = interface
     connection.resume()
     
+    
     if let service = connection.remoteObjectProxy as? ServiceProtocol{
-      service.multiply(4, by: 4, withReply: {
-        print($0)
+      guard let url = Bundle.main.url(forResource: "layers", withExtension: "svg") else {
+        return
+      }
+      let exportSpecifications = [32,64,128,256].map { (width) -> ImageSpecification in
+        let file = ImageFile(url: Bundle.main.bundleURL.deletingLastPathComponent().appendingPathComponent("layers.\(width).png"), fileFormat: FileFormat.png)
+        return ImageSpecification(file: file, geometryDimension: .width(Double(width)), removeAlphaChannel: true, backgroundColor: NSColor(red: 1.0, green: 0.3, blue: 1.0, alpha: 1.0))
+      }
+//      service.multiply(4, by: 4, withReply: {
+//        print($0)
+//      })
+      service.exportImageAtURL(url, toSpecifications:exportSpecifications, { (error) in
+        debugPrint(error)
       })
     }
   }

@@ -12,11 +12,12 @@
 #import "CairoInterface.h"
 #import "ImageHandle.h"
 #import "ImageHandleBuilder.h"
-
+#import "GeometryDimension.h"
+#import "ImageFileFormat.h"
 
 @implementation CairoInterface
 
-+ (double) mapSize: (CGSize) size toDimension: (struct GeometryDimension) dimensions {
++ (double) mapSize: (CGSize) size toDimension: (GeometryDimension) dimensions {
   double result = NAN;
   switch (dimensions.dimension) {
     case kWidth:
@@ -24,6 +25,44 @@
     case kHeight:
       return dimensions.value/size.height;
   }
+}
+
++ (BOOL)exportImage:(id<ImageHandle>)sourceHandle withSpecification:(id<ImageSpecificationProtocol>)specification error:(NSError * _Nullable __autoreleasing *)error {
+  cairo_surface_t*  destinationSurface;
+  
+  double scale = [self mapSize: sourceHandle.size toDimension: specification.geometry];
+  cairo_format_t format = CAIRO_FORMAT_INVALID;
+  
+  switch (specification.file.format) {
+    case kPng:
+      format = specification.removeAlphaChannel ? CAIRO_FORMAT_RGB24 : CAIRO_FORMAT_ARGB32;
+      destinationSurface = cairo_image_surface_create(format, (int)(sourceHandle.size.width * scale), (int)(sourceHandle.size.height * scale));
+      break;
+    case kPdf:
+      destinationSurface = cairo_pdf_surface_create(specification.file.url.path.UTF8String,sourceHandle.size.width * scale, sourceHandle.size.height * scale);
+      break;
+    default:
+      *error = [[NSError alloc] initWithDomain:@"CairoErrorDomain" code:200 userInfo:nil];
+      return NO;
+  }
+  
+  cairo_t* cr = cairo_create(destinationSurface);
+  
+  if (specification.backgroundColor != nil) {
+    cairo_set_source_rgb (cr, specification.backgroundColor.red,  specification.backgroundColor.green, specification.backgroundColor.blue);
+    cairo_paint(cr);
+  }
+  
+  cairo_scale(cr, scale, scale);
+  
+  BOOL result = [sourceHandle paintTo:cr];
+  
+  if (format != CAIRO_FORMAT_INVALID) {
+    
+    cairo_status_t status = cairo_surface_write_to_png(destinationSurface, specification.file.url.path.UTF8String);
+  }
+  
+  return result;
 }
 
 + (BOOL)exportImage:(id<ImageHandle>) sourceHandle toURL:(NSURL*) destinationURL withDimensions: (struct GeometryDimension) dimensions shouldRemoveAlphaChannel: (BOOL) removeAlphaChannel setBackgroundColor: (CGColorRef) backgroundColor error: (NSError**) error {

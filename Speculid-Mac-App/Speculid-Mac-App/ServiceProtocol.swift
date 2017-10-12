@@ -10,6 +10,6 @@ import Foundation
 
 @objc
 public protocol ServiceProtocol {
-  func multiply(_ value: Double, by factor: Double, withReply reply: (Double) -> Void)
+  func exportImageAtURL(_ url: URL, toSpecifications specifications: [ImageSpecification], _ callback:  @escaping ((NSError?) -> Void))
 }
 
