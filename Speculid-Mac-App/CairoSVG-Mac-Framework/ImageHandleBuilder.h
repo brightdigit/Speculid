@@ -6,11 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ImageFileProtocol.h"
 #import "ImageHandle.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @interface ImageHandleBuilder : NSObject
 + (ImageHandleBuilder* _Nonnull) shared;
-- (id<ImageHandle> _Nullable) imageHandleFromURL:(NSURL* _Nonnull)url error:(NSError**) error;
+- (id<ImageHandle> _Nullable) imageHandleFromFile: (id<ImageFileProtocol> _Nonnull) file error:(NSError**) error;
 @end
 NS_ASSUME_NONNULL_END
