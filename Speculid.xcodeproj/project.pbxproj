@@ -32,6 +32,7 @@
 		B3136DD51F90E45F0002B7AB /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC61F90E2A20002B7AB /* ServiceProtocol.swift */; };
 		B3136DD61F90E45F0002B7AB /* Speculid_Mac_Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = B3136DBC1F90E27B0002B7AB /* Speculid_Mac_Framework.h */; };
 		B3136DD71F90E4AC0002B7AB /* layers.svg in Resources */ = {isa = PBXBuildFile; fileRef = B3136DC31F90E2A10002B7AB /* layers.svg */; };
+		B3136DD91F90E96A0002B7AB /* cairo.h in Headers */ = {isa = PBXBuildFile; fileRef = B3136DD81F90E96A0002B7AB /* cairo.h */; };
 		B34E82FB1F8FD4EF0032268F /* ImageFileFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E82FF1F8FD6860032268F /* ImageFileProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E83041F8FD90C0032268F /* GlibError.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E83021F8FD90C0032268F /* GlibError.h */; };
@@ -143,6 +144,8 @@
 		B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCollection.swift; sourceTree = "<group>"; };
 		B3136DCB1F90E2A20002B7AB /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
 		B3136DCC1F90E2A20002B7AB /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		B3136DD81F90E96A0002B7AB /* cairo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cairo.h; sourceTree = "<group>"; };
+		B3136DDA1F90EA520002B7AB /* rsvg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rsvg.h; sourceTree = "<group>"; };
 		B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileFormat.h; sourceTree = "<group>"; };
 		B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileProtocol.h; sourceTree = "<group>"; };
 		B34E83021F8FD90C0032268F /* GlibError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlibError.h; sourceTree = "<group>"; };
@@ -339,6 +342,8 @@
 				B35B71251F904CF100BE477E /* SurfaceHandleBuilder.h */,
 				B35B71261F904CF100BE477E /* SurfaceHandleBuilder.m */,
 				B35B71291F9052B200BE477E /* CairoSize.h */,
+				B3136DD81F90E96A0002B7AB /* cairo.h */,
+				B3136DDA1F90EA520002B7AB /* rsvg.h */,
 			);
 			path = cairosvg;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				B34E83041F8FD90C0032268F /* GlibError.h in Headers */,
 				B34E82FF1F8FD6860032268F /* ImageFileProtocol.h in Headers */,
 				B34E83091F8FDCB80032268F /* Dimension.h in Headers */,
+				B3136DD91F90E96A0002B7AB /* cairo.h in Headers */,
 				B37C74B21F8C5C7400DF505B /* PNGImageHandle.h in Headers */,
 				B37C74B01F8C5C7400DF505B /* ImageHandle.h in Headers */,
 				B37C748D1F8C5B5C00DF505B /* CairoSVG.h in Headers */,

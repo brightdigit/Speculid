@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <cairo-pdf.h>
+#import "cairo.h"
 #import "SurfaceHandle.h"
 
 NS_ASSUME_NONNULL_BEGIN

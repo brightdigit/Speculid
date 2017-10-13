@@ -5,7 +5,7 @@
 //  Created by Leo Dion on 9/30/17.
 //
 
-#import <cairo-pdf.h>
+#import "cairo.h"
 #import "PDFSurface.h"
 
 @implementation PDFSurface

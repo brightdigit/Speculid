@@ -6,7 +6,7 @@
 //
 
 #import "ImageHandleBuilder.h"
-#import <librsvg/rsvg.h>
+#import "rsvg.h"
 #import "SVGImageHandle.h"
 #import "PNGImageHandle.h"
 #import "GlibError.h"

@@ -6,9 +6,8 @@
 //  Copyright © 2017 Leo Dion. All rights reserved.
 //
 
-#import <librsvg/rsvg.h>
-#import <cairo-pdf.h>
-
+#import "rsvg.h"
+#import "cairo.h"
 #import "CairoInterface.h"
 #import "ImageHandle.h"
 #import "ImageHandleBuilder.h"
