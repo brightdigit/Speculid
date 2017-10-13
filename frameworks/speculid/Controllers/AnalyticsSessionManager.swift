@@ -5,6 +5,7 @@
 //  Created by Leo Dion on 10/17/16.
 //
 //
+import Foundation
 
 public struct AnalyticsSessionManager: AnalyticsSessionManagerProtocol {
   #if DEBUG && false

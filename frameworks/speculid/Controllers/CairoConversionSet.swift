@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import SpeculidCairo
+import CairoSVG
 
 public struct CairoConversionSet : ImageConversionSetProtocol {
 

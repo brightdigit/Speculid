@@ -6,19 +6,21 @@
 //
 //
 
+import Foundation
+
 let scaleRegex = try! NSRegularExpression(pattern: "(\\d+)x", options: [])
 let sizeRegex = try! NSRegularExpression(pattern: "(\\d+\\.?\\d*)x(\\d+\\.?\\d*)", options: [])
 let numberRegex = try! NSRegularExpression(pattern: "\\d", options: [])
 
 public struct SpeculidDocument : SpeculidDocumentProtocol {
   public let _specifications : SpeculidSpecifications
-  public let _images : [ImageSpecification]
+  public let _images : [AssetSpecification]
   
   public var specifications: SpeculidSpecificationsProtocol {
     return self._specifications
   }
   
-  public var images: [ImageSpecificationProtocol] {
+  public var images: [AssetSpecificationProtocol] {
     return self._images
   }
   
@@ -40,7 +42,7 @@ public struct SpeculidDocument : SpeculidDocumentProtocol {
       return nil
     }
     
-    self._images = images.flatMap { (dictionary) -> ImageSpecification? in
+    self._images = images.flatMap { (dictionary) -> AssetSpecification? in
       let scale: CGFloat?
       let size: CGSize?
       
@@ -63,7 +65,7 @@ public struct SpeculidDocument : SpeculidDocumentProtocol {
       
       let filename = dictionary["filename"]
       
-      return ImageSpecification(idiom: idiom, scale: scale, size: size, filename: filename)
+      return AssetSpecification(idiom: idiom, scale: scale, size: size, filename: filename)
     }
     
     

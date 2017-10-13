@@ -8,6 +8,6 @@
 
 public protocol SpeculidDocumentProtocol {
   var specifications : SpeculidSpecificationsProtocol { get }
-  var images : [ImageSpecificationProtocol] { get }
+  var images : [AssetSpecificationProtocol] { get }
   
 }

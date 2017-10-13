@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AppKit
 
 @available(*, deprecated: 2.0.0)
 extension CFRunLoopTimer {

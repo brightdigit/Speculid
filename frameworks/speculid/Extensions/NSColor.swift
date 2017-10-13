@@ -8,6 +8,9 @@
 //  Modified by Leo Dion on 12/21/16.
 //
 
+import Foundation
+import AppKit
+import CairoSVG
 /**
  MissingHashMarkAsPrefix:   "Invalid RGB string, missing '#' as prefix"
  UnableToScanHexValue:      "Scan hex error"
@@ -138,6 +141,20 @@ extension NSColor {
     } else {
       return String(format: "#%02X%02X%02X", Int(r * 255), Int(g * 255), Int(b * 255))
     }
+  }
+}
+
+extension NSColor : CairoColorProtocol {
+  public var red: Double {
+    return Double(self.redComponent)
+  }
+  
+  public var green: Double {
+    return Double(self.greenComponent)
+  }
+  
+  public var blue: Double {
+    return Double(self.blueComponent)
   }
 }
 
