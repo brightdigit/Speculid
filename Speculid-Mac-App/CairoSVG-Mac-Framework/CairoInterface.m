@@ -14,6 +14,9 @@
 #import "ImageHandleBuilder.h"
 #import "GeometryDimension.h"
 #import "ImageFileFormat.h"
+#import "SurfaceHandle.h"
+#import "SurfaceHandleBuilder.h"
+#import "CairoSize.h"
 
 @implementation CairoInterface
 
@@ -28,26 +31,40 @@
 }
 
 + (BOOL)exportImage:(id<ImageHandle>)sourceHandle withSpecification:(id<ImageSpecificationProtocol>)specification error:(NSError * _Nullable __autoreleasing *)error {
-  cairo_surface_t*  destinationSurface;
-  
+  //cairo_surface_t*  destinationSurface;
+  NSError * surfaceError;
+  //id<SurfaceHandle> surface = [[SurfaceHandleBuilder shared] surfaceHandleFromFile:specification.file error:&surfaceError];
   double scale = [self mapSize: sourceHandle.size toDimension: specification.geometry];
-  cairo_format_t format = CAIRO_FORMAT_INVALID;
   
-  switch (specification.file.format) {
-    case kPng:
-      format = specification.removeAlphaChannel ? CAIRO_FORMAT_RGB24 : CAIRO_FORMAT_ARGB32;
-      destinationSurface = cairo_image_surface_create(format, (int)(sourceHandle.size.width * scale), (int)(sourceHandle.size.height * scale));
-      break;
-    case kPdf:
-      destinationSurface = cairo_pdf_surface_create(specification.file.url.path.UTF8String,sourceHandle.size.width * scale, sourceHandle.size.height * scale);
-      break;
-    default:
-      *error = [[NSError alloc] initWithDomain:@"CairoErrorDomain" code:200 userInfo:nil];
-      return NO;
+  CairoSize size;
+  size.width = (int)(sourceHandle.size.width * scale);
+  size.height = (int)(sourceHandle.size.height * scale);
+  id<SurfaceHandle> surface = [[SurfaceHandleBuilder shared] surfaceHandleForFile:specification.file withSize:size andAlphaChannel:!(specification.removeAlphaChannel) error:&surfaceError];
+  
+  if (surfaceError) {
+    *error = surfaceError;
+    return NO;
   }
   
-  cairo_t* cr = cairo_create(destinationSurface);
+//  cairo_format_t format = CAIRO_FORMAT_INVALID;
+//
+//  switch (specification.file.format) {
+//    case kPng:
+//      format = specification.removeAlphaChannel ? CAIRO_FORMAT_RGB24 : CAIRO_FORMAT_ARGB32;
+//      destinationSurface = cairo_image_surface_create(format, (int)(sourceHandle.size.width * scale), (int)(sourceHandle.size.height * scale));
+//      break;
+//    case kPdf:
+//      destinationSurface = cairo_pdf_surface_create(specification.file.url.path.UTF8String,sourceHandle.size.width * scale, sourceHandle.size.height * scale);
+//      break;
+//    default:
+//      *error = [[NSError alloc] initWithDomain:@"CairoErrorDomain" code:200 userInfo:nil];
+//      return NO;
+//  }
+//
   
+  //cairo_t* cr = cairo_create(destinationSurface);
+  cairo_t* cr = [surface cairo];
+
   if (specification.backgroundColor != nil) {
     cairo_set_source_rgb (cr, specification.backgroundColor.red,  specification.backgroundColor.green, specification.backgroundColor.blue);
     cairo_paint(cr);
@@ -57,12 +74,24 @@
   
   BOOL result = [sourceHandle paintTo:cr];
   
-  if (format != CAIRO_FORMAT_INVALID) {
-    
-    cairo_status_t status = cairo_surface_write_to_png(destinationSurface, specification.file.url.path.UTF8String);
+  if (!result) {
+    *error = [[NSError alloc] initWithDomain:@"CairoErrorDomain" code:200 userInfo:nil];
+    return NO;
   }
   
-  return result;
+  NSError * finishError;
+  [surface finishWithError: &finishError];
+  
+  if (finishError) {
+    *error = finishError;
+    return NO;
+  }
+//  if (format != CAIRO_FORMAT_INVALID) {
+//
+//    cairo_status_t status = cairo_surface_write_to_png(destinationSurface, specification.file.url.path.UTF8String);
+//  }
+  
+  return YES;
 }
 
 + (BOOL)exportImage:(id<ImageHandle>) sourceHandle toURL:(NSURL*) destinationURL withDimensions: (struct GeometryDimension) dimensions shouldRemoveAlphaChannel: (BOOL) removeAlphaChannel setBackgroundColor: (CGColorRef) backgroundColor error: (NSError**) error {
