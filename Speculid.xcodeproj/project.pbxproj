@@ -460,7 +460,7 @@
 			children = (
 				B3136DC31F90E2A10002B7AB /* layers.svg */,
 				B3136DDD1F90EF460002B7AB /* Application.swift */,
-				B37C74431F8C58F300DF505B /* Assets.xcassets */,
+				B3136EA01F9107B40002B7AB /* assets */,
 				B37C74481F8C58F300DF505B /* Info.plist */,
 				B37C74491F8C58F300DF505B /* Speculid_Mac_App.entitlements */,
 				B35B71221F9041B900BE477E /* main.swift */,
@@ -616,6 +616,14 @@
 				B3136E911F90FD3D0002B7AB /* Info.plist */,
 			);
 			path = cairosvg;
+			sourceTree = "<group>";
+		};
+		B3136EA01F9107B40002B7AB /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				B37C74431F8C58F300DF505B /* Assets.xcassets */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 		B37C74351F8C58F300DF505B = {
