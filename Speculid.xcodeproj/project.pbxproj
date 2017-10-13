@@ -324,7 +324,7 @@
 		B35B71251F904CF100BE477E /* SurfaceHandleBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurfaceHandleBuilder.h; sourceTree = "<group>"; };
 		B35B71261F904CF100BE477E /* SurfaceHandleBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurfaceHandleBuilder.m; sourceTree = "<group>"; };
 		B35B71291F9052B200BE477E /* CairoSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CairoSize.h; sourceTree = "<group>"; };
-		B37C743E1F8C58F300DF505B /* Speculid-Mac-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speculid-Mac-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B37C743E1F8C58F300DF505B /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37C74431F8C58F300DF505B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B37C74481F8C58F300DF505B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B37C74491F8C58F300DF505B /* Speculid_Mac_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speculid_Mac_App.entitlements; sourceTree = "<group>"; };
@@ -645,7 +645,7 @@
 		B37C743F1F8C58F300DF505B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B37C743E1F8C58F300DF505B /* Speculid-Mac-App.app */,
+				B37C743E1F8C58F300DF505B /* Speculid.app */,
 				B37C74531F8C590D00DF505B /* Speculid-Mac-XPC.xpc */,
 				B37C74731F8C5ADA00DF505B /* Speculid.framework */,
 				B37C74891F8C5B5C00DF505B /* CairoSVG.framework */,
@@ -850,7 +850,7 @@
 			);
 			name = "Speculid-Mac-App";
 			productName = "Speculid-Mac-App";
-			productReference = B37C743E1F8C58F300DF505B /* Speculid-Mac-App.app */;
+			productReference = B37C743E1F8C58F300DF505B /* Speculid.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B37C74521F8C590D00DF505B /* Speculid-Mac-XPC */ = {
@@ -1755,7 +1755,8 @@
 				INFOPLIST_FILE = "$(SRCROOT)/applications/mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-App";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Speculid;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1773,7 +1774,8 @@
 				INFOPLIST_FILE = "$(SRCROOT)/applications/mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-App";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Speculid;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
