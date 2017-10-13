@@ -7,5 +7,6 @@
 //
 
 public enum GeometryValue {
-  case Width(Int), Height(Int)
+  case width(Int)
+  case height(Int)
 }

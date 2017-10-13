@@ -8,11 +8,11 @@
 
 import Foundation
 
-public typealias ImageConversionPair = (image: ImageSpecificationProtocol,conversion: ConversionResult?)
+public typealias ImageConversionPair = (image: AssetSpecificationProtocol,conversion: ConversionResult?)
 public typealias ImageConversionDictionary = [String:ImageConversionPair]
 
 extension SpeculidSpecificationsProtocol {
-  public func destination(forImage image: ImageSpecificationProtocol) -> String {
+  public func destination(forImage image: AssetSpecificationProtocol) -> String {
     if let filename = image.filename {
       return filename
     } else if let scale = image.scale {

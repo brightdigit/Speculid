@@ -5,6 +5,7 @@
 //  Created by Leo Dion on 10/17/16.
 //
 //
+import Foundation
 
 public struct AnalyticsConfiguration: AnalyticsConfigurationProtocol {
   public let version = 1

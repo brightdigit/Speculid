@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct ImageSpecification : ImageSpecificationProtocol{
+public struct AssetSpecification : AssetSpecificationProtocol{
   public let idiom : ImageIdiom
   public let scale : CGFloat?
   public let size : CGSize?

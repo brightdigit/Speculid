@@ -6,6 +6,9 @@
 //
 //
 
+import Foundation
+import AppKit
+
 public struct SpeculidSpecifications : SpeculidSpecificationsProtocol {
   public let contentsDirectoryURL : URL
   public let sourceImageURL : URL

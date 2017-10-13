@@ -6,26 +6,29 @@
 //
 //
 
+import Foundation
+import CairoSVG
+
 extension GeometryValue : CustomStringConvertible {
   func scaledBy(_ scale: Int) -> GeometryValue {
     switch self {
-    case .Width(let value) : return .Width(value * scale)
-    case .Height(let value): return .Height(value * scale)
+    case .width(let value) : return .width(value * scale)
+    case .height(let value): return .height(value * scale)
     }
   }
   
   public var description : String {
     switch self {
-    case .Width(let value): return "\(value)"
-    case .Height(let value): return "x\(value)"
+    case .width(let value): return "\(value)"
+    case .height(let value): return "x\(value)"
     }
   }
 }
 
 public struct Geometry : GeometryProtocol {
-  public let value: GeometryValue?
+  public let value: GeometryValue
   public func text(scaledBy scale: Int) -> String {
-    return value!.scaledBy(scale).description
+    return value.scaledBy(scale).description
   }
   
   public struct Regex {
@@ -49,14 +52,22 @@ public struct Geometry : GeometryProtocol {
       return Int(string[range])
       }.first!
     if string.lowercased().characters.first == "x" {
-      value = .Height(intValue)
+      value = .height(intValue)
     } else {
-      value = .Width(intValue)
+      value = .width(intValue)
     }
     self.value = value
   }
   
   public var description: String {
-    return self.value!.description
+    return self.value.description
+  }
+  
+  
+  init (dimension: CairoSVG.Dimension, value: Int) {
+    switch (dimension) {
+    case .height: self.value = .height(value)
+    case .width: self.value = .width(value)
+    }
   }
 }

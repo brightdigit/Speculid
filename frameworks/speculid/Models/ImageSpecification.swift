@@ -51,7 +51,7 @@ import CairoSVG
   }
   
   public var geometry: CairoSVG.GeometryDimension {
-    switch (self.geometryDimension) {
+    switch (self.geometryDimension.value) {
     case .height(let value): return CairoSVG.GeometryDimension(value: Int32(value), dimension: .height)
     case .width(let value): return CairoSVG.GeometryDimension(value: Int32(value), dimension: .width)
     }

@@ -5,6 +5,7 @@
 //  Created by Leo Dion on 10/18/16.
 //
 //
+import Foundation
 
 public struct ClientIdentifier: ClientIdentifierDelegate {
   public static let shared = ClientIdentifier()

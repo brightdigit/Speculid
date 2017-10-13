@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftVer
 
 public struct SpeculidApplication : SpeculidApplicationProtocol {
   let configuration : SpeculidConfigurationProtocol
@@ -21,8 +20,8 @@ public struct SpeculidApplication : SpeculidApplicationProtocol {
     return SpeculidBuilder(tracker: self.tracker, configuration: self.configuration)
   }
   
-  public var version : Version {
-    return Speculid.version
-  }
+//  public var version : Version {
+//    return Speculid.version
+//  }
   
 }

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import SpeculidCairo
+import CairoSVG
 
 public struct CairoConversionSetBuilder : ImageConversionSetBuilderProtocol {
   public func buildConversions(forDocument document: SpeculidDocumentProtocol, withConfiguration configuration: SpeculidConfigurationProtocol) -> ImageConversionSetProtocol? {
