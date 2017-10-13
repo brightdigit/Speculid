@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AppKit
 
 open class Application : NSApplication {
   var statusItem: NSStatusItem!

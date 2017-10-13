@@ -33,6 +33,8 @@
 		B3136DD61F90E45F0002B7AB /* Speculid_Mac_Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = B3136DBC1F90E27B0002B7AB /* Speculid_Mac_Framework.h */; };
 		B3136DD71F90E4AC0002B7AB /* layers.svg in Resources */ = {isa = PBXBuildFile; fileRef = B3136DC31F90E2A10002B7AB /* layers.svg */; };
 		B3136DD91F90E96A0002B7AB /* cairo.h in Headers */ = {isa = PBXBuildFile; fileRef = B3136DD81F90E96A0002B7AB /* cairo.h */; };
+		B3136DDE1F90EF470002B7AB /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DDD1F90EF460002B7AB /* Application.swift */; };
+		B3136DDF1F90EFB10002B7AB /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DDB1F90EF370002B7AB /* Application.swift */; };
 		B34E82FB1F8FD4EF0032268F /* ImageFileFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E82FF1F8FD6860032268F /* ImageFileProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E83041F8FD90C0032268F /* GlibError.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E83021F8FD90C0032268F /* GlibError.h */; };
@@ -137,7 +139,7 @@
 		B3136DBF1F90E27B0002B7AB /* GeometryDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryDimension.swift; sourceTree = "<group>"; };
 		B3136DC01F90E27B0002B7AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3136DC11F90E27B0002B7AB /* FileFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileFormat.swift; sourceTree = "<group>"; };
-		B3136DC31F90E2A10002B7AB /* layers.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = layers.svg; path = ../../__badxpc/layers.svg; sourceTree = "<group>"; };
+		B3136DC31F90E2A10002B7AB /* layers.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = layers.svg; sourceTree = "<group>"; };
 		B3136DC51F90E2A20002B7AB /* ImageSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSpecification.swift; sourceTree = "<group>"; };
 		B3136DC61F90E2A20002B7AB /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		B3136DC71F90E2A20002B7AB /* GeometryDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryDimension.swift; sourceTree = "<group>"; };
@@ -146,6 +148,8 @@
 		B3136DCC1F90E2A20002B7AB /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B3136DD81F90E96A0002B7AB /* cairo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cairo.h; sourceTree = "<group>"; };
 		B3136DDA1F90EA520002B7AB /* rsvg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rsvg.h; sourceTree = "<group>"; };
+		B3136DDB1F90EF370002B7AB /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		B3136DDD1F90EF460002B7AB /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileFormat.h; sourceTree = "<group>"; };
 		B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileProtocol.h; sourceTree = "<group>"; };
 		B34E83021F8FD90C0032268F /* GlibError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlibError.h; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 		B3136DB71F90E2690002B7AB /* mac */ = {
 			isa = PBXGroup;
 			children = (
+				B3136DC31F90E2A10002B7AB /* layers.svg */,
+				B3136DDD1F90EF460002B7AB /* Application.swift */,
 				B37C74431F8C58F300DF505B /* Assets.xcassets */,
 				B37C74481F8C58F300DF505B /* Info.plist */,
 				B37C74491F8C58F300DF505B /* Speculid_Mac_App.entitlements */,
@@ -246,13 +252,13 @@
 		B3136DB81F90E27B0002B7AB /* speculid */ = {
 			isa = PBXGroup;
 			children = (
+				B3136DDB1F90EF370002B7AB /* Application.swift */,
 				B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */,
 				B3136DC11F90E27B0002B7AB /* FileFormat.swift */,
 				B3136DC71F90E2A20002B7AB /* GeometryDimension.swift */,
 				B3136DBB1F90E27B0002B7AB /* ImageFile.swift */,
 				B3136DC51F90E2A20002B7AB /* ImageSpecification.swift */,
 				B3136DC01F90E27B0002B7AB /* Info.plist */,
-				B3136DC31F90E2A10002B7AB /* layers.svg */,
 				B3136DCB1F90E2A20002B7AB /* NSColor.swift */,
 				B3136DCC1F90E2A20002B7AB /* Service.swift */,
 				B3136DC61F90E2A20002B7AB /* ServiceProtocol.swift */,
@@ -576,6 +582,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3136DDE1F90EF470002B7AB /* Application.swift in Sources */,
 				B35B71231F9041B900BE477E /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +600,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3136DDF1F90EFB10002B7AB /* Application.swift in Sources */,
 				B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */,
 				B3136DD41F90E45F0002B7AB /* Service.swift in Sources */,
 				B3136DD11F90E45F0002B7AB /* ImageFile.swift in Sources */,
