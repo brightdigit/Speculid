@@ -101,6 +101,9 @@
 		B3136E901F90FD3D0002B7AB /* CairoSVGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E8F1F90FD3D0002B7AB /* CairoSVGTests.swift */; };
 		B3136E921F90FD3D0002B7AB /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
 		B3136E9F1F9101A70002B7AB /* VCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E9D1F91019F0002B7AB /* VCS.swift */; };
+		B3136EA31F910BC90002B7AB /* svg-appicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3136EA11F910BC90002B7AB /* svg-appicon.speculid */; };
+		B3136EAF1F9119620002B7AB /* assets in Resources */ = {isa = PBXBuildFile; fileRef = B3136EAE1F9119510002B7AB /* assets */; };
+		B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */; };
 		B34E82FB1F8FD4EF0032268F /* ImageFileFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E82FF1F8FD6860032268F /* ImageFileProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E83041F8FD90C0032268F /* GlibError.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E83021F8FD90C0032268F /* GlibError.h */; };
@@ -313,6 +316,9 @@
 		B3136E9A1F90FFB10002B7AB /* CairoSVGBridge.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CairoSVGBridge.release.xcconfig; sourceTree = "<group>"; };
 		B3136E9B1F90FFB10002B7AB /* CairoSVGBridge.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CairoSVGBridge.debug.xcconfig; sourceTree = "<group>"; };
 		B3136E9D1F91019F0002B7AB /* VCS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCS.swift; sourceTree = "<group>"; };
+		B3136EA11F910BC90002B7AB /* svg-appicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-appicon.speculid"; sourceTree = "<group>"; };
+		B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-trayicon.speculid"; sourceTree = "<group>"; };
+		B3136EAE1F9119510002B7AB /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileFormat.h; sourceTree = "<group>"; };
 		B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileProtocol.h; sourceTree = "<group>"; };
 		B34E83021F8FD90C0032268F /* GlibError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlibError.h; sourceTree = "<group>"; };
@@ -458,7 +464,6 @@
 		B3136DB71F90E2690002B7AB /* mac */ = {
 			isa = PBXGroup;
 			children = (
-				B3136DC31F90E2A10002B7AB /* layers.svg */,
 				B3136DDD1F90EF460002B7AB /* Application.swift */,
 				B3136EA01F9107B40002B7AB /* assets */,
 				B37C74481F8C58F300DF505B /* Info.plist */,
@@ -546,26 +551,26 @@
 		B3136E081F90F73B0002B7AB /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B3136DC61F90E2A20002B7AB /* ServiceProtocol.swift */,
-				B3136E091F90F73B0002B7AB /* SpeculidSpecificationsProtocol.swift */,
-				B3136E0A1F90F73B0002B7AB /* ApplicationPathDataSource.swift */,
-				B3136E0B1F90F73B0002B7AB /* ImageConversionSetBuilderProtocol.swift */,
-				B3136E0C1F90F73B0002B7AB /* ImageConversionTaskProtocol.swift */,
-				B3136E0D1F90F73B0002B7AB /* ClientIdentifierDelegate.swift */,
-				B3136E0E1F90F73B0002B7AB /* ProcessProtocol.swift */,
-				B3136E0F1F90F73B0002B7AB /* ImageConversionSetProtocol.swift */,
-				B3136E101F90F73B0002B7AB /* SpeculidDocumentProtocol.swift */,
-				B3136E111F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift */,
+				B3136E171F90F73B0002B7AB /* AnalyticsConfigurationProtocol.swift */,
 				B3136E121F90F73B0002B7AB /* AnalyticsEventProtocol.swift */,
 				B3136E131F90F73B0002B7AB /* AnalyticsSessionManagerProtocol.swift */,
-				B3136E141F90F73B0002B7AB /* ImageSpecificationProtocol.swift */,
-				B3136E151F90F73B0002B7AB /* GeometryProtocol.swift */,
-				B3136E161F90F73B0002B7AB /* SpeculidArgumentsProtocol.swift */,
-				B3136E171F90F73B0002B7AB /* AnalyticsConfigurationProtocol.swift */,
 				B3136E181F90F73B0002B7AB /* AnalyticsTrackerProtocol.swift */,
-				B3136E191F90F73B0002B7AB /* SpeculidBuilderProtocol.swift */,
-				B3136E1A1F90F73B0002B7AB /* SpeculidApplicationProtocol.swift */,
+				B3136E0A1F90F73B0002B7AB /* ApplicationPathDataSource.swift */,
+				B3136E0D1F90F73B0002B7AB /* ClientIdentifierDelegate.swift */,
+				B3136E151F90F73B0002B7AB /* GeometryProtocol.swift */,
 				B3136E1B1F90F73B0002B7AB /* ImageConversionBuilderProtocol.swift */,
+				B3136E0B1F90F73B0002B7AB /* ImageConversionSetBuilderProtocol.swift */,
+				B3136E0F1F90F73B0002B7AB /* ImageConversionSetProtocol.swift */,
+				B3136E0C1F90F73B0002B7AB /* ImageConversionTaskProtocol.swift */,
+				B3136E141F90F73B0002B7AB /* ImageSpecificationProtocol.swift */,
+				B3136E0E1F90F73B0002B7AB /* ProcessProtocol.swift */,
+				B3136DC61F90E2A20002B7AB /* ServiceProtocol.swift */,
+				B3136E1A1F90F73B0002B7AB /* SpeculidApplicationProtocol.swift */,
+				B3136E161F90F73B0002B7AB /* SpeculidArgumentsProtocol.swift */,
+				B3136E191F90F73B0002B7AB /* SpeculidBuilderProtocol.swift */,
+				B3136E111F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift */,
+				B3136E101F90F73B0002B7AB /* SpeculidDocumentProtocol.swift */,
+				B3136E091F90F73B0002B7AB /* SpeculidSpecificationsProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -621,6 +626,10 @@
 		B3136EA01F9107B40002B7AB /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				B3136EAE1F9119510002B7AB /* assets */,
+				B3136DC31F90E2A10002B7AB /* layers.svg */,
+				B3136EA11F910BC90002B7AB /* svg-appicon.speculid */,
+				B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */,
 				B37C74431F8C58F300DF505B /* Assets.xcassets */,
 			);
 			path = assets;
@@ -832,6 +841,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B37C744C1F8C58F300DF505B /* Build configuration list for PBXNativeTarget "Speculid-Mac-App" */;
 			buildPhases = (
+				B3136EB11F912CE90002B7AB /* ShellScript */,
 				6B0E6A3126F4611E46C09D7C /* [CP] Check Pods Manifest.lock */,
 				B37C743A1F8C58F300DF505B /* Sources */,
 				B37C743B1F8C58F300DF505B /* Frameworks */,
@@ -1013,8 +1023,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */,
+				B3136EAF1F9119620002B7AB /* assets in Resources */,
 				B3136DD71F90E4AC0002B7AB /* layers.svg in Resources */,
 				B37C74441F8C58F300DF505B /* Assets.xcassets in Resources */,
+				B3136EA31F910BC90002B7AB /* svg-appicon.speculid in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1254,6 +1267,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if git rev-parse --git-dir > /dev/null 2>&1; then\ntouch ${SRCROOT}/.version\nstart=1\nversion_file=`< ${SRCROOT}/.version`\nversion=${version_file:-${start}}\nexport VCS_EXTRA=$version\necho \"Incrementing Version Number\"\n\"${SRCROOT}/autorevision.sh\" -t swift > \"${SRCROOT}/frameworks/speculid/Models/VCS.swift\"\necho `expr ${VCS_EXTRA} + 1` >${SRCROOT}/.version\nfi";
+		};
+		B3136EB11F912CE90002B7AB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -Rv applications/mac/assets/Assets.xcassets/ applications/mac/assets/assets/";
 		};
 		B37C74B71F8C5CB500DF505B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1542,6 +1568,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 503182BFEED5FCC7A0FD7113 /* Pods-Speculid-Mac-AppUITests.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -1550,6 +1577,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "Speculid-Mac-App";
 			};
@@ -1559,6 +1587,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5598DB627CD85D918F6EAC73 /* Pods-Speculid-Mac-AppUITests.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -1567,6 +1596,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "Speculid-Mac-App";
 			};
@@ -1576,6 +1606,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1A1D3098AA00507F322B5177 /* Pods-SpeculidTests.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -1584,6 +1615,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SpeculidTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1592,6 +1624,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7A962F08D51F2247E1ADBEF /* Pods-SpeculidTests.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -1600,6 +1633,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SpeculidTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -1608,6 +1642,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB3CD055FBA18C9FF21D971C /* Pods-CairoSVGTests.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -1616,6 +1651,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.CairoSVGTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1624,6 +1660,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 33189C1A2DCDF9FDE0D52DB2 /* Pods-CairoSVGTests.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -1632,6 +1669,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.CairoSVGTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -1749,6 +1787,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = applications/mac/Speculid_Mac_App.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -1757,6 +1796,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-App";
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = Speculid;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1768,6 +1808,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = applications/mac/Speculid_Mac_App.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -1776,6 +1817,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-App";
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = Speculid;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -1786,6 +1828,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -1793,6 +1836,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-XPC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -1805,6 +1849,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -1812,6 +1857,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-XPC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 			};

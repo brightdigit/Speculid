@@ -25,4 +25,11 @@
   return YES;
 }
 
+- (void)dealloc
+{
+  cairo_surface_finish(_surface);
+  cairo_surface_destroy(_surface);
+  _surface = nil;
+}
+
 @end
