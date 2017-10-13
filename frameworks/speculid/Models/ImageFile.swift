@@ -41,3 +41,20 @@ public class ImageFile : NSObject, ImageFileProtocol, NSSecureCoding {
     return self.fileFormat.imageFileFormat
   }
 }
+
+extension ImageFile {
+  public convenience init?(url: URL) {
+    let pathExtension = url.pathExtension
+    let fileFormat : FileFormat
+    if pathExtension.caseInsensitiveCompare("png") == .orderedSame {
+      fileFormat = .png
+    } else if pathExtension.caseInsensitiveCompare("svg") == .orderedSame {
+      fileFormat = .svg
+    } else if pathExtension.caseInsensitiveCompare("pdf") == .orderedSame {
+      fileFormat = .pdf
+    } else {
+      return nil
+    }
+    self.init(url: url, fileFormat: fileFormat)
+  }
+}

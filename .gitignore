@@ -159,9 +159,6 @@ __PROJECT_NAME__.framework.zip
 examples/*/*.xcassets/*/*.png
 examples/*/*.xcassets/*/*.pdf
 
-**/*.xcassets/*/*.png
-**/*.xcassets/*/*.pdf
-
 playgrounds
 
 .version
@@ -194,3 +191,4 @@ Products
 
 CairoSVGBridge*.xcconfig
 VCS.swift
+applications/mac/assets/assets

@@ -28,7 +28,7 @@ static SurfaceHandleBuilder * _shared = nil;
   cairo_surface_t* destinationSurface;
     switch (file.format) {
       case kPng:
-        format = containsAlphaChannel ? CAIRO_FORMAT_RGB24 : CAIRO_FORMAT_ARGB32;
+        format = containsAlphaChannel ? CAIRO_FORMAT_ARGB32 : CAIRO_FORMAT_RGB24;
         destinationSurface = cairo_image_surface_create(format, size.width, size.height);
         return [[PNGSurface alloc] initWithSurface:destinationSurface format:format andDestinationURL:file.url];
       case kPdf:
