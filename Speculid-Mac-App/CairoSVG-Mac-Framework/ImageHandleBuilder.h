@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @interface ImageHandleBuilder : NSObject
-+ (ImageHandleBuilder* _Nonnull) shared;
+@property (class, nonatomic, assign, readonly) ImageHandleBuilder* _Nonnull shared;
 - (id<ImageHandle> _Nullable) imageHandleFromFile: (id<ImageFileProtocol> _Nonnull) file error:(NSError**) error;
 @end
 NS_ASSUME_NONNULL_END

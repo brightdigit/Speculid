@@ -10,16 +10,6 @@ import Cocoa
 import CairoSVG
 
 
-
-
-
-
-
-
-
-
-
-
 public final class Service: NSObject, ServiceProtocol {
   public func exportImageAtURL(_ url: URL, toSpecifications specifications: [ImageSpecification], _ callback: @escaping ((NSError?) -> Void)) {
     
@@ -27,7 +17,7 @@ public final class Service: NSObject, ServiceProtocol {
     let imageFile = ImageFile(url: url, fileFormat: .svg)
     let builtImageHandle : ImageHandle?
     do {
-      builtImageHandle = try ImageHandleBuilder.shared().imageHandle(fromFile: imageFile)
+      builtImageHandle = try ImageHandleBuilder.shared.imageHandle(fromFile: imageFile)
     } catch let error as NSError {
       callback(error)
       return
