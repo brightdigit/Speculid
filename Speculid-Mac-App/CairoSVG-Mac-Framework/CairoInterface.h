@@ -13,7 +13,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @interface CairoInterface : NSObject
-//+  (BOOL)exportImage:(id<ImageHandle> _Nonnull) sourceHandle toURL:(NSURL* _Nonnull) destinationURL withDimensions: (GeometryDimension) dimensions shouldRemoveAlphaChannel: (BOOL) removeAlphaChannel setBackgroundColor: (CGColorRef _Nullable) backgroundColor error: (NSError **) error;
 +  (BOOL)exportImage:(id<ImageHandle> _Nonnull) sourceHandle withSpecification: (id<ImageSpecificationProtocol> _Nonnull) specification error: (NSError **) error;
 @end
 NS_ASSUME_NONNULL_END

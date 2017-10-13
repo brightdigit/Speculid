@@ -6,7 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SurfaceHandle.h"
 
-@interface PDFSurface : NSObject
-
+NS_ASSUME_NONNULL_BEGIN
+@interface PDFSurface : NSObject<SurfaceHandle>
+@property (readonly, nonatomic) cairo_surface_t* surface;
+- (id) initWithSurface: (cairo_surface_t*) surface;
 @end
+NS_ASSUME_NONNULL_END

@@ -37,6 +37,9 @@
 		B35B71211F903F4700BE477E /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35B71201F903F4700BE477E /* NSColor.swift */; };
 		B35B71231F9041B900BE477E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35B71221F9041B900BE477E /* main.swift */; };
 		B35B71241F904B9400BE477E /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35B71111F903DCA00BE477E /* ServiceProtocol.swift */; };
+		B35B71271F904CF100BE477E /* SurfaceHandleBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = B35B71251F904CF100BE477E /* SurfaceHandleBuilder.h */; };
+		B35B71281F904CF100BE477E /* SurfaceHandleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B35B71261F904CF100BE477E /* SurfaceHandleBuilder.m */; };
+		B35B712A1F9052B200BE477E /* CairoSize.h in Headers */ = {isa = PBXBuildFile; fileRef = B35B71291F9052B200BE477E /* CairoSize.h */; };
 		B37C74441F8C58F300DF505B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B37C74431F8C58F300DF505B /* Assets.xcassets */; };
 		B37C745E1F8C590D00DF505B /* Speculid-Mac-XPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = B37C74531F8C590D00DF505B /* Speculid-Mac-XPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B37C74641F8C592400DF505B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C74631F8C592400DF505B /* main.swift */; };
@@ -142,6 +145,9 @@
 		B35B711E1F903E4500BE477E /* ImageSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSpecification.swift; sourceTree = "<group>"; };
 		B35B71201F903F4700BE477E /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
 		B35B71221F9041B900BE477E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B35B71251F904CF100BE477E /* SurfaceHandleBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurfaceHandleBuilder.h; sourceTree = "<group>"; };
+		B35B71261F904CF100BE477E /* SurfaceHandleBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurfaceHandleBuilder.m; sourceTree = "<group>"; };
+		B35B71291F9052B200BE477E /* CairoSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CairoSize.h; sourceTree = "<group>"; };
 		B37C743E1F8C58F300DF505B /* Speculid-Mac-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speculid-Mac-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37C74431F8C58F300DF505B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B37C74481F8C58F300DF505B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -309,6 +315,9 @@
 				B34E83061F8FDC4C0032268F /* GeometryDimension.h */,
 				B34E83081F8FDCB80032268F /* Dimension.h */,
 				B34E830A1F8FDDAC0032268F /* CairoColorProtocol.h */,
+				B35B71251F904CF100BE477E /* SurfaceHandleBuilder.h */,
+				B35B71261F904CF100BE477E /* SurfaceHandleBuilder.m */,
+				B35B71291F9052B200BE477E /* CairoSize.h */,
 			);
 			path = "CairoSVG-Mac-Framework";
 			sourceTree = "<group>";
@@ -338,9 +347,11 @@
 				B37C748D1F8C5B5C00DF505B /* CairoSVG.h in Headers */,
 				B34E83071F8FDCA30032268F /* GeometryDimension.h in Headers */,
 				B34E830B1F8FDDAC0032268F /* CairoColorProtocol.h in Headers */,
+				B35B712A1F9052B200BE477E /* CairoSize.h in Headers */,
 				B34E82FB1F8FD4EF0032268F /* ImageFileFormat.h in Headers */,
 				B37C74A81F8C5C7400DF505B /* ImageSpecificationProtocol.h in Headers */,
 				B37C74AA1F8C5C7400DF505B /* SurfaceHandle.h in Headers */,
+				B35B71271F904CF100BE477E /* SurfaceHandleBuilder.h in Headers */,
 				B37C74B11F8C5C7400DF505B /* PNGSurface.h in Headers */,
 				B37C74A41F8C5C7400DF505B /* SVGImageHandle.h in Headers */,
 				B37C74AB1F8C5C7400DF505B /* ImageHandleBuilder.h in Headers */,
@@ -576,6 +587,7 @@
 				B37C74AF1F8C5C7400DF505B /* ImageHandleBuilder.m in Sources */,
 				B37C74AC1F8C5C7400DF505B /* PDFSurface.m in Sources */,
 				B37C74AD1F8C5C7400DF505B /* SVGImageHandle.m in Sources */,
+				B35B71281F904CF100BE477E /* SurfaceHandleBuilder.m in Sources */,
 				B37C74AE1F8C5C7400DF505B /* PNGSurface.m in Sources */,
 				B37C74A61F8C5C7400DF505B /* CairoInterface.m in Sources */,
 			);
