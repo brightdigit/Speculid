@@ -42,21 +42,4 @@ static ImageHandleBuilder * _shared = nil;
   *error = [[NSError alloc] init];
   return nil;
 }
-
-- (id<ImageHandle>) imageHandleFromURL:(NSURL *)url withFormat:(ImageFileFormat)format  error:(NSError **)error {
-  
-    if ([url.pathExtension caseInsensitiveCompare:@"svg"] == NSOrderedSame) {
-  
-      RsvgDimensionData rsvgDimensions;
-      GError * error = nil;
-      RsvgHandle * rsvgHandle = rsvg_handle_new_from_file(url.path.UTF8String , &error);
-      return [[SVGImageHandle alloc] initWithRsvgHandle: rsvgHandle];
-  
-    } else if ([url.pathExtension caseInsensitiveCompare:@"png"] == NSOrderedSame) {
-      cairo_surface_t * sourceSurface = cairo_image_surface_create_from_png(url.path.UTF8String);
-      return [[PNGImageHandle alloc] initWithSurface: sourceSurface];
-  
-    }
-  return nil;
-}
 @end
