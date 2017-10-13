@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 @protocol CairoColorProtocol <NSObject>
 @property (readonly) double red;
 @property (readonly) double green;
 @property (readonly) double blue;
 @end
+NS_ASSUME_NONNULL_END

@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ImageHandle.h"
-#import <cairo.h>
+#import "cairo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @interface PNGImageHandle : NSObject<ImageHandle>

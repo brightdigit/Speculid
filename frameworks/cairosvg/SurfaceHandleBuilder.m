@@ -6,7 +6,7 @@
 //  Copyright © 2017 Bright Digit, LLC. All rights reserved.
 //
 
-#import <cairo-pdf.h>
+#import "cairo.h"
 #import "SurfaceHandleBuilder.h"
 #import "PNGSurface.h"
 #import "PDFSurface.h"
