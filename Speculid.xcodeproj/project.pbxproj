@@ -21,6 +21,12 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		205A5AF735ED0AFE6D8E3753 /* Pods_CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8599C40CCA72FBF9FA1098 /* Pods_CairoSVG.framework */; };
+		63B850290A8C8F568F554912 /* Pods_SpeculidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E00CC4EE1B4A785089460 /* Pods_SpeculidTests.framework */; };
+		71C6A7B0A517CC55637B2E17 /* Pods_Speculid_Mac_XPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA075855931F18A5DA87B15 /* Pods_Speculid_Mac_XPC.framework */; };
+		8673F38CC6D59040A2F46D0E /* Pods_CairoSVGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E776BC2A0843F84E3CBC279B /* Pods_CairoSVGTests.framework */; };
+		8B89F9F58D273C27DCE0A008 /* Pods_Speculid_Mac_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054FC9E3CE2F6BD2F948CF5D /* Pods_Speculid_Mac_App.framework */; };
+		8CFE676AD2939E9961A20D07 /* Pods_Speculid_Mac_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BDAD4963D80A5FF54A9272 /* Pods_Speculid_Mac_AppUITests.framework */; };
 		B3136DCD1F90E3F30002B7AB /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; };
 		B3136DCE1F90E45F0002B7AB /* ErrorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */; };
 		B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC11F90E27B0002B7AB /* FileFormat.swift */; };
@@ -34,7 +40,6 @@
 		B3136DDF1F90EFB10002B7AB /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DDB1F90EF370002B7AB /* Application.swift */; };
 		B3136E221F90F73B0002B7AB /* DefaultApplicationPathDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DE51F90F73A0002B7AB /* DefaultApplicationPathDataSource.swift */; };
 		B3136E231F90F73B0002B7AB /* CollectionConversionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DE61F90F73A0002B7AB /* CollectionConversionBuilder.swift */; };
-		B3136E241F90F73B0002B7AB /* Speculid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DE71F90F73A0002B7AB /* Speculid.swift */; };
 		B3136E251F90F73B0002B7AB /* CairoConversionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DE81F90F73A0002B7AB /* CairoConversionSet.swift */; };
 		B3136E261F90F73B0002B7AB /* ConfiguredApplicationPathDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DE91F90F73A0002B7AB /* ConfiguredApplicationPathDataSource.swift */; };
 		B3136E271F90F73B0002B7AB /* AnalyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DEA1F90F73A0002B7AB /* AnalyticsTracker.swift */; };
@@ -90,6 +95,12 @@
 		B3136E591F90F73B0002B7AB /* ArrayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E201F90F73B0002B7AB /* ArrayError.swift */; };
 		B3136E5A1F90F73B0002B7AB /* UnknownConversionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E211F90F73B0002B7AB /* UnknownConversionError.swift */; };
 		B3136E5B1F90FB710002B7AB /* ImageSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DBE1F90E27B0002B7AB /* ImageSpecification.swift */; };
+		B3136E631F90FCCF0002B7AB /* Speculid_Mac_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E621F90FCCF0002B7AB /* Speculid_Mac_AppUITests.swift */; };
+		B3136E811F90FD2E0002B7AB /* SpeculidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E801F90FD2E0002B7AB /* SpeculidTests.swift */; };
+		B3136E831F90FD2E0002B7AB /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; };
+		B3136E901F90FD3D0002B7AB /* CairoSVGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E8F1F90FD3D0002B7AB /* CairoSVGTests.swift */; };
+		B3136E921F90FD3D0002B7AB /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
+		B3136E9F1F9101A70002B7AB /* VCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E9D1F91019F0002B7AB /* VCS.swift */; };
 		B34E82FB1F8FD4EF0032268F /* ImageFileFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E82FF1F8FD6860032268F /* ImageFileProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E83041F8FD90C0032268F /* GlibError.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E83021F8FD90C0032268F /* GlibError.h */; };
@@ -125,11 +136,32 @@
 		B37C74B01F8C5C7400DF505B /* ImageHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A11F8C5C7400DF505B /* ImageHandle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B37C74B11F8C5C7400DF505B /* PNGSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A21F8C5C7400DF505B /* PNGSurface.h */; };
 		B37C74B21F8C5C7400DF505B /* PNGImageHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */; };
-		B37C74BB1F8C5CDA00DF505B /* CairoSVGBridge.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B37C74BA1F8C5CDA00DF505B /* CairoSVGBridge.xcconfig */; };
 		B37C74BC1F8C5D2A00DF505B /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
+		CBE9EF18228D2DADFC9D264F /* Pods_Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B3136E651F90FCCF0002B7AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B37C74361F8C58F300DF505B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B37C743D1F8C58F300DF505B;
+			remoteInfo = "Speculid-Mac-App";
+		};
+		B3136E841F90FD2E0002B7AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B37C74361F8C58F300DF505B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B37C74721F8C5ADA00DF505B;
+			remoteInfo = Speculid;
+		};
+		B3136E931F90FD3D0002B7AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B37C74361F8C58F300DF505B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B37C74881F8C5B5C00DF505B;
+			remoteInfo = CairoSVG;
+		};
 		B37C745C1F8C590D00DF505B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B37C74361F8C58F300DF505B /* Project object */;
@@ -187,6 +219,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		054FC9E3CE2F6BD2F948CF5D /* Pods_Speculid_Mac_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid_Mac_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A1D3098AA00507F322B5177 /* Pods-SpeculidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeculidTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests.debug.xcconfig"; sourceTree = "<group>"; };
+		33189C1A2DCDF9FDE0D52DB2 /* Pods-CairoSVGTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CairoSVGTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CairoSVGTests/Pods-CairoSVGTests.release.xcconfig"; sourceTree = "<group>"; };
+		4D7E00CC4EE1B4A785089460 /* Pods_SpeculidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeculidTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		503182BFEED5FCC7A0FD7113 /* Pods-Speculid-Mac-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-AppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-AppUITests/Pods-Speculid-Mac-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5598DB627CD85D918F6EAC73 /* Pods-Speculid-Mac-AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-AppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-AppUITests/Pods-Speculid-Mac-AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5EA075855931F18A5DA87B15 /* Pods_Speculid_Mac_XPC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid_Mac_XPC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63BDAD4963D80A5FF54A9272 /* Pods_Speculid_Mac_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid_Mac_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75FAFD8D34A5758295CE7C3E /* Pods-Speculid-Mac-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-App/Pods-Speculid-Mac-App.debug.xcconfig"; sourceTree = "<group>"; };
+		87434B3EFCD8AF7732299E58 /* Pods-Speculid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid/Pods-Speculid.release.xcconfig"; sourceTree = "<group>"; };
+		9F8599C40CCA72FBF9FA1098 /* Pods_CairoSVG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CairoSVG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3136DBB1F90E27B0002B7AB /* ImageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFile.swift; sourceTree = "<group>"; };
 		B3136DBC1F90E27B0002B7AB /* Speculid_Mac_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid_Mac_Framework.h; sourceTree = "<group>"; };
 		B3136DBE1F90E27B0002B7AB /* ImageSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSpecification.swift; sourceTree = "<group>"; };
@@ -204,7 +247,6 @@
 		B3136DE11F90F5C80002B7AB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B3136DE51F90F73A0002B7AB /* DefaultApplicationPathDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultApplicationPathDataSource.swift; sourceTree = "<group>"; };
 		B3136DE61F90F73A0002B7AB /* CollectionConversionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionConversionBuilder.swift; sourceTree = "<group>"; };
-		B3136DE71F90F73A0002B7AB /* Speculid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speculid.swift; sourceTree = "<group>"; };
 		B3136DE81F90F73A0002B7AB /* CairoConversionSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CairoConversionSet.swift; sourceTree = "<group>"; };
 		B3136DE91F90F73A0002B7AB /* ConfiguredApplicationPathDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguredApplicationPathDataSource.swift; sourceTree = "<group>"; };
 		B3136DEA1F90F73A0002B7AB /* AnalyticsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsTracker.swift; sourceTree = "<group>"; };
@@ -259,6 +301,18 @@
 		B3136E1F1F90F73B0002B7AB /* ProcessError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessError.swift; sourceTree = "<group>"; };
 		B3136E201F90F73B0002B7AB /* ArrayError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayError.swift; sourceTree = "<group>"; };
 		B3136E211F90F73B0002B7AB /* UnknownConversionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnknownConversionError.swift; sourceTree = "<group>"; };
+		B3136E601F90FCCF0002B7AB /* Speculid-Mac-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Speculid-Mac-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3136E621F90FCCF0002B7AB /* Speculid_Mac_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speculid_Mac_AppUITests.swift; sourceTree = "<group>"; };
+		B3136E641F90FCCF0002B7AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3136E7E1F90FD2E0002B7AB /* SpeculidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeculidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3136E801F90FD2E0002B7AB /* SpeculidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidTests.swift; sourceTree = "<group>"; };
+		B3136E821F90FD2E0002B7AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3136E8D1F90FD3D0002B7AB /* CairoSVGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CairoSVGTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3136E8F1F90FD3D0002B7AB /* CairoSVGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CairoSVGTests.swift; sourceTree = "<group>"; };
+		B3136E911F90FD3D0002B7AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3136E9A1F90FFB10002B7AB /* CairoSVGBridge.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CairoSVGBridge.release.xcconfig; sourceTree = "<group>"; };
+		B3136E9B1F90FFB10002B7AB /* CairoSVGBridge.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CairoSVGBridge.debug.xcconfig; sourceTree = "<group>"; };
+		B3136E9D1F91019F0002B7AB /* VCS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCS.swift; sourceTree = "<group>"; };
 		B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileFormat.h; sourceTree = "<group>"; };
 		B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileProtocol.h; sourceTree = "<group>"; };
 		B34E83021F8FD90C0032268F /* GlibError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlibError.h; sourceTree = "<group>"; };
@@ -297,16 +351,50 @@
 		B37C74A11F8C5C7400DF505B /* ImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHandle.h; sourceTree = "<group>"; };
 		B37C74A21F8C5C7400DF505B /* PNGSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGSurface.h; sourceTree = "<group>"; };
 		B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGImageHandle.h; sourceTree = "<group>"; };
-		B37C74BA1F8C5CDA00DF505B /* CairoSVGBridge.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CairoSVGBridge.xcconfig; sourceTree = "<group>"; };
+		C743CA092B2436D579EB1965 /* Pods-Speculid-Mac-XPC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-XPC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-XPC/Pods-Speculid-Mac-XPC.debug.xcconfig"; sourceTree = "<group>"; };
+		C7A962F08D51F2247E1ADBEF /* Pods-SpeculidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeculidTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests.release.xcconfig"; sourceTree = "<group>"; };
+		DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD668DE3E97BC37C2DC71F41 /* Pods-Speculid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid/Pods-Speculid.debug.xcconfig"; sourceTree = "<group>"; };
+		E776BC2A0843F84E3CBC279B /* Pods_CairoSVGTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CairoSVGTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB3CD055FBA18C9FF21D971C /* Pods-CairoSVGTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CairoSVGTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CairoSVGTests/Pods-CairoSVGTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F6CC72BCECBB97B332E4DC41 /* Pods-Speculid-Mac-XPC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-XPC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-XPC/Pods-Speculid-Mac-XPC.release.xcconfig"; sourceTree = "<group>"; };
+		FBD208DDED47AEA144AD3F63 /* Pods-Speculid-Mac-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-App/Pods-Speculid-Mac-App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B3136E5D1F90FCCF0002B7AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CFE676AD2939E9961A20D07 /* Pods_Speculid_Mac_AppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3136E7B1F90FD2E0002B7AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3136E831F90FD2E0002B7AB /* Speculid.framework in Frameworks */,
+				63B850290A8C8F568F554912 /* Pods_SpeculidTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3136E8A1F90FD3D0002B7AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3136E921F90FD3D0002B7AB /* CairoSVG.framework in Frameworks */,
+				8673F38CC6D59040A2F46D0E /* Pods_CairoSVGTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B37C743B1F8C58F300DF505B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B37C74901F8C5B5C00DF505B /* CairoSVG.framework in Frameworks */,
 				B37C747A1F8C5ADA00DF505B /* Speculid.framework in Frameworks */,
+				8B89F9F58D273C27DCE0A008 /* Pods_Speculid_Mac_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3136DCD1F90E3F30002B7AB /* Speculid.framework in Frameworks */,
+				71C6A7B0A517CC55637B2E17 /* Pods_Speculid_Mac_XPC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B37C74BC1F8C5D2A00DF505B /* CairoSVG.framework in Frameworks */,
+				CBE9EF18228D2DADFC9D264F /* Pods_Speculid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,12 +420,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				205A5AF735ED0AFE6D8E3753 /* Pods_CairoSVG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACD4DBE14098687CAAFBB2FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD668DE3E97BC37C2DC71F41 /* Pods-Speculid.debug.xcconfig */,
+				87434B3EFCD8AF7732299E58 /* Pods-Speculid.release.xcconfig */,
+				75FAFD8D34A5758295CE7C3E /* Pods-Speculid-Mac-App.debug.xcconfig */,
+				FBD208DDED47AEA144AD3F63 /* Pods-Speculid-Mac-App.release.xcconfig */,
+				C743CA092B2436D579EB1965 /* Pods-Speculid-Mac-XPC.debug.xcconfig */,
+				F6CC72BCECBB97B332E4DC41 /* Pods-Speculid-Mac-XPC.release.xcconfig */,
+				EB3CD055FBA18C9FF21D971C /* Pods-CairoSVGTests.debug.xcconfig */,
+				33189C1A2DCDF9FDE0D52DB2 /* Pods-CairoSVGTests.release.xcconfig */,
+				503182BFEED5FCC7A0FD7113 /* Pods-Speculid-Mac-AppUITests.debug.xcconfig */,
+				5598DB627CD85D918F6EAC73 /* Pods-Speculid-Mac-AppUITests.release.xcconfig */,
+				1A1D3098AA00507F322B5177 /* Pods-SpeculidTests.debug.xcconfig */,
+				C7A962F08D51F2247E1ADBEF /* Pods-SpeculidTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B3136DB51F90E23E0002B7AB /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,7 +490,6 @@
 				B3136DDB1F90EF370002B7AB /* Application.swift */,
 				B3136DE51F90F73A0002B7AB /* DefaultApplicationPathDataSource.swift */,
 				B3136DE61F90F73A0002B7AB /* CollectionConversionBuilder.swift */,
-				B3136DE71F90F73A0002B7AB /* Speculid.swift */,
 				B3136DE81F90F73A0002B7AB /* CairoConversionSet.swift */,
 				B3136DE91F90F73A0002B7AB /* ConfiguredApplicationPathDataSource.swift */,
 				B3136DEA1F90F73A0002B7AB /* AnalyticsTracker.swift */,
@@ -411,6 +520,7 @@
 		B3136DF91F90F73A0002B7AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B3136E9D1F91019F0002B7AB /* VCS.swift */,
 				B3136DC11F90E27B0002B7AB /* FileFormat.swift */,
 				B3136DBB1F90E27B0002B7AB /* ImageFile.swift */,
 				B3136DBE1F90E27B0002B7AB /* ImageSpecification.swift */,
@@ -471,16 +581,56 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		B3136E6A1F90FCD90002B7AB /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				B3136E991F90FD550002B7AB /* cairosvg */,
+				B3136E981F90FD470002B7AB /* speculid */,
+				B3136E6B1F90FCE60002B7AB /* ui */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		B3136E6B1F90FCE60002B7AB /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				B3136E621F90FCCF0002B7AB /* Speculid_Mac_AppUITests.swift */,
+				B3136E641F90FCCF0002B7AB /* Info.plist */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		B3136E981F90FD470002B7AB /* speculid */ = {
+			isa = PBXGroup;
+			children = (
+				B3136E801F90FD2E0002B7AB /* SpeculidTests.swift */,
+				B3136E821F90FD2E0002B7AB /* Info.plist */,
+			);
+			path = speculid;
+			sourceTree = "<group>";
+		};
+		B3136E991F90FD550002B7AB /* cairosvg */ = {
+			isa = PBXGroup;
+			children = (
+				B3136E8F1F90FD3D0002B7AB /* CairoSVGTests.swift */,
+				B3136E911F90FD3D0002B7AB /* Info.plist */,
+			);
+			path = cairosvg;
+			sourceTree = "<group>";
+		};
 		B37C74351F8C58F300DF505B = {
 			isa = PBXGroup;
 			children = (
+				B3136E9B1F90FFB10002B7AB /* CairoSVGBridge.debug.xcconfig */,
+				B3136E9A1F90FFB10002B7AB /* CairoSVGBridge.release.xcconfig */,
+				B3136E6A1F90FCD90002B7AB /* tests */,
 				B3136DE11F90F5C80002B7AB /* .gitignore */,
 				B3136DE01F90F5C70002B7AB /* .travis.yml */,
 				B37C74401F8C58F300DF505B /* applications */,
 				B3136DB51F90E23E0002B7AB /* frameworks */,
-				B37C74BA1F8C5CDA00DF505B /* CairoSVGBridge.xcconfig */,
 				B37C743F1F8C58F300DF505B /* Products */,
 				B37C74801F8C5AE200DF505B /* Frameworks */,
+				ACD4DBE14098687CAAFBB2FA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -491,6 +641,9 @@
 				B37C74531F8C590D00DF505B /* Speculid-Mac-XPC.xpc */,
 				B37C74731F8C5ADA00DF505B /* Speculid.framework */,
 				B37C74891F8C5B5C00DF505B /* CairoSVG.framework */,
+				B3136E601F90FCCF0002B7AB /* Speculid-Mac-AppUITests.xctest */,
+				B3136E7E1F90FD2E0002B7AB /* SpeculidTests.xctest */,
+				B3136E8D1F90FD3D0002B7AB /* CairoSVGTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -517,6 +670,13 @@
 		B37C74801F8C5AE200DF505B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F8599C40CCA72FBF9FA1098 /* Pods_CairoSVG.framework */,
+				DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */,
+				054FC9E3CE2F6BD2F948CF5D /* Pods_Speculid_Mac_App.framework */,
+				5EA075855931F18A5DA87B15 /* Pods_Speculid_Mac_XPC.framework */,
+				E776BC2A0843F84E3CBC279B /* Pods_CairoSVGTests.framework */,
+				63BDAD4963D80A5FF54A9272 /* Pods_Speculid_Mac_AppUITests.framework */,
+				4D7E00CC4EE1B4A785089460 /* Pods_SpeculidTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -597,15 +757,81 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		B3136E5F1F90FCCF0002B7AB /* Speculid-Mac-AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3136E691F90FCCF0002B7AB /* Build configuration list for PBXNativeTarget "Speculid-Mac-AppUITests" */;
+			buildPhases = (
+				2A5BE6D591A31D93BD99307F /* [CP] Check Pods Manifest.lock */,
+				B3136E5C1F90FCCF0002B7AB /* Sources */,
+				B3136E5D1F90FCCF0002B7AB /* Frameworks */,
+				B3136E5E1F90FCCF0002B7AB /* Resources */,
+				DFDC5ACBFDFB0A5933469BDE /* [CP] Embed Pods Frameworks */,
+				70BDFA18A313FF25207EC8D1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3136E661F90FCCF0002B7AB /* PBXTargetDependency */,
+			);
+			name = "Speculid-Mac-AppUITests";
+			productName = "Speculid-Mac-AppUITests";
+			productReference = B3136E601F90FCCF0002B7AB /* Speculid-Mac-AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B3136E7D1F90FD2E0002B7AB /* SpeculidTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3136E861F90FD2E0002B7AB /* Build configuration list for PBXNativeTarget "SpeculidTests" */;
+			buildPhases = (
+				864BFA93E2D46B0EBF468EF2 /* [CP] Check Pods Manifest.lock */,
+				B3136E7A1F90FD2E0002B7AB /* Sources */,
+				B3136E7B1F90FD2E0002B7AB /* Frameworks */,
+				B3136E7C1F90FD2E0002B7AB /* Resources */,
+				C467F507FA1A90CD666AC710 /* [CP] Embed Pods Frameworks */,
+				0BA051AF811DE5C05C9C966F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3136E851F90FD2E0002B7AB /* PBXTargetDependency */,
+			);
+			name = SpeculidTests;
+			productName = SpeculidTests;
+			productReference = B3136E7E1F90FD2E0002B7AB /* SpeculidTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B3136E8C1F90FD3D0002B7AB /* CairoSVGTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3136E951F90FD3D0002B7AB /* Build configuration list for PBXNativeTarget "CairoSVGTests" */;
+			buildPhases = (
+				86BA5F8D102809B05C3B7F84 /* [CP] Check Pods Manifest.lock */,
+				B3136E891F90FD3D0002B7AB /* Sources */,
+				B3136E8A1F90FD3D0002B7AB /* Frameworks */,
+				B3136E8B1F90FD3D0002B7AB /* Resources */,
+				B2287467AC91208471FB6EDC /* [CP] Embed Pods Frameworks */,
+				C7491F82EFD23464345DAE35 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3136E941F90FD3D0002B7AB /* PBXTargetDependency */,
+			);
+			name = CairoSVGTests;
+			productName = CairoSVGTests;
+			productReference = B3136E8D1F90FD3D0002B7AB /* CairoSVGTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B37C743D1F8C58F300DF505B /* Speculid-Mac-App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B37C744C1F8C58F300DF505B /* Build configuration list for PBXNativeTarget "Speculid-Mac-App" */;
 			buildPhases = (
+				6B0E6A3126F4611E46C09D7C /* [CP] Check Pods Manifest.lock */,
 				B37C743A1F8C58F300DF505B /* Sources */,
 				B37C743B1F8C58F300DF505B /* Frameworks */,
 				B37C743C1F8C58F300DF505B /* Resources */,
 				B37C74621F8C590D00DF505B /* Embed XPC Services */,
 				B37C747F1F8C5ADA00DF505B /* Embed Frameworks */,
+				F11FED44F4FDA27EB1AD0F15 /* [CP] Embed Pods Frameworks */,
+				1673FC657E1C66B998A0E6E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -623,9 +849,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B37C745F1F8C590D00DF505B /* Build configuration list for PBXNativeTarget "Speculid-Mac-XPC" */;
 			buildPhases = (
+				BD6A812C7EF5D496661AC259 /* [CP] Check Pods Manifest.lock */,
 				B37C744F1F8C590D00DF505B /* Sources */,
 				B37C74501F8C590D00DF505B /* Frameworks */,
 				B37C74511F8C590D00DF505B /* Resources */,
+				3040A114BCE4A53B4BC0F3C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -640,10 +868,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B37C747C1F8C5ADA00DF505B /* Build configuration list for PBXNativeTarget "Speculid" */;
 			buildPhases = (
+				11C29AAE26481241CA772FFC /* [CP] Check Pods Manifest.lock */,
+				B3136E9C1F9100CB0002B7AB /* Autorevision */,
 				B37C746E1F8C5ADA00DF505B /* Sources */,
 				B37C746F1F8C5ADA00DF505B /* Frameworks */,
 				B37C74701F8C5ADA00DF505B /* Headers */,
 				B37C74711F8C5ADA00DF505B /* Resources */,
+				CD3C66797988C9372F5A1947 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -658,10 +889,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B37C74921F8C5B5C00DF505B /* Build configuration list for PBXNativeTarget "CairoSVG" */;
 			buildPhases = (
+				4F4C36B7508D73A1292508F5 /* [CP] Check Pods Manifest.lock */,
 				B37C74841F8C5B5C00DF505B /* Sources */,
 				B37C74851F8C5B5C00DF505B /* Frameworks */,
 				B37C74861F8C5B5C00DF505B /* Headers */,
 				B37C74871F8C5B5C00DF505B /* Resources */,
+				05D00CC967D09B6349F704A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -683,6 +916,19 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Bright Digit, LLC";
 				TargetAttributes = {
+					B3136E5F1F90FCCF0002B7AB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B37C743D1F8C58F300DF505B;
+					};
+					B3136E7D1F90FD2E0002B7AB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					B3136E8C1F90FD3D0002B7AB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
 					B37C743D1F8C58F300DF505B = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -726,11 +972,35 @@
 				B37C74721F8C5ADA00DF505B /* Speculid */,
 				B37C74881F8C5B5C00DF505B /* CairoSVG */,
 				B37C74B31F8C5CB000DF505B /* CairoSVG-Flags */,
+				B3136E5F1F90FCCF0002B7AB /* Speculid-Mac-AppUITests */,
+				B3136E7D1F90FD2E0002B7AB /* SpeculidTests */,
+				B3136E8C1F90FD3D0002B7AB /* CairoSVGTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B3136E5E1F90FCCF0002B7AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3136E7C1F90FD2E0002B7AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3136E8B1F90FD3D0002B7AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B37C743C1F8C58F300DF505B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -759,13 +1029,224 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37C74BB1F8C5CDA00DF505B /* CairoSVGBridge.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		05D00CC967D09B6349F704A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CairoSVG/Pods-CairoSVG-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0BA051AF811DE5C05C9C966F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11C29AAE26481241CA772FFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Speculid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1673FC657E1C66B998A0E6E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Speculid-Mac-App/Pods-Speculid-Mac-App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A5BE6D591A31D93BD99307F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Speculid-Mac-AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3040A114BCE4A53B4BC0F3C7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Speculid-Mac-XPC/Pods-Speculid-Mac-XPC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F4C36B7508D73A1292508F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CairoSVG-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B0E6A3126F4611E46C09D7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Speculid-Mac-App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70BDFA18A313FF25207EC8D1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Speculid-Mac-AppUITests/Pods-Speculid-Mac-AppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		864BFA93E2D46B0EBF468EF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpeculidTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86BA5F8D102809B05C3B7F84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CairoSVGTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2287467AC91208471FB6EDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CairoSVGTests/Pods-CairoSVGTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3136E9C1F9100CB0002B7AB /* Autorevision */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Autorevision;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if git rev-parse --git-dir > /dev/null 2>&1; then\ntouch ${SRCROOT}/.version\nstart=1\nversion_file=`< ${SRCROOT}/.version`\nversion=${version_file:-${start}}\nexport VCS_EXTRA=$version\necho \"Incrementing Version Number\"\n\"${SRCROOT}/autorevision.sh\" -t swift > \"${SRCROOT}/frameworks/speculid/Models/VCS.swift\"\necho `expr ${VCS_EXTRA} + 1` >${SRCROOT}/.version\nfi";
+		};
 		B37C74B71F8C5CB500DF505B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -777,11 +1258,134 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "OTHER_CFLAGS=\"$(pkg-config cairo librsvg-2.0  --cflags)\"\nOTHER_LDFLAGS=\"$(pkg-config cairo librsvg-2.0  --libs)\"\nHEADER_SEARCH_PATHS=\"$(pkg-config --cflags-only-I cairo librsvg-2.0 | tr -d '\\-I')\"\necho -e \"OTHER_CFLAGS = \\$(inherited) ${OTHER_CFLAGS}\" > CairoSVGBridge.xcconfig\necho -e \"OTHER_LDFLAGS = \\$(inherited) ${OTHER_LDFLAGS}\" >> CairoSVGBridge.xcconfig\necho -e \"HEADER_SEARCH_PATHS = \\$(inherited) ${HEADER_SEARCH_PATHS}\" >> CairoSVGBridge.xcconfig";
+			shellScript = "OTHER_CFLAGS=\"$(pkg-config cairo librsvg-2.0  --cflags)\"\nOTHER_LDFLAGS=\"$(pkg-config cairo librsvg-2.0  --libs)\"\nHEADER_SEARCH_PATHS=\"$(pkg-config --cflags-only-I cairo librsvg-2.0 | tr -d '\\-I')\"\necho -e \"#include \\\"Pods/Target Support Files/Pods-CairoSVG/Pods-CairoSVG.debug.xcconfig\\\"\" > CairoSVGBridge.debug.xcconfig\necho -e \"#include \\\"Pods/Target Support Files/Pods-CairoSVG/Pods-CairoSVG.release.xcconfig\\\"\" > CairoSVGBridge.release.xcconfig\necho -e \"OTHER_CFLAGS = \\$(inherited) ${OTHER_CFLAGS}\" > CairoSVGBridge.xcconfig\necho -e \"OTHER_LDFLAGS = \\$(inherited) ${OTHER_LDFLAGS}\" >> CairoSVGBridge.xcconfig\necho -e \"HEADER_SEARCH_PATHS = \\$(inherited) ${HEADER_SEARCH_PATHS}\" >> CairoSVGBridge.xcconfig\ncat CairoSVGBridge.xcconfig >> CairoSVGBridge.debug.xcconfig\ncat CairoSVGBridge.xcconfig >> CairoSVGBridge.release.xcconfig";
+		};
+		BD6A812C7EF5D496661AC259 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Speculid-Mac-XPC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C467F507FA1A90CD666AC710 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftVer/SwiftVer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftVer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7491F82EFD23464345DAE35 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CairoSVGTests/Pods-CairoSVGTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD3C66797988C9372F5A1947 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Speculid/Pods-Speculid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFDC5ACBFDFB0A5933469BDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Speculid-Mac-AppUITests/Pods-Speculid-Mac-AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F11FED44F4FDA27EB1AD0F15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Speculid-Mac-App/Pods-Speculid-Mac-App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftVer/SwiftVer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftVer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Speculid-Mac-App/Pods-Speculid-Mac-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B3136E5C1F90FCCF0002B7AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3136E631F90FCCF0002B7AB /* Speculid_Mac_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3136E7A1F90FD2E0002B7AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3136E811F90FD2E0002B7AB /* SpeculidTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3136E891F90FD3D0002B7AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3136E901F90FD3D0002B7AB /* CairoSVGTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B37C743A1F8C58F300DF505B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -820,6 +1424,7 @@
 				B3136E281F90F73B0002B7AB /* SearchApplicationPathDataSource.swift in Sources */,
 				B3136E2A1F90F73B0002B7AB /* CollectionConversion.swift in Sources */,
 				B3136E4E1F90F73B0002B7AB /* ImageSpecificationProtocol.swift in Sources */,
+				B3136E9F1F9101A70002B7AB /* VCS.swift in Sources */,
 				B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */,
 				B3136E421F90F73B0002B7AB /* ImageIdiom.swift in Sources */,
 				B3136E371F90F73B0002B7AB /* SpeculidSpecifications.swift in Sources */,
@@ -853,7 +1458,6 @@
 				B3136E3F1F90F73B0002B7AB /* AssetSpecification.swift in Sources */,
 				B3136E321F90F73B0002B7AB /* NSColor.swift in Sources */,
 				B3136E491F90F73B0002B7AB /* ImageConversionSetProtocol.swift in Sources */,
-				B3136E241F90F73B0002B7AB /* Speculid.swift in Sources */,
 				B3136E221F90F73B0002B7AB /* DefaultApplicationPathDataSource.swift in Sources */,
 				B3136E581F90F73B0002B7AB /* ProcessError.swift in Sources */,
 				B3136E541F90F73B0002B7AB /* SpeculidApplicationProtocol.swift in Sources */,
@@ -888,6 +1492,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B3136E661F90FCCF0002B7AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B37C743D1F8C58F300DF505B /* Speculid-Mac-App */;
+			targetProxy = B3136E651F90FCCF0002B7AB /* PBXContainerItemProxy */;
+		};
+		B3136E851F90FD2E0002B7AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B37C74721F8C5ADA00DF505B /* Speculid */;
+			targetProxy = B3136E841F90FD2E0002B7AB /* PBXContainerItemProxy */;
+		};
+		B3136E941F90FD3D0002B7AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B37C74881F8C5B5C00DF505B /* CairoSVG */;
+			targetProxy = B3136E931F90FD3D0002B7AB /* PBXContainerItemProxy */;
+		};
 		B37C745D1F8C590D00DF505B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B37C74521F8C590D00DF505B /* Speculid-Mac-XPC */;
@@ -911,6 +1530,104 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		B3136E671F90FCCF0002B7AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 503182BFEED5FCC7A0FD7113 /* Pods-Speculid-Mac-AppUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				INFOPLIST_FILE = "Speculid-Mac-AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "Speculid-Mac-App";
+			};
+			name = Debug;
+		};
+		B3136E681F90FCCF0002B7AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5598DB627CD85D918F6EAC73 /* Pods-Speculid-Mac-AppUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				INFOPLIST_FILE = "Speculid-Mac-AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "Speculid-Mac-App";
+			};
+			name = Release;
+		};
+		B3136E871F90FD2E0002B7AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A1D3098AA00507F322B5177 /* Pods-SpeculidTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				INFOPLIST_FILE = SpeculidTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SpeculidTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		B3136E881F90FD2E0002B7AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7A962F08D51F2247E1ADBEF /* Pods-SpeculidTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				INFOPLIST_FILE = SpeculidTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SpeculidTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		B3136E961F90FD3D0002B7AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB3CD055FBA18C9FF21D971C /* Pods-CairoSVGTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				INFOPLIST_FILE = CairoSVGTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.CairoSVGTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		B3136E971F90FD3D0002B7AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33189C1A2DCDF9FDE0D52DB2 /* Pods-CairoSVGTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				INFOPLIST_FILE = CairoSVGTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.CairoSVGTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		B37C744A1F8C58F300DF505B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1019,6 +1736,7 @@
 		};
 		B37C744D1F8C58F300DF505B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75FAFD8D34A5758295CE7C3E /* Pods-Speculid-Mac-App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1036,6 +1754,7 @@
 		};
 		B37C744E1F8C58F300DF505B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBD208DDED47AEA144AD3F63 /* Pods-Speculid-Mac-App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1053,6 +1772,7 @@
 		};
 		B37C74601F8C590D00DF505B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C743CA092B2436D579EB1965 /* Pods-Speculid-Mac-XPC.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1060,17 +1780,18 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
 				INFOPLIST_FILE = "$(SRCROOT)/applications/xpc/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-XPC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		B37C74611F8C590D00DF505B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6CC72BCECBB97B332E4DC41 /* Pods-Speculid-Mac-XPC.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1078,16 +1799,17 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
 				INFOPLIST_FILE = "$(SRCROOT)/applications/xpc/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-XPC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 		B37C747D1F8C5ADA00DF505B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD668DE3E97BC37C2DC71F41 /* Pods-Speculid.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1115,6 +1837,7 @@
 		};
 		B37C747E1F8C5ADA00DF505B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87434B3EFCD8AF7732299E58 /* Pods-Speculid.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1141,7 +1864,7 @@
 		};
 		B37C74931F8C5B5C00DF505B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B37C74BA1F8C5CDA00DF505B /* CairoSVGBridge.xcconfig */;
+			baseConfigurationReference = B3136E9B1F90FFB10002B7AB /* CairoSVGBridge.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1169,7 +1892,7 @@
 		};
 		B37C74941F8C5B5C00DF505B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B37C74BA1F8C5CDA00DF505B /* CairoSVGBridge.xcconfig */;
+			baseConfigurationReference = B3136E9A1F90FFB10002B7AB /* CairoSVGBridge.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1215,6 +1938,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B3136E691F90FCCF0002B7AB /* Build configuration list for PBXNativeTarget "Speculid-Mac-AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3136E671F90FCCF0002B7AB /* Debug */,
+				B3136E681F90FCCF0002B7AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3136E861F90FD2E0002B7AB /* Build configuration list for PBXNativeTarget "SpeculidTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3136E871F90FD2E0002B7AB /* Debug */,
+				B3136E881F90FD2E0002B7AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3136E951F90FD3D0002B7AB /* Build configuration list for PBXNativeTarget "CairoSVGTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3136E961F90FD3D0002B7AB /* Debug */,
+				B3136E971F90FD3D0002B7AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "Speculid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
