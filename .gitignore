@@ -192,4 +192,5 @@ Products
 *tests/*.png
 *tests/*.pdf
 
-CairoSVGBridge.xcconfig
+CairoSVGBridge*.xcconfig
+VCS.swift

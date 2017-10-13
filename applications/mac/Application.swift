@@ -18,7 +18,7 @@ open class Application : Speculid.Application {
     if let url = Bundle.main.url(forResource: "layers", withExtension: "svg"), let service = connection.remoteObjectProxy as? ServiceProtocol{
       let exportSpecifications = [32,64,128,256].map { (width) -> ImageSpecification in
         let file = ImageFile(url: Bundle.main.bundleURL.deletingLastPathComponent().appendingPathComponent("layers.\(width).png"), fileFormat: FileFormat.png)
-        return ImageSpecification(file: file, geometryDimension: .width(width), removeAlphaChannel: true, backgroundColor: NSColor(red: 1.0, green: 0.3, blue: 1.0, alpha: 1.0))
+        return ImageSpecification(file: file, geometryDimension: Geometry(value: .width(width)), removeAlphaChannel: true, backgroundColor: NSColor(red: 1.0, green: 0.3, blue: 1.0, alpha: 1.0))
       }
       service.exportImageAtURL(url, toSpecifications:exportSpecifications, { (error) in
         debugPrint(error)

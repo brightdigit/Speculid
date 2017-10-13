@@ -63,8 +63,11 @@ public struct Geometry : GeometryProtocol {
     return self.value.description
   }
   
+  public init (value: GeometryValue) {
+    self.value = value
+  }
   
-  init (dimension: CairoSVG.Dimension, value: Int) {
+  internal init (dimension: CairoSVG.Dimension, value: Int) {
     switch (dimension) {
     case .height: self.value = .height(value)
     case .width: self.value = .width(value)
