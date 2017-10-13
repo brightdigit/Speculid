@@ -25,7 +25,6 @@ static ImageHandleBuilder * _shared = nil;
 }
 
 - (id<ImageHandle>)imageHandleFromFile:(id<ImageFileProtocol>)file error:(NSError * _Nullable __autoreleasing *)error {
-  RsvgDimensionData rsvgDimensions;
   cairo_surface_t * sourceSurface;
   GError * gerror = nil;
   RsvgHandle * rsvgHandle;
@@ -38,8 +37,9 @@ static ImageHandleBuilder * _shared = nil;
     case kPng:
      sourceSurface = cairo_image_surface_create_from_png(file.url.path.UTF8String);
       return [[PNGImageHandle alloc] initWithSurface: sourceSurface];
+    case kPdf:
+      *error = [[NSError alloc] init];
+      return nil;
   }
-  *error = [[NSError alloc] init];
-  return nil;
 }
 @end
