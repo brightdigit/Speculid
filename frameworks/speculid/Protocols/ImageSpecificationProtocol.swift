@@ -8,8 +8,8 @@
 import Foundation
 
 public protocol AssetSpecificationProtocol {
-  var idiom : ImageIdiom { get }
-  var scale : CGFloat? { get }
-  var size : CGSize? { get }
-  var filename : String? { get }
+  var idiom: ImageIdiom { get }
+  var scale: CGFloat? { get }
+  var size: CGSize? { get }
+  var filename: String? { get }
 }

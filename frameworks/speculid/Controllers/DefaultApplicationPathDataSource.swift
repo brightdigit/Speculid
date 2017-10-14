@@ -1,15 +1,7 @@
-//
-//  DefaultApplicationPathDataSource.swift
-//  speculid
-//
-//  Created by Leo Dion on 10/17/16.
-//
-//
-
 import Foundation
 
 @available(*, deprecated: 2.0.0)
-public struct DefaultApplicationPathDataSource : ApplicationPathDataSource {
+public struct DefaultApplicationPathDataSource: ApplicationPathDataSource {
   public func applicationPaths(_ closure: @escaping (ApplicationPathDictionary) -> Void) {
     var applicationPaths = ApplicationPathDictionary()
     for pair in DefaultApplicationPathDataSource.defaultPaths {
@@ -20,6 +12,5 @@ public struct DefaultApplicationPathDataSource : ApplicationPathDataSource {
     closure(applicationPaths)
   }
 
-   public static let defaultPaths : [ApplicationPath : String] = [.inkscape : "/usr/local/bin/inkscape", .convert :  "/usr/local/bin/convert"]
-  
+  public static let defaultPaths: [ApplicationPath: String] = [.inkscape: "/usr/local/bin/inkscape", .convert: "/usr/local/bin/convert"]
 }

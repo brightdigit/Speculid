@@ -1,63 +1,55 @@
-//
-//  ProcessProtocol.swift
-//  speculid
-//
-//  Created by Leo Dion on 10/4/16.
-//
-//
-
 import Foundation
 
 @available(*, deprecated: 2.0.0)
 public protocol ProcessProtocol {
-  func launch (_ callback: @escaping (Error?) -> Void)
+  func launch(_ callback: @escaping (Error?) -> Void)
 }
 
 @available(*, deprecated: 2.0.0)
 public class SerialProcessCollection {
-  public let processes : [ProcessProtocol]
+  public let processes: [ProcessProtocol]
   public var index = -1
   public let callback: (Error?) -> Void
-  
-  public init (processes: [ProcessProtocol], callback: @escaping (Error?) -> Void) {
+
+  public init(processes: [ProcessProtocol], callback: @escaping (Error?) -> Void) {
     self.processes = processes
     self.callback = callback
   }
-  
-  public func start () {
+
+  public func start() {
     next(error: nil)
   }
-  
-  public func next (error: Error?) {
-    self.index = self.index + 1
+
+  public func next(error: Error?) {
+    index += 1
     if let error = error {
-      self.callback(error)
-    } else if self.index < self.processes.count {
-      self.processes[self.index].launch(self.next)
+      callback(error)
+    } else if index < processes.count {
+      processes[self.index].launch(next)
     } else {
-      self.callback(nil)
+      callback(nil)
     }
   }
 }
 
 @available(*, deprecated: 2.0.0)
-public struct SerialProcess : ProcessProtocol {
-  public let processes : [ProcessProtocol]
-  
+public struct SerialProcess: ProcessProtocol {
+  public let processes: [ProcessProtocol]
+
   public func launch(_ callback: @escaping (Error?) -> Void) {
-    let collection = SerialProcessCollection(processes: self.processes, callback: callback)
+    let collection = SerialProcessCollection(processes: processes, callback: callback)
     collection.start()
   }
 }
 
-extension Process : ProcessProtocol {
-  public func launch (_ callback: @escaping (Error?) -> Void) {
+extension Process: ProcessProtocol {
+  public func launch(_ callback: @escaping (Error?) -> Void) {
     let pipe = Pipe()
-    self.standardError = pipe
+    standardError = pipe
     let fileHandle = pipe.fileHandleForReading
-    self.terminationHandler = {
-      (process) in
-      let error : Error?
+    terminationHandler = {
+      process in
+      let error: Error?
       if case .uncaughtSignal = process.terminationReason {
         let data = fileHandle.readDataToEndOfFile()
         let text = String(data: data, encoding: .utf8)!
@@ -67,6 +59,6 @@ extension Process : ProcessProtocol {
       }
       callback(error)
     }
-    self.launch()
+    launch()
   }
 }

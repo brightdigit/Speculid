@@ -95,7 +95,7 @@
 		B3136E591F90F73B0002B7AB /* ArrayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E201F90F73B0002B7AB /* ArrayError.swift */; };
 		B3136E5A1F90F73B0002B7AB /* UnknownConversionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E211F90F73B0002B7AB /* UnknownConversionError.swift */; };
 		B3136E5B1F90FB710002B7AB /* ImageSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DBE1F90E27B0002B7AB /* ImageSpecification.swift */; };
-		B3136E631F90FCCF0002B7AB /* Speculid_Mac_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E621F90FCCF0002B7AB /* Speculid_Mac_AppUITests.swift */; };
+		B3136E631F90FCCF0002B7AB /* SpeculidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E621F90FCCF0002B7AB /* SpeculidUITests.swift */; };
 		B3136E811F90FD2E0002B7AB /* SpeculidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E801F90FD2E0002B7AB /* SpeculidTests.swift */; };
 		B3136E831F90FD2E0002B7AB /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; };
 		B3136E901F90FD3D0002B7AB /* CairoSVGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E8F1F90FD3D0002B7AB /* CairoSVGTests.swift */; };
@@ -105,6 +105,7 @@
 		B3136EAF1F9119620002B7AB /* assets in Resources */ = {isa = PBXBuildFile; fileRef = B3136EAE1F9119510002B7AB /* assets */; };
 		B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */; };
 		B318906A1F918F0300D0EFA0 /* GeometryValue.Multiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */; };
+		B318906E1F91A06C00D0EFA0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */; };
 		B34E82FB1F8FD4EF0032268F /* ImageFileFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E82FF1F8FD6860032268F /* ImageFileProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E83041F8FD90C0032268F /* GlibError.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E83021F8FD90C0032268F /* GlibError.h */; };
@@ -306,7 +307,7 @@
 		B3136E201F90F73B0002B7AB /* ArrayError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayError.swift; sourceTree = "<group>"; };
 		B3136E211F90F73B0002B7AB /* UnknownConversionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnknownConversionError.swift; sourceTree = "<group>"; };
 		B3136E601F90FCCF0002B7AB /* Speculid-Mac-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Speculid-Mac-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3136E621F90FCCF0002B7AB /* Speculid_Mac_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speculid_Mac_AppUITests.swift; sourceTree = "<group>"; };
+		B3136E621F90FCCF0002B7AB /* SpeculidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidUITests.swift; sourceTree = "<group>"; };
 		B3136E641F90FCCF0002B7AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3136E7E1F90FD2E0002B7AB /* SpeculidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeculidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3136E801F90FD2E0002B7AB /* SpeculidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidTests.swift; sourceTree = "<group>"; };
@@ -321,6 +322,7 @@
 		B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-trayicon.speculid"; sourceTree = "<group>"; };
 		B3136EAE1F9119510002B7AB /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryValue.Multiply.swift; sourceTree = "<group>"; };
+		B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileFormat.h; sourceTree = "<group>"; };
 		B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileProtocol.h; sourceTree = "<group>"; };
 		B34E83021F8FD90C0032268F /* GlibError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlibError.h; sourceTree = "<group>"; };
@@ -602,7 +604,7 @@
 		B3136E6B1F90FCE60002B7AB /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				B3136E621F90FCCF0002B7AB /* Speculid_Mac_AppUITests.swift */,
+				B3136E621F90FCCF0002B7AB /* SpeculidUITests.swift */,
 				B3136E641F90FCCF0002B7AB /* Info.plist */,
 			);
 			path = ui;
@@ -641,6 +643,7 @@
 		B37C74351F8C58F300DF505B = {
 			isa = PBXGroup;
 			children = (
+				B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */,
 				B3136E9B1F90FFB10002B7AB /* CairoSVG.debug.xcconfig */,
 				B3136E9A1F90FFB10002B7AB /* CairoSVG.release.xcconfig */,
 				B3136E6A1F90FCD90002B7AB /* tests */,
@@ -891,6 +894,8 @@
 			buildPhases = (
 				11C29AAE26481241CA772FFC /* [CP] Check Pods Manifest.lock */,
 				B3136E9C1F9100CB0002B7AB /* Autorevision */,
+				B318906B1F919FA300D0EFA0 /* swiftformat */,
+				B318906C1F91A02000D0EFA0 /* swiftlint */,
 				B37C746E1F8C5ADA00DF505B /* Sources */,
 				B37C746F1F8C5ADA00DF505B /* Frameworks */,
 				B37C74701F8C5ADA00DF505B /* Headers */,
@@ -1026,6 +1031,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B318906E1F91A06C00D0EFA0 /* .swiftlint.yml in Resources */,
 				B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */,
 				B3136EAF1F9119620002B7AB /* assets in Resources */,
 				B3136DD71F90E4AC0002B7AB /* layers.svg in Resources */,
@@ -1284,6 +1290,34 @@
 			shellPath = /bin/sh;
 			shellScript = "cp -Rv applications/mac/assets/Assets.xcassets/ applications/mac/assets/assets/";
 		};
+		B318906B1F919FA300D0EFA0 /* swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftformat;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline";
+		};
+		B318906C1F91A02000D0EFA0 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
 		B37C74B71F8C5CB500DF505B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1403,7 +1437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3136E631F90FCCF0002B7AB /* Speculid_Mac_AppUITests.swift in Sources */,
+				B3136E631F90FCCF0002B7AB /* SpeculidUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
