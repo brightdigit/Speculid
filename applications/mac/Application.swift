@@ -8,16 +8,6 @@
 import Cocoa
 import Speculid
 
-extension GeometryValue {
-  static func * (left: GeometryValue, right : CGFloat) -> GeometryValue {
-    switch left {
-    case .height(let value):
-      return .height(Int(CGFloat(value) * right))
-    case .width(let value):
-      return .width(Int(CGFloat(value) * right))
-    }
-  }
-}
 open class Application : Speculid.Application {
   open override func finishLaunching() {
     let interface = NSXPCInterface(with: ServiceProtocol.self)

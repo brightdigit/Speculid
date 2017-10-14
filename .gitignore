@@ -189,6 +189,6 @@ Products
 *tests/*.png
 *tests/*.pdf
 
-CairoSVGBridge*.xcconfig
+CairoSVG.xcconfig
 VCS.swift
 applications/mac/assets/assets
