@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  speculid-example-ios
-//
-//  Created by Leo Dion on 10/3/16.
-//
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -19,7 +11,4 @@ class ViewController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
-
 }
-

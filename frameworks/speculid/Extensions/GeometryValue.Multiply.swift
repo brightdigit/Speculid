@@ -1,19 +1,11 @@
-//
-//  GeometryValue.swift
-//  Speculid
-//
-//  Created by Leo Dion on 10/13/17.
-//  Copyright © 2017 Bright Digit, LLC. All rights reserved.
-//
-
 import Foundation
 
 public extension GeometryValue {
-  public static func * (left: GeometryValue, right : CGFloat) -> GeometryValue {
+  public static func * (left: GeometryValue, right: CGFloat) -> GeometryValue {
     switch left {
-    case .height(let value):
+    case let .height(value):
       return .height(Int(CGFloat(value) * right))
-    case .width(let value):
+    case let .width(value):
       return .width(Int(CGFloat(value) * right))
     }
   }
