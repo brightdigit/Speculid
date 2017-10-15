@@ -5,16 +5,8 @@ let sizeRegex = try! NSRegularExpression(pattern: "(\\d+\\.?\\d*)x(\\d+\\.?\\d*)
 let numberRegex = try! NSRegularExpression(pattern: "\\d", options: [])
 
 public struct SpeculidDocument: SpeculidDocumentProtocol {
-  public let _specifications: SpeculidSpecifications
-  public let _images: [AssetSpecification]
-
-  public var specifications: SpeculidSpecificationsProtocol {
-    return _specifications
-  }
-
-  public var images: [AssetSpecificationProtocol] {
-    return _images
-  }
+  public let specifications: SpeculidSpecificationsProtocol
+  public let images: [AssetSpecificationProtocol]
 
   public init?(url: URL, configuration _: SpeculidConfigurationProtocol? = nil) {
 

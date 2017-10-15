@@ -16,7 +16,13 @@ public struct AnalyticsConfiguration: AnalyticsConfigurationProtocol {
   public let userLanguage: String?
   public let customParameters: AnalyticsParameterDictionary
 
-  public init(trackingIdentifier: String, applicationName: String, applicationVersion: String, customParameters: AnalyticsParameterDictionary? = nil, clientIdentifierDelegate: ClientIdentifierDelegate? = nil, userLanguage: String? = nil) {
+  public init(
+    trackingIdentifier: String,
+    applicationName: String,
+    applicationVersion: String,
+    customParameters: AnalyticsParameterDictionary? = nil,
+    clientIdentifierDelegate: ClientIdentifierDelegate? = nil,
+    userLanguage: String? = nil) {
     self.trackingIdentifier = trackingIdentifier
     self.applicationVersion = applicationVersion
     self.applicationName = applicationName

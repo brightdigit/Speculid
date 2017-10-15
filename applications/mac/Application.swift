@@ -9,7 +9,8 @@ open class Application: Speculid.Application {
     connection.remoteObjectInterface = interface
     connection.resume()
 
-    if let service = connection.remoteObjectProxy as? ServiceProtocol, let speculidDocuments = Bundle.main.urls(forResourcesWithExtension: "speculid", subdirectory: nil)?.flatMap({ SpeculidDocument(url: $0) }) {
+    if let service = connection.remoteObjectProxy as? ServiceProtocol,
+      let speculidDocuments = Bundle.main.urls(forResourcesWithExtension: "speculid", subdirectory: nil)?.flatMap({ SpeculidDocument(url: $0) }) {
       for document in speculidDocuments {
         let exportSpecifications = document.images.flatMap({ (assetSpecs) -> ImageSpecification? in
 

@@ -53,7 +53,11 @@ open class Application: NSApplication {
   public static func begin(withArguments _: SpeculidArgumentsProtocol, _: @escaping (SpeculidApplicationProtocol) -> Void) {
     let operatingSystem = ProcessInfo.processInfo.operatingSystemVersionString
 
-    let analyticsConfiguration = AnalyticsConfiguration(trackingIdentifier: "UA-33667276-6", applicationName: "speculid", applicationVersion: String(describing: version), customParameters: [.operatingSystemVersion: operatingSystem])
+    let analyticsConfiguration = AnalyticsConfiguration(
+      trackingIdentifier: "UA-33667276-6",
+      applicationName: "speculid",
+      applicationVersion: String(describing: version),
+      customParameters: [.operatingSystemVersion: operatingSystem])
     let tracker = AnalyticsTracker(configuration: analyticsConfiguration, sessionManager: AnalyticsSessionManager())
     NSSetUncaughtExceptionHandler(exceptionHandlerMethod)
 
