@@ -1,5 +1,6 @@
 import Foundation
 
+// TODO: Separate into Files
 public typealias ImageConversionPair = (image: AssetSpecificationProtocol, conversion: Result<ImageConversionTaskProtocol>?)
 public typealias ImageConversionDictionary = [String: ImageConversionPair]
 

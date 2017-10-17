@@ -1,4 +1,3 @@
-
 import Foundation
 import AppKit
 import SwiftVer
@@ -13,12 +12,13 @@ func exceptionHandlerMethod(exception: NSException) {
 
 public typealias RegularExpressionArgumentSet = (String, options: NSRegularExpression.Options)
 open class Application: NSApplication {
-  open static var current: Application! {
-    return NSApplication.shared as? Application
+  open static var current: ApplicationProtocol! {
+    return NSApplication.shared as? ApplicationProtocol
   }
   open private(set) var statusItem: NSStatusItem!
   open private(set) var service: ServiceProtocol!
   open private(set) var regularExpressions: RegularExpressionSetProtocol!
+  open private(set) var tracker: RegularExpressionSetProtocol!
 
   open let statusItemProvider: StatusItemProviderProtocol
   open let remoteObjectInterfaceProvider: RemoteObjectInterfaceProviderProtocol
@@ -28,6 +28,7 @@ open class Application: NSApplication {
     statusItemProvider = StatusItemProvider()
     remoteObjectInterfaceProvider = RemoteObjectInterfaceProvider()
     regularExpressionBuilder = RegularExpressionSetBuilder()
+
     super.init()
   }
 
@@ -40,6 +41,14 @@ open class Application: NSApplication {
 
   open override func finishLaunching() {
     super.finishLaunching()
+
+    let operatingSystem = ProcessInfo.processInfo.operatingSystemVersionString
+
+    let analyticsConfiguration = AnalyticsConfiguration(
+      trackingIdentifier: "UA-33667276-6",
+      applicationName: "speculid",
+      applicationVersion: String(describing: Application.version),
+      customParameters: [.operatingSystemVersion: operatingSystem])
 
     statusItem = statusItemProvider.statusItem(for: self)
     do {
@@ -62,6 +71,13 @@ open class Application: NSApplication {
         self.service = service
       }
     }
+
+    let tracker = AnalyticsTracker(configuration: analyticsConfiguration, sessionManager: AnalyticsSessionManager())
+    NSSetUncaughtExceptionHandler(exceptionHandlerMethod)
+
+    exceptionHandler = tracker.track
+
+    tracker.track(event: AnalyticsEvent(category: "main", action: "launch", label: "application"))
   }
 
   private class _VersionHandler {
@@ -90,25 +106,4 @@ open class Application: NSApplication {
     bundle: bundle,
     dictionary: sbd,
     versionControl: vcs)!
-
-  @available(*, deprecated: 2.0.0)
-  public static func begin(
-    withArguments _: SpeculidArgumentsProtocol,
-    _: @escaping (SpeculidApplicationProtocol) -> Void) {
-    let operatingSystem = ProcessInfo.processInfo.operatingSystemVersionString
-
-    let analyticsConfiguration = AnalyticsConfiguration(
-      trackingIdentifier: "UA-33667276-6",
-      applicationName: "speculid",
-      applicationVersion: String(describing: version),
-      customParameters: [.operatingSystemVersion: operatingSystem])
-    let tracker = AnalyticsTracker(configuration: analyticsConfiguration, sessionManager: AnalyticsSessionManager())
-    NSSetUncaughtExceptionHandler(exceptionHandlerMethod)
-
-    exceptionHandler = tracker.track
-
-    tracker.track(event: AnalyticsEvent(category: "main", action: "launch", label: "application"))
-
-    let application = SpeculidApplication(configuration: SpeculidConfiguration.default, tracker: tracker)
-  }
 }
