@@ -49,11 +49,6 @@ open class Application: NSApplication {
         .scale: ("(\\d+)x", options: []),
         .size: ("(\\d+\\.?\\d*)x(\\d+\\.?\\d*)", options: []),
         .number: ("\\d", options: [])
-        /*
-         let scaleRegex = try! NSRegularExpression(pattern: "(\\d+)x", options: [])
-         let sizeRegex = try! NSRegularExpression(pattern: "(\\d+\\.?\\d*)x(\\d+\\.?\\d*)", options: [])
-         let numberRegex = try! NSRegularExpression(pattern: "\\d", options: [])
-         */
       ])
     } catch let error {
       assertionFailure("Failed to parse regular expression: \(error)")
@@ -62,10 +57,9 @@ open class Application: NSApplication {
     remoteObjectInterfaceProvider.remoteObjectProxyWithHandler { result in
       switch result {
       case let .error(error):
-        preconditionFailure("Could not connect to XPS Service.")
-        break
+        preconditionFailure("Could not connect to XPS Service: \(error)")
       case let .success(service):
-        break
+        self.service = service
       }
     }
   }
@@ -97,6 +91,7 @@ open class Application: NSApplication {
     dictionary: sbd,
     versionControl: vcs)!
 
+  @available(*, deprecated: 2.0.0)
   public static func begin(
     withArguments _: SpeculidArgumentsProtocol,
     _: @escaping (SpeculidApplicationProtocol) -> Void) {
