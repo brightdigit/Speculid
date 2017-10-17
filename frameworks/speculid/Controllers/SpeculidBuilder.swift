@@ -1,6 +1,6 @@
 import Foundation
 
-public typealias ImageConversionPair = (image: AssetSpecificationProtocol, conversion: ConversionResult?)
+public typealias ImageConversionPair = (image: AssetSpecificationProtocol, conversion: Result<ImageConversionTaskProtocol>?)
 public typealias ImageConversionDictionary = [String: ImageConversionPair]
 
 extension SpeculidSpecificationsProtocol {
