@@ -1,3 +1,4 @@
+@available(*, deprecated: 2.0.0)
 public enum ConversionResult {
-  case Task(ImageConversionTaskProtocol), Error(Error)
+  case task(ImageConversionTaskProtocol), error(Error)
 }
