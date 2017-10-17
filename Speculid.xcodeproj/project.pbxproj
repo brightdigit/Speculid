@@ -38,15 +38,9 @@
 		B3136DD91F90E96A0002B7AB /* cairo.h in Headers */ = {isa = PBXBuildFile; fileRef = B3136DD81F90E96A0002B7AB /* cairo.h */; };
 		B3136DDE1F90EF470002B7AB /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DDD1F90EF460002B7AB /* Application.swift */; };
 		B3136DDF1F90EFB10002B7AB /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DDB1F90EF370002B7AB /* Application.swift */; };
-		B3136E221F90F73B0002B7AB /* DefaultApplicationPathDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DE51F90F73A0002B7AB /* DefaultApplicationPathDataSource.swift */; };
-		B3136E231F90F73B0002B7AB /* CollectionConversionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DE61F90F73A0002B7AB /* CollectionConversionBuilder.swift */; };
 		B3136E251F90F73B0002B7AB /* CairoConversionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DE81F90F73A0002B7AB /* CairoConversionSet.swift */; };
-		B3136E261F90F73B0002B7AB /* ConfiguredApplicationPathDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DE91F90F73A0002B7AB /* ConfiguredApplicationPathDataSource.swift */; };
 		B3136E271F90F73B0002B7AB /* AnalyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DEA1F90F73A0002B7AB /* AnalyticsTracker.swift */; };
-		B3136E281F90F73B0002B7AB /* SearchApplicationPathDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DEB1F90F73A0002B7AB /* SearchApplicationPathDataSource.swift */; };
 		B3136E291F90F73B0002B7AB /* ClientIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DEC1F90F73A0002B7AB /* ClientIdentifier.swift */; };
-		B3136E2A1F90F73B0002B7AB /* CollectionConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DED1F90F73A0002B7AB /* CollectionConversion.swift */; };
-		B3136E2B1F90F73B0002B7AB /* SpeculidApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DEE1F90F73A0002B7AB /* SpeculidApplication.swift */; };
 		B3136E2D1F90F73B0002B7AB /* ImageConversionSetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DF01F90F73A0002B7AB /* ImageConversionSetBuilder.swift */; };
 		B3136E2E1F90F73B0002B7AB /* AnalyticsSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DF11F90F73A0002B7AB /* AnalyticsSessionManager.swift */; };
 		B3136E2F1F90F73B0002B7AB /* SpeculidBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DF21F90F73A0002B7AB /* SpeculidBuilder.swift */; };
@@ -58,18 +52,14 @@
 		B3136E351F90F73B0002B7AB /* AnalyticsParameterDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DFA1F90F73A0002B7AB /* AnalyticsParameterDictionary.swift */; };
 		B3136E361F90F73B0002B7AB /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DFB1F90F73A0002B7AB /* Geometry.swift */; };
 		B3136E371F90F73B0002B7AB /* SpeculidSpecifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DFC1F90F73A0002B7AB /* SpeculidSpecifications.swift */; };
-		B3136E381F90F73B0002B7AB /* ApplicationPathDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DFD1F90F73A0002B7AB /* ApplicationPathDictionary.swift */; };
-		B3136E391F90F73B0002B7AB /* SpeculidConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DFE1F90F73A0002B7AB /* SpeculidConfiguration.swift */; };
 		B3136E3B1F90F73B0002B7AB /* ScaledGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E001F90F73A0002B7AB /* ScaledGeometry.swift */; };
 		B3136E3C1F90F73B0002B7AB /* SpeculidDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */; };
 		B3136E3D1F90F73B0002B7AB /* AnalyticsParameterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E021F90F73A0002B7AB /* AnalyticsParameterKey.swift */; };
 		B3136E3E1F90F73B0002B7AB /* GeometryValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E031F90F73A0002B7AB /* GeometryValue.swift */; };
 		B3136E3F1F90F73B0002B7AB /* AssetSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E041F90F73A0002B7AB /* AssetSpecification.swift */; };
 		B3136E401F90F73B0002B7AB /* AnalyticsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E051F90F73A0002B7AB /* AnalyticsConfiguration.swift */; };
-		B3136E411F90F73B0002B7AB /* ApplicationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E061F90F73A0002B7AB /* ApplicationPath.swift */; };
 		B3136E421F90F73B0002B7AB /* ImageIdiom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E071F90F73A0002B7AB /* ImageIdiom.swift */; };
 		B3136E431F90F73B0002B7AB /* SpeculidSpecificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E091F90F73B0002B7AB /* SpeculidSpecificationsProtocol.swift */; };
-		B3136E441F90F73B0002B7AB /* ApplicationPathDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E0A1F90F73B0002B7AB /* ApplicationPathDataSource.swift */; };
 		B3136E451F90F73B0002B7AB /* ImageConversionSetBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E0B1F90F73B0002B7AB /* ImageConversionSetBuilderProtocol.swift */; };
 		B3136E461F90F73B0002B7AB /* ImageConversionTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E0C1F90F73B0002B7AB /* ImageConversionTaskProtocol.swift */; };
 		B3136E471F90F73B0002B7AB /* ClientIdentifierDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E0D1F90F73B0002B7AB /* ClientIdentifierDelegate.swift */; };
@@ -84,7 +74,7 @@
 		B3136E511F90F73B0002B7AB /* AnalyticsConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E171F90F73B0002B7AB /* AnalyticsConfigurationProtocol.swift */; };
 		B3136E521F90F73B0002B7AB /* AnalyticsTrackerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E181F90F73B0002B7AB /* AnalyticsTrackerProtocol.swift */; };
 		B3136E531F90F73B0002B7AB /* SpeculidBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E191F90F73B0002B7AB /* SpeculidBuilderProtocol.swift */; };
-		B3136E541F90F73B0002B7AB /* SpeculidApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E1A1F90F73B0002B7AB /* SpeculidApplicationProtocol.swift */; };
+		B3136E541F90F73B0002B7AB /* ApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E1A1F90F73B0002B7AB /* ApplicationProtocol.swift */; };
 		B3136E551F90F73B0002B7AB /* ImageConversionBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E1B1F90F73B0002B7AB /* ImageConversionBuilderProtocol.swift */; };
 		B3136E561F90F73B0002B7AB /* versions.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3136E1C1F90F73B0002B7AB /* versions.plist */; };
 		B3136E571F90F73B0002B7AB /* MissingRequiredInstallationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E1E1F90F73B0002B7AB /* MissingRequiredInstallationError.swift */; };
@@ -264,15 +254,9 @@
 		B3136DDD1F90EF460002B7AB /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		B3136DE01F90F5C70002B7AB /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		B3136DE11F90F5C80002B7AB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		B3136DE51F90F73A0002B7AB /* DefaultApplicationPathDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultApplicationPathDataSource.swift; sourceTree = "<group>"; };
-		B3136DE61F90F73A0002B7AB /* CollectionConversionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionConversionBuilder.swift; sourceTree = "<group>"; };
 		B3136DE81F90F73A0002B7AB /* CairoConversionSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CairoConversionSet.swift; sourceTree = "<group>"; };
-		B3136DE91F90F73A0002B7AB /* ConfiguredApplicationPathDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguredApplicationPathDataSource.swift; sourceTree = "<group>"; };
 		B3136DEA1F90F73A0002B7AB /* AnalyticsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsTracker.swift; sourceTree = "<group>"; };
-		B3136DEB1F90F73A0002B7AB /* SearchApplicationPathDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchApplicationPathDataSource.swift; sourceTree = "<group>"; };
 		B3136DEC1F90F73A0002B7AB /* ClientIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientIdentifier.swift; sourceTree = "<group>"; };
-		B3136DED1F90F73A0002B7AB /* CollectionConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionConversion.swift; sourceTree = "<group>"; };
-		B3136DEE1F90F73A0002B7AB /* SpeculidApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidApplication.swift; sourceTree = "<group>"; };
 		B3136DF01F90F73A0002B7AB /* ImageConversionSetBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConversionSetBuilder.swift; sourceTree = "<group>"; };
 		B3136DF11F90F73A0002B7AB /* AnalyticsSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsSessionManager.swift; sourceTree = "<group>"; };
 		B3136DF21F90F73A0002B7AB /* SpeculidBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidBuilder.swift; sourceTree = "<group>"; };
@@ -284,18 +268,14 @@
 		B3136DFA1F90F73A0002B7AB /* AnalyticsParameterDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsParameterDictionary.swift; sourceTree = "<group>"; };
 		B3136DFB1F90F73A0002B7AB /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		B3136DFC1F90F73A0002B7AB /* SpeculidSpecifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidSpecifications.swift; sourceTree = "<group>"; };
-		B3136DFD1F90F73A0002B7AB /* ApplicationPathDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationPathDictionary.swift; sourceTree = "<group>"; };
-		B3136DFE1F90F73A0002B7AB /* SpeculidConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidConfiguration.swift; sourceTree = "<group>"; };
 		B3136E001F90F73A0002B7AB /* ScaledGeometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledGeometry.swift; sourceTree = "<group>"; };
 		B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidDocument.swift; sourceTree = "<group>"; };
 		B3136E021F90F73A0002B7AB /* AnalyticsParameterKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsParameterKey.swift; sourceTree = "<group>"; };
 		B3136E031F90F73A0002B7AB /* GeometryValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryValue.swift; sourceTree = "<group>"; };
 		B3136E041F90F73A0002B7AB /* AssetSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetSpecification.swift; sourceTree = "<group>"; };
 		B3136E051F90F73A0002B7AB /* AnalyticsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsConfiguration.swift; sourceTree = "<group>"; };
-		B3136E061F90F73A0002B7AB /* ApplicationPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationPath.swift; sourceTree = "<group>"; };
 		B3136E071F90F73A0002B7AB /* ImageIdiom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageIdiom.swift; sourceTree = "<group>"; };
 		B3136E091F90F73B0002B7AB /* SpeculidSpecificationsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidSpecificationsProtocol.swift; sourceTree = "<group>"; };
-		B3136E0A1F90F73B0002B7AB /* ApplicationPathDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationPathDataSource.swift; sourceTree = "<group>"; };
 		B3136E0B1F90F73B0002B7AB /* ImageConversionSetBuilderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConversionSetBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3136E0C1F90F73B0002B7AB /* ImageConversionTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConversionTaskProtocol.swift; sourceTree = "<group>"; };
 		B3136E0D1F90F73B0002B7AB /* ClientIdentifierDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientIdentifierDelegate.swift; sourceTree = "<group>"; };
@@ -310,7 +290,7 @@
 		B3136E171F90F73B0002B7AB /* AnalyticsConfigurationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsConfigurationProtocol.swift; sourceTree = "<group>"; };
 		B3136E181F90F73B0002B7AB /* AnalyticsTrackerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsTrackerProtocol.swift; sourceTree = "<group>"; };
 		B3136E191F90F73B0002B7AB /* SpeculidBuilderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidBuilderProtocol.swift; sourceTree = "<group>"; };
-		B3136E1A1F90F73B0002B7AB /* SpeculidApplicationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationProtocol.swift; sourceTree = "<group>"; };
+		B3136E1A1F90F73B0002B7AB /* ApplicationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationProtocol.swift; sourceTree = "<group>"; };
 		B3136E1B1F90F73B0002B7AB /* ImageConversionBuilderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConversionBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3136E1C1F90F73B0002B7AB /* versions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = versions.plist; sourceTree = "<group>"; };
 		B3136E1E1F90F73B0002B7AB /* MissingRequiredInstallationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissingRequiredInstallationError.swift; sourceTree = "<group>"; };
@@ -517,15 +497,9 @@
 			children = (
 				B3136DCC1F90E2A20002B7AB /* Service.swift */,
 				B3136DDB1F90EF370002B7AB /* Application.swift */,
-				B3136DE51F90F73A0002B7AB /* DefaultApplicationPathDataSource.swift */,
-				B3136DE61F90F73A0002B7AB /* CollectionConversionBuilder.swift */,
 				B3136DE81F90F73A0002B7AB /* CairoConversionSet.swift */,
-				B3136DE91F90F73A0002B7AB /* ConfiguredApplicationPathDataSource.swift */,
 				B3136DEA1F90F73A0002B7AB /* AnalyticsTracker.swift */,
-				B3136DEB1F90F73A0002B7AB /* SearchApplicationPathDataSource.swift */,
 				B3136DEC1F90F73A0002B7AB /* ClientIdentifier.swift */,
-				B3136DED1F90F73A0002B7AB /* CollectionConversion.swift */,
-				B3136DEE1F90F73A0002B7AB /* SpeculidApplication.swift */,
 				B3136DF01F90F73A0002B7AB /* ImageConversionSetBuilder.swift */,
 				B3136DF11F90F73A0002B7AB /* AnalyticsSessionManager.swift */,
 				B3136DF21F90F73A0002B7AB /* SpeculidBuilder.swift */,
@@ -561,15 +535,12 @@
 				B3136DFA1F90F73A0002B7AB /* AnalyticsParameterDictionary.swift */,
 				B3136DFB1F90F73A0002B7AB /* Geometry.swift */,
 				B3136DFC1F90F73A0002B7AB /* SpeculidSpecifications.swift */,
-				B3136DFD1F90F73A0002B7AB /* ApplicationPathDictionary.swift */,
-				B3136DFE1F90F73A0002B7AB /* SpeculidConfiguration.swift */,
 				B3136E001F90F73A0002B7AB /* ScaledGeometry.swift */,
 				B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */,
 				B3136E021F90F73A0002B7AB /* AnalyticsParameterKey.swift */,
 				B3136E031F90F73A0002B7AB /* GeometryValue.swift */,
 				B3136E041F90F73A0002B7AB /* AssetSpecification.swift */,
 				B3136E051F90F73A0002B7AB /* AnalyticsConfiguration.swift */,
-				B3136E061F90F73A0002B7AB /* ApplicationPath.swift */,
 				B3136E071F90F73A0002B7AB /* ImageIdiom.swift */,
 				B33A533D1F954FF800E74800 /* Result.swift */,
 			);
@@ -583,7 +554,6 @@
 				B3136E121F90F73B0002B7AB /* AnalyticsEventProtocol.swift */,
 				B3136E131F90F73B0002B7AB /* AnalyticsSessionManagerProtocol.swift */,
 				B3136E181F90F73B0002B7AB /* AnalyticsTrackerProtocol.swift */,
-				B3136E0A1F90F73B0002B7AB /* ApplicationPathDataSource.swift */,
 				B3136E0D1F90F73B0002B7AB /* ClientIdentifierDelegate.swift */,
 				B3136E151F90F73B0002B7AB /* GeometryProtocol.swift */,
 				B3136E1B1F90F73B0002B7AB /* ImageConversionBuilderProtocol.swift */,
@@ -592,7 +562,7 @@
 				B3136E0C1F90F73B0002B7AB /* ImageConversionTaskProtocol.swift */,
 				B3136E141F90F73B0002B7AB /* ImageSpecificationProtocol.swift */,
 				B3136DC61F90E2A20002B7AB /* ServiceProtocol.swift */,
-				B3136E1A1F90F73B0002B7AB /* SpeculidApplicationProtocol.swift */,
+				B3136E1A1F90F73B0002B7AB /* ApplicationProtocol.swift */,
 				B3136E161F90F73B0002B7AB /* SpeculidArgumentsProtocol.swift */,
 				B3136E191F90F73B0002B7AB /* SpeculidBuilderProtocol.swift */,
 				B3136E111F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift */,
@@ -928,6 +898,7 @@
 				B37C74711F8C5ADA00DF505B /* Resources */,
 				CD3C66797988C9372F5A1947 /* [CP] Copy Pods Resources */,
 				B33A533F1F95568F00E74800 /* CopyFiles */,
+				B3B5E9D61F96AB1B004A6BEB /* warnings */,
 			);
 			buildRules = (
 			);
@@ -1357,6 +1328,20 @@
 			shellPath = /bin/sh;
 			shellScript = "OTHER_CFLAGS=\"$(pkg-config cairo librsvg-2.0  --cflags)\"\nOTHER_LDFLAGS=\"$(pkg-config cairo librsvg-2.0  --libs)\"\nHEADER_SEARCH_PATHS=\"$(pkg-config --cflags-only-I cairo librsvg-2.0 | tr -d '\\-I')\"\necho -e \"OTHER_CFLAGS = \\$(inherited) ${OTHER_CFLAGS}\" > CairoSVG.xcconfig\necho -e \"OTHER_LDFLAGS = \\$(inherited) ${OTHER_LDFLAGS}\" >> CairoSVG.xcconfig\necho -e \"HEADER_SEARCH_PATHS = \\$(inherited) ${HEADER_SEARCH_PATHS}\" >> CairoSVG.xcconfig";
 		};
+		B3B5E9D61F96AB1B004A6BEB /* warnings */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = warnings;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" -type f\\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
+		};
 		BD6A812C7EF5D496661AC259 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1509,20 +1494,15 @@
 				B3136E4D1F90F73B0002B7AB /* AnalyticsSessionManagerProtocol.swift in Sources */,
 				B33F0BBB1F9586A9004A87DD /* StatusItemProvider.swift in Sources */,
 				B3136E351F90F73B0002B7AB /* AnalyticsParameterDictionary.swift in Sources */,
-				B3136E261F90F73B0002B7AB /* ConfiguredApplicationPathDataSource.swift in Sources */,
 				B3136E431F90F73B0002B7AB /* SpeculidSpecificationsProtocol.swift in Sources */,
 				B3136E3E1F90F73B0002B7AB /* GeometryValue.swift in Sources */,
 				B3136DDF1F90EFB10002B7AB /* Application.swift in Sources */,
-				B3136E2B1F90F73B0002B7AB /* SpeculidApplication.swift in Sources */,
 				B3136E331F90F73B0002B7AB /* String.swift in Sources */,
 				B3136E521F90F73B0002B7AB /* AnalyticsTrackerProtocol.swift in Sources */,
 				B3136E461F90F73B0002B7AB /* ImageConversionTaskProtocol.swift in Sources */,
 				B3136E3C1F90F73B0002B7AB /* SpeculidDocument.swift in Sources */,
-				B3136E391F90F73B0002B7AB /* SpeculidConfiguration.swift in Sources */,
 				B33F0BB91F958695004A87DD /* RemoteObjectInterfaceProvider.swift in Sources */,
-				B3136E281F90F73B0002B7AB /* SearchApplicationPathDataSource.swift in Sources */,
 				B33F0BB61F958640004A87DD /* StatusItemProviderProtocol.swift in Sources */,
-				B3136E2A1F90F73B0002B7AB /* CollectionConversion.swift in Sources */,
 				B3136E4E1F90F73B0002B7AB /* ImageSpecificationProtocol.swift in Sources */,
 				B3136E9F1F9101A70002B7AB /* VCS.swift in Sources */,
 				B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */,
@@ -1547,7 +1527,6 @@
 				B3136E4C1F90F73B0002B7AB /* AnalyticsEventProtocol.swift in Sources */,
 				B31BEB001F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift in Sources */,
 				B3136E531F90F73B0002B7AB /* SpeculidBuilderProtocol.swift in Sources */,
-				B3136E381F90F73B0002B7AB /* ApplicationPathDictionary.swift in Sources */,
 				B3136E4B1F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift in Sources */,
 				B3136E4A1F90F73B0002B7AB /* SpeculidDocumentProtocol.swift in Sources */,
 				B3136E4F1F90F73B0002B7AB /* GeometryProtocol.swift in Sources */,
@@ -1556,25 +1535,21 @@
 				B3136E5A1F90F73B0002B7AB /* UnknownConversionError.swift in Sources */,
 				B3136E551F90F73B0002B7AB /* ImageConversionBuilderProtocol.swift in Sources */,
 				B3136E361F90F73B0002B7AB /* Geometry.swift in Sources */,
-				B3136E441F90F73B0002B7AB /* ApplicationPathDataSource.swift in Sources */,
 				B3136E3F1F90F73B0002B7AB /* AssetSpecification.swift in Sources */,
 				B3136E321F90F73B0002B7AB /* NSColor.swift in Sources */,
 				B3136E491F90F73B0002B7AB /* ImageConversionSetProtocol.swift in Sources */,
-				B3136E221F90F73B0002B7AB /* DefaultApplicationPathDataSource.swift in Sources */,
 				B3136E581F90F73B0002B7AB /* ProcessError.swift in Sources */,
-				B3136E541F90F73B0002B7AB /* SpeculidApplicationProtocol.swift in Sources */,
+				B3136E541F90F73B0002B7AB /* ApplicationProtocol.swift in Sources */,
 				B33A533E1F954FF800E74800 /* Result.swift in Sources */,
 				B3136E591F90F73B0002B7AB /* ArrayError.swift in Sources */,
 				B3136E2E1F90F73B0002B7AB /* AnalyticsSessionManager.swift in Sources */,
 				B318906A1F918F0300D0EFA0 /* GeometryValue.Multiply.swift in Sources */,
 				B3136E571F90F73B0002B7AB /* MissingRequiredInstallationError.swift in Sources */,
-				B3136E411F90F73B0002B7AB /* ApplicationPath.swift in Sources */,
 				B31BEAFE1F9626AC00496E7A /* RegularExpressionSetProtocol.swift in Sources */,
 				B3136E3B1F90F73B0002B7AB /* ScaledGeometry.swift in Sources */,
 				B3136E471F90F73B0002B7AB /* ClientIdentifierDelegate.swift in Sources */,
 				B3136DCE1F90E45F0002B7AB /* ErrorCollection.swift in Sources */,
 				B3136E271F90F73B0002B7AB /* AnalyticsTracker.swift in Sources */,
-				B3136E231F90F73B0002B7AB /* CollectionConversionBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
