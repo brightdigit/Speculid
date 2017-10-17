@@ -102,10 +102,18 @@
 		B3136E921F90FD3D0002B7AB /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
 		B3136E9F1F9101A70002B7AB /* VCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E9D1F91019F0002B7AB /* VCS.swift */; };
 		B3136EA31F910BC90002B7AB /* svg-appicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3136EA11F910BC90002B7AB /* svg-appicon.speculid */; };
-		B3136EAF1F9119620002B7AB /* assets in Resources */ = {isa = PBXBuildFile; fileRef = B3136EAE1F9119510002B7AB /* assets */; };
 		B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */; };
 		B318906A1F918F0300D0EFA0 /* GeometryValue.Multiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */; };
 		B318906E1F91A06C00D0EFA0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */; };
+		B31BEAFA1F96268700496E7A /* RegularExpressionSetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */; };
+		B31BEAFC1F96269F00496E7A /* RegularExpressionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAFB1F96269F00496E7A /* RegularExpressionSet.swift */; };
+		B31BEAFE1F9626AC00496E7A /* RegularExpressionSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */; };
+		B31BEB001F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */; };
+		B33A533E1F954FF800E74800 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A533D1F954FF800E74800 /* Result.swift */; };
+		B33F0BB61F958640004A87DD /* StatusItemProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */; };
+		B33F0BB71F958640004A87DD /* RemoteObjectInterfaceProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */; };
+		B33F0BB91F958695004A87DD /* RemoteObjectInterfaceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33F0BB81F958695004A87DD /* RemoteObjectInterfaceProvider.swift */; };
+		B33F0BBB1F9586A9004A87DD /* StatusItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33F0BBA1F9586A9004A87DD /* StatusItemProvider.swift */; };
 		B34E82FB1F8FD4EF0032268F /* ImageFileFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E82FF1F8FD6860032268F /* ImageFileProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E83041F8FD90C0032268F /* GlibError.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E83021F8FD90C0032268F /* GlibError.h */; };
@@ -198,6 +206,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B33A533F1F95568F00E74800 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B37C74621F8C590D00DF505B /* Embed XPC Services */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,6 +340,15 @@
 		B3136EAE1F9119510002B7AB /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryValue.Multiply.swift; sourceTree = "<group>"; };
 		B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetBuilder.swift; sourceTree = "<group>"; };
+		B31BEAFB1F96269F00496E7A /* RegularExpressionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSet.swift; sourceTree = "<group>"; };
+		B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetProtocol.swift; sourceTree = "<group>"; };
+		B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetBuilderProtocol.swift; sourceTree = "<group>"; };
+		B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemProviderProtocol.swift; sourceTree = "<group>"; };
+		B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObjectInterfaceProviderProtocol.swift; sourceTree = "<group>"; };
+		B33A533D1F954FF800E74800 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B33F0BB81F958695004A87DD /* RemoteObjectInterfaceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObjectInterfaceProvider.swift; sourceTree = "<group>"; };
+		B33F0BBA1F9586A9004A87DD /* StatusItemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemProvider.swift; sourceTree = "<group>"; };
 		B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileFormat.h; sourceTree = "<group>"; };
 		B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileProtocol.h; sourceTree = "<group>"; };
 		B34E83021F8FD90C0032268F /* GlibError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlibError.h; sourceTree = "<group>"; };
@@ -512,6 +538,10 @@
 				B3136DF21F90F73A0002B7AB /* SpeculidBuilder.swift */,
 				B3136DF31F90F73A0002B7AB /* ImageConversionBuilder.swift */,
 				B3136DF41F90F73A0002B7AB /* CairoConversionSetBuilder.swift */,
+				B33F0BB81F958695004A87DD /* RemoteObjectInterfaceProvider.swift */,
+				B33F0BBA1F9586A9004A87DD /* StatusItemProvider.swift */,
+				B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */,
+				B31BEAFB1F96269F00496E7A /* RegularExpressionSet.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -549,6 +579,7 @@
 				B3136E051F90F73A0002B7AB /* AnalyticsConfiguration.swift */,
 				B3136E061F90F73A0002B7AB /* ApplicationPath.swift */,
 				B3136E071F90F73A0002B7AB /* ImageIdiom.swift */,
+				B33A533D1F954FF800E74800 /* Result.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -576,6 +607,10 @@
 				B3136E111F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift */,
 				B3136E101F90F73B0002B7AB /* SpeculidDocumentProtocol.swift */,
 				B3136E091F90F73B0002B7AB /* SpeculidSpecificationsProtocol.swift */,
+				B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */,
+				B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */,
+				B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */,
+				B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -901,6 +936,7 @@
 				B37C74701F8C5ADA00DF505B /* Headers */,
 				B37C74711F8C5ADA00DF505B /* Resources */,
 				CD3C66797988C9372F5A1947 /* [CP] Copy Pods Resources */,
+				B33A533F1F95568F00E74800 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -1033,7 +1069,6 @@
 			files = (
 				B318906E1F91A06C00D0EFA0 /* .swiftlint.yml in Resources */,
 				B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */,
-				B3136EAF1F9119620002B7AB /* assets in Resources */,
 				B3136DD71F90E4AC0002B7AB /* layers.svg in Resources */,
 				B37C74441F8C58F300DF505B /* Assets.xcassets in Resources */,
 				B3136EA31F910BC90002B7AB /* svg-appicon.speculid in Resources */,
@@ -1481,6 +1516,7 @@
 			files = (
 				B3136E3D1F90F73B0002B7AB /* AnalyticsParameterKey.swift in Sources */,
 				B3136E4D1F90F73B0002B7AB /* AnalyticsSessionManagerProtocol.swift in Sources */,
+				B33F0BBB1F9586A9004A87DD /* StatusItemProvider.swift in Sources */,
 				B3136E351F90F73B0002B7AB /* AnalyticsParameterDictionary.swift in Sources */,
 				B3136E261F90F73B0002B7AB /* ConfiguredApplicationPathDataSource.swift in Sources */,
 				B3136E431F90F73B0002B7AB /* SpeculidSpecificationsProtocol.swift in Sources */,
@@ -1492,13 +1528,16 @@
 				B3136E461F90F73B0002B7AB /* ImageConversionTaskProtocol.swift in Sources */,
 				B3136E3C1F90F73B0002B7AB /* SpeculidDocument.swift in Sources */,
 				B3136E391F90F73B0002B7AB /* SpeculidConfiguration.swift in Sources */,
+				B33F0BB91F958695004A87DD /* RemoteObjectInterfaceProvider.swift in Sources */,
 				B3136E281F90F73B0002B7AB /* SearchApplicationPathDataSource.swift in Sources */,
+				B33F0BB61F958640004A87DD /* StatusItemProviderProtocol.swift in Sources */,
 				B3136E2A1F90F73B0002B7AB /* CollectionConversion.swift in Sources */,
 				B3136E4E1F90F73B0002B7AB /* ImageSpecificationProtocol.swift in Sources */,
 				B3136E9F1F9101A70002B7AB /* VCS.swift in Sources */,
 				B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */,
 				B3136E421F90F73B0002B7AB /* ImageIdiom.swift in Sources */,
 				B3136E371F90F73B0002B7AB /* SpeculidSpecifications.swift in Sources */,
+				B31BEAFA1F96268700496E7A /* RegularExpressionSetBuilder.swift in Sources */,
 				B3136E311F90F73B0002B7AB /* CairoConversionSetBuilder.swift in Sources */,
 				B3136E481F90F73B0002B7AB /* ProcessProtocol.swift in Sources */,
 				B3136E251F90F73B0002B7AB /* CairoConversionSet.swift in Sources */,
@@ -1507,14 +1546,17 @@
 				B3136E401F90F73B0002B7AB /* AnalyticsConfiguration.swift in Sources */,
 				B3136E301F90F73B0002B7AB /* ImageConversionBuilder.swift in Sources */,
 				B3136E2D1F90F73B0002B7AB /* ImageConversionSetBuilder.swift in Sources */,
+				B31BEAFC1F96269F00496E7A /* RegularExpressionSet.swift in Sources */,
 				B3136E511F90F73B0002B7AB /* AnalyticsConfigurationProtocol.swift in Sources */,
 				B3136DD41F90E45F0002B7AB /* Service.swift in Sources */,
 				B3136E291F90F73B0002B7AB /* ClientIdentifier.swift in Sources */,
 				B3136E501F90F73B0002B7AB /* SpeculidArgumentsProtocol.swift in Sources */,
 				B3136DD11F90E45F0002B7AB /* ImageFile.swift in Sources */,
+				B33F0BB71F958640004A87DD /* RemoteObjectInterfaceProviderProtocol.swift in Sources */,
 				B3136DD51F90E45F0002B7AB /* ServiceProtocol.swift in Sources */,
 				B3136E4C1F90F73B0002B7AB /* AnalyticsEventProtocol.swift in Sources */,
 				B3136E3A1F90F73B0002B7AB /* ConversionResult.swift in Sources */,
+				B31BEB001F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift in Sources */,
 				B3136E531F90F73B0002B7AB /* SpeculidBuilderProtocol.swift in Sources */,
 				B3136E381F90F73B0002B7AB /* ApplicationPathDictionary.swift in Sources */,
 				B3136E4B1F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift in Sources */,
@@ -1532,11 +1574,13 @@
 				B3136E221F90F73B0002B7AB /* DefaultApplicationPathDataSource.swift in Sources */,
 				B3136E581F90F73B0002B7AB /* ProcessError.swift in Sources */,
 				B3136E541F90F73B0002B7AB /* SpeculidApplicationProtocol.swift in Sources */,
+				B33A533E1F954FF800E74800 /* Result.swift in Sources */,
 				B3136E591F90F73B0002B7AB /* ArrayError.swift in Sources */,
 				B3136E2E1F90F73B0002B7AB /* AnalyticsSessionManager.swift in Sources */,
 				B318906A1F918F0300D0EFA0 /* GeometryValue.Multiply.swift in Sources */,
 				B3136E571F90F73B0002B7AB /* MissingRequiredInstallationError.swift in Sources */,
 				B3136E411F90F73B0002B7AB /* ApplicationPath.swift in Sources */,
+				B31BEAFE1F9626AC00496E7A /* RegularExpressionSetProtocol.swift in Sources */,
 				B3136E3B1F90F73B0002B7AB /* ScaledGeometry.swift in Sources */,
 				B3136E471F90F73B0002B7AB /* ClientIdentifierDelegate.swift in Sources */,
 				B3136E2C1F90F73B0002B7AB /* ProcessImageConversionTask.swift in Sources */,

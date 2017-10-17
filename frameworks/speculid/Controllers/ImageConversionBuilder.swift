@@ -6,9 +6,15 @@ public struct ImageConversionBuilder: ImageConversionBuilderProtocol {
 
   public let builders: [ImageConversionBuilderProtocol]
 
-  public func conversion(forImage imageSpecification: AssetSpecificationProtocol, withSpecifications specifications: SpeculidSpecificationsProtocol, andConfiguration configuration: SpeculidConfigurationProtocol) -> ConversionResult? {
+  public func conversion(
+    forImage imageSpecification: AssetSpecificationProtocol,
+    withSpecifications specifications: SpeculidSpecificationsProtocol,
+    andConfiguration configuration: SpeculidConfigurationProtocol) -> ConversionResult? {
     for builders in builders {
-      if let conversion = builders.conversion(forImage: imageSpecification, withSpecifications: specifications, andConfiguration: configuration) {
+      if let conversion = builders.conversion(
+        forImage: imageSpecification,
+        withSpecifications: specifications,
+        andConfiguration: configuration) {
         return conversion
       }
     }

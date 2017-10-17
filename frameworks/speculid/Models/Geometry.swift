@@ -24,19 +24,24 @@ public struct Geometry: GeometryProtocol {
   }
 
   public struct Regex {
-    public static let Geometry = try! NSRegularExpression(pattern: "x?(\\d+)", options: [.caseInsensitive])
-    public static let Integer = try! NSRegularExpression(pattern: "\\d+", options: [])
+    //    public static let Geometry = Application.shared.regularExpression[.geometry]
+    //    //try! NSRegularExpression(pattern: "x?(\\d+)", options: [.caseInsensitive])
+    //    public static let Integer = try! NSRegularExpression(pattern: "\\d+", options: [])
     private init() {}
   }
 
   public init?(string: String) {
     let range = NSRange(0 ..< string.characters.count)
 
-    guard Geometry.Regex.Geometry.firstMatch(in: string, options: [], range: range) != nil else {
+    let geometryRegex: NSRegularExpression = Application.current.regularExpressions.regularExpression(for: .geometry)
+
+    let integerRegex: NSRegularExpression = Application.current.regularExpressions.regularExpression(for: .integer)
+
+    guard geometryRegex.firstMatch(in: string, options: [], range: range) != nil else {
       return nil
     }
     let value: GeometryValue
-    let results = Geometry.Regex.Integer.matches(in: string, options: [], range: range)
+    let results = integerRegex.matches(in: string, options: [], range: range)
     let intValue = results.flatMap { (result) -> Int? in
       guard let range = Range(result.range, in: string) else {
         return nil

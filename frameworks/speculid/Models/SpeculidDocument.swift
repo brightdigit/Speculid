@@ -1,20 +1,12 @@
 import Foundation
-
-let scaleRegex = try! NSRegularExpression(pattern: "(\\d+)x", options: [])
-let sizeRegex = try! NSRegularExpression(pattern: "(\\d+\\.?\\d*)x(\\d+\\.?\\d*)", options: [])
-let numberRegex = try! NSRegularExpression(pattern: "\\d", options: [])
+//
+// let scaleRegex = try! NSRegularExpression(pattern: "(\\d+)x", options: [])
+// let sizeRegex = try! NSRegularExpression(pattern: "(\\d+\\.?\\d*)x(\\d+\\.?\\d*)", options: [])
+// let numberRegex = try! NSRegularExpression(pattern: "\\d", options: [])
 
 public struct SpeculidDocument: SpeculidDocumentProtocol {
-  public let _specifications: SpeculidSpecifications
-  public let _images: [AssetSpecification]
-
-  public var specifications: SpeculidSpecificationsProtocol {
-    return _specifications
-  }
-
-  public var images: [AssetSpecificationProtocol] {
-    return _images
-  }
+  public let specifications: SpeculidSpecificationsProtocol
+  public let images: [AssetSpecificationProtocol]
 
   public init?(url: URL, configuration _: SpeculidConfigurationProtocol? = nil) {
 
@@ -34,9 +26,11 @@ public struct SpeculidDocument: SpeculidDocumentProtocol {
       return nil
     }
 
-    _images = images.flatMap { (dictionary) -> AssetSpecification? in
+    self.images = images.flatMap { (dictionary) -> AssetSpecification? in
       let scale: CGFloat?
       let size: CGSize?
+
+      let scaleRegex: NSRegularExpression = Application.current.regularExpressions.regularExpression(for: .scale)
 
       if let scaleString = dictionary["scale"]?.firstMatchGroups(regex: scaleRegex)?[1], let value = Double(scaleString) {
         scale = CGFloat(value)
@@ -47,6 +41,8 @@ public struct SpeculidDocument: SpeculidDocumentProtocol {
       guard let idiomString = dictionary["idiom"], let idiom = ImageIdiom(rawValue: idiomString) else {
         return nil
       }
+
+      let sizeRegex: NSRegularExpression = Application.current.regularExpressions.regularExpression(for: .size)
 
       if let dimensionStrings = dictionary["size"]?.firstMatchGroups(regex: sizeRegex), let width = Double(dimensionStrings[1]), let height = Double(dimensionStrings[2]) {
         size = CGSize(width: width, height: height)
@@ -59,6 +55,6 @@ public struct SpeculidDocument: SpeculidDocumentProtocol {
       return AssetSpecification(idiom: idiom, scale: scale, size: size, filename: filename)
     }
 
-    _specifications = specifications
+    self.specifications = specifications
   }
 }

@@ -14,7 +14,13 @@ public extension AnalyticsConfigurationProtocol {
   public var parameters: AnalyticsParameterDictionary {
     var dictionary = customParameters
 
-    let mainParameters: AnalyticsParameterDictionary = [.trackingId: self.trackingIdentifier, .clientId: self.clientIdentifier, .version: self.version, .applicationName: self.applicationName, .applicationVersion: self.applicationVersion]
+    let mainParameters: AnalyticsParameterDictionary = [
+      .trackingId: self.trackingIdentifier,
+      .clientId: self.clientIdentifier,
+      .version: self.version,
+      .applicationName: self.applicationName,
+      .applicationVersion: self.applicationVersion
+    ]
     mainParameters.forEach {
       dictionary[$0.0] = $0.1
     }
