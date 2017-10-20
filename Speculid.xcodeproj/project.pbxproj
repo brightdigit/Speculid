@@ -83,7 +83,6 @@
 		B3136E5A1F90F73B0002B7AB /* UnknownConversionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E211F90F73B0002B7AB /* UnknownConversionError.swift */; };
 		B3136E5B1F90FB710002B7AB /* ImageSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DBE1F90E27B0002B7AB /* ImageSpecification.swift */; };
 		B3136E631F90FCCF0002B7AB /* SpeculidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E621F90FCCF0002B7AB /* SpeculidUITests.swift */; };
-		B3136E811F90FD2E0002B7AB /* SpeculidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E801F90FD2E0002B7AB /* SpeculidTests.swift */; };
 		B3136E831F90FD2E0002B7AB /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; };
 		B3136E901F90FD3D0002B7AB /* CairoSVGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E8F1F90FD3D0002B7AB /* CairoSVGTests.swift */; };
 		B3136E921F90FD3D0002B7AB /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
@@ -101,6 +100,9 @@
 		B33F0BB71F958640004A87DD /* RemoteObjectInterfaceProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */; };
 		B33F0BB91F958695004A87DD /* RemoteObjectInterfaceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33F0BB81F958695004A87DD /* RemoteObjectInterfaceProvider.swift */; };
 		B33F0BBB1F9586A9004A87DD /* StatusItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33F0BBA1F9586A9004A87DD /* StatusItemProvider.swift */; };
+		B341888A1F9A44A700C5F356 /* CommandLineArgumentProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34188891F9A44A700C5F356 /* CommandLineArgumentProviderProtocol.swift */; };
+		B341888E1F9A460300C5F356 /* CommandLineArgumentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341888D1F9A460300C5F356 /* CommandLineArgumentProvider.swift */; };
+		B34188911F9A479900C5F356 /* SpeculidApplicationModeParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34188901F9A479900C5F356 /* SpeculidApplicationModeParserTest.swift */; };
 		B34E82FB1F8FD4EF0032268F /* ImageFileFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E82FF1F8FD6860032268F /* ImageFileProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E83041F8FD90C0032268F /* GlibError.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E83021F8FD90C0032268F /* GlibError.h */; };
@@ -137,6 +139,20 @@
 		B37C74B11F8C5C7400DF505B /* PNGSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A21F8C5C7400DF505B /* PNGSurface.h */; };
 		B37C74B21F8C5C7400DF505B /* PNGImageHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */; };
 		B37C74BC1F8C5D2A00DF505B /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
+		B3B5E9DA1F96C1C1004A6BEB /* SpeculidConfigurationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */; };
+		B3B5E9DC1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */; };
+		B3B5E9DE1F96C2A2004A6BEB /* SpeculidConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */; };
+		B3B5E9E01F96C416004A6BEB /* SpeculidApplicationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DF1F96C416004A6BEB /* SpeculidApplicationMode.swift */; };
+		B3B5E9E21F96C44D004A6BEB /* SpeculidCommandArgumentSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E11F96C44D004A6BEB /* SpeculidCommandArgumentSet.swift */; };
+		B3B5E9E41F96C5F1004A6BEB /* CommandLineActivityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E31F96C5F1004A6BEB /* CommandLineActivityProtocol.swift */; };
+		B3B5E9E61F96C604004A6BEB /* CommandLineRunnerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E51F96C604004A6BEB /* CommandLineRunnerProtocol.swift */; };
+		B3B5E9E81F96C74C004A6BEB /* CommandLineRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */; };
+		B3B5E9EA1F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */; };
+		B3B5E9EC1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */; };
+		B3D32A021F9A5D760042B46F /* help.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3D32A011F9A5D750042B46F /* help.txt */; };
+		B3D32A041F9A5E8F0042B46F /* CommandLineRunnerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */; };
+		B3D32A061F9A5FEE0042B46F /* FileHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A051F9A5FEE0042B46F /* FileHandle.swift */; };
+		B3D32A081F9A73740042B46F /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A071F9A73740042B46F /* AsyncBlockOperation.swift */; };
 		CBE9EF18228D2DADFC9D264F /* Pods_Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */; };
 /* End PBXBuildFile section */
 
@@ -301,7 +317,6 @@
 		B3136E621F90FCCF0002B7AB /* SpeculidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidUITests.swift; sourceTree = "<group>"; };
 		B3136E641F90FCCF0002B7AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3136E7E1F90FD2E0002B7AB /* SpeculidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeculidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3136E801F90FD2E0002B7AB /* SpeculidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidTests.swift; sourceTree = "<group>"; };
 		B3136E821F90FD2E0002B7AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3136E8D1F90FD3D0002B7AB /* CairoSVGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CairoSVGTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3136E8F1F90FD3D0002B7AB /* CairoSVGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CairoSVGTests.swift; sourceTree = "<group>"; };
@@ -323,6 +338,9 @@
 		B33A533D1F954FF800E74800 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		B33F0BB81F958695004A87DD /* RemoteObjectInterfaceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObjectInterfaceProvider.swift; sourceTree = "<group>"; };
 		B33F0BBA1F9586A9004A87DD /* StatusItemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemProvider.swift; sourceTree = "<group>"; };
+		B34188891F9A44A700C5F356 /* CommandLineArgumentProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineArgumentProviderProtocol.swift; sourceTree = "<group>"; };
+		B341888D1F9A460300C5F356 /* CommandLineArgumentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineArgumentProvider.swift; sourceTree = "<group>"; };
+		B34188901F9A479900C5F356 /* SpeculidApplicationModeParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParserTest.swift; sourceTree = "<group>"; };
 		B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileFormat.h; sourceTree = "<group>"; };
 		B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileProtocol.h; sourceTree = "<group>"; };
 		B34E83021F8FD90C0032268F /* GlibError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlibError.h; sourceTree = "<group>"; };
@@ -361,6 +379,21 @@
 		B37C74A11F8C5C7400DF505B /* ImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHandle.h; sourceTree = "<group>"; };
 		B37C74A21F8C5C7400DF505B /* PNGSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGSurface.h; sourceTree = "<group>"; };
 		B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGImageHandle.h; sourceTree = "<group>"; };
+		B3B5E9D71F96C071004A6BEB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfigurationBuilder.swift; sourceTree = "<group>"; };
+		B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfigurationBuilderProtocol.swift; sourceTree = "<group>"; };
+		B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfiguration.swift; sourceTree = "<group>"; };
+		B3B5E9DF1F96C416004A6BEB /* SpeculidApplicationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationMode.swift; sourceTree = "<group>"; };
+		B3B5E9E11F96C44D004A6BEB /* SpeculidCommandArgumentSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidCommandArgumentSet.swift; sourceTree = "<group>"; };
+		B3B5E9E31F96C5F1004A6BEB /* CommandLineActivityProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineActivityProtocol.swift; sourceTree = "<group>"; };
+		B3B5E9E51F96C604004A6BEB /* CommandLineRunnerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRunnerProtocol.swift; sourceTree = "<group>"; };
+		B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRunner.swift; sourceTree = "<group>"; };
+		B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParserProtocol.swift; sourceTree = "<group>"; };
+		B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParser.swift; sourceTree = "<group>"; };
+		B3D32A011F9A5D750042B46F /* help.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = help.txt; sourceTree = "<group>"; };
+		B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRunnerTest.swift; sourceTree = "<group>"; };
+		B3D32A051F9A5FEE0042B46F /* FileHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandle.swift; sourceTree = "<group>"; };
+		B3D32A071F9A73740042B46F /* AsyncBlockOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperation.swift; sourceTree = "<group>"; };
 		C743CA092B2436D579EB1965 /* Pods-Speculid-Mac-XPC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-XPC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-XPC/Pods-Speculid-Mac-XPC.debug.xcconfig"; sourceTree = "<group>"; };
 		C7A962F08D51F2247E1ADBEF /* Pods-SpeculidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeculidTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests.release.xcconfig"; sourceTree = "<group>"; };
 		DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -480,6 +513,7 @@
 		B3136DB81F90E27B0002B7AB /* speculid */ = {
 			isa = PBXGroup;
 			children = (
+				B3D329FE1F9A5D290042B46F /* Resources */,
 				B3136DE41F90F73A0002B7AB /* Controllers */,
 				B3136E1D1F90F73B0002B7AB /* Errors */,
 				B3136DF51F90F73A0002B7AB /* Extensions */,
@@ -495,6 +529,7 @@
 		B3136DE41F90F73A0002B7AB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B3D32A071F9A73740042B46F /* AsyncBlockOperation.swift */,
 				B3136DCC1F90E2A20002B7AB /* Service.swift */,
 				B3136DDB1F90EF370002B7AB /* Application.swift */,
 				B3136DE81F90F73A0002B7AB /* CairoConversionSet.swift */,
@@ -509,6 +544,9 @@
 				B33F0BBA1F9586A9004A87DD /* StatusItemProvider.swift */,
 				B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */,
 				B31BEAFB1F96269F00496E7A /* RegularExpressionSet.swift */,
+				B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */,
+				B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */,
+				B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -520,6 +558,7 @@
 				B3136DF71F90F73A0002B7AB /* String.swift */,
 				B3136DF81F90F73A0002B7AB /* CGFloat.swift */,
 				B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */,
+				B3D32A051F9A5FEE0042B46F /* FileHandle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -543,6 +582,10 @@
 				B3136E051F90F73A0002B7AB /* AnalyticsConfiguration.swift */,
 				B3136E071F90F73A0002B7AB /* ImageIdiom.swift */,
 				B33A533D1F954FF800E74800 /* Result.swift */,
+				B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */,
+				B3B5E9DF1F96C416004A6BEB /* SpeculidApplicationMode.swift */,
+				B3B5E9E11F96C44D004A6BEB /* SpeculidCommandArgumentSet.swift */,
+				B341888D1F9A460300C5F356 /* CommandLineArgumentProvider.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -572,6 +615,11 @@
 				B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */,
 				B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */,
 				B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */,
+				B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */,
+				B3B5E9E31F96C5F1004A6BEB /* CommandLineActivityProtocol.swift */,
+				B3B5E9E51F96C604004A6BEB /* CommandLineRunnerProtocol.swift */,
+				B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */,
+				B34188891F9A44A700C5F356 /* CommandLineArgumentProviderProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -609,7 +657,7 @@
 		B3136E981F90FD470002B7AB /* speculid */ = {
 			isa = PBXGroup;
 			children = (
-				B3136E801F90FD2E0002B7AB /* SpeculidTests.swift */,
+				B341888F1F9A478800C5F356 /* Controllers */,
 				B3136E821F90FD2E0002B7AB /* Info.plist */,
 			);
 			path = speculid;
@@ -636,9 +684,19 @@
 			path = assets;
 			sourceTree = "<group>";
 		};
+		B341888F1F9A478800C5F356 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B34188901F9A479900C5F356 /* SpeculidApplicationModeParserTest.swift */,
+				B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		B37C74351F8C58F300DF505B = {
 			isa = PBXGroup;
 			children = (
+				B3B5E9D71F96C071004A6BEB /* main.swift */,
 				B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */,
 				B3136E9B1F90FFB10002B7AB /* CairoSVG.debug.xcconfig */,
 				B3136E9A1F90FFB10002B7AB /* CairoSVG.release.xcconfig */,
@@ -736,6 +794,14 @@
 			path = cairosvg;
 			sourceTree = "<group>";
 		};
+		B3D329FE1F9A5D290042B46F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3D32A011F9A5D750042B46F /* help.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -802,6 +868,7 @@
 			buildConfigurationList = B3136E861F90FD2E0002B7AB /* Build configuration list for PBXNativeTarget "SpeculidTests" */;
 			buildPhases = (
 				864BFA93E2D46B0EBF468EF2 /* [CP] Check Pods Manifest.lock */,
+				B3D329FA1F9A55B40042B46F /* ShellScript */,
 				B3136E7A1F90FD2E0002B7AB /* Sources */,
 				B3136E7B1F90FD2E0002B7AB /* Frameworks */,
 				B3136E7C1F90FD2E0002B7AB /* Resources */,
@@ -844,7 +911,7 @@
 			buildConfigurationList = B37C744C1F8C58F300DF505B /* Build configuration list for PBXNativeTarget "Speculid-Mac-App" */;
 			buildPhases = (
 				6B0E6A3126F4611E46C09D7C /* [CP] Check Pods Manifest.lock */,
-				B3136EB11F912CE90002B7AB /* ShellScript */,
+				B3D329F91F9A55A20042B46F /* ShellScript */,
 				B37C743A1F8C58F300DF505B /* Sources */,
 				B37C743B1F8C58F300DF505B /* Frameworks */,
 				B37C743C1F8C58F300DF505B /* Resources */,
@@ -1049,6 +1116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3136E561F90F73B0002B7AB /* versions.plist in Resources */,
+				B3D32A021F9A5D760042B46F /* help.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1274,19 +1342,6 @@
 			shellPath = /bin/sh;
 			shellScript = "if git rev-parse --git-dir > /dev/null 2>&1; then\ntouch ${SRCROOT}/.version\nstart=1\nversion_file=`< ${SRCROOT}/.version`\nversion=${version_file:-${start}}\nexport VCS_EXTRA=$version\necho \"Incrementing Version Number\"\n\"${SRCROOT}/autorevision.sh\" -t swift > \"${SRCROOT}/frameworks/speculid/Models/VCS.swift\"\necho `expr ${VCS_EXTRA} + 1` >${SRCROOT}/.version\nfi";
 		};
-		B3136EB11F912CE90002B7AB /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cp -Rv applications/mac/assets/Assets.xcassets/ applications/mac/assets/assets/";
-		};
 		B318906B1F919FA300D0EFA0 /* swiftformat */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1299,7 +1354,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline";
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/frameworks\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline";
 		};
 		B318906C1F91A02000D0EFA0 /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1342,6 +1397,32 @@
 			shellPath = /bin/sh;
 			shellScript = "TAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" -type f\\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
 		};
+		B3D329F91F9A55A20042B46F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/applications\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline";
+		};
+		B3D329FA1F9A55B40042B46F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/tests\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline";
+		};
 		BD6A812C7EF5D496661AC259 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1367,10 +1448,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RandomKit/RandomKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ShiftOperations/ShiftOperations.framework",
+				"${BUILT_PRODUCTS_DIR}/Threadly/Threadly.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftVer/SwiftVer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RandomKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ShiftOperations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Threadly.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftVer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1456,7 +1543,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3136E811F90FD2E0002B7AB /* SpeculidTests.swift in Sources */,
+				B34188911F9A479900C5F356 /* SpeculidApplicationModeParserTest.swift in Sources */,
+				B3D32A041F9A5E8F0042B46F /* CommandLineRunnerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1490,24 +1578,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B5E9E41F96C5F1004A6BEB /* CommandLineActivityProtocol.swift in Sources */,
 				B3136E3D1F90F73B0002B7AB /* AnalyticsParameterKey.swift in Sources */,
 				B3136E4D1F90F73B0002B7AB /* AnalyticsSessionManagerProtocol.swift in Sources */,
 				B33F0BBB1F9586A9004A87DD /* StatusItemProvider.swift in Sources */,
 				B3136E351F90F73B0002B7AB /* AnalyticsParameterDictionary.swift in Sources */,
 				B3136E431F90F73B0002B7AB /* SpeculidSpecificationsProtocol.swift in Sources */,
+				B3B5E9E61F96C604004A6BEB /* CommandLineRunnerProtocol.swift in Sources */,
 				B3136E3E1F90F73B0002B7AB /* GeometryValue.swift in Sources */,
 				B3136DDF1F90EFB10002B7AB /* Application.swift in Sources */,
 				B3136E331F90F73B0002B7AB /* String.swift in Sources */,
 				B3136E521F90F73B0002B7AB /* AnalyticsTrackerProtocol.swift in Sources */,
 				B3136E461F90F73B0002B7AB /* ImageConversionTaskProtocol.swift in Sources */,
 				B3136E3C1F90F73B0002B7AB /* SpeculidDocument.swift in Sources */,
+				B3B5E9E21F96C44D004A6BEB /* SpeculidCommandArgumentSet.swift in Sources */,
 				B33F0BB91F958695004A87DD /* RemoteObjectInterfaceProvider.swift in Sources */,
 				B33F0BB61F958640004A87DD /* StatusItemProviderProtocol.swift in Sources */,
 				B3136E4E1F90F73B0002B7AB /* ImageSpecificationProtocol.swift in Sources */,
 				B3136E9F1F9101A70002B7AB /* VCS.swift in Sources */,
 				B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */,
 				B3136E421F90F73B0002B7AB /* ImageIdiom.swift in Sources */,
+				B3D32A081F9A73740042B46F /* AsyncBlockOperation.swift in Sources */,
 				B3136E371F90F73B0002B7AB /* SpeculidSpecifications.swift in Sources */,
+				B3B5E9EC1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift in Sources */,
+				B341888E1F9A460300C5F356 /* CommandLineArgumentProvider.swift in Sources */,
 				B31BEAFA1F96268700496E7A /* RegularExpressionSetBuilder.swift in Sources */,
 				B3136E311F90F73B0002B7AB /* CairoConversionSetBuilder.swift in Sources */,
 				B3136E251F90F73B0002B7AB /* CairoConversionSet.swift in Sources */,
@@ -1523,6 +1617,7 @@
 				B3136E501F90F73B0002B7AB /* SpeculidArgumentsProtocol.swift in Sources */,
 				B3136DD11F90E45F0002B7AB /* ImageFile.swift in Sources */,
 				B33F0BB71F958640004A87DD /* RemoteObjectInterfaceProviderProtocol.swift in Sources */,
+				B3D32A061F9A5FEE0042B46F /* FileHandle.swift in Sources */,
 				B3136DD51F90E45F0002B7AB /* ServiceProtocol.swift in Sources */,
 				B3136E4C1F90F73B0002B7AB /* AnalyticsEventProtocol.swift in Sources */,
 				B31BEB001F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift in Sources */,
@@ -1530,16 +1625,21 @@
 				B3136E4B1F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift in Sources */,
 				B3136E4A1F90F73B0002B7AB /* SpeculidDocumentProtocol.swift in Sources */,
 				B3136E4F1F90F73B0002B7AB /* GeometryProtocol.swift in Sources */,
+				B3B5E9E81F96C74C004A6BEB /* CommandLineRunner.swift in Sources */,
 				B3136E2F1F90F73B0002B7AB /* SpeculidBuilder.swift in Sources */,
 				B3136E341F90F73B0002B7AB /* CGFloat.swift in Sources */,
+				B3B5E9E01F96C416004A6BEB /* SpeculidApplicationMode.swift in Sources */,
 				B3136E5A1F90F73B0002B7AB /* UnknownConversionError.swift in Sources */,
 				B3136E551F90F73B0002B7AB /* ImageConversionBuilderProtocol.swift in Sources */,
+				B3B5E9DE1F96C2A2004A6BEB /* SpeculidConfiguration.swift in Sources */,
 				B3136E361F90F73B0002B7AB /* Geometry.swift in Sources */,
 				B3136E3F1F90F73B0002B7AB /* AssetSpecification.swift in Sources */,
 				B3136E321F90F73B0002B7AB /* NSColor.swift in Sources */,
 				B3136E491F90F73B0002B7AB /* ImageConversionSetProtocol.swift in Sources */,
 				B3136E581F90F73B0002B7AB /* ProcessError.swift in Sources */,
 				B3136E541F90F73B0002B7AB /* ApplicationProtocol.swift in Sources */,
+				B3B5E9DA1F96C1C1004A6BEB /* SpeculidConfigurationBuilder.swift in Sources */,
+				B341888A1F9A44A700C5F356 /* CommandLineArgumentProviderProtocol.swift in Sources */,
 				B33A533E1F954FF800E74800 /* Result.swift in Sources */,
 				B3136E591F90F73B0002B7AB /* ArrayError.swift in Sources */,
 				B3136E2E1F90F73B0002B7AB /* AnalyticsSessionManager.swift in Sources */,
@@ -1547,9 +1647,11 @@
 				B3136E571F90F73B0002B7AB /* MissingRequiredInstallationError.swift in Sources */,
 				B31BEAFE1F9626AC00496E7A /* RegularExpressionSetProtocol.swift in Sources */,
 				B3136E3B1F90F73B0002B7AB /* ScaledGeometry.swift in Sources */,
+				B3B5E9EA1F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift in Sources */,
 				B3136E471F90F73B0002B7AB /* ClientIdentifierDelegate.swift in Sources */,
 				B3136DCE1F90E45F0002B7AB /* ErrorCollection.swift in Sources */,
 				B3136E271F90F73B0002B7AB /* AnalyticsTracker.swift in Sources */,
+				B3B5E9DC1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1655,7 +1757,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
-				INFOPLIST_FILE = SpeculidTests/Info.plist;
+				INFOPLIST_FILE = tests/speculid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SpeculidTests;
@@ -1673,7 +1775,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
-				INFOPLIST_FILE = SpeculidTests/Info.plist;
+				INFOPLIST_FILE = tests/speculid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SpeculidTests;

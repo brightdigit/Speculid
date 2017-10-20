@@ -11,23 +11,49 @@ func exceptionHandlerMethod(exception: NSException) {
 }
 
 public typealias RegularExpressionArgumentSet = (String, options: NSRegularExpression.Options)
-open class Application: NSApplication {
+open class Application: NSApplication, ApplicationProtocol {
+  public func document(url: URL) -> SpeculidDocumentProtocol? {
+    return SpeculidDocument(url: url, configuration: configuration)
+  }
+
   open static var current: ApplicationProtocol! {
     return NSApplication.shared as? ApplicationProtocol
   }
-  open private(set) var statusItem: NSStatusItem!
+
+  open static let errorText = "Unknown Command Paramter"
+  open static let helpText: String! = {
+    guard let url = Application.bundle.url(forResource: "help", withExtension: "txt") else {
+      return nil
+    }
+
+    guard let text = try? String(contentsOf: url) else {
+      return nil
+    }
+
+    return text
+  }()
+  open private(set) var commandLineActivity: CommandLineActivityProtocol?
+  open private(set) var statusItem: NSStatusItem?
   open private(set) var service: ServiceProtocol!
   open private(set) var regularExpressions: RegularExpressionSetProtocol!
-  open private(set) var tracker: RegularExpressionSetProtocol!
+  open private(set) var tracker: AnalyticsTrackerProtocol!
+  open private(set) var configuration: SpeculidConfigurationProtocol!
+  open private(set) var builder: SpeculidBuilderProtocol!
 
   open let statusItemProvider: StatusItemProviderProtocol
   open let remoteObjectInterfaceProvider: RemoteObjectInterfaceProviderProtocol
   open let regularExpressionBuilder: RegularExpressionSetBuilderProtocol
+  open let configurationBuilder: SpeculidConfigurationBuilderProtocol
+  open var commandLineRunner: CommandLineRunnerProtocol
 
   public override init() {
     statusItemProvider = StatusItemProvider()
     remoteObjectInterfaceProvider = RemoteObjectInterfaceProvider()
     regularExpressionBuilder = RegularExpressionSetBuilder()
+    configurationBuilder = SpeculidConfigurationBuilder()
+    commandLineRunner = CommandLineRunner(
+      outputStream: FileHandle.standardOutput,
+      errorStream: FileHandle.standardError)
 
     super.init()
   }
@@ -36,11 +62,18 @@ open class Application: NSApplication {
     statusItemProvider = StatusItemProvider()
     remoteObjectInterfaceProvider = RemoteObjectInterfaceProvider()
     regularExpressionBuilder = RegularExpressionSetBuilder()
+    configurationBuilder = SpeculidConfigurationBuilder(coder: coder)
+    commandLineRunner = CommandLineRunner(
+      outputStream: FileHandle.standardOutput,
+      errorStream: FileHandle.standardError)
+
     super.init(coder: coder)
   }
 
   open override func finishLaunching() {
     super.finishLaunching()
+
+    configuration = configurationBuilder.configuration(fromCommandLine: CommandLineArgumentProvider())
 
     let operatingSystem = ProcessInfo.processInfo.operatingSystemVersionString
 
@@ -49,6 +82,32 @@ open class Application: NSApplication {
       applicationName: "speculid",
       applicationVersion: String(describing: Application.version),
       customParameters: [.operatingSystemVersion: operatingSystem])
+
+    remoteObjectInterfaceProvider.remoteObjectProxyWithHandler { result in
+      switch result {
+      case let .error(error):
+        preconditionFailure("Could not connect to XPS Service: \(error)")
+      case let .success(service):
+        self.service = service
+      }
+    }
+
+    builder = SpeculidBuilder(tracker: self.tracker, configuration: configuration)
+    let tracker = AnalyticsTracker(configuration: analyticsConfiguration, sessionManager: AnalyticsSessionManager())
+    NSSetUncaughtExceptionHandler(exceptionHandlerMethod)
+
+    exceptionHandler = tracker.track
+
+    tracker.track(event: AnalyticsEvent(category: "main", action: "launch", label: "application"))
+
+    self.tracker = tracker
+
+    if case let .command(arguments) = configuration.mode {
+      let commandLineActivity = self.commandLineRunner.activity(withArguments: arguments, self.commandLineActivity(_:hasCompletedWithError:))
+      self.commandLineActivity = commandLineActivity
+      commandLineActivity.start()
+      return
+    }
 
     statusItem = statusItemProvider.statusItem(for: self)
     do {
@@ -62,22 +121,9 @@ open class Application: NSApplication {
     } catch let error {
       assertionFailure("Failed to parse regular expression: \(error)")
     }
+  }
 
-    remoteObjectInterfaceProvider.remoteObjectProxyWithHandler { result in
-      switch result {
-      case let .error(error):
-        preconditionFailure("Could not connect to XPS Service: \(error)")
-      case let .success(service):
-        self.service = service
-      }
-    }
-
-    let tracker = AnalyticsTracker(configuration: analyticsConfiguration, sessionManager: AnalyticsSessionManager())
-    NSSetUncaughtExceptionHandler(exceptionHandlerMethod)
-
-    exceptionHandler = tracker.track
-
-    tracker.track(event: AnalyticsEvent(category: "main", action: "launch", label: "application"))
+  public func commandLineActivity(_: CommandLineActivityProtocol, hasCompletedWithError _: Error?) {
   }
 
   private class _VersionHandler {
