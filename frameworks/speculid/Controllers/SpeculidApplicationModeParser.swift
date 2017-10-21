@@ -8,7 +8,7 @@ public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtoc
       } else if commandLine.arguments.contains("-version") {
         return .command(.version)
       } else {
-        for argument in commandLine.arguments {
+        for argument in commandLine.arguments[1...] {
           if FileManager.default.fileExists(atPath: argument) {
             return .command(.file(URL(fileURLWithPath: argument)))
           }

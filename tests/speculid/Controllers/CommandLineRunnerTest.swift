@@ -1,4 +1,5 @@
 import XCTest
+import RandomKit
 @testable import Speculid
 
 class RecordedOutputStream: TextOutputStream {
@@ -18,6 +19,39 @@ class CommandLineRunnerTest: XCTestCase {
   override func tearDown() {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     super.tearDown()
+  }
+  
+  func testFile () {
+    
+  }
+
+  func testUnknown() {
+
+    let argumentStrings = Array<String>(randomCount: 100, using: &Xoroshiro.default)
+
+    let expectations = argumentStrings.map("Run Command Line Activity: ".appending).map(XCTestExpectation.init)
+
+    let argumentSet = argumentStrings.map { Array<String>.init(repeating: $0, count: 1) }.map(SpeculidCommandArgumentSet.unknown)
+    for (argument, expectation) in zip(argumentSet, expectations) {
+
+      let outputStream = RecordedOutputStream()
+      let errorStream = RecordedOutputStream()
+      let commandLineRunner = CommandLineRunner(outputStream: outputStream, errorStream: errorStream)
+
+      let activity = commandLineRunner.activity(withArguments: argument) { activity, error in
+        XCTAssertNotNil(activity)
+        XCTAssertNotNil(error)
+        XCTAssertEqual(
+          outputStream.strings,
+          [Application.helpText])
+        XCTAssertEqual(errorStream.strings, [Application.errorText])
+        expectation.fulfill()
+      }
+
+      activity.start()
+    }
+
+    wait(for: expectations, timeout: 10.0)
   }
 
   func testHelp() {
