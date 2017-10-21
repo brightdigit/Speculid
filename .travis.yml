@@ -8,6 +8,7 @@ xcode_scheme: Speculid-Mac-App
 before_install:
   - brew update
   - brew install librsvg cairo
+  - pod repo update
   - pod install
   #- rvm use $RVM_RUBY_VERSION
 #install: bundle install --without=documentation

@@ -1,18 +1,27 @@
 PODS:
-  - SwiftFormat/CLI (0.29.7)
-  - SwiftLint (0.23.0)
+  - RandomKit (5.2.3):
+    - ShiftOperations (~> 1.0.2)
+    - Threadly (~> 1.0)
+  - ShiftOperations (1.0.2)
+  - SwiftFormat/CLI (0.29.8)
+  - SwiftLint (0.23.1)
   - SwiftVer (2.0.3)
+  - Threadly (1.2.0)
 
 DEPENDENCIES:
+  - RandomKit (~> 5.2.3)
   - SwiftFormat/CLI
   - SwiftLint
   - SwiftVer
 
 SPEC CHECKSUMS:
-  SwiftFormat: d1a844a0d426031430fb1fde9dc96d12d11337fd
-  SwiftLint: 6ddf7d305644c2239cb768a11d97cce804816691
+  RandomKit: 380745911c4f7989707489b2ce297194bfcf5031
+  ShiftOperations: 702c9aa98d3b20d98dceb71dd8437b562f7ab3ad
+  SwiftFormat: 2cfa63c918808f8960d343cb4ac4f3e85cd901ae
+  SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
   SwiftVer: 881cecd16a6bdb4e36a01d1f621802c9683dcf29
+  Threadly: b772ed7c1ff4a3f03eb4600bbc5ef83b3be5cb29
 
-PODFILE CHECKSUM: 16aa2d5a75fef765143f9c29703399627203b79d
+PODFILE CHECKSUM: 4b712312c95a29a186be4d948eacfaaa25877552
 
 COCOAPODS: 1.3.1
