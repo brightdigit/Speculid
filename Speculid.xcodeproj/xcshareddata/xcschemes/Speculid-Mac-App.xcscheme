@@ -90,11 +90,11 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "&quot;${SRCROOT}/applications/mac/assets/svg-appicon.speculid&quot;"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-version"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>
