@@ -27,6 +27,8 @@
 		8673F38CC6D59040A2F46D0E /* Pods_CairoSVGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E776BC2A0843F84E3CBC279B /* Pods_CairoSVGTests.framework */; };
 		8B89F9F58D273C27DCE0A008 /* Pods_Speculid_Mac_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054FC9E3CE2F6BD2F948CF5D /* Pods_Speculid_Mac_App.framework */; };
 		8CFE676AD2939E9961A20D07 /* Pods_Speculid_Mac_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BDAD4963D80A5FF54A9272 /* Pods_Speculid_Mac_AppUITests.framework */; };
+		B3033B1E1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3033B1D1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift */; };
+		B3033B201F9AEFE600787279 /* AssetSpecificationDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3033B1F1F9AEFE600787279 /* AssetSpecificationDocument.swift */; };
 		B3136DCD1F90E3F30002B7AB /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; };
 		B3136DCE1F90E45F0002B7AB /* ErrorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */; };
 		B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC11F90E27B0002B7AB /* FileFormat.swift */; };
@@ -51,7 +53,7 @@
 		B3136E341F90F73B0002B7AB /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DF81F90F73A0002B7AB /* CGFloat.swift */; };
 		B3136E351F90F73B0002B7AB /* AnalyticsParameterDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DFA1F90F73A0002B7AB /* AnalyticsParameterDictionary.swift */; };
 		B3136E361F90F73B0002B7AB /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DFB1F90F73A0002B7AB /* Geometry.swift */; };
-		B3136E371F90F73B0002B7AB /* SpeculidSpecifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DFC1F90F73A0002B7AB /* SpeculidSpecifications.swift */; };
+		B3136E371F90F73B0002B7AB /* SpeculidSpecificationsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DFC1F90F73A0002B7AB /* SpeculidSpecificationsFile.swift */; };
 		B3136E3B1F90F73B0002B7AB /* ScaledGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E001F90F73A0002B7AB /* ScaledGeometry.swift */; };
 		B3136E3C1F90F73B0002B7AB /* SpeculidDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */; };
 		B3136E3D1F90F73B0002B7AB /* AnalyticsParameterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E021F90F73A0002B7AB /* AnalyticsParameterKey.swift */; };
@@ -255,6 +257,10 @@
 		75FAFD8D34A5758295CE7C3E /* Pods-Speculid-Mac-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-App/Pods-Speculid-Mac-App.debug.xcconfig"; sourceTree = "<group>"; };
 		87434B3EFCD8AF7732299E58 /* Pods-Speculid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid/Pods-Speculid.release.xcconfig"; sourceTree = "<group>"; };
 		9F8599C40CCA72FBF9FA1098 /* Pods_CairoSVG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CairoSVG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3033B1D1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSpecificationDocumentProtocol.swift; sourceTree = "<group>"; };
+		B3033B1F1F9AEFE600787279 /* AssetSpecificationDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSpecificationDocument.swift; sourceTree = "<group>"; };
+		B3033B211F9AF03F00787279 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = Assets.xcassets/AppIcon.appiconset/Contents.json; sourceTree = "<group>"; };
+		B3033B231F9AF05900787279 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Contents.json; path = Assets.xcassets/TrayIcon.imageset/Contents.json; sourceTree = "<group>"; };
 		B3136DBB1F90E27B0002B7AB /* ImageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFile.swift; sourceTree = "<group>"; };
 		B3136DBC1F90E27B0002B7AB /* Speculid_Mac_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid_Mac_Framework.h; sourceTree = "<group>"; };
 		B3136DBE1F90E27B0002B7AB /* ImageSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSpecification.swift; sourceTree = "<group>"; };
@@ -283,7 +289,7 @@
 		B3136DF81F90F73A0002B7AB /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		B3136DFA1F90F73A0002B7AB /* AnalyticsParameterDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsParameterDictionary.swift; sourceTree = "<group>"; };
 		B3136DFB1F90F73A0002B7AB /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
-		B3136DFC1F90F73A0002B7AB /* SpeculidSpecifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidSpecifications.swift; sourceTree = "<group>"; };
+		B3136DFC1F90F73A0002B7AB /* SpeculidSpecificationsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidSpecificationsFile.swift; sourceTree = "<group>"; };
 		B3136E001F90F73A0002B7AB /* ScaledGeometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledGeometry.swift; sourceTree = "<group>"; };
 		B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidDocument.swift; sourceTree = "<group>"; };
 		B3136E021F90F73A0002B7AB /* AnalyticsParameterKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsParameterKey.swift; sourceTree = "<group>"; };
@@ -326,7 +332,6 @@
 		B3136E9D1F91019F0002B7AB /* VCS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCS.swift; sourceTree = "<group>"; };
 		B3136EA11F910BC90002B7AB /* svg-appicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-appicon.speculid"; sourceTree = "<group>"; };
 		B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-trayicon.speculid"; sourceTree = "<group>"; };
-		B3136EAE1F9119510002B7AB /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryValue.Multiply.swift; sourceTree = "<group>"; };
 		B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetBuilder.swift; sourceTree = "<group>"; };
@@ -583,8 +588,9 @@
 				B3B5E9E11F96C44D004A6BEB /* SpeculidCommandArgumentSet.swift */,
 				B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */,
 				B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */,
-				B3136DFC1F90F73A0002B7AB /* SpeculidSpecifications.swift */,
+				B3136DFC1F90F73A0002B7AB /* SpeculidSpecificationsFile.swift */,
 				B3136E9D1F91019F0002B7AB /* VCS.swift */,
+				B3033B1F1F9AEFE600787279 /* AssetSpecificationDocument.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -619,6 +625,7 @@
 				B3B5E9E51F96C604004A6BEB /* CommandLineRunnerProtocol.swift */,
 				B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */,
 				B34188891F9A44A700C5F356 /* CommandLineArgumentProviderProtocol.swift */,
+				B3033B1D1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -674,7 +681,8 @@
 		B3136EA01F9107B40002B7AB /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				B3136EAE1F9119510002B7AB /* assets */,
+				B3033B211F9AF03F00787279 /* Contents.json */,
+				B3033B231F9AF05900787279 /* Contents.json */,
 				B3136DC31F90E2A10002B7AB /* layers.svg */,
 				B3136EA11F910BC90002B7AB /* svg-appicon.speculid */,
 				B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */,
@@ -1597,7 +1605,7 @@
 				B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */,
 				B3136E421F90F73B0002B7AB /* ImageIdiom.swift in Sources */,
 				B3D32A081F9A73740042B46F /* AsyncBlockOperation.swift in Sources */,
-				B3136E371F90F73B0002B7AB /* SpeculidSpecifications.swift in Sources */,
+				B3136E371F90F73B0002B7AB /* SpeculidSpecificationsFile.swift in Sources */,
 				B3B5E9EC1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift in Sources */,
 				B341888E1F9A460300C5F356 /* CommandLineArgumentProvider.swift in Sources */,
 				B31BEAFA1F96268700496E7A /* RegularExpressionSetBuilder.swift in Sources */,
@@ -1622,11 +1630,13 @@
 				B3136E531F90F73B0002B7AB /* SpeculidBuilderProtocol.swift in Sources */,
 				B3136E4B1F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift in Sources */,
 				B3136E4A1F90F73B0002B7AB /* SpeculidDocumentProtocol.swift in Sources */,
+				B3033B201F9AEFE600787279 /* AssetSpecificationDocument.swift in Sources */,
 				B3136E4F1F90F73B0002B7AB /* GeometryProtocol.swift in Sources */,
 				B3B5E9E81F96C74C004A6BEB /* CommandLineRunner.swift in Sources */,
 				B3136E2F1F90F73B0002B7AB /* SpeculidBuilder.swift in Sources */,
 				B3136E341F90F73B0002B7AB /* CGFloat.swift in Sources */,
 				B3B5E9E01F96C416004A6BEB /* SpeculidApplicationMode.swift in Sources */,
+				B3033B1E1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift in Sources */,
 				B3136E5A1F90F73B0002B7AB /* UnknownConversionError.swift in Sources */,
 				B3136E551F90F73B0002B7AB /* ImageConversionBuilderProtocol.swift in Sources */,
 				B3B5E9DE1F96C2A2004A6BEB /* SpeculidConfiguration.swift in Sources */,

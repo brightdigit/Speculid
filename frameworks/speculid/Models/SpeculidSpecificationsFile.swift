@@ -1,7 +1,7 @@
 import Foundation
 import AppKit
 
-public struct SpeculidSpecifications: SpeculidSpecificationsProtocol {
+public struct SpeculidSpecificationsFile: SpeculidSpecificationsFileProtocol {
   public let contentsDirectoryURL: URL
   public let sourceImageURL: URL
   public let geometry: Geometry?

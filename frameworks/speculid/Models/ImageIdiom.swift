@@ -1,6 +1,6 @@
 import Foundation
 
-public enum ImageIdiom: String {
+public enum ImageIdiom: String, Codable {
   case universal,
     iphone,
     ipad,

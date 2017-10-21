@@ -1,12 +1,12 @@
 import Foundation
 
 public struct SpeculidDocument: SpeculidDocumentProtocol {
-  public let specifications: SpeculidSpecificationsProtocol
+  public let specifications: SpeculidSpecificationsFileProtocol
   public let images: [AssetSpecificationProtocol]
 
   public init?(url: URL, configuration _: SpeculidConfigurationProtocol? = nil) {
 
-    guard let specifications = SpeculidSpecifications(url: url) else {
+    guard let specifications = SpeculidSpecificationsFile(url: url) else {
       return nil
     }
 

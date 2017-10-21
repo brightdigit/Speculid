@@ -4,7 +4,7 @@ import Foundation
 public typealias ImageConversionPair = (image: AssetSpecificationProtocol, conversion: Result<ImageConversionTaskProtocol>?)
 public typealias ImageConversionDictionary = [String: ImageConversionPair]
 
-extension SpeculidSpecificationsProtocol {
+extension SpeculidSpecificationsFileProtocol {
   public func destination(forImage image: AssetSpecificationProtocol) -> String {
     if let filename = image.filename {
       return filename
