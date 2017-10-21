@@ -1,7 +1,7 @@
 import Foundation
 import AppKit
 
-public protocol SpeculidSpecificationsProtocol {
+public protocol SpeculidSpecificationsFileProtocol {
   var contentsDirectoryURL: URL { get }
   var sourceImageURL: URL { get }
   var geometry: Geometry? { get }

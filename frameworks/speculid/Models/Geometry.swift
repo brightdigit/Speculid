@@ -1,6 +1,9 @@
 import Foundation
 import CairoSVG
 
+public struct BadGeometryValueError: Error {
+  public let stringValue: String
+}
 extension GeometryValue: CustomStringConvertible {
   func scaledBy(_ scale: Int) -> GeometryValue {
     switch self {
@@ -15,38 +18,43 @@ extension GeometryValue: CustomStringConvertible {
     case let .height(value): return "x\(value)"
     }
   }
+
+  public init?(string: String) {
+    if let intValue = Int(string) {
+      self = .width(intValue)
+    } else if let intValue = Int(String(string[string.index(after: string.startIndex)...])), string[string.startIndex] == "x" {
+      self = .height(intValue)
+    } else {
+      return nil
+    }
+  }
 }
 
-public struct Geometry: GeometryProtocol {
+public struct Geometry: GeometryProtocol, Codable {
   public let value: GeometryValue
   public func text(scaledBy scale: Int) -> String {
     return value.scaledBy(scale).description
   }
 
   public init?(string: String) {
-    let range = NSRange(0 ..< string.characters.count)
-
-    let geometryRegex: NSRegularExpression = Application.current.regularExpressions.regularExpression(for: .geometry)
-
-    let integerRegex: NSRegularExpression = Application.current.regularExpressions.regularExpression(for: .integer)
-
-    guard geometryRegex.firstMatch(in: string, options: [], range: range) != nil else {
+    guard let value = GeometryValue(string: string) else {
       return nil
     }
-    let value: GeometryValue
-    let results = integerRegex.matches(in: string, options: [], range: range)
-    let intValue = results.flatMap { (result) -> Int? in
-      guard let range = Range(result.range, in: string) else {
-        return nil
-      }
-      return Int(string[range])
-    }.first!
-    if string.lowercased().characters.first == "x" {
-      value = .height(intValue)
-    } else {
-      value = .width(intValue)
+    self.value = value
+  }
+
+  public init(from decoder: Decoder) throws {
+    let container = try decoder.singleValueContainer()
+    let stringValue = try container.decode(String.self)
+    guard let value = GeometryValue(string: stringValue) else {
+      throw BadGeometryValueError(stringValue: stringValue)
     }
     self.value = value
+  }
+
+  public func encode(to encoder: Encoder) throws {
+    var container = try encoder.singleValueContainer()
+    try container.encode(value.description)
   }
 
   public var description: String {
