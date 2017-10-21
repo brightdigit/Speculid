@@ -14,7 +14,7 @@ public struct CollectionConversionBuilder: ImageConversionSetBuilderProtocol {
     }
 
     let tasks = taskDictionary.flatMap { (pair) -> ImageConversionTaskProtocol? in
-      guard let conversion = pair.value.conversion, case let .Task(task) = conversion else {
+      guard let conversion = pair.value.conversion, case let .task(task) = conversion else {
         return nil
       }
 
