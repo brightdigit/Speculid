@@ -1,5 +1,6 @@
 import Foundation
 
+// TODO: Separate Files
 public enum AnalyticsHitType: String, CustomStringConvertible {
   case timing, event, exception
 

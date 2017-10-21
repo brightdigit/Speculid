@@ -9,7 +9,7 @@ public struct ImageConversionBuilder: ImageConversionBuilderProtocol {
   public func conversion(
     forImage imageSpecification: AssetSpecificationProtocol,
     withSpecifications specifications: SpeculidSpecificationsProtocol,
-    andConfiguration configuration: SpeculidConfigurationProtocol) -> ConversionResult? {
+    andConfiguration configuration: SpeculidConfigurationProtocol) -> Result<ImageConversionTaskProtocol>? {
     for builders in builders {
       if let conversion = builders.conversion(
         forImage: imageSpecification,
