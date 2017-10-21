@@ -1,4 +1,3 @@
-
 import Foundation
 import AppKit
 import SwiftVer
@@ -12,22 +11,50 @@ func exceptionHandlerMethod(exception: NSException) {
 }
 
 public typealias RegularExpressionArgumentSet = (String, options: NSRegularExpression.Options)
-open class Application: NSApplication {
-  open static var current: Application! {
-    return NSApplication.shared as? Application
+open class Application: NSApplication, ApplicationProtocol {
+  public func document(url: URL) -> SpeculidDocumentProtocol? {
+    return SpeculidDocument(url: url, configuration: configuration)
   }
-  open private(set) var statusItem: NSStatusItem!
+
+  open static var current: ApplicationProtocol! {
+    return NSApplication.shared as? ApplicationProtocol
+  }
+
+  open static let errorText = "Unknown Command Paramter"
+  open static let helpText: String! = {
+    guard let url = Application.bundle.url(forResource: "help", withExtension: "txt") else {
+      return nil
+    }
+
+    guard let text = try? String(contentsOf: url) else {
+      return nil
+    }
+
+    return text
+  }()
+  open private(set) var commandLineActivity: CommandLineActivityProtocol?
+  open private(set) var statusItem: NSStatusItem?
   open private(set) var service: ServiceProtocol!
   open private(set) var regularExpressions: RegularExpressionSetProtocol!
+  open private(set) var tracker: AnalyticsTrackerProtocol!
+  open private(set) var configuration: SpeculidConfigurationProtocol!
+  open private(set) var builder: SpeculidBuilderProtocol!
 
   open let statusItemProvider: StatusItemProviderProtocol
   open let remoteObjectInterfaceProvider: RemoteObjectInterfaceProviderProtocol
   open let regularExpressionBuilder: RegularExpressionSetBuilderProtocol
+  open let configurationBuilder: SpeculidConfigurationBuilderProtocol
+  open var commandLineRunner: CommandLineRunnerProtocol
 
   public override init() {
     statusItemProvider = StatusItemProvider()
     remoteObjectInterfaceProvider = RemoteObjectInterfaceProvider()
     regularExpressionBuilder = RegularExpressionSetBuilder()
+    configurationBuilder = SpeculidConfigurationBuilder()
+    commandLineRunner = CommandLineRunner(
+      outputStream: FileHandle.standardOutput,
+      errorStream: FileHandle.standardError)
+
     super.init()
   }
 
@@ -35,11 +62,52 @@ open class Application: NSApplication {
     statusItemProvider = StatusItemProvider()
     remoteObjectInterfaceProvider = RemoteObjectInterfaceProvider()
     regularExpressionBuilder = RegularExpressionSetBuilder()
+    configurationBuilder = SpeculidConfigurationBuilder(coder: coder)
+    commandLineRunner = CommandLineRunner(
+      outputStream: FileHandle.standardOutput,
+      errorStream: FileHandle.standardError)
+
     super.init(coder: coder)
   }
 
   open override func finishLaunching() {
     super.finishLaunching()
+
+    configuration = configurationBuilder.configuration(fromCommandLine: CommandLineArgumentProvider())
+
+    let operatingSystem = ProcessInfo.processInfo.operatingSystemVersionString
+
+    let analyticsConfiguration = AnalyticsConfiguration(
+      trackingIdentifier: "UA-33667276-6",
+      applicationName: "speculid",
+      applicationVersion: String(describing: Application.version),
+      customParameters: [.operatingSystemVersion: operatingSystem])
+
+    remoteObjectInterfaceProvider.remoteObjectProxyWithHandler { result in
+      switch result {
+      case let .error(error):
+        preconditionFailure("Could not connect to XPS Service: \(error)")
+      case let .success(service):
+        self.service = service
+      }
+    }
+
+    builder = SpeculidBuilder(tracker: self.tracker, configuration: configuration)
+    let tracker = AnalyticsTracker(configuration: analyticsConfiguration, sessionManager: AnalyticsSessionManager())
+    NSSetUncaughtExceptionHandler(exceptionHandlerMethod)
+
+    exceptionHandler = tracker.track
+
+    tracker.track(event: AnalyticsEvent(category: "main", action: "launch", label: "application"))
+
+    self.tracker = tracker
+
+    if case let .command(arguments) = configuration.mode {
+      let commandLineActivity = self.commandLineRunner.activity(withArguments: arguments, self.commandLineActivity(_:hasCompletedWithError:))
+      self.commandLineActivity = commandLineActivity
+      commandLineActivity.start()
+      return
+    }
 
     statusItem = statusItemProvider.statusItem(for: self)
     do {
@@ -53,15 +121,12 @@ open class Application: NSApplication {
     } catch let error {
       assertionFailure("Failed to parse regular expression: \(error)")
     }
+  }
 
-    remoteObjectInterfaceProvider.remoteObjectProxyWithHandler { result in
-      switch result {
-      case let .error(error):
-        preconditionFailure("Could not connect to XPS Service: \(error)")
-      case let .success(service):
-        self.service = service
-      }
-    }
+  public func commandLineActivity(_: CommandLineActivityProtocol, hasCompletedWithError error: Error?) {
+
+    precondition(error == nil, error!.localizedDescription)
+    exit(0)
   }
 
   private class _VersionHandler {
@@ -90,25 +155,4 @@ open class Application: NSApplication {
     bundle: bundle,
     dictionary: sbd,
     versionControl: vcs)!
-
-  @available(*, deprecated: 2.0.0)
-  public static func begin(
-    withArguments _: SpeculidArgumentsProtocol,
-    _: @escaping (SpeculidApplicationProtocol) -> Void) {
-    let operatingSystem = ProcessInfo.processInfo.operatingSystemVersionString
-
-    let analyticsConfiguration = AnalyticsConfiguration(
-      trackingIdentifier: "UA-33667276-6",
-      applicationName: "speculid",
-      applicationVersion: String(describing: version),
-      customParameters: [.operatingSystemVersion: operatingSystem])
-    let tracker = AnalyticsTracker(configuration: analyticsConfiguration, sessionManager: AnalyticsSessionManager())
-    NSSetUncaughtExceptionHandler(exceptionHandlerMethod)
-
-    exceptionHandler = tracker.track
-
-    tracker.track(event: AnalyticsEvent(category: "main", action: "launch", label: "application"))
-
-    let application = SpeculidApplication(configuration: SpeculidConfiguration.default, tracker: tracker)
-  }
 }

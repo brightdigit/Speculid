@@ -80,10 +80,11 @@ extension NSColor {
       throw UIColorInputError.missingHashMarkAsPrefix
     }
 
-    let hexString: String = rgba.substring(from: rgba.characters.index(rgba.startIndex, offsetBy: 1))
+    let index = rgba.index(rgba.startIndex, offsetBy: 1)
+    let hexString = rgba[index...]
     var hexValue: UInt32 = 0
 
-    guard Scanner(string: hexString).scanHexInt32(&hexValue) else {
+    guard Scanner(string: String(hexString)).scanHexInt32(&hexValue) else {
       throw UIColorInputError.unableToScanHexValue
     }
 
@@ -157,7 +158,8 @@ extension String {
       return nil
     }
 
-    let hexString: String = substring(from: characters.index(startIndex, offsetBy: 1))
+    let index = self.index(startIndex, offsetBy: 1)
+    let hexString = self[index...]
     switch hexString.characters.count {
     case 4:
       return "#"
