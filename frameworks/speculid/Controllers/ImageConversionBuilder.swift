@@ -11,7 +11,10 @@ public struct ImageConversionBuilder: ImageConversionBuilderProtocol {
     withSpecifications specifications: SpeculidSpecificationsProtocol,
     andConfiguration configuration: SpeculidConfigurationProtocol) -> ConversionResult? {
     for builders in builders {
-      if let conversion = builders.conversion(forImage: imageSpecification, withSpecifications: specifications, andConfiguration: configuration) {
+      if let conversion = builders.conversion(
+        forImage: imageSpecification,
+        withSpecifications: specifications,
+        andConfiguration: configuration) {
         return conversion
       }
     }

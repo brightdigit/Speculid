@@ -11,17 +11,57 @@ func exceptionHandlerMethod(exception: NSException) {
   }
 }
 
+public typealias RegularExpressionArgumentSet = (String, options: NSRegularExpression.Options)
 open class Application: NSApplication {
-  var statusItem: NSStatusItem!
+  open static var current: Application! {
+    return NSApplication.shared as? Application
+  }
+  open private(set) var statusItem: NSStatusItem!
+  open private(set) var service: ServiceProtocol!
+  open private(set) var regularExpressions: RegularExpressionSetProtocol!
+
+  open let statusItemProvider: StatusItemProviderProtocol
+  open let remoteObjectInterfaceProvider: RemoteObjectInterfaceProviderProtocol
+  open let regularExpressionBuilder: RegularExpressionSetBuilderProtocol
+
+  public override init() {
+    statusItemProvider = StatusItemProvider()
+    remoteObjectInterfaceProvider = RemoteObjectInterfaceProvider()
+    regularExpressionBuilder = RegularExpressionSetBuilder()
+    super.init()
+  }
+
+  public required init?(coder: NSCoder) {
+    statusItemProvider = StatusItemProvider()
+    remoteObjectInterfaceProvider = RemoteObjectInterfaceProvider()
+    regularExpressionBuilder = RegularExpressionSetBuilder()
+    super.init(coder: coder)
+  }
 
   open override func finishLaunching() {
     super.finishLaunching()
 
-    let menu = NSMenu(title: "Speculid")
-    let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-    item.title = "Speculid"
-    item.menu = menu
-    statusItem = item
+    statusItem = statusItemProvider.statusItem(for: self)
+    do {
+      regularExpressions = try regularExpressionBuilder.buildRegularExpressions(fromDictionary: [
+        .geometry: ("x?(\\d+)", options: [.caseInsensitive]),
+        .integer: ("\\d+", options: []),
+        .scale: ("(\\d+)x", options: []),
+        .size: ("(\\d+\\.?\\d*)x(\\d+\\.?\\d*)", options: []),
+        .number: ("\\d", options: [])
+      ])
+    } catch let error {
+      assertionFailure("Failed to parse regular expression: \(error)")
+    }
+
+    remoteObjectInterfaceProvider.remoteObjectProxyWithHandler { result in
+      switch result {
+      case let .error(error):
+        preconditionFailure("Could not connect to XPS Service: \(error)")
+      case let .success(service):
+        self.service = service
+      }
+    }
   }
 
   private class _VersionHandler {
@@ -42,7 +82,8 @@ open class Application: NSApplication {
 
                                              isWorkingCopyModified: VCS_WC_MODIFIED)
 
-  public static let sbd = Stage.dictionary(fromPlistAtURL: Application.bundle.url(forResource: "versions", withExtension: "plist")!)!
+  public static let sbd =
+    Stage.dictionary(fromPlistAtURL: Application.bundle.url(forResource: "versions", withExtension: "plist")!)!
   // StageBuildDictionaryProtocol! = nil
 
   public static let version = Version(
@@ -50,7 +91,10 @@ open class Application: NSApplication {
     dictionary: sbd,
     versionControl: vcs)!
 
-  public static func begin(withArguments _: SpeculidArgumentsProtocol, _: @escaping (SpeculidApplicationProtocol) -> Void) {
+  @available(*, deprecated: 2.0.0)
+  public static func begin(
+    withArguments _: SpeculidArgumentsProtocol,
+    _: @escaping (SpeculidApplicationProtocol) -> Void) {
     let operatingSystem = ProcessInfo.processInfo.operatingSystemVersionString
 
     let analyticsConfiguration = AnalyticsConfiguration(
