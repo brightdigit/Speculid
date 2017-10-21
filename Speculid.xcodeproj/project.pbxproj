@@ -379,7 +379,6 @@
 		B37C74A11F8C5C7400DF505B /* ImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHandle.h; sourceTree = "<group>"; };
 		B37C74A21F8C5C7400DF505B /* PNGSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGSurface.h; sourceTree = "<group>"; };
 		B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGImageHandle.h; sourceTree = "<group>"; };
-		B3B5E9D71F96C071004A6BEB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfigurationBuilder.swift; sourceTree = "<group>"; };
 		B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfigurationBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfiguration.swift; sourceTree = "<group>"; };
@@ -529,24 +528,24 @@
 		B3136DE41F90F73A0002B7AB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B3D32A071F9A73740042B46F /* AsyncBlockOperation.swift */,
-				B3136DCC1F90E2A20002B7AB /* Service.swift */,
-				B3136DDB1F90EF370002B7AB /* Application.swift */,
-				B3136DE81F90F73A0002B7AB /* CairoConversionSet.swift */,
-				B3136DEA1F90F73A0002B7AB /* AnalyticsTracker.swift */,
-				B3136DEC1F90F73A0002B7AB /* ClientIdentifier.swift */,
-				B3136DF01F90F73A0002B7AB /* ImageConversionSetBuilder.swift */,
 				B3136DF11F90F73A0002B7AB /* AnalyticsSessionManager.swift */,
-				B3136DF21F90F73A0002B7AB /* SpeculidBuilder.swift */,
-				B3136DF31F90F73A0002B7AB /* ImageConversionBuilder.swift */,
+				B3136DEA1F90F73A0002B7AB /* AnalyticsTracker.swift */,
+				B3136DDB1F90EF370002B7AB /* Application.swift */,
+				B3D32A071F9A73740042B46F /* AsyncBlockOperation.swift */,
+				B3136DE81F90F73A0002B7AB /* CairoConversionSet.swift */,
 				B3136DF41F90F73A0002B7AB /* CairoConversionSetBuilder.swift */,
-				B33F0BB81F958695004A87DD /* RemoteObjectInterfaceProvider.swift */,
-				B33F0BBA1F9586A9004A87DD /* StatusItemProvider.swift */,
-				B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */,
-				B31BEAFB1F96269F00496E7A /* RegularExpressionSet.swift */,
-				B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */,
+				B3136DEC1F90F73A0002B7AB /* ClientIdentifier.swift */,
 				B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */,
+				B3136DF31F90F73A0002B7AB /* ImageConversionBuilder.swift */,
+				B3136DF01F90F73A0002B7AB /* ImageConversionSetBuilder.swift */,
+				B31BEAFB1F96269F00496E7A /* RegularExpressionSet.swift */,
+				B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */,
+				B33F0BB81F958695004A87DD /* RemoteObjectInterfaceProvider.swift */,
+				B3136DCC1F90E2A20002B7AB /* Service.swift */,
 				B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */,
+				B3136DF21F90F73A0002B7AB /* SpeculidBuilder.swift */,
+				B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */,
+				B33F0BBA1F9586A9004A87DD /* StatusItemProvider.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -554,11 +553,11 @@
 		B3136DF51F90F73A0002B7AB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B3136DF81F90F73A0002B7AB /* CGFloat.swift */,
+				B3D32A051F9A5FEE0042B46F /* FileHandle.swift */,
+				B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */,
 				B3136DF61F90F73A0002B7AB /* NSColor.swift */,
 				B3136DF71F90F73A0002B7AB /* String.swift */,
-				B3136DF81F90F73A0002B7AB /* CGFloat.swift */,
-				B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */,
-				B3D32A051F9A5FEE0042B46F /* FileHandle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -566,26 +565,26 @@
 		B3136DF91F90F73A0002B7AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B3136E9D1F91019F0002B7AB /* VCS.swift */,
-				B3136DC11F90E27B0002B7AB /* FileFormat.swift */,
-				B3136DBB1F90E27B0002B7AB /* ImageFile.swift */,
-				B3136DBE1F90E27B0002B7AB /* ImageSpecification.swift */,
-				B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */,
-				B3136DFA1F90F73A0002B7AB /* AnalyticsParameterDictionary.swift */,
-				B3136DFB1F90F73A0002B7AB /* Geometry.swift */,
-				B3136DFC1F90F73A0002B7AB /* SpeculidSpecifications.swift */,
-				B3136E001F90F73A0002B7AB /* ScaledGeometry.swift */,
-				B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */,
-				B3136E021F90F73A0002B7AB /* AnalyticsParameterKey.swift */,
-				B3136E031F90F73A0002B7AB /* GeometryValue.swift */,
-				B3136E041F90F73A0002B7AB /* AssetSpecification.swift */,
 				B3136E051F90F73A0002B7AB /* AnalyticsConfiguration.swift */,
+				B3136DFA1F90F73A0002B7AB /* AnalyticsParameterDictionary.swift */,
+				B3136E021F90F73A0002B7AB /* AnalyticsParameterKey.swift */,
+				B3136E041F90F73A0002B7AB /* AssetSpecification.swift */,
+				B341888D1F9A460300C5F356 /* CommandLineArgumentProvider.swift */,
+				B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */,
+				B3136DC11F90E27B0002B7AB /* FileFormat.swift */,
+				B3136DFB1F90F73A0002B7AB /* Geometry.swift */,
+				B3136E031F90F73A0002B7AB /* GeometryValue.swift */,
+				B3136DBB1F90E27B0002B7AB /* ImageFile.swift */,
 				B3136E071F90F73A0002B7AB /* ImageIdiom.swift */,
+				B3136DBE1F90E27B0002B7AB /* ImageSpecification.swift */,
 				B33A533D1F954FF800E74800 /* Result.swift */,
-				B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */,
+				B3136E001F90F73A0002B7AB /* ScaledGeometry.swift */,
 				B3B5E9DF1F96C416004A6BEB /* SpeculidApplicationMode.swift */,
 				B3B5E9E11F96C44D004A6BEB /* SpeculidCommandArgumentSet.swift */,
-				B341888D1F9A460300C5F356 /* CommandLineArgumentProvider.swift */,
+				B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */,
+				B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */,
+				B3136DFC1F90F73A0002B7AB /* SpeculidSpecifications.swift */,
+				B3136E9D1F91019F0002B7AB /* VCS.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -627,9 +626,9 @@
 		B3136E1D1F90F73B0002B7AB /* Errors */ = {
 			isa = PBXGroup;
 			children = (
+				B3136E201F90F73B0002B7AB /* ArrayError.swift */,
 				B3136E1E1F90F73B0002B7AB /* MissingRequiredInstallationError.swift */,
 				B3136E1F1F90F73B0002B7AB /* ProcessError.swift */,
-				B3136E201F90F73B0002B7AB /* ArrayError.swift */,
 				B3136E211F90F73B0002B7AB /* UnknownConversionError.swift */,
 			);
 			path = Errors;
@@ -696,7 +695,6 @@
 		B37C74351F8C58F300DF505B = {
 			isa = PBXGroup;
 			children = (
-				B3B5E9D71F96C071004A6BEB /* main.swift */,
 				B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */,
 				B3136E9B1F90FFB10002B7AB /* CairoSVG.debug.xcconfig */,
 				B3136E9A1F90FFB10002B7AB /* CairoSVG.release.xcconfig */,

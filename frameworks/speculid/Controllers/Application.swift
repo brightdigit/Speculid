@@ -123,7 +123,10 @@ open class Application: NSApplication, ApplicationProtocol {
     }
   }
 
-  public func commandLineActivity(_: CommandLineActivityProtocol, hasCompletedWithError _: Error?) {
+  public func commandLineActivity(_: CommandLineActivityProtocol, hasCompletedWithError error: Error?) {
+
+    precondition(error == nil, error!.localizedDescription)
+    exit(0)
   }
 
   private class _VersionHandler {
