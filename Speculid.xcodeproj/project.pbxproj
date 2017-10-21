@@ -27,6 +27,8 @@
 		8673F38CC6D59040A2F46D0E /* Pods_CairoSVGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E776BC2A0843F84E3CBC279B /* Pods_CairoSVGTests.framework */; };
 		8B89F9F58D273C27DCE0A008 /* Pods_Speculid_Mac_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054FC9E3CE2F6BD2F948CF5D /* Pods_Speculid_Mac_App.framework */; };
 		8CFE676AD2939E9961A20D07 /* Pods_Speculid_Mac_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BDAD4963D80A5FF54A9272 /* Pods_Speculid_Mac_AppUITests.framework */; };
+		B3033B1B1F9AEE9A00787279 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B3033B191F9AEE9900787279 /* .travis.yml */; };
+		B3033B1C1F9AEE9A00787279 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B3033B1A1F9AEE9A00787279 /* .gitignore */; };
 		B3136DCD1F90E3F30002B7AB /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; };
 		B3136DCE1F90E45F0002B7AB /* ErrorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */; };
 		B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC11F90E27B0002B7AB /* FileFormat.swift */; };
@@ -255,6 +257,8 @@
 		75FAFD8D34A5758295CE7C3E /* Pods-Speculid-Mac-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-App/Pods-Speculid-Mac-App.debug.xcconfig"; sourceTree = "<group>"; };
 		87434B3EFCD8AF7732299E58 /* Pods-Speculid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid/Pods-Speculid.release.xcconfig"; sourceTree = "<group>"; };
 		9F8599C40CCA72FBF9FA1098 /* Pods_CairoSVG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CairoSVG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3033B191F9AEE9900787279 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		B3033B1A1F9AEE9A00787279 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B3136DBB1F90E27B0002B7AB /* ImageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFile.swift; sourceTree = "<group>"; };
 		B3136DBC1F90E27B0002B7AB /* Speculid_Mac_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid_Mac_Framework.h; sourceTree = "<group>"; };
 		B3136DBE1F90E27B0002B7AB /* ImageSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSpecification.swift; sourceTree = "<group>"; };
@@ -268,8 +272,6 @@
 		B3136DDA1F90EA520002B7AB /* rsvg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rsvg.h; sourceTree = "<group>"; };
 		B3136DDB1F90EF370002B7AB /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		B3136DDD1F90EF460002B7AB /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		B3136DE01F90F5C70002B7AB /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
-		B3136DE11F90F5C80002B7AB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B3136DE81F90F73A0002B7AB /* CairoConversionSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CairoConversionSet.swift; sourceTree = "<group>"; };
 		B3136DEA1F90F73A0002B7AB /* AnalyticsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsTracker.swift; sourceTree = "<group>"; };
 		B3136DEC1F90F73A0002B7AB /* ClientIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientIdentifier.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 		B3136EA11F910BC90002B7AB /* svg-appicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-appicon.speculid"; sourceTree = "<group>"; };
 		B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-trayicon.speculid"; sourceTree = "<group>"; };
 		B3136EAE1F9119510002B7AB /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		B3136EB31F9224290002B7AB /* CairoSVG.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CairoSVG.xcconfig; sourceTree = "<group>"; };
 		B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryValue.Multiply.swift; sourceTree = "<group>"; };
 		B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetBuilder.swift; sourceTree = "<group>"; };
@@ -486,6 +489,19 @@
 				C7A962F08D51F2247E1ADBEF /* Pods-SpeculidTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B3033B181F9AED7600787279 /* configuration */ = {
+			isa = PBXGroup;
+			children = (
+				B3033B1A1F9AEE9A00787279 /* .gitignore */,
+				B3033B191F9AEE9900787279 /* .travis.yml */,
+				B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */,
+				B3136EB31F9224290002B7AB /* CairoSVG.xcconfig */,
+				B3136E9B1F90FFB10002B7AB /* CairoSVG.debug.xcconfig */,
+				B3136E9A1F90FFB10002B7AB /* CairoSVG.release.xcconfig */,
+			);
+			name = configuration;
 			sourceTree = "<group>";
 		};
 		B3136DB51F90E23E0002B7AB /* frameworks */ = {
@@ -695,12 +711,8 @@
 		B37C74351F8C58F300DF505B = {
 			isa = PBXGroup;
 			children = (
-				B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */,
-				B3136E9B1F90FFB10002B7AB /* CairoSVG.debug.xcconfig */,
-				B3136E9A1F90FFB10002B7AB /* CairoSVG.release.xcconfig */,
+				B3033B181F9AED7600787279 /* configuration */,
 				B3136E6A1F90FCD90002B7AB /* tests */,
-				B3136DE11F90F5C80002B7AB /* .gitignore */,
-				B3136DE01F90F5C70002B7AB /* .travis.yml */,
 				B37C74401F8C58F300DF505B /* applications */,
 				B3136DB51F90E23E0002B7AB /* frameworks */,
 				B37C743F1F8C58F300DF505B /* Products */,
@@ -1094,6 +1106,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3033B1B1F9AEE9A00787279 /* .travis.yml in Resources */,
+				B3033B1C1F9AEE9A00787279 /* .gitignore in Resources */,
 				B318906E1F91A06C00D0EFA0 /* .swiftlint.yml in Resources */,
 				B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */,
 				B3136DD71F90E4AC0002B7AB /* layers.svg in Resources */,
