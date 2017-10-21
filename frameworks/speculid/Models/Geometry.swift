@@ -23,13 +23,6 @@ public struct Geometry: GeometryProtocol {
     return value.scaledBy(scale).description
   }
 
-  public struct Regex {
-    //    public static let Geometry = Application.shared.regularExpression[.geometry]
-    //    //try! NSRegularExpression(pattern: "x?(\\d+)", options: [.caseInsensitive])
-    //    public static let Integer = try! NSRegularExpression(pattern: "\\d+", options: [])
-    private init() {}
-  }
-
   public init?(string: String) {
     let range = NSRange(0 ..< string.characters.count)
 
