@@ -36,9 +36,9 @@ public struct Geometry: GeometryProtocol, Codable {
     return value.scaledBy(scale).description
   }
 
-  public init?(string: String) {
+  public init(string: String) throws {
     guard let value = GeometryValue(string: string) else {
-      return nil
+      throw BadGeometryValueError(stringValue: string)
     }
     self.value = value
   }

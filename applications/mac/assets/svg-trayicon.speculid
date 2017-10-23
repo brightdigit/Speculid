@@ -1,5 +1,5 @@
 {
-"set" : "assets/TrayIcon.imageset",
+"set" : "Assets.xcassets/TrayIcon.imageset",
 "source" : "layers.svg",
 "geometry" : "16"
 }

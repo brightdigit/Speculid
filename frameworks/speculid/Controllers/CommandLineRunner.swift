@@ -36,7 +36,14 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
         self.outputStream.write("Speculid v\(Application.version.shortDescription) [\(Application.version)]")
         return completed()
       case let .file(url):
-        guard let document = Application.current.document(url: url) else {
+        let tryDocument: SpeculidDocumentProtocol?
+        do {
+          tryDocument = try Application.current.document(url: url)
+        } catch let caughtError {
+          error = caughtError
+          return completed()
+        }
+        guard let document = tryDocument else {
           error = InvalidDocumentURL(url: url)
           return completed()
         }

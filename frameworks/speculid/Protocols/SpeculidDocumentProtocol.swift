@@ -1,4 +1,4 @@
 public protocol SpeculidDocumentProtocol {
-  var specifications: SpeculidSpecificationsFileProtocol { get }
-  var images: [AssetSpecificationProtocol] { get }
+  var specificationsFile: SpeculidSpecificationsFileProtocol { get }
+  var asset: AssetSpecificationDocumentProtocol { get }
 }
