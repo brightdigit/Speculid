@@ -45,6 +45,7 @@ open class Application: NSApplication, ApplicationProtocol {
   open let regularExpressionBuilder: RegularExpressionSetBuilderProtocol
   open let configurationBuilder: SpeculidConfigurationBuilderProtocol
   open let jsonDecoder: JSONDecoder
+  open let imageSpecificationBuilder: SpeculidImageSpecificationBuilderProtocol
   open var commandLineRunner: CommandLineRunnerProtocol
 
   public override init() {
@@ -53,6 +54,7 @@ open class Application: NSApplication, ApplicationProtocol {
     regularExpressionBuilder = RegularExpressionSetBuilder()
     configurationBuilder = SpeculidConfigurationBuilder()
     jsonDecoder = JSONDecoder()
+    imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
     commandLineRunner = CommandLineRunner(
       outputStream: FileHandle.standardOutput,
       errorStream: FileHandle.standardError)
@@ -66,6 +68,7 @@ open class Application: NSApplication, ApplicationProtocol {
     regularExpressionBuilder = RegularExpressionSetBuilder()
     configurationBuilder = SpeculidConfigurationBuilder(coder: coder)
     jsonDecoder = JSONDecoder()
+    imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
     commandLineRunner = CommandLineRunner(
       outputStream: FileHandle.standardOutput,
       errorStream: FileHandle.standardError)
@@ -95,7 +98,7 @@ open class Application: NSApplication, ApplicationProtocol {
       }
     }
 
-    builder = SpeculidBuilder(tracker: self.tracker, configuration: configuration)
+    builder = SpeculidBuilder(tracker: self.tracker, configuration: configuration, imageSpecificationBuilder: imageSpecificationBuilder)
     let tracker = AnalyticsTracker(configuration: analyticsConfiguration, sessionManager: AnalyticsSessionManager())
     NSSetUncaughtExceptionHandler(exceptionHandlerMethod)
 

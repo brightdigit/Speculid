@@ -72,7 +72,7 @@
 		B3136E4B1F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E111F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift */; };
 		B3136E4C1F90F73B0002B7AB /* AnalyticsEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E121F90F73B0002B7AB /* AnalyticsEventProtocol.swift */; };
 		B3136E4D1F90F73B0002B7AB /* AnalyticsSessionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E131F90F73B0002B7AB /* AnalyticsSessionManagerProtocol.swift */; };
-		B3136E4E1F90F73B0002B7AB /* ImageSpecificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E141F90F73B0002B7AB /* ImageSpecificationProtocol.swift */; };
+		B3136E4E1F90F73B0002B7AB /* AssetSpecificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E141F90F73B0002B7AB /* AssetSpecificationProtocol.swift */; };
 		B3136E4F1F90F73B0002B7AB /* GeometryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E151F90F73B0002B7AB /* GeometryProtocol.swift */; };
 		B3136E501F90F73B0002B7AB /* SpeculidArgumentsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E161F90F73B0002B7AB /* SpeculidArgumentsProtocol.swift */; };
 		B3136E511F90F73B0002B7AB /* AnalyticsConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E171F90F73B0002B7AB /* AnalyticsConfigurationProtocol.swift */; };
@@ -157,6 +157,8 @@
 		B3D32A041F9A5E8F0042B46F /* CommandLineRunnerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */; };
 		B3D32A061F9A5FEE0042B46F /* FileHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A051F9A5FEE0042B46F /* FileHandle.swift */; };
 		B3D32A081F9A73740042B46F /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A071F9A73740042B46F /* AsyncBlockOperation.swift */; };
+		B3F0ECF01F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */; };
+		B3F0ECF21F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */; };
 		CBE9EF18228D2DADFC9D264F /* Pods_Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */; };
 /* End PBXBuildFile section */
 
@@ -308,7 +310,7 @@
 		B3136E111F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidConfigurationProtocol.swift; sourceTree = "<group>"; };
 		B3136E121F90F73B0002B7AB /* AnalyticsEventProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsEventProtocol.swift; sourceTree = "<group>"; };
 		B3136E131F90F73B0002B7AB /* AnalyticsSessionManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsSessionManagerProtocol.swift; sourceTree = "<group>"; };
-		B3136E141F90F73B0002B7AB /* ImageSpecificationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSpecificationProtocol.swift; sourceTree = "<group>"; };
+		B3136E141F90F73B0002B7AB /* AssetSpecificationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetSpecificationProtocol.swift; sourceTree = "<group>"; };
 		B3136E151F90F73B0002B7AB /* GeometryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryProtocol.swift; sourceTree = "<group>"; };
 		B3136E161F90F73B0002B7AB /* SpeculidArgumentsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidArgumentsProtocol.swift; sourceTree = "<group>"; };
 		B3136E171F90F73B0002B7AB /* AnalyticsConfigurationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsConfigurationProtocol.swift; sourceTree = "<group>"; };
@@ -401,6 +403,8 @@
 		B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRunnerTest.swift; sourceTree = "<group>"; };
 		B3D32A051F9A5FEE0042B46F /* FileHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandle.swift; sourceTree = "<group>"; };
 		B3D32A071F9A73740042B46F /* AsyncBlockOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperation.swift; sourceTree = "<group>"; };
+		B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilderProtocol.swift; sourceTree = "<group>"; };
+		B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilder.swift; sourceTree = "<group>"; };
 		C743CA092B2436D579EB1965 /* Pods-Speculid-Mac-XPC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-XPC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-XPC/Pods-Speculid-Mac-XPC.debug.xcconfig"; sourceTree = "<group>"; };
 		C7A962F08D51F2247E1ADBEF /* Pods-SpeculidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeculidTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests.release.xcconfig"; sourceTree = "<group>"; };
 		DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -567,6 +571,7 @@
 				B3136DF21F90F73A0002B7AB /* SpeculidBuilder.swift */,
 				B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */,
 				B33F0BBA1F9586A9004A87DD /* StatusItemProvider.swift */,
+				B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -629,7 +634,7 @@
 				B3136E0B1F90F73B0002B7AB /* ImageConversionSetBuilderProtocol.swift */,
 				B3136E0F1F90F73B0002B7AB /* ImageConversionSetProtocol.swift */,
 				B3136E0C1F90F73B0002B7AB /* ImageConversionTaskProtocol.swift */,
-				B3136E141F90F73B0002B7AB /* ImageSpecificationProtocol.swift */,
+				B3136E141F90F73B0002B7AB /* AssetSpecificationProtocol.swift */,
 				B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */,
 				B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */,
 				B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */,
@@ -642,6 +647,7 @@
 				B3136E101F90F73B0002B7AB /* SpeculidDocumentProtocol.swift */,
 				B3136E091F90F73B0002B7AB /* SpeculidSpecificationsFileProtocol.swift */,
 				B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */,
+				B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1605,6 +1611,7 @@
 			files = (
 				B3B5E9E41F96C5F1004A6BEB /* CommandLineActivityProtocol.swift in Sources */,
 				B3136E3D1F90F73B0002B7AB /* AnalyticsParameterKey.swift in Sources */,
+				B3F0ECF21F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift in Sources */,
 				B3136E4D1F90F73B0002B7AB /* AnalyticsSessionManagerProtocol.swift in Sources */,
 				B33F0BBB1F9586A9004A87DD /* StatusItemProvider.swift in Sources */,
 				B3136E351F90F73B0002B7AB /* AnalyticsParameterDictionary.swift in Sources */,
@@ -1619,7 +1626,7 @@
 				B3B5E9E21F96C44D004A6BEB /* SpeculidCommandArgumentSet.swift in Sources */,
 				B33F0BB91F958695004A87DD /* RemoteObjectInterfaceProvider.swift in Sources */,
 				B33F0BB61F958640004A87DD /* StatusItemProviderProtocol.swift in Sources */,
-				B3136E4E1F90F73B0002B7AB /* ImageSpecificationProtocol.swift in Sources */,
+				B3136E4E1F90F73B0002B7AB /* AssetSpecificationProtocol.swift in Sources */,
 				B3136E9F1F9101A70002B7AB /* VCS.swift in Sources */,
 				B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */,
 				B3136E421F90F73B0002B7AB /* ImageIdiom.swift in Sources */,
@@ -1640,6 +1647,7 @@
 				B3136DD41F90E45F0002B7AB /* Service.swift in Sources */,
 				B3136E291F90F73B0002B7AB /* ClientIdentifier.swift in Sources */,
 				B3136E501F90F73B0002B7AB /* SpeculidArgumentsProtocol.swift in Sources */,
+				B3F0ECF01F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift in Sources */,
 				B3136DD11F90E45F0002B7AB /* ImageFile.swift in Sources */,
 				B33F0BB71F958640004A87DD /* RemoteObjectInterfaceProviderProtocol.swift in Sources */,
 				B3D32A061F9A5FEE0042B46F /* FileHandle.swift in Sources */,

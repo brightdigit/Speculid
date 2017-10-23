@@ -33,8 +33,8 @@ public struct AssetSpecification: AssetSpecificationProtocol, Codable {
     let container = try decoder.container(keyedBy: CodingKeys.self)
 
     idiom = try container.decode(ImageIdiom.self, forKey: .idiom)
-    filename = try container.decode(Optional<String>.self, forKey: .filename)
-    if let scaleString = try container.decode(Optional<String>.self, forKey: .scale) {
+    filename = try container.decodeIfPresent(String.self, forKey: .filename)
+    if let scaleString = try container.decodeIfPresent(String.self, forKey: .scale) {
 
       guard let scaleValueString = scaleString.firstMatchGroups(regex: scaleRegex)?[1], let scale = Double(scaleValueString) else {
         throw DecodingError.dataCorruptedError(forKey: .scale, in: container, debugDescription: scaleString)
@@ -44,7 +44,7 @@ public struct AssetSpecification: AssetSpecificationProtocol, Codable {
       scale = nil
     }
 
-    if let sizeString = try container.decode(Optional<String>.self, forKey: .size) {
+    if let sizeString = try container.decodeIfPresent(String.self, forKey: .size) {
       guard let sizeValueStrings = sizeString.firstMatchGroups(regex: sizeRegex), let width = Double(sizeValueStrings[1]), let height = Double(sizeValueStrings[2]) else {
         throw DecodingError.dataCorruptedError(forKey: .size, in: container, debugDescription: sizeString)
       }

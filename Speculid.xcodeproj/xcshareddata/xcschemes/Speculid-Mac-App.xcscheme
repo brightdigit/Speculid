@@ -90,6 +90,10 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "&quot;${SRCROOT}/applications/mac/assets/svg-appicon.speculid&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;${SRCROOT}/applications/mac/assets/svg-trayicon.speculid&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
