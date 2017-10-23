@@ -63,7 +63,7 @@
 		B3136E3F1F90F73B0002B7AB /* AssetSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E041F90F73A0002B7AB /* AssetSpecification.swift */; };
 		B3136E401F90F73B0002B7AB /* AnalyticsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E051F90F73A0002B7AB /* AnalyticsConfiguration.swift */; };
 		B3136E421F90F73B0002B7AB /* ImageIdiom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E071F90F73A0002B7AB /* ImageIdiom.swift */; };
-		B3136E431F90F73B0002B7AB /* SpeculidSpecificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E091F90F73B0002B7AB /* SpeculidSpecificationsProtocol.swift */; };
+		B3136E431F90F73B0002B7AB /* SpeculidSpecificationsFileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E091F90F73B0002B7AB /* SpeculidSpecificationsFileProtocol.swift */; };
 		B3136E451F90F73B0002B7AB /* ImageConversionSetBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E0B1F90F73B0002B7AB /* ImageConversionSetBuilderProtocol.swift */; };
 		B3136E461F90F73B0002B7AB /* ImageConversionTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E0C1F90F73B0002B7AB /* ImageConversionTaskProtocol.swift */; };
 		B3136E471F90F73B0002B7AB /* ClientIdentifierDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E0D1F90F73B0002B7AB /* ClientIdentifierDelegate.swift */; };
@@ -299,7 +299,7 @@
 		B3136E041F90F73A0002B7AB /* AssetSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetSpecification.swift; sourceTree = "<group>"; };
 		B3136E051F90F73A0002B7AB /* AnalyticsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsConfiguration.swift; sourceTree = "<group>"; };
 		B3136E071F90F73A0002B7AB /* ImageIdiom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageIdiom.swift; sourceTree = "<group>"; };
-		B3136E091F90F73B0002B7AB /* SpeculidSpecificationsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidSpecificationsProtocol.swift; sourceTree = "<group>"; };
+		B3136E091F90F73B0002B7AB /* SpeculidSpecificationsFileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidSpecificationsFileProtocol.swift; sourceTree = "<group>"; };
 		B3136E0B1F90F73B0002B7AB /* ImageConversionSetBuilderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConversionSetBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3136E0C1F90F73B0002B7AB /* ImageConversionTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConversionTaskProtocol.swift; sourceTree = "<group>"; };
 		B3136E0D1F90F73B0002B7AB /* ClientIdentifierDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientIdentifierDelegate.swift; sourceTree = "<group>"; };
@@ -590,6 +590,7 @@
 				B3136DFA1F90F73A0002B7AB /* AnalyticsParameterDictionary.swift */,
 				B3136E021F90F73A0002B7AB /* AnalyticsParameterKey.swift */,
 				B3136E041F90F73A0002B7AB /* AssetSpecification.swift */,
+				B3033B1F1F9AEFE600787279 /* AssetSpecificationDocument.swift */,
 				B341888D1F9A460300C5F356 /* CommandLineArgumentProvider.swift */,
 				B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */,
 				B3136DC11F90E27B0002B7AB /* FileFormat.swift */,
@@ -606,7 +607,6 @@
 				B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */,
 				B3136DFC1F90F73A0002B7AB /* SpeculidSpecificationsFile.swift */,
 				B3136E9D1F91019F0002B7AB /* VCS.swift */,
-				B3033B1F1F9AEFE600787279 /* AssetSpecificationDocument.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -618,30 +618,30 @@
 				B3136E121F90F73B0002B7AB /* AnalyticsEventProtocol.swift */,
 				B3136E131F90F73B0002B7AB /* AnalyticsSessionManagerProtocol.swift */,
 				B3136E181F90F73B0002B7AB /* AnalyticsTrackerProtocol.swift */,
+				B3136E1A1F90F73B0002B7AB /* ApplicationProtocol.swift */,
+				B3033B1D1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift */,
 				B3136E0D1F90F73B0002B7AB /* ClientIdentifierDelegate.swift */,
+				B3B5E9E31F96C5F1004A6BEB /* CommandLineActivityProtocol.swift */,
+				B34188891F9A44A700C5F356 /* CommandLineArgumentProviderProtocol.swift */,
+				B3B5E9E51F96C604004A6BEB /* CommandLineRunnerProtocol.swift */,
 				B3136E151F90F73B0002B7AB /* GeometryProtocol.swift */,
 				B3136E1B1F90F73B0002B7AB /* ImageConversionBuilderProtocol.swift */,
 				B3136E0B1F90F73B0002B7AB /* ImageConversionSetBuilderProtocol.swift */,
 				B3136E0F1F90F73B0002B7AB /* ImageConversionSetProtocol.swift */,
 				B3136E0C1F90F73B0002B7AB /* ImageConversionTaskProtocol.swift */,
 				B3136E141F90F73B0002B7AB /* ImageSpecificationProtocol.swift */,
+				B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */,
+				B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */,
+				B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */,
 				B3136DC61F90E2A20002B7AB /* ServiceProtocol.swift */,
-				B3136E1A1F90F73B0002B7AB /* ApplicationProtocol.swift */,
+				B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */,
 				B3136E161F90F73B0002B7AB /* SpeculidArgumentsProtocol.swift */,
 				B3136E191F90F73B0002B7AB /* SpeculidBuilderProtocol.swift */,
+				B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */,
 				B3136E111F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift */,
 				B3136E101F90F73B0002B7AB /* SpeculidDocumentProtocol.swift */,
-				B3136E091F90F73B0002B7AB /* SpeculidSpecificationsProtocol.swift */,
+				B3136E091F90F73B0002B7AB /* SpeculidSpecificationsFileProtocol.swift */,
 				B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */,
-				B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */,
-				B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */,
-				B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */,
-				B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */,
-				B3B5E9E31F96C5F1004A6BEB /* CommandLineActivityProtocol.swift */,
-				B3B5E9E51F96C604004A6BEB /* CommandLineRunnerProtocol.swift */,
-				B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */,
-				B34188891F9A44A700C5F356 /* CommandLineArgumentProviderProtocol.swift */,
-				B3033B1D1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1041,6 +1041,11 @@
 					B37C743D1F8C58F300DF505B = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					B37C74521F8C590D00DF505B = {
 						CreatedOnToolsVersion = 9.0;
@@ -1603,7 +1608,7 @@
 				B3136E4D1F90F73B0002B7AB /* AnalyticsSessionManagerProtocol.swift in Sources */,
 				B33F0BBB1F9586A9004A87DD /* StatusItemProvider.swift in Sources */,
 				B3136E351F90F73B0002B7AB /* AnalyticsParameterDictionary.swift in Sources */,
-				B3136E431F90F73B0002B7AB /* SpeculidSpecificationsProtocol.swift in Sources */,
+				B3136E431F90F73B0002B7AB /* SpeculidSpecificationsFileProtocol.swift in Sources */,
 				B3B5E9E61F96C604004A6BEB /* CommandLineRunnerProtocol.swift in Sources */,
 				B3136E3E1F90F73B0002B7AB /* GeometryValue.swift in Sources */,
 				B3136DDF1F90EFB10002B7AB /* Application.swift in Sources */,
@@ -1874,7 +1879,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFAULT_BUNDLE_VERSION = 2;
+				DEFAULT_VERSION_SEMVER = 2.0.0;
+				DYLIB_COMPATIBILITY_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1931,7 +1941,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFAULT_BUNDLE_VERSION = 2;
+				DEFAULT_VERSION_SEMVER = 2.0.0;
+				DYLIB_COMPATIBILITY_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1955,7 +1970,6 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = applications/mac/Speculid_Mac_App.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1976,7 +1990,6 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = applications/mac/Speculid_Mac_App.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2040,11 +2053,8 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/frameworks/speculid/Info.plist";
@@ -2068,11 +2078,8 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/frameworks/speculid/Info.plist";
@@ -2095,11 +2102,8 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/frameworks/cairosvg/Info.plist";
@@ -2123,11 +2127,8 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/frameworks/cairosvg/Info.plist";

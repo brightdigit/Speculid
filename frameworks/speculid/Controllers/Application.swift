@@ -12,8 +12,8 @@ func exceptionHandlerMethod(exception: NSException) {
 
 public typealias RegularExpressionArgumentSet = (String, options: NSRegularExpression.Options)
 open class Application: NSApplication, ApplicationProtocol {
-  public func document(url: URL) -> SpeculidDocumentProtocol? {
-    return SpeculidDocument(url: url, configuration: configuration)
+  public func document(url: URL) throws -> SpeculidDocumentProtocol {
+    return try SpeculidDocument(url: url, decoder: jsonDecoder, configuration: configuration)
   }
 
   open static var current: ApplicationProtocol! {
@@ -44,6 +44,7 @@ open class Application: NSApplication, ApplicationProtocol {
   open let remoteObjectInterfaceProvider: RemoteObjectInterfaceProviderProtocol
   open let regularExpressionBuilder: RegularExpressionSetBuilderProtocol
   open let configurationBuilder: SpeculidConfigurationBuilderProtocol
+  open let jsonDecoder: JSONDecoder
   open var commandLineRunner: CommandLineRunnerProtocol
 
   public override init() {
@@ -51,6 +52,7 @@ open class Application: NSApplication, ApplicationProtocol {
     remoteObjectInterfaceProvider = RemoteObjectInterfaceProvider()
     regularExpressionBuilder = RegularExpressionSetBuilder()
     configurationBuilder = SpeculidConfigurationBuilder()
+    jsonDecoder = JSONDecoder()
     commandLineRunner = CommandLineRunner(
       outputStream: FileHandle.standardOutput,
       errorStream: FileHandle.standardError)
@@ -63,6 +65,7 @@ open class Application: NSApplication, ApplicationProtocol {
     remoteObjectInterfaceProvider = RemoteObjectInterfaceProvider()
     regularExpressionBuilder = RegularExpressionSetBuilder()
     configurationBuilder = SpeculidConfigurationBuilder(coder: coder)
+    jsonDecoder = JSONDecoder()
     commandLineRunner = CommandLineRunner(
       outputStream: FileHandle.standardOutput,
       errorStream: FileHandle.standardError)
@@ -102,14 +105,6 @@ open class Application: NSApplication, ApplicationProtocol {
 
     self.tracker = tracker
 
-    if case let .command(arguments) = configuration.mode {
-      let commandLineActivity = self.commandLineRunner.activity(withArguments: arguments, self.commandLineActivity(_:hasCompletedWithError:))
-      self.commandLineActivity = commandLineActivity
-      commandLineActivity.start()
-      return
-    }
-
-    statusItem = statusItemProvider.statusItem(for: self)
     do {
       regularExpressions = try regularExpressionBuilder.buildRegularExpressions(fromDictionary: [
         .geometry: ("x?(\\d+)", options: [.caseInsensitive]),
@@ -121,6 +116,15 @@ open class Application: NSApplication, ApplicationProtocol {
     } catch let error {
       assertionFailure("Failed to parse regular expression: \(error)")
     }
+
+    if case let .command(arguments) = configuration.mode {
+      let commandLineActivity = self.commandLineRunner.activity(withArguments: arguments, self.commandLineActivity(_:hasCompletedWithError:))
+      self.commandLineActivity = commandLineActivity
+      commandLineActivity.start()
+      return
+    }
+
+    statusItem = statusItemProvider.statusItem(for: self)
   }
 
   public func commandLineActivity(_: CommandLineActivityProtocol, hasCompletedWithError error: Error?) {
