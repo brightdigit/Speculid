@@ -1,6 +1,7 @@
 import Foundation
 
 public struct SpeculidDocument: SpeculidDocumentProtocol {
+  public let url: URL
   public let specificationsFile: SpeculidSpecificationsFileProtocol
   public let asset: AssetSpecificationDocumentProtocol
 
@@ -15,6 +16,7 @@ public struct SpeculidDocument: SpeculidDocumentProtocol {
 
     self.specificationsFile = specificationsFile
     self.asset = asset
+    self.url = url
     //
     //    guard let specifications = SpeculidSpecifications(url: url) else {
     //      return nil

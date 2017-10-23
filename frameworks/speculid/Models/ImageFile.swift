@@ -1,6 +1,14 @@
 import Cocoa
 import CairoSVG
 
+public struct UnknownFileFormatError: Error {
+  public let url: URL
+
+  public init(forURL url: URL) {
+    self.url = url
+  }
+}
+
 public class ImageFile: NSObject, ImageFileProtocol, NSSecureCoding {
   public static let supportsSecureCoding: Bool = true
 
@@ -35,7 +43,7 @@ public class ImageFile: NSObject, ImageFileProtocol, NSSecureCoding {
 }
 
 extension ImageFile {
-  public convenience init?(url: URL) {
+  public convenience init(url: URL) throws {
     let pathExtension = url.pathExtension
     let fileFormat: FileFormat
     if pathExtension.caseInsensitiveCompare("png") == .orderedSame {
@@ -45,7 +53,7 @@ extension ImageFile {
     } else if pathExtension.caseInsensitiveCompare("pdf") == .orderedSame {
       fileFormat = .pdf
     } else {
-      return nil
+      throw UnknownFileFormatError(forURL: url)
     }
     self.init(url: url, fileFormat: fileFormat)
   }

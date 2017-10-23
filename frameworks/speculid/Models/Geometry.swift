@@ -1,8 +1,12 @@
 import Foundation
 import CairoSVG
 
-public struct BadGeometryValueError: Error {
+public struct BadGeometryStringValueError: Error {
   public let stringValue: String
+}
+
+public struct BadGeometryCGSizeValueError: Error {
+  public let size: CGSize
 }
 extension GeometryValue: CustomStringConvertible {
   func scaledBy(_ scale: Int) -> GeometryValue {
@@ -30,6 +34,20 @@ extension GeometryValue: CustomStringConvertible {
   }
 }
 
+extension Geometry {
+  public init(size: CGSize, preferWidth: Bool? = true) throws {
+    if preferWidth == nil, size.height != size.width {
+      throw BadGeometryCGSizeValueError(size: size)
+    }
+
+    if preferWidth == false {
+      value = .height(Int(size.height))
+    } else {
+      value = .width(Int(size.width))
+    }
+  }
+}
+
 public struct Geometry: GeometryProtocol, Codable {
   public let value: GeometryValue
   public func text(scaledBy scale: Int) -> String {
@@ -38,7 +56,7 @@ public struct Geometry: GeometryProtocol, Codable {
 
   public init(string: String) throws {
     guard let value = GeometryValue(string: string) else {
-      throw BadGeometryValueError(stringValue: string)
+      throw BadGeometryStringValueError(stringValue: string)
     }
     self.value = value
   }
@@ -47,7 +65,7 @@ public struct Geometry: GeometryProtocol, Codable {
     let container = try decoder.singleValueContainer()
     let stringValue = try container.decode(String.self)
     guard let value = GeometryValue(string: stringValue) else {
-      throw BadGeometryValueError(stringValue: stringValue)
+      throw BadGeometryStringValueError(stringValue: stringValue)
     }
     self.value = value
   }
