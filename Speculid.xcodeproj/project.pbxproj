@@ -215,6 +215,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B32D69EC1F9ECBD900C21C8C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B33A533F1F95568F00E74800 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,6 +352,7 @@
 		B31BEAFB1F96269F00496E7A /* RegularExpressionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSet.swift; sourceTree = "<group>"; };
 		B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetProtocol.swift; sourceTree = "<group>"; };
 		B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetBuilderProtocol.swift; sourceTree = "<group>"; };
+		B32D69EA1F9EC5CA00C21C8C /* Speculid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speculid.entitlements; sourceTree = "<group>"; };
 		B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemProviderProtocol.swift; sourceTree = "<group>"; };
 		B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObjectInterfaceProviderProtocol.swift; sourceTree = "<group>"; };
 		B33A533D1F954FF800E74800 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -725,6 +735,7 @@
 		B37C74351F8C58F300DF505B = {
 			isa = PBXGroup;
 			children = (
+				B32D69EA1F9EC5CA00C21C8C /* Speculid.entitlements */,
 				B3033B181F9AED7600787279 /* configuration */,
 				B3136E6A1F90FCD90002B7AB /* tests */,
 				B37C74401F8C58F300DF505B /* applications */,
@@ -935,7 +946,7 @@
 			buildConfigurationList = B37C744C1F8C58F300DF505B /* Build configuration list for PBXNativeTarget "Speculid-Mac-App" */;
 			buildPhases = (
 				6B0E6A3126F4611E46C09D7C /* [CP] Check Pods Manifest.lock */,
-				B3D329F91F9A55A20042B46F /* ShellScript */,
+				B3D329F91F9A55A20042B46F /* swiftformat */,
 				B37C743A1F8C58F300DF505B /* Sources */,
 				B37C743B1F8C58F300DF505B /* Frameworks */,
 				B37C743C1F8C58F300DF505B /* Resources */,
@@ -943,6 +954,7 @@
 				B37C747F1F8C5ADA00DF505B /* Embed Frameworks */,
 				F11FED44F4FDA27EB1AD0F15 /* [CP] Embed Pods Frameworks */,
 				1673FC657E1C66B998A0E6E4 /* [CP] Copy Pods Resources */,
+				B32D69ED1F9ED4A600C21C8C /* Install Dynamic Libraries */,
 			);
 			buildRules = (
 			);
@@ -1010,6 +1022,7 @@
 				B37C74861F8C5B5C00DF505B /* Headers */,
 				B37C74871F8C5B5C00DF505B /* Resources */,
 				05D00CC967D09B6349F704A6 /* [CP] Copy Pods Resources */,
+				B32D69EC1F9ECBD900C21C8C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -1049,7 +1062,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -1401,6 +1414,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
+		B32D69ED1F9ED4A600C21C8C /* Install Dynamic Libraries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Install Dynamic Libraries";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#export DYLIB=libcairo.2.dylib\n\n#mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#cp -f \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#install_name_tool -change \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"@loader_path/../Frameworks/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
+		};
 		B37C74B71F8C5CB500DF505B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1428,13 +1455,14 @@
 			shellPath = /bin/sh;
 			shellScript = "TAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" -type f\\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
 		};
-		B3D329F91F9A55A20042B46F /* ShellScript */ = {
+		B3D329F91F9A55A20042B46F /* swiftformat */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = swiftformat;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1978,6 +2006,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Speculid.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1998,6 +2027,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Speculid.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

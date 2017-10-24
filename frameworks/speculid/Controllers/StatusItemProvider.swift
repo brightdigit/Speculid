@@ -6,7 +6,7 @@ public struct StatusItemProvider: StatusItemProviderProtocol {
     let menu = NSMenu(title: "Speculid")
     let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
-    item.title = "Speculid"
+    item.image = #imageLiteral(resourceName: "TrayIcon")
     item.menu = menu
     return item
   }

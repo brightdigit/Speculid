@@ -94,7 +94,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "&quot;${SRCROOT}/applications/mac/assets/svg-trayicon.speculid&quot;"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-version"

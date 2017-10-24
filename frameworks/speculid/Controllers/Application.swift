@@ -136,6 +136,7 @@ open class Application: NSApplication, ApplicationProtocol {
     exit(0)
   }
 
+  @available(*, deprecated: 2.0.0)
   private class _VersionHandler {
   }
 
