@@ -1,4 +1,4 @@
 {
-"set" : "assets/AppIcon.appiconset",
+"set" : "Assets.xcassets/AppIcon.appiconset",
 "source" : "layers.svg"
 }

@@ -1,3 +1,4 @@
+import Foundation
 public struct ScaledGeometry: GeometryProtocol {
   public func text(scaledBy scale: Int) -> String {
     return base.scaling(by: scale * self.scale).description
@@ -13,5 +14,10 @@ public struct ScaledGeometry: GeometryProtocol {
 
   public var description: String {
     return base.text(scaledBy: scale)
+  }
+
+  public var value: GeometryValue {
+
+    return base.value * CGFloat(scale)
   }
 }

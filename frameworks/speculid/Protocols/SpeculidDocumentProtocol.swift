@@ -1,4 +1,7 @@
+import Foundation
+
 public protocol SpeculidDocumentProtocol {
-  var specifications: SpeculidSpecificationsProtocol { get }
-  var images: [AssetSpecificationProtocol] { get }
+  var url: URL { get }
+  var specificationsFile: SpeculidSpecificationsFileProtocol { get }
+  var asset: AssetSpecificationDocumentProtocol { get }
 }
