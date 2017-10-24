@@ -25,6 +25,7 @@ static ImageHandleBuilder * _shared = nil;
 }
 
 - (id<ImageHandle>)imageHandleFromFile:(id<ImageFileProtocol>)file error:(NSError * _Nullable __autoreleasing *)error {
+  NSLog(@"url: %@", file.url);
   cairo_surface_t * sourceSurface;
   GError * gerror = nil;
   RsvgHandle * rsvgHandle;
