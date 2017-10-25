@@ -1444,7 +1444,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#otool -L \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\n\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/librsvg/lib/librsvg-2.2.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/lib/libSystem.B.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/glib/lib/libgio-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/gdk-pixbuf/lib/libgdk_pixbuf-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/glib/lib/libgobject-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/glib/lib/libglib-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/gettext/lib/libintl.8.dylib\n\"$SRCROOT/install_dylib.sh\" /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/cairo/lib/libcairo.2.dylib\n\"$SRCROOT/install_dylib.sh\" /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation\n\"$SRCROOT/install_dylib.sh\" /usr/lib/libobjc.A.dylib\n\n\"$SRCROOT/codesign-framework.sh\"";
+			shellScript = "DYLIBS=`otool -L \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\" | grep \"/opt\" | awk -F' ' '{ print $1 }'`\nfor dylib in $DYLIBS; do install -m 755 $dylib \"$TARGET_BUILD_DIR\"; done;\nfor dylib in $DYLIBS; do install_name_tool -change $dylib @executable_path/`basename $dylib` \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"; done;";
 		};
 		B37C74B71F8C5CB500DF505B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
