@@ -353,6 +353,8 @@
 		B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetProtocol.swift; sourceTree = "<group>"; };
 		B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetBuilderProtocol.swift; sourceTree = "<group>"; };
 		B32D69EA1F9EC5CA00C21C8C /* Speculid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speculid.entitlements; sourceTree = "<group>"; };
+		B32D69EF1FA01AB300C21C8C /* install_dylib.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install_dylib.sh; sourceTree = "<group>"; };
+		B32D69F01FA01D3900C21C8C /* codesign-framework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "codesign-framework.sh"; sourceTree = "<group>"; };
 		B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemProviderProtocol.swift; sourceTree = "<group>"; };
 		B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObjectInterfaceProviderProtocol.swift; sourceTree = "<group>"; };
 		B33A533D1F954FF800E74800 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -519,6 +521,8 @@
 				B3136EB31F9224290002B7AB /* CairoSVG.xcconfig */,
 				B3136E9B1F90FFB10002B7AB /* CairoSVG.debug.xcconfig */,
 				B3136E9A1F90FFB10002B7AB /* CairoSVG.release.xcconfig */,
+				B32D69EF1FA01AB300C21C8C /* install_dylib.sh */,
+				B32D69F01FA01D3900C21C8C /* codesign-framework.sh */,
 			);
 			name = configuration;
 			sourceTree = "<group>";
@@ -1023,6 +1027,7 @@
 				B37C74871F8C5B5C00DF505B /* Resources */,
 				05D00CC967D09B6349F704A6 /* [CP] Copy Pods Resources */,
 				B32D69EC1F9ECBD900C21C8C /* CopyFiles */,
+				B32D69EE1F9FE7AE00C21C8C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1426,7 +1431,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#export DYLIB=libcairo.2.dylib\n\n#mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#cp -f \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#install_name_tool -change \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"@loader_path/../Frameworks/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
+			shellScript = "\n\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/librsvg/lib/librsvg-2.2.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/lib/libSystem.B.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/glib/lib/libgio-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/gdk-pixbuf/lib/libgdk_pixbuf-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/glib/lib/libgobject-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/glib/lib/libglib-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/gettext/lib/libintl.8.dylib\n\"$SRCROOT/install_dylib.sh\" /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/cairo/lib/libcairo.2.dylib\n\"$SRCROOT/install_dylib.sh\" /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation\n\"$SRCROOT/install_dylib.sh\" /usr/lib/libobjc.A.dylib\n\n\"$SRCROOT/codesign-framework.sh\"\n#export DYLIB=libcairo.2.dylib\n\n#mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#cp -f \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#install_name_tool -change \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"@loader_path/../Frameworks/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
+		};
+		B32D69EE1F9FE7AE00C21C8C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#otool -L \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\n\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/librsvg/lib/librsvg-2.2.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/lib/libSystem.B.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/glib/lib/libgio-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/gdk-pixbuf/lib/libgdk_pixbuf-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/glib/lib/libgobject-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/glib/lib/libglib-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/gettext/lib/libintl.8.dylib\n\"$SRCROOT/install_dylib.sh\" /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/cairo/lib/libcairo.2.dylib\n\"$SRCROOT/install_dylib.sh\" /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation\n\"$SRCROOT/install_dylib.sh\" /usr/lib/libobjc.A.dylib\n\n\"$SRCROOT/codesign-framework.sh\"";
 		};
 		B37C74B71F8C5CB500DF505B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2137,7 +2155,8 @@
 			baseConfigurationReference = B3136E9B1F90FFB10002B7AB /* CairoSVG.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = Speculid.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -2149,6 +2168,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.CairoSVG-Mac-Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -2162,7 +2182,8 @@
 			baseConfigurationReference = B3136E9A1F90FFB10002B7AB /* CairoSVG.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = Speculid.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -2174,6 +2195,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.CairoSVG-Mac-Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
