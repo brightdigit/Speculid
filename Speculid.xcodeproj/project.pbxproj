@@ -215,15 +215,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B32D69EC1F9ECBD900C21C8C /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B33A533F1F95568F00E74800 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1026,7 +1017,6 @@
 				B37C74861F8C5B5C00DF505B /* Headers */,
 				B37C74871F8C5B5C00DF505B /* Resources */,
 				05D00CC967D09B6349F704A6 /* [CP] Copy Pods Resources */,
-				B32D69EC1F9ECBD900C21C8C /* CopyFiles */,
 				B32D69EE1F9FE7AE00C21C8C /* ShellScript */,
 			);
 			buildRules = (
@@ -1067,7 +1057,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -1431,7 +1421,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/librsvg/lib/librsvg-2.2.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/lib/libSystem.B.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/glib/lib/libgio-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/gdk-pixbuf/lib/libgdk_pixbuf-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/glib/lib/libgobject-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/glib/lib/libglib-2.0.0.dylib\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/gettext/lib/libintl.8.dylib\n\"$SRCROOT/install_dylib.sh\" /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation\n\"$SRCROOT/install_dylib.sh\" /usr/local/opt/cairo/lib/libcairo.2.dylib\n\"$SRCROOT/install_dylib.sh\" /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation\n\"$SRCROOT/install_dylib.sh\" /usr/lib/libobjc.A.dylib\n\n\"$SRCROOT/codesign-framework.sh\"\n#export DYLIB=libcairo.2.dylib\n\n#mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#cp -f \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#install_name_tool -change \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"@loader_path/../Frameworks/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
+			shellScript = "\n\n\"$SRCROOT/codesign-framework.sh\"\n#export DYLIB=libcairo.2.dylib\n\n#mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#cp -f \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#install_name_tool -change \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"@loader_path/../Frameworks/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
 		};
 		B32D69EE1F9FE7AE00C21C8C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
