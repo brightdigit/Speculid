@@ -20,4 +20,4 @@ security import ./tmp/certs/mac_app-cert.cer -k macos-build.keychain -A
 security import ./tmp/certs/mac_development-key.p12 -k macos-build.keychain -P $SECURITY_PASSWORD -A
 security import ./tmp/certs/mac_development-cert.cer -k macos-build.keychain -A
 # Fix for OS X Sierra that hungs in the codesign step
-security set-key-partition-list -S apple-tool:,apple: -s -k $SECURITY_PASSWORD macos-build.keychain > /dev/null
+security set-key-partition-list -S apple-tool:,apple: -s -k $CUSTOM_KEYCHAIN_PASSWORD macos-build.keychain
