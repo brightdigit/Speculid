@@ -192,3 +192,4 @@ Products
 CairoSVG.xcconfig
 VCS.swift
 applications/mac/assets/assets
+tmp
