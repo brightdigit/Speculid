@@ -143,6 +143,7 @@
 		B37C74B11F8C5C7400DF505B /* PNGSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A21F8C5C7400DF505B /* PNGSurface.h */; };
 		B37C74B21F8C5C7400DF505B /* PNGImageHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */; };
 		B37C74BC1F8C5D2A00DF505B /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
+		B3B049C91FA262A8002906B1 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3B049C81FA262A8002906B1 /* exportOptions.plist */; };
 		B3B5E9DA1F96C1C1004A6BEB /* SpeculidConfigurationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */; };
 		B3B5E9DC1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */; };
 		B3B5E9DE1F96C2A2004A6BEB /* SpeculidConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */; };
@@ -215,15 +216,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B32D69EC1F9ECBD900C21C8C /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B33A533F1F95568F00E74800 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,6 +345,8 @@
 		B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetProtocol.swift; sourceTree = "<group>"; };
 		B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetBuilderProtocol.swift; sourceTree = "<group>"; };
 		B32D69EA1F9EC5CA00C21C8C /* Speculid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speculid.entitlements; sourceTree = "<group>"; };
+		B32D69EF1FA01AB300C21C8C /* install_dylib.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install_dylib.sh; sourceTree = "<group>"; };
+		B32D69F01FA01D3900C21C8C /* codesign-framework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "codesign-framework.sh"; sourceTree = "<group>"; };
 		B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemProviderProtocol.swift; sourceTree = "<group>"; };
 		B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObjectInterfaceProviderProtocol.swift; sourceTree = "<group>"; };
 		B33A533D1F954FF800E74800 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -399,6 +393,10 @@
 		B37C74A11F8C5C7400DF505B /* ImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHandle.h; sourceTree = "<group>"; };
 		B37C74A21F8C5C7400DF505B /* PNGSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGSurface.h; sourceTree = "<group>"; };
 		B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGImageHandle.h; sourceTree = "<group>"; };
+		B3B049C81FA262A8002906B1 /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
+		B3B049CA1FA27D78002906B1 /* decrypt-certs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "decrypt-certs.sh"; sourceTree = "<group>"; };
+		B3B049CB1FA27D96002906B1 /* certs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = certs; sourceTree = "<group>"; };
+		B3B049CC1FA27E68002906B1 /* build-keychain.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-keychain.sh"; sourceTree = "<group>"; };
 		B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfigurationBuilder.swift; sourceTree = "<group>"; };
 		B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfigurationBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfiguration.swift; sourceTree = "<group>"; };
@@ -513,12 +511,17 @@
 		B3033B181F9AED7600787279 /* configuration */ = {
 			isa = PBXGroup;
 			children = (
+				B3B049C81FA262A8002906B1 /* exportOptions.plist */,
 				B3033B1A1F9AEE9A00787279 /* .gitignore */,
 				B3033B191F9AEE9900787279 /* .travis.yml */,
 				B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */,
 				B3136EB31F9224290002B7AB /* CairoSVG.xcconfig */,
 				B3136E9B1F90FFB10002B7AB /* CairoSVG.debug.xcconfig */,
 				B3136E9A1F90FFB10002B7AB /* CairoSVG.release.xcconfig */,
+				B32D69EF1FA01AB300C21C8C /* install_dylib.sh */,
+				B32D69F01FA01D3900C21C8C /* codesign-framework.sh */,
+				B3B049CA1FA27D78002906B1 /* decrypt-certs.sh */,
+				B3B049CC1FA27E68002906B1 /* build-keychain.sh */,
 			);
 			name = configuration;
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 		B37C74351F8C58F300DF505B = {
 			isa = PBXGroup;
 			children = (
+				B3B049CB1FA27D96002906B1 /* certs */,
 				B32D69EA1F9EC5CA00C21C8C /* Speculid.entitlements */,
 				B3033B181F9AED7600787279 /* configuration */,
 				B3136E6A1F90FCD90002B7AB /* tests */,
@@ -1022,7 +1026,7 @@
 				B37C74861F8C5B5C00DF505B /* Headers */,
 				B37C74871F8C5B5C00DF505B /* Resources */,
 				05D00CC967D09B6349F704A6 /* [CP] Copy Pods Resources */,
-				B32D69EC1F9ECBD900C21C8C /* CopyFiles */,
+				B32D69EE1F9FE7AE00C21C8C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1062,7 +1066,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -1141,6 +1145,7 @@
 				B3033B1B1F9AEE9A00787279 /* .travis.yml in Resources */,
 				B3033B1C1F9AEE9A00787279 /* .gitignore in Resources */,
 				B318906E1F91A06C00D0EFA0 /* .swiftlint.yml in Resources */,
+				B3B049C91FA262A8002906B1 /* exportOptions.plist in Resources */,
 				B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */,
 				B3136DD71F90E4AC0002B7AB /* layers.svg in Resources */,
 				B37C74441F8C58F300DF505B /* Assets.xcassets in Resources */,
@@ -1426,7 +1431,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#export DYLIB=libcairo.2.dylib\n\n#mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#cp -f \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#install_name_tool -change \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"@loader_path/../Frameworks/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
+			shellScript = "\n\n\"$SRCROOT/codesign-framework.sh\"\n#export DYLIB=libcairo.2.dylib\n\n#mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#cp -f \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#install_name_tool -change \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"@loader_path/../Frameworks/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
+		};
+		B32D69EE1F9FE7AE00C21C8C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "DYLIBS=`otool -L \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\" | grep \"/opt\" | awk -F' ' '{ print $1 }'`\nfor dylib in $DYLIBS; do install -m 755 $dylib \"$TARGET_BUILD_DIR\"; done;\nfor dylib in $DYLIBS; do install_name_tool -change $dylib @executable_path/`basename $dylib` \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"; done;";
 		};
 		B37C74B71F8C5CB500DF505B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2137,7 +2155,8 @@
 			baseConfigurationReference = B3136E9B1F90FFB10002B7AB /* CairoSVG.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = Speculid.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -2149,6 +2168,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.CairoSVG-Mac-Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -2162,7 +2182,8 @@
 			baseConfigurationReference = B3136E9A1F90FFB10002B7AB /* CairoSVG.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = Speculid.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -2174,6 +2195,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.CairoSVG-Mac-Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
