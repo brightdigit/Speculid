@@ -1441,7 +1441,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n\n\"$SRCROOT/codesign-framework.sh\"\n#export DYLIB=libcairo.2.dylib\n\n#mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#cp -f \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#install_name_tool -change \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"@loader_path/../Frameworks/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
+			shellScript = "\"$SRCROOT/codesign-framework.sh\"";
 		};
 		B32D69EE1F9FE7AE00C21C8C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1454,7 +1454,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "DYLIBS=`otool -L \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\" | grep \"/opt\" | awk -F' ' '{ print $1 }'`\nfor dylib in $DYLIBS; do install -m 755 $dylib \"$TARGET_BUILD_DIR\"; done;\nfor dylib in $DYLIBS; do install_name_tool -change $dylib @executable_path/`basename $dylib` \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"; done;";
+			shellScript = "DYLIBS=`otool -L \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\" | grep \"/opt\" | awk -F' ' '{ print $1 }'`\nfor dylib in $DYLIBS; do install -m 755 $dylib \"$TARGET_BUILD_DIR\"; done;\nfor dylib in $DYLIBS; do install_name_tool -change $dylib @rpath/`basename $dylib` \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"; done;";
 		};
 		B37C74B71F8C5CB500DF505B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
