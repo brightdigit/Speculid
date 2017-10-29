@@ -136,11 +136,11 @@ open class Application: NSApplication, ApplicationProtocol {
     exit(0)
   }
 
-  @available(*, deprecated: 2.0.0)
-  private class _VersionHandler {
+  public func quit(_ sender: Any?) {
+    terminate(sender)
   }
 
-  public static let bundle = Bundle(for: _VersionHandler.self)
+  public static let bundle = Bundle(for: Application.self)
 
   public static let vcs = VersionControlInfo(type: VCS_TYPE,
                                              baseName: VCS_BASENAME,
@@ -159,7 +159,7 @@ open class Application: NSApplication, ApplicationProtocol {
     Stage.dictionary(fromPlistAtURL: Application.bundle.url(forResource: "versions", withExtension: "plist")!)!
   // StageBuildDictionaryProtocol! = nil
 
-  public static let version = Version(
+  public let version = Version(
     bundle: bundle,
     dictionary: sbd,
     versionControl: vcs)!

@@ -93,6 +93,7 @@
 		B3136E9F1F9101A70002B7AB /* VCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E9D1F91019F0002B7AB /* VCS.swift */; };
 		B3136EA31F910BC90002B7AB /* svg-appicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3136EA11F910BC90002B7AB /* svg-appicon.speculid */; };
 		B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */; };
+		B317B0D11FA560EE00BB5E57 /* QuitMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317B0D01FA560EE00BB5E57 /* QuitMenuItem.swift */; };
 		B318906A1F918F0300D0EFA0 /* GeometryValue.Multiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */; };
 		B318906E1F91A06C00D0EFA0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */; };
 		B31BEAFA1F96268700496E7A /* RegularExpressionSetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */; };
@@ -160,6 +161,7 @@
 		B3D32A081F9A73740042B46F /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A071F9A73740042B46F /* AsyncBlockOperation.swift */; };
 		B3F0ECF01F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */; };
 		B3F0ECF21F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */; };
+		B3FAD3EB1FA564D0004381A7 /* VersionMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */; };
 		CBE9EF18228D2DADFC9D264F /* Pods_Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */; };
 /* End PBXBuildFile section */
 
@@ -338,6 +340,7 @@
 		B3136EA11F910BC90002B7AB /* svg-appicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-appicon.speculid"; sourceTree = "<group>"; };
 		B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-trayicon.speculid"; sourceTree = "<group>"; };
 		B3136EB31F9224290002B7AB /* CairoSVG.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CairoSVG.xcconfig; sourceTree = "<group>"; };
+		B317B0D01FA560EE00BB5E57 /* QuitMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitMenuItem.swift; sourceTree = "<group>"; };
 		B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryValue.Multiply.swift; sourceTree = "<group>"; };
 		B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetBuilder.swift; sourceTree = "<group>"; };
@@ -413,6 +416,7 @@
 		B3D32A071F9A73740042B46F /* AsyncBlockOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperation.swift; sourceTree = "<group>"; };
 		B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilder.swift; sourceTree = "<group>"; };
+		B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionMenuItem.swift; sourceTree = "<group>"; };
 		C743CA092B2436D579EB1965 /* Pods-Speculid-Mac-XPC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-XPC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-XPC/Pods-Speculid-Mac-XPC.debug.xcconfig"; sourceTree = "<group>"; };
 		C7A962F08D51F2247E1ADBEF /* Pods-SpeculidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeculidTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests.release.xcconfig"; sourceTree = "<group>"; };
 		DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -585,6 +589,8 @@
 				B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */,
 				B33F0BBA1F9586A9004A87DD /* StatusItemProvider.swift */,
 				B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */,
+				B317B0D01FA560EE00BB5E57 /* QuitMenuItem.swift */,
+				B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1675,6 +1681,7 @@
 				B3136E4E1F90F73B0002B7AB /* AssetSpecificationProtocol.swift in Sources */,
 				B3136E9F1F9101A70002B7AB /* VCS.swift in Sources */,
 				B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */,
+				B317B0D11FA560EE00BB5E57 /* QuitMenuItem.swift in Sources */,
 				B3136E421F90F73B0002B7AB /* ImageIdiom.swift in Sources */,
 				B3D32A081F9A73740042B46F /* AsyncBlockOperation.swift in Sources */,
 				B3136E371F90F73B0002B7AB /* SpeculidSpecificationsFile.swift in Sources */,
@@ -1696,6 +1703,7 @@
 				B3F0ECF01F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift in Sources */,
 				B3136DD11F90E45F0002B7AB /* ImageFile.swift in Sources */,
 				B33F0BB71F958640004A87DD /* RemoteObjectInterfaceProviderProtocol.swift in Sources */,
+				B3FAD3EB1FA564D0004381A7 /* VersionMenuItem.swift in Sources */,
 				B3D32A061F9A5FEE0042B46F /* FileHandle.swift in Sources */,
 				B3136DD51F90E45F0002B7AB /* ServiceProtocol.swift in Sources */,
 				B3136E4C1F90F73B0002B7AB /* AnalyticsEventProtocol.swift in Sources */,
@@ -1936,7 +1944,7 @@
 				CURRENT_PROJECT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFAULT_BUNDLE_VERSION = 2;
-				DEFAULT_VERSION_SEMVER = 2.0.0;
+				DEFAULT_SEMVER_VERSION = 2.0.0;
 				DYLIB_COMPATIBILITY_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DYLIB_CURRENT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1998,7 +2006,7 @@
 				CURRENT_PROJECT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFAULT_BUNDLE_VERSION = 2;
-				DEFAULT_VERSION_SEMVER = 2.0.0;
+				DEFAULT_SEMVER_VERSION = 2.0.0;
 				DYLIB_COMPATIBILITY_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DYLIB_CURRENT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				ENABLE_NS_ASSERTIONS = NO;
