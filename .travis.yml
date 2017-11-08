@@ -16,6 +16,8 @@ script:
   - xcodebuild -workspace speculid.xcworkspace -scheme "CairoSVG-Flags" -derivedDataPath ./build  build -configuration "Release"
   - xcodebuild archive -workspace speculid.xcworkspace -scheme "Speculid-Mac-App" -configuration Release -derivedDataPath ./build -archivePath ./build/Products/Speculid.xcarchive
   - xcodebuild -exportArchive -archivePath ./build/Products/Speculid.xcarchive -exportOptionsPlist ./exportOptions.plist -exportPath ./build/Products/App
+  - open Build/Products/App/Speculid.app
+  - osascript -e 'tell application "Speculid" to quit'
   #- diff examples/shasum <(./shasum.sh)
   #- xcodebuild -workspace speculid.xcworkspace -scheme Speculid test
 # after_success:
