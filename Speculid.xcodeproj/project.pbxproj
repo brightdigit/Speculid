@@ -967,7 +967,7 @@
 				B37C747F1F8C5ADA00DF505B /* Embed Frameworks */,
 				F11FED44F4FDA27EB1AD0F15 /* [CP] Embed Pods Frameworks */,
 				1673FC657E1C66B998A0E6E4 /* [CP] Copy Pods Resources */,
-				B32D69ED1F9ED4A600C21C8C /* Install Dynamic Libraries */,
+				B32D69ED1F9ED4A600C21C8C /* Codesign Dynamic Libraries */,
 			);
 			buildRules = (
 			);
@@ -1035,7 +1035,7 @@
 				B37C74861F8C5B5C00DF505B /* Headers */,
 				B37C74871F8C5B5C00DF505B /* Resources */,
 				05D00CC967D09B6349F704A6 /* [CP] Copy Pods Resources */,
-				B32D69EE1F9FE7AE00C21C8C /* ShellScript */,
+				B32D69EE1F9FE7AE00C21C8C /* Install Dynamic Libraries */,
 			);
 			buildRules = (
 			);
@@ -1429,7 +1429,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
-		B32D69ED1F9ED4A600C21C8C /* Install Dynamic Libraries */ = {
+		B32D69ED1F9ED4A600C21C8C /* Codesign Dynamic Libraries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Codesign Dynamic Libraries";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/codesign-framework.sh\"";
+		};
+		B32D69EE1F9FE7AE00C21C8C /* Install Dynamic Libraries */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1441,20 +1455,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT/codesign-framework.sh\"";
-		};
-		B32D69EE1F9FE7AE00C21C8C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "DYLIBS=`otool -L \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\" | grep \"/opt\" | awk -F' ' '{ print $1 }'`\nfor dylib in $DYLIBS; do install -m 755 $dylib \"$TARGET_BUILD_DIR\"; done;\nfor dylib in $DYLIBS; do install_name_tool -change $dylib @rpath/`basename $dylib` \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"; done;";
+			shellScript = "DYLIBS=`otool -L \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\" | grep \"/opt\" | awk -F' ' '{ print $1 }'`\nmkdir -p \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"\nfor dylib in $DYLIBS; do install -m 755 $dylib \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"; done;\nfor dylib in $DYLIBS; do install_name_tool -change $dylib @rpath/`basename $dylib` \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"; done;\n\"$SRCROOT/codesign-framework.sh\"";
 		};
 		B37C74B71F8C5CB500DF505B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
