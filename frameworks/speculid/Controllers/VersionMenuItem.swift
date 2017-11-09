@@ -19,14 +19,7 @@ public class VersionMenuItem: NSMenuItem {
   }
 
   public init() {
-    let buildnumbers = VersionMenuItem.buildNumbers(fromResource: "build", withExtension: "list")
-    let version = Application.current.version
-    let title: String
-    if buildnumbers?.contains(version.build) == true {
-      title = "Speculid v\(version) [\(version.buildHexidecimal)]"
-    } else {
-      title = "Speculid v\(version.fullDescription) [dev-\(version.buildHexidecimal)]"
-    }
+    let title = Application.current.version.developmentDescription
     super.init(title: title, action: nil, keyEquivalent: "")
   }
 

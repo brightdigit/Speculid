@@ -190,6 +190,6 @@ Products
 *tests/*.pdf
 
 CairoSVG.xcconfig
-VCS.swift
+autorevision.json
 applications/mac/assets/assets
 tmp

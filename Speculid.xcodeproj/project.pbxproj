@@ -90,7 +90,6 @@
 		B3136E831F90FD2E0002B7AB /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; };
 		B3136E901F90FD3D0002B7AB /* CairoSVGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E8F1F90FD3D0002B7AB /* CairoSVGTests.swift */; };
 		B3136E921F90FD3D0002B7AB /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
-		B3136E9F1F9101A70002B7AB /* VCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E9D1F91019F0002B7AB /* VCS.swift */; };
 		B3136EA31F910BC90002B7AB /* svg-appicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3136EA11F910BC90002B7AB /* svg-appicon.speculid */; };
 		B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */; };
 		B317B0D11FA560EE00BB5E57 /* QuitMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317B0D01FA560EE00BB5E57 /* QuitMenuItem.swift */; };
@@ -161,6 +160,8 @@
 		B3D32A041F9A5E8F0042B46F /* CommandLineRunnerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */; };
 		B3D32A061F9A5FEE0042B46F /* FileHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A051F9A5FEE0042B46F /* FileHandle.swift */; };
 		B3D32A081F9A73740042B46F /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A071F9A73740042B46F /* AsyncBlockOperation.swift */; };
+		B3E9A9011FB4DCCA00FD8E7A /* autorevision.json in Resources */ = {isa = PBXBuildFile; fileRef = B3E9A9001FB4DCCA00FD8E7A /* autorevision.json */; };
+		B3E9A9031FB4DDE400FD8E7A /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E9A9021FB4DDE400FD8E7A /* Version.swift */; };
 		B3F0ECF01F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */; };
 		B3F0ECF21F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */; };
 		B3FAD3EB1FA564D0004381A7 /* VersionMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */; };
@@ -338,7 +339,6 @@
 		B3136E911F90FD3D0002B7AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3136E9A1F90FFB10002B7AB /* CairoSVG.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CairoSVG.release.xcconfig; sourceTree = "<group>"; };
 		B3136E9B1F90FFB10002B7AB /* CairoSVG.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CairoSVG.debug.xcconfig; sourceTree = "<group>"; };
-		B3136E9D1F91019F0002B7AB /* VCS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCS.swift; sourceTree = "<group>"; };
 		B3136EA11F910BC90002B7AB /* svg-appicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-appicon.speculid"; sourceTree = "<group>"; };
 		B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-trayicon.speculid"; sourceTree = "<group>"; };
 		B3136EB31F9224290002B7AB /* CairoSVG.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CairoSVG.xcconfig; sourceTree = "<group>"; };
@@ -418,6 +418,8 @@
 		B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRunnerTest.swift; sourceTree = "<group>"; };
 		B3D32A051F9A5FEE0042B46F /* FileHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandle.swift; sourceTree = "<group>"; };
 		B3D32A071F9A73740042B46F /* AsyncBlockOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperation.swift; sourceTree = "<group>"; };
+		B3E9A9001FB4DCCA00FD8E7A /* autorevision.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = autorevision.json; sourceTree = "<group>"; };
+		B3E9A9021FB4DDE400FD8E7A /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilder.swift; sourceTree = "<group>"; };
 		B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionMenuItem.swift; sourceTree = "<group>"; };
@@ -559,6 +561,7 @@
 		B3136DB81F90E27B0002B7AB /* speculid */ = {
 			isa = PBXGroup;
 			children = (
+				B3E9A9001FB4DCCA00FD8E7A /* autorevision.json */,
 				B3D329FE1F9A5D290042B46F /* Resources */,
 				B3136DE41F90F73A0002B7AB /* Controllers */,
 				B3136E1D1F90F73B0002B7AB /* Errors */,
@@ -609,6 +612,7 @@
 				B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */,
 				B3136DF61F90F73A0002B7AB /* NSColor.swift */,
 				B3136DF71F90F73A0002B7AB /* String.swift */,
+				B3E9A9021FB4DDE400FD8E7A /* Version.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -636,7 +640,6 @@
 				B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */,
 				B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */,
 				B3136DFC1F90F73A0002B7AB /* SpeculidSpecificationsFile.swift */,
-				B3136E9D1F91019F0002B7AB /* VCS.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1178,6 +1181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3136E561F90F73B0002B7AB /* versions.plist in Resources */,
+				B3E9A9011FB4DCCA00FD8E7A /* autorevision.json in Resources */,
 				B3D32A021F9A5D760042B46F /* help.txt in Resources */,
 				B36C2E8B1FA5B876003F48BD /* build.list in Resources */,
 			);
@@ -1403,7 +1407,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if git rev-parse --git-dir > /dev/null 2>&1; then\ntouch ${SRCROOT}/.version\nstart=1\nversion_file=`< ${SRCROOT}/.version`\nversion=${version_file:-${start}}\nexport VCS_EXTRA=$version\necho \"Incrementing Version Number\"\n\"${SRCROOT}/autorevision.sh\" -t swift > \"${SRCROOT}/frameworks/speculid/Models/VCS.swift\"\necho `expr ${VCS_EXTRA} + 1` >${SRCROOT}/.version\nfi";
+			shellScript = "touch \"${SRCROOT}/.version\"\nstart=1\nversion_file=`< \"${SRCROOT}/.version\"`\nversion=${version_file:-${start}}\nexport VCS_EXTRA=${version}\nmkdir -p tmp\necho \"Set Extra Version Number to ${VCS_EXTRA}\"\n\"${SRCROOT}/bin/autorevision.sh\" -t json >${SRCROOT}/frameworks/speculid/autorevision.json\n\"${SRCROOT}/bin/autorevision.sh\" -t sh >${SRCROOT}/tmp/autorevision.sh\necho `expr ${VCS_EXTRA} + 1` >\"${SRCROOT}/.version\"";
 		};
 		B318906B1F919FA300D0EFA0 /* swiftformat */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1688,7 +1692,6 @@
 				B33F0BB91F958695004A87DD /* RemoteObjectInterfaceProvider.swift in Sources */,
 				B33F0BB61F958640004A87DD /* StatusItemProviderProtocol.swift in Sources */,
 				B3136E4E1F90F73B0002B7AB /* AssetSpecificationProtocol.swift in Sources */,
-				B3136E9F1F9101A70002B7AB /* VCS.swift in Sources */,
 				B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */,
 				B317B0D11FA560EE00BB5E57 /* QuitMenuItem.swift in Sources */,
 				B3136E421F90F73B0002B7AB /* ImageIdiom.swift in Sources */,
@@ -1717,6 +1720,7 @@
 				B3136DD51F90E45F0002B7AB /* ServiceProtocol.swift in Sources */,
 				B3136E4C1F90F73B0002B7AB /* AnalyticsEventProtocol.swift in Sources */,
 				B31BEB001F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift in Sources */,
+				B3E9A9031FB4DDE400FD8E7A /* Version.swift in Sources */,
 				B3136E531F90F73B0002B7AB /* SpeculidBuilderProtocol.swift in Sources */,
 				B3136E4B1F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift in Sources */,
 				B3136E4A1F90F73B0002B7AB /* SpeculidDocumentProtocol.swift in Sources */,
