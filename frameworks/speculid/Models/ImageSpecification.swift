@@ -16,7 +16,7 @@ import CairoSVG
 
     let _file = aDecoder.decodeObject(forKey: "file") as? ImageFileProtocol
     let _dimensionValue = aDecoder.decodeObject(forKey: "geometryDimensionValue") as? UInt
-    let _value = aDecoder.decodeObject(forKey: "geometryValue") as? Int
+    let _value = aDecoder.decodeObject(forKey: "geometryValue") as? CGFloat
     let backgroundColor = aDecoder.decodeObject(forKey: "backgroundColor") as? CairoColorProtocol
     let _removeAlphaChannel = aDecoder.decodeObject(forKey: "removeAlphaChannel") as? Bool
 
@@ -31,10 +31,10 @@ import CairoSVG
   }
 
   public let file: ImageFileProtocol
-  public let geometryDimension: Geometry
+  public let geometryDimension: Geometry?
   public let removeAlphaChannel: Bool
   public let backgroundColor: CairoColorProtocol?
-  public init(file: ImageFileProtocol, geometryDimension: Geometry, removeAlphaChannel: Bool = false, backgroundColor: CairoColorProtocol? = nil) {
+  public init(file: ImageFileProtocol, geometryDimension: Geometry? = nil, removeAlphaChannel: Bool = false, backgroundColor: CairoColorProtocol? = nil) {
     self.file = file
     self.geometryDimension = geometryDimension
     self.removeAlphaChannel = removeAlphaChannel
@@ -43,9 +43,13 @@ import CairoSVG
   }
 
   public var geometry: CairoSVG.GeometryDimension {
+    guard let geometryDimension = self.geometryDimension else {
+      return CairoSVG.GeometryDimensionUnspecified
+    }
     switch geometryDimension.value {
-    case let .height(value): return CairoSVG.GeometryDimension(value: Int32(value), dimension: .height)
-    case let .width(value): return CairoSVG.GeometryDimension(value: Int32(value), dimension: .width)
+    case let .height(value): return CairoSVG.GeometryDimension(value: value, dimension: .height)
+    case let .width(value): return CairoSVG.GeometryDimension(value: value, dimension: .width)
+    case let .scale(value): return CairoSVG.GeometryDimension(value: value, dimension: .scale)
     }
   }
 }

@@ -156,6 +156,7 @@
 		B3B5E9E81F96C74C004A6BEB /* CommandLineRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */; };
 		B3B5E9EA1F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */; };
 		B3B5E9EC1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */; };
+		B3D2F6AD1FB3EB7F00BF7AC1 /* shasum.sh in Resources */ = {isa = PBXBuildFile; fileRef = B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */; };
 		B3D32A021F9A5D760042B46F /* help.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3D32A011F9A5D750042B46F /* help.txt */; };
 		B3D32A041F9A5E8F0042B46F /* CommandLineRunnerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */; };
 		B3D32A061F9A5FEE0042B46F /* FileHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A051F9A5FEE0042B46F /* FileHandle.swift */; };
@@ -412,6 +413,7 @@
 		B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRunner.swift; sourceTree = "<group>"; };
 		B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParserProtocol.swift; sourceTree = "<group>"; };
 		B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParser.swift; sourceTree = "<group>"; };
+		B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = shasum.sh; sourceTree = "<group>"; };
 		B3D32A011F9A5D750042B46F /* help.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = help.txt; sourceTree = "<group>"; };
 		B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRunnerTest.swift; sourceTree = "<group>"; };
 		B3D32A051F9A5FEE0042B46F /* FileHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandle.swift; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 		B3033B181F9AED7600787279 /* configuration */ = {
 			isa = PBXGroup;
 			children = (
+				B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */,
 				B3B049C81FA262A8002906B1 /* exportOptions.plist */,
 				B3033B1A1F9AEE9A00787279 /* .gitignore */,
 				B3033B191F9AEE9900787279 /* .travis.yml */,
@@ -1152,6 +1155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3033B1B1F9AEE9A00787279 /* .travis.yml in Resources */,
+				B3D2F6AD1FB3EB7F00BF7AC1 /* shasum.sh in Resources */,
 				B3033B1C1F9AEE9A00787279 /* .gitignore in Resources */,
 				B318906E1F91A06C00D0EFA0 /* .swiftlint.yml in Resources */,
 				B3B049C91FA262A8002906B1 /* exportOptions.plist in Resources */,

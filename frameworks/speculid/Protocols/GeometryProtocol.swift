@@ -1,8 +1,6 @@
 import Foundation
 
-public protocol GeometryProtocol: CustomStringConvertible {
-  @available(*, deprecated: 2.0.0)
-  func text(scaledBy scale: Int) -> String
+public protocol GeometryProtocol {
 
   var value: GeometryValue {
     get

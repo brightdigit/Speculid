@@ -12,8 +12,12 @@
 #import "Dimension.h"
 
 typedef struct GeometryDimension {
-  int value;
+  CGFloat value;
   Dimension dimension;
 } GeometryDimension;
 
+extern const struct GeometryDimension GeometryDimensionUnspecified = {
+  .value = 0,
+  .dimension = kUnspecified
+};
 #endif /* GeometryDimension_h */
