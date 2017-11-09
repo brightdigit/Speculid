@@ -19,14 +19,14 @@ script:
   - open Build/Products/App/Speculid.app
   - osascript -e 'tell application "Speculid" to quit'
   - Build/Products/App/Speculid.app/Contents/MacOS/Speculid examples/Assets/macOS\ AppIcon.speculid
-  #- diff examples/shasum <(./shasum.sh)
+  - diff examples/shasum <(./shasum.sh)
   #- xcodebuild -workspace speculid.xcworkspace -scheme Speculid test
 # after_success:
 #   - slather
 #   - bash <(curl -s https://codecov.io/bash) -f cobertura.xml
-# after_failure:
-  #- ./shasum.sh
-  #- find "examples/Assets/." -type f \( -iname \*.icns -o -iname \*.png -o -iname \*.pdf \) -print0 | sort -z | xargs -0 shasum -a 512
+after_failure:
+  - ./shasum.sh
+  - find "examples/Assets/." -type f \( -iname \*.icns -o -iname \*.png -o -iname \*.pdf \) -print0 | sort -z | xargs -0 shasum -a 512
 notifications:
   webhooks:
     urls:
