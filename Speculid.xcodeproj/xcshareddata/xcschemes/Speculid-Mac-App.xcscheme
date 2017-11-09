@@ -67,7 +67,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       language = ""
-      launchStyle = "1"
+      launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
@@ -89,7 +89,11 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "&quot;${SRCROOT}/__archive/examples/Assets/macOS AppIcon.speculid&quot;"
+            argument = "&quot;${SRCROOT}/examples/Assets/macOS AppIcon.speculid&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;${SRCROOT}/examples/Assets/Image Set.speculid&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument

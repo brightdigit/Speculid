@@ -25,6 +25,10 @@
       return dimensions.value/size.width;
     case kHeight:
       return dimensions.value/size.height;
+    case kScale:
+    return dimensions.value;
+    case kUnspecified:
+      return 1.0;
   }
 }
 

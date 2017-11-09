@@ -1,5 +1,6 @@
 import Foundation
 
+@available(*, deprecated: 2.0.0)
 public struct NoGeometrySpecifiedError: Error {
   public let asset: AssetSpecificationProtocol
   public let specification: SpeculidSpecificationsFileProtocol
@@ -16,19 +17,28 @@ public struct SpeculidImageSpecificationBuilder: SpeculidImageSpecificationBuild
     andAsset asset: AssetSpecificationProtocol) throws -> ImageSpecification {
     let destinationFile = try ImageFile(url: destinationURL)
 
-    let geometry: GeometryProtocol
+    let geometryObj: GeometryProtocol?
 
     if let size = asset.size {
-      geometry = try Geometry(size: size, preferWidth: true).scaling(by: asset.scale)
+      geometryObj = try Geometry(size: size, preferWidth: true).scaling(by: asset.scale)
     } else if let specificationsGeomtetry = specifications.geometry {
-      geometry = specificationsGeomtetry.scaling(by: asset.scale)
+      geometryObj = specificationsGeomtetry.scaling(by: asset.scale)
+    } else if let scale = asset.scale {
+      geometryObj = Geometry(value: .scale(scale))
     } else {
-      throw NoGeometrySpecifiedError(forAsset: asset, withSpecs: specifications)
+      geometryObj = nil
+    }
+
+    let geometry: Geometry?
+    if let geometryValue = geometryObj?.value {
+      geometry = Geometry(value: geometryValue)
+    } else {
+      geometry = nil
     }
 
     return ImageSpecification(
       file: destinationFile,
-      geometryDimension: Geometry(value: geometry.value),
+      geometryDimension: geometry,
       removeAlphaChannel: specifications.removeAlpha,
       backgroundColor: specifications.background)
   }

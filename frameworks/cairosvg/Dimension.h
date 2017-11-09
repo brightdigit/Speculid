@@ -11,7 +11,9 @@
 
 typedef NS_ENUM(NSUInteger, Dimension) {
   kWidth,
-  kHeight
+  kHeight,
+  kScale,
+  kUnspecified
 };
 
 #endif /* Dimension_h */
