@@ -142,18 +142,7 @@ open class Application: NSApplication, ApplicationProtocol {
 
   public static let bundle = Bundle(for: Application.self)
 
-  public static let vcs = VersionControlInfo(type: VCS_TYPE,
-                                             baseName: VCS_BASENAME,
-                                             uuid: Hash(string: VCS_UUID!),
-                                             number: VCS_NUM,
-                                             date: VCS_DATE,
-                                             branch: VCS_BRANCH,
-                                             tag: VCS_TAG,
-                                             tick: VCS_TICK,
-                                             extra: VCS_EXTRA,
-                                             hash: Hash(string: VCS_FULL_HASH)!,
-
-                                             isWorkingCopyModified: VCS_WC_MODIFIED)
+  public static let vcs = VersionControlInfo(jsonResource: "autorevision", fromBundle: Application.bundle)
 
   public static let sbd =
     Stage.dictionary(fromPlistAtURL: Application.bundle.url(forResource: "versions", withExtension: "plist")!)!
