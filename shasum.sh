@@ -1,6 +1,6 @@
 #!/bin/bash
 
-speculid_path=${1:-./build/Build/Products/Release/Speculid.app/Contents/MacOS/Speculid}
+speculid_path=${1:-./Build/Products/App/Speculid.app/Contents/MacOS/Speculid}
 assets_dir=${2:-examples/Assets/.}
 
 find $assets_dir -name "*.speculid" -print0 |
