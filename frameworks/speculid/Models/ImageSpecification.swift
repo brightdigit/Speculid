@@ -44,7 +44,7 @@ import CairoSVG
 
   public var geometry: CairoSVG.GeometryDimension {
     guard let geometryDimension = self.geometryDimension else {
-      return CairoSVG.GeometryDimensionUnspecified
+      return CairoSVG.GeometryDimension(value: 0, dimension: .unspecified)
     }
     switch geometryDimension.value {
     case let .height(value): return CairoSVG.GeometryDimension(value: value, dimension: .height)

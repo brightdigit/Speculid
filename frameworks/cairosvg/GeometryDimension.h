@@ -16,8 +16,4 @@ typedef struct GeometryDimension {
   Dimension dimension;
 } GeometryDimension;
 
-extern const struct GeometryDimension GeometryDimensionUnspecified = {
-  .value = 0,
-  .dimension = kUnspecified
-};
 #endif /* GeometryDimension_h */
