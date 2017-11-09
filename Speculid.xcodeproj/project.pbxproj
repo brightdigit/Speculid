@@ -420,6 +420,7 @@
 		B3D32A071F9A73740042B46F /* AsyncBlockOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperation.swift; sourceTree = "<group>"; };
 		B3E9A9001FB4DCCA00FD8E7A /* autorevision.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = autorevision.json; sourceTree = "<group>"; };
 		B3E9A9021FB4DDE400FD8E7A /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		B3E9A9041FB4E0B200FD8E7A /* bin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bin; sourceTree = "<group>"; };
 		B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilder.swift; sourceTree = "<group>"; };
 		B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionMenuItem.swift; sourceTree = "<group>"; };
@@ -753,6 +754,7 @@
 		B37C74351F8C58F300DF505B = {
 			isa = PBXGroup;
 			children = (
+				B3E9A9041FB4E0B200FD8E7A /* bin */,
 				B3B049CB1FA27D96002906B1 /* certs */,
 				B32D69EA1F9EC5CA00C21C8C /* Speculid.entitlements */,
 				B3033B181F9AED7600787279 /* configuration */,
@@ -1407,7 +1409,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "touch \"${SRCROOT}/.version\"\nstart=1\nversion_file=`< \"${SRCROOT}/.version\"`\nversion=${version_file:-${start}}\nexport VCS_EXTRA=${version}\nmkdir -p tmp\necho \"Set Extra Version Number to ${VCS_EXTRA}\"\n\"${SRCROOT}/bin/autorevision.sh\" -t json >${SRCROOT}/frameworks/speculid/autorevision.json\n\"${SRCROOT}/bin/autorevision.sh\" -t sh >${SRCROOT}/tmp/autorevision.sh\necho `expr ${VCS_EXTRA} + 1` >\"${SRCROOT}/.version\"";
+			shellScript = "touch \"${SRCROOT}/.version\"\nstart=1\nversion_file=`< \"${SRCROOT}/.version\"`\nversion=${version_file:-${start}}\nexport VCS_EXTRA=${version}\nmkdir -p tmp\necho \"Set Extra Version Number to ${VCS_EXTRA}\"\n\"${SRCROOT}/bin/autorevision.sh\" -t json >${SRCROOT}/frameworks/speculid/autorevision.json\necho `expr ${VCS_EXTRA} + 1` >\"${SRCROOT}/.version\"";
 		};
 		B318906B1F919FA300D0EFA0 /* swiftformat */ = {
 			isa = PBXShellScriptBuildPhase;
