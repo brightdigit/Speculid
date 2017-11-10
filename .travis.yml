@@ -36,7 +36,8 @@ deploy:
   file: "build/Speculid.zip"
   skip_cleanup: true
   on:
-    tags: true
+    tags: false
+    all_branches: true
 after_failure:
 - "./shasum.sh"
 - find "examples/Assets/." -type f \( -iname \*.icns -o -iname \*.png -o -iname \*.pdf
