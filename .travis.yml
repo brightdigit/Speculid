@@ -29,18 +29,18 @@ before_deploy:
 - export GIT_TAG=v`./bin/package.sh ./build/Products/App/Speculid.app`.$TRAVIS_BUILD_NUMBER-dev
 - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
 - git push -q https://$TAGPERM@github.com/brightdigit/speculid --tags
+deploy:
+  provider: releases
+  api_key:
+    secure: kB1IJxdHO6n3vTU6qR4klgASWhMzZmiiKYuKppgjZ5zq/dwTma8Ls3PabZcCoo8Bb+tZVXrohLweKwqP+IjH+oydV+9qt4oh2Q6po6gS+Qj3bTMQ+KrZYc699p32JVASQsRgLkYSUQHFT1wR4R5tlGw3A+tevJFlG56tC2WV1Sw=
+  file: "build/Speculid.zip"
+  skip_cleanup: true
+  on:
+    tags: true
 after_failure:
 - "./shasum.sh"
 - find "examples/Assets/." -type f \( -iname \*.icns -o -iname \*.png -o -iname \*.pdf
   \) -print0 | sort -z | xargs -0 shasum -a 512
-deploy:
-  skip_cleanup: true
-  provider: releases
-  api_key:
-    secure: kB1IJxdHO6n3vTU6qR4klgASWhMzZmiiKYuKppgjZ5zq/dwTma8Ls3PabZcCoo8Bb+tZVXrohLweKwqP+IjH+oydV+9qt4oh2Q6po6gS+Qj3bTMQ+KrZYc699p32JVASQsRgLkYSUQHFT1wR4R5tlGw3A+tevJFlG56tC2WV1Sw=
-  file: build/Speculid.zip
-  on:
-    tags: true
 notifications:
   webhooks:
     urls:
