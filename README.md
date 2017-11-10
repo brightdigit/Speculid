@@ -50,6 +50,11 @@ Part of the process of building an app for **watchOS**, **iOS**, or **macOS** is
 
 ## Installation
 
+***
+**v2.0 ALPHA, BETA, OR DEVELOPMENT RELEASES** you can download the latest version from the [release page](../../releases).
+Do not install using `brew`.
+***
+
 Speculid can be installed via `Homebrew <http://brew.sh/>`:
 
     $ brew tap brightdigit/speculid
@@ -63,6 +68,11 @@ Speculid can be installed via `Homebrew <http://brew.sh/>`:
 * Command-Line Capabilities for Creating Build Phase Scripts
     
 ## Usage
+
+***
+**v2.0 ALPHA, BETA, OR DEVELOPMENT RELEASES** you will need to create a symbolic link manually or call the app using `.../Speculid.app/Contents/MacOS/Speculid`.
+Feel free to upvote issue #34.
+***
 
 ```bash
 $ speculid <file>
