@@ -1,4 +1,7 @@
 language: objective-c
+env:
+global:
+secure: hVl7EFbdJhUsIzMXOZ0BESzmcMwro5fSHoFD33xCoWF+4Ov5TtiW5iy02Z4096fbgziD5SBdNG/4y87Z0kqRPPJgcGOObfwE3VWkIYj6dIHaXXnGlmieTEMRkq4a4GOjXJFpJODkKPmMSL1NLqdxUYFmn3rvCyBEQjiRQzygTj4=
 branches:
   except:
   - develop
@@ -28,7 +31,7 @@ before_deploy:
 - git config --global user.name "Travis CI"
 - export GIT_TAG=v`./bin/package.sh ./build/Products/App/Speculid.app`.$TRAVIS_BUILD_NUMBER-dev
 - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-- git push -q https://$TAGPERM@github.com/brightdigit/speculid --tags
+- git push -q https://${TRAVIS_SECURE_TOKEN_NAME}@github.com/brightdigit/speculid --tags
 deploy:
   provider: releases
   api_key:
