@@ -1,7 +1,7 @@
 language: objective-c
 env:
-global:
-secure: hVl7EFbdJhUsIzMXOZ0BESzmcMwro5fSHoFD33xCoWF+4Ov5TtiW5iy02Z4096fbgziD5SBdNG/4y87Z0kqRPPJgcGOObfwE3VWkIYj6dIHaXXnGlmieTEMRkq4a4GOjXJFpJODkKPmMSL1NLqdxUYFmn3rvCyBEQjiRQzygTj4=
+  global:
+  - secure: hVl7EFbdJhUsIzMXOZ0BESzmcMwro5fSHoFD33xCoWF+4Ov5TtiW5iy02Z4096fbgziD5SBdNG/4y87Z0kqRPPJgcGOObfwE3VWkIYj6dIHaXXnGlmieTEMRkq4a4GOjXJFpJODkKPmMSL1NLqdxUYFmn3rvCyBEQjiRQzygTj4=
 branches:
   except:
   - develop
