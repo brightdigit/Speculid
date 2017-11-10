@@ -90,9 +90,9 @@
 		B3136E831F90FD2E0002B7AB /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; };
 		B3136E901F90FD3D0002B7AB /* CairoSVGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E8F1F90FD3D0002B7AB /* CairoSVGTests.swift */; };
 		B3136E921F90FD3D0002B7AB /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
-		B3136E9F1F9101A70002B7AB /* VCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E9D1F91019F0002B7AB /* VCS.swift */; };
 		B3136EA31F910BC90002B7AB /* svg-appicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3136EA11F910BC90002B7AB /* svg-appicon.speculid */; };
 		B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */; };
+		B317B0D11FA560EE00BB5E57 /* QuitMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317B0D01FA560EE00BB5E57 /* QuitMenuItem.swift */; };
 		B318906A1F918F0300D0EFA0 /* GeometryValue.Multiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */; };
 		B318906E1F91A06C00D0EFA0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */; };
 		B31BEAFA1F96268700496E7A /* RegularExpressionSetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */; };
@@ -118,6 +118,7 @@
 		B35B71271F904CF100BE477E /* SurfaceHandleBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = B35B71251F904CF100BE477E /* SurfaceHandleBuilder.h */; };
 		B35B71281F904CF100BE477E /* SurfaceHandleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B35B71261F904CF100BE477E /* SurfaceHandleBuilder.m */; };
 		B35B712A1F9052B200BE477E /* CairoSize.h in Headers */ = {isa = PBXBuildFile; fileRef = B35B71291F9052B200BE477E /* CairoSize.h */; };
+		B36C2E8B1FA5B876003F48BD /* build.list in Resources */ = {isa = PBXBuildFile; fileRef = B36C2E8A1FA5B876003F48BD /* build.list */; };
 		B37C74441F8C58F300DF505B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B37C74431F8C58F300DF505B /* Assets.xcassets */; };
 		B37C745E1F8C590D00DF505B /* Speculid-Mac-XPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = B37C74531F8C590D00DF505B /* Speculid-Mac-XPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B37C74641F8C592400DF505B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C74631F8C592400DF505B /* main.swift */; };
@@ -154,12 +155,16 @@
 		B3B5E9E81F96C74C004A6BEB /* CommandLineRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */; };
 		B3B5E9EA1F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */; };
 		B3B5E9EC1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */; };
+		B3D2F6AD1FB3EB7F00BF7AC1 /* shasum.sh in Resources */ = {isa = PBXBuildFile; fileRef = B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */; };
 		B3D32A021F9A5D760042B46F /* help.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3D32A011F9A5D750042B46F /* help.txt */; };
 		B3D32A041F9A5E8F0042B46F /* CommandLineRunnerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */; };
 		B3D32A061F9A5FEE0042B46F /* FileHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A051F9A5FEE0042B46F /* FileHandle.swift */; };
 		B3D32A081F9A73740042B46F /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A071F9A73740042B46F /* AsyncBlockOperation.swift */; };
+		B3E9A9011FB4DCCA00FD8E7A /* autorevision.json in Resources */ = {isa = PBXBuildFile; fileRef = B3E9A9001FB4DCCA00FD8E7A /* autorevision.json */; };
+		B3E9A9031FB4DDE400FD8E7A /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E9A9021FB4DDE400FD8E7A /* Version.swift */; };
 		B3F0ECF01F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */; };
 		B3F0ECF21F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */; };
+		B3FAD3EB1FA564D0004381A7 /* VersionMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */; };
 		CBE9EF18228D2DADFC9D264F /* Pods_Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */; };
 /* End PBXBuildFile section */
 
@@ -334,10 +339,10 @@
 		B3136E911F90FD3D0002B7AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3136E9A1F90FFB10002B7AB /* CairoSVG.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CairoSVG.release.xcconfig; sourceTree = "<group>"; };
 		B3136E9B1F90FFB10002B7AB /* CairoSVG.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CairoSVG.debug.xcconfig; sourceTree = "<group>"; };
-		B3136E9D1F91019F0002B7AB /* VCS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCS.swift; sourceTree = "<group>"; };
 		B3136EA11F910BC90002B7AB /* svg-appicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-appicon.speculid"; sourceTree = "<group>"; };
 		B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svg-trayicon.speculid"; sourceTree = "<group>"; };
 		B3136EB31F9224290002B7AB /* CairoSVG.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CairoSVG.xcconfig; sourceTree = "<group>"; };
+		B317B0D01FA560EE00BB5E57 /* QuitMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitMenuItem.swift; sourceTree = "<group>"; };
 		B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryValue.Multiply.swift; sourceTree = "<group>"; };
 		B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetBuilder.swift; sourceTree = "<group>"; };
@@ -366,6 +371,7 @@
 		B35B71251F904CF100BE477E /* SurfaceHandleBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurfaceHandleBuilder.h; sourceTree = "<group>"; };
 		B35B71261F904CF100BE477E /* SurfaceHandleBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurfaceHandleBuilder.m; sourceTree = "<group>"; };
 		B35B71291F9052B200BE477E /* CairoSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CairoSize.h; sourceTree = "<group>"; };
+		B36C2E8A1FA5B876003F48BD /* build.list */ = {isa = PBXFileReference; lastKnownFileType = text; path = build.list; sourceTree = "<group>"; };
 		B37C743E1F8C58F300DF505B /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37C74431F8C58F300DF505B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B37C74481F8C58F300DF505B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -407,12 +413,17 @@
 		B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRunner.swift; sourceTree = "<group>"; };
 		B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParserProtocol.swift; sourceTree = "<group>"; };
 		B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParser.swift; sourceTree = "<group>"; };
+		B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = shasum.sh; sourceTree = "<group>"; };
 		B3D32A011F9A5D750042B46F /* help.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = help.txt; sourceTree = "<group>"; };
 		B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRunnerTest.swift; sourceTree = "<group>"; };
 		B3D32A051F9A5FEE0042B46F /* FileHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandle.swift; sourceTree = "<group>"; };
 		B3D32A071F9A73740042B46F /* AsyncBlockOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperation.swift; sourceTree = "<group>"; };
+		B3E9A9001FB4DCCA00FD8E7A /* autorevision.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = autorevision.json; sourceTree = "<group>"; };
+		B3E9A9021FB4DDE400FD8E7A /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		B3E9A9041FB4E0B200FD8E7A /* bin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bin; sourceTree = "<group>"; };
 		B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilder.swift; sourceTree = "<group>"; };
+		B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionMenuItem.swift; sourceTree = "<group>"; };
 		C743CA092B2436D579EB1965 /* Pods-Speculid-Mac-XPC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-XPC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-XPC/Pods-Speculid-Mac-XPC.debug.xcconfig"; sourceTree = "<group>"; };
 		C7A962F08D51F2247E1ADBEF /* Pods-SpeculidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeculidTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests.release.xcconfig"; sourceTree = "<group>"; };
 		DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -511,6 +522,7 @@
 		B3033B181F9AED7600787279 /* configuration */ = {
 			isa = PBXGroup;
 			children = (
+				B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */,
 				B3B049C81FA262A8002906B1 /* exportOptions.plist */,
 				B3033B1A1F9AEE9A00787279 /* .gitignore */,
 				B3033B191F9AEE9900787279 /* .travis.yml */,
@@ -550,6 +562,7 @@
 		B3136DB81F90E27B0002B7AB /* speculid */ = {
 			isa = PBXGroup;
 			children = (
+				B3E9A9001FB4DCCA00FD8E7A /* autorevision.json */,
 				B3D329FE1F9A5D290042B46F /* Resources */,
 				B3136DE41F90F73A0002B7AB /* Controllers */,
 				B3136E1D1F90F73B0002B7AB /* Errors */,
@@ -559,6 +572,7 @@
 				B3136E1C1F90F73B0002B7AB /* versions.plist */,
 				B3136DC01F90E27B0002B7AB /* Info.plist */,
 				B3136DBC1F90E27B0002B7AB /* Speculid_Mac_Framework.h */,
+				B36C2E8A1FA5B876003F48BD /* build.list */,
 			);
 			path = speculid;
 			sourceTree = "<group>";
@@ -585,6 +599,8 @@
 				B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */,
 				B33F0BBA1F9586A9004A87DD /* StatusItemProvider.swift */,
 				B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */,
+				B317B0D01FA560EE00BB5E57 /* QuitMenuItem.swift */,
+				B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -597,6 +613,7 @@
 				B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */,
 				B3136DF61F90F73A0002B7AB /* NSColor.swift */,
 				B3136DF71F90F73A0002B7AB /* String.swift */,
+				B3E9A9021FB4DDE400FD8E7A /* Version.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -624,7 +641,6 @@
 				B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */,
 				B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */,
 				B3136DFC1F90F73A0002B7AB /* SpeculidSpecificationsFile.swift */,
-				B3136E9D1F91019F0002B7AB /* VCS.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -738,6 +754,7 @@
 		B37C74351F8C58F300DF505B = {
 			isa = PBXGroup;
 			children = (
+				B3E9A9041FB4E0B200FD8E7A /* bin */,
 				B3B049CB1FA27D96002906B1 /* certs */,
 				B32D69EA1F9EC5CA00C21C8C /* Speculid.entitlements */,
 				B3033B181F9AED7600787279 /* configuration */,
@@ -958,7 +975,7 @@
 				B37C747F1F8C5ADA00DF505B /* Embed Frameworks */,
 				F11FED44F4FDA27EB1AD0F15 /* [CP] Embed Pods Frameworks */,
 				1673FC657E1C66B998A0E6E4 /* [CP] Copy Pods Resources */,
-				B32D69ED1F9ED4A600C21C8C /* Install Dynamic Libraries */,
+				B32D69ED1F9ED4A600C21C8C /* Codesign Dynamic Libraries */,
 			);
 			buildRules = (
 			);
@@ -1026,7 +1043,7 @@
 				B37C74861F8C5B5C00DF505B /* Headers */,
 				B37C74871F8C5B5C00DF505B /* Resources */,
 				05D00CC967D09B6349F704A6 /* [CP] Copy Pods Resources */,
-				B32D69EE1F9FE7AE00C21C8C /* ShellScript */,
+				B32D69EE1F9FE7AE00C21C8C /* Install Dynamic Libraries */,
 			);
 			buildRules = (
 			);
@@ -1143,6 +1160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3033B1B1F9AEE9A00787279 /* .travis.yml in Resources */,
+				B3D2F6AD1FB3EB7F00BF7AC1 /* shasum.sh in Resources */,
 				B3033B1C1F9AEE9A00787279 /* .gitignore in Resources */,
 				B318906E1F91A06C00D0EFA0 /* .swiftlint.yml in Resources */,
 				B3B049C91FA262A8002906B1 /* exportOptions.plist in Resources */,
@@ -1165,7 +1183,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3136E561F90F73B0002B7AB /* versions.plist in Resources */,
+				B3E9A9011FB4DCCA00FD8E7A /* autorevision.json in Resources */,
 				B3D32A021F9A5D760042B46F /* help.txt in Resources */,
+				B36C2E8B1FA5B876003F48BD /* build.list in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1389,7 +1409,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if git rev-parse --git-dir > /dev/null 2>&1; then\ntouch ${SRCROOT}/.version\nstart=1\nversion_file=`< ${SRCROOT}/.version`\nversion=${version_file:-${start}}\nexport VCS_EXTRA=$version\necho \"Incrementing Version Number\"\n\"${SRCROOT}/autorevision.sh\" -t swift > \"${SRCROOT}/frameworks/speculid/Models/VCS.swift\"\necho `expr ${VCS_EXTRA} + 1` >${SRCROOT}/.version\nfi";
+			shellScript = "touch \"${SRCROOT}/.version\"\nstart=1\nversion_file=`< \"${SRCROOT}/.version\"`\nversion=${version_file:-${start}}\nexport VCS_EXTRA=${version}\nmkdir -p tmp\necho \"Set Extra Version Number to ${VCS_EXTRA}\"\n\"${SRCROOT}/bin/autorevision.sh\" -t json >${SRCROOT}/frameworks/speculid/autorevision.json\necho `expr ${VCS_EXTRA} + 1` >\"${SRCROOT}/.version\"";
 		};
 		B318906B1F919FA300D0EFA0 /* swiftformat */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1419,7 +1439,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
-		B32D69ED1F9ED4A600C21C8C /* Install Dynamic Libraries */ = {
+		B32D69ED1F9ED4A600C21C8C /* Codesign Dynamic Libraries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Codesign Dynamic Libraries";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/codesign-framework.sh\"";
+		};
+		B32D69EE1F9FE7AE00C21C8C /* Install Dynamic Libraries */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1431,20 +1465,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n\n\"$SRCROOT/codesign-framework.sh\"\n#export DYLIB=libcairo.2.dylib\n\n#mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#cp -f \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n#install_name_tool -change \"/usr/local/Cellar/cairo/1.14.10/lib/$DYLIB\" \"@loader_path/../Frameworks/$DYLIB\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
-		};
-		B32D69EE1F9FE7AE00C21C8C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "DYLIBS=`otool -L \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\" | grep \"/opt\" | awk -F' ' '{ print $1 }'`\nfor dylib in $DYLIBS; do install -m 755 $dylib \"$TARGET_BUILD_DIR\"; done;\nfor dylib in $DYLIBS; do install_name_tool -change $dylib @executable_path/`basename $dylib` \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"; done;";
+			shellScript = "DYLIBS=`otool -L \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\" | grep \"/opt\" | awk -F' ' '{ print $1 }'`\nmkdir -p \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"\nfor dylib in $DYLIBS; do install -m 755 $dylib \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"; done;\nfor dylib in $DYLIBS; do install_name_tool -change $dylib @rpath/`basename $dylib` \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"; done;\n\"$SRCROOT/codesign-framework.sh\"";
 		};
 		B37C74B71F8C5CB500DF505B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1673,8 +1694,8 @@
 				B33F0BB91F958695004A87DD /* RemoteObjectInterfaceProvider.swift in Sources */,
 				B33F0BB61F958640004A87DD /* StatusItemProviderProtocol.swift in Sources */,
 				B3136E4E1F90F73B0002B7AB /* AssetSpecificationProtocol.swift in Sources */,
-				B3136E9F1F9101A70002B7AB /* VCS.swift in Sources */,
 				B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */,
+				B317B0D11FA560EE00BB5E57 /* QuitMenuItem.swift in Sources */,
 				B3136E421F90F73B0002B7AB /* ImageIdiom.swift in Sources */,
 				B3D32A081F9A73740042B46F /* AsyncBlockOperation.swift in Sources */,
 				B3136E371F90F73B0002B7AB /* SpeculidSpecificationsFile.swift in Sources */,
@@ -1696,10 +1717,12 @@
 				B3F0ECF01F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift in Sources */,
 				B3136DD11F90E45F0002B7AB /* ImageFile.swift in Sources */,
 				B33F0BB71F958640004A87DD /* RemoteObjectInterfaceProviderProtocol.swift in Sources */,
+				B3FAD3EB1FA564D0004381A7 /* VersionMenuItem.swift in Sources */,
 				B3D32A061F9A5FEE0042B46F /* FileHandle.swift in Sources */,
 				B3136DD51F90E45F0002B7AB /* ServiceProtocol.swift in Sources */,
 				B3136E4C1F90F73B0002B7AB /* AnalyticsEventProtocol.swift in Sources */,
 				B31BEB001F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift in Sources */,
+				B3E9A9031FB4DDE400FD8E7A /* Version.swift in Sources */,
 				B3136E531F90F73B0002B7AB /* SpeculidBuilderProtocol.swift in Sources */,
 				B3136E4B1F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift in Sources */,
 				B3136E4A1F90F73B0002B7AB /* SpeculidDocumentProtocol.swift in Sources */,
@@ -1936,7 +1959,7 @@
 				CURRENT_PROJECT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFAULT_BUNDLE_VERSION = 2;
-				DEFAULT_VERSION_SEMVER = 2.0.0;
+				DEFAULT_SEMVER_VERSION = 2.0.0;
 				DYLIB_COMPATIBILITY_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DYLIB_CURRENT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1998,7 +2021,7 @@
 				CURRENT_PROJECT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFAULT_BUNDLE_VERSION = 2;
-				DEFAULT_VERSION_SEMVER = 2.0.0;
+				DEFAULT_SEMVER_VERSION = 2.0.0;
 				DYLIB_COMPATIBILITY_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DYLIB_CURRENT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				ENABLE_NS_ASSERTIONS = NO;

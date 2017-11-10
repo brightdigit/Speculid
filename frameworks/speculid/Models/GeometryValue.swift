@@ -1,5 +1,8 @@
+import Foundation
+
 @available(*, deprecated: 2.0.0)
 public enum GeometryValue {
-  case width(Int)
-  case height(Int)
+  case width(CGFloat)
+  case height(CGFloat)
+  case scale(CGFloat)
 }

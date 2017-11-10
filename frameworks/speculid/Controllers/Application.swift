@@ -136,30 +136,19 @@ open class Application: NSApplication, ApplicationProtocol {
     exit(0)
   }
 
-  @available(*, deprecated: 2.0.0)
-  private class _VersionHandler {
+  public func quit(_ sender: Any?) {
+    terminate(sender)
   }
 
-  public static let bundle = Bundle(for: _VersionHandler.self)
+  public static let bundle = Bundle(for: Application.self)
 
-  public static let vcs = VersionControlInfo(type: VCS_TYPE,
-                                             baseName: VCS_BASENAME,
-                                             uuid: Hash(string: VCS_UUID!),
-                                             number: VCS_NUM,
-                                             date: VCS_DATE,
-                                             branch: VCS_BRANCH,
-                                             tag: VCS_TAG,
-                                             tick: VCS_TICK,
-                                             extra: VCS_EXTRA,
-                                             hash: Hash(string: VCS_FULL_HASH)!,
-
-                                             isWorkingCopyModified: VCS_WC_MODIFIED)
+  public static let vcs = VersionControlInfo(jsonResource: "autorevision", fromBundle: Application.bundle)
 
   public static let sbd =
     Stage.dictionary(fromPlistAtURL: Application.bundle.url(forResource: "versions", withExtension: "plist")!)!
   // StageBuildDictionaryProtocol! = nil
 
-  public static let version = Version(
+  public let version = Version(
     bundle: bundle,
     dictionary: sbd,
     versionControl: vcs)!
