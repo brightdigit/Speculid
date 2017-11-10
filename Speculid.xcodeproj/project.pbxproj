@@ -413,6 +413,7 @@
 		B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRunner.swift; sourceTree = "<group>"; };
 		B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParserProtocol.swift; sourceTree = "<group>"; };
 		B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParser.swift; sourceTree = "<group>"; };
+		B3CEF3C41FB611D200F1DF87 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = shasum.sh; sourceTree = "<group>"; };
 		B3D32A011F9A5D750042B46F /* help.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = help.txt; sourceTree = "<group>"; };
 		B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRunnerTest.swift; sourceTree = "<group>"; };
@@ -754,6 +755,7 @@
 		B37C74351F8C58F300DF505B = {
 			isa = PBXGroup;
 			children = (
+				B3CEF3C41FB611D200F1DF87 /* README.md */,
 				B3E9A9041FB4E0B200FD8E7A /* bin */,
 				B3B049CB1FA27D96002906B1 /* certs */,
 				B32D69EA1F9EC5CA00C21C8C /* Speculid.entitlements */,
