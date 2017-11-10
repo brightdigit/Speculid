@@ -86,7 +86,7 @@ class CommandLineRunnerTest: XCTestCase {
       XCTAssertNil(error)
       XCTAssertEqual(
         outputStream.strings,
-        ["Speculid v\(Application.version.shortDescription) [\(Application.version)]"])
+        ["Speculid v\(Application.current.version.shortDescription) [\(Application.current.version)]"])
       XCTAssertEqual(errorStream.strings, [])
       expectation.fulfill()
     }

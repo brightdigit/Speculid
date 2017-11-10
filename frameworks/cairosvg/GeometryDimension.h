@@ -12,7 +12,7 @@
 #import "Dimension.h"
 
 typedef struct GeometryDimension {
-  int value;
+  CGFloat value;
   Dimension dimension;
 } GeometryDimension;
 

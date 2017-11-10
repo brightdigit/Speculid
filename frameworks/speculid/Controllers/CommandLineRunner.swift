@@ -33,7 +33,7 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
         error = UnknownArgumentsError(arguments: arguments)
         return completed()
       case .version:
-        self.outputStream.write("Speculid v\(Application.version.shortDescription) [\(Application.version)]")
+        self.outputStream.write(Application.current.version.developmentDescription)
         return completed()
       case let .file(url):
         let tryDocument: SpeculidDocumentProtocol?
