@@ -47,5 +47,4 @@ deploy:
     secure: kB1IJxdHO6n3vTU6qR4klgASWhMzZmiiKYuKppgjZ5zq/dwTma8Ls3PabZcCoo8Bb+tZVXrohLweKwqP+IjH+oydV+9qt4oh2Q6po6gS+Qj3bTMQ+KrZYc699p32JVASQsRgLkYSUQHFT1wR4R5tlGw3A+tevJFlG56tC2WV1Sw=
   file: build/Speculid.zip
   on:
-    branch: /^release\/v\d+(\.\d+)+$/
     tags: true
