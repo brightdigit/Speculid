@@ -23,7 +23,7 @@ script:
 - xcodebuild -exportArchive -archivePath ./build/Products/Speculid.xcarchive -exportOptionsPlist
   ./exportOptions.plist -exportPath ./build/Products/App
 - ditto -c -k --sequesterRsrc --keepParent ./build/Products/App/Speculid.app build/Speculid.zip
-- brew remove librsvg cairo
+- brew remove --ignore-dependencies librsvg cairo
 - open Build/Products/App/Speculid.app
 - osascript -e 'tell application "Speculid" to quit'
 - diff examples/shasum <(./shasum.sh)
