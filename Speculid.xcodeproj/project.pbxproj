@@ -27,8 +27,6 @@
 		8673F38CC6D59040A2F46D0E /* Pods_CairoSVGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E776BC2A0843F84E3CBC279B /* Pods_CairoSVGTests.framework */; };
 		8B89F9F58D273C27DCE0A008 /* Pods_Speculid_Mac_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054FC9E3CE2F6BD2F948CF5D /* Pods_Speculid_Mac_App.framework */; };
 		8CFE676AD2939E9961A20D07 /* Pods_Speculid_Mac_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BDAD4963D80A5FF54A9272 /* Pods_Speculid_Mac_AppUITests.framework */; };
-		B3033B1B1F9AEE9A00787279 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B3033B191F9AEE9900787279 /* .travis.yml */; };
-		B3033B1C1F9AEE9A00787279 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B3033B1A1F9AEE9A00787279 /* .gitignore */; };
 		B3033B1E1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3033B1D1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift */; };
 		B3033B201F9AEFE600787279 /* AssetSpecificationDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3033B1F1F9AEFE600787279 /* AssetSpecificationDocument.swift */; };
 		B3136DCD1F90E3F30002B7AB /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; };
@@ -94,7 +92,6 @@
 		B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */; };
 		B317B0D11FA560EE00BB5E57 /* QuitMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317B0D01FA560EE00BB5E57 /* QuitMenuItem.swift */; };
 		B318906A1F918F0300D0EFA0 /* GeometryValue.Multiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */; };
-		B318906E1F91A06C00D0EFA0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */; };
 		B31BEAFA1F96268700496E7A /* RegularExpressionSetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */; };
 		B31BEAFC1F96269F00496E7A /* RegularExpressionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAFB1F96269F00496E7A /* RegularExpressionSet.swift */; };
 		B31BEAFE1F9626AC00496E7A /* RegularExpressionSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */; };
@@ -144,7 +141,6 @@
 		B37C74B11F8C5C7400DF505B /* PNGSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A21F8C5C7400DF505B /* PNGSurface.h */; };
 		B37C74B21F8C5C7400DF505B /* PNGImageHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */; };
 		B37C74BC1F8C5D2A00DF505B /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
-		B3B049C91FA262A8002906B1 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3B049C81FA262A8002906B1 /* exportOptions.plist */; };
 		B3B5E9DA1F96C1C1004A6BEB /* SpeculidConfigurationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */; };
 		B3B5E9DC1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */; };
 		B3B5E9DE1F96C2A2004A6BEB /* SpeculidConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */; };
@@ -155,7 +151,6 @@
 		B3B5E9E81F96C74C004A6BEB /* CommandLineRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */; };
 		B3B5E9EA1F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */; };
 		B3B5E9EC1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */; };
-		B3D2F6AD1FB3EB7F00BF7AC1 /* shasum.sh in Resources */ = {isa = PBXBuildFile; fileRef = B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */; };
 		B3D32A021F9A5D760042B46F /* help.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3D32A011F9A5D750042B46F /* help.txt */; };
 		B3D32A041F9A5E8F0042B46F /* CommandLineRunnerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */; };
 		B3D32A061F9A5FEE0042B46F /* FileHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A051F9A5FEE0042B46F /* FileHandle.swift */; };
@@ -349,6 +344,7 @@
 		B31BEAFB1F96269F00496E7A /* RegularExpressionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSet.swift; sourceTree = "<group>"; };
 		B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetProtocol.swift; sourceTree = "<group>"; };
 		B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetBuilderProtocol.swift; sourceTree = "<group>"; };
+		B31D2AEB1FBC8F1D008087A6 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		B32D69EA1F9EC5CA00C21C8C /* Speculid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speculid.entitlements; sourceTree = "<group>"; };
 		B32D69EF1FA01AB300C21C8C /* install_dylib.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install_dylib.sh; sourceTree = "<group>"; };
 		B32D69F01FA01D3900C21C8C /* codesign-framework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "codesign-framework.sh"; sourceTree = "<group>"; };
@@ -523,6 +519,7 @@
 		B3033B181F9AED7600787279 /* configuration */ = {
 			isa = PBXGroup;
 			children = (
+				B31D2AEB1FBC8F1D008087A6 /* build.sh */,
 				B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */,
 				B3B049C81FA262A8002906B1 /* exportOptions.plist */,
 				B3033B1A1F9AEE9A00787279 /* .gitignore */,
@@ -978,6 +975,7 @@
 				F11FED44F4FDA27EB1AD0F15 /* [CP] Embed Pods Frameworks */,
 				1673FC657E1C66B998A0E6E4 /* [CP] Copy Pods Resources */,
 				B32D69ED1F9ED4A600C21C8C /* Codesign Dynamic Libraries */,
+				B31D2AF61FBC9CAA008087A6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1161,11 +1159,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3033B1B1F9AEE9A00787279 /* .travis.yml in Resources */,
-				B3D2F6AD1FB3EB7F00BF7AC1 /* shasum.sh in Resources */,
-				B3033B1C1F9AEE9A00787279 /* .gitignore in Resources */,
-				B318906E1F91A06C00D0EFA0 /* .swiftlint.yml in Resources */,
-				B3B049C91FA262A8002906B1 /* exportOptions.plist in Resources */,
 				B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */,
 				B3136DD71F90E4AC0002B7AB /* layers.svg in Resources */,
 				B37C74441F8C58F300DF505B /* Assets.xcassets in Resources */,
@@ -1441,6 +1434,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
+		B31D2AF61FBC9CAA008087A6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "brew remove cairo librsvg --ignore-dependencies";
+		};
 		B32D69ED1F9ED4A600C21C8C /* Codesign Dynamic Libraries */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1480,7 +1486,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "OTHER_CFLAGS=\"$(pkg-config cairo librsvg-2.0  --cflags)\"\nOTHER_LDFLAGS=\"$(pkg-config cairo librsvg-2.0  --libs)\"\nHEADER_SEARCH_PATHS=\"$(pkg-config --cflags-only-I cairo librsvg-2.0 | tr -d '\\-I')\"\necho -e \"OTHER_CFLAGS = \\$(inherited) ${OTHER_CFLAGS}\" > CairoSVG.xcconfig\necho -e \"OTHER_LDFLAGS = \\$(inherited) ${OTHER_LDFLAGS}\" >> CairoSVG.xcconfig\necho -e \"HEADER_SEARCH_PATHS = \\$(inherited) ${HEADER_SEARCH_PATHS}\" >> CairoSVG.xcconfig";
+			shellScript = "brew list librsvg cairo &>/dev/null || brew install librsvg cairo\nOTHER_CFLAGS=\"$(pkg-config cairo librsvg-2.0  --cflags)\"\nOTHER_LDFLAGS=\"$(pkg-config cairo librsvg-2.0  --libs)\"\nHEADER_SEARCH_PATHS=\"$(pkg-config --cflags-only-I cairo librsvg-2.0 | tr -d '\\-I')\"\necho -e \"OTHER_CFLAGS = \\$(inherited) ${OTHER_CFLAGS}\" > CairoSVG.xcconfig\necho -e \"OTHER_LDFLAGS = \\$(inherited) ${OTHER_LDFLAGS}\" >> CairoSVG.xcconfig\necho -e \"HEADER_SEARCH_PATHS = \\$(inherited) ${HEADER_SEARCH_PATHS}\" >> CairoSVG.xcconfig";
 		};
 		B3B5E9D61F96AB1B004A6BEB /* warnings */ = {
 			isa = PBXShellScriptBuildPhase;

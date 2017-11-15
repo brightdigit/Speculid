@@ -146,7 +146,6 @@ open class Application: NSApplication, ApplicationProtocol {
 
   public static let sbd =
     Stage.dictionary(fromPlistAtURL: Application.bundle.url(forResource: "versions", withExtension: "plist")!)!
-  // StageBuildDictionaryProtocol! = nil
 
   public let version = Version(
     bundle: bundle,
