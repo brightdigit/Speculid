@@ -7,12 +7,12 @@
 #  Copyright © 2017 Bright Digit, LLC. All rights reserved.
 for (( c=1; c<=10; c++ ))
 do
-echo "Iteration: $c"
+  echo "Iteration: $c"
+  DEPCOUNT=0
   DYLIBS=`ls "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH"`
   for dylib in $DYLIBS; do
     DEPS=`otool -L "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/$dylib" | grep "/opt" | awk -F' ' '{ print $1 }'`
 
-    echo "Dep Count: ${#DEPS[@]}"
     for dependency in $DEPS; do
     echo "Installing $dependency"
     install -m 755 $dependency "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH"
@@ -22,8 +22,11 @@ echo "Iteration: $c"
       echo "Fixing $dependency"
       install_name_tool -id @rpath/`basename $dependency` "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/$dylib"
       install_name_tool -change $dependency @rpath/`basename $dependency` "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/$dylib"
+      DEPCOUNT=$((DEPCOUNT+1))
     done
   done
+  echo "Dependency Count: $DEPCOUNT"
+if [ $DEPCOUNT -eq 0 ]; then exit; fi
 done
 
 
