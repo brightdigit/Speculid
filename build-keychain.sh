@@ -13,7 +13,7 @@ security default-keychain -s macos-build.keychain
 security unlock-keychain -p $CUSTOM_KEYCHAIN_PASSWORD macos-build.keychain
 # Set keychain timeout to 1 hour for long builds
 # see here
-security set-keychain-settings -t 3600 -l ~/Library/Keychains/macos-build.keychain
+security set-keychain-settings -lut 7200 macos-build.keychain
 
 security import ./certs/AppleWWDRCA.cer -k macos-build.keychain -A
 security import ./tmp/certs/mac_app-cert.cer -k macos-build.keychain -A
