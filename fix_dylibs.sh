@@ -26,7 +26,7 @@ do
     done
   done
   echo "Dependency Count: $DEPCOUNT"
-if [ $DEPCOUNT -eq 0 ]; then exit; fi
+  if [ $DEPCOUNT -eq 0 ]; then exit; fi
 done
 
 
