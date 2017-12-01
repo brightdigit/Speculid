@@ -977,7 +977,6 @@
 				F11FED44F4FDA27EB1AD0F15 /* [CP] Embed Pods Frameworks */,
 				1673FC657E1C66B998A0E6E4 /* [CP] Copy Pods Resources */,
 				B32D69ED1F9ED4A600C21C8C /* Codesign Dynamic Libraries */,
-				B31D2AF61FBC9CAA008087A6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1110,7 +1109,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "Speculid" */;
+			buildConfigurationList = B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "speculid" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1435,19 +1434,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
-		};
-		B31D2AF61FBC9CAA008087A6 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "brew remove cairo librsvg --ignore-dependencies";
 		};
 		B32D69ED1F9ED4A600C21C8C /* Codesign Dynamic Libraries */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2284,7 +2270,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "Speculid" */ = {
+		B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "speculid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B37C744A1F8C58F300DF505B /* Debug */,
