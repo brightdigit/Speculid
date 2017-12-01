@@ -6,20 +6,6 @@
 	objectVersion = 48;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		B37C74B31F8C5CB000DF505B /* CairoSVG-Flags */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = B37C74B41F8C5CB000DF505B /* Build configuration list for PBXAggregateTarget "CairoSVG-Flags" */;
-			buildPhases = (
-				B37C74B71F8C5CB500DF505B /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "CairoSVG-Flags";
-			productName = "CairoSVG-Flags";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		205A5AF735ED0AFE6D8E3753 /* Pods_CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8599C40CCA72FBF9FA1098 /* Pods_CairoSVG.framework */; };
 		63B850290A8C8F568F554912 /* Pods_SpeculidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E00CC4EE1B4A785089460 /* Pods_SpeculidTests.framework */; };
@@ -205,13 +191,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = B37C74881F8C5B5C00DF505B;
 			remoteInfo = "CairoSVG-Mac-Framework";
-		};
-		B37C74B81F8C5CC400DF505B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B37C74361F8C58F300DF505B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B37C74B31F8C5CB000DF505B;
-			remoteInfo = "CairoSVG-Flags";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1049,7 +1028,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				B37C74B91F8C5CC400DF505B /* PBXTargetDependency */,
 			);
 			name = CairoSVG;
 			productName = "CairoSVG-Mac-Framework";
@@ -1103,13 +1081,9 @@
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
-					B37C74B31F8C5CB000DF505B = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
-			buildConfigurationList = B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "speculid" */;
+			buildConfigurationList = B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "Speculid" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1126,7 +1100,6 @@
 				B37C74521F8C590D00DF505B /* Speculid-Mac-XPC */,
 				B37C74721F8C5ADA00DF505B /* Speculid */,
 				B37C74881F8C5B5C00DF505B /* CairoSVG */,
-				B37C74B31F8C5CB000DF505B /* CairoSVG-Flags */,
 				B3136E5F1F90FCCF0002B7AB /* Speculid-Mac-AppUITests */,
 				B3136E7D1F90FD2E0002B7AB /* SpeculidTests */,
 				B3136E8C1F90FD3D0002B7AB /* CairoSVGTests */,
@@ -1463,19 +1436,6 @@
 			shellPath = /bin/sh;
 			shellScript = "DYLIBS=`otool -L \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\" | grep \"/opt\" | awk -F' ' '{ print $1 }'`\nmkdir -p \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"\n\nfor dylib in $DYLIBS; do install -m 755 $dylib \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"; done;\nfor dylib in $DYLIBS; do install_name_tool -change $dylib @rpath/`basename $dylib` \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"; done;\nls \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"\n\"$SRCROOT/fix_dylibs.sh\"\n\"$SRCROOT/codesign-framework.sh\"";
 		};
-		B37C74B71F8C5CB500DF505B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "OTHER_CFLAGS=\"$(pkg-config cairo librsvg-2.0  --cflags)\"\nOTHER_LDFLAGS=\"$(pkg-config cairo librsvg-2.0  --libs)\"\nHEADER_SEARCH_PATHS=\"$(pkg-config --cflags-only-I cairo librsvg-2.0 | tr -d '\\-I')\"\necho -e \"OTHER_CFLAGS = \\$(inherited) ${OTHER_CFLAGS}\" > CairoSVG.xcconfig\necho -e \"OTHER_LDFLAGS = \\$(inherited) ${OTHER_LDFLAGS}\" >> CairoSVG.xcconfig\necho -e \"HEADER_SEARCH_PATHS = \\$(inherited) ${HEADER_SEARCH_PATHS}\" >> CairoSVG.xcconfig";
-		};
 		B3B5E9D61F96AB1B004A6BEB /* warnings */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1802,11 +1762,6 @@
 			isa = PBXTargetDependency;
 			target = B37C74881F8C5B5C00DF505B /* CairoSVG */;
 			targetProxy = B37C748E1F8C5B5C00DF505B /* PBXContainerItemProxy */;
-		};
-		B37C74B91F8C5CC400DF505B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B37C74B31F8C5CB000DF505B /* CairoSVG-Flags */;
-			targetProxy = B37C74B81F8C5CC400DF505B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2222,24 +2177,6 @@
 			};
 			name = Release;
 		};
-		B37C74B51F8C5CB000DF505B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MLT7M394S7;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		B37C74B61F8C5CB000DF505B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MLT7M394S7;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2270,7 +2207,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "speculid" */ = {
+		B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "Speculid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B37C744A1F8C58F300DF505B /* Debug */,
@@ -2311,15 +2248,6 @@
 			buildConfigurations = (
 				B37C74931F8C5B5C00DF505B /* Debug */,
 				B37C74941F8C5B5C00DF505B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B37C74B41F8C5CB000DF505B /* Build configuration list for PBXAggregateTarget "CairoSVG-Flags" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B37C74B51F8C5CB000DF505B /* Debug */,
-				B37C74B61F8C5CB000DF505B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
