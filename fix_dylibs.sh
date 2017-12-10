@@ -5,13 +5,15 @@
 #
 #  Created by Leo Dion on 11/27/17.
 #  Copyright © 2017 Bright Digit, LLC. All rights reserved.
+
 for (( c=1; c<=10; c++ ))
 do
   echo "Iteration: $c"
   DEPCOUNT=0
   DYLIBS=`ls "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH"`
   for dylib in $DYLIBS; do
-    DEPS=`otool -L "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/$dylib" | grep "/opt" | awk -F' ' '{ print $1 }'`
+otool -L "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/$dylib"
+    DEPS=`otool -L "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/$dylib" | grep "/opt\|Cellar" | awk -F' ' '{ print $1 }'`
 
     for dependency in $DEPS; do
     echo "Installing $dependency"
