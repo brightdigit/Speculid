@@ -8,5 +8,5 @@ public protocol ApplicationProtocol {
   var regularExpressions: RegularExpressionSetProtocol! { get }
   var tracker: AnalyticsTrackerProtocol! { get }
   func quit(_ sender: Any?)
-  var version: Version { get }
+  var version: Version? { get }
 }

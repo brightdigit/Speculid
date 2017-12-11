@@ -33,7 +33,11 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
         error = UnknownArgumentsError(arguments: arguments)
         return completed()
       case .version:
-        self.outputStream.write(Application.current.version.developmentDescription)
+        if let version = Application.current.version {
+          self.outputStream.write(version.developmentDescription)
+        } else {
+          self.outputStream.write("\(Application.bundle.infoDictionary?["CFBundleShortVersionString"]) (\(Application.bundle.infoDictionary?["CFBundleVersion"]))")
+        }
         return completed()
       case let .file(url):
         let tryDocument: SpeculidDocumentProtocol?
