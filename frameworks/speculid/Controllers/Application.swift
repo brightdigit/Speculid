@@ -150,5 +150,5 @@ open class Application: NSApplication, ApplicationProtocol {
   public let version = Version(
     bundle: bundle,
     dictionary: sbd,
-    versionControl: vcs)!
+    versionControl: vcs)
 }
