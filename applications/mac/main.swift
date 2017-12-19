@@ -1,5 +1,5 @@
-import Foundation
 import Cocoa
+import Foundation
 
 #if DEBUG
   NSSetUncaughtExceptionHandler { exception in
