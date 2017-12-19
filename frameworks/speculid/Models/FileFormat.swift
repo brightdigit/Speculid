@@ -1,5 +1,5 @@
-import Cocoa
 import CairoSVG
+import Cocoa
 
 public enum FileFormat: UInt {
   case png

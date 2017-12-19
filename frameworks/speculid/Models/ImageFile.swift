@@ -1,5 +1,5 @@
-import Cocoa
 import CairoSVG
+import Cocoa
 
 public struct UnknownFileFormatError: Error {
   public let url: URL

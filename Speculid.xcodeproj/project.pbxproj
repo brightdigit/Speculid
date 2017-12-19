@@ -6,20 +6,6 @@
 	objectVersion = 48;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		B37C74B31F8C5CB000DF505B /* CairoSVG-Flags */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = B37C74B41F8C5CB000DF505B /* Build configuration list for PBXAggregateTarget "CairoSVG-Flags" */;
-			buildPhases = (
-				B37C74B71F8C5CB500DF505B /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "CairoSVG-Flags";
-			productName = "CairoSVG-Flags";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		205A5AF735ED0AFE6D8E3753 /* Pods_CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8599C40CCA72FBF9FA1098 /* Pods_CairoSVG.framework */; };
 		63B850290A8C8F568F554912 /* Pods_SpeculidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E00CC4EE1B4A785089460 /* Pods_SpeculidTests.framework */; };
@@ -27,8 +13,6 @@
 		8673F38CC6D59040A2F46D0E /* Pods_CairoSVGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E776BC2A0843F84E3CBC279B /* Pods_CairoSVGTests.framework */; };
 		8B89F9F58D273C27DCE0A008 /* Pods_Speculid_Mac_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054FC9E3CE2F6BD2F948CF5D /* Pods_Speculid_Mac_App.framework */; };
 		8CFE676AD2939E9961A20D07 /* Pods_Speculid_Mac_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BDAD4963D80A5FF54A9272 /* Pods_Speculid_Mac_AppUITests.framework */; };
-		B3033B1B1F9AEE9A00787279 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B3033B191F9AEE9900787279 /* .travis.yml */; };
-		B3033B1C1F9AEE9A00787279 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B3033B1A1F9AEE9A00787279 /* .gitignore */; };
 		B3033B1E1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3033B1D1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift */; };
 		B3033B201F9AEFE600787279 /* AssetSpecificationDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3033B1F1F9AEFE600787279 /* AssetSpecificationDocument.swift */; };
 		B3136DCD1F90E3F30002B7AB /* Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* Speculid.framework */; };
@@ -94,7 +78,6 @@
 		B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */; };
 		B317B0D11FA560EE00BB5E57 /* QuitMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317B0D01FA560EE00BB5E57 /* QuitMenuItem.swift */; };
 		B318906A1F918F0300D0EFA0 /* GeometryValue.Multiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */; };
-		B318906E1F91A06C00D0EFA0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */; };
 		B31BEAFA1F96268700496E7A /* RegularExpressionSetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */; };
 		B31BEAFC1F96269F00496E7A /* RegularExpressionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAFB1F96269F00496E7A /* RegularExpressionSet.swift */; };
 		B31BEAFE1F9626AC00496E7A /* RegularExpressionSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */; };
@@ -144,7 +127,6 @@
 		B37C74B11F8C5C7400DF505B /* PNGSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A21F8C5C7400DF505B /* PNGSurface.h */; };
 		B37C74B21F8C5C7400DF505B /* PNGImageHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */; };
 		B37C74BC1F8C5D2A00DF505B /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
-		B3B049C91FA262A8002906B1 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3B049C81FA262A8002906B1 /* exportOptions.plist */; };
 		B3B5E9DA1F96C1C1004A6BEB /* SpeculidConfigurationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */; };
 		B3B5E9DC1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */; };
 		B3B5E9DE1F96C2A2004A6BEB /* SpeculidConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */; };
@@ -155,7 +137,6 @@
 		B3B5E9E81F96C74C004A6BEB /* CommandLineRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */; };
 		B3B5E9EA1F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */; };
 		B3B5E9EC1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */; };
-		B3D2F6AD1FB3EB7F00BF7AC1 /* shasum.sh in Resources */ = {isa = PBXBuildFile; fileRef = B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */; };
 		B3D32A021F9A5D760042B46F /* help.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3D32A011F9A5D750042B46F /* help.txt */; };
 		B3D32A041F9A5E8F0042B46F /* CommandLineRunnerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */; };
 		B3D32A061F9A5FEE0042B46F /* FileHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A051F9A5FEE0042B46F /* FileHandle.swift */; };
@@ -210,13 +191,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = B37C74881F8C5B5C00DF505B;
 			remoteInfo = "CairoSVG-Mac-Framework";
-		};
-		B37C74B81F8C5CC400DF505B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B37C74361F8C58F300DF505B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B37C74B31F8C5CB000DF505B;
-			remoteInfo = "CairoSVG-Flags";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -349,8 +323,8 @@
 		B31BEAFB1F96269F00496E7A /* RegularExpressionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSet.swift; sourceTree = "<group>"; };
 		B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetProtocol.swift; sourceTree = "<group>"; };
 		B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetBuilderProtocol.swift; sourceTree = "<group>"; };
+		B31D2AEB1FBC8F1D008087A6 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		B32D69EA1F9EC5CA00C21C8C /* Speculid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speculid.entitlements; sourceTree = "<group>"; };
-		B32D69EF1FA01AB300C21C8C /* install_dylib.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install_dylib.sh; sourceTree = "<group>"; };
 		B32D69F01FA01D3900C21C8C /* codesign-framework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "codesign-framework.sh"; sourceTree = "<group>"; };
 		B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemProviderProtocol.swift; sourceTree = "<group>"; };
 		B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObjectInterfaceProviderProtocol.swift; sourceTree = "<group>"; };
@@ -360,6 +334,7 @@
 		B34188891F9A44A700C5F356 /* CommandLineArgumentProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineArgumentProviderProtocol.swift; sourceTree = "<group>"; };
 		B341888D1F9A460300C5F356 /* CommandLineArgumentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineArgumentProvider.swift; sourceTree = "<group>"; };
 		B34188901F9A479900C5F356 /* SpeculidApplicationModeParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParserTest.swift; sourceTree = "<group>"; };
+		B3423C791FDCDC3F0001AD7D /* setup-dependencies.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "setup-dependencies.sh"; sourceTree = "<group>"; };
 		B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileFormat.h; sourceTree = "<group>"; };
 		B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileProtocol.h; sourceTree = "<group>"; };
 		B34E83021F8FD90C0032268F /* GlibError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlibError.h; sourceTree = "<group>"; };
@@ -367,10 +342,12 @@
 		B34E83061F8FDC4C0032268F /* GeometryDimension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeometryDimension.h; sourceTree = "<group>"; };
 		B34E83081F8FDCB80032268F /* Dimension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dimension.h; sourceTree = "<group>"; };
 		B34E830A1F8FDDAC0032268F /* CairoColorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CairoColorProtocol.h; sourceTree = "<group>"; };
+		B357EBF61FCCA1F000FB152E /* fix_dylibs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = fix_dylibs.sh; sourceTree = "<group>"; };
 		B35B71221F9041B900BE477E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B35B71251F904CF100BE477E /* SurfaceHandleBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurfaceHandleBuilder.h; sourceTree = "<group>"; };
 		B35B71261F904CF100BE477E /* SurfaceHandleBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurfaceHandleBuilder.m; sourceTree = "<group>"; };
 		B35B71291F9052B200BE477E /* CairoSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CairoSize.h; sourceTree = "<group>"; };
+		B35D13271FCF604C0047F1B8 /* Brewfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Brewfile; sourceTree = "<group>"; };
 		B36C2E8A1FA5B876003F48BD /* build.list */ = {isa = PBXFileReference; lastKnownFileType = text; path = build.list; sourceTree = "<group>"; };
 		B37C743E1F8C58F300DF505B /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37C74431F8C58F300DF505B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -523,6 +500,8 @@
 		B3033B181F9AED7600787279 /* configuration */ = {
 			isa = PBXGroup;
 			children = (
+				B35D13271FCF604C0047F1B8 /* Brewfile */,
+				B31D2AEB1FBC8F1D008087A6 /* build.sh */,
 				B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */,
 				B3B049C81FA262A8002906B1 /* exportOptions.plist */,
 				B3033B1A1F9AEE9A00787279 /* .gitignore */,
@@ -531,10 +510,11 @@
 				B3136EB31F9224290002B7AB /* CairoSVG.xcconfig */,
 				B3136E9B1F90FFB10002B7AB /* CairoSVG.debug.xcconfig */,
 				B3136E9A1F90FFB10002B7AB /* CairoSVG.release.xcconfig */,
-				B32D69EF1FA01AB300C21C8C /* install_dylib.sh */,
 				B32D69F01FA01D3900C21C8C /* codesign-framework.sh */,
 				B3B049CA1FA27D78002906B1 /* decrypt-certs.sh */,
 				B3B049CC1FA27E68002906B1 /* build-keychain.sh */,
+				B357EBF61FCCA1F000FB152E /* fix_dylibs.sh */,
+				B3423C791FDCDC3F0001AD7D /* setup-dependencies.sh */,
 			);
 			name = configuration;
 			sourceTree = "<group>";
@@ -1050,7 +1030,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				B37C74B91F8C5CC400DF505B /* PBXTargetDependency */,
 			);
 			name = CairoSVG;
 			productName = "CairoSVG-Mac-Framework";
@@ -1104,13 +1083,9 @@
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
-					B37C74B31F8C5CB000DF505B = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
-			buildConfigurationList = B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "Speculid" */;
+			buildConfigurationList = B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "speculid" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1127,7 +1102,6 @@
 				B37C74521F8C590D00DF505B /* Speculid-Mac-XPC */,
 				B37C74721F8C5ADA00DF505B /* Speculid */,
 				B37C74881F8C5B5C00DF505B /* CairoSVG */,
-				B37C74B31F8C5CB000DF505B /* CairoSVG-Flags */,
 				B3136E5F1F90FCCF0002B7AB /* Speculid-Mac-AppUITests */,
 				B3136E7D1F90FD2E0002B7AB /* SpeculidTests */,
 				B3136E8C1F90FD3D0002B7AB /* CairoSVGTests */,
@@ -1161,11 +1135,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3033B1B1F9AEE9A00787279 /* .travis.yml in Resources */,
-				B3D2F6AD1FB3EB7F00BF7AC1 /* shasum.sh in Resources */,
-				B3033B1C1F9AEE9A00787279 /* .gitignore in Resources */,
-				B318906E1F91A06C00D0EFA0 /* .swiftlint.yml in Resources */,
-				B3B049C91FA262A8002906B1 /* exportOptions.plist in Resources */,
 				B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */,
 				B3136DD71F90E4AC0002B7AB /* layers.svg in Resources */,
 				B37C74441F8C58F300DF505B /* Assets.xcassets in Resources */,
@@ -1467,20 +1436,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "DYLIBS=`otool -L \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\" | grep \"/opt\" | awk -F' ' '{ print $1 }'`\nmkdir -p \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"\nfor dylib in $DYLIBS; do install -m 755 $dylib \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"; done;\nfor dylib in $DYLIBS; do install_name_tool -change $dylib @rpath/`basename $dylib` \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"; done;\n\"$SRCROOT/codesign-framework.sh\"";
-		};
-		B37C74B71F8C5CB500DF505B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "OTHER_CFLAGS=\"$(pkg-config cairo librsvg-2.0  --cflags)\"\nOTHER_LDFLAGS=\"$(pkg-config cairo librsvg-2.0  --libs)\"\nHEADER_SEARCH_PATHS=\"$(pkg-config --cflags-only-I cairo librsvg-2.0 | tr -d '\\-I')\"\necho -e \"OTHER_CFLAGS = \\$(inherited) ${OTHER_CFLAGS}\" > CairoSVG.xcconfig\necho -e \"OTHER_LDFLAGS = \\$(inherited) ${OTHER_LDFLAGS}\" >> CairoSVG.xcconfig\necho -e \"HEADER_SEARCH_PATHS = \\$(inherited) ${HEADER_SEARCH_PATHS}\" >> CairoSVG.xcconfig";
+			shellScript = "DYLIBS=`otool -L \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\" | grep \"/opt\" | awk -F' ' '{ print $1 }'`\nmkdir -p \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"\n\nfor dylib in $DYLIBS; do install -m 755 $dylib \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"; done;\nfor dylib in $DYLIBS; do install_name_tool -change $dylib @rpath/`basename $dylib` \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"; done;\nls \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"\n\"$SRCROOT/fix_dylibs.sh\"\n\"$SRCROOT/codesign-framework.sh\"";
 		};
 		B3B5E9D61F96AB1B004A6BEB /* warnings */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1808,11 +1764,6 @@
 			isa = PBXTargetDependency;
 			target = B37C74881F8C5B5C00DF505B /* CairoSVG */;
 			targetProxy = B37C748E1F8C5B5C00DF505B /* PBXContainerItemProxy */;
-		};
-		B37C74B91F8C5CC400DF505B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B37C74B31F8C5CB000DF505B /* CairoSVG-Flags */;
-			targetProxy = B37C74B81F8C5CC400DF505B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2228,24 +2179,6 @@
 			};
 			name = Release;
 		};
-		B37C74B51F8C5CB000DF505B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MLT7M394S7;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		B37C74B61F8C5CB000DF505B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MLT7M394S7;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2276,7 +2209,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "Speculid" */ = {
+		B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "speculid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B37C744A1F8C58F300DF505B /* Debug */,
@@ -2317,15 +2250,6 @@
 			buildConfigurations = (
 				B37C74931F8C5B5C00DF505B /* Debug */,
 				B37C74941F8C5B5C00DF505B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B37C74B41F8C5CB000DF505B /* Build configuration list for PBXAggregateTarget "CairoSVG-Flags" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B37C74B51F8C5CB000DF505B /* Debug */,
-				B37C74B61F8C5CB000DF505B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,6 +1,6 @@
-import Foundation
 import AppKit
 import CairoSVG
+import Foundation
 /**
  MissingHashMarkAsPrefix:   "Invalid RGB string, missing '#' as prefix"
  UnableToScanHexValue:      "Scan hex error"

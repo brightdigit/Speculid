@@ -1,5 +1,5 @@
-import Foundation
 import AppKit
+import Foundation
 import SwiftVer
 
 var exceptionHandler: ((NSException) -> Void)?
@@ -131,9 +131,12 @@ open class Application: NSApplication, ApplicationProtocol {
   }
 
   public func commandLineActivity(_: CommandLineActivityProtocol, hasCompletedWithError error: Error?) {
-
-    precondition(error == nil, error!.localizedDescription)
-    exit(0)
+    if let error = error {
+      FileHandle.standardError.write(error.localizedDescription)
+      exit(1)
+    } else {
+      exit(0)
+    }
   }
 
   public func quit(_ sender: Any?) {
@@ -146,10 +149,9 @@ open class Application: NSApplication, ApplicationProtocol {
 
   public static let sbd =
     Stage.dictionary(fromPlistAtURL: Application.bundle.url(forResource: "versions", withExtension: "plist")!)!
-  // StageBuildDictionaryProtocol! = nil
 
   public let version = Version(
     bundle: bundle,
     dictionary: sbd,
-    versionControl: vcs)!
+    versionControl: vcs)
 }
