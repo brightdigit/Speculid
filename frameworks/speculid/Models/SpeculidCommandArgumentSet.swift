@@ -1,7 +1,7 @@
 import Foundation
 
 public enum SpeculidCommandArgumentSet: Equatable {
-  public static func ==(lhs: SpeculidCommandArgumentSet, rhs: SpeculidCommandArgumentSet) -> Bool {
+  public static func == (lhs: SpeculidCommandArgumentSet, rhs: SpeculidCommandArgumentSet) -> Bool {
     switch (lhs, rhs) {
     case (.help, .help): return true
     case (.unknown, .unknown): return true

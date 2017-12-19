@@ -1,5 +1,5 @@
-import Foundation
 import AppKit
+import Foundation
 
 public protocol SpeculidSpecificationsFileProtocol {
   var assetDirectoryRelativePath: String { get }
