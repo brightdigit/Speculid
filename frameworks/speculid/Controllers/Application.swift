@@ -131,9 +131,12 @@ open class Application: NSApplication, ApplicationProtocol {
   }
 
   public func commandLineActivity(_: CommandLineActivityProtocol, hasCompletedWithError error: Error?) {
-
-    precondition(error == nil, error!.localizedDescription)
-    exit(0)
+    if let error = error {
+      FileHandle.standardError.write(error.localizedDescription)
+      exit(1)
+    } else {
+      exit(0)
+    }
   }
 
   public func quit(_ sender: Any?) {
