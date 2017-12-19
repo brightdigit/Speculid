@@ -1,5 +1,5 @@
-import Foundation
 import CairoSVG
+import Foundation
 
 public struct BadGeometryStringValueError: Error {
   public let stringValue: String
@@ -11,7 +11,7 @@ public struct BadGeometryCGSizeValueError: Error {
 extension GeometryValue {
   func scaledBy(_ scale: CGFloat) -> GeometryValue {
     switch self {
-    case let .width(value) : return .width(value * scale)
+    case let .width(value): return .width(value * scale)
     case let .height(value): return .height(value * scale)
     case let .scale(value): return .scale(CGFloat(scale) * value)
     }

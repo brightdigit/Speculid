@@ -1,5 +1,5 @@
-import Foundation
 import AppKit
+import Foundation
 
 public struct StatusItemProvider: StatusItemProviderProtocol {
   public func statusItem(for _: Any?) -> NSStatusItem {

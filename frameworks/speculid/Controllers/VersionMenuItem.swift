@@ -19,7 +19,13 @@ public class VersionMenuItem: NSMenuItem {
   }
 
   public init() {
-    let title = Application.current.version.developmentDescription
+    let title: String
+
+    if let version = Application.current.version, Application.vcs != nil {
+      title = version.developmentDescription
+    } else {
+      title = "\(String(describing: Application.bundle.infoDictionary?["CFBundleShortVersionString"])) (\(String(describing: Application.bundle.infoDictionary?["CFBundleVersion"])))"
+    }
     super.init(title: title, action: nil, keyEquivalent: "")
   }
 

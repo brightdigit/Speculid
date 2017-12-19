@@ -1,5 +1,5 @@
-import Cocoa
 import CairoSVG
+import Cocoa
 
 public final class Service: NSObject, ServiceProtocol {
   public func exportImageAtURL(_ url: URL, toSpecifications specifications: [ImageSpecification], _ callback: @escaping ((NSError?) -> Void)) {
