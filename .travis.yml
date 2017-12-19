@@ -5,7 +5,7 @@ env:
 branches:
   except:
   - develop
-osx_image: xcode9
+osx_image: xcode9.2
 xcode_workspace: speculid.xcworkspace
 xcode_scheme: Speculid-Mac-App
 before_install:
@@ -16,8 +16,7 @@ before_install:
 script:
 - "./decrypt-certs.sh"
 - "./build-keychain.sh"
-- xcodebuild -workspace speculid.xcworkspace -scheme "CairoSVG-Flags" -derivedDataPath
-  ./build  build -configuration "Release"
+- "./setup-dependencies.sh"
 - xcodebuild archive -workspace speculid.xcworkspace -scheme "Speculid-Mac-App" -configuration
   Release -derivedDataPath ./build -archivePath ./build/Products/Speculid.xcarchive
 - xcodebuild -exportArchive -archivePath ./build/Products/Speculid.xcarchive -exportOptionsPlist
