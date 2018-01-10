@@ -71,7 +71,7 @@ Speculid can be installed via `Homebrew <http://brew.sh/>`:
 
 ***
 **v2.0 ALPHA, BETA, OR DEVELOPMENT RELEASES** you will need to create a symbolic link manually or call the app using `.../Speculid.app/Contents/MacOS/Speculid`.
-Feel free to upvote issue #34.
+Feel free to upvote [issue #34](../../issues/34).
 ***
 
 ```bash
