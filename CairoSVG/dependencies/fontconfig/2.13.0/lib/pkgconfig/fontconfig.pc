@@ -1,0 +1,18 @@
+prefix=/usr/local/Cellar/fontconfig/2.13.0
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+sysconfdir=/usr/local/etc
+localstatedir=/usr/local/var
+PACKAGE=fontconfig
+confdir=${sysconfdir}/fonts
+cachedir=${localstatedir}/cache/${PACKAGE}
+
+Name: Fontconfig
+Description: Font configuration and customization library
+Version: 2.13.0
+Requires:  freetype2 >= 21.0.15
+Requires.private: 
+Libs: -L${libdir} -lfontconfig
+Libs.private:  -lexpat
+Cflags: -I${includedir}  
