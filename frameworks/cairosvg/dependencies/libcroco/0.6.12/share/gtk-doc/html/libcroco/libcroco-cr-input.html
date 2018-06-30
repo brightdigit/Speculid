@@ -1,0 +1,1458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>cr-input: Libcroco Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Libcroco Reference Manual">
+<link rel="up" href="ch01.html" title="Extensive APIs description">
+<link rel="prev" href="libcroco-cr-fonts.html" title="cr-fonts">
+<link rel="next" href="libcroco-cr-num.html" title="cr-num">
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libcroco-cr-input.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libcroco-cr-fonts.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libcroco-cr-num.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libcroco-cr-input"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libcroco-cr-input.top_of_page"></a>cr-input</span></h2>
+<p>cr-input</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libcroco-cr-input.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="returnvalue">CRInput</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-new-from-buf" title="cr_input_new_from_buf ()">cr_input_new_from_buf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="returnvalue">CRInput</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-new-from-uri" title="cr_input_new_from_uri ()">cr_input_new_from_uri</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-destroy" title="cr_input_destroy ()">cr_input_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-ref" title="cr_input_ref ()">cr_input_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-unref" title="cr_input_unref ()">cr_input_unref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-read-byte" title="cr_input_read_byte ()">cr_input_read_byte</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-read-char" title="cr_input_read_char ()">cr_input_read_char</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-consume-chars" title="cr_input_consume_chars ()">cr_input_consume_chars</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-consume-char" title="cr_input_consume_char ()">cr_input_consume_char</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-consume-white-spaces" title="cr_input_consume_white_spaces ()">cr_input_consume_white_spaces</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-peek-byte" title="cr_input_peek_byte ()">cr_input_peek_byte</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guchar</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-peek-byte2" title="cr_input_peek_byte2 ()">cr_input_peek_byte2</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-peek-char" title="cr_input_peek_char ()">cr_input_peek_char</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-get-byte-addr" title="cr_input_get_byte_addr ()">cr_input_get_byte_addr</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-get-cur-byte-addr" title="cr_input_get_cur_byte_addr ()">cr_input_get_cur_byte_addr</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-seek-index" title="cr_input_seek_index ()">cr_input_seek_index</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-get-cur-index" title="cr_input_get_cur_index ()">cr_input_get_cur_index</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-set-cur-index" title="cr_input_set_cur_index ()">cr_input_set_cur_index</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-get-cur-pos" title="cr_input_get_cur_pos ()">cr_input_get_cur_pos</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-set-cur-pos" title="cr_input_set_cur_pos ()">cr_input_set_cur_pos</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-get-parsing-location" title="cr_input_get_parsing_location ()">cr_input_get_parsing_location</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-get-end-of-line" title="cr_input_get_end_of_line ()">cr_input_get_end_of_line</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-set-end-of-line" title="cr_input_set_end_of_line ()">cr_input_set_end_of_line</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-get-end-of-file" title="cr_input_get_end_of_file ()">cr_input_get_end_of_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-set-end-of-file" title="cr_input_set_end_of_file ()">cr_input_set_end_of_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-set-line-num" title="cr_input_set_line_num ()">cr_input_set_line_num</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-get-line-num" title="cr_input_get_line_num ()">cr_input_get_line_num</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-set-column-num" title="cr_input_set_column_num ()">cr_input_set_column_num</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-get-column-num" title="cr_input_get_column_num ()">cr_input_get_column_num</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-increment-line-num" title="cr_input_increment_line_num ()">cr_input_increment_line_num</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-increment-col-num" title="cr_input_increment_col_num ()">cr_input_increment_col_num</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">glong</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-get-nb-bytes-left" title="cr_input_get_nb_bytes_left ()">cr_input_get_nb_bytes_left</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-input.html#cr-input-end-of-input" title="cr_input_end_of_input ()">cr_input_end_of_input</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-input.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput">CRInput</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="libcroco-cr-input.html#CRInputPos" title="struct CRInputPos">CRInputPos</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libcroco-cr-input.html#CRInputPriv" title="CRInputPriv">CRInputPriv</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-input.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-input.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="cr-input-new-from-buf"></a><h3>cr_input_new_from_buf ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="returnvalue">CRInput</span></a> *
+cr_input_new_from_buf (<em class="parameter"><code><span class="type">guchar</span> *a_buf</code></em>,
+                       <em class="parameter"><code><span class="type">gulong</span> a_len</code></em>,
+                       <em class="parameter"><code><span class="type">enum CREncoding</span> a_enc</code></em>,
+                       <em class="parameter"><code><span class="type">gboolean</span> a_free_buf</code></em>);</pre>
+<p>Creates a new input stream from a memory buffer.
+Returns the newly built instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p>
+<div class="refsect3">
+<a name="cr-input-new-from-buf.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_buf</p></td>
+<td class="parameter_description"><p>the memory buffer to create the input stream from.
+The <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> keeps this pointer so user should not free it !.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_len</p></td>
+<td class="parameter_description"><p>the size of the input buffer.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_enc</p></td>
+<td class="parameter_description"><p>the buffer's encoding.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_free_buf</p></td>
+<td class="parameter_description"><p>if set to TRUE, this a_buf will be freed
+at the destruction of this instance. If set to false, it is up
+to the caller to free it.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-new-from-uri"></a><h3>cr_input_new_from_uri ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="returnvalue">CRInput</span></a> *
+cr_input_new_from_uri (<em class="parameter"><code>const <span class="type">gchar</span> *a_file_uri</code></em>,
+                       <em class="parameter"><code><span class="type">enum CREncoding</span> a_enc</code></em>);</pre>
+<p>Creates a new input stream from
+a file.</p>
+<p>Returns the newly created input stream if
+this method could read the file and create it,
+NULL otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-new-from-uri.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_file_uri</p></td>
+<td class="parameter_description"><p>the file to create *the input stream from.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_enc</p></td>
+<td class="parameter_description"><p>the encoding of the file *to create the input from.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-destroy"></a><h3>cr_input_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+cr_input_destroy (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>);</pre>
+<p>The destructor of the <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> class.</p>
+<div class="refsect3">
+<a name="cr-input-destroy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-ref"></a><h3>cr_input_ref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+cr_input_ref (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>);</pre>
+<p>Increments the reference count of the current
+instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p>
+<div class="refsect3">
+<a name="cr-input-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-unref"></a><h3>cr_input_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+cr_input_unref (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>);</pre>
+<p>Decrements the reference count of this instance
+of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>. If the reference count goes down to
+zero, this instance is destroyed.</p>
+<p>Returns TRUE if the instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> got destroyed, false otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-unref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-read-byte"></a><h3>cr_input_read_byte ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_read_byte (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                    <em class="parameter"><code><span class="type">guchar</span> *a_byte</code></em>);</pre>
+<p>Gets the next byte of the input.
+Updates the state of the input so that
+the next invocation of this method  returns
+the next coming byte.</p>
+<p>Returns CR_OK upon successful completion, an error code
+otherwise. All the out parameters of this method are valid if
+and only if this method returns CR_OK.</p>
+<div class="refsect3">
+<a name="cr-input-read-byte.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_byte</p></td>
+<td class="parameter_description"><p>out parameter the returned byte.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-read-char"></a><h3>cr_input_read_char ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_read_char (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                    <em class="parameter"><code><span class="type">guint32</span> *a_char</code></em>);</pre>
+<p>Reads an unicode character from the current instance of
+<a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p>
+<p>Returns CR_OK upon successful completion, an error code
+otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-read-char.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of CRInput.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_char</p></td>
+<td class="parameter_description"><p>out parameter. The read character.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-consume-chars"></a><h3>cr_input_consume_chars ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_consume_chars (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                        <em class="parameter"><code><span class="type">guint32</span> a_char</code></em>,
+                        <em class="parameter"><code><span class="type">gulong</span> *a_nb_char</code></em>);</pre>
+<p>Consumes up to a_nb_char occurences of the next contiguous characters 
+which equal a_char. Note that the next character of the input stream
+*MUST* equal a_char to trigger the consumption, or else, the error
+code CR_PARSING_ERROR is returned.
+If the number of contiguous characters that equals a_char is less than
+a_nb_char, then this function consumes all the characters it can consume.</p>
+<p>Returns CR_OK if at least one character has been consumed, an error code
+otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-consume-chars.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the this pointer of the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_char</p></td>
+<td class="parameter_description"><p>the character to consume.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_nb_char</p></td>
+<td class="parameter_description"><p>in/out parameter. The number of characters to consume.
+If set to a negative value, the function will consume all the occurences
+of a_char found.
+After return, if the return value equals CR_OK, this variable contains
+the number of characters actually consumed.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-consume-char"></a><h3>cr_input_consume_char ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_consume_char (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                       <em class="parameter"><code><span class="type">guint32</span> a_char</code></em>);</pre>
+<p>Consumes the next character of the input stream if
+and only if that character equals a_char.</p>
+<p>Returns CR_OK upon successful completion, CR_PARSING_ERROR if
+next char is different from a_char, an other error code otherwise</p>
+<div class="refsect3">
+<a name="cr-input-consume-char.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the this pointer.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_char</p></td>
+<td class="parameter_description"><p>the character to consume. If set to zero,
+consumes any character.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-consume-white-spaces"></a><h3>cr_input_consume_white_spaces ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_consume_white_spaces (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                               <em class="parameter"><code><span class="type">gulong</span> *a_nb_chars</code></em>);</pre>
+<p>Same as <a class="link" href="libcroco-cr-input.html#cr-input-consume-chars" title="cr_input_consume_chars ()"><code class="function">cr_input_consume_chars()</code></a> but this one consumes white
+spaces.</p>
+<p>Returns CR_OK upon successful completion, an error code otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-consume-white-spaces.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the "this pointer" of the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_nb_chars</p></td>
+<td class="parameter_description"><p>in/out parameter. The number of white spaces to
+consume. After return, holds the number of white spaces actually consumed.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-peek-byte"></a><h3>cr_input_peek_byte ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_peek_byte (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> const *a_this</code></em>,
+                    <em class="parameter"><code><span class="type">enum CRSeekPos</span> a_origin</code></em>,
+                    <em class="parameter"><code><span class="type">gulong</span> a_offset</code></em>,
+                    <em class="parameter"><code><span class="type">guchar</span> *a_byte</code></em>);</pre>
+<p>Gets a byte from the input stream,
+starting from the current position in the input stream.
+Unlike <code class="function">cr_input_peek_next_byte()</code> this method
+does not update the state of the current input stream.
+Subsequent calls to cr_input_peek_byte with the same arguments
+will return the same byte.</p>
+<p>Returns CR_OK upon successful completion or,
+CR_BAD_PARAM_ERROR if at least one of the parameters is invalid;
+CR_OUT_OF_BOUNDS_ERROR if the indexed byte is out of bounds.</p>
+<div class="refsect3">
+<a name="cr-input-peek-byte.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_origin</p></td>
+<td class="parameter_description"><p>the origin to consider in the calculation
+of the position of the byte to peek.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_offset</p></td>
+<td class="parameter_description"><p>the offset of the byte to peek, starting from
+the origin specified by a_origin.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_byte</p></td>
+<td class="parameter_description"><p>out parameter the peeked byte.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-peek-byte2"></a><h3>cr_input_peek_byte2 ()</h3>
+<pre class="programlisting"><span class="returnvalue">guchar</span>
+cr_input_peek_byte2 (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> const *a_this</code></em>,
+                     <em class="parameter"><code><span class="type">gulong</span> a_offset</code></em>,
+                     <em class="parameter"><code><span class="type">gboolean</span> *a_eof</code></em>);</pre>
+<p>Same as <a class="link" href="libcroco-cr-input.html#cr-input-peek-byte" title="cr_input_peek_byte ()"><code class="function">cr_input_peek_byte()</code></a> but with a simplified
+interface.</p>
+<p>Returns the read byte or 0 if something bad happened.</p>
+<div class="refsect3">
+<a name="cr-input-peek-byte2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current byte input stream.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_offset</p></td>
+<td class="parameter_description"><p>the offset of the byte to peek, starting
+from the current input position pointer.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_eof</p></td>
+<td class="parameter_description"><p>out parameter. Is set to true is we reach end of
+stream. If set to NULL by the caller, this parameter is not taken
+in account.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-peek-char"></a><h3>cr_input_peek_char ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_peek_char (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> const *a_this</code></em>,
+                    <em class="parameter"><code><span class="type">guint32</span> *a_char</code></em>);</pre>
+<p>Same as <a class="link" href="libcroco-cr-input.html#cr-input-read-char" title="cr_input_read_char ()"><code class="function">cr_input_read_char()</code></a> but does not update the
+internal state of the input stream. The next call
+to <a class="link" href="libcroco-cr-input.html#cr-input-peek-char" title="cr_input_peek_char ()"><code class="function">cr_input_peek_char()</code></a> or <a class="link" href="libcroco-cr-input.html#cr-input-read-char" title="cr_input_read_char ()"><code class="function">cr_input_read_char()</code></a> will thus
+return the same character as the current one.</p>
+<p>Returns CR_OK upon successful completion, an error code
+otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-peek-char.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_char</p></td>
+<td class="parameter_description"><p>out parameter. The returned character.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-get-byte-addr"></a><h3>cr_input_get_byte_addr ()</h3>
+<pre class="programlisting"><span class="returnvalue">guchar</span> *
+cr_input_get_byte_addr (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                        <em class="parameter"><code><span class="type">gulong</span> a_offset</code></em>);</pre>
+<p>Gets the memory address of the byte located at a given offset
+in the input stream.</p>
+<p>Returns the address, otherwise NULL if an error occurred.</p>
+<div class="refsect3">
+<a name="cr-input-get-byte-addr.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_offset</p></td>
+<td class="parameter_description"><p>the offset of the byte in the input stream starting
+from the beginning of the stream.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-get-cur-byte-addr"></a><h3>cr_input_get_cur_byte_addr ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_get_cur_byte_addr (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                            <em class="parameter"><code><span class="type">guchar</span> **a_offset</code></em>);</pre>
+<p>Gets the address of the current character pointer.</p>
+<p>Returns CR_OK upon successful completion, an error code otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-get-cur-byte-addr.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current input stream</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_offset</p></td>
+<td class="parameter_description"><p>out parameter. The returned address.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-seek-index"></a><h3>cr_input_seek_index ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_seek_index (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                     <em class="parameter"><code><span class="type">enum CRSeekPos</span> a_origin</code></em>,
+                     <em class="parameter"><code><span class="type">gint</span> a_pos</code></em>);</pre>
+<p>Sets the "current byte index" of the current instance
+of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>. Next call to <code class="function">cr_input_get_byte()</code> will return
+the byte next after the new "current byte index".</p>
+<p>Returns CR_OK upon successful completion otherwise returns
+CR_BAD_PARAM_ERROR if at least one of the parameters is not valid
+or CR_OUT_BOUNDS_ERROR in case of error.</p>
+<div class="refsect3">
+<a name="cr-input-seek-index.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_origin</p></td>
+<td class="parameter_description"><p>the origin to consider during the calculation
+of the absolute position of the new "current byte index".</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_pos</p></td>
+<td class="parameter_description"><p>the relative offset of the new "current byte index."
+This offset is relative to the origin a_origin.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-get-cur-index"></a><h3>cr_input_get_cur_index ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_get_cur_index (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> const *a_this</code></em>,
+                        <em class="parameter"><code><span class="type">glong</span> *a_index</code></em>);</pre>
+<p>Getter of the next byte index. 
+It actually returns the index of the
+next byte to be read.</p>
+<p>Returns CR_OK upon successful completion, an error code
+otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-get-cur-index.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the "this pointer" of the current instance of
+<a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_index</p></td>
+<td class="parameter_description"><p>out parameter. The returned index.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-set-cur-index"></a><h3>cr_input_set_cur_index ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_set_cur_index (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                        <em class="parameter"><code><span class="type">glong</span> a_index</code></em>);</pre>
+<p>Setter of the next byte index.
+It sets the index of the next byte to be read.</p>
+<p>Returns CR_OK upon successful completion, an error code otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-set-cur-index.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the "this pointer" of the current instance
+of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> .</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_index</p></td>
+<td class="parameter_description"><p>the new index to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-get-cur-pos"></a><h3>cr_input_get_cur_pos ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_get_cur_pos (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> const *a_this</code></em>,
+                      <em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInputPos" title="struct CRInputPos"><span class="type">CRInputPos</span></a> *a_pos</code></em>);</pre>
+<p>Gets the position of the "current byte index" which
+is basically the position of the last returned byte in the
+input stream.</p>
+<p>Returns CR_OK upon successful completion. Otherwise,
+CR_BAD_PARAMETER_ERROR if at least one of the arguments is invalid.
+CR_START_OF_INPUT if no call to either <a class="link" href="libcroco-cr-input.html#cr-input-read-byte" title="cr_input_read_byte ()"><code class="function">cr_input_read_byte()</code></a>
+or <a class="link" href="libcroco-cr-input.html#cr-input-seek-index" title="cr_input_seek_index ()"><code class="function">cr_input_seek_index()</code></a> have been issued before calling 
+<a class="link" href="libcroco-cr-input.html#cr-input-get-cur-pos" title="cr_input_get_cur_pos ()"><code class="function">cr_input_get_cur_pos()</code></a>
+Note that the out parameters of this function are valid if and only if this
+function returns CR_OK.</p>
+<div class="refsect3">
+<a name="cr-input-get-cur-pos.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_pos</p></td>
+<td class="parameter_description"><p>out parameter. The returned position.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-set-cur-pos"></a><h3>cr_input_set_cur_pos ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_set_cur_pos (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                      <em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInputPos" title="struct CRInputPos"><span class="type">CRInputPos</span></a> const *a_pos</code></em>);</pre>
+<p>Sets the current position in the input stream.</p>
+<p>Returns CR_OK upon successful completion, an error code otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-set-cur-pos.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the "this pointer" of the current instance of
+<a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_pos</p></td>
+<td class="parameter_description"><p>the new position.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-get-parsing-location"></a><h3>cr_input_get_parsing_location ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_get_parsing_location (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> const *a_this</code></em>,
+                               <em class="parameter"><code><a class="link" href="libcroco-cr-parsing-location.html#CRParsingLocation" title="struct CRParsingLocation"><span class="type">CRParsingLocation</span></a> *a_loc</code></em>);</pre>
+<p>Gets the current parsing location.
+The Parsing location is a public datastructure that
+represents the current line/column/byte offset/ in the input
+stream.</p>
+<p>Returns CR_OK upon successful completion, an error
+code otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-get-parsing-location.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_loc</p></td>
+<td class="parameter_description"><p>the set parsing location.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-get-end-of-line"></a><h3>cr_input_get_end_of_line ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_get_end_of_line (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> const *a_this</code></em>,
+                          <em class="parameter"><code><span class="type">gboolean</span> *a_eol</code></em>);</pre>
+<p>Gets the end of line flag of the current input.</p>
+<p>Returns CR_OK upon successful completion, an error code
+otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-get-end-of-line.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_eol</p></td>
+<td class="parameter_description"><p>out parameter. The place to put
+the returned flag</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-set-end-of-line"></a><h3>cr_input_set_end_of_line ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_set_end_of_line (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                          <em class="parameter"><code><span class="type">gboolean</span> a_eol</code></em>);</pre>
+<p>Sets the end of line flag.</p>
+<p>Returns CR_OK upon successful completion, an error code
+otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-set-end-of-line.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_eol</p></td>
+<td class="parameter_description"><p>the new end of line flag.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-get-end-of-file"></a><h3>cr_input_get_end_of_file ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_get_end_of_file (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> const *a_this</code></em>,
+                          <em class="parameter"><code><span class="type">gboolean</span> *a_eof</code></em>);</pre>
+<p>Gets the end of file flag.</p>
+<p>Returns CR_OK upon successful completion, an error code otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-get-end-of-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_eof</p></td>
+<td class="parameter_description"><p>out parameter the place to put the end of
+file flag.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-set-end-of-file"></a><h3>cr_input_set_end_of_file ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_set_end_of_file (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                          <em class="parameter"><code><span class="type">gboolean</span> a_eof</code></em>);</pre>
+<p>Sets the end of file flag.</p>
+<p>Returns CR_OK upon successful completion, an error code otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-set-end-of-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_eof</p></td>
+<td class="parameter_description"><p>the new end of file flag.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-set-line-num"></a><h3>cr_input_set_line_num ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_set_line_num (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                       <em class="parameter"><code><span class="type">glong</span> a_line_num</code></em>);</pre>
+<p>Setter of the current line number.</p>
+<p>Return CR_OK upon successful completion, an error code otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-set-line-num.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the "this pointer" of the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_line_num</p></td>
+<td class="parameter_description"><p>the new line number.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-get-line-num"></a><h3>cr_input_get_line_num ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_get_line_num (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> const *a_this</code></em>,
+                       <em class="parameter"><code><span class="type">glong</span> *a_line_num</code></em>);</pre>
+<p>Getter of the current line number.</p>
+<p>Returns CR_OK upon successful completion, an error code otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-get-line-num.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the "this pointer" of the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_line_num</p></td>
+<td class="parameter_description"><p>the returned line number.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-set-column-num"></a><h3>cr_input_set_column_num ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_set_column_num (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                         <em class="parameter"><code><span class="type">glong</span> a_col</code></em>);</pre>
+<p>Setter of the current column number.</p>
+<p>Returns CR_OK upon successful completion, an error code otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-set-column-num.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the "this pointer" of the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_col</p></td>
+<td class="parameter_description"><p>the new column number.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-get-column-num"></a><h3>cr_input_get_column_num ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_get_column_num (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> const *a_this</code></em>,
+                         <em class="parameter"><code><span class="type">glong</span> *a_col</code></em>);</pre>
+<p>Getter of the current column number.</p>
+<p>Returns CR_OK upon successful completion, an error code otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-get-column-num.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the "this pointer" of the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_col</p></td>
+<td class="parameter_description"><p>out parameter</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-increment-line-num"></a><h3>cr_input_increment_line_num ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_increment_line_num (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                             <em class="parameter"><code><span class="type">glong</span> a_increment</code></em>);</pre>
+<p>Increments the current line number.</p>
+<p>Returns CR_OK upon successful completion, an error code otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-increment-line-num.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the "this pointer" of the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_increment</p></td>
+<td class="parameter_description"><p>the increment to add to the line number.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-increment-col-num"></a><h3>cr_input_increment_col_num ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_increment_col_num (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> *a_this</code></em>,
+                            <em class="parameter"><code><span class="type">glong</span> a_increment</code></em>);</pre>
+<p>Increments the current column number.</p>
+<p>Returns CR_OK upon successful completion, an error code otherwise.</p>
+<div class="refsect3">
+<a name="cr-input-increment-col-num.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the "this pointer" of the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_increment</p></td>
+<td class="parameter_description"><p>the increment to add to the column number.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-get-nb-bytes-left"></a><h3>cr_input_get_nb_bytes_left ()</h3>
+<pre class="programlisting"><span class="returnvalue">glong</span>
+cr_input_get_nb_bytes_left (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> const *a_this</code></em>);</pre>
+<p>Returns the number of bytes left in the input stream
+before the end, -1 in case of error.</p>
+<div class="refsect3">
+<a name="cr-input-get-nb-bytes-left.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-input-end-of-input"></a><h3>cr_input_end_of_input ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_input_end_of_input (<em class="parameter"><code><a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> const *a_this</code></em>,
+                       <em class="parameter"><code><span class="type">gboolean</span> *a_end_of_input</code></em>);</pre>
+<p>Tests wether the current instance of
+<a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a> has reached its input buffer.</p>
+<p>Returns CR_OK upon successful completion, an error code otherwise.
+Note that all the out parameters of this method are valid if
+and only if this method returns CR_OK.</p>
+<div class="refsect3">
+<a name="cr-input-end-of-input.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-input.html#CRInput" title="struct CRInput"><span class="type">CRInput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_end_of_input</p></td>
+<td class="parameter_description"><p>out parameter. Is set to TRUE if
+the current instance has reached the end of its input buffer,
+FALSE otherwise.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-input.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="CRInput"></a><h3>struct CRInput</h3>
+<pre class="programlisting">struct CRInput {
+        CRInputPriv *priv ;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CRInputPos"></a><h3>struct CRInputPos</h3>
+<pre class="programlisting">struct CRInputPos {
+        glong line ;
+        glong col ;
+        gboolean end_of_file ;
+        gboolean end_of_line ;
+        glong next_byte_index ;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CRInputPriv"></a><h3>CRInputPriv</h3>
+<pre class="programlisting">typedef struct _CRInputPriv CRInputPriv;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.25.1</div>
+</body>
+</html>

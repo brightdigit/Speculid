@@ -1,0 +1,13 @@
+prefix=/usr/local/Cellar/harfbuzz/1.7.6_2
+exec_prefix=/usr/local/Cellar/harfbuzz/1.7.6_2
+libdir=/usr/local/Cellar/harfbuzz/1.7.6_2/lib
+includedir=/usr/local/Cellar/harfbuzz/1.7.6_2/include
+
+Name: harfbuzz
+Description: HarfBuzz text shaping library
+Version: 1.7.6
+
+Libs: -L${libdir} -lharfbuzz
+Libs.private: -lm    -framework ApplicationServices
+Requires.private: glib-2.0 >= 2.19.1 graphite2
+Cflags: -I${includedir}/harfbuzz

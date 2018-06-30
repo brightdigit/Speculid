@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Engines: Pango Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="Pango Reference Manual">
+<link rel="up" href="lowlevel.html" title="Low Level Functionality">
+<link rel="prev" href="pango-Coverage-Maps.html" title="Coverage Maps">
+<link rel="next" href="PangoEngineLang.html" title="PangoEngineLang">
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#pango-Engines.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#pango-Engines.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="lowlevel.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="pango-Coverage-Maps.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="PangoEngineLang.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="pango-Engines"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="pango-Engines.top_of_page"></a>Engines</span></h2>
+<p>Engines — Language-specific and rendering-system-specific processing</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="pango-Engines.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="pango-Engines.html#script-engine-list" title="script_engine_list ()">script_engine_list</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="pango-Engines.html#script-engine-init" title="script_engine_init ()">script_engine_init</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="pango-Engines.html#script-engine-exit" title="script_engine_exit ()">script_engine_exit</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="pango-Engines.html#PangoEngine"><span class="returnvalue">PangoEngine</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="pango-Engines.html#script-engine-create" title="script_engine_create ()">script_engine_create</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="PangoEngine"></a><div class="refsect1">
+<a name="pango-Engines.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="pango-Engines.html#PangoEngineInfo" title="struct PangoEngineInfo">PangoEngineInfo</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="pango-Engines.html#PangoEngineScriptInfo" title="struct PangoEngineScriptInfo">PangoEngineScriptInfo</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="pango-Engines.html#PangoEngine-struct" title="struct PangoEngine">PangoEngine</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="pango-Engines.html#PangoEngineClass" title="struct PangoEngineClass">PangoEngineClass</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Engines.html#PANGO-RENDER-TYPE-NONE:CAPS" title="PANGO_RENDER_TYPE_NONE">PANGO_RENDER_TYPE_NONE</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="pango-Engines.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> PangoEngine
+        <span class="lineart">├──</span> <a class="link" href="PangoEngineLang.html" title="PangoEngineLang">PangoEngineLang</a>
+        <span class="lineart">╰──</span> <a class="link" href="PangoEngineShape.html" title="PangoEngineShape">PangoEngineShape</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="pango-Engines.description"></a><h2>Description</h2>
+<p>Pango utilizes a module architecture in which the language-specific
+and render-system-specific components are provided by loadable
+modules. Each loadable module supplies one or more
+<em class="firstterm">engines</em>.  Each <em class="firstterm">engine</em>
+has an associated <em class="firstterm">engine type</em> and
+<em class="firstterm">render type</em>. These two types are represented by strings.</p>
+<p>Each dynamically-loaded module exports several functions which provide
+the public API. These functions are <a class="link" href="pango-Engines.html#script-engine-list" title="script_engine_list ()"><code class="function">script_engine_list()</code></a>,
+<a class="link" href="pango-Engines.html#script-engine-init" title="script_engine_init ()"><code class="function">script_engine_init()</code></a> and script_engine_exit, and
+<a class="link" href="pango-Engines.html#script-engine-create" title="script_engine_create ()"><code class="function">script_engine_create()</code></a>. The latter three functions are used when
+creating engines from the module at run time, while the first
+function is used when building a catalog of all available modules.</p>
+</div>
+<div class="refsect1">
+<a name="pango-Engines.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="script-engine-list"></a><h3>script_engine_list ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+script_engine_list (<em class="parameter"><code><a class="link" href="pango-Engines.html#PangoEngineInfo" title="struct PangoEngineInfo"><span class="type">PangoEngineInfo</span></a> **engines</code></em>,
+                    <em class="parameter"><code><span class="type">int</span> *n_engines</code></em>);</pre>
+<div class="warning"><p><code class="literal">script_engine_list</code> has been deprecated since version 1.38 and should not be used in newly-written code.</p></div>
+<p>Do not use.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="script-engine-list.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engines</p></td>
+<td class="parameter_description"><p>location to store a pointer to an array of engines.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n_engines</p></td>
+<td class="parameter_description"><p>location to store the number of elements in <em class="parameter"><code>engines</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="script-engine-init"></a><h3>script_engine_init ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+script_engine_init (<em class="parameter"><code><span class="type">GTypeModule</span> *module</code></em>);</pre>
+<div class="warning"><p><code class="literal">script_engine_init</code> has been deprecated since version 1.38 and should not be used in newly-written code.</p></div>
+<p>Do not use.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="script-engine-init.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>module</p></td>
+<td class="parameter_description"><p>a <span class="type">GTypeModule</span> structure used to associate any
+GObject types created in this module with the module.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="script-engine-exit"></a><h3>script_engine_exit ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+script_engine_exit (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<div class="warning"><p><code class="literal">script_engine_exit</code> has been deprecated since version 1.38 and should not be used in newly-written code.</p></div>
+<p>Do not use.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="script-engine-create"></a><h3>script_engine_create ()</h3>
+<pre class="programlisting"><a class="link" href="pango-Engines.html#PangoEngine"><span class="returnvalue">PangoEngine</span></a> *
+script_engine_create (<em class="parameter"><code>const <span class="type">char</span> *id</code></em>);</pre>
+<div class="warning"><p><code class="literal">script_engine_create</code> has been deprecated since version 1.38 and should not be used in newly-written code.</p></div>
+<p>Do not use.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="script-engine-create.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>id</p></td>
+<td class="parameter_description"><p>the ID of an engine as reported by script_engine_list.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="pango-Engines.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="PangoEngineInfo"></a><h3>struct PangoEngineInfo</h3>
+<pre class="programlisting">struct PangoEngineInfo {
+  const gchar *id;
+  const gchar *engine_type;
+  const gchar *render_type;
+  PangoEngineScriptInfo *scripts;
+  gint n_scripts;
+};
+</pre>
+<div class="warning"><p><code class="literal">PangoEngineInfo</code> has been deprecated since version 1.38 and should not be used in newly-written code.</p></div>
+<p>The <a class="link" href="pango-Engines.html#PangoEngineInfo" title="struct PangoEngineInfo"><span class="type">PangoEngineInfo</span></a> structure contains information about a particular
+engine. It contains the following fields:</p>
+<div class="refsect3">
+<a name="PangoEngineInfo.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p>const <span class="type">gchar</span> *<em class="structfield"><code><a name="PangoEngineInfo.id"></a>id</code></em>;</p></td>
+<td class="struct_member_description"><p>a unique string ID for the engine.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p>const <span class="type">gchar</span> *<em class="structfield"><code><a name="PangoEngineInfo.engine-type"></a>engine_type</code></em>;</p></td>
+<td class="struct_member_description"><p>a string identifying the engine type.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p>const <span class="type">gchar</span> *<em class="structfield"><code><a name="PangoEngineInfo.render-type"></a>render_type</code></em>;</p></td>
+<td class="struct_member_description"><p>a string identifying the render type.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="pango-Engines.html#PangoEngineScriptInfo" title="struct PangoEngineScriptInfo"><span class="type">PangoEngineScriptInfo</span></a> *<em class="structfield"><code><a name="PangoEngineInfo.scripts"></a>scripts</code></em>;</p></td>
+<td class="struct_member_description"><p>array of scripts this engine supports.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gint</span> <em class="structfield"><code><a name="PangoEngineInfo.n-scripts"></a>n_scripts</code></em>;</p></td>
+<td class="struct_member_description"><p>number of items in <em class="parameter"><code>scripts</code></em>
+.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PangoEngineScriptInfo"></a><h3>struct PangoEngineScriptInfo</h3>
+<pre class="programlisting">struct PangoEngineScriptInfo {
+  PangoScript script;
+  const gchar *langs;
+};
+</pre>
+<div class="warning"><p><code class="literal">PangoEngineScriptInfo</code> has been deprecated since version 1.38 and should not be used in newly-written code.</p></div>
+<p>The <a class="link" href="pango-Engines.html#PangoEngineScriptInfo" title="struct PangoEngineScriptInfo"><span class="type">PangoEngineScriptInfo</span></a> structure contains
+information about how the shaper covers a particular script.</p>
+<div class="refsect3">
+<a name="PangoEngineScriptInfo.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="pango-Scripts-and-Languages.html#PangoScript" title="enum PangoScript"><span class="type">PangoScript</span></a> <em class="structfield"><code><a name="PangoEngineScriptInfo.script"></a>script</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a class="link" href="pango-Scripts-and-Languages.html#PangoScript" title="enum PangoScript"><span class="type">PangoScript</span></a>. The value <a class="link" href="pango-Scripts-and-Languages.html#PANGO-SCRIPT-COMMON:CAPS"><code class="literal">PANGO_SCRIPT_COMMON</code></a> has
+the special meaning here of "all scripts"</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p>const <span class="type">gchar</span> *<em class="structfield"><code><a name="PangoEngineScriptInfo.langs"></a>langs</code></em>;</p></td>
+<td class="struct_member_description"><p>a semicolon separated list of languages that this
+engine handles for this script. This may be empty,
+in which case the engine is saying that it is a
+fallback choice for all languages for this range,
+but should not be used if another engine
+indicates that it is specific for the language for
+a given code point. An entry in this list of "*"
+indicates that this engine is specific to all
+languages for this range.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PangoEngine-struct"></a><h3>struct PangoEngine</h3>
+<pre class="programlisting">struct PangoEngine;</pre>
+<div class="warning"><p><code class="literal">PangoEngine</code> has been deprecated since version 1.38 and should not be used in newly-written code.</p></div>
+<p><a class="link" href="pango-Engines.html#PangoEngine"><span class="type">PangoEngine</span></a> is the base class for all types of language and
+script specific engines. It has no functionality by itself.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PangoEngineClass"></a><h3>struct PangoEngineClass</h3>
+<pre class="programlisting">struct PangoEngineClass {
+};
+</pre>
+<div class="warning"><p><code class="literal">PangoEngineClass</code> has been deprecated since version 1.38 and should not be used in newly-written code.</p></div>
+<p>Class structure for <a class="link" href="pango-Engines.html#PangoEngine"><span class="type">PangoEngine</span></a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-RENDER-TYPE-NONE:CAPS"></a><h3>PANGO_RENDER_TYPE_NONE</h3>
+<pre class="programlisting">#define PANGO_RENDER_TYPE_NONE "PangoRenderNone"
+</pre>
+<div class="warning"><p><code class="literal">PANGO_RENDER_TYPE_NONE</code> has been deprecated since version 1.38 and should not be used in newly-written code.</p></div>
+<p>A string constant defining the render type
+for engines that are not rendering-system specific.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.27</div>
+</body>
+</html>

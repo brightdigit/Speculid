@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>cr-selector: Libcroco Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Libcroco Reference Manual">
+<link rel="up" href="ch01.html" title="Extensive APIs description">
+<link rel="prev" href="libcroco-cr-sel-eng.html" title="cr-sel-eng">
+<link rel="next" href="libcroco-cr-simple-sel.html" title="cr-simple-sel">
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libcroco-cr-selector.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libcroco-cr-sel-eng.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libcroco-cr-simple-sel.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libcroco-cr-selector"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libcroco-cr-selector.top_of_page"></a>cr-selector</span></h2>
+<p>cr-selector</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libcroco-cr-selector.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="returnvalue">CRSelector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-selector.html#cr-selector-new" title="cr_selector_new ()">cr_selector_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="returnvalue">CRSelector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-selector.html#cr-selector-parse-from-buf" title="cr_selector_parse_from_buf ()">cr_selector_parse_from_buf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="returnvalue">CRSelector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-selector.html#cr-selector-append" title="cr_selector_append ()">cr_selector_append</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="returnvalue">CRSelector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-selector.html#cr-selector-append-simple-sel" title="cr_selector_append_simple_sel ()">cr_selector_append_simple_sel</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="returnvalue">CRSelector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-selector.html#cr-selector-prepend" title="cr_selector_prepend ()">cr_selector_prepend</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-selector.html#cr-selector-to-string" title="cr_selector_to_string ()">cr_selector_to_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-selector.html#cr-selector-dump" title="cr_selector_dump ()">cr_selector_dump</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-selector.html#cr-selector-ref" title="cr_selector_ref ()">cr_selector_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-selector.html#cr-selector-unref" title="cr_selector_unref ()">cr_selector_unref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-selector.html#cr-selector-destroy" title="cr_selector_destroy ()">cr_selector_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-selector.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector">CRSelector</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-selector.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-selector.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="cr-selector-new"></a><h3>cr_selector_new ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="returnvalue">CRSelector</span></a> *
+cr_selector_new (<em class="parameter"><code><a class="link" href="libcroco-cr-simple-sel.html#CRSimpleSel" title="struct CRSimpleSel"><span class="type">CRSimpleSel</span></a> *a_sel_expr</code></em>);</pre>
+<p><em class="parameter"><code>a_simple_sel</code></em>
+: the initial simple selector list
+of the current instance of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a>.</p>
+<p>Creates a new instance of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a>.</p>
+<p>Returns the newly built instance of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a>, or
+NULL in case of failure.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-selector-parse-from-buf"></a><h3>cr_selector_parse_from_buf ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="returnvalue">CRSelector</span></a> *
+cr_selector_parse_from_buf (<em class="parameter"><code>const <span class="type">guchar</span> *a_char_buf</code></em>,
+                            <em class="parameter"><code><span class="type">enum CREncoding</span> a_enc</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-selector-append"></a><h3>cr_selector_append ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="returnvalue">CRSelector</span></a> *
+cr_selector_append (<em class="parameter"><code><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> *a_this</code></em>,
+                    <em class="parameter"><code><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> *a_new</code></em>);</pre>
+<p><em class="parameter"><code>a_this</code></em>
+: the current instance of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a>.
+<em class="parameter"><code>a_new</code></em>
+: the instance of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> to be appended.</p>
+<p>Appends a new instance of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> to the current selector list.</p>
+<p>Returns the new list.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-selector-append-simple-sel"></a><h3>cr_selector_append_simple_sel ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="returnvalue">CRSelector</span></a> *
+cr_selector_append_simple_sel (<em class="parameter"><code><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> *a_this</code></em>,
+                               <em class="parameter"><code><a class="link" href="libcroco-cr-simple-sel.html#CRSimpleSel" title="struct CRSimpleSel"><span class="type">CRSimpleSel</span></a> *a_simple_sel</code></em>);</pre>
+<p><em class="parameter"><code>a_this</code></em>
+: the current instance of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a>.
+<em class="parameter"><code>a_simple_sel</code></em>
+: the simple selector to append.</p>
+<p>append a simple selector to the current <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> list.</p>
+<p>Returns the new list or NULL in case of failure.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-selector-prepend"></a><h3>cr_selector_prepend ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="returnvalue">CRSelector</span></a> *
+cr_selector_prepend (<em class="parameter"><code><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> *a_this</code></em>,
+                     <em class="parameter"><code><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> *a_new</code></em>);</pre>
+<p><em class="parameter"><code>a_this</code></em>
+: the current instance of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> list.
+<em class="parameter"><code>a_new</code></em>
+: the instance of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a>.</p>
+<p>Prepends an element to the <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> list.</p>
+<p>Returns the new list.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-selector-to-string"></a><h3>cr_selector_to_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">guchar</span> *
+cr_selector_to_string (<em class="parameter"><code><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> const *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-selector-dump"></a><h3>cr_selector_dump ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+cr_selector_dump (<em class="parameter"><code><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> const *a_this</code></em>,
+                  <em class="parameter"><code><span class="type">FILE</span> *a_fp</code></em>);</pre>
+<p><em class="parameter"><code>a_this</code></em>
+: the current instance of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a>.
+<em class="parameter"><code>a_fp</code></em>
+: the destination file.</p>
+<p>Serializes the current instance of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> to a file.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-selector-ref"></a><h3>cr_selector_ref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+cr_selector_ref (<em class="parameter"><code><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> *a_this</code></em>);</pre>
+<p><em class="parameter"><code>a_this</code></em>
+: the current instance of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a>.</p>
+<p>Increments the ref count of the current instance
+of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-selector-unref"></a><h3>cr_selector_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+cr_selector_unref (<em class="parameter"><code><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> *a_this</code></em>);</pre>
+<p><em class="parameter"><code>a_this</code></em>
+: the current instance of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a>.</p>
+<p>Decrements the ref count of the current instance of
+<a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a>.
+If the ref count reaches zero, the current instance of
+<a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> is destroyed.</p>
+<p>Returns TRUE if this function destroyed the current instance
+of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a>, FALSE otherwise.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-selector-destroy"></a><h3>cr_selector_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+cr_selector_destroy (<em class="parameter"><code><a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a> *a_this</code></em>);</pre>
+<p><em class="parameter"><code>a_this</code></em>
+: the current instance of <a class="link" href="libcroco-cr-selector.html#CRSelector" title="struct CRSelector"><span class="type">CRSelector</span></a>.</p>
+<p>Destroys the selector list.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-selector.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="CRSelector"></a><h3>struct CRSelector</h3>
+<pre class="programlisting">struct CRSelector {
+	/**
+	 *A Selection expression.
+	 *It is a list of basic selectors.
+	 *Each basic selector can be either an element
+	 *selector, an id selector, a class selector, an
+	 *attribute selector, an universal selector etc ...
+	 */
+	CRSimpleSel *simple_sel ;
+
+	/**The next selector list element*/
+	CRSelector *next ;
+	CRSelector *prev ;
+	CRParsingLocation location ;
+	glong ref_count ;
+};
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.25.1</div>
+</body>
+</html>

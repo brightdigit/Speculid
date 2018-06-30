@@ -33,10 +33,18 @@
 #
 #
 DEPS=`otool -L "$BUILT_PRODUCTS_DIR/$EXECUTABLE_PATH" | grep "/opt\|Cellar" | awk -F' ' '{ print $1 }'`
-echo "$BUILT_PRODUCTS_DIR/$EXECUTABLE_PATH"
 for dependency in $DEPS; do
   echo "Installing $dependency"
 #  install -m 755 $dependency "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH"
-      install_name_tool -id @rpath/`basename $dependency` "$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/$dylib"
+  install_name_tool -id @rpath/`basename $dependency` "$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/`basename $dependency`"
   install_name_tool -change $dependency @rpath/`basename $dependency` "$BUILT_PRODUCTS_DIR/$EXECUTABLE_PATH"
+  otool -L "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/`basename $dependency`"
+  BASENAME=`basename $dependency`
+  SUBDEPS=`otool -L "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/$BASENAME" | grep "/opt\|Cellar" | awk -F' ' '{ print $1 }'`
+  for subdependency in $SUBDEPS; do
+    echo "Installing `basename $subdependency` for $BASENAME"
+    install_name_tool -id @rpath/`basename $subdependency` "$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/`basename $subdependency`"
+    install_name_tool -change $dependency @rpath/`basename $subdependency` "$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/$BASENAME"
+  done
+
 done
