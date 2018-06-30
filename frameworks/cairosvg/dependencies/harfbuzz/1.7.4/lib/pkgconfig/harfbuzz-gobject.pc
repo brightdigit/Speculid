@@ -1,0 +1,12 @@
+prefix=/usr/local/Cellar/harfbuzz/1.7.4
+exec_prefix=/usr/local/Cellar/harfbuzz/1.7.4
+libdir=/usr/local/Cellar/harfbuzz/1.7.4/lib
+includedir=/usr/local/Cellar/harfbuzz/1.7.4/include
+
+Name: harfbuzz
+Description: HarfBuzz text shaping library GObject integration
+Version: 1.7.4
+
+Requires: harfbuzz gobject-2.0 glib-2.0
+Libs: -L${libdir} -lharfbuzz-gobject
+Cflags: -I${includedir}/harfbuzz

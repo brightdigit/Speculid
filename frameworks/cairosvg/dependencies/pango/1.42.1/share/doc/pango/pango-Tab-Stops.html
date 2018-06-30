@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Tab Stops: Pango Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="Pango Reference Manual">
+<link rel="up" href="pango.html" title="Basic Pango Interfaces">
+<link rel="prev" href="pango-Text-Attributes.html" title="Text Attributes">
+<link rel="next" href="PangoMarkupFormat.html" title="Text Attribute Markup">
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#pango-Tab-Stops.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#pango-Tab-Stops.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="pango.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="pango-Text-Attributes.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="PangoMarkupFormat.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="pango-Tab-Stops"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="pango-Tab-Stops.top_of_page"></a>Tab Stops</span></h2>
+<p>Tab Stops — Structures for storing tab stops</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="pango-Tab-Stops.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="returnvalue">PangoTabArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="pango-Tab-Stops.html#pango-tab-array-new" title="pango_tab_array_new ()">pango_tab_array_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="returnvalue">PangoTabArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="pango-Tab-Stops.html#pango-tab-array-new-with-positions" title="pango_tab_array_new_with_positions ()">pango_tab_array_new_with_positions</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="returnvalue">PangoTabArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="pango-Tab-Stops.html#pango-tab-array-copy" title="pango_tab_array_copy ()">pango_tab_array_copy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="pango-Tab-Stops.html#pango-tab-array-free" title="pango_tab_array_free ()">pango_tab_array_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="pango-Tab-Stops.html#pango-tab-array-get-size" title="pango_tab_array_get_size ()">pango_tab_array_get_size</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="pango-Tab-Stops.html#pango-tab-array-resize" title="pango_tab_array_resize ()">pango_tab_array_resize</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="pango-Tab-Stops.html#pango-tab-array-set-tab" title="pango_tab_array_set_tab ()">pango_tab_array_set_tab</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="pango-Tab-Stops.html#pango-tab-array-get-tab" title="pango_tab_array_get_tab ()">pango_tab_array_get_tab</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="pango-Tab-Stops.html#pango-tab-array-get-tabs" title="pango_tab_array_get_tabs ()">pango_tab_array_get_tabs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="pango-Tab-Stops.html#pango-tab-array-get-positions-in-pixels" title="pango_tab_array_get_positions_in_pixels ()">pango_tab_array_get_positions_in_pixels</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="PangoTabArray"></a><div class="refsect1">
+<a name="pango-Tab-Stops.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="pango-Tab-Stops.html#PangoTabArray-struct" title="PangoTabArray">PangoTabArray</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Tab-Stops.html#PANGO-TYPE-TAB-ARRAY:CAPS" title="PANGO_TYPE_TAB_ARRAY">PANGO_TYPE_TAB_ARRAY</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="pango-Tab-Stops.html#PangoTabAlign" title="enum PangoTabAlign">PangoTabAlign</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Tab-Stops.html#PANGO-TYPE-TAB-ALIGN:CAPS" title="PANGO_TYPE_TAB_ALIGN">PANGO_TYPE_TAB_ALIGN</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="pango-Tab-Stops.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GBoxed
+    <span class="lineart">╰──</span> PangoTabArray
+    GEnum
+    <span class="lineart">╰──</span> PangoTabAlign
+</pre>
+</div>
+<div class="refsect1">
+<a name="pango-Tab-Stops.description"></a><h2>Description</h2>
+<p>Functions in this section are used to deal with <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a> objects
+that can be used to set tab stop positions in a <a class="link" href="pango-Layout-Objects.html#PangoLayout"><span class="type">PangoLayout</span></a>.</p>
+</div>
+<div class="refsect1">
+<a name="pango-Tab-Stops.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="pango-tab-array-new"></a><h3>pango_tab_array_new ()</h3>
+<pre class="programlisting"><a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="returnvalue">PangoTabArray</span></a> *
+pango_tab_array_new (<em class="parameter"><code><span class="type">gint</span> initial_size</code></em>,
+                     <em class="parameter"><code><span class="type">gboolean</span> positions_in_pixels</code></em>);</pre>
+<p>Creates an array of <em class="parameter"><code>initial_size</code></em>
+ tab stops. Tab stops are specified in
+pixel units if <em class="parameter"><code>positions_in_pixels</code></em>
+ is <code class="literal">TRUE</code>, otherwise in Pango
+units. All stops are initially at position 0.</p>
+<div class="refsect3">
+<a name="pango-tab-array-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>initial_size</p></td>
+<td class="parameter_description"><p>Initial number of tab stops to allocate, can be 0</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>positions_in_pixels</p></td>
+<td class="parameter_description"><p>whether positions are in pixel units</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pango-tab-array-new.returns"></a><h4>Returns</h4>
+<p> the newly allocated <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a>, which should
+be freed with <a class="link" href="pango-Tab-Stops.html#pango-tab-array-free" title="pango_tab_array_free ()"><code class="function">pango_tab_array_free()</code></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pango-tab-array-new-with-positions"></a><h3>pango_tab_array_new_with_positions ()</h3>
+<pre class="programlisting"><a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="returnvalue">PangoTabArray</span></a> *
+pango_tab_array_new_with_positions (<em class="parameter"><code><span class="type">gint</span> size</code></em>,
+                                    <em class="parameter"><code><span class="type">gboolean</span> positions_in_pixels</code></em>,
+                                    <em class="parameter"><code><a class="link" href="pango-Tab-Stops.html#PangoTabAlign" title="enum PangoTabAlign"><span class="type">PangoTabAlign</span></a> first_alignment</code></em>,
+                                    <em class="parameter"><code><span class="type">gint</span> first_position</code></em>,
+                                    <em class="parameter"><code>...</code></em>);</pre>
+<p>This is a convenience function that creates a <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a>
+and allows you to specify the alignment and position of each
+tab stop. You <span class="emphasis"><em>must</em></span> provide an alignment
+and position for <em class="parameter"><code>size</code></em>
+ tab stops.</p>
+<div class="refsect3">
+<a name="pango-tab-array-new-with-positions.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>number of tab stops in the array</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>positions_in_pixels</p></td>
+<td class="parameter_description"><p>whether positions are in pixel units</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_alignment</p></td>
+<td class="parameter_description"><p>alignment of first tab stop</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_position</p></td>
+<td class="parameter_description"><p>position of first tab stop</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>additional alignment/position pairs</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pango-tab-array-new-with-positions.returns"></a><h4>Returns</h4>
+<p> the newly allocated <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a>, which should
+be freed with <a class="link" href="pango-Tab-Stops.html#pango-tab-array-free" title="pango_tab_array_free ()"><code class="function">pango_tab_array_free()</code></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pango-tab-array-copy"></a><h3>pango_tab_array_copy ()</h3>
+<pre class="programlisting"><a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="returnvalue">PangoTabArray</span></a> *
+pango_tab_array_copy (<em class="parameter"><code><a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a> *src</code></em>);</pre>
+<p>Copies a <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a></p>
+<div class="refsect3">
+<a name="pango-tab-array-copy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>src</p></td>
+<td class="parameter_description"><p><a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a> to copy</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pango-tab-array-copy.returns"></a><h4>Returns</h4>
+<p> the newly allocated <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a>, which should
+be freed with <a class="link" href="pango-Tab-Stops.html#pango-tab-array-free" title="pango_tab_array_free ()"><code class="function">pango_tab_array_free()</code></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pango-tab-array-free"></a><h3>pango_tab_array_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pango_tab_array_free (<em class="parameter"><code><a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a> *tab_array</code></em>);</pre>
+<p>Frees a tab array and associated resources.</p>
+<div class="refsect3">
+<a name="pango-tab-array-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>tab_array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pango-tab-array-get-size"></a><h3>pango_tab_array_get_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+pango_tab_array_get_size (<em class="parameter"><code><a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a> *tab_array</code></em>);</pre>
+<p>Gets the number of tab stops in <em class="parameter"><code>tab_array</code></em>
+.</p>
+<div class="refsect3">
+<a name="pango-tab-array-get-size.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>tab_array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pango-tab-array-get-size.returns"></a><h4>Returns</h4>
+<p> the number of tab stops in the array.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pango-tab-array-resize"></a><h3>pango_tab_array_resize ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pango_tab_array_resize (<em class="parameter"><code><a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a> *tab_array</code></em>,
+                        <em class="parameter"><code><span class="type">gint</span> new_size</code></em>);</pre>
+<p>Resizes a tab array. You must subsequently initialize any tabs that
+were added as a result of growing the array.</p>
+<div class="refsect3">
+<a name="pango-tab-array-resize.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>tab_array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>new_size</p></td>
+<td class="parameter_description"><p>new size of the array</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pango-tab-array-set-tab"></a><h3>pango_tab_array_set_tab ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pango_tab_array_set_tab (<em class="parameter"><code><a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a> *tab_array</code></em>,
+                         <em class="parameter"><code><span class="type">gint</span> tab_index</code></em>,
+                         <em class="parameter"><code><a class="link" href="pango-Tab-Stops.html#PangoTabAlign" title="enum PangoTabAlign"><span class="type">PangoTabAlign</span></a> alignment</code></em>,
+                         <em class="parameter"><code><span class="type">gint</span> location</code></em>);</pre>
+<p>Sets the alignment and location of a tab stop.
+<em class="parameter"><code>alignment</code></em>
+ must always be <a class="link" href="pango-Tab-Stops.html#PANGO-TAB-LEFT:CAPS"><span class="type">PANGO_TAB_LEFT</span></a> in the current
+implementation.</p>
+<div class="refsect3">
+<a name="pango-tab-array-set-tab.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>tab_array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tab_index</p></td>
+<td class="parameter_description"><p>the index of a tab stop</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>alignment</p></td>
+<td class="parameter_description"><p>tab alignment</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location</p></td>
+<td class="parameter_description"><p>tab location in Pango units</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pango-tab-array-get-tab"></a><h3>pango_tab_array_get_tab ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pango_tab_array_get_tab (<em class="parameter"><code><a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a> *tab_array</code></em>,
+                         <em class="parameter"><code><span class="type">gint</span> tab_index</code></em>,
+                         <em class="parameter"><code><a class="link" href="pango-Tab-Stops.html#PangoTabAlign" title="enum PangoTabAlign"><span class="type">PangoTabAlign</span></a> *alignment</code></em>,
+                         <em class="parameter"><code><span class="type">gint</span> *location</code></em>);</pre>
+<p>Gets the alignment and position of a tab stop.</p>
+<div class="refsect3">
+<a name="pango-tab-array-get-tab.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>tab_array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tab_index</p></td>
+<td class="parameter_description"><p>tab stop index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>alignment</p></td>
+<td class="parameter_description"><p>location to store alignment, or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location</p></td>
+<td class="parameter_description"><p>location to store tab position, or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pango-tab-array-get-tabs"></a><h3>pango_tab_array_get_tabs ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pango_tab_array_get_tabs (<em class="parameter"><code><a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a> *tab_array</code></em>,
+                          <em class="parameter"><code><a class="link" href="pango-Tab-Stops.html#PangoTabAlign" title="enum PangoTabAlign"><span class="type">PangoTabAlign</span></a> **alignments</code></em>,
+                          <em class="parameter"><code><span class="type">gint</span> **locations</code></em>);</pre>
+<p>If non-<code class="literal">NULL</code>, <em class="parameter"><code>alignments</code></em>
+ and <em class="parameter"><code>locations</code></em>
+ are filled with allocated
+arrays of length <a class="link" href="pango-Tab-Stops.html#pango-tab-array-get-size" title="pango_tab_array_get_size ()"><code class="function">pango_tab_array_get_size()</code></a>. You must free the
+returned array.</p>
+<div class="refsect3">
+<a name="pango-tab-array-get-tabs.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>tab_array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>alignments</p></td>
+<td class="parameter_description"><p>location to store an array of tab
+stop alignments, or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>locations</p></td>
+<td class="parameter_description"><p>location to store an array
+of tab positions, or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pango-tab-array-get-positions-in-pixels"></a><h3>pango_tab_array_get_positions_in_pixels ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+pango_tab_array_get_positions_in_pixels
+                               (<em class="parameter"><code><a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a> *tab_array</code></em>);</pre>
+<p>Returns <code class="literal">TRUE</code> if the tab positions are in pixels, <code class="literal">FALSE</code> if they are
+in Pango units.</p>
+<div class="refsect3">
+<a name="pango-tab-array-get-positions-in-pixels.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>tab_array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pango-tab-array-get-positions-in-pixels.returns"></a><h4>Returns</h4>
+<p> whether positions are in pixels.</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="pango-Tab-Stops.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="PangoTabArray-struct"></a><h3>PangoTabArray</h3>
+<pre class="programlisting">typedef struct _PangoTabArray PangoTabArray;</pre>
+<p>A <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a> struct contains an array
+of tab stops. Each tab stop has an alignment and a position.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-TYPE-TAB-ARRAY:CAPS"></a><h3>PANGO_TYPE_TAB_ARRAY</h3>
+<pre class="programlisting">#define PANGO_TYPE_TAB_ARRAY (pango_tab_array_get_type ())
+</pre>
+<p>The <span class="type">GObject</span> type for <a class="link" href="pango-Tab-Stops.html#PangoTabArray"><span class="type">PangoTabArray</span></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PangoTabAlign"></a><h3>enum PangoTabAlign</h3>
+<p>A <a class="link" href="pango-Tab-Stops.html#PangoTabAlign" title="enum PangoTabAlign"><span class="type">PangoTabAlign</span></a> specifies where a tab stop appears relative to the text.</p>
+<div class="refsect3">
+<a name="PangoTabAlign.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="enum_member_name"><p><a name="PANGO-TAB-LEFT:CAPS"></a>PANGO_TAB_LEFT</p></td>
+<td class="enum_member_description">
+<p>the tab stop appears to the left of the text.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-TYPE-TAB-ALIGN:CAPS"></a><h3>PANGO_TYPE_TAB_ALIGN</h3>
+<pre class="programlisting">#define PANGO_TYPE_TAB_ALIGN (pango_tab_align_get_type ())
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.27</div>
+</body>
+</html>
