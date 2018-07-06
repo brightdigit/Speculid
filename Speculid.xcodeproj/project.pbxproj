@@ -81,7 +81,6 @@
 		B31BD6E920E7A6A400A560C2 /* libffi.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8073F20E5855F00030497 /* libffi.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BD6EA20E7A6A400A560C2 /* libffi.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8074120E5855F00030497 /* libffi.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BD90620E7E0D800A560C2 /* INSTALL_RECEIPT.json in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6ED20E7E0D500A560C2 /* INSTALL_RECEIPT.json */; };
-		B31BD90720E7E0D800A560C2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6EE20E7E0D500A560C2 /* LICENSE */; };
 		B31BD90820E7E0D800A560C2 /* makeconv in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6F020E7E0D500A560C2 /* makeconv */; };
 		B31BD90920E7E0D800A560C2 /* gencnval in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6F120E7E0D500A560C2 /* gencnval */; };
 		B31BD90A20E7E0D800A560C2 /* icu-config in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6F220E7E0D500A560C2 /* icu-config */; };
@@ -328,7 +327,6 @@
 		B31BD9FB20E7E0DA00A560C2 /* gencfu.1 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7F020E7E0D600A560C2 /* gencfu.1 */; };
 		B31BD9FC20E7E0DA00A560C2 /* derb.1 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7F120E7E0D600A560C2 /* derb.1 */; };
 		B31BD9FD20E7E0DA00A560C2 /* install-sh in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7F420E7E0D600A560C2 /* install-sh */; };
-		B31BD9FE20E7E0DA00A560C2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7F520E7E0D600A560C2 /* LICENSE */; };
 		B31BD9FF20E7E0DA00A560C2 /* mh-darwin in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7F720E7E0D600A560C2 /* mh-darwin */; };
 		B31BDA0020E7E0DA00A560C2 /* mkinstalldirs in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7F820E7E0D600A560C2 /* mkinstalldirs */; };
 		B31BDAFC20E7E26200A560C2 /* libicutest.61.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7BB20E7E0D600A560C2 /* libicutest.61.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -1298,7 +1296,6 @@
 		B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B31BD6E820E7A1B400A560C2 /* fix_dylibs_script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = fix_dylibs_script.sh; sourceTree = "<group>"; };
 		B31BD6ED20E7E0D500A560C2 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
-		B31BD6EE20E7E0D500A560C2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B31BD6F020E7E0D500A560C2 /* makeconv */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = makeconv; sourceTree = "<group>"; };
 		B31BD6F120E7E0D500A560C2 /* gencnval */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = gencnval; sourceTree = "<group>"; };
 		B31BD6F220E7E0D500A560C2 /* icu-config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "icu-config"; sourceTree = "<group>"; };
@@ -1545,7 +1542,6 @@
 		B31BD7F020E7E0D600A560C2 /* gencfu.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = gencfu.1; sourceTree = "<group>"; };
 		B31BD7F120E7E0D600A560C2 /* derb.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = derb.1; sourceTree = "<group>"; };
 		B31BD7F420E7E0D600A560C2 /* install-sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "install-sh"; sourceTree = "<group>"; };
-		B31BD7F520E7E0D600A560C2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B31BD7F720E7E0D600A560C2 /* mh-darwin */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mh-darwin"; sourceTree = "<group>"; };
 		B31BD7F820E7E0D600A560C2 /* mkinstalldirs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mkinstalldirs; sourceTree = "<group>"; };
 		B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetBuilder.swift; sourceTree = "<group>"; };
@@ -3401,7 +3397,6 @@
 		B3F804CD20E5820B00030497 /* pango-Modules.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "pango-Modules.html"; sourceTree = "<group>"; };
 		B3F804CE20E5820B00030497 /* PangoRenderer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PangoRenderer.html; sourceTree = "<group>"; };
 		B3F8054020E584B300030497 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
-		B3F8054120E584B300030497 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B3F8054320E584B300030497 /* png-fix-itxt */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "png-fix-itxt"; sourceTree = "<group>"; };
 		B3F8054420E584B300030497 /* libpng16-config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "libpng16-config"; sourceTree = "<group>"; };
 		B3F8054520E584B300030497 /* pngfix */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pngfix; sourceTree = "<group>"; };
@@ -3631,7 +3626,6 @@
 		B3F8065820E5851A00030497 /* pcre-config.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "pcre-config.txt"; sourceTree = "<group>"; };
 		B3F8065920E5851A00030497 /* LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
 		B3F8073220E5855F00030497 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
-		B3F8073320E5855F00030497 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B3F8073520E5855F00030497 /* libffi.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = libffi.rb; sourceTree = "<group>"; };
 		B3F8073620E5855F00030497 /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
 		B3F8073720E5855F00030497 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
@@ -4383,7 +4377,6 @@
 			isa = PBXGroup;
 			children = (
 				B31BD6ED20E7E0D500A560C2 /* INSTALL_RECEIPT.json */,
-				B31BD6EE20E7E0D500A560C2 /* LICENSE */,
 				B31BD6EF20E7E0D500A560C2 /* bin */,
 				B31BD6FB20E7E0D500A560C2 /* .brew */,
 				B31BD6FD20E7E0D500A560C2 /* license.html */,
@@ -4758,7 +4751,6 @@
 			isa = PBXGroup;
 			children = (
 				B31BD7F420E7E0D600A560C2 /* install-sh */,
-				B31BD7F520E7E0D600A560C2 /* LICENSE */,
 				B31BD7F620E7E0D600A560C2 /* config */,
 				B31BD7F820E7E0D600A560C2 /* mkinstalldirs */,
 			);
@@ -12104,7 +12096,6 @@
 			isa = PBXGroup;
 			children = (
 				B3F8054020E584B300030497 /* INSTALL_RECEIPT.json */,
-				B3F8054120E584B300030497 /* LICENSE */,
 				B3F8054220E584B300030497 /* bin */,
 				B3F8054720E584B300030497 /* .brew */,
 				B3F8054920E584B300030497 /* CHANGES */,
@@ -12540,7 +12531,6 @@
 			isa = PBXGroup;
 			children = (
 				B3F8073220E5855F00030497 /* INSTALL_RECEIPT.json */,
-				B3F8073320E5855F00030497 /* LICENSE */,
 				B3F8073420E5855F00030497 /* .brew */,
 				B3F8073620E5855F00030497 /* ChangeLog */,
 				B3F8073720E5855F00030497 /* README */,
@@ -14138,7 +14128,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "speculid" */;
+			buildConfigurationList = B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "Speculid" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -14233,7 +14223,6 @@
 				B31BD91020E7E0D800A560C2 /* genbrk in Resources */,
 				B31BD9F020E7E0DA00A560C2 /* genccode.8 in Resources */,
 				B31BD9FA20E7E0DA00A560C2 /* makeconv.1 in Resources */,
-				B31BD90720E7E0D800A560C2 /* LICENSE in Resources */,
 				B31BD9F820E7E0DA00A560C2 /* gencnval.1 in Resources */,
 				B31BD91420E7E0D800A560C2 /* license.html in Resources */,
 				B31BD9CC20E7E0D900A560C2 /* genccode in Resources */,
@@ -14249,7 +14238,6 @@
 				B31BD9EF20E7E0DA00A560C2 /* gensprep.8 in Resources */,
 				B31BD9CA20E7E0D900A560C2 /* icupkg in Resources */,
 				B31BD90D20E7E0D800A560C2 /* gendict in Resources */,
-				B31BD9FE20E7E0DA00A560C2 /* LICENSE in Resources */,
 				B31BD9C920E7E0D900A560C2 /* gensprep in Resources */,
 				B31BD9F120E7E0DA00A560C2 /* icupkg.8 in Resources */,
 				B31BD91120E7E0D800A560C2 /* derb in Resources */,
@@ -14428,7 +14416,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT/codesign-framework.sh\"";
+			shellScript = "\"$SRCROOT/codesign-framework.sh\"\n";
 		};
 		B3B5E9D61F96AB1B004A6BEB /* warnings */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -14483,7 +14471,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#/Users/leo/Documents/Projects/speculid/fix_dylibs.sh";
+			shellScript = "#/Users/leo/Documents/Projects/speculid/fix_dylibs.sh\n";
 		};
 		BD6A812C7EF5D496661AC259 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -15231,7 +15219,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "speculid" */ = {
+		B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "Speculid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B37C744A1F8C58F300DF505B /* Debug */,
