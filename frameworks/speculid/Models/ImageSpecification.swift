@@ -12,6 +12,7 @@ import Cocoa
     aCoder.encode(removeAlphaChannel, forKey: "removeAlphaChannel")
   }
 
+  // swiftlint:disable identifier_name
   public required init?(coder aDecoder: NSCoder) {
 
     let _file = aDecoder.decodeObject(forKey: "file") as? ImageFileProtocol
@@ -29,6 +30,7 @@ import Cocoa
     self.backgroundColor = backgroundColor
     self.removeAlphaChannel = removeAlphaChannel
   }
+  // swiftlint:enable identifier_name
 
   public let file: ImageFileProtocol
   public let geometryDimension: Geometry?

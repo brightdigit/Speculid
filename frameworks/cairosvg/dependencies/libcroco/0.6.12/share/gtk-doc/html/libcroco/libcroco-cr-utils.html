@@ -1,0 +1,610 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>cr-utils: Libcroco Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Libcroco Reference Manual">
+<link rel="up" href="ch01.html" title="Extensive APIs description">
+<link rel="prev" href="libcroco-cr-token.html" title="cr-token">
+<link rel="next" href="libcroco-libcroco-config.html" title="libcroco-config">
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libcroco-cr-utils.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libcroco-cr-token.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libcroco-libcroco-config.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libcroco-cr-utils"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libcroco-cr-utils.top_of_page"></a>cr-utils</span></h2>
+<p>cr-utils</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libcroco-cr-utils.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-trace" title="cr_utils_trace()">cr_utils_trace</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-trace-info" title="cr_utils_trace_info()">cr_utils_trace_info</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-trace-debug" title="cr_utils_trace_debug()">cr_utils_trace_debug</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-read-char-from-utf8-buf" title="cr_utils_read_char_from_utf8_buf ()">cr_utils_read_char_from_utf8_buf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-ucs1-to-utf8" title="cr_utils_ucs1_to_utf8 ()">cr_utils_ucs1_to_utf8</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-utf8-to-ucs1" title="cr_utils_utf8_to_ucs1 ()">cr_utils_utf8_to_ucs1</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-ucs4-to-utf8" title="cr_utils_ucs4_to_utf8 ()">cr_utils_ucs4_to_utf8</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-utf8-str-len-as-ucs4" title="cr_utils_utf8_str_len_as_ucs4 ()">cr_utils_utf8_str_len_as_ucs4</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-ucs1-str-len-as-utf8" title="cr_utils_ucs1_str_len_as_utf8 ()">cr_utils_ucs1_str_len_as_utf8</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-utf8-str-len-as-ucs1" title="cr_utils_utf8_str_len_as_ucs1 ()">cr_utils_utf8_str_len_as_ucs1</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-ucs4-str-len-as-utf8" title="cr_utils_ucs4_str_len_as_utf8 ()">cr_utils_ucs4_str_len_as_utf8</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-ucs1-str-to-utf8" title="cr_utils_ucs1_str_to_utf8 ()">cr_utils_ucs1_str_to_utf8</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-utf8-str-to-ucs1" title="cr_utils_utf8_str_to_ucs1 ()">cr_utils_utf8_str_to_ucs1</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-utf8-to-ucs4" title="cr_utils_utf8_to_ucs4 ()">cr_utils_utf8_to_ucs4</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-ucs4-str-to-utf8" title="cr_utils_ucs4_str_to_utf8 ()">cr_utils_ucs4_str_to_utf8</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-utf8-str-to-ucs4" title="cr_utils_utf8_str_to_ucs4 ()">cr_utils_utf8_str_to_ucs4</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-is-newline" title="cr_utils_is_newline ()">cr_utils_is_newline</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-is-white-space" title="cr_utils_is_white_space ()">cr_utils_is_white_space</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-is-nonascii" title="cr_utils_is_nonascii ()">cr_utils_is_nonascii</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-is-hexa-char" title="cr_utils_is_hexa_char ()">cr_utils_is_hexa_char</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-dump-n-chars" title="cr_utils_dump_n_chars ()">cr_utils_dump_n_chars</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-dump-n-chars2" title="cr_utils_dump_n_chars2 ()">cr_utils_dump_n_chars2</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-dup-glist-of-string" title="cr_utils_dup_glist_of_string ()">cr_utils_dup_glist_of_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-utils.html#cr-utils-dup-glist-of-cr-string" title="cr_utils_dup_glist_of_cr_string ()">cr_utils_dup_glist_of_cr_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-utils.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus">CRStatus</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="libcroco-cr-utils.html#CRSeekPos" title="enum CRSeekPos">CRSeekPos</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libcroco-cr-utils.html#CROCO-LOG-DOMAIN:CAPS" title="CROCO_LOG_DOMAIN">CROCO_LOG_DOMAIN</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-utils.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-utils.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="cr-utils-trace"></a><h3>cr_utils_trace()</h3>
+<pre class="programlisting">#define             cr_utils_trace(a_log_level, a_msg)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-trace-info"></a><h3>cr_utils_trace_info()</h3>
+<pre class="programlisting">#define             cr_utils_trace_info(a_msg)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-trace-debug"></a><h3>cr_utils_trace_debug()</h3>
+<pre class="programlisting">#define             cr_utils_trace_debug(a_msg)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-read-char-from-utf8-buf"></a><h3>cr_utils_read_char_from_utf8_buf ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_utils_read_char_from_utf8_buf (<em class="parameter"><code>const <span class="type">guchar</span> *a_in</code></em>,
+                                  <em class="parameter"><code><span class="type">gulong</span> a_in_len</code></em>,
+                                  <em class="parameter"><code><span class="type">guint32</span> *a_out</code></em>,
+                                  <em class="parameter"><code><span class="type">gulong</span> *a_consumed</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-ucs1-to-utf8"></a><h3>cr_utils_ucs1_to_utf8 ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_utils_ucs1_to_utf8 (<em class="parameter"><code>const <span class="type">guchar</span> *a_in</code></em>,
+                       <em class="parameter"><code><span class="type">gulong</span> *a_in_len</code></em>,
+                       <em class="parameter"><code><span class="type">guchar</span> *a_out</code></em>,
+                       <em class="parameter"><code><span class="type">gulong</span> *a_out_len</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-utf8-to-ucs1"></a><h3>cr_utils_utf8_to_ucs1 ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_utils_utf8_to_ucs1 (<em class="parameter"><code>const <span class="type">guchar</span> *a_in</code></em>,
+                       <em class="parameter"><code><span class="type">gulong</span> *a_in_len</code></em>,
+                       <em class="parameter"><code><span class="type">guchar</span> *a_out</code></em>,
+                       <em class="parameter"><code><span class="type">gulong</span> *a_out_len</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-ucs4-to-utf8"></a><h3>cr_utils_ucs4_to_utf8 ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_utils_ucs4_to_utf8 (<em class="parameter"><code>const <span class="type">guint32</span> *a_in</code></em>,
+                       <em class="parameter"><code><span class="type">gulong</span> *a_in_len</code></em>,
+                       <em class="parameter"><code><span class="type">guchar</span> *a_out</code></em>,
+                       <em class="parameter"><code><span class="type">gulong</span> *a_out_len</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-utf8-str-len-as-ucs4"></a><h3>cr_utils_utf8_str_len_as_ucs4 ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_utils_utf8_str_len_as_ucs4 (<em class="parameter"><code>const <span class="type">guchar</span> *a_in_start</code></em>,
+                               <em class="parameter"><code>const <span class="type">guchar</span> *a_in_end</code></em>,
+                               <em class="parameter"><code><span class="type">gulong</span> *a_len</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-ucs1-str-len-as-utf8"></a><h3>cr_utils_ucs1_str_len_as_utf8 ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_utils_ucs1_str_len_as_utf8 (<em class="parameter"><code>const <span class="type">guchar</span> *a_in_start</code></em>,
+                               <em class="parameter"><code>const <span class="type">guchar</span> *a_in_end</code></em>,
+                               <em class="parameter"><code><span class="type">gulong</span> *a_len</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-utf8-str-len-as-ucs1"></a><h3>cr_utils_utf8_str_len_as_ucs1 ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_utils_utf8_str_len_as_ucs1 (<em class="parameter"><code>const <span class="type">guchar</span> *a_in_start</code></em>,
+                               <em class="parameter"><code>const <span class="type">guchar</span> *a_in_end</code></em>,
+                               <em class="parameter"><code><span class="type">gulong</span> *a_len</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-ucs4-str-len-as-utf8"></a><h3>cr_utils_ucs4_str_len_as_utf8 ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_utils_ucs4_str_len_as_utf8 (<em class="parameter"><code>const <span class="type">guint32</span> *a_in_start</code></em>,
+                               <em class="parameter"><code>const <span class="type">guint32</span> *a_in_end</code></em>,
+                               <em class="parameter"><code><span class="type">gulong</span> *a_len</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-ucs1-str-to-utf8"></a><h3>cr_utils_ucs1_str_to_utf8 ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_utils_ucs1_str_to_utf8 (<em class="parameter"><code>const <span class="type">guchar</span> *a_in_start</code></em>,
+                           <em class="parameter"><code><span class="type">gulong</span> *a_in_len</code></em>,
+                           <em class="parameter"><code><span class="type">guchar</span> **a_out</code></em>,
+                           <em class="parameter"><code><span class="type">gulong</span> *a_len</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-utf8-str-to-ucs1"></a><h3>cr_utils_utf8_str_to_ucs1 ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_utils_utf8_str_to_ucs1 (<em class="parameter"><code>const <span class="type">guchar</span> *a_in_start</code></em>,
+                           <em class="parameter"><code><span class="type">gulong</span> *a_in_len</code></em>,
+                           <em class="parameter"><code><span class="type">guchar</span> **a_out</code></em>,
+                           <em class="parameter"><code><span class="type">gulong</span> *a_out_len</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-utf8-to-ucs4"></a><h3>cr_utils_utf8_to_ucs4 ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_utils_utf8_to_ucs4 (<em class="parameter"><code>const <span class="type">guchar</span> *a_in</code></em>,
+                       <em class="parameter"><code><span class="type">gulong</span> *a_in_len</code></em>,
+                       <em class="parameter"><code><span class="type">guint32</span> *a_out</code></em>,
+                       <em class="parameter"><code><span class="type">gulong</span> *a_out_len</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-ucs4-str-to-utf8"></a><h3>cr_utils_ucs4_str_to_utf8 ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_utils_ucs4_str_to_utf8 (<em class="parameter"><code>const <span class="type">guint32</span> *a_in</code></em>,
+                           <em class="parameter"><code><span class="type">gulong</span> *a_in_len</code></em>,
+                           <em class="parameter"><code><span class="type">guchar</span> **a_out</code></em>,
+                           <em class="parameter"><code><span class="type">gulong</span> *a_out_len</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-utf8-str-to-ucs4"></a><h3>cr_utils_utf8_str_to_ucs4 ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_utils_utf8_str_to_ucs4 (<em class="parameter"><code>const <span class="type">guchar</span> *a_in</code></em>,
+                           <em class="parameter"><code><span class="type">gulong</span> *a_in_len</code></em>,
+                           <em class="parameter"><code><span class="type">guint32</span> **a_out</code></em>,
+                           <em class="parameter"><code><span class="type">gulong</span> *a_out_len</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-is-newline"></a><h3>cr_utils_is_newline ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+cr_utils_is_newline (<em class="parameter"><code><span class="type">guint32</span> a_char</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-is-white-space"></a><h3>cr_utils_is_white_space ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+cr_utils_is_white_space (<em class="parameter"><code><span class="type">guint32</span> a_char</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-is-nonascii"></a><h3>cr_utils_is_nonascii ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+cr_utils_is_nonascii (<em class="parameter"><code><span class="type">guint32</span> a_char</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-is-hexa-char"></a><h3>cr_utils_is_hexa_char ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+cr_utils_is_hexa_char (<em class="parameter"><code><span class="type">guint32</span> a_char</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-dump-n-chars"></a><h3>cr_utils_dump_n_chars ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+cr_utils_dump_n_chars (<em class="parameter"><code><span class="type">guchar</span> a_char</code></em>,
+                       <em class="parameter"><code><span class="type">FILE</span> *a_fp</code></em>,
+                       <em class="parameter"><code><span class="type">glong</span> a_nb</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-dump-n-chars2"></a><h3>cr_utils_dump_n_chars2 ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+cr_utils_dump_n_chars2 (<em class="parameter"><code><span class="type">guchar</span> a_char</code></em>,
+                        <em class="parameter"><code><span class="type">GString</span> *a_string</code></em>,
+                        <em class="parameter"><code><span class="type">glong</span> a_nb</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-dup-glist-of-string"></a><h3>cr_utils_dup_glist_of_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+cr_utils_dup_glist_of_string (<em class="parameter"><code><span class="type">GList</span> const *a_list</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-utils-dup-glist-of-cr-string"></a><h3>cr_utils_dup_glist_of_cr_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+cr_utils_dup_glist_of_cr_string (<em class="parameter"><code><span class="type">GList</span> const *a_list_of_strings</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-utils.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="CRStatus"></a><h3>enum CRStatus</h3>
+<div class="refsect3">
+<a name="CRStatus.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="CR-OK:CAPS"></a>CR_OK</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-BAD-PARAM-ERROR:CAPS"></a>CR_BAD_PARAM_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-INSTANCIATION-FAILED-ERROR:CAPS"></a>CR_INSTANCIATION_FAILED_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-UNKNOWN-TYPE-ERROR:CAPS"></a>CR_UNKNOWN_TYPE_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-UNKNOWN-PROP-ERROR:CAPS"></a>CR_UNKNOWN_PROP_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-UNKNOWN-PROP-VAL-ERROR:CAPS"></a>CR_UNKNOWN_PROP_VAL_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-UNEXPECTED-POSITION-SCHEME:CAPS"></a>CR_UNEXPECTED_POSITION_SCHEME</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-START-OF-INPUT-ERROR:CAPS"></a>CR_START_OF_INPUT_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-END-OF-INPUT-ERROR:CAPS"></a>CR_END_OF_INPUT_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-OUTPUT-TOO-SHORT-ERROR:CAPS"></a>CR_OUTPUT_TOO_SHORT_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-INPUT-TOO-SHORT-ERROR:CAPS"></a>CR_INPUT_TOO_SHORT_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-OUT-OF-BOUNDS-ERROR:CAPS"></a>CR_OUT_OF_BOUNDS_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-EMPTY-PARSER-INPUT-ERROR:CAPS"></a>CR_EMPTY_PARSER_INPUT_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-ENCODING-ERROR:CAPS"></a>CR_ENCODING_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-ENCODING-NOT-FOUND-ERROR:CAPS"></a>CR_ENCODING_NOT_FOUND_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-PARSING-ERROR:CAPS"></a>CR_PARSING_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-SYNTAX-ERROR:CAPS"></a>CR_SYNTAX_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-NO-ROOT-NODE-ERROR:CAPS"></a>CR_NO_ROOT_NODE_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-NO-TOKEN:CAPS"></a>CR_NO_TOKEN</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-OUT-OF-MEMORY-ERROR:CAPS"></a>CR_OUT_OF_MEMORY_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-PSEUDO-CLASS-SEL-HANDLER-NOT-FOUND-ERROR:CAPS"></a>CR_PSEUDO_CLASS_SEL_HANDLER_NOT_FOUND_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-BAD-PSEUDO-CLASS-SEL-HANDLER-ERROR:CAPS"></a>CR_BAD_PSEUDO_CLASS_SEL_HANDLER_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-ERROR:CAPS"></a>CR_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-FILE-NOT-FOUND-ERROR:CAPS"></a>CR_FILE_NOT_FOUND_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-VALUE-NOT-FOUND-ERROR:CAPS"></a>CR_VALUE_NOT_FOUND_ERROR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CRSeekPos"></a><h3>enum CRSeekPos</h3>
+<div class="refsect3">
+<a name="CRSeekPos.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="CR-SEEK-CUR:CAPS"></a>CR_SEEK_CUR</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-SEEK-BEGIN:CAPS"></a>CR_SEEK_BEGIN</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CR-SEEK-END:CAPS"></a>CR_SEEK_END</p></td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CROCO-LOG-DOMAIN:CAPS"></a><h3>CROCO_LOG_DOMAIN</h3>
+<pre class="programlisting">#define CROCO_LOG_DOMAIN "LIBCROCO"
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.25.1</div>
+</body>
+</html>

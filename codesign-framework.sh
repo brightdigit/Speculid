@@ -67,7 +67,7 @@ echo "${ITEMS}"
 
 # Change the Internal Field Separator (IFS) so that spaces in paths will not cause problems below.
 SAVED_IFS=$IFS
-IFS=$(echo -en "\n\b")
+#IFS=$(echo -en "\n\b")
 
 # Loop through all items.
 for ITEM in $ITEMS;

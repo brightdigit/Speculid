@@ -1,0 +1,886 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>cr-declaration: Libcroco Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Libcroco Reference Manual">
+<link rel="up" href="ch01.html" title="Extensive APIs description">
+<link rel="prev" href="libcroco-cr-cascade.html" title="cr-cascade">
+<link rel="next" href="libcroco-cr-doc-handler.html" title="cr-doc-handler">
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libcroco-cr-declaration.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libcroco-cr-cascade.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libcroco-cr-doc-handler.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libcroco-cr-declaration"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libcroco-cr-declaration.top_of_page"></a>cr-declaration</span></h2>
+<p>cr-declaration</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libcroco-cr-declaration.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-new" title="cr_declaration_new ()">cr_declaration_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-parse-from-buf" title="cr_declaration_parse_from_buf ()">cr_declaration_parse_from_buf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-parse-list-from-buf" title="cr_declaration_parse_list_from_buf ()">cr_declaration_parse_list_from_buf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-append" title="cr_declaration_append ()">cr_declaration_append</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-append2" title="cr_declaration_append2 ()">cr_declaration_append2</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-prepend" title="cr_declaration_prepend ()">cr_declaration_prepend</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-unlink" title="cr_declaration_unlink ()">cr_declaration_unlink</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-dump" title="cr_declaration_dump ()">cr_declaration_dump</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-dump-one" title="cr_declaration_dump_one ()">cr_declaration_dump_one</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-nr-props" title="cr_declaration_nr_props ()">cr_declaration_nr_props</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-get-from-list" title="cr_declaration_get_from_list ()">cr_declaration_get_from_list</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-get-by-prop-name" title="cr_declaration_get_by_prop_name ()">cr_declaration_get_by_prop_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-to-string" title="cr_declaration_to_string ()">cr_declaration_to_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-list-to-string" title="cr_declaration_list_to_string ()">cr_declaration_list_to_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-list-to-string2" title="cr_declaration_list_to_string2 ()">cr_declaration_list_to_string2</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-ref" title="cr_declaration_ref ()">cr_declaration_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-unref" title="cr_declaration_unref ()">cr_declaration_unref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-declaration.html#cr-declaration-destroy" title="cr_declaration_destroy ()">cr_declaration_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-declaration.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration">CRDeclaration</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libcroco-cr-declaration.html#CRStatement" title="CRStatement">CRStatement</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-declaration.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-declaration.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="cr-declaration-new"></a><h3>cr_declaration_new ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+cr_declaration_new (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRStatement" title="CRStatement"><span class="type">CRStatement</span></a> *a_statement</code></em>,
+                    <em class="parameter"><code><a class="link" href="libcroco-cr-string.html#CRString" title="struct CRString"><span class="type">CRString</span></a> *a_property</code></em>,
+                    <em class="parameter"><code><a class="link" href="libcroco-cr-term.html#CRTerm" title="struct CRTerm"><span class="type">CRTerm</span></a> *a_value</code></em>);</pre>
+<p>Returns the newly built instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>, or NULL in
+case of error.</p>
+<p>The returned CRDeclaration takes ownership of <em class="parameter"><code>a_property</code></em>
+ and <em class="parameter"><code>a_value</code></em>
+.
+(E.g. cr_declaration_destroy on this CRDeclaration will also free
+<em class="parameter"><code>a_property</code></em>
+ and <em class="parameter"><code>a_value</code></em>
+.)</p>
+<div class="refsect3">
+<a name="cr-declaration-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_statement</p></td>
+<td class="parameter_description"><p>the statement this declaration belongs to. can be NULL.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_property</p></td>
+<td class="parameter_description"><p>the property string of the declaration</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_value</p></td>
+<td class="parameter_description"><p>the value expression of the declaration.
+Constructor of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-parse-from-buf"></a><h3>cr_declaration_parse_from_buf ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+cr_declaration_parse_from_buf (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRStatement" title="CRStatement"><span class="type">CRStatement</span></a> *a_statement</code></em>,
+                               <em class="parameter"><code>const <span class="type">guchar</span> *a_str</code></em>,
+                               <em class="parameter"><code><span class="type">enum CREncoding</span> a_enc</code></em>);</pre>
+<p>Parses a text buffer that contains
+a css declaration.
+Returns the parsed declaration, or NULL in case of error.</p>
+<div class="refsect3">
+<a name="cr-declaration-parse-from-buf.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_statement</p></td>
+<td class="parameter_description"><p>the parent css2 statement of this
+this declaration. Must be non NULL and of type
+RULESET_STMT (must be a ruleset).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_str</p></td>
+<td class="parameter_description"><p>the string that contains the statement.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_enc</p></td>
+<td class="parameter_description"><p>the encoding of a_str.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-parse-list-from-buf"></a><h3>cr_declaration_parse_list_from_buf ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+cr_declaration_parse_list_from_buf (<em class="parameter"><code>const <span class="type">guchar</span> *a_str</code></em>,
+                                    <em class="parameter"><code><span class="type">enum CREncoding</span> a_enc</code></em>);</pre>
+<p>Parses a ';' separated list of properties declaration.
+Returns the parsed list of declaration, NULL if parsing failed.</p>
+<div class="refsect3">
+<a name="cr-declaration-parse-list-from-buf.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_str</p></td>
+<td class="parameter_description"><p>the input buffer that contains the list of declaration to
+parse.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_enc</p></td>
+<td class="parameter_description"><p>the encoding of a_str</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-append"></a><h3>cr_declaration_append ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+cr_declaration_append (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> *a_this</code></em>,
+                       <em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> *a_new</code></em>);</pre>
+<p>Appends a new declaration to the current declarations list.
+Returns the declaration list with a_new appended to it, or NULL
+in case of error.</p>
+<div class="refsect3">
+<a name="cr-declaration-append.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current declaration list.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_new</p></td>
+<td class="parameter_description"><p>the declaration to append.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-append2"></a><h3>cr_declaration_append2 ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+cr_declaration_append2 (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> *a_this</code></em>,
+                        <em class="parameter"><code><a class="link" href="libcroco-cr-string.html#CRString" title="struct CRString"><span class="type">CRString</span></a> *a_prop</code></em>,
+                        <em class="parameter"><code><a class="link" href="libcroco-cr-term.html#CRTerm" title="struct CRTerm"><span class="type">CRTerm</span></a> *a_value</code></em>);</pre>
+<p>Appends a declaration to the current declaration list.
+Returns the list with the new property appended to it, or NULL in
+case of an error.</p>
+<div class="refsect3">
+<a name="cr-declaration-append2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current declaration list.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_prop</p></td>
+<td class="parameter_description"><p>the property string of the declaration to append.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_value</p></td>
+<td class="parameter_description"><p>the value of the declaration to append.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-prepend"></a><h3>cr_declaration_prepend ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+cr_declaration_prepend (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> *a_this</code></em>,
+                        <em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> *a_new</code></em>);</pre>
+<p>prepends a declaration to the current declaration list.</p>
+<p>Returns the list with a_new prepended or NULL in case of error.</p>
+<div class="refsect3">
+<a name="cr-declaration-prepend.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current declaration list.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_new</p></td>
+<td class="parameter_description"><p>the declaration to prepend.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-unlink"></a><h3>cr_declaration_unlink ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+cr_declaration_unlink (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> *a_decl</code></em>);</pre>
+<p>Unlinks the declaration from the declaration list.
+case of a successfull completion, NULL otherwise.</p>
+<p>Returns a pointer to the unlinked declaration in</p>
+<div class="refsect3">
+<a name="cr-declaration-unlink.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>a_decls</p></td>
+<td class="parameter_description"><p>the declaration to unlink.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-dump"></a><h3>cr_declaration_dump ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+cr_declaration_dump (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> const *a_this</code></em>,
+                     <em class="parameter"><code><span class="type">FILE</span> *a_fp</code></em>,
+                     <em class="parameter"><code><span class="type">glong</span> a_indent</code></em>,
+                     <em class="parameter"><code><span class="type">gboolean</span> a_one_per_line</code></em>);</pre>
+<p>Dumps a declaration list to a file.</p>
+<div class="refsect3">
+<a name="cr-declaration-dump.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_fp</p></td>
+<td class="parameter_description"><p>the destination file.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_indent</p></td>
+<td class="parameter_description"><p>the number of indentation white char.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_one_per_line</p></td>
+<td class="parameter_description"><p>whether to put one declaration per line of not .</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-dump-one"></a><h3>cr_declaration_dump_one ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+cr_declaration_dump_one (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> const *a_this</code></em>,
+                         <em class="parameter"><code><span class="type">FILE</span> *a_fp</code></em>,
+                         <em class="parameter"><code><span class="type">glong</span> a_indent</code></em>);</pre>
+<p>Dumps the first declaration of the declaration list to a file.</p>
+<div class="refsect3">
+<a name="cr-declaration-dump-one.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_fp</p></td>
+<td class="parameter_description"><p>the destination file.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_indent</p></td>
+<td class="parameter_description"><p>the number of indentation white char.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-nr-props"></a><h3>cr_declaration_nr_props ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+cr_declaration_nr_props (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> const *a_this</code></em>);</pre>
+<div class="refsect3">
+<a name="cr-declaration-nr-props.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>.
+Return the number of properties in the declaration</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-get-from-list"></a><h3>cr_declaration_get_from_list ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+cr_declaration_get_from_list (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> *a_this</code></em>,
+                              <em class="parameter"><code><span class="type">int</span> itemnr</code></em>);</pre>
+<p>Use an index to get a CRDeclaration from the declaration list.</p>
+<p>Returns <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> at position itemnr, 
+if itemnr &gt; number of declarations - 1,
+it will return NULL.</p>
+<div class="refsect3">
+<a name="cr-declaration-get-from-list.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>itemnr</p></td>
+<td class="parameter_description"><p>the index into the declaration list.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-get-by-prop-name"></a><h3>cr_declaration_get_by_prop_name ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="returnvalue">CRDeclaration</span></a> *
+cr_declaration_get_by_prop_name (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> *a_this</code></em>,
+                                 <em class="parameter"><code>const <span class="type">guchar</span> *a_str</code></em>);</pre>
+<p>Use property name to get a CRDeclaration from the declaration list.
+Returns <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> with property name a_prop, or NULL if not found.</p>
+<div class="refsect3">
+<a name="cr-declaration-get-by-prop-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_prop</p></td>
+<td class="parameter_description"><p>the property name to search for.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-to-string"></a><h3>cr_declaration_to_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+cr_declaration_to_string (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> const *a_this</code></em>,
+                          <em class="parameter"><code><span class="type">gulong</span> a_indent</code></em>);</pre>
+<p>Serializes the declaration into a string
+Returns the serialized form the declaration. The caller must
+free the string using <code class="function">g_free()</code>.</p>
+<div class="refsect3">
+<a name="cr-declaration-to-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_indent</p></td>
+<td class="parameter_description"><p>the number of indentation white char
+to put before the actual serialisation.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-list-to-string"></a><h3>cr_declaration_list_to_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">guchar</span> *
+cr_declaration_list_to_string (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> const *a_this</code></em>,
+                               <em class="parameter"><code><span class="type">gulong</span> a_indent</code></em>);</pre>
+<p>Serializes the declaration list into a string</p>
+<div class="refsect3">
+<a name="cr-declaration-list-to-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_indent</p></td>
+<td class="parameter_description"><p>the number of indentation white char
+to put before the actual serialisation.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-list-to-string2"></a><h3>cr_declaration_list_to_string2 ()</h3>
+<pre class="programlisting"><span class="returnvalue">guchar</span> *
+cr_declaration_list_to_string2 (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> const *a_this</code></em>,
+                                <em class="parameter"><code><span class="type">gulong</span> a_indent</code></em>,
+                                <em class="parameter"><code><span class="type">gboolean</span> a_one_decl_per_line</code></em>);</pre>
+<p>Serializes the declaration list into a string
+Returns the serialized form the declararation.</p>
+<div class="refsect3">
+<a name="cr-declaration-list-to-string2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_indent</p></td>
+<td class="parameter_description"><p>the number of indentation white char</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_one_decl_per_line</p></td>
+<td class="parameter_description"><p>whether to output one doc per line or not.
+to put before the actual serialisation.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-ref"></a><h3>cr_declaration_ref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+cr_declaration_ref (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> *a_this</code></em>);</pre>
+<p>Increases the ref count of the current instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>.</p>
+<div class="refsect3">
+<a name="cr-declaration-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-unref"></a><h3>cr_declaration_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+cr_declaration_unref (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> *a_this</code></em>);</pre>
+<p>Decrements the ref count of the current instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>.
+If the ref count reaches zero, the current instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>
+if destroyed.
+Returns TRUE if <em class="parameter"><code>a_this</code></em>
+ was destroyed (ref count reached zero),
+FALSE otherwise.</p>
+<div class="refsect3">
+<a name="cr-declaration-unref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-declaration-destroy"></a><h3>cr_declaration_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+cr_declaration_destroy (<em class="parameter"><code><a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a> *a_this</code></em>);</pre>
+<p>Destructor of the declaration list.</p>
+<div class="refsect3">
+<a name="cr-declaration-destroy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <a class="link" href="libcroco-cr-declaration.html#CRDeclaration" title="struct CRDeclaration"><span class="type">CRDeclaration</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-declaration.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="CRDeclaration"></a><h3>struct CRDeclaration</h3>
+<pre class="programlisting">struct CRDeclaration {
+	/**The property.*/
+	CRString *property ;
+
+	/**The value of the property.*/
+	CRTerm *value ;
+	
+	/*the ruleset that contains this declaration*/
+	CRStatement *parent_statement ;
+
+	/*the next declaration*/
+	CRDeclaration *next ;
+
+	/*the previous one declaration*/
+	CRDeclaration *prev ;
+
+	/*does the declaration have the important keyword ?*/
+	gboolean important ;
+
+	glong ref_count ;
+
+	CRParsingLocation location ;
+	/*reserved for future usage*/	
+	gpointer rfu0 ;	
+	gpointer rfu1 ;
+	gpointer rfu2 ;
+	gpointer rfu3 ;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CRStatement"></a><h3>CRStatement</h3>
+<pre class="programlisting">typedef struct {
+	/**
+	 *The type of the statement.
+	 */
+	enum CRStatementType type ;
+
+	union
+	{
+		CRRuleSet *ruleset ;
+		CRAtImportRule *import_rule ;
+		CRAtMediaRule *media_rule ;
+		CRAtPageRule *page_rule ;
+		CRAtCharsetRule *charset_rule ;
+		CRAtFontFaceRule *font_face_rule ;
+	} kind ;
+
+        /*
+         *the specificity of the selector
+         *that matched this statement.
+         *This is only used by the cascading
+         *order determination algorithm.
+         */
+        gulong specificity ;
+
+        /*
+         *the style sheet that contains
+         *this css statement.
+         */
+        CRStyleSheet *parent_sheet ;
+	CRStatement *next ;
+	CRStatement *prev ;
+
+        CRParsingLocation location ;
+
+        /**
+         *a custom pointer useable by
+         *applications that use libcroco.
+         *libcroco itself will never modify
+         *this pointer.
+         */        
+        gpointer app_data ;
+
+        /**
+         *a custom pointer used
+         *by the upper layers of libcroco.
+         *application should never use this
+         *pointer.
+         */
+        gpointer croco_data ;
+} CRStatement;
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.25.1</div>
+</body>
+</html>

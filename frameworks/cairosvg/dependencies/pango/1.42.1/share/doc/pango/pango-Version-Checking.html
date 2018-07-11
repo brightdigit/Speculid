@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Version Checking: Pango Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="Pango Reference Manual">
+<link rel="up" href="lowlevel.html" title="Low Level Functionality">
+<link rel="prev" href="pango-Miscellaneous-Utilities.html" title="Miscellaneous Utilities">
+<link rel="next" href="pango-hierarchy.html" title="Object Hierarchy">
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#pango-Version-Checking.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="lowlevel.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="pango-Miscellaneous-Utilities.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="pango-hierarchy.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="pango-Version-Checking"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="pango-Version-Checking.top_of_page"></a>Version Checking</span></h2>
+<p>Version Checking — Tools for checking Pango version at compile- and run-time.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="pango-Version-Checking.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="pango-Version-Checking.html#PANGO-VERSION-ENCODE:CAPS" title="PANGO_VERSION_ENCODE()">PANGO_VERSION_ENCODE</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="pango-Version-Checking.html#PANGO-VERSION-CHECK:CAPS" title="PANGO_VERSION_CHECK()">PANGO_VERSION_CHECK</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="pango-Version-Checking.html#pango-version" title="pango_version ()">pango_version</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="pango-Version-Checking.html#pango-version-string" title="pango_version_string ()">pango_version_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="pango-Version-Checking.html#pango-version-check" title="pango_version_check ()">pango_version_check</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="pango-Version-Checking.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION:CAPS" title="PANGO_VERSION">PANGO_VERSION</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-MAJOR:CAPS" title="PANGO_VERSION_MAJOR">PANGO_VERSION_MAJOR</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-MINOR:CAPS" title="PANGO_VERSION_MINOR">PANGO_VERSION_MINOR</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-MICRO:CAPS" title="PANGO_VERSION_MICRO">PANGO_VERSION_MICRO</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-STRING:CAPS" title="PANGO_VERSION_STRING">PANGO_VERSION_STRING</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-2:CAPS" title="PANGO_VERSION_1_2">PANGO_VERSION_1_2</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-4:CAPS" title="PANGO_VERSION_1_4">PANGO_VERSION_1_4</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-6:CAPS" title="PANGO_VERSION_1_6">PANGO_VERSION_1_6</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-8:CAPS" title="PANGO_VERSION_1_8">PANGO_VERSION_1_8</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-10:CAPS" title="PANGO_VERSION_1_10">PANGO_VERSION_1_10</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-12:CAPS" title="PANGO_VERSION_1_12">PANGO_VERSION_1_12</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-14:CAPS" title="PANGO_VERSION_1_14">PANGO_VERSION_1_14</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-16:CAPS" title="PANGO_VERSION_1_16">PANGO_VERSION_1_16</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-18:CAPS" title="PANGO_VERSION_1_18">PANGO_VERSION_1_18</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-20:CAPS" title="PANGO_VERSION_1_20">PANGO_VERSION_1_20</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-22:CAPS" title="PANGO_VERSION_1_22">PANGO_VERSION_1_22</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-24:CAPS" title="PANGO_VERSION_1_24">PANGO_VERSION_1_24</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-26:CAPS" title="PANGO_VERSION_1_26">PANGO_VERSION_1_26</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-28:CAPS" title="PANGO_VERSION_1_28">PANGO_VERSION_1_28</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-30:CAPS" title="PANGO_VERSION_1_30">PANGO_VERSION_1_30</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-32:CAPS" title="PANGO_VERSION_1_32">PANGO_VERSION_1_32</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-34:CAPS" title="PANGO_VERSION_1_34">PANGO_VERSION_1_34</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-36:CAPS" title="PANGO_VERSION_1_36">PANGO_VERSION_1_36</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-38:CAPS" title="PANGO_VERSION_1_38">PANGO_VERSION_1_38</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-40:CAPS" title="PANGO_VERSION_1_40">PANGO_VERSION_1_40</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="pango-Version-Checking.html#PANGO-VERSION-1-42:CAPS" title="PANGO_VERSION_1_42">PANGO_VERSION_1_42</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="pango-Version-Checking.description"></a><h2>Description</h2>
+<p>The capital-letter macros defined here can be used to check the version of Pango
+at compile-time, and to <em class="firstterm">encode</em> Pango versions into integers.</p>
+<p>The functions can be used to check the version of the linked Pango library at run-time.</p>
+</div>
+<div class="refsect1">
+<a name="pango-Version-Checking.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="PANGO-VERSION-ENCODE:CAPS"></a><h3>PANGO_VERSION_ENCODE()</h3>
+<pre class="programlisting">#define             PANGO_VERSION_ENCODE(major, minor, micro)</pre>
+<p>This macro encodes the given Pango version into an integer.  The numbers
+returned by <a class="link" href="pango-Version-Checking.html#PANGO-VERSION:CAPS" title="PANGO_VERSION"><code class="literal">PANGO_VERSION</code></a> and <a class="link" href="pango-Version-Checking.html#pango-version" title="pango_version ()"><code class="function">pango_version()</code></a> are encoded using this macro.
+Two encoded version numbers can be compared as integers.</p>
+<div class="refsect3">
+<a name="PANGO-VERSION-ENCODE.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>major</p></td>
+<td class="parameter_description"><p>the major component of the version number</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>minor</p></td>
+<td class="parameter_description"><p>the minor component of the version number</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>micro</p></td>
+<td class="parameter_description"><p>the micro component of the version number</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-CHECK:CAPS"></a><h3>PANGO_VERSION_CHECK()</h3>
+<pre class="programlisting">#define             PANGO_VERSION_CHECK(major,minor,micro)</pre>
+<p>Checks that the version of Pango available at compile-time is not older than
+the provided version number.</p>
+<div class="refsect3">
+<a name="PANGO-VERSION-CHECK.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>major</p></td>
+<td class="parameter_description"><p>the major component of the version number</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>minor</p></td>
+<td class="parameter_description"><p>the minor component of the version number</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>micro</p></td>
+<td class="parameter_description"><p>the micro component of the version number</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pango-version"></a><h3>pango_version ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pango_version (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>This is similar to the macro <a class="link" href="pango-Version-Checking.html#PANGO-VERSION:CAPS" title="PANGO_VERSION"><code class="literal">PANGO_VERSION</code></a> except that
+it returns the encoded version of Pango available at run-time,
+as opposed to the version available at compile-time.</p>
+<p>A version number can be encoded into an integer using
+<a class="link" href="pango-Version-Checking.html#PANGO-VERSION-ENCODE:CAPS" title="PANGO_VERSION_ENCODE()"><code class="function">PANGO_VERSION_ENCODE()</code></a>.</p>
+<div class="refsect3">
+<a name="pango-version.returns"></a><h4>Returns</h4>
+<p> The encoded version of Pango library
+available at run time.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-16.html#api-index-1.16">1.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pango-version-string"></a><h3>pango_version_string ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pango_version_string (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>This is similar to the macro <a class="link" href="pango-Version-Checking.html#PANGO-VERSION-STRING:CAPS" title="PANGO_VERSION_STRING"><code class="literal">PANGO_VERSION_STRING</code></a> except that
+it returns the version of Pango available at run-time, as opposed to
+the version available at compile-time.</p>
+<div class="refsect3">
+<a name="pango-version-string.returns"></a><h4>Returns</h4>
+<p> A string containing the version of Pango library
+available at run time.
+The returned string is owned by Pango and should not be modified
+or freed.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-16.html#api-index-1.16">1.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pango-version-check"></a><h3>pango_version_check ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pango_version_check (<em class="parameter"><code><span class="type">int</span> required_major</code></em>,
+                     <em class="parameter"><code><span class="type">int</span> required_minor</code></em>,
+                     <em class="parameter"><code><span class="type">int</span> required_micro</code></em>);</pre>
+<p>Checks that the Pango library in use is compatible with the
+given version. Generally you would pass in the constants
+<a class="link" href="pango-Version-Checking.html#PANGO-VERSION-MAJOR:CAPS" title="PANGO_VERSION_MAJOR"><code class="literal">PANGO_VERSION_MAJOR</code></a>, <a class="link" href="pango-Version-Checking.html#PANGO-VERSION-MINOR:CAPS" title="PANGO_VERSION_MINOR"><code class="literal">PANGO_VERSION_MINOR</code></a>, <a class="link" href="pango-Version-Checking.html#PANGO-VERSION-MICRO:CAPS" title="PANGO_VERSION_MICRO"><code class="literal">PANGO_VERSION_MICRO</code></a>
+as the three arguments to this function; that produces
+a check that the library in use at run-time is compatible with
+the version of Pango the application or module was compiled against.</p>
+<p>Compatibility is defined by two things: first the version
+of the running library is newer than the version
+<em class="parameter"><code>required_major.required_minor</code></em>
+.<em class="parameter"><code>required_micro</code></em>
+. Second
+the running library must be binary compatible with the
+version <em class="parameter"><code>required_major.required_minor</code></em>
+.<em class="parameter"><code>required_micro</code></em>
+
+(same major version.)</p>
+<p>For compile-time version checking use <a class="link" href="pango-Version-Checking.html#PANGO-VERSION-CHECK:CAPS" title="PANGO_VERSION_CHECK()"><code class="function">PANGO_VERSION_CHECK()</code></a>.</p>
+<div class="refsect3">
+<a name="pango-version-check.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>required_major</p></td>
+<td class="parameter_description"><p>the required major version.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>required_minor</p></td>
+<td class="parameter_description"><p>the required minor version.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>required_micro</p></td>
+<td class="parameter_description"><p>the required major version.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pango-version-check.returns"></a><h4>Returns</h4>
+<p><code class="literal">NULL</code> if the Pango library is compatible
+with the given version, or a string describing the version
+mismatch.  The returned string is owned by Pango and should not
+be modified or freed. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-16.html#api-index-1.16">1.16</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="pango-Version-Checking.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="PANGO-VERSION:CAPS"></a><h3>PANGO_VERSION</h3>
+<pre class="programlisting">#define             PANGO_VERSION</pre>
+<p>The version of Pango available at compile-time, encoded using <a class="link" href="pango-Version-Checking.html#PANGO-VERSION-ENCODE:CAPS" title="PANGO_VERSION_ENCODE()"><code class="function">PANGO_VERSION_ENCODE()</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-MAJOR:CAPS"></a><h3>PANGO_VERSION_MAJOR</h3>
+<pre class="programlisting">#define PANGO_VERSION_MAJOR 1
+</pre>
+<p>The major component of the version of Pango available at compile-time.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-MINOR:CAPS"></a><h3>PANGO_VERSION_MINOR</h3>
+<pre class="programlisting">#define PANGO_VERSION_MINOR 42
+</pre>
+<p>The minor component of the version of Pango available at compile-time.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-MICRO:CAPS"></a><h3>PANGO_VERSION_MICRO</h3>
+<pre class="programlisting">#define PANGO_VERSION_MICRO 1
+</pre>
+<p>The micro component of the version of Pango available at compile-time.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-STRING:CAPS"></a><h3>PANGO_VERSION_STRING</h3>
+<pre class="programlisting">#define PANGO_VERSION_STRING "1.42.1"
+</pre>
+<p>A string literal containing the version of Pango available at compile-time.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-2:CAPS"></a><h3>PANGO_VERSION_1_2</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_2        (G_ENCODE_VERSION (1, 2))
+</pre>
+<p>A macro that evaluates to the 1.2 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-4:CAPS"></a><h3>PANGO_VERSION_1_4</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_4        (G_ENCODE_VERSION (1, 4))
+</pre>
+<p>A macro that evaluates to the 1.4 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-6:CAPS"></a><h3>PANGO_VERSION_1_6</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_6        (G_ENCODE_VERSION (1, 6))
+</pre>
+<p>A macro that evaluates to the 1.6 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-8:CAPS"></a><h3>PANGO_VERSION_1_8</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_8        (G_ENCODE_VERSION (1, 8))
+</pre>
+<p>A macro that evaluates to the 1.8 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-10:CAPS"></a><h3>PANGO_VERSION_1_10</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_10       (G_ENCODE_VERSION (1, 10))
+</pre>
+<p>A macro that evaluates to the 1.10 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-12:CAPS"></a><h3>PANGO_VERSION_1_12</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_12       (G_ENCODE_VERSION (1, 12))
+</pre>
+<p>A macro that evaluates to the 1.12 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-14:CAPS"></a><h3>PANGO_VERSION_1_14</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_14       (G_ENCODE_VERSION (1, 14))
+</pre>
+<p>A macro that evaluates to the 1.14 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-16:CAPS"></a><h3>PANGO_VERSION_1_16</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_16       (G_ENCODE_VERSION (1, 16))
+</pre>
+<p>A macro that evaluates to the 1.16 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-18:CAPS"></a><h3>PANGO_VERSION_1_18</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_18       (G_ENCODE_VERSION (1, 18))
+</pre>
+<p>A macro that evaluates to the 1.18 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-20:CAPS"></a><h3>PANGO_VERSION_1_20</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_20       (G_ENCODE_VERSION (1, 20))
+</pre>
+<p>A macro that evaluates to the 1.20 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-22:CAPS"></a><h3>PANGO_VERSION_1_22</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_22       (G_ENCODE_VERSION (1, 22))
+</pre>
+<p>A macro that evaluates to the 1.22 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-24:CAPS"></a><h3>PANGO_VERSION_1_24</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_24       (G_ENCODE_VERSION (1, 24))
+</pre>
+<p>A macro that evaluates to the 1.24 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-26:CAPS"></a><h3>PANGO_VERSION_1_26</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_26       (G_ENCODE_VERSION (1, 26))
+</pre>
+<p>A macro that evaluates to the 1.26 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-28:CAPS"></a><h3>PANGO_VERSION_1_28</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_28       (G_ENCODE_VERSION (1, 28))
+</pre>
+<p>A macro that evaluates to the 1.28 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-30:CAPS"></a><h3>PANGO_VERSION_1_30</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_30       (G_ENCODE_VERSION (1, 30))
+</pre>
+<p>A macro that evaluates to the 1.30 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-32:CAPS"></a><h3>PANGO_VERSION_1_32</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_32       (G_ENCODE_VERSION (1, 32))
+</pre>
+<p>A macro that evaluates to the 1.32 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-34:CAPS"></a><h3>PANGO_VERSION_1_34</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_34       (G_ENCODE_VERSION (1, 34))
+</pre>
+<p>A macro that evaluates to the 1.34 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-36:CAPS"></a><h3>PANGO_VERSION_1_36</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_36       (G_ENCODE_VERSION (1, 36))
+</pre>
+<p>A macro that evaluates to the 1.36 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-38:CAPS"></a><h3>PANGO_VERSION_1_38</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_38       (G_ENCODE_VERSION (1, 38))
+</pre>
+<p>A macro that evaluates to the 1.38 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-40:CAPS"></a><h3>PANGO_VERSION_1_40</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_40       (G_ENCODE_VERSION (1, 40))
+</pre>
+<p>A macro that evaluates to the 1.40 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PANGO-VERSION-1-42:CAPS"></a><h3>PANGO_VERSION_1_42</h3>
+<pre class="programlisting">#define PANGO_VERSION_1_42       (G_ENCODE_VERSION (1, 42))
+</pre>
+<p>A macro that evaluates to the 2.38 version of Pango, in a format
+that can be used by the C pre-processor.</p>
+<p class="since">Since: 1.42</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.27</div>
+</body>
+</html>

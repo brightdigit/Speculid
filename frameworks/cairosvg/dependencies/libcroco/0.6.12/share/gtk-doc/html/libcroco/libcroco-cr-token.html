@@ -1,0 +1,609 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>cr-token: Libcroco Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Libcroco Reference Manual">
+<link rel="up" href="ch01.html" title="Extensive APIs description">
+<link rel="prev" href="libcroco-cr-tknzr.html" title="cr-tknzr">
+<link rel="next" href="libcroco-cr-utils.html" title="cr-utils">
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libcroco-cr-token.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libcroco-cr-tknzr.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libcroco-cr-utils.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libcroco-cr-token"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libcroco-cr-token.top_of_page"></a>cr-token</span></h2>
+<p>cr-token</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libcroco-cr-token.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="returnvalue">CRToken</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-new" title="cr_token_new ()">cr_token_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-s" title="cr_token_set_s ()">cr_token_set_s</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-cdo" title="cr_token_set_cdo ()">cr_token_set_cdo</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-cdc" title="cr_token_set_cdc ()">cr_token_set_cdc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-includes" title="cr_token_set_includes ()">cr_token_set_includes</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-dashmatch" title="cr_token_set_dashmatch ()">cr_token_set_dashmatch</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-comment" title="cr_token_set_comment ()">cr_token_set_comment</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-string" title="cr_token_set_string ()">cr_token_set_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-ident" title="cr_token_set_ident ()">cr_token_set_ident</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-hash" title="cr_token_set_hash ()">cr_token_set_hash</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-rgb" title="cr_token_set_rgb ()">cr_token_set_rgb</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-import-sym" title="cr_token_set_import_sym ()">cr_token_set_import_sym</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-page-sym" title="cr_token_set_page_sym ()">cr_token_set_page_sym</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-media-sym" title="cr_token_set_media_sym ()">cr_token_set_media_sym</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-font-face-sym" title="cr_token_set_font_face_sym ()">cr_token_set_font_face_sym</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-charset-sym" title="cr_token_set_charset_sym ()">cr_token_set_charset_sym</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-atkeyword" title="cr_token_set_atkeyword ()">cr_token_set_atkeyword</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-important-sym" title="cr_token_set_important_sym ()">cr_token_set_important_sym</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-ems" title="cr_token_set_ems ()">cr_token_set_ems</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-exs" title="cr_token_set_exs ()">cr_token_set_exs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-length" title="cr_token_set_length ()">cr_token_set_length</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-angle" title="cr_token_set_angle ()">cr_token_set_angle</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-time" title="cr_token_set_time ()">cr_token_set_time</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-freq" title="cr_token_set_freq ()">cr_token_set_freq</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-dimen" title="cr_token_set_dimen ()">cr_token_set_dimen</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-percentage" title="cr_token_set_percentage ()">cr_token_set_percentage</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-number" title="cr_token_set_number ()">cr_token_set_number</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-uri" title="cr_token_set_uri ()">cr_token_set_uri</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-function" title="cr_token_set_function ()">cr_token_set_function</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-bc" title="cr_token_set_bc ()">cr_token_set_bc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-bo" title="cr_token_set_bo ()">cr_token_set_bo</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-po" title="cr_token_set_po ()">cr_token_set_po</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-pc" title="cr_token_set_pc ()">cr_token_set_pc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-cbc" title="cr_token_set_cbc ()">cr_token_set_cbc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-cbo" title="cr_token_set_cbo ()">cr_token_set_cbo</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-semicolon" title="cr_token_set_semicolon ()">cr_token_set_semicolon</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-set-delim" title="cr_token_set_delim ()">cr_token_set_delim</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-token.html#cr-token-destroy" title="cr_token_destroy ()">cr_token_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-token.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken">CRToken</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-token.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-token.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="cr-token-new"></a><h3>cr_token_new ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="returnvalue">CRToken</span></a> *
+cr_token_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-s"></a><h3>cr_token_set_s ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_s (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-cdo"></a><h3>cr_token_set_cdo ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_cdo (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-cdc"></a><h3>cr_token_set_cdc ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_cdc (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-includes"></a><h3>cr_token_set_includes ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_includes (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-dashmatch"></a><h3>cr_token_set_dashmatch ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_dashmatch (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-comment"></a><h3>cr_token_set_comment ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_comment (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                      <em class="parameter"><code><a class="link" href="libcroco-cr-string.html#CRString" title="struct CRString"><span class="type">CRString</span></a> *a_str</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-string"></a><h3>cr_token_set_string ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_string (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                     <em class="parameter"><code><a class="link" href="libcroco-cr-string.html#CRString" title="struct CRString"><span class="type">CRString</span></a> *a_str</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-ident"></a><h3>cr_token_set_ident ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_ident (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                    <em class="parameter"><code><a class="link" href="libcroco-cr-string.html#CRString" title="struct CRString"><span class="type">CRString</span></a> *a_ident</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-hash"></a><h3>cr_token_set_hash ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_hash (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                   <em class="parameter"><code><a class="link" href="libcroco-cr-string.html#CRString" title="struct CRString"><span class="type">CRString</span></a> *a_hash</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-rgb"></a><h3>cr_token_set_rgb ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_rgb (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                  <em class="parameter"><code><a class="link" href="libcroco-cr-rgb.html#CRRgb" title="struct CRRgb"><span class="type">CRRgb</span></a> *a_rgb</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-import-sym"></a><h3>cr_token_set_import_sym ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_import_sym (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-page-sym"></a><h3>cr_token_set_page_sym ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_page_sym (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-media-sym"></a><h3>cr_token_set_media_sym ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_media_sym (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-font-face-sym"></a><h3>cr_token_set_font_face_sym ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_font_face_sym (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-charset-sym"></a><h3>cr_token_set_charset_sym ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_charset_sym (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-atkeyword"></a><h3>cr_token_set_atkeyword ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_atkeyword (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                        <em class="parameter"><code><a class="link" href="libcroco-cr-string.html#CRString" title="struct CRString"><span class="type">CRString</span></a> *a_atname</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-important-sym"></a><h3>cr_token_set_important_sym ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_important_sym (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-ems"></a><h3>cr_token_set_ems ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_ems (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                  <em class="parameter"><code><a class="link" href="libcroco-cr-num.html#CRNum" title="struct CRNum"><span class="type">CRNum</span></a> *a_num</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-exs"></a><h3>cr_token_set_exs ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_exs (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                  <em class="parameter"><code><a class="link" href="libcroco-cr-num.html#CRNum" title="struct CRNum"><span class="type">CRNum</span></a> *a_num</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-length"></a><h3>cr_token_set_length ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_length (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                     <em class="parameter"><code><a class="link" href="libcroco-cr-num.html#CRNum" title="struct CRNum"><span class="type">CRNum</span></a> *a_num</code></em>,
+                     <em class="parameter"><code><span class="type">enum CRTokenExtraType</span> a_et</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-angle"></a><h3>cr_token_set_angle ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_angle (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                    <em class="parameter"><code><a class="link" href="libcroco-cr-num.html#CRNum" title="struct CRNum"><span class="type">CRNum</span></a> *a_num</code></em>,
+                    <em class="parameter"><code><span class="type">enum CRTokenExtraType</span> a_et</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-time"></a><h3>cr_token_set_time ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_time (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                   <em class="parameter"><code><a class="link" href="libcroco-cr-num.html#CRNum" title="struct CRNum"><span class="type">CRNum</span></a> *a_num</code></em>,
+                   <em class="parameter"><code><span class="type">enum CRTokenExtraType</span> a_et</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-freq"></a><h3>cr_token_set_freq ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_freq (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                   <em class="parameter"><code><a class="link" href="libcroco-cr-num.html#CRNum" title="struct CRNum"><span class="type">CRNum</span></a> *a_num</code></em>,
+                   <em class="parameter"><code><span class="type">enum CRTokenExtraType</span> a_et</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-dimen"></a><h3>cr_token_set_dimen ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_dimen (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                    <em class="parameter"><code><a class="link" href="libcroco-cr-num.html#CRNum" title="struct CRNum"><span class="type">CRNum</span></a> *a_num</code></em>,
+                    <em class="parameter"><code><a class="link" href="libcroco-cr-string.html#CRString" title="struct CRString"><span class="type">CRString</span></a> *a_dim</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-percentage"></a><h3>cr_token_set_percentage ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_percentage (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                         <em class="parameter"><code><a class="link" href="libcroco-cr-num.html#CRNum" title="struct CRNum"><span class="type">CRNum</span></a> *a_num</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-number"></a><h3>cr_token_set_number ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_number (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                     <em class="parameter"><code><a class="link" href="libcroco-cr-num.html#CRNum" title="struct CRNum"><span class="type">CRNum</span></a> *a_num</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-uri"></a><h3>cr_token_set_uri ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_uri (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                  <em class="parameter"><code><a class="link" href="libcroco-cr-string.html#CRString" title="struct CRString"><span class="type">CRString</span></a> *a_uri</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-function"></a><h3>cr_token_set_function ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_function (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                       <em class="parameter"><code><a class="link" href="libcroco-cr-string.html#CRString" title="struct CRString"><span class="type">CRString</span></a> *a_fun_name</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-bc"></a><h3>cr_token_set_bc ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_bc (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-bo"></a><h3>cr_token_set_bo ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_bo (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-po"></a><h3>cr_token_set_po ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_po (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-pc"></a><h3>cr_token_set_pc ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_pc (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-cbc"></a><h3>cr_token_set_cbc ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_cbc (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-cbo"></a><h3>cr_token_set_cbo ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_cbo (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-semicolon"></a><h3>cr_token_set_semicolon ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_semicolon (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-set-delim"></a><h3>cr_token_set_delim ()</h3>
+<pre class="programlisting">enum <a class="link" href="libcroco-cr-utils.html#CRStatus" title="enum CRStatus"><span class="returnvalue">CRStatus</span></a>
+cr_token_set_delim (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>,
+                    <em class="parameter"><code><span class="type">guint32</span> a_char</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-token-destroy"></a><h3>cr_token_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+cr_token_destroy (<em class="parameter"><code><a class="link" href="libcroco-cr-token.html#CRToken" title="struct CRToken"><span class="type">CRToken</span></a> *a_this</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-token.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="CRToken"></a><h3>struct CRToken</h3>
+<pre class="programlisting">struct CRToken {
+        enum CRTokenType type ;
+        enum CRTokenExtraType extra_type ;
+        CRInputPos pos ;
+
+        union
+        {
+                CRString *str ;
+                CRRgb *rgb ;
+                CRNum *num ;
+                guint32 unichar ;
+        } u ;
+
+        CRString * dimen ;
+        CRParsingLocation location ;
+};
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.25.1</div>
+</body>
+</html>

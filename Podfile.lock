@@ -14,6 +14,15 @@ DEPENDENCIES:
   - SwiftLint
   - SwiftVer
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - RandomKit
+    - ShiftOperations
+    - SwiftFormat
+    - SwiftLint
+    - SwiftVer
+    - Threadly
+
 SPEC CHECKSUMS:
   RandomKit: 380745911c4f7989707489b2ce297194bfcf5031
   ShiftOperations: 702c9aa98d3b20d98dceb71dd8437b562f7ab3ad
@@ -24,4 +33,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 2f47a4ea7df13fb6f6479616c920a18b685187d2
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3
