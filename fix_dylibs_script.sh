@@ -29,7 +29,7 @@ echo $lib
   deps=`otool -L "$dylib" | grep "/opt\|Cellar" | awk -F' ' '{ print $1 }'`
   for dependency in $deps; do
       echo "Fixing $dependency"
-      install_name_tool -id @rpath/`basename $dependency` "$dylib"
+#install_name_tool -id @rpath/`basename $dependency` "$dylib"
       install_name_tool -change $dependency @rpath/`basename $dependency` "$dylib"
 #DEPCOUNT=$((DEPCOUNT+1))
     done
