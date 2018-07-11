@@ -17,7 +17,7 @@
                BlueprintIdentifier = "B37C74881F8C5B5C00DF505B"
                BuildableName = "CairoSVG.framework"
                BlueprintName = "CairoSVG"
-               ReferencedContainer = "container:speculid.xcodeproj">
+               ReferencedContainer = "container:Speculid.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "B3136E8C1F90FD3D0002B7AB"
                BuildableName = "CairoSVGTests.xctest"
                BlueprintName = "CairoSVGTests"
-               ReferencedContainer = "container:speculid.xcodeproj">
+               ReferencedContainer = "container:Speculid.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "B37C74881F8C5B5C00DF505B"
             BuildableName = "CairoSVG.framework"
             BlueprintName = "CairoSVG"
-            ReferencedContainer = "container:speculid.xcodeproj">
+            ReferencedContainer = "container:Speculid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,7 +67,7 @@
             BlueprintIdentifier = "B37C74881F8C5B5C00DF505B"
             BuildableName = "CairoSVG.framework"
             BlueprintName = "CairoSVG"
-            ReferencedContainer = "container:speculid.xcodeproj">
+            ReferencedContainer = "container:Speculid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -85,7 +85,7 @@
             BlueprintIdentifier = "B37C74881F8C5B5C00DF505B"
             BuildableName = "CairoSVG.framework"
             BlueprintName = "CairoSVG"
-            ReferencedContainer = "container:speculid.xcodeproj">
+            ReferencedContainer = "container:Speculid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
