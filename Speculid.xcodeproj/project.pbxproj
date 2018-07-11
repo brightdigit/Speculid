@@ -280,25 +280,19 @@
 		B31BD9CC20E7E0D900A560C2 /* genccode in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7B820E7E0D600A560C2 /* genccode */; };
 		B31BD9CD20E7E0D900A560C2 /* readme.html in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7B920E7E0D600A560C2 /* readme.html */; };
 		B31BD9CE20E7E0DA00A560C2 /* libicutest.61.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7BB20E7E0D600A560C2 /* libicutest.61.dylib */; };
-		B31BD9CF20E7E0DA00A560C2 /* libicui18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7BC20E7E0D600A560C2 /* libicui18n.a */; };
 		B31BD9D020E7E0DA00A560C2 /* icu-uc.pc in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7BE20E7E0D600A560C2 /* icu-uc.pc */; };
 		B31BD9D120E7E0DA00A560C2 /* icu-io.pc in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7BF20E7E0D600A560C2 /* icu-io.pc */; };
 		B31BD9D220E7E0DA00A560C2 /* icu-i18n.pc in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7C020E7E0D600A560C2 /* icu-i18n.pc */; };
 		B31BD9D320E7E0DA00A560C2 /* libicuio.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C120E7E0D600A560C2 /* libicuio.dylib */; };
-		B31BD9D420E7E0DA00A560C2 /* libicutest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C220E7E0D600A560C2 /* libicutest.a */; };
 		B31BD9D520E7E0DA00A560C2 /* libicutest.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C320E7E0D600A560C2 /* libicutest.dylib */; };
 		B31BD9D620E7E0DA00A560C2 /* libicuio.61.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C420E7E0D600A560C2 /* libicuio.61.dylib */; };
-		B31BD9D720E7E0DA00A560C2 /* libicuio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C520E7E0D600A560C2 /* libicuio.a */; };
 		B31BD9D820E7E0DA00A560C2 /* libicudata.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C620E7E0D600A560C2 /* libicudata.dylib */; };
 		B31BD9D920E7E0DA00A560C2 /* libicuio.61.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C720E7E0D600A560C2 /* libicuio.61.1.dylib */; };
-		B31BD9DA20E7E0DA00A560C2 /* libicudata.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C820E7E0D600A560C2 /* libicudata.a */; };
 		B31BD9DB20E7E0DA00A560C2 /* libicutu.61.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C920E7E0D600A560C2 /* libicutu.61.dylib */; };
 		B31BD9DC20E7E0DA00A560C2 /* libicui18n.61.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7CA20E7E0D600A560C2 /* libicui18n.61.1.dylib */; };
 		B31BD9DD20E7E0DA00A560C2 /* libicutu.61.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7CB20E7E0D600A560C2 /* libicutu.61.1.dylib */; };
 		B31BD9DE20E7E0DA00A560C2 /* libicudata.61.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7CC20E7E0D600A560C2 /* libicudata.61.dylib */; };
 		B31BD9DF20E7E0DA00A560C2 /* libicuuc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7CD20E7E0D600A560C2 /* libicuuc.dylib */; };
-		B31BD9E020E7E0DA00A560C2 /* libicuuc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7CE20E7E0D600A560C2 /* libicuuc.a */; };
-		B31BD9E120E7E0DA00A560C2 /* libicutu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7CF20E7E0D600A560C2 /* libicutu.a */; };
 		B31BD9E220E7E0DA00A560C2 /* libicutu.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7D020E7E0D600A560C2 /* libicutu.dylib */; };
 		B31BD9E320E7E0DA00A560C2 /* libicui18n.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7D120E7E0D600A560C2 /* libicui18n.dylib */; };
 		B31BD9E420E7E0DA00A560C2 /* libicui18n.61.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7D220E7E0D600A560C2 /* libicui18n.61.dylib */; };
@@ -865,8 +859,6 @@
 		B3F804F920E5820B00030497 /* libpangoft2-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8048820E5820B00030497 /* libpangoft2-1.0.0.dylib */; };
 		B3F804FD20E5820B00030497 /* libpangocairo-1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8048D20E5820B00030497 /* libpangocairo-1.0.dylib */; };
 		B3F804FE20E5820B00030497 /* libpangocairo-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8048E20E5820B00030497 /* libpangocairo-1.0.0.dylib */; };
-		B3F804FF20E5820B00030497 /* libpangoft2-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8048F20E5820B00030497 /* libpangoft2-1.0.a */; };
-		B3F8050020E5820B00030497 /* libpangocairo-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8049020E5820B00030497 /* libpangocairo-1.0.a */; };
 		B3F8050120E5820B00030497 /* libpangoft2-1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8049120E5820B00030497 /* libpangoft2-1.0.dylib */; };
 		B3F8050220E5820B00030497 /* libpango-1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8049220E5820B00030497 /* libpango-1.0.dylib */; };
 		B3F8050620E5820B00030497 /* libpango-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8049720E5820B00030497 /* libpango-1.0.a */; };
@@ -882,8 +874,6 @@
 		B3F8056F20E584B300030497 /* png.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8054F20E584B300030497 /* png.h */; };
 		B3F8057020E584B300030497 /* pnglibconf.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8055020E584B300030497 /* pnglibconf.h */; };
 		B3F8057120E584B300030497 /* pngconf.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8055120E584B300030497 /* pngconf.h */; };
-		B3F8057620E584B300030497 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8055820E584B300030497 /* libpng16.a */; };
-		B3F8057720E584B300030497 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8055920E584B300030497 /* libpng.a */; };
 		B3F8057820E584B300030497 /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8055A20E584B300030497 /* libpng16.16.dylib */; };
 		B3F8057920E584B300030497 /* libpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8055B20E584B300030497 /* libpng.dylib */; };
 		B3F8057A20E584B300030497 /* libpng16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8055C20E584B300030497 /* libpng16.dylib */; };
@@ -897,18 +887,13 @@
 		B3F8066A20E5851A00030497 /* libpcre.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8059620E5851900030497 /* libpcre.1.dylib */; };
 		B3F8067020E5851A00030497 /* libpcreposix.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8059D20E5851900030497 /* libpcreposix.0.dylib */; };
 		B3F8067120E5851A00030497 /* libpcre.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8059E20E5851900030497 /* libpcre.dylib */; };
-		B3F8067220E5851A00030497 /* libpcre16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8059F20E5851900030497 /* libpcre16.a */; };
 		B3F8067320E5851A00030497 /* libpcrecpp.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F805A020E5851900030497 /* libpcrecpp.0.dylib */; };
 		B3F8067420E5851A00030497 /* libpcreposix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F805A120E5851900030497 /* libpcreposix.dylib */; };
-		B3F8067520E5851A00030497 /* libpcre32.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F805A220E5851900030497 /* libpcre32.a */; };
 		B3F8067620E5851A00030497 /* libpcre16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F805A320E5851900030497 /* libpcre16.0.dylib */; };
 		B3F8067720E5851A00030497 /* libpcre32.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F805A420E5851900030497 /* libpcre32.dylib */; };
 		B3F8067820E5851A00030497 /* libpcre16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F805A520E5851900030497 /* libpcre16.dylib */; };
-		B3F8067920E5851A00030497 /* libpcreposix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F805A620E5851900030497 /* libpcreposix.a */; };
 		B3F8067A20E5851A00030497 /* libpcrecpp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F805A720E5851900030497 /* libpcrecpp.dylib */; };
 		B3F8067B20E5851A00030497 /* libpcre32.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F805A820E5851900030497 /* libpcre32.0.dylib */; };
-		B3F8067C20E5851A00030497 /* libpcre.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F805A920E5851900030497 /* libpcre.a */; };
-		B3F8067D20E5851A00030497 /* libpcrecpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F805AA20E5851900030497 /* libpcrecpp.a */; };
 		B3F8072620E5853700030497 /* libpcre.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8059620E5851900030497 /* libpcre.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3F8072720E5853700030497 /* libpcreposix.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8059D20E5851900030497 /* libpcreposix.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3F8072820E5853700030497 /* libpcre.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8059E20E5851900030497 /* libpcre.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -922,7 +907,6 @@
 		B3F8075120E5855F00030497 /* ffitarget.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8073D20E5855F00030497 /* ffitarget.h */; };
 		B3F8075220E5855F00030497 /* ffi.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8073E20E5855F00030497 /* ffi.h */; };
 		B3F8075320E5855F00030497 /* libffi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8073F20E5855F00030497 /* libffi.dylib */; };
-		B3F8075420E5855F00030497 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8074020E5855F00030497 /* libffi.a */; };
 		B3F8075520E5855F00030497 /* libffi.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8074120E5855F00030497 /* libffi.6.dylib */; };
 		B3F807BE20E5858200030497 /* cr-parser.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8076820E5858100030497 /* cr-parser.h */; };
 		B3F807BF20E5858200030497 /* cr-token.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8076920E5858100030497 /* cr-token.h */; };
@@ -978,7 +962,6 @@
 		B3F808BA20E585C000030497 /* fribidi-shape.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8082720E585BF00030497 /* fribidi-shape.h */; };
 		B3F808BB20E585C000030497 /* fribidi-joining-types-list.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8082820E585BF00030497 /* fribidi-joining-types-list.h */; };
 		B3F808C120E585C000030497 /* libfribidi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8083020E585BF00030497 /* libfribidi.dylib */; };
-		B3F808C220E585C000030497 /* libfribidi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8083120E585BF00030497 /* libfribidi.a */; };
 		B3F808C320E585C000030497 /* libfribidi.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8083220E585BF00030497 /* libfribidi.0.dylib */; };
 		B3F80B0320E585E900030497 /* hb-buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8093320E585E800030497 /* hb-buffer.h */; };
 		B3F80B0420E585E900030497 /* hb-set.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8093420E585E800030497 /* hb-set.h */; };
@@ -1011,14 +994,10 @@
 		B3F80B1F20E585E900030497 /* hb-ot-math.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8094F20E585E800030497 /* hb-ot-math.h */; };
 		B3F80B2020E585EA00030497 /* hb-icu.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8095020E585E800030497 /* hb-icu.h */; };
 		B3F80B2120E585EA00030497 /* hb-ft.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8095120E585E800030497 /* hb-ft.h */; };
-		B3F80B2620E585EA00030497 /* libharfbuzz-icu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8095720E585E800030497 /* libharfbuzz-icu.a */; };
 		B3F80B2720E585EA00030497 /* libharfbuzz-icu.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8095820E585E800030497 /* libharfbuzz-icu.dylib */; };
 		B3F80B2820E585EA00030497 /* libharfbuzz-subset.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8095920E585E800030497 /* libharfbuzz-subset.0.dylib */; };
 		B3F80B2D20E585EA00030497 /* libharfbuzz-gobject.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8095F20E585E800030497 /* libharfbuzz-gobject.0.dylib */; };
-		B3F80B2E20E585EA00030497 /* libharfbuzz-gobject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8096020E585E800030497 /* libharfbuzz-gobject.a */; };
 		B3F80B3020E585EA00030497 /* libharfbuzz.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8096420E585E800030497 /* libharfbuzz.0.dylib */; };
-		B3F80B3120E585EA00030497 /* libharfbuzz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8096520E585E800030497 /* libharfbuzz.a */; };
-		B3F80B3220E585EA00030497 /* libharfbuzz-subset.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8096620E585E800030497 /* libharfbuzz-subset.a */; };
 		B3F80B3320E585EA00030497 /* libharfbuzz-gobject.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8096720E585E800030497 /* libharfbuzz-gobject.dylib */; };
 		B3F80B3520E585EA00030497 /* libharfbuzz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8096A20E585E800030497 /* libharfbuzz.dylib */; };
 		B3F80B3620E585EA00030497 /* libharfbuzz-icu.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8096B20E585E800030497 /* libharfbuzz-icu.0.dylib */; };
@@ -4017,13 +3996,9 @@
 				B3F80B3720E585EA00030497 /* libharfbuzz-subset.dylib in Frameworks */,
 				B3F80B2720E585EA00030497 /* libharfbuzz-icu.dylib in Frameworks */,
 				B3F80B2820E585EA00030497 /* libharfbuzz-subset.0.dylib in Frameworks */,
-				B31BD9CF20E7E0DA00A560C2 /* libicui18n.a in Frameworks */,
 				B3F807DE20E5858200030497 /* libcroco-0.6.dylib in Frameworks */,
 				B3F807E020E5858200030497 /* libcroco-0.6.3.dylib in Frameworks */,
-				B31BD9DA20E7E0DA00A560C2 /* libicudata.a in Frameworks */,
-				B31BD9E120E7E0DA00A560C2 /* libicutu.a in Frameworks */,
 				B3F8075320E5855F00030497 /* libffi.dylib in Frameworks */,
-				B3F808C220E585C000030497 /* libfribidi.a in Frameworks */,
 				B31BD9CE20E7E0DA00A560C2 /* libicutest.61.dylib in Frameworks */,
 				B31BD9D320E7E0DA00A560C2 /* libicuio.dylib in Frameworks */,
 				B31BD9D520E7E0DA00A560C2 /* libicutest.dylib in Frameworks */,
@@ -4061,61 +4036,44 @@
 				B3E2117C20E568D0009EA554 /* librsvg-2.2.dylib in Frameworks */,
 				B3F8050220E5820B00030497 /* libpango-1.0.dylib in Frameworks */,
 				B3E204B820E568C3009EA554 /* libpixman-1.0.dylib in Frameworks */,
-				B3F8050020E5820B00030497 /* libpangocairo-1.0.a in Frameworks */,
 				B3F8050120E5820B00030497 /* libpangoft2-1.0.dylib in Frameworks */,
 				B3F8067620E5851A00030497 /* libpcre16.0.dylib in Frameworks */,
-				B3F804FF20E5820B00030497 /* libpangoft2-1.0.a in Frameworks */,
 				B3F804F820E5820B00030497 /* libpango-1.0.0.dylib in Frameworks */,
 				B3E20A0020E568C8009EA554 /* libgettextlib.dylib in Frameworks */,
 				B3F8067720E5851A00030497 /* libpcre32.dylib in Frameworks */,
 				B3F8067320E5851A00030497 /* libpcrecpp.0.dylib in Frameworks */,
 				B3E206EB20E568C5009EA554 /* libgmodule-2.0.0.dylib in Frameworks */,
 				B3E2079E20E568C6009EA554 /* libcairo-gobject.dylib in Frameworks */,
-				B3F80B3220E585EA00030497 /* libharfbuzz-subset.a in Frameworks */,
 				B3F8067B20E5851A00030497 /* libpcre32.0.dylib in Frameworks */,
 				B3E2079C20E568C6009EA554 /* libcairo-trace.dylib in Frameworks */,
 				B3F8066A20E5851A00030497 /* libpcre.1.dylib in Frameworks */,
-				B3F80B2E20E585EA00030497 /* libharfbuzz-gobject.a in Frameworks */,
 				B3E206E720E568C5009EA554 /* libgio-2.0.dylib in Frameworks */,
 				B3E20A0420E568C8009EA554 /* libintl.8.dylib in Frameworks */,
 				205A5AF735ED0AFE6D8E3753 /* Pods_CairoSVG.framework in Frameworks */,
 				B3E206E820E568C5009EA554 /* libglib-2.0.dylib in Frameworks */,
 				B3E206EE20E568C5009EA554 /* libgthread-2.0.0.dylib in Frameworks */,
-				B3F8057620E584B300030497 /* libpng16.a in Frameworks */,
-				B3F8067220E5851A00030497 /* libpcre16.a in Frameworks */,
 				B3E207F620E568C6009EA554 /* libfontconfig.1.dylib in Frameworks */,
 				B3E207F520E568C6009EA554 /* libfontconfig.dylib in Frameworks */,
 				B3E204B620E568C3009EA554 /* libpixman-1.dylib in Frameworks */,
 				B3F8050620E5820B00030497 /* libpango-1.0.a in Frameworks */,
 				B3F807E120E5858200030497 /* libcroco-0.6.a in Frameworks */,
 				B3E2050E20E568C3009EA554 /* libgdk_pixbuf-2.0.0.dylib in Frameworks */,
-				B3F8075420E5855F00030497 /* libffi.a in Frameworks */,
 				B3E206DB20E568C5009EA554 /* libgthread-2.0.dylib in Frameworks */,
-				B31BD9D420E7E0DA00A560C2 /* libicutest.a in Frameworks */,
 				B3F804FE20E5820B00030497 /* libpangocairo-1.0.0.dylib in Frameworks */,
 				B3F8067A20E5851A00030497 /* libpcrecpp.dylib in Frameworks */,
 				B3E20A0C20E568C8009EA554 /* libgettextsrc-0.19.8.1.dylib in Frameworks */,
-				B3F8067C20E5851A00030497 /* libpcre.a in Frameworks */,
-				B3F8067920E5851A00030497 /* libpcreposix.a in Frameworks */,
 				B3F8067420E5851A00030497 /* libpcreposix.dylib in Frameworks */,
 				B3E2079A20E568C6009EA554 /* libcairo-trace.0.dylib in Frameworks */,
 				B3F804FD20E5820B00030497 /* libpangocairo-1.0.dylib in Frameworks */,
-				B31BD9D720E7E0DA00A560C2 /* libicuio.a in Frameworks */,
-				B3F80B2620E585EA00030497 /* libharfbuzz-icu.a in Frameworks */,
 				B3E204F220E568C3009EA554 /* libfreetype.6.dylib in Frameworks */,
 				B3E20A0E20E568C8009EA554 /* libgettextsrc.dylib in Frameworks */,
-				B3F8067520E5851A00030497 /* libpcre32.a in Frameworks */,
 				B3F804F920E5820B00030497 /* libpangoft2-1.0.0.dylib in Frameworks */,
-				B31BD9E020E7E0DA00A560C2 /* libicuuc.a in Frameworks */,
 				B3F8067820E5851A00030497 /* libpcre16.dylib in Frameworks */,
 				B3E204EF20E568C3009EA554 /* libfreetype.dylib in Frameworks */,
-				B3F8057720E584B300030497 /* libpng.a in Frameworks */,
 				B3E206E620E568C5009EA554 /* libglib-2.0.0.dylib in Frameworks */,
 				B3E206F020E568C5009EA554 /* libgio-2.0.0.dylib in Frameworks */,
 				B3E2079120E568C6009EA554 /* libcairo-gobject.2.dylib in Frameworks */,
 				B3E206D920E568C5009EA554 /* libgmodule-2.0.dylib in Frameworks */,
-				B3F8067D20E5851A00030497 /* libpcrecpp.a in Frameworks */,
-				B3F80B3120E585EA00030497 /* libharfbuzz.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

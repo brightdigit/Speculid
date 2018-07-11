@@ -12,9 +12,7 @@ public enum SpeculidCommandArgumentSet: Equatable {
   }
 
   case help
-  // swiftlint:disable:next identifier_name
   case unknown([String])
   case version
-  // swiftlint:disable:next identifier_name
   case file(URL)
 }
