@@ -17,6 +17,7 @@ public class ImageFile: NSObject, ImageFileProtocol, NSSecureCoding {
     aCoder.encode(fileFormat.imageFileFormat.rawValue, forKey: "fileFormatValue")
   }
 
+  // swiftlint:disable identifier_name
   public required init?(coder aDecoder: NSCoder) {
     let _url = aDecoder.decodeObject(forKey: "url") as? URL
     let _fileFormatValue = aDecoder.decodeObject(forKey: "fileFormatValue") as? UInt
@@ -28,7 +29,7 @@ public class ImageFile: NSObject, ImageFileProtocol, NSSecureCoding {
     self.url = url
     self.fileFormat = fileFormat
   }
-
+  // swiftlint:enable identifier_name
   public let url: URL
   public let fileFormat: FileFormat
   public init(url: URL, fileFormat: FileFormat) {

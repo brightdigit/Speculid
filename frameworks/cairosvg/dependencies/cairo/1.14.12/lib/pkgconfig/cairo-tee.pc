@@ -1,0 +1,12 @@
+prefix=/usr/local/Cellar/cairo/1.14.12
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: cairo-tee
+Description: tee surface backend for cairo graphics library
+Version: 1.14.12
+
+Requires: cairo 
+Libs:  
+Cflags: -I${includedir}/cairo 

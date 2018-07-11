@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="Librsvg Reference Manual" link="index.html" author="" name="rsvg" version="2" language="c" online="http://library.gnome.org/devel/rsvg/index.html">
+  <chapters>
+    <sub name="API Reference" link="rsvg.html">
+      <sub name="Overview of Librsvg's API" link="ch01.html"/>
+      <sub name="RsvgHandle" link="rsvg-RsvgHandle.html"/>
+      <sub name="Using RSVG with GIO" link="rsvg-Using-RSVG-with-GIO.html"/>
+      <sub name="Using RSVG with cairo" link="rsvg-Using-RSVG-with-cairo.html"/>
+      <sub name="Using RSVG with GdkPixbuf" link="rsvg-Using-RSVG-with-GdkPixbuf.html"/>
+      <sub name="Version check and feature tests" link="rsvg-Version-check-and-feature-tests.html"/>
+    </sub>
+    <sub name="Object Hierarchy" link="object-tree.html"/>
+    <sub name="API Index" link="api-index-full.html"/>
+    <sub name="Index of deprecated symbols" link="api-index-deprecated.html"/>
+    <sub name="Index of new symbols in 2.4" link="api-index-2-4.html"/>
+    <sub name="Index of new symbols in 2.8" link="api-index-2-8.html"/>
+    <sub name="Index of new symbols in 2.9" link="api-index-2-9.html"/>
+    <sub name="Index of new symbols in 2.14" link="api-index-2-14.html"/>
+    <sub name="Index of new symbols in 2.22" link="api-index-2-22.html"/>
+    <sub name="Index of new symbols in 2.32" link="api-index-2-32.html"/>
+    <sub name="Index of new symbols in 2.32" link="api-index-2-36.html"/>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+    <sub name="Licence" link="licence.html"/>
+  </chapters>
+  <functions>
+    <keyword type="function" name="rsvg_error_quark ()" link="rsvg-RsvgHandle.html#rsvg-error-quark"/>
+    <keyword type="function" name="rsvg_cleanup ()" link="rsvg-RsvgHandle.html#rsvg-cleanup" since="2.36"/>
+    <keyword type="function" name="rsvg_set_default_dpi ()" link="rsvg-RsvgHandle.html#rsvg-set-default-dpi" since="2.8"/>
+    <keyword type="function" name="rsvg_set_default_dpi_x_y ()" link="rsvg-RsvgHandle.html#rsvg-set-default-dpi-x-y" since="2.8"/>
+    <keyword type="function" name="rsvg_handle_set_dpi ()" link="rsvg-RsvgHandle.html#rsvg-handle-set-dpi" since="2.8"/>
+    <keyword type="function" name="rsvg_handle_set_dpi_x_y ()" link="rsvg-RsvgHandle.html#rsvg-handle-set-dpi-x-y" since="2.8"/>
+    <keyword type="function" name="rsvg_handle_new ()" link="rsvg-RsvgHandle.html#rsvg-handle-new"/>
+    <keyword type="function" name="rsvg_handle_new_with_flags ()" link="rsvg-RsvgHandle.html#rsvg-handle-new-with-flags" since="2.36"/>
+    <keyword type="function" name="rsvg_handle_write ()" link="rsvg-RsvgHandle.html#rsvg-handle-write"/>
+    <keyword type="function" name="rsvg_handle_close ()" link="rsvg-RsvgHandle.html#rsvg-handle-close"/>
+    <keyword type="function" name="rsvg_handle_get_base_uri ()" link="rsvg-RsvgHandle.html#rsvg-handle-get-base-uri" since="2.8"/>
+    <keyword type="function" name="rsvg_handle_set_base_uri ()" link="rsvg-RsvgHandle.html#rsvg-handle-set-base-uri" since="2.9"/>
+    <keyword type="function" name="rsvg_handle_get_dimensions ()" link="rsvg-RsvgHandle.html#rsvg-handle-get-dimensions" since="2.14"/>
+    <keyword type="function" name="rsvg_handle_get_dimensions_sub ()" link="rsvg-RsvgHandle.html#rsvg-handle-get-dimensions-sub" since="2.22"/>
+    <keyword type="function" name="rsvg_handle_get_position_sub ()" link="rsvg-RsvgHandle.html#rsvg-handle-get-position-sub" since="2.22"/>
+    <keyword type="function" name="rsvg_handle_has_sub ()" link="rsvg-RsvgHandle.html#rsvg-handle-has-sub" since="2.22"/>
+    <keyword type="function" name="rsvg_handle_get_title ()" link="rsvg-RsvgHandle.html#rsvg-handle-get-title" deprecated="2.36" since="2.4"/>
+    <keyword type="function" name="rsvg_handle_get_desc ()" link="rsvg-RsvgHandle.html#rsvg-handle-get-desc" deprecated="2.36" since="2.4"/>
+    <keyword type="function" name="rsvg_handle_get_metadata ()" link="rsvg-RsvgHandle.html#rsvg-handle-get-metadata" deprecated="2.36" since="2.9"/>
+    <keyword type="function" name="rsvg_handle_new_from_data ()" link="rsvg-RsvgHandle.html#rsvg-handle-new-from-data" since="2.14"/>
+    <keyword type="function" name="rsvg_handle_new_from_file ()" link="rsvg-RsvgHandle.html#rsvg-handle-new-from-file" since="2.14"/>
+    <keyword type="function" name="rsvg_error_get_type ()" link="rsvg-RsvgHandle.html#rsvg-error-get-type"/>
+    <keyword type="function" name="rsvg_init ()" link="rsvg-RsvgHandle.html#rsvg-init" deprecated="2.36: Use g_type_init()" since="2.9"/>
+    <keyword type="function" name="rsvg_term ()" link="rsvg-RsvgHandle.html#rsvg-term" deprecated="2.36" since="2.9"/>
+    <keyword type="function" name="rsvg_handle_free ()" link="rsvg-RsvgHandle.html#rsvg-handle-free" deprecated="Use g_object_unref() instead."/>
+    <keyword type="function" name="rsvg_handle_set_size_callback ()" link="rsvg-RsvgHandle.html#rsvg-handle-set-size-callback" deprecated=""/>
+    <keyword type="enum" name="enum RsvgError" link="rsvg-RsvgHandle.html#RsvgError"/>
+    <keyword type="macro" name="RSVG_ERROR" link="rsvg-RsvgHandle.html#RSVG-ERROR:CAPS"/>
+    <keyword type="struct" name="struct RsvgHandle" link="rsvg-RsvgHandle.html#RsvgHandle"/>
+    <keyword type="typedef" name="RsvgHandlePrivate" link="rsvg-RsvgHandle.html#RsvgHandlePrivate"/>
+    <keyword type="struct" name="struct RsvgHandleClass" link="rsvg-RsvgHandle.html#RsvgHandleClass"/>
+    <keyword type="struct" name="struct RsvgDimensionData" link="rsvg-RsvgHandle.html#RsvgDimensionData"/>
+    <keyword type="struct" name="struct RsvgPositionData" link="rsvg-RsvgHandle.html#RsvgPositionData"/>
+    <keyword type="macro" name="RSVG_TYPE_ERROR" link="rsvg-RsvgHandle.html#RSVG-TYPE-ERROR:CAPS"/>
+    <keyword type="function" name="rsvg_handle_set_base_gfile ()" link="rsvg-Using-RSVG-with-GIO.html#rsvg-handle-set-base-gfile" since="2.32"/>
+    <keyword type="function" name="rsvg_handle_read_stream_sync ()" link="rsvg-Using-RSVG-with-GIO.html#rsvg-handle-read-stream-sync" since="2.32"/>
+    <keyword type="function" name="rsvg_handle_new_from_gfile_sync ()" link="rsvg-Using-RSVG-with-GIO.html#rsvg-handle-new-from-gfile-sync" since="2.32"/>
+    <keyword type="function" name="rsvg_handle_new_from_stream_sync ()" link="rsvg-Using-RSVG-with-GIO.html#rsvg-handle-new-from-stream-sync" since="2.32"/>
+    <keyword type="enum" name="enum RsvgHandleFlags" link="rsvg-Using-RSVG-with-GIO.html#RsvgHandleFlags"/>
+    <keyword type="function" name="rsvg_handle_render_cairo ()" link="rsvg-Using-RSVG-with-cairo.html#rsvg-handle-render-cairo" since="2.14"/>
+    <keyword type="function" name="rsvg_handle_render_cairo_sub ()" link="rsvg-Using-RSVG-with-cairo.html#rsvg-handle-render-cairo-sub" since="2.14"/>
+    <keyword type="function" name="rsvg_handle_get_pixbuf ()" link="rsvg-Using-RSVG-with-GdkPixbuf.html#rsvg-handle-get-pixbuf"/>
+    <keyword type="function" name="rsvg_handle_get_pixbuf_sub ()" link="rsvg-Using-RSVG-with-GdkPixbuf.html#rsvg-handle-get-pixbuf-sub" since="2.14"/>
+    <keyword type="function" name="rsvg_pixbuf_from_file ()" link="rsvg-Using-RSVG-with-GdkPixbuf.html#rsvg-pixbuf-from-file" deprecated="Set up a cairo matrix and use rsvg_handle_new_from_file() + rsvg_handle_render_cairo() instead."/>
+    <keyword type="function" name="rsvg_pixbuf_from_file_at_zoom ()" link="rsvg-Using-RSVG-with-GdkPixbuf.html#rsvg-pixbuf-from-file-at-zoom" deprecated="Set up a cairo matrix and use rsvg_handle_new_from_file() + rsvg_handle_render_cairo() instead."/>
+    <keyword type="function" name="rsvg_pixbuf_from_file_at_size ()" link="rsvg-Using-RSVG-with-GdkPixbuf.html#rsvg-pixbuf-from-file-at-size" deprecated="Set up a cairo matrix and use rsvg_handle_new_from_file() + rsvg_handle_render_cairo() instead."/>
+    <keyword type="function" name="rsvg_pixbuf_from_file_at_max_size ()" link="rsvg-Using-RSVG-with-GdkPixbuf.html#rsvg-pixbuf-from-file-at-max-size" deprecated="Set up a cairo matrix and use rsvg_handle_new_from_file() + rsvg_handle_render_cairo() instead."/>
+    <keyword type="function" name="rsvg_pixbuf_from_file_at_zoom_with_max ()" link="rsvg-Using-RSVG-with-GdkPixbuf.html#rsvg-pixbuf-from-file-at-zoom-with-max" deprecated="Set up a cairo matrix and use rsvg_handle_new_from_file() + rsvg_handle_render_cairo() instead."/>
+    <keyword type="macro" name="LIBRSVG_CHECK_VERSION()" link="rsvg-Version-check-and-feature-tests.html#LIBRSVG-CHECK-VERSION:CAPS"/>
+    <keyword type="macro" name="LIBRSVG_CHECK_FEATURE()" link="rsvg-Version-check-and-feature-tests.html#LIBRSVG-CHECK-FEATURE:CAPS"/>
+    <keyword type="macro" name="LIBRSVG_MAJOR_VERSION" link="rsvg-Version-check-and-feature-tests.html#LIBRSVG-MAJOR-VERSION:CAPS"/>
+    <keyword type="macro" name="LIBRSVG_MINOR_VERSION" link="rsvg-Version-check-and-feature-tests.html#LIBRSVG-MINOR-VERSION:CAPS"/>
+    <keyword type="macro" name="LIBRSVG_MICRO_VERSION" link="rsvg-Version-check-and-feature-tests.html#LIBRSVG-MICRO-VERSION:CAPS"/>
+    <keyword type="macro" name="LIBRSVG_VERSION" link="rsvg-Version-check-and-feature-tests.html#LIBRSVG-VERSION:CAPS"/>
+    <keyword type="macro" name="LIBRSVG_HAVE_SVGZ" link="rsvg-Version-check-and-feature-tests.html#LIBRSVG-HAVE-SVGZ:CAPS"/>
+    <keyword type="macro" name="LIBRSVG_HAVE_CSS" link="rsvg-Version-check-and-feature-tests.html#LIBRSVG-HAVE-CSS:CAPS"/>
+    <keyword type="constant" name="RSVG_ERROR_FAILED" link="rsvg-RsvgHandle.html#RSVG-ERROR-FAILED:CAPS"/>
+    <keyword type="constant" name="RSVG_HANDLE_FLAGS_NONE" link="rsvg-Using-RSVG-with-GIO.html#RSVG-HANDLE-FLAGS-NONE:CAPS"/>
+    <keyword type="constant" name="RSVG_HANDLE_FLAG_UNLIMITED" link="rsvg-Using-RSVG-with-GIO.html#RSVG-HANDLE-FLAG-UNLIMITED:CAPS"/>
+    <keyword type="constant" name="RSVG_HANDLE_FLAG_KEEP_IMAGE_DATA" link="rsvg-Using-RSVG-with-GIO.html#RSVG-HANDLE-FLAG-KEEP-IMAGE-DATA:CAPS"/>
+    <keyword type="member" name="RsvgHandle.parent" link="rsvg-RsvgHandle.html#RsvgHandle.parent"/>
+    <keyword type="member" name="RsvgHandleClass.parent" link="rsvg-RsvgHandle.html#RsvgHandleClass.parent"/>
+    <keyword type="member" name="RsvgDimensionData.width" link="rsvg-RsvgHandle.html#RsvgDimensionData.width"/>
+    <keyword type="member" name="RsvgDimensionData.height" link="rsvg-RsvgHandle.html#RsvgDimensionData.height"/>
+    <keyword type="member" name="RsvgDimensionData.em" link="rsvg-RsvgHandle.html#RsvgDimensionData.em"/>
+    <keyword type="member" name="RsvgDimensionData.ex" link="rsvg-RsvgHandle.html#RsvgDimensionData.ex"/>
+    <keyword type="member" name="RsvgPositionData.x" link="rsvg-RsvgHandle.html#RsvgPositionData.x"/>
+    <keyword type="member" name="RsvgPositionData.y" link="rsvg-RsvgHandle.html#RsvgPositionData.y"/>
+  </functions>
+</book>

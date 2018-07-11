@@ -1,0 +1,1348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RsvgHandle: Librsvg Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.0">
+<link rel="home" href="index.html" title="Librsvg Reference Manual">
+<link rel="up" href="rsvg.html" title="Part I. API Reference">
+<link rel="prev" href="ch01.html" title="Overview of Librsvg's API">
+<link rel="next" href="rsvg-Using-RSVG-with-GIO.html" title="Using RSVG with GIO">
+<meta name="generator" content="GTK-Doc V1.26 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#rsvg-RsvgHandle.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="rsvg.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="rsvg-Using-RSVG-with-GIO.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="rsvg-RsvgHandle"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="rsvg-RsvgHandle.top_of_page"></a>RsvgHandle</span></h2>
+<p>RsvgHandle — Loads SVG data into memory.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="rsvg-RsvgHandle.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-error-quark">rsvg_error_quark</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-cleanup">rsvg_cleanup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-set-default-dpi">rsvg_set_default_dpi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-set-default-dpi-x-y">rsvg_set_default_dpi_x_y</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-set-dpi">rsvg_handle_set_dpi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-set-dpi-x-y">rsvg_handle_set_dpi_x_y</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="returnvalue">RsvgHandle</span></a> *
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-new">rsvg_handle_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="returnvalue">RsvgHandle</span></a> *
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-new-with-flags">rsvg_handle_new_with_flags</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-write">rsvg_handle_write</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-close">rsvg_handle_close</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-get-base-uri">rsvg_handle_get_base_uri</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-set-base-uri">rsvg_handle_set_base_uri</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-get-dimensions">rsvg_handle_get_dimensions</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-get-dimensions-sub">rsvg_handle_get_dimensions_sub</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-get-position-sub">rsvg_handle_get_position_sub</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-has-sub">rsvg_handle_has_sub</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-get-title">rsvg_handle_get_title</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-get-desc">rsvg_handle_get_desc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-get-metadata">rsvg_handle_get_metadata</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="returnvalue">RsvgHandle</span></a> *
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-new-from-data">rsvg_handle_new_from_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="returnvalue">RsvgHandle</span></a> *
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-new-from-file">rsvg_handle_new_from_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-error-get-type">rsvg_error_get_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-init">rsvg_init</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-term">rsvg_term</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-free">rsvg_handle_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a href="rsvg-RsvgHandle.html#rsvg-handle-set-size-callback">rsvg_handle_set_size_callback</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="rsvg-RsvgHandle.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a href="rsvg-RsvgHandle.html#RsvgError">RsvgError</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a href="rsvg-RsvgHandle.html#RSVG-ERROR:CAPS">RSVG_ERROR</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a href="rsvg-RsvgHandle.html#RsvgHandle">RsvgHandle</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a href="rsvg-RsvgHandle.html#RsvgHandlePrivate">RsvgHandlePrivate</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a href="rsvg-RsvgHandle.html#RsvgHandleClass">RsvgHandleClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a href="rsvg-RsvgHandle.html#RsvgDimensionData">RsvgDimensionData</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a href="rsvg-RsvgHandle.html#RsvgPositionData">RsvgPositionData</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a href="rsvg-RsvgHandle.html#RSVG-TYPE-ERROR:CAPS">RSVG_TYPE_ERROR</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="rsvg-RsvgHandle.description"></a><h2>Description</h2>
+<p>This is the main entry point into the librsvg library.  An RsvgHandle is an
+object that represents SVG data in memory.  Your program creates an
+RsvgHandle from an SVG file, or from a memory buffer that contains SVG data,
+or in the most general form, from a <a href="/usr/share/gtk-doc/html/gio/GInputStream.html#GInputStream-struct"><span class="type">GInputStream</span></a> that will provide SVG data.</p>
+<p>Librsvg supports reading SVG 1.1 data.  It also
+supports SVGZ files, which is just an SVG stream compressed with the GZIP
+algorithm.</p>
+<div class="refsect2">
+<a name="id-1.2.4.5.4"></a><h3>The "base file" and resolving references to external files</h3>
+<p>When you load an SVG, librsvg needs to know the location of the "base file"
+for it.  This is so that librsvg can determine the location of referenced
+entities.  For example, say you have an SVG in <code class="filename">/foo/bar/foo.svg</code>
+and that it has an image element like this:</p>
+<div class="informalexample"><pre class="programlisting">
+&lt;image xlink:href="resources/foo.png" .../&gt;
+</pre></div>
+<p></p>
+<p>In this case, librsvg needs to know the location of the toplevel
+<code class="filename">/foo/bar/foo.svg</code> so that it can generate the appropriate
+reference to <code class="filename">/foo/bar/resources/foo.png</code>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.5.4.6"></a><h4>Security and locations of referenced files</h4>
+<p>When processing an SVG, librsvg will only load referenced files if they are
+in the same directory as the base file, or in a subdirectory of it.  That is,
+if the base file is <code class="filename">/foo/bar/baz.svg</code>, then librsvg will
+only try to load referenced files (from SVG's "image" element, for example,
+or from content included through XML entities) if those files are in
+<code class="filename">/foo/bar/*</code> or in
+<code class="filename">/foo/bar/*/.../*</code>.  This is so that malicious
+SVG files cannot include files that are in a directory above.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="id-1.2.4.5.5"></a><h3>Loading an SVG with GIO</h3>
+<p>If you have a <a href="/usr/share/gtk-doc/html/gio/GFile.html#GFile-struct"><span class="type">GFile</span></a> that stands for an SVG file, you can simply call
+<a href="rsvg-Using-RSVG-with-GIO.html#rsvg-handle-new-from-gfile-sync"><code class="function">rsvg_handle_new_from_gfile_sync()</code></a> to load an RsvgHandle from it.</p>
+<p>Alternatively, if you have a <a href="/usr/share/gtk-doc/html/gio/GInputStream.html#GInputStream-struct"><span class="type">GInputStream</span></a>, you can use
+<a href="rsvg-Using-RSVG-with-GIO.html#rsvg-handle-new-from-stream-sync"><code class="function">rsvg_handle_new_from_stream_sync()</code></a>.</p>
+<p>Both of those methods allow specifying a <a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a>, so the loading
+process can be cancelled from another thread.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="id-1.2.4.5.6"></a><h3>Loading an SVG without GIO</h3>
+<p>You can load an RsvgHandle from a simple filename or URI with
+<a href="rsvg-RsvgHandle.html#rsvg-handle-new-from-file"><code class="function">rsvg_handle_new_from_file()</code></a>.  Note that this is a blocking operation; there
+is no way to cancel it if loading a remote URI takes a long time.</p>
+<p>Alternatively, you can create an empty RsvgHandle with <a href="rsvg-RsvgHandle.html#rsvg-handle-new"><code class="function">rsvg_handle_new()</code></a> or
+<a href="rsvg-RsvgHandle.html#rsvg-handle-new-with-flags"><code class="function">rsvg_handle_new_with_flags()</code></a>.  The first function is equivalent to using
+<a href="rsvg-Using-RSVG-with-GIO.html#RSVG-HANDLE-FLAGS-NONE:CAPS"><span class="type">RSVG_HANDLE_FLAGS_NONE</span></a> on the second one.  These functions give you back an
+empty RsvgHandle, which is ready for you to feed it SVG data.  You can do
+this with <a href="rsvg-RsvgHandle.html#rsvg-handle-write"><code class="function">rsvg_handle_write()</code></a> and <a href="rsvg-RsvgHandle.html#rsvg-handle-close"><code class="function">rsvg_handle_close()</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="id-1.2.4.5.7"></a><h3>Resolution of the rendered image (dots per inch, or DPI)</h3>
+<p>SVG images can contain dimensions like "<code class="literal">5 cm</code>" or
+"<code class="literal">2 pt</code>" that must be converted from physical units
+into device units.  To do this, librsvg needs to know the actual dots per
+inch (DPI) of your target device.</p>
+<p>The recommended way to set the DPI is to use <a href="rsvg-RsvgHandle.html#rsvg-handle-set-dpi"><code class="function">rsvg_handle_set_dpi()</code></a> or
+<a href="rsvg-RsvgHandle.html#rsvg-handle-set-dpi-x-y"><code class="function">rsvg_handle_set_dpi_x_y()</code></a> on an RsvgHandle before rendering it.</p>
+<p>Alternatively, you can use <a href="rsvg-RsvgHandle.html#rsvg-set-default-dpi"><code class="function">rsvg_set_default_dpi()</code></a> or
+<a href="rsvg-RsvgHandle.html#rsvg-set-default-dpi-x-y"><code class="function">rsvg_set_default_dpi_x_y()</code></a> <span class="emphasis"><em>before</em></span> creating any
+RsvgHandle objects.  These functions will make RsvgHandle objects created
+afterwards to have the default DPI value you specified.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="id-1.2.4.5.8"></a><h3>Rendering</h3>
+<p>The preferred way to render an already-loaded RsvgHandle is to use
+<a href="rsvg-Using-RSVG-with-cairo.html#rsvg-handle-render-cairo"><code class="function">rsvg_handle_render_cairo()</code></a>.  Please see its documentation for details.</p>
+<p>Alternatively, you can use <a href="rsvg-Using-RSVG-with-GdkPixbuf.html#rsvg-handle-get-pixbuf"><code class="function">rsvg_handle_get_pixbuf()</code></a> to directly obtain a
+<a href="/usr/share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct"><span class="type">GdkPixbuf</span></a> with the rendered image.  This is simple, but it does not let you
+control the size at which the SVG will be rendered.  It will just be rendered
+at the size which <a href="rsvg-RsvgHandle.html#rsvg-handle-get-dimensions"><code class="function">rsvg_handle_get_dimensions()</code></a> would return, which depends on
+the dimensions that librsvg is able to compute from the SVG data.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="rsvg-RsvgHandle.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="rsvg-error-quark"></a><h3>rsvg_error_quark ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+rsvg_error_quark (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>The error domain for RSVG</p>
+<div class="refsect3">
+<a name="rsvg-error-quark.returns"></a><h4>Returns</h4>
+<p> The error domain</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-cleanup"></a><h3>rsvg_cleanup ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+rsvg_cleanup (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>This function should not be called from normal programs.
+See <code class="function">xmlCleanupParser()</code> for more information.</p>
+<p class="since">Since: 2.36</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-set-default-dpi"></a><h3>rsvg_set_default_dpi ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+rsvg_set_default_dpi (<em class="parameter"><code><span class="type">double</span> dpi</code></em>);</pre>
+<p>Sets the DPI for the all future outgoing pixbufs. Common values are
+75, 90, and 300 DPI. Passing a number &lt;= 0 to <em class="parameter"><code>dpi</code></em>
+ will
+reset the DPI to whatever the default value happens to be.</p>
+<div class="refsect3">
+<a name="rsvg-set-default-dpi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>dpi</p></td>
+<td class="parameter_description"><p>Dots Per Inch (aka Pixels Per Inch)</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-set-default-dpi-x-y"></a><h3>rsvg_set_default_dpi_x_y ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+rsvg_set_default_dpi_x_y (<em class="parameter"><code><span class="type">double</span> dpi_x</code></em>,
+                          <em class="parameter"><code><span class="type">double</span> dpi_y</code></em>);</pre>
+<p>Sets the DPI for the all future outgoing pixbufs. Common values are
+75, 90, and 300 DPI. Passing a number &lt;= 0 to <em class="parameter"><code>dpi</code></em>
+ will
+reset the DPI to whatever the default value happens to be.</p>
+<div class="refsect3">
+<a name="rsvg-set-default-dpi-x-y.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dpi_x</p></td>
+<td class="parameter_description"><p>Dots Per Inch (aka Pixels Per Inch)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dpi_y</p></td>
+<td class="parameter_description"><p>Dots Per Inch (aka Pixels Per Inch)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-set-dpi"></a><h3>rsvg_handle_set_dpi ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+rsvg_handle_set_dpi (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>,
+                     <em class="parameter"><code><span class="type">double</span> dpi</code></em>);</pre>
+<p>Sets the DPI for the outgoing pixbuf. Common values are
+75, 90, and 300 DPI. Passing a number &lt;= 0 to <em class="parameter"><code>dpi</code></em>
+ will
+reset the DPI to whatever the default value happens to be.</p>
+<div class="refsect3">
+<a name="rsvg-handle-set-dpi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>An <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dpi</p></td>
+<td class="parameter_description"><p>Dots Per Inch (aka Pixels Per Inch)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-set-dpi-x-y"></a><h3>rsvg_handle_set_dpi_x_y ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+rsvg_handle_set_dpi_x_y (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>,
+                         <em class="parameter"><code><span class="type">double</span> dpi_x</code></em>,
+                         <em class="parameter"><code><span class="type">double</span> dpi_y</code></em>);</pre>
+<p>Sets the DPI for the outgoing pixbuf. Common values are
+75, 90, and 300 DPI. Passing a number &lt;= 0 to <span class="type">dpi_x</span> or <em class="parameter"><code>dpi_y</code></em>
+ will
+reset the DPI to whatever the default value happens to be.</p>
+<div class="refsect3">
+<a name="rsvg-handle-set-dpi-x-y.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>An <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dpi_x</p></td>
+<td class="parameter_description"><p>Dots Per Inch (aka Pixels Per Inch)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dpi_y</p></td>
+<td class="parameter_description"><p>Dots Per Inch (aka Pixels Per Inch)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-new"></a><h3>rsvg_handle_new ()</h3>
+<pre class="programlisting"><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="returnvalue">RsvgHandle</span></a> *
+rsvg_handle_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Returns a new rsvg handle.  Must be freed with <em class="parameter"><code>g_object_unref</code></em>
+.  This
+handle can be used for dynamically loading an image.  You need to feed it
+data using <em class="parameter"><code>rsvg_handle_write</code></em>
+, then call <em class="parameter"><code>rsvg_handle_close</code></em>
+ when done.
+Afterwords, you can render it using Cairo or get a GdkPixbuf from it. When
+finished, free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. No more than one image can be loaded
+with one handle.</p>
+<div class="refsect3">
+<a name="rsvg-handle-new.returns"></a><h4>Returns</h4>
+<p> A new <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-new-with-flags"></a><h3>rsvg_handle_new_with_flags ()</h3>
+<pre class="programlisting"><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="returnvalue">RsvgHandle</span></a> *
+rsvg_handle_new_with_flags (<em class="parameter"><code><a href="rsvg-Using-RSVG-with-GIO.html#RsvgHandleFlags"><span class="type">RsvgHandleFlags</span></a> flags</code></em>);</pre>
+<p>Creates a new <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> with flags <em class="parameter"><code>flags</code></em>
+.</p>
+<div class="refsect3">
+<a name="rsvg-handle-new-with-flags.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>flags from <a href="rsvg-Using-RSVG-with-GIO.html#RsvgHandleFlags"><span class="type">RsvgHandleFlags</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="rsvg-handle-new-with-flags.returns"></a><h4>Returns</h4>
+<p>a new <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: 2.36</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-write"></a><h3>rsvg_handle_write ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+rsvg_handle_write (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>,
+                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guchar"><span class="type">guchar</span></a> *buf</code></em>,
+                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> count</code></em>,
+                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Loads the next <em class="parameter"><code>count</code></em>
+ bytes of the image.  This will return <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the data
+was loaded successful, and <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if an error occurred.  In the latter case,
+the loader will be closed, and will not accept further writes. If <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is
+returned, <em class="parameter"><code>error</code></em>
+ will be set to an error from the <a href="rsvg-RsvgHandle.html#RsvgError"><span class="type">RsvgError</span></a> domain. Errors
+from <a href="/usr/share/gtk-doc/html/gio/gio-GIOError.html#GIOErrorEnum"><span class="type">GIOErrorEnum</span></a> are also possible.</p>
+<div class="refsect3">
+<a name="rsvg-handle-write.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>an <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf</p></td>
+<td class="parameter_description"><p>pointer to svg data. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=count][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guchar]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>count</p></td>
+<td class="parameter_description"><p>length of the <em class="parameter"><code>buf</code></em>
+buffer in bytes</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a location to store a <a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="rsvg-handle-write.returns"></a><h4>Returns</h4>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success, or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> on error</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-close"></a><h3>rsvg_handle_close ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+rsvg_handle_close (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>,
+                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Closes <em class="parameter"><code>handle</code></em>
+, to indicate that loading the image is complete.  This will
+return <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the loader closed successfully.  Note that <em class="parameter"><code>handle</code></em>
+ isn't
+freed until <em class="parameter"><code>g_object_unref</code></em>
+ is called.</p>
+<div class="refsect3">
+<a name="rsvg-handle-close.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>a <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a location to store a <a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="rsvg-handle-close.returns"></a><h4>Returns</h4>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success, or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> on error</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-get-base-uri"></a><h3>rsvg_handle_get_base_uri ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+rsvg_handle_get_base_uri (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>);</pre>
+<p>Gets the base uri for this <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a>.</p>
+<div class="refsect3">
+<a name="rsvg-handle-get-base-uri.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>A <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="rsvg-handle-get-base-uri.returns"></a><h4>Returns</h4>
+<p> the base uri, possibly null</p>
+</div>
+<p class="since">Since: 2.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-set-base-uri"></a><h3>rsvg_handle_set_base_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+rsvg_handle_set_base_uri (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>,
+                          <em class="parameter"><code>const <span class="type">char</span> *base_uri</code></em>);</pre>
+<p>Set the base URI for this SVG. This can only be called before <a href="rsvg-RsvgHandle.html#rsvg-handle-write"><code class="function">rsvg_handle_write()</code></a>
+has been called.</p>
+<div class="refsect3">
+<a name="rsvg-handle-set-base-uri.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>A <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>base_uri</p></td>
+<td class="parameter_description"><p>The base uri</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.9</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-get-dimensions"></a><h3>rsvg_handle_get_dimensions ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+rsvg_handle_get_dimensions (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>,
+                            <em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgDimensionData"><span class="type">RsvgDimensionData</span></a> *dimension_data</code></em>);</pre>
+<p>Get the SVG's size. Do not call from within the size_func callback, because an infinite loop will occur.</p>
+<div class="refsect3">
+<a name="rsvg-handle-get-dimensions.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>A <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dimension_data</p></td>
+<td class="parameter_description"><p>A place to store the SVG's size. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.14</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-get-dimensions-sub"></a><h3>rsvg_handle_get_dimensions_sub ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+rsvg_handle_get_dimensions_sub (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>,
+                                <em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgDimensionData"><span class="type">RsvgDimensionData</span></a> *dimension_data</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *id</code></em>);</pre>
+<p>Get the size of a subelement of the SVG file. Do not call from within the
+size_func callback, because an infinite loop will occur.</p>
+<div class="refsect3">
+<a name="rsvg-handle-get-dimensions-sub.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>A <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dimension_data</p></td>
+<td class="parameter_description"><p>A place to store the SVG's size. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>id</p></td>
+<td class="parameter_description"><p>An element's id within the SVG, starting with "##", for
+example, "#<span class="type">layer1</span>"; or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to use the whole SVG. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.22</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-get-position-sub"></a><h3>rsvg_handle_get_position_sub ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+rsvg_handle_get_position_sub (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>,
+                              <em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgPositionData"><span class="type">RsvgPositionData</span></a> *position_data</code></em>,
+                              <em class="parameter"><code>const <span class="type">char</span> *id</code></em>);</pre>
+<p>Get the position of a subelement of the SVG file. Do not call from within
+the size_func callback, because an infinite loop will occur.</p>
+<div class="refsect3">
+<a name="rsvg-handle-get-position-sub.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>A <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>position_data</p></td>
+<td class="parameter_description"><p>A place to store the SVG fragment's position. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>id</p></td>
+<td class="parameter_description"><p>An element's id within the SVG, starting with "##", for
+example, "#<span class="type">layer1</span>"; or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to use the whole SVG. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.22</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-has-sub"></a><h3>rsvg_handle_has_sub ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+rsvg_handle_has_sub (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>,
+                     <em class="parameter"><code>const <span class="type">char</span> *id</code></em>);</pre>
+<p>Checks whether the element <em class="parameter"><code>id</code></em>
+ exists in the SVG document.</p>
+<div class="refsect3">
+<a name="rsvg-handle-has-sub.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>a <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>id</p></td>
+<td class="parameter_description"><p>an element's id within the SVG, starting with "##", for example, "#<span class="type">layer1</span>".</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="rsvg-handle-has-sub.returns"></a><h4>Returns</h4>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>id</code></em>
+exists in the SVG document</p>
+</div>
+<p class="since">Since: 2.22</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-get-title"></a><h3>rsvg_handle_get_title ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+rsvg_handle_get_title (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>);</pre>
+<div class="warning"><p><code class="literal">rsvg_handle_get_title</code> has been deprecated since version 2.36 and should not be used in newly-written code.</p></div>
+<p>Returns the SVG's title in UTF-8 or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. You must make a copy
+of this title if you wish to use it after <em class="parameter"><code>handle</code></em>
+ has been freed.</p>
+<div class="refsect3">
+<a name="rsvg-handle-get-title.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>An <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="rsvg-handle-get-title.returns"></a><h4>Returns</h4>
+<p>The SVG's title. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+<p class="since">Since: 2.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-get-desc"></a><h3>rsvg_handle_get_desc ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+rsvg_handle_get_desc (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>);</pre>
+<div class="warning"><p><code class="literal">rsvg_handle_get_desc</code> has been deprecated since version 2.36 and should not be used in newly-written code.</p></div>
+<p>Returns the SVG's description in UTF-8 or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. You must make a copy
+of this description if you wish to use it after <em class="parameter"><code>handle</code></em>
+ has been freed.</p>
+<div class="refsect3">
+<a name="rsvg-handle-get-desc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>An <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="rsvg-handle-get-desc.returns"></a><h4>Returns</h4>
+<p>The SVG's description. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+<p class="since">Since: 2.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-get-metadata"></a><h3>rsvg_handle_get_metadata ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+rsvg_handle_get_metadata (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>);</pre>
+<div class="warning"><p><code class="literal">rsvg_handle_get_metadata</code> has been deprecated since version 2.36 and should not be used in newly-written code.</p></div>
+<p>Returns the SVG's metadata in UTF-8 or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. You must make a copy
+of this metadata if you wish to use it after <em class="parameter"><code>handle</code></em>
+ has been freed.</p>
+<div class="refsect3">
+<a name="rsvg-handle-get-metadata.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>An <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="rsvg-handle-get-metadata.returns"></a><h4>Returns</h4>
+<p>The SVG's title. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+<p class="since">Since: 2.9</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-new-from-data"></a><h3>rsvg_handle_new_from_data ()</h3>
+<pre class="programlisting"><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="returnvalue">RsvgHandle</span></a> *
+rsvg_handle_new_from_data (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *data</code></em>,
+                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> data_len</code></em>,
+                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Loads the SVG specified by <em class="parameter"><code>data</code></em>
+.</p>
+<div class="refsect3">
+<a name="rsvg-handle-new-from-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>The SVG data. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=data_len]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_len</p></td>
+<td class="parameter_description"><p>The length of <em class="parameter"><code>data</code></em>
+, in bytes</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for errors</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="rsvg-handle-new-from-data.returns"></a><h4>Returns</h4>
+<p> A <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if an error occurs.</p>
+</div>
+<p class="since">Since: 2.14</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-new-from-file"></a><h3>rsvg_handle_new_from_file ()</h3>
+<pre class="programlisting"><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="returnvalue">RsvgHandle</span></a> *
+rsvg_handle_new_from_file (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *file_name</code></em>,
+                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Loads the SVG specified by <em class="parameter"><code>file_name</code></em>
+.</p>
+<div class="refsect3">
+<a name="rsvg-handle-new-from-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>file_name</p></td>
+<td class="parameter_description"><p>The file name to load. If built with gnome-vfs, can be a URI.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for errors</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="rsvg-handle-new-from-file.returns"></a><h4>Returns</h4>
+<p> A <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if an error occurs.</p>
+</div>
+<p class="since">Since: 2.14</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-error-get-type"></a><h3>rsvg_error_get_type ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>
+rsvg_error_get_type (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-init"></a><h3>rsvg_init ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+rsvg_init (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<div class="warning">
+<p><code class="literal">rsvg_init</code> has been deprecated since version 2.36 and should not be used in newly-written code.</p>
+<p>Use <a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#g-type-init"><code class="function">g_type_init()</code></a></p>
+</div>
+<p>Initializes librsvg</p>
+<p class="since">Since: 2.9</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-term"></a><h3>rsvg_term ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+rsvg_term (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<div class="warning"><p><code class="literal">rsvg_term</code> has been deprecated since version 2.36 and should not be used in newly-written code.</p></div>
+<p>This function does nothing.</p>
+<p class="since">Since: 2.9</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-free"></a><h3>rsvg_handle_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+rsvg_handle_free (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">rsvg_handle_free</code> is deprecated and should not be used in newly-written code.</p>
+<p>Use <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> instead.</p>
+</div>
+<p>Frees <em class="parameter"><code>handle</code></em>
+.</p>
+<div class="refsect3">
+<a name="rsvg-handle-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>An <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rsvg-handle-set-size-callback"></a><h3>rsvg_handle_set_size_callback ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+rsvg_handle_set_size_callback (<em class="parameter"><code><a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a> *handle</code></em>,
+                               <em class="parameter"><code><span class="type">RsvgSizeFunc</span> size_func</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> user_data_destroy</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">rsvg_handle_set_size_callback</code> is deprecated and should not be used in newly-written code.</p>
+<p>Set up a cairo matrix and use <a href="rsvg-Using-RSVG-with-cairo.html#rsvg-handle-render-cairo"><code class="function">rsvg_handle_render_cairo()</code></a> instead.
+You can call <a href="rsvg-RsvgHandle.html#rsvg-handle-get-dimensions"><code class="function">rsvg_handle_get_dimensions()</code></a> to figure out the size of your SVG,
+and then scale it to the desired size via Cairo.  For example, the following
+code renders an SVG at a specified size, scaled proportionally from whatever
+original size it may have had:</p>
+<div class="informalexample"><pre class="programlisting">
+void
+render_scaled_proportionally (RsvgHandle *handle, cairo_t cr, int width, int height)
+{
+    RsvgDimensionData dimensions;
+    double x_factor, y_factor;
+    double scale_factor;
+
+    rsvg_handle_get_dimensions (handle, &amp;dimensions);
+
+    x_factor = (double) width / dimensions.width;
+    y_factor = (double) height / dimensions.height;
+
+    scale_factor = MIN (x_factor, y_factor);
+
+    cairo_scale (cr, scale_factor, scale_factor);
+
+    rsvg_handle_render_cairo (handle, cr);
+}
+</pre></div>
+<p></p>
+</div>
+<p>Sets the sizing function for the <em class="parameter"><code>handle</code></em>
+.  This function is called right
+after the size of the image has been loaded.  The size of the image is passed
+in to the function, which may then modify these values to set the real size
+of the generated pixbuf.  If the image has no associated size, then the size
+arguments are set to -1.</p>
+<div class="refsect3">
+<a name="rsvg-handle-set-size-callback.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>An <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size_func</p></td>
+<td class="parameter_description"><p>A sizing function, or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>size_func</code></em>
+, or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data_destroy</p></td>
+<td class="parameter_description"><p>Destroy function for <em class="parameter"><code>user_data</code></em>
+, or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="rsvg-RsvgHandle.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="RsvgError"></a><h3>enum RsvgError</h3>
+<p>An enumeration representing possible errors</p>
+<div class="refsect3">
+<a name="RsvgError.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="enum_member_name"><p><a name="RSVG-ERROR-FAILED:CAPS"></a>RSVG_ERROR_FAILED</p></td>
+<td class="enum_member_description">
+<p>the request failed</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RSVG-ERROR:CAPS"></a><h3>RSVG_ERROR</h3>
+<pre class="programlisting">#define RSVG_ERROR (rsvg_error_quark ())
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RsvgHandle"></a><h3>struct RsvgHandle</h3>
+<pre class="programlisting">struct RsvgHandle {
+    GObject parent;
+};
+</pre>
+<p>Lets you load SVG data and render it.</p>
+<div class="refsect3">
+<a name="RsvgHandle.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> <em class="structfield"><code><a name="RsvgHandle.parent"></a>parent</code></em>;</p></td>
+<td class="struct_member_description"><p>parent instance</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RsvgHandlePrivate"></a><h3>RsvgHandlePrivate</h3>
+<pre class="programlisting">typedef struct RsvgHandlePrivate RsvgHandlePrivate;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RsvgHandleClass"></a><h3>struct RsvgHandleClass</h3>
+<pre class="programlisting">struct RsvgHandleClass {
+    GObjectClass parent;
+};
+</pre>
+<p>Class structure for <a href="rsvg-RsvgHandle.html#RsvgHandle"><span class="type">RsvgHandle</span></a>.</p>
+<div class="refsect3">
+<a name="RsvgHandleClass.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a> <em class="structfield"><code><a name="RsvgHandleClass.parent"></a>parent</code></em>;</p></td>
+<td class="struct_member_description"><p>parent class</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RsvgDimensionData"></a><h3>struct RsvgDimensionData</h3>
+<pre class="programlisting">struct RsvgDimensionData {
+    int width;
+    int height;
+    gdouble em;
+    gdouble ex;
+};
+</pre>
+<div class="refsect3">
+<a name="RsvgDimensionData.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><span class="type">int</span> <em class="structfield"><code><a name="RsvgDimensionData.width"></a>width</code></em>;</p></td>
+<td class="struct_member_description"><p>SVG's width, in pixels</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">int</span> <em class="structfield"><code><a name="RsvgDimensionData.height"></a>height</code></em>;</p></td>
+<td class="struct_member_description"><p>SVG's height, in pixels</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> <em class="structfield"><code><a name="RsvgDimensionData.em"></a>em</code></em>;</p></td>
+<td class="struct_member_description"><p>em</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> <em class="structfield"><code><a name="RsvgDimensionData.ex"></a>ex</code></em>;</p></td>
+<td class="struct_member_description"><p>ex</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RsvgPositionData"></a><h3>struct RsvgPositionData</h3>
+<pre class="programlisting">struct RsvgPositionData {
+    int x;
+    int y;
+};
+</pre>
+<p>Position of an SVG fragment.</p>
+<div class="refsect3">
+<a name="RsvgPositionData.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><span class="type">int</span> <em class="structfield"><code><a name="RsvgPositionData.x"></a>x</code></em>;</p></td>
+<td class="struct_member_description"><p>position on the x axis</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">int</span> <em class="structfield"><code><a name="RsvgPositionData.y"></a>y</code></em>;</p></td>
+<td class="struct_member_description"><p>position on the y axis</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RSVG-TYPE-ERROR:CAPS"></a><h3>RSVG_TYPE_ERROR</h3>
+<pre class="programlisting">#define RSVG_TYPE_ERROR (rsvg_error_get_type())
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.26</div>
+</body>
+</html>

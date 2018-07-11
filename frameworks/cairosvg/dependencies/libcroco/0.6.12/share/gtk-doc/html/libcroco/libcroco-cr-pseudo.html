@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>cr-pseudo: Libcroco Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Libcroco Reference Manual">
+<link rel="up" href="ch01.html" title="Extensive APIs description">
+<link rel="prev" href="libcroco-cr-prop-list.html" title="cr-prop-list">
+<link rel="next" href="libcroco-cr-rgb.html" title="cr-rgb">
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libcroco-cr-pseudo.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libcroco-cr-prop-list.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libcroco-cr-rgb.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libcroco-cr-pseudo"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libcroco-cr-pseudo.top_of_page"></a>cr-pseudo</span></h2>
+<p>cr-pseudo</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libcroco-cr-pseudo.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="libcroco-cr-pseudo.html#CRPseudo" title="struct CRPseudo"><span class="returnvalue">CRPseudo</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-pseudo.html#cr-pseudo-new" title="cr_pseudo_new ()">cr_pseudo_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-pseudo.html#cr-pseudo-to-string" title="cr_pseudo_to_string ()">cr_pseudo_to_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-pseudo.html#cr-pseudo-dump" title="cr_pseudo_dump ()">cr_pseudo_dump</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libcroco-cr-pseudo.html#cr-pseudo-destroy" title="cr_pseudo_destroy ()">cr_pseudo_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-pseudo.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="libcroco-cr-pseudo.html#CRPseudo" title="struct CRPseudo">CRPseudo</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-pseudo.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-pseudo.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="cr-pseudo-new"></a><h3>cr_pseudo_new ()</h3>
+<pre class="programlisting"><a class="link" href="libcroco-cr-pseudo.html#CRPseudo" title="struct CRPseudo"><span class="returnvalue">CRPseudo</span></a> *
+cr_pseudo_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Returns the newly build instance.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-pseudo-to-string"></a><h3>cr_pseudo_to_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">guchar</span> *
+cr_pseudo_to_string (<em class="parameter"><code><a class="link" href="libcroco-cr-pseudo.html#CRPseudo" title="struct CRPseudo"><span class="type">CRPseudo</span></a> const *a_this</code></em>);</pre>
+<p>Returns the serialized pseudo. Caller must free the returned
+string using <code class="function">g_free()</code>.</p>
+<div class="refsect3">
+<a name="cr-pseudo-to-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of <span class="type">CRPseud</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-pseudo-dump"></a><h3>cr_pseudo_dump ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+cr_pseudo_dump (<em class="parameter"><code><a class="link" href="libcroco-cr-pseudo.html#CRPseudo" title="struct CRPseudo"><span class="type">CRPseudo</span></a> const *a_this</code></em>,
+                <em class="parameter"><code><span class="type">FILE</span> *a_fp</code></em>);</pre>
+<p>Dumps the pseudo to a file.</p>
+<div class="refsect3">
+<a name="cr-pseudo-dump.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance of pseudo</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a_fp</p></td>
+<td class="parameter_description"><p>the destination file pointer.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cr-pseudo-destroy"></a><h3>cr_pseudo_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+cr_pseudo_destroy (<em class="parameter"><code><a class="link" href="libcroco-cr-pseudo.html#CRPseudo" title="struct CRPseudo"><span class="type">CRPseudo</span></a> *a_this</code></em>);</pre>
+<p>destructor of the <a class="link" href="libcroco-cr-pseudo.html#CRPseudo" title="struct CRPseudo"><span class="type">CRPseudo</span></a> class.</p>
+<div class="refsect3">
+<a name="cr-pseudo-destroy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>a_this</p></td>
+<td class="parameter_description"><p>the current instance to destroy.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="libcroco-cr-pseudo.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="CRPseudo"></a><h3>struct CRPseudo</h3>
+<pre class="programlisting">struct CRPseudo {
+        enum CRPseudoType type ;
+        CRString *name ;
+        CRString *extra ;
+        CRParsingLocation location ;
+};
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.25.1</div>
+</body>
+</html>

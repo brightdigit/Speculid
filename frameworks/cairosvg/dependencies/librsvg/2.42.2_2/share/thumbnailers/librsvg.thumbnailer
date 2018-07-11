@@ -1,0 +1,4 @@
+[Thumbnailer Entry]
+TryExec=/usr/local/Cellar/librsvg/2.42.2_2/bin/gdk-pixbuf-thumbnailer
+Exec=/usr/local/Cellar/librsvg/2.42.2_2/bin/gdk-pixbuf-thumbnailer -s %s %u %o
+MimeType=image/svg+xml;image/svg+xml-compressed;
