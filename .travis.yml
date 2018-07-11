@@ -5,7 +5,6 @@ env:
 branches:
   except:
   - develop
-  - feature/from-brew
 osx_image: xcode9.2
 xcode_workspace: speculid.xcworkspace
 xcode_scheme: Speculid-Mac-App
