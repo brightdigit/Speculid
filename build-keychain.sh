@@ -6,11 +6,11 @@
 #  Created by Leo Dion on 10/26/17.
 #  Copyright © 2017 Bright Digit, LLC. All rights reserved.
 # Create custom keychain
-security create-keychain -p $CERTIFICATE_PASSWORD macos-build.keychain
+security create-keychain -p $CUSTOM_KEYCHAIN_PASSWORD macos-build.keychain
 # Make the ios-build.keychain default, so xcodebuild will use it
 security default-keychain -s macos-build.keychain
 # Unlock the keychain
-security unlock-keychain -p $CERTIFICATE_PASSWORD macos-build.keychain
+security unlock-keychain -p $CUSTOM_KEYCHAIN_PASSWORD macos-build.keychain
 # Set keychain timeout to 1 hour for long builds
 # see here
 security set-keychain-settings -lut 7200 macos-build.keychain
