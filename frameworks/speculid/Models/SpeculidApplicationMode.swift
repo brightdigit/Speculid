@@ -8,7 +8,7 @@ public enum SpeculidApplicationMode: Equatable {
     default: return false
     }
   }
-
+  // swiftlint:disable:next identifier_name
   case command(SpeculidCommandArgumentSet)
   case cocoa
 }

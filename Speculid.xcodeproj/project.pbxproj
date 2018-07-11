@@ -396,6 +396,10 @@
 		B37C74B11F8C5C7400DF505B /* PNGSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A21F8C5C7400DF505B /* PNGSurface.h */; };
 		B37C74B21F8C5C7400DF505B /* PNGImageHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */; };
 		B37C74BC1F8C5D2A00DF505B /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
+		B3891B8320F6402F00FEDF89 /* libcroco-0.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8078920E5858100030497 /* libcroco-0.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B3891B8420F6402F00FEDF89 /* libcroco-0.6.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8078C20E5858100030497 /* libcroco-0.6.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B3891B8520F6406B00FEDF89 /* libfribidi.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8083020E585BF00030497 /* libfribidi.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B3891B8620F6406B00FEDF89 /* libfribidi.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8083220E585BF00030497 /* libfribidi.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3B5E9DA1F96C1C1004A6BEB /* SpeculidConfigurationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */; };
 		B3B5E9DC1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */; };
 		B3B5E9DE1F96C2A2004A6BEB /* SpeculidConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */; };
@@ -1124,11 +1128,15 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B3F80CAB20E586A000030497 /* libharfbuzz.0.dylib in CopyFiles */,
+				B3891B8520F6406B00FEDF89 /* libfribidi.dylib in CopyFiles */,
+				B3891B8620F6406B00FEDF89 /* libfribidi.0.dylib in CopyFiles */,
 				B3F8057E20E584E700030497 /* libpng16.16.dylib in CopyFiles */,
 				B3F8057F20E584E700030497 /* libpng.dylib in CopyFiles */,
 				B3F80CA720E5866A00030497 /* libpng16.dylib in CopyFiles */,
 				B31BDAFC20E7E26200A560C2 /* libicutest.61.dylib in CopyFiles */,
 				B3F80CAA20E586A000030497 /* libharfbuzz-gobject.0.dylib in CopyFiles */,
+				B3891B8320F6402F00FEDF89 /* libcroco-0.6.dylib in CopyFiles */,
+				B3891B8420F6402F00FEDF89 /* libcroco-0.6.3.dylib in CopyFiles */,
 				B3F80CAC20E586A000030497 /* libharfbuzz-gobject.dylib in CopyFiles */,
 				B3F80CAD20E586A000030497 /* libharfbuzz.dylib in CopyFiles */,
 				B3F80CAE20E586A000030497 /* libharfbuzz-icu.0.dylib in CopyFiles */,
@@ -4017,12 +4025,10 @@
 				B3F80B2720E585EA00030497 /* libharfbuzz-icu.dylib in Frameworks */,
 				B3F80B2820E585EA00030497 /* libharfbuzz-subset.0.dylib in Frameworks */,
 				B31BD9CF20E7E0DA00A560C2 /* libicui18n.a in Frameworks */,
-				B31BD9DA20E7E0DA00A560C2 /* libicudata.a in Frameworks */,
-				B3F808C120E585C000030497 /* libfribidi.dylib in Frameworks */,
-				B3F808C320E585C000030497 /* libfribidi.0.dylib in Frameworks */,
-				B31BD9E120E7E0DA00A560C2 /* libicutu.a in Frameworks */,
 				B3F807DE20E5858200030497 /* libcroco-0.6.dylib in Frameworks */,
 				B3F807E020E5858200030497 /* libcroco-0.6.3.dylib in Frameworks */,
+				B31BD9DA20E7E0DA00A560C2 /* libicudata.a in Frameworks */,
+				B31BD9E120E7E0DA00A560C2 /* libicutu.a in Frameworks */,
 				B3F8075320E5855F00030497 /* libffi.dylib in Frameworks */,
 				B3F808C220E585C000030497 /* libfribidi.a in Frameworks */,
 				B31BD9CE20E7E0DA00A560C2 /* libicutest.61.dylib in Frameworks */,
@@ -4041,6 +4047,8 @@
 				B31BD9E420E7E0DA00A560C2 /* libicui18n.61.dylib in Frameworks */,
 				B3F80B3020E585EA00030497 /* libharfbuzz.0.dylib in Frameworks */,
 				B31BD9E520E7E0DA00A560C2 /* libicuuc.61.dylib in Frameworks */,
+				B3F808C120E585C000030497 /* libfribidi.dylib in Frameworks */,
+				B3F808C320E585C000030497 /* libfribidi.0.dylib in Frameworks */,
 				B31BD9E620E7E0DA00A560C2 /* libicudata.61.1.dylib in Frameworks */,
 				B31BD9E720E7E0DA00A560C2 /* libicutest.61.1.dylib in Frameworks */,
 				B31BD9EE20E7E0DA00A560C2 /* libicuuc.61.1.dylib in Frameworks */,
