@@ -305,12 +305,6 @@
 		B31BD9E520E7E0DA00A560C2 /* libicuuc.61.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7D320E7E0D600A560C2 /* libicuuc.61.dylib */; };
 		B31BD9E620E7E0DA00A560C2 /* libicudata.61.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7D420E7E0D600A560C2 /* libicudata.61.1.dylib */; };
 		B31BD9E720E7E0DA00A560C2 /* libicutest.61.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7D520E7E0D600A560C2 /* libicutest.61.1.dylib */; };
-		B31BD9E820E7E0DA00A560C2 /* pkgdata.inc in Sources */ = {isa = PBXBuildFile; fileRef = B31BD7D820E7E0D600A560C2 /* pkgdata.inc */; };
-		B31BD9E920E7E0DA00A560C2 /* Makefile.inc in Sources */ = {isa = PBXBuildFile; fileRef = B31BD7D920E7E0D600A560C2 /* Makefile.inc */; };
-		B31BD9EA20E7E0DA00A560C2 /* pkgdata.inc in Sources */ = {isa = PBXBuildFile; fileRef = B31BD7DA20E7E0D600A560C2 /* pkgdata.inc */; };
-		B31BD9EB20E7E0DA00A560C2 /* pkgdata.inc in Sources */ = {isa = PBXBuildFile; fileRef = B31BD7DC20E7E0D600A560C2 /* pkgdata.inc */; };
-		B31BD9EC20E7E0DA00A560C2 /* Makefile.inc in Sources */ = {isa = PBXBuildFile; fileRef = B31BD7DD20E7E0D600A560C2 /* Makefile.inc */; };
-		B31BD9ED20E7E0DA00A560C2 /* Makefile.inc in Sources */ = {isa = PBXBuildFile; fileRef = B31BD7DE20E7E0D600A560C2 /* Makefile.inc */; };
 		B31BD9EE20E7E0DA00A560C2 /* libicuuc.61.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7DF20E7E0D600A560C2 /* libicuuc.61.1.dylib */; };
 		B31BD9EF20E7E0DA00A560C2 /* gensprep.8 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7E320E7E0D600A560C2 /* gensprep.8 */; };
 		B31BD9F020E7E0DA00A560C2 /* genccode.8 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7E420E7E0D600A560C2 /* genccode.8 */; };
@@ -894,7 +888,6 @@
 		B3F8057920E584B300030497 /* libpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8055B20E584B300030497 /* libpng.dylib */; };
 		B3F8057A20E584B300030497 /* libpng16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8055C20E584B300030497 /* libpng16.dylib */; };
 		B3F8057E20E584E700030497 /* libpng16.16.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8055A20E584B300030497 /* libpng16.16.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B3F8057F20E584E700030497 /* libpng.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8055B20E584B300030497 /* libpng.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3F8066120E5851A00030497 /* pcrecpparg.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8058C20E5851900030497 /* pcrecpparg.h */; };
 		B3F8066220E5851A00030497 /* pcreposix.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8058D20E5851900030497 /* pcreposix.h */; };
 		B3F8066320E5851A00030497 /* pcre_scanner.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8058E20E5851900030497 /* pcre_scanner.h */; };
@@ -1131,7 +1124,6 @@
 				B3891B8520F6406B00FEDF89 /* libfribidi.dylib in CopyFiles */,
 				B3891B8620F6406B00FEDF89 /* libfribidi.0.dylib in CopyFiles */,
 				B3F8057E20E584E700030497 /* libpng16.16.dylib in CopyFiles */,
-				B3F8057F20E584E700030497 /* libpng.dylib in CopyFiles */,
 				B3F80CA720E5866A00030497 /* libpng16.dylib in CopyFiles */,
 				B31BDAFC20E7E26200A560C2 /* libicutest.61.dylib in CopyFiles */,
 				B3F80CAA20E586A000030497 /* libharfbuzz-gobject.0.dylib in CopyFiles */,
@@ -3299,6 +3291,7 @@
 		B3E9A9041FB4E0B200FD8E7A /* bin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bin; sourceTree = "<group>"; };
 		B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilder.swift; sourceTree = "<group>"; };
+		B3F1C92D20F675FC0072F7C0 /* codesign-framework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "codesign-framework.sh"; sourceTree = "<group>"; };
 		B3F8045820E5820B00030497 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
 		B3F8045A20E5820B00030497 /* pango-view */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "pango-view"; sourceTree = "<group>"; };
 		B3F8045C20E5820B00030497 /* pango.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = pango.rb; sourceTree = "<group>"; };
@@ -4153,6 +4146,7 @@
 		B3033B181F9AED7600787279 /* configuration */ = {
 			isa = PBXGroup;
 			children = (
+				B3F1C92D20F675FC0072F7C0 /* codesign-framework.sh */,
 				B35D13271FCF604C0047F1B8 /* Brewfile */,
 				B31D2AEB1FBC8F1D008087A6 /* build.sh */,
 				B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */,
@@ -14073,9 +14067,9 @@
 				4F4C36B7508D73A1292508F5 /* [CP] Check Pods Manifest.lock */,
 				B37C74841F8C5B5C00DF505B /* Sources */,
 				B37C74851F8C5B5C00DF505B /* Frameworks */,
+				B3E211A620E57290009EA554 /* CopyFiles */,
 				B37C74861F8C5B5C00DF505B /* Headers */,
 				B37C74871F8C5B5C00DF505B /* Resources */,
-				B3E211A620E57290009EA554 /* CopyFiles */,
 				B3E211A820E573B9009EA554 /* Installing Libaries */,
 			);
 			buildRules = (
@@ -14094,7 +14088,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Bright Digit, LLC";
 				TargetAttributes = {
 					B3136E5F1F90FCCF0002B7AB = {
@@ -14136,7 +14130,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "Speculid" */;
+			buildConfigurationList = B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "speculid" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -14452,7 +14446,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/applications\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline";
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/applications\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline\n";
 		};
 		B3D329FA1F9A55B40042B46F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -14479,7 +14473,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#/Users/leo/Documents/Projects/speculid/fix_dylibs.sh\n";
+			shellScript = "\"${SRCROOT}/fix_dylibs_script.sh\" \"${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\"\n";
 		};
 		BD6A812C7EF5D496661AC259 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -14685,14 +14679,8 @@
 				B37C74AC1F8C5C7400DF505B /* PDFSurface.m in Sources */,
 				B37C74AD1F8C5C7400DF505B /* SVGImageHandle.m in Sources */,
 				B35B71281F904CF100BE477E /* SurfaceHandleBuilder.m in Sources */,
-				B31BD9E820E7E0DA00A560C2 /* pkgdata.inc in Sources */,
 				B37C74AE1F8C5C7400DF505B /* PNGSurface.m in Sources */,
-				B31BD9E920E7E0DA00A560C2 /* Makefile.inc in Sources */,
-				B31BD9EC20E7E0DA00A560C2 /* Makefile.inc in Sources */,
-				B31BD9ED20E7E0DA00A560C2 /* Makefile.inc in Sources */,
 				B37C74A61F8C5C7400DF505B /* CairoInterface.m in Sources */,
-				B31BD9EB20E7E0DA00A560C2 /* pkgdata.inc in Sources */,
-				B31BD9EA20E7E0DA00A560C2 /* pkgdata.inc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -14856,6 +14844,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -14863,6 +14852,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -14918,6 +14908,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -14925,6 +14916,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -15094,6 +15086,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7DD68C68194F71BF3C7B683C /* Pods-CairoSVG.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Speculid.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -15148,6 +15141,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72377B2194FCD69B6D9FED05 /* Pods-CairoSVG.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Speculid.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -15227,7 +15221,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "Speculid" */ = {
+		B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "speculid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B37C744A1F8C58F300DF505B /* Debug */,
