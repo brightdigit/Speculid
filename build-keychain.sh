@@ -19,6 +19,8 @@ security import ./certs/AppleWWDRCA.cer -k macos-build.keychain -A
 #security import ./tmp/certs/mac_app-cert.cer -k macos-build.keychain -A
 security import ./tmp/certs/mac_developer.p12 -k macos-build.keychain -P $CERTIFICATE_PASSWORD -A
 security import ./tmp/certs/mac_developer.cer -k macos-build.keychain -A
+security import ./tmp/certs/developer_id.p12 -k macos-build.keychain -P $CERTIFICATE_PASSWORD -A
+security import ./tmp/certs/developer_id.cer -k macos-build.keychain -A
 #security import ./tmp/certs/mac_development-key.p12 -k macos-build.keychain -P $SECURITY_PASSWORD -A
 #security import ./tmp/certs/mac_development-cert.cer -k macos-build.keychain -A
 #security import ./tmp/certs/3rd_party_mac_development-key.p12 -k macos-build.keychain -P $SECURITY_PASSWORD -A
