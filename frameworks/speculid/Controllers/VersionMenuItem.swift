@@ -9,7 +9,6 @@ extension Version {
 
 public class VersionMenuItem: NSMenuItem {
   public static func buildNumbers(fromResource resource: String?, withExtension extension: String?) -> Set<Int>? {
-
     if let url = Application.bundle.url(forResource: resource, withExtension: `extension`) {
       if let text = try? String(contentsOf: url) {
         return Set(text.components(separatedBy: CharacterSet.newlines).flatMap { Int($0) })

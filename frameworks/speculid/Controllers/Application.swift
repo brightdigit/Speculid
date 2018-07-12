@@ -101,7 +101,7 @@ open class Application: NSApplication, ApplicationProtocol {
       trackingIdentifier: "UA-33667276-6",
       applicationName: "speculid",
       applicationVersion: applicationVersion,
-      customParameters: [.operatingSystemVersion: operatingSystem])
+      customParameters: [.operatingSystemVersion: operatingSystem, .model: Sysctl.model])
 
     remoteObjectInterfaceProvider.remoteObjectProxyWithHandler { result in
       switch result {

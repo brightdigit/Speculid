@@ -35,7 +35,6 @@ public struct AssetSpecification: AssetSpecificationProtocol, Codable {
     idiom = try container.decode(ImageIdiom.self, forKey: .idiom)
     filename = try container.decodeIfPresent(String.self, forKey: .filename)
     if let scaleString = try container.decodeIfPresent(String.self, forKey: .scale) {
-
       guard let scaleValueString = scaleString.firstMatchGroups(regex: scaleRegex)?[1], let scale = Double(scaleValueString) else {
         throw DecodingError.dataCorruptedError(forKey: .scale, in: container, debugDescription: scaleString)
       }

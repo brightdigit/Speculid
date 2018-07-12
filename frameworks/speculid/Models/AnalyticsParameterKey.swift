@@ -4,6 +4,6 @@ public enum AnalyticsParameterKey: String {
     userTimingVariable = "utv",
     applicationName = "an", applicationVersion = "av", eventAction = "ea",
     eventCategory = "ec", eventLabel = "el", eventValue = "ev",
-    userLanguage = "ul", operatingSystemVersion = "cd1",
+    userLanguage = "ul", operatingSystemVersion = "cd1", model = "cd2",
     exceptionDescription = "exd", exceptionFatal = "exf"
 }

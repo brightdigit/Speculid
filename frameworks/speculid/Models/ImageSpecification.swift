@@ -14,7 +14,6 @@ import Cocoa
 
   // swiftlint:disable identifier_name
   public required init?(coder aDecoder: NSCoder) {
-
     let _file = aDecoder.decodeObject(forKey: "file") as? ImageFileProtocol
     let _dimensionValue = aDecoder.decodeObject(forKey: "geometryDimensionValue") as? UInt
     let _value = aDecoder.decodeObject(forKey: "geometryValue") as? CGFloat

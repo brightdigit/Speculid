@@ -1,7 +1,6 @@
 import Foundation
 
 public protocol GeometryProtocol {
-
   var value: GeometryValue {
     get
   }

@@ -3,8 +3,8 @@ PODS:
     - ShiftOperations (~> 1.0.2)
     - Threadly (~> 1.0)
   - ShiftOperations (1.0.2)
-  - SwiftFormat/CLI (0.32.1)
-  - SwiftLint (0.24.0)
+  - SwiftFormat/CLI (0.33.11)
+  - SwiftLint (0.26.0)
   - SwiftVer (2.0.4)
   - Threadly (1.2.0)
 
@@ -26,8 +26,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   RandomKit: 380745911c4f7989707489b2ce297194bfcf5031
   ShiftOperations: 702c9aa98d3b20d98dceb71dd8437b562f7ab3ad
-  SwiftFormat: 80e535fe247ca30c81790d1fe1bc779e8b5de20a
-  SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
+  SwiftFormat: fa1b577bb4f0cd4f8cfe70d07945aa894ef5f97a
+  SwiftLint: f6b83e8d95ee1e91e11932d843af4fdcbf3fc764
   SwiftVer: 85fca0c0087660e0b07fe021efdd4b794046e465
   Threadly: b772ed7c1ff4a3f03eb4600bbc5ef83b3be5cb29
 
