@@ -347,6 +347,7 @@
 		B3891B8420F6402F00FEDF89 /* libcroco-0.6.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8078C20E5858100030497 /* libcroco-0.6.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3891B8520F6406B00FEDF89 /* libfribidi.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8083020E585BF00030497 /* libfribidi.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3891B8620F6406B00FEDF89 /* libfribidi.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8083220E585BF00030497 /* libfribidi.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B3891BBE20F7CE010095E1FD /* CwlSysctl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3891BBD20F7CE010095E1FD /* CwlSysctl.swift */; };
 		B3B5E9DA1F96C1C1004A6BEB /* SpeculidConfigurationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */; };
 		B3B5E9DC1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */; };
 		B3B5E9DE1F96C2A2004A6BEB /* SpeculidConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */; };
@@ -1537,6 +1538,7 @@
 		B37C74A11F8C5C7400DF505B /* ImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHandle.h; sourceTree = "<group>"; };
 		B37C74A21F8C5C7400DF505B /* PNGSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGSurface.h; sourceTree = "<group>"; };
 		B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGImageHandle.h; sourceTree = "<group>"; };
+		B3891BBD20F7CE010095E1FD /* CwlSysctl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CwlSysctl.swift; sourceTree = "<group>"; };
 		B3B049C81FA262A8002906B1 /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
 		B3B049CA1FA27D78002906B1 /* decrypt-certs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "decrypt-certs.sh"; sourceTree = "<group>"; };
 		B3B049CB1FA27D96002906B1 /* certs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = certs; sourceTree = "<group>"; };
@@ -4171,6 +4173,7 @@
 				B3136DC11F90E27B0002B7AB /* FileFormat.swift */,
 				B3136DFB1F90F73A0002B7AB /* Geometry.swift */,
 				B3136E031F90F73A0002B7AB /* GeometryValue.swift */,
+				B3891BBD20F7CE010095E1FD /* CwlSysctl.swift */,
 				B3136DBB1F90E27B0002B7AB /* ImageFile.swift */,
 				B3136E071F90F73A0002B7AB /* ImageIdiom.swift */,
 				B3136DBE1F90E27B0002B7AB /* ImageSpecification.swift */,
@@ -14459,6 +14462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3B5E9E41F96C5F1004A6BEB /* CommandLineActivityProtocol.swift in Sources */,
+				B3891BBE20F7CE010095E1FD /* CwlSysctl.swift in Sources */,
 				B3136E3D1F90F73B0002B7AB /* AnalyticsParameterKey.swift in Sources */,
 				B3F0ECF21F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift in Sources */,
 				B3136E4D1F90F73B0002B7AB /* AnalyticsSessionManagerProtocol.swift in Sources */,

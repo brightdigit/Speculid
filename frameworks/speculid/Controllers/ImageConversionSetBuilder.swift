@@ -1,7 +1,6 @@
 import Foundation
 
 public struct ImageConversionSetBuilder: ImageConversionSetBuilderProtocol {
-
   public static let defaultBuilders: [ImageConversionSetBuilderProtocol] = []
   public static let sharedInstance: ImageConversionSetBuilderProtocol = ImageConversionSetBuilder()
 

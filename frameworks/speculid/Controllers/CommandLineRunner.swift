@@ -10,7 +10,6 @@ public struct UnknownArgumentsError: Error {
   public let arguments: [String]
 }
 public class CommandLineRunner: CommandLineRunnerProtocol {
-
   public var errorStream: TextOutputStream
   public var outputStream: TextOutputStream
 
@@ -20,7 +19,6 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
   }
 
   public func activity(withArguments arguments: SpeculidCommandArgumentSet, _ completed: @escaping (CommandLineActivityProtocol, Error?) -> Void) -> CommandLineActivityProtocol {
-
     var error: Error?
     let operation = AsyncBlockOperation { completed in
       switch arguments {

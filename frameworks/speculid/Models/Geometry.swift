@@ -26,7 +26,6 @@ extension GeometryValue {
   }
 
   public init?(string: String) {
-
     if let intValue = Double(string) {
       self = .width(CGFloat(intValue))
     } else if let intValue = Double(String(string[string.index(after: string.startIndex)...])), string[string.startIndex] == "x" {
