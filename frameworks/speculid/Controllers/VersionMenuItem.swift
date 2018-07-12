@@ -12,7 +12,7 @@ public class VersionMenuItem: NSMenuItem {
 
     if let url = Application.bundle.url(forResource: resource, withExtension: `extension`) {
       if let text = try? String(contentsOf: url) {
-        return Set(text.split(separator: " ").flatMap { Int($0) })
+        return Set(text.components(separatedBy: CharacterSet.newlines).flatMap { Int($0) })
       }
     }
     return nil
