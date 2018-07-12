@@ -80,20 +80,6 @@
 		B318906A1F918F0300D0EFA0 /* GeometryValue.Multiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */; };
 		B31BD6E920E7A6A400A560C2 /* libffi.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8073F20E5855F00030497 /* libffi.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BD6EA20E7A6A400A560C2 /* libffi.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8074120E5855F00030497 /* libffi.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B31BD90620E7E0D800A560C2 /* INSTALL_RECEIPT.json in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6ED20E7E0D500A560C2 /* INSTALL_RECEIPT.json */; };
-		B31BD90820E7E0D800A560C2 /* makeconv in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6F020E7E0D500A560C2 /* makeconv */; };
-		B31BD90920E7E0D800A560C2 /* gencnval in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6F120E7E0D500A560C2 /* gencnval */; };
-		B31BD90A20E7E0D800A560C2 /* icu-config in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6F220E7E0D500A560C2 /* icu-config */; };
-		B31BD90B20E7E0D800A560C2 /* gencfu in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6F320E7E0D500A560C2 /* gencfu */; };
-		B31BD90C20E7E0D800A560C2 /* icuinfo in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6F420E7E0D500A560C2 /* icuinfo */; };
-		B31BD90D20E7E0D800A560C2 /* gendict in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6F520E7E0D500A560C2 /* gendict */; };
-		B31BD90E20E7E0D800A560C2 /* genrb in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6F620E7E0D500A560C2 /* genrb */; };
-		B31BD90F20E7E0D800A560C2 /* pkgdata in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6F720E7E0D500A560C2 /* pkgdata */; };
-		B31BD91020E7E0D800A560C2 /* genbrk in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6F820E7E0D500A560C2 /* genbrk */; };
-		B31BD91120E7E0D800A560C2 /* derb in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6F920E7E0D500A560C2 /* derb */; };
-		B31BD91220E7E0D800A560C2 /* uconv in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6FA20E7E0D500A560C2 /* uconv */; };
-		B31BD91320E7E0D800A560C2 /* icu4c.rb in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6FC20E7E0D500A560C2 /* icu4c.rb */; };
-		B31BD91420E7E0D800A560C2 /* license.html in Resources */ = {isa = PBXBuildFile; fileRef = B31BD6FD20E7E0D500A560C2 /* license.html */; };
 		B31BD91520E7E0D800A560C2 /* translit.h in Headers */ = {isa = PBXBuildFile; fileRef = B31BD70020E7E0D500A560C2 /* translit.h */; };
 		B31BD91620E7E0D800A560C2 /* ustdio.h in Headers */ = {isa = PBXBuildFile; fileRef = B31BD70120E7E0D500A560C2 /* ustdio.h */; };
 		B31BD91720E7E0D800A560C2 /* utf_old.h in Headers */ = {isa = PBXBuildFile; fileRef = B31BD70220E7E0D500A560C2 /* utf_old.h */; };
@@ -272,17 +258,7 @@
 		B31BD9C420E7E0D900A560C2 /* ulistformatter.h in Headers */ = {isa = PBXBuildFile; fileRef = B31BD7AF20E7E0D600A560C2 /* ulistformatter.h */; };
 		B31BD9C520E7E0D900A560C2 /* measfmt.h in Headers */ = {isa = PBXBuildFile; fileRef = B31BD7B020E7E0D600A560C2 /* measfmt.h */; };
 		B31BD9C620E7E0D900A560C2 /* unifilt.h in Headers */ = {isa = PBXBuildFile; fileRef = B31BD7B120E7E0D600A560C2 /* unifilt.h */; };
-		B31BD9C720E7E0D900A560C2 /* gennorm2 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7B320E7E0D600A560C2 /* gennorm2 */; };
-		B31BD9C820E7E0D900A560C2 /* escapesrc in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7B420E7E0D600A560C2 /* escapesrc */; };
-		B31BD9C920E7E0D900A560C2 /* gensprep in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7B520E7E0D600A560C2 /* gensprep */; };
-		B31BD9CA20E7E0D900A560C2 /* icupkg in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7B620E7E0D600A560C2 /* icupkg */; };
-		B31BD9CB20E7E0D900A560C2 /* gencmn in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7B720E7E0D600A560C2 /* gencmn */; };
-		B31BD9CC20E7E0D900A560C2 /* genccode in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7B820E7E0D600A560C2 /* genccode */; };
-		B31BD9CD20E7E0D900A560C2 /* readme.html in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7B920E7E0D600A560C2 /* readme.html */; };
 		B31BD9CE20E7E0DA00A560C2 /* libicutest.61.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7BB20E7E0D600A560C2 /* libicutest.61.dylib */; };
-		B31BD9D020E7E0DA00A560C2 /* icu-uc.pc in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7BE20E7E0D600A560C2 /* icu-uc.pc */; };
-		B31BD9D120E7E0DA00A560C2 /* icu-io.pc in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7BF20E7E0D600A560C2 /* icu-io.pc */; };
-		B31BD9D220E7E0DA00A560C2 /* icu-i18n.pc in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7C020E7E0D600A560C2 /* icu-i18n.pc */; };
 		B31BD9D320E7E0DA00A560C2 /* libicuio.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C120E7E0D600A560C2 /* libicuio.dylib */; };
 		B31BD9D520E7E0DA00A560C2 /* libicutest.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C320E7E0D600A560C2 /* libicutest.dylib */; };
 		B31BD9D620E7E0DA00A560C2 /* libicuio.61.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C420E7E0D600A560C2 /* libicuio.61.dylib */; };
@@ -300,23 +276,6 @@
 		B31BD9E620E7E0DA00A560C2 /* libicudata.61.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7D420E7E0D600A560C2 /* libicudata.61.1.dylib */; };
 		B31BD9E720E7E0DA00A560C2 /* libicutest.61.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7D520E7E0D600A560C2 /* libicutest.61.1.dylib */; };
 		B31BD9EE20E7E0DA00A560C2 /* libicuuc.61.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7DF20E7E0D600A560C2 /* libicuuc.61.1.dylib */; };
-		B31BD9EF20E7E0DA00A560C2 /* gensprep.8 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7E320E7E0D600A560C2 /* gensprep.8 */; };
-		B31BD9F020E7E0DA00A560C2 /* genccode.8 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7E420E7E0D600A560C2 /* genccode.8 */; };
-		B31BD9F120E7E0DA00A560C2 /* icupkg.8 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7E520E7E0D600A560C2 /* icupkg.8 */; };
-		B31BD9F220E7E0DA00A560C2 /* gencmn.8 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7E620E7E0D600A560C2 /* gencmn.8 */; };
-		B31BD9F320E7E0DA00A560C2 /* icu-config.1 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7E820E7E0D600A560C2 /* icu-config.1 */; };
-		B31BD9F420E7E0DA00A560C2 /* pkgdata.1 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7E920E7E0D600A560C2 /* pkgdata.1 */; };
-		B31BD9F520E7E0DA00A560C2 /* gendict.1 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7EA20E7E0D600A560C2 /* gendict.1 */; };
-		B31BD9F620E7E0DA00A560C2 /* genrb.1 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7EB20E7E0D600A560C2 /* genrb.1 */; };
-		B31BD9F720E7E0DA00A560C2 /* genbrk.1 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7EC20E7E0D600A560C2 /* genbrk.1 */; };
-		B31BD9F820E7E0DA00A560C2 /* gencnval.1 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7ED20E7E0D600A560C2 /* gencnval.1 */; };
-		B31BD9F920E7E0DA00A560C2 /* uconv.1 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7EE20E7E0D600A560C2 /* uconv.1 */; };
-		B31BD9FA20E7E0DA00A560C2 /* makeconv.1 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7EF20E7E0D600A560C2 /* makeconv.1 */; };
-		B31BD9FB20E7E0DA00A560C2 /* gencfu.1 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7F020E7E0D600A560C2 /* gencfu.1 */; };
-		B31BD9FC20E7E0DA00A560C2 /* derb.1 in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7F120E7E0D600A560C2 /* derb.1 */; };
-		B31BD9FD20E7E0DA00A560C2 /* install-sh in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7F420E7E0D600A560C2 /* install-sh */; };
-		B31BD9FF20E7E0DA00A560C2 /* mh-darwin in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7F720E7E0D600A560C2 /* mh-darwin */; };
-		B31BDA0020E7E0DA00A560C2 /* mkinstalldirs in Resources */ = {isa = PBXBuildFile; fileRef = B31BD7F820E7E0D600A560C2 /* mkinstalldirs */; };
 		B31BDAFC20E7E26200A560C2 /* libicutest.61.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7BB20E7E0D600A560C2 /* libicutest.61.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BDAFD20E7E26200A560C2 /* libicuio.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7C120E7E0D600A560C2 /* libicuio.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BDAFE20E7E26200A560C2 /* libicutest.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7C320E7E0D600A560C2 /* libicutest.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -491,7 +450,6 @@
 		B3E205E020E568C4009EA554 /* gvaluearray.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F6F520E568A9009EA554 /* gvaluearray.h */; };
 		B3E205E120E568C4009EA554 /* gbinding.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F6F620E568A9009EA554 /* gbinding.h */; };
 		B3E205E220E568C4009EA554 /* gtypeplugin.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F6F720E568A9009EA554 /* gtypeplugin.h */; };
-		B3E205E320E568C4009EA554 /* gobjectnotifyqueue.c in Sources */ = {isa = PBXBuildFile; fileRef = B3E2F6F820E568A9009EA554 /* gobjectnotifyqueue.c */; };
 		B3E205E420E568C4009EA554 /* gsourceclosure.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F6F920E568A9009EA554 /* gsourceclosure.h */; };
 		B3E205E520E568C4009EA554 /* glib-types.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F6FA20E568A9009EA554 /* glib-types.h */; };
 		B3E205E620E568C4009EA554 /* gtype.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F6FB20E568A9009EA554 /* gtype.h */; };
@@ -1944,7 +1902,6 @@
 		B3E2F6F520E568A9009EA554 /* gvaluearray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gvaluearray.h; sourceTree = "<group>"; };
 		B3E2F6F620E568A9009EA554 /* gbinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gbinding.h; sourceTree = "<group>"; };
 		B3E2F6F720E568A9009EA554 /* gtypeplugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gtypeplugin.h; sourceTree = "<group>"; };
-		B3E2F6F820E568A9009EA554 /* gobjectnotifyqueue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gobjectnotifyqueue.c; sourceTree = "<group>"; };
 		B3E2F6F920E568A9009EA554 /* gsourceclosure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gsourceclosure.h; sourceTree = "<group>"; };
 		B3E2F6FA20E568A9009EA554 /* glib-types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "glib-types.h"; sourceTree = "<group>"; };
 		B3E2F6FB20E568A9009EA554 /* gtype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gtype.h; sourceTree = "<group>"; };
@@ -7500,7 +7457,6 @@
 				B3E2F6F520E568A9009EA554 /* gvaluearray.h */,
 				B3E2F6F620E568A9009EA554 /* gbinding.h */,
 				B3E2F6F720E568A9009EA554 /* gtypeplugin.h */,
-				B3E2F6F820E568A9009EA554 /* gobjectnotifyqueue.c */,
 				B3E2F6F920E568A9009EA554 /* gsourceclosure.h */,
 				B3E2F6FA20E568A9009EA554 /* glib-types.h */,
 				B3E2F6FB20E568A9009EA554 /* gtype.h */,
@@ -14088,7 +14044,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "speculid" */;
+			buildConfigurationList = B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "Speculid" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -14167,47 +14123,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31BDA0020E7E0DA00A560C2 /* mkinstalldirs in Resources */,
-				B31BD9FC20E7E0DA00A560C2 /* derb.1 in Resources */,
-				B31BD9CD20E7E0D900A560C2 /* readme.html in Resources */,
-				B31BD9FF20E7E0DA00A560C2 /* mh-darwin in Resources */,
-				B31BD9F420E7E0DA00A560C2 /* pkgdata.1 in Resources */,
-				B31BD9F720E7E0DA00A560C2 /* genbrk.1 in Resources */,
-				B31BD9C720E7E0D900A560C2 /* gennorm2 in Resources */,
-				B31BD9F620E7E0DA00A560C2 /* genrb.1 in Resources */,
-				B31BD9C820E7E0D900A560C2 /* escapesrc in Resources */,
-				B31BD9F320E7E0DA00A560C2 /* icu-config.1 in Resources */,
-				B31BD90E20E7E0D800A560C2 /* genrb in Resources */,
-				B31BD9FD20E7E0DA00A560C2 /* install-sh in Resources */,
-				B31BD9F520E7E0DA00A560C2 /* gendict.1 in Resources */,
-				B31BD91020E7E0D800A560C2 /* genbrk in Resources */,
-				B31BD9F020E7E0DA00A560C2 /* genccode.8 in Resources */,
-				B31BD9FA20E7E0DA00A560C2 /* makeconv.1 in Resources */,
-				B31BD9F820E7E0DA00A560C2 /* gencnval.1 in Resources */,
-				B31BD91420E7E0D800A560C2 /* license.html in Resources */,
-				B31BD9CC20E7E0D900A560C2 /* genccode in Resources */,
-				B31BD9D120E7E0DA00A560C2 /* icu-io.pc in Resources */,
-				B31BD90620E7E0D800A560C2 /* INSTALL_RECEIPT.json in Resources */,
-				B31BD90F20E7E0D800A560C2 /* pkgdata in Resources */,
-				B31BD90C20E7E0D800A560C2 /* icuinfo in Resources */,
-				B31BD90920E7E0D800A560C2 /* gencnval in Resources */,
-				B31BD9D220E7E0DA00A560C2 /* icu-i18n.pc in Resources */,
-				B31BD9CB20E7E0D900A560C2 /* gencmn in Resources */,
-				B31BD9FB20E7E0DA00A560C2 /* gencfu.1 in Resources */,
-				B31BD90820E7E0D800A560C2 /* makeconv in Resources */,
-				B31BD9EF20E7E0DA00A560C2 /* gensprep.8 in Resources */,
-				B31BD9CA20E7E0D900A560C2 /* icupkg in Resources */,
-				B31BD90D20E7E0D800A560C2 /* gendict in Resources */,
-				B31BD9C920E7E0D900A560C2 /* gensprep in Resources */,
-				B31BD9F120E7E0DA00A560C2 /* icupkg.8 in Resources */,
-				B31BD91120E7E0D800A560C2 /* derb in Resources */,
-				B31BD91320E7E0D800A560C2 /* icu4c.rb in Resources */,
-				B31BD90B20E7E0D800A560C2 /* gencfu in Resources */,
-				B31BD9F220E7E0DA00A560C2 /* gencmn.8 in Resources */,
-				B31BD90A20E7E0D800A560C2 /* icu-config in Resources */,
-				B31BD9F920E7E0DA00A560C2 /* uconv.1 in Resources */,
-				B31BD9D020E7E0DA00A560C2 /* icu-uc.pc in Resources */,
-				B31BD91220E7E0D800A560C2 /* uconv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -14630,7 +14545,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E205E320E568C4009EA554 /* gobjectnotifyqueue.c in Sources */,
 				B34E83051F8FD90C0032268F /* GlibError.m in Sources */,
 				B37C74A51F8C5C7400DF505B /* PNGImageHandle.m in Sources */,
 				B37C74AF1F8C5C7400DF505B /* ImageHandleBuilder.m in Sources */,
@@ -15179,7 +15093,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "speculid" */ = {
+		B37C74391F8C58F300DF505B /* Build configuration list for PBXProject "Speculid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B37C744A1F8C58F300DF505B /* Debug */,
