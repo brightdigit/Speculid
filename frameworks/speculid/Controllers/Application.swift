@@ -2,6 +2,14 @@ import AppKit
 import Foundation
 import SwiftVer
 
+extension OperatingSystemVersion {
+  var fullDescription: String {
+    return [self.majorVersion, self.minorVersion, self.patchVersion].map {
+      String(describing: $0)
+    }.joined(separator: ".")
+  }
+}
+
 var exceptionHandler: ((NSException) -> Void)?
 
 func exceptionHandlerMethod(exception: NSException) {
@@ -81,12 +89,18 @@ open class Application: NSApplication, ApplicationProtocol {
 
     configuration = configurationBuilder.configuration(fromCommandLine: CommandLineArgumentProvider())
 
-    let operatingSystem = ProcessInfo.processInfo.operatingSystemVersionString
+    let operatingSystem = ProcessInfo.processInfo.operatingSystemVersion.fullDescription
+    let applicationVersion: String
+    if let version = self.version {
+      applicationVersion = (try? version.fullDescription(withLocale: nil)) ?? ""
+    } else {
+      applicationVersion = ""
+    }
 
     let analyticsConfiguration = AnalyticsConfiguration(
       trackingIdentifier: "UA-33667276-6",
       applicationName: "speculid",
-      applicationVersion: String(describing: Application.version),
+      applicationVersion: applicationVersion,
       customParameters: [.operatingSystemVersion: operatingSystem])
 
     remoteObjectInterfaceProvider.remoteObjectProxyWithHandler { result in
