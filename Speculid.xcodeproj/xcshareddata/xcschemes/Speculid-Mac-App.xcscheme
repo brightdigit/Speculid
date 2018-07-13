@@ -17,7 +17,7 @@
                BlueprintIdentifier = "B37C743D1F8C58F300DF505B"
                BuildableName = "Speculid.app"
                BlueprintName = "Speculid-Mac-App"
-               ReferencedContainer = "container:speculid.xcodeproj">
+               ReferencedContainer = "container:Speculid.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "B3136E5F1F90FCCF0002B7AB"
                BuildableName = "Speculid-Mac-AppUITests.xctest"
                BlueprintName = "Speculid-Mac-AppUITests"
-               ReferencedContainer = "container:speculid.xcodeproj">
+               ReferencedContainer = "container:Speculid.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "B3136E7D1F90FD2E0002B7AB"
                BuildableName = "SpeculidTests.xctest"
                BlueprintName = "SpeculidTests"
-               ReferencedContainer = "container:speculid.xcodeproj">
+               ReferencedContainer = "container:Speculid.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "B37C743D1F8C58F300DF505B"
             BuildableName = "Speculid.app"
             BlueprintName = "Speculid-Mac-App"
-            ReferencedContainer = "container:speculid.xcodeproj">
+            ReferencedContainer = "container:Speculid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -80,7 +80,7 @@
             BlueprintIdentifier = "B37C743D1F8C58F300DF505B"
             BuildableName = "Speculid.app"
             BlueprintName = "Speculid-Mac-App"
-            ReferencedContainer = "container:speculid.xcodeproj">
+            ReferencedContainer = "container:Speculid.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -90,6 +90,10 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "&quot;${SRCROOT}/examples/Assets/macOS AppIcon.speculid&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;${SRCROOT}/examples/Assets/AppIcon.speculid&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -125,7 +129,7 @@
             BlueprintIdentifier = "B37C743D1F8C58F300DF505B"
             BuildableName = "Speculid.app"
             BlueprintName = "Speculid-Mac-App"
-            ReferencedContainer = "container:speculid.xcodeproj">
+            ReferencedContainer = "container:Speculid.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
