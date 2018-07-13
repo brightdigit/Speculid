@@ -343,6 +343,16 @@
 		B37C74B11F8C5C7400DF505B /* PNGSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A21F8C5C7400DF505B /* PNGSurface.h */; };
 		B37C74B21F8C5C7400DF505B /* PNGImageHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */; };
 		B37C74BC1F8C5D2A00DF505B /* CairoSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74891F8C5B5C00DF505B /* CairoSVG.framework */; };
+		B3825EFC20F91807008F2A02 /* Segment.h in Headers */ = {isa = PBXBuildFile; fileRef = B3825EF320F91806008F2A02 /* Segment.h */; };
+		B3825EFD20F91807008F2A02 /* Types.h in Headers */ = {isa = PBXBuildFile; fileRef = B3825EF420F91806008F2A02 /* Types.h */; };
+		B3825EFE20F91807008F2A02 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = B3825EF520F91806008F2A02 /* Log.h */; };
+		B3825EFF20F91807008F2A02 /* Font.h in Headers */ = {isa = PBXBuildFile; fileRef = B3825EF620F91806008F2A02 /* Font.h */; };
+		B3825F0020F91807008F2A02 /* libgraphite2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3825EF820F91806008F2A02 /* libgraphite2.3.dylib */; };
+		B3825F0120F91807008F2A02 /* libgraphite2.3.0.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3825EF920F91806008F2A02 /* libgraphite2.3.0.1.dylib */; };
+		B3825F0220F91807008F2A02 /* libgraphite2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3825EFA20F91806008F2A02 /* libgraphite2.dylib */; };
+		B3825F0320F9183E008F2A02 /* libgraphite2.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3825EF820F91806008F2A02 /* libgraphite2.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B3825F0420F9183F008F2A02 /* libgraphite2.3.0.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3825EF920F91806008F2A02 /* libgraphite2.3.0.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B3825F0520F91841008F2A02 /* libgraphite2.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3825EFA20F91806008F2A02 /* libgraphite2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3891B8320F6402F00FEDF89 /* libcroco-0.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8078920E5858100030497 /* libcroco-0.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3891B8420F6402F00FEDF89 /* libcroco-0.6.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8078C20E5858100030497 /* libcroco-0.6.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3891B8520F6406B00FEDF89 /* libfribidi.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8083020E585BF00030497 /* libfribidi.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -1058,8 +1068,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B3825F0320F9183E008F2A02 /* libgraphite2.3.dylib in CopyFiles */,
+				B3825F0420F9183F008F2A02 /* libgraphite2.3.0.1.dylib in CopyFiles */,
 				B3F80CAB20E586A000030497 /* libharfbuzz.0.dylib in CopyFiles */,
 				B3891B8520F6406B00FEDF89 /* libfribidi.dylib in CopyFiles */,
+				B3825F0520F91841008F2A02 /* libgraphite2.dylib in CopyFiles */,
 				B3891B8620F6406B00FEDF89 /* libfribidi.0.dylib in CopyFiles */,
 				B3F8057E20E584E700030497 /* libpng16.16.dylib in CopyFiles */,
 				B3F80CA720E5866A00030497 /* libpng16.dylib in CopyFiles */,
@@ -1538,6 +1551,13 @@
 		B37C74A11F8C5C7400DF505B /* ImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHandle.h; sourceTree = "<group>"; };
 		B37C74A21F8C5C7400DF505B /* PNGSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGSurface.h; sourceTree = "<group>"; };
 		B37C74A31F8C5C7400DF505B /* PNGImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGImageHandle.h; sourceTree = "<group>"; };
+		B3825EF320F91806008F2A02 /* Segment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Segment.h; sourceTree = "<group>"; };
+		B3825EF420F91806008F2A02 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		B3825EF520F91806008F2A02 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		B3825EF620F91806008F2A02 /* Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Font.h; sourceTree = "<group>"; };
+		B3825EF820F91806008F2A02 /* libgraphite2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libgraphite2.3.dylib; sourceTree = "<group>"; };
+		B3825EF920F91806008F2A02 /* libgraphite2.3.0.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libgraphite2.3.0.1.dylib; sourceTree = "<group>"; };
+		B3825EFA20F91806008F2A02 /* libgraphite2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libgraphite2.dylib; sourceTree = "<group>"; };
 		B3891BBD20F7CE010095E1FD /* CwlSysctl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CwlSysctl.swift; sourceTree = "<group>"; };
 		B3B049C81FA262A8002906B1 /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
 		B3B049CA1FA27D78002906B1 /* decrypt-certs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "decrypt-certs.sh"; sourceTree = "<group>"; };
@@ -3945,6 +3965,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3825F0120F91807008F2A02 /* libgraphite2.3.0.1.dylib in Frameworks */,
+				B3825F0220F91807008F2A02 /* libgraphite2.dylib in Frameworks */,
+				B3825F0020F91807008F2A02 /* libgraphite2.3.dylib in Frameworks */,
 				B3F8057820E584B300030497 /* libpng16.16.dylib in Frameworks */,
 				B3F8057920E584B300030497 /* libpng.dylib in Frameworks */,
 				B3F8057A20E584B300030497 /* libpng16.dylib in Frameworks */,
@@ -4795,6 +4818,52 @@
 			path = cairosvg;
 			sourceTree = "<group>";
 		};
+		B3825EED20F91806008F2A02 /* graphite2 */ = {
+			isa = PBXGroup;
+			children = (
+				B3825EEE20F91806008F2A02 /* 1.3.11 */,
+			);
+			path = graphite2;
+			sourceTree = "<group>";
+		};
+		B3825EEE20F91806008F2A02 /* 1.3.11 */ = {
+			isa = PBXGroup;
+			children = (
+				B3825EF120F91806008F2A02 /* include */,
+				B3825EF720F91806008F2A02 /* lib */,
+			);
+			path = 1.3.11;
+			sourceTree = "<group>";
+		};
+		B3825EF120F91806008F2A02 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				B3825EF220F91806008F2A02 /* graphite2 */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		B3825EF220F91806008F2A02 /* graphite2 */ = {
+			isa = PBXGroup;
+			children = (
+				B3825EF320F91806008F2A02 /* Segment.h */,
+				B3825EF420F91806008F2A02 /* Types.h */,
+				B3825EF520F91806008F2A02 /* Log.h */,
+				B3825EF620F91806008F2A02 /* Font.h */,
+			);
+			path = graphite2;
+			sourceTree = "<group>";
+		};
+		B3825EF720F91806008F2A02 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				B3825EF820F91806008F2A02 /* libgraphite2.3.dylib */,
+				B3825EF920F91806008F2A02 /* libgraphite2.3.0.1.dylib */,
+				B3825EFA20F91806008F2A02 /* libgraphite2.dylib */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		B3D329FE1F9A5D290042B46F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -5043,6 +5112,7 @@
 		B3E2F4B820E568A5009EA554 /* dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				B3825EED20F91806008F2A02 /* graphite2 */,
 				B31BD6EB20E7E0D500A560C2 /* icu4c */,
 				B3F8092520E585E800030497 /* harfbuzz */,
 				B3F8080820E585BF00030497 /* fribidi */,
@@ -13469,10 +13539,12 @@
 				B3E205D820E568C4009EA554 /* gunixfdmessage.h in Headers */,
 				B3E2065620E568C4009EA554 /* gpollableoutputstream.h in Headers */,
 				B3E204C320E568C3009EA554 /* ftstdlib.h in Headers */,
+				B3825EFC20F91807008F2A02 /* Segment.h in Headers */,
 				B3E205E420E568C4009EA554 /* gsourceclosure.h in Headers */,
 				B3E204D120E568C3009EA554 /* fterrors.h in Headers */,
 				B3F8056E20E584B300030497 /* pngconf.h in Headers */,
 				B3E205FE20E568C4009EA554 /* gthreadpool.h in Headers */,
+				B3825EFD20F91807008F2A02 /* Types.h in Headers */,
 				B31BD98620E7E0D900A560C2 /* udisplaycontext.h in Headers */,
 				B31BD96B20E7E0D900A560C2 /* normlzr.h in Headers */,
 				B31BD9A520E7E0D900A560C2 /* uvernum.h in Headers */,
@@ -13750,6 +13822,7 @@
 				B3E2077620E568C5009EA554 /* cairo-script.h in Headers */,
 				B3F808B020E585C000030497 /* fribidi-deprecated.h in Headers */,
 				B3F807D020E5858200030497 /* cr-statement.h in Headers */,
+				B3825EFE20F91807008F2A02 /* Log.h in Headers */,
 				B3F807D220E5858200030497 /* libcroco.h in Headers */,
 				B31BD9B820E7E0D900A560C2 /* utf16.h in Headers */,
 				B3F80B0A20E585E900030497 /* hb-coretext.h in Headers */,
@@ -13760,6 +13833,7 @@
 				B3F807C520E5858200030497 /* cr-enc-handler.h in Headers */,
 				B3E2061420E568C4009EA554 /* genviron.h in Headers */,
 				B3E205D720E568C4009EA554 /* gunixmounts.h in Headers */,
+				B3825EFF20F91807008F2A02 /* Font.h in Headers */,
 				B31BD9B420E7E0D900A560C2 /* ucharstriebuilder.h in Headers */,
 				B31BD92B20E7E0D900A560C2 /* icuplug.h in Headers */,
 				B3E2077820E568C5009EA554 /* cairo-deprecated.h in Headers */,
@@ -15001,6 +15075,7 @@
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/harfbuzz/1.7.4/lib",
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/icu4c/61.1/lib",
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/icu4c/60.2/lib",
+					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/graphite2/1.3.11/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.CairoSVG-Mac-Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -15056,6 +15131,7 @@
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/harfbuzz/1.7.4/lib",
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/icu4c/61.1/lib",
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/icu4c/60.2/lib",
+					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/graphite2/1.3.11/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.CairoSVG-Mac-Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
