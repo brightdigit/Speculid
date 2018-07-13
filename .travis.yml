@@ -2,6 +2,7 @@ language: objective-c
 branches:
   except: 
     - develop
+    - gh-pages
 osx_image: xcode8.2
 xcode_workspace: speculid.xcworkspace # path to your xcodeproj folder
 xcode_scheme: Speculid
