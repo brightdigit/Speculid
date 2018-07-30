@@ -6,6 +6,8 @@
 
 ## Problem
 
+{% octicon archive height:128 %}
+**Managing graphics files in iOS or Mac Development can be a real challenge.** For each 
 There's a challenge making sure all images for a particular Image Set or App Icon are consistent. When the graphic designer wants to update an icon, they need to make sure they export each and every size. One vector graphic needs to be exported to as many as 30 image files.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
