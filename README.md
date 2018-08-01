@@ -4,33 +4,42 @@
 [![Beerpay](https://img.shields.io/beerpay/brightdigit/speculid.svg?maxAge=2592000)](https://beerpay.io/brightdigit/speculid)
 [![Gitter](https://img.shields.io/gitter/room/speculid/Lobby.js.svg?maxAge=2592000)](https://gitter.im/speculid/Lobby) -->
 
-<section class="cards" markdown="1">
 
 ## Dealing with Asset Catalogs
 
+
+<section class="cards" markdown="1">
+<section class="card" markdown="1">
 ![Multiple Images](./images/Logo-dashed.svg){:height="100px"}
 
 For Apple developers, there is no application which prepares graphics files for asset catalogs. 
-
+</section>
+<section class="card" markdown="1">
 ![Multiple Images](./images/mechanic.svg){:height="100px"}
 
 Each graphic must be manually updated, converted, resized.
-
+</section>
+<section class="card" markdown="1">
 ![Multiple Images](./images/archive.svg){:height="100px"}
 
 An Image Set will need a 1x, 2x, 3x of each graphic.
 App Icons may need as many 30 different sizes.
+</section>
+</section>
 
 ## What Speculid Does
 
+<section class="cards" markdown="1">
+<section class="card" markdown="1">
 ![Multiple Images](./images/machinery.svg){:height="100px"}
 ### Automate the process 
 Speculid automates the process so only one graphic file is needed.
-
+</section>
+<section class="card" markdown="1">
 ![Multiple Images](./images/clean-code.svg){:height="100px"}
 ### Shrink and Tidy your Repo
 Reduce the size of your code repo by including a single vector or raster image and build all your nessecary png and pdf files at compile.
-
+</section>
 </section>
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->

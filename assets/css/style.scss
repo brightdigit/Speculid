@@ -5,4 +5,11 @@
 
 .cards {
 	text-align: center;
+  display: table-row;
+  clear: both;
+
+  .card {
+    display: table-cell;
+    font-size: 0.9em;
+  }
 }
