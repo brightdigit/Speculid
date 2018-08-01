@@ -5,11 +5,29 @@
 
 .cards {
 	text-align: center;
-  display: table-row;
+  display: table;
   clear: both;
 
   .card {
-    display: table-cell;
-    font-size: 0.9em;
+    @media screen and (min-width: 42em) {
+      display: table-cell; 
+      padding: 1em; 
+
+      &.half {
+        width: 50%;
+      } 
+      &.whole {
+      } 
+      &.third {
+        width: 33.33%;
+        width: calc(100% / 3);
+      }
+    }
+    p {
+      font-size: 0.75em;
+    }
+    h2 {
+      font-size: 0.8em;
+    }
   }
 }
