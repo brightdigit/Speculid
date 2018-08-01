@@ -4,17 +4,34 @@
 [![Beerpay](https://img.shields.io/beerpay/brightdigit/speculid.svg?maxAge=2592000)](https://beerpay.io/brightdigit/speculid)
 [![Gitter](https://img.shields.io/gitter/room/speculid/Lobby.js.svg?maxAge=2592000)](https://gitter.im/speculid/Lobby) -->
 
-## Problem
+<section class="cards" markdown="1">
 
-![Multiple Images](./images/multiple-images.svg){:height="100px"}
+## Dealing with Asset Catalogs
 
-**Managing graphics files in iOS or Mac Development can be a real challenge.** 
-There's a challenge making sure all images for a particular Image Set or App Icon are consistent. When the graphic designer wants to update an icon, they need to make sure they export each and every size. 
+![Multiple Images](./images/Logo-dashed.svg){:height="100px"}
 
+For Apple developers, there is no application which prepares graphics files for asset catalogs. 
 
-![Vector Graphics](./images/vector.svg){:height="100px"}
+![Multiple Images](./images/mechanic.svg){:height="100px"}
 
-**One vector graphic needs to be exported to as many as 30 image files.**
+Each graphic must be manually updated, converted, resized.
+
+![Multiple Images](./images/archive.svg){:height="100px"}
+
+An Image Set will need a 1x, 2x, 3x of each graphic.
+App Icons may need as many 30 different sizes.
+
+## What Speculid Does
+
+![Multiple Images](./images/machinery.svg){:height="100px"}
+### Automate the process 
+Speculid automates the process so only one graphic file is needed.
+
+![Multiple Images](./images/clean-code.svg){:height="100px"}
+### Shrink and Tidy your Repo
+Reduce the size of your code repo by including a single vector or raster image and build all your nessecary png and pdf files at compile.
+
+</section>
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
