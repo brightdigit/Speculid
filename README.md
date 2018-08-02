@@ -87,8 +87,8 @@ $ speculid --help
 $ speculid --version
 
 Options:
-  -h --help     Show this screen.
-  --version     Show version.
+  --help     Show this screen.
+  --version  Show version.
 ```
 
 ### File Format
