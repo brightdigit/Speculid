@@ -65,7 +65,8 @@ open class Application: NSApplication, ApplicationProtocol {
     imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
     commandLineRunner = CommandLineRunner(
       outputStream: FileHandle.standardOutput,
-      errorStream: FileHandle.standardError)
+      errorStream: FileHandle.standardError
+    )
 
     super.init()
   }
@@ -79,7 +80,8 @@ open class Application: NSApplication, ApplicationProtocol {
     imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
     commandLineRunner = CommandLineRunner(
       outputStream: FileHandle.standardOutput,
-      errorStream: FileHandle.standardError)
+      errorStream: FileHandle.standardError
+    )
 
     super.init(coder: coder)
   }
@@ -101,7 +103,8 @@ open class Application: NSApplication, ApplicationProtocol {
       trackingIdentifier: "UA-33667276-6",
       applicationName: "speculid",
       applicationVersion: applicationVersion,
-      customParameters: [.operatingSystemVersion: operatingSystem, .model: Sysctl.model])
+      customParameters: [.operatingSystemVersion: operatingSystem, .model: Sysctl.model]
+    )
 
     remoteObjectInterfaceProvider.remoteObjectProxyWithHandler { result in
       switch result {
@@ -167,5 +170,6 @@ open class Application: NSApplication, ApplicationProtocol {
   public let version = Version(
     bundle: bundle,
     dictionary: sbd,
-    versionControl: vcs)
+    versionControl: vcs
+  )
 }
