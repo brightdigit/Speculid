@@ -1,13 +1,25 @@
 @testable import Speculid
 import XCTest
-import RandomKit
 
+private let _alphanumericcharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
+extension String {
+  static func randomAlphanumeric(ofLength length: Int) -> String {
+    let randomCharacters = (0 ..< length).map { _ in _alphanumericcharacters.randomElement()! }
+    return String(randomCharacters)
+  }
+}
 struct SimpleCommandLineArgumentProvider: CommandLineArgumentProviderProtocol {
   public let arguments: [String]
+  public init(arguments: [String]) {
+    self.arguments = arguments
+  }
+  public init(randomWithCount count: Int) {
+    arguments = (0 ..< count).map { _ in String.randomAlphanumeric(ofLength: 100) }
+  }
 }
 
 class SpeculidApplicationModeParserTest: XCTestCase {
-
   override func setUp() {
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,7 +33,7 @@ class SpeculidApplicationModeParserTest: XCTestCase {
   func testParseModeHelp() {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    let arguments = SimpleCommandLineArgumentProvider(arguments: ["-help"])
+    let arguments = SimpleCommandLineArgumentProvider(arguments: ["--help"])
     let parser = SpeculidApplicationModeParser()
     let actual = parser.parseMode(fromCommandLine: arguments)
     let expected = SpeculidApplicationMode.command(SpeculidCommandArgumentSet.help)
@@ -31,7 +43,7 @@ class SpeculidApplicationModeParserTest: XCTestCase {
   func testParseModeVersion() {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    let arguments = SimpleCommandLineArgumentProvider(arguments: ["-version"])
+    let arguments = SimpleCommandLineArgumentProvider(arguments: ["--version"])
     let parser = SpeculidApplicationModeParser()
     let actual = parser.parseMode(fromCommandLine: arguments)
     let expected = SpeculidApplicationMode.command(SpeculidCommandArgumentSet.version)
@@ -47,7 +59,7 @@ class SpeculidApplicationModeParserTest: XCTestCase {
   }
 
   func testParseModeFile() {
-    let argumentSet = Array<String>(randomCount: 100, using: &Xoroshiro.default).map { Array<String>.init(repeating: $0, count: 1) }.map(SimpleCommandLineArgumentProvider.init)
+    let argumentSet = (0 ..< 100).map { _ in SimpleCommandLineArgumentProvider(randomWithCount: 100) }
     for arguments in argumentSet {
       let parser = SpeculidApplicationModeParser()
       let actual = parser.parseMode(fromCommandLine: arguments)

@@ -6,7 +6,7 @@ public enum SpeculidCommandArgumentSet: Equatable {
     case (.help, .help): return true
     case (.unknown, .unknown): return true
     case (.version, .version): return true
-    case let (.file(left), .file(right)): return left == right
+    case let (.process(left), .process(right)): return left == right
     default: return false
     }
   }
@@ -14,5 +14,5 @@ public enum SpeculidCommandArgumentSet: Equatable {
   case help
   case unknown([String])
   case version
-  case file(URL)
+  case process(URL)
 }
