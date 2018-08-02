@@ -26,8 +26,25 @@
     p {
       font-size: 0.75em;
     }
-    h2 {
-      font-size: 0.8em;
-    }
   }
+}
+
+#markdown-toc {
+  li > ul > li > ul {
+    display: none;
+  }
+  #markdown-toc-table-of-contents {
+    display: none;
+  }
+  & > li:first-child {
+    display: none;
+  }
+}
+
+#introduction {
+  display: none;
+}
+
+#table-of-contents {
+  display: none;
 }
