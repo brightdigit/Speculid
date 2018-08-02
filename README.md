@@ -4,24 +4,6 @@
 [![Beerpay](https://img.shields.io/beerpay/brightdigit/speculid.svg?maxAge=2592000)](https://beerpay.io/brightdigit/speculid)
 [![Gitter](https://img.shields.io/gitter/room/speculid/Lobby.js.svg?maxAge=2592000)](https://gitter.im/speculid/Lobby)
 
-
-<form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
-  <div class="row uniform 100%">
-    <div class="8u 12u$(xsmall)">
-      <!--<input type="email" name="email" id="email"> -->
-      <input type="email" placeholder="Your Email Address" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-    </div>
-    <div class="4u$ 12u$(xsmall)"><input type="submit" value="Get Started" class="fit special"></div>
-  </div>
-  <div class="row uniform 100%">
-    <div class="12u$ form-message">
-      <p>Signup to <strong>receive exclusive news</strong> on releases.</p>
-    </div>
-  </div>
-</form>
-<div class="message">
-</div>
-
 ## Table of Contents
 
 * TOC
@@ -84,6 +66,15 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
 
 ## Download
    
+If you are interested in **downloading and using the current alpha, fill out the form below** and you will receive a link to latest version.
+
+<form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
+  <input type="email" placeholder="Your Email Address" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+  <input type="submit" value="Sign Me Up">
+</form>
+<div class="message">
+</div>
+
 ## Usage
 
 ```bash
@@ -181,4 +172,4 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
 5. Build and Run. Done.
 
-**Speculid** © 2016, BrightDigit, LLC. 
+**Speculid** ©2018, BrightDigit, LLC. 

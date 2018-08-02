@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   // - Code to execute when all DOM content is loaded. 
   // - including fonts, images, etc.
+  Array.prototype.forEach.call(document.getElementsByClassName("open-popup"), function(button) {
+    button.addEventListener('click', showMailingPopUp);
+  });
+  
   var elements = document.getElementsByClassName("signup-form");
   Array.prototype.forEach.call(elements, function(div){
 
@@ -61,3 +65,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	});
   });
 });
+
+function showMailingPopUp() {
+require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us12.list-manage.com","uuid":"cb3bba007ed171091f55c47f0","lid":"19a8f55024"}) })
+document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+};

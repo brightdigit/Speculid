@@ -1,6 +1,6 @@
 ---
 ---
-
+@import url('https://fonts.googleapis.com/css?family=Khula:300,700');
 @import "{{ site.theme }}";
 
 .cards {
@@ -47,4 +47,33 @@
 
 #table-of-contents {
   display: none;
+}
+
+body {
+  font-family: "Khula", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.page-header {
+  form {
+    margin: -5px auto;
+    display: table;
+    & > div {
+      display: table-row;
+      & > input {
+        display: table-cell;
+        width: 100%;
+        margin: 5px 0;
+      }
+    }
+  }
+  button.open-popup {
+    padding: 10px 50px;
+    background-color: $body-link-color;
+    color: $border-color;
+    border: 1px $border-color solid;
+    font-size: 1.25em;
+    min-width: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+  }
 }
