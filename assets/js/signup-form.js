@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   	};
   	div.addEventListener('submit', function(event) {
 
-  		var email = div.querySelector("input.email").value;
+  		var email = div.querySelector("input[type=email]").value;
   		event.stopPropagation();
   		event.preventDefault();
 

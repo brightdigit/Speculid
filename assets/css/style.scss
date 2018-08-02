@@ -49,7 +49,7 @@
   display: none;
 }
 
-body {
+body, input, button {
   font-family: "Khula", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -86,6 +86,30 @@ body {
     &:hover {
       span {
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+.signup-form-container {
+  background-color: $code-bg-color;
+  padding: 40px;
+  display: table;
+  form.signup-form {
+    width: 100%;
+    display: table-row;
+    input {
+      display: table-cell;
+      margin: 10px;
+      padding: 5px 10px;
+      &:first-child {
+        margin-left: 0px;
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
+      &[type=email] {
+        width: 25em;
       }
     }
   }

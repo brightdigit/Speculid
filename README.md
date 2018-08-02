@@ -68,12 +68,15 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
    
 If you are interested in **downloading and using the current alpha, fill out the form below** and you will receive a link to latest version.
 
+<section class="signup-form-container">
+  <div></div>
 <form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
-  <input type="email" placeholder="Your Email Address" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-  <input type="submit" value="Sign Me Up">
+  <input type="email" placeholder="Your Email Address" value="" name="EMAIL" id="mce-EMAIL" required>
+  <input type="submit" value="Download">
 </form>
 <div class="message">
 </div>
+</section>
 
 ## Usage
 
