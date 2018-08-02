@@ -95,6 +95,21 @@ body, input, button {
   background-color: $code-bg-color;
   padding: 40px;
   display: table;
+  .message {
+    display: table-row;
+    visiblity: collapse;
+    
+    opacity: 0.5;
+    &.visible {
+      visiblity: visible;
+    }
+    &.failure {
+      color: #F00;
+    }
+    &.success {
+      color: #0F0;
+    }
+  }
   form.signup-form {
     width: 100%;
     display: table-row;

@@ -75,6 +75,7 @@ If you are interested in **downloading and using the current alpha, fill out the
   <input type="submit" value="Download">
 </form>
 <div class="message">
+  &nbsp;
 </div>
 </section>
 
