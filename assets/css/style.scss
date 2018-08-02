@@ -67,13 +67,26 @@ body {
     }
   }
   button.open-popup {
-    padding: 10px 50px;
+    padding: 8px 100px 0px;
     background-color: $body-link-color;
-    color: $border-color;
-    border: 1px $border-color solid;
-    font-size: 1.25em;
-    min-width: 1em;
+    color: #FFF;
+    border: 1px transparentize($border-color, 0.5) solid;
+    font-size: 1.5em;
     border-radius: 5px;
     font-weight: bold;
+    img {
+      height: 1.5em;
+      margin: 5px 20px 0px 5px;
+    }
+    span {
+      margin-top: 10px;
+      display: block;
+      float: right;
+    }
+    &:hover {
+      span {
+        text-decoration: underline;
+      }
+    }
   }
 }
