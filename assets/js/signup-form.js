@@ -23,9 +23,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   		$message.classList.add(type);
   		$message.classList.add('visible');
 
-  		window.setTimeout(function() {
-  			$message._hide();
-  		}, 3000);
+      if (type == "success") {
+    		window.setTimeout(function() {
+    			$message._hide();
+    		}, 3000);
+      }
 
   	};
 

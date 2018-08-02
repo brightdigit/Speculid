@@ -41,7 +41,7 @@ For Apple developers, there is no application which prepares graphics files for 
 ### What Speculid Does
 
 
-![diagram](https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/Diagram.png)
+![diagram](/images/Diagram.png)
 
 <section class="cards" markdown="1">
 <section class="card half" markdown="1">
@@ -65,14 +65,14 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
 * Allow the **Removal of Transparency for App Icons**
 
 ## Download
-   
-If you are interested in **downloading and using the current alpha, fill out the form below** and you will receive a link to latest version.
 
 <section class="signup-form-container">
-  <div></div>
+  <div>If you are interested in <strong>downloading and using the current alpha, fill out the form below</strong> and you will receive a link to latest version.</div>
 <form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
+  <div class="row">
   <input type="email" placeholder="Your Email Address" value="" name="EMAIL" id="mce-EMAIL" required>
   <input type="submit" value="Download">
+  </div>
 </form>
 <div class="message">
   &nbsp;
@@ -114,7 +114,7 @@ or
 
 #### Set `set`
 
-<img src="https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/SetExample.png" width="320" height="240" alt="Image Set Examples from Xcode">
+<img src="/images/SetExample.png" width="320" height="240" alt="Image Set Examples from Xcode">
 
 A set is an image set or app icon set used by Xcode. That path specified in the json could be relative to the `.speculid` file.
 
@@ -143,9 +143,9 @@ To specifically remove the alpha channel, a true boolean value must be specified
 
 With **Speculid**, the process of building image assets can be automated in **Xcode**.
 
-1. Add the speculid files to your source root as well as your source graphic files. 
+1. Create and add the speculid files to your project folder as well as your source graphic files. 
 
-![Xcode Target Membership](https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/XcodeTargetMembership.png)
+![Xcode Target Membership](/images/XcodeTargetMembership.png)
 
   * *Note: you don't need to add these files to your target membership*
 
@@ -154,17 +154,17 @@ With **Speculid**, the process of building image assets can be automated in **Xc
   ```bash
   find "${SRCROOT}" -name "*.speculid" -print0 |
   while IFS= read -r -d $'\0' line; do
-  speculid "$line" &
+  speculid --process "$line" &
   done
   wait
   ```
-![Xcode Build Phase Run Script](https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/XcodeBuildPhaseRunScript.png)
+![Xcode Build Phase Run Script](/images/XcodeBuildPhaseRunScript.png)
 
-3. Build the application. This will create the graphics which you will use in your asset image set or app icon.
+3. **Build the application.** This will create the graphics which you will use in your asset image set or app icon.
 
-![Xcode Unorganized Assets](https://raw.githubusercontent.com/brightdigit/speculid/master/assets/images/XcodeUnorganizedAssets.png)
+![Xcode Unorganized Assets](/images/XcodeUnorganizedAssets.png)
 
-4. Drag the images to the correct asset slot. Each rendered image file is suffixed denoting its slot.
+4. **After the first build**, drag the images to the correct asset slot. Each rendered image file is suffixed denoting its slot.
 
   *(source file base name)*.*(size)*@*(scale)*~*(idiom)*.(extension)
 
@@ -175,5 +175,7 @@ With **Speculid**, the process of building image assets can be automated in **Xc
   * **logo.83.5x83.5@2x~ipad.png** - 83.5x83.5 size 2x scale for iPad
 
 5. Build and Run. Done.
+
+-----
 
 **Speculid** ©2018, BrightDigit, LLC. 

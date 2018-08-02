@@ -75,8 +75,8 @@ body, input, button {
     border-radius: 5px;
     font-weight: bold;
     img {
-      height: 1.5em;
-      margin: 5px 20px 0px 5px;
+      height: 1em;
+      margin: 10px;
     }
     span {
       margin-top: 10px;
@@ -92,33 +92,38 @@ body, input, button {
 }
 
 .signup-form-container {
-  background-color: $code-bg-color;
+  background-color: saturate($code-bg-color, 33%);
   padding: 40px;
   display: table;
+  border: 1px $border-color solid;
+  border-radius: 5px;
   .message {
     display: table-row;
-    visiblity: collapse;
-    
-    opacity: 0.5;
-    &.visible {
+    & , &.success {
+      visiblity: hidden;
+      opacity: 0;
+    }
+    &.visible,  &.failure {
       visiblity: visible;
+      opacity: 0.5;
     }
     &.failure {
       color: #F00;
     }
     &.success {
-      color: #0F0;
+      color: $section-headings-color;
     }
   }
   form.signup-form {
     width: 100%;
-    display: table-row;
+    .row {
+    display: flex;
     input {
-      display: table-cell;
       margin: 10px;
       padding: 5px 10px;
       border-radius: 5px;
       border: 1px transparentize(#000, 0.8) solid;
+      width: 186px;
       &:first-child {
         margin-left: 0px;
       }
@@ -126,7 +131,7 @@ body, input, button {
         margin-right: 0px;
       }
       &[type="email"] {
-        width: 25em;
+        flex-grow: 1;
       }
       &[type="submit"] {
         background-color: darken($body-link-color, 10%);
@@ -139,7 +144,9 @@ body, input, button {
           color: #fff;
           background-color: $body-link-color;
         }
+        width: 186px;
       }
+    }
     }
   }
 }
