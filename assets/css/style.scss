@@ -102,14 +102,28 @@ body, input, button {
       display: table-cell;
       margin: 10px;
       padding: 5px 10px;
+      border-radius: 5px;
+      border: 1px transparentize(#000, 0.8) solid;
       &:first-child {
         margin-left: 0px;
       }
       &:last-child {
         margin-right: 0px;
       }
-      &[type=email] {
+      &[type="email"] {
         width: 25em;
+      }
+      &[type="submit"] {
+        background-color: darken($body-link-color, 10%);
+        color: darken(#FFF, 15%);
+        padding-left: 50px;
+        padding-right: 50px;
+        font-weight: bold;
+        border-color: transparentize($border-color, 0.5);
+        &:hover {
+          color: #fff;
+          background-color: $body-link-color;
+        }
       }
     }
   }
