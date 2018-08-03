@@ -10,25 +10,25 @@ osx_image: xcode9.4
 xcode_workspace: speculid.xcworkspace
 xcode_scheme: Speculid-Mac-App
 before_install:
-- openssl aes-256-cbc -K $encrypted_3e2d534a03f2_key -iv $encrypted_3e2d534a03f2_iv
-  -in certs/mac_development.p12.enc -out certs/mac_development.p12 -d
-- openssl aes-256-cbc -K $encrypted_3e2d534a03f2_key -iv $encrypted_3e2d534a03f2_iv
-  -in certs/mac_development.cer.enc -out certs/mac_development.cer -d
-- bundler install
-- pod repo update
-- pod install
+#- openssl aes-256-cbc -K $encrypted_3e2d534a03f2_key -iv $encrypted_3e2d534a03f2_iv
+#  -in certs/mac_development.p12.enc -out certs/mac_development.p12 -d
+#- openssl aes-256-cbc -K $encrypted_3e2d534a03f2_key -iv $encrypted_3e2d534a03f2_iv
+#  -in certs/mac_development.cer.enc -out certs/mac_development.cer -d
+#- bundler install
+#- pod repo update
+#- pod install
 script:
 #- "./decrypt-certs.sh"
-- "./build-keychain.sh"
+#- "./build-keychain.sh"
 #- "./setup-dependencies.sh"
-- xcodebuild archive -workspace speculid.xcworkspace -scheme "Speculid-Mac-App" -configuration
-  Release -derivedDataPath ./build -archivePath ./build/Products/Speculid.xcarchive
-- xcodebuild -exportArchive -archivePath ./build/Products/Speculid.xcarchive -exportOptionsPlist
-  ./exportOptions.plist -exportPath ./build/Products/App
-- ditto -c -k --sequesterRsrc --keepParent ./build/Products/App/Speculid.app build/Speculid.zip
-- open Build/Products/App/Speculid.app
-- osascript -e 'tell application "Speculid" to quit'
-- diff examples/shasum <(./shasum.sh)
+#- xcodebuild archive -workspace speculid.xcworkspace -scheme "Speculid-Mac-App" -configuration
+#  Release -derivedDataPath ./build -archivePath ./build/Products/Speculid.xcarchive
+#- xcodebuild -exportArchive -archivePath ./build/Products/Speculid.xcarchive -exportOptionsPlist
+#  ./exportOptions.plist -exportPath ./build/Products/App
+#- ditto -c -k --sequesterRsrc --keepParent ./build/Products/App/Speculid.app build/Speculid.zip
+#- open Build/Products/App/Speculid.app
+#- osascript -e 'tell application "Speculid" to quit'
+#- diff examples/shasum <(./shasum.sh)
 before_deploy:
 - git config --global user.email "builds@travis-ci.com"
 - git config --global user.name "Travis CI"
