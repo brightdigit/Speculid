@@ -28,7 +28,12 @@ open class Application: NSApplication, ApplicationProtocol {
     return NSApplication.shared as? ApplicationProtocol
   }
 
-  open static let errorText = "Unknown Command Paramter"
+  open static let unknownCommandMessagePrefix = "Unknown Command Arguments"
+
+  public static func unknownCommandMessage(fromArguments arguments: [String]) -> String {
+    return "\(unknownCommandMessagePrefix): \(arguments.joined(separator: " "))"
+  }
+
   open static let helpText: String! = {
     guard let url = Application.bundle.url(forResource: "help", withExtension: "txt") else {
       return nil

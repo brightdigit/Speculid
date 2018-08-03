@@ -94,6 +94,10 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--process &quot;${SRCROOT}/examples/Assets/AppIcon.speculid&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "ASBfdsadf"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument

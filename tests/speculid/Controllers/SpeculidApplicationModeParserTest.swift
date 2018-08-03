@@ -9,6 +9,13 @@ extension String {
     return String(randomCharacters)
   }
 }
+
+extension Array where Element == String {
+  static func randomElements(ofCount count: Int) -> Array {
+    return (0 ..< count).map { _ in String.randomAlphanumeric(ofLength: 100) }
+  }
+}
+
 struct SimpleCommandLineArgumentProvider: CommandLineArgumentProviderProtocol {
   public let arguments: [String]
   public init(arguments: [String]) {
@@ -28,6 +35,27 @@ class SpeculidApplicationModeParserTest: XCTestCase {
   override func tearDown() {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     super.tearDown()
+  }
+
+  func testParseModeUnknownWithExecutable() {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    let arguments = [String].randomElements(ofCount: 7)
+    let provider = SimpleCommandLineArgumentProvider(arguments: [Bundle.main.executablePath!] + arguments)
+    let parser = SpeculidApplicationModeParser()
+    let actual = parser.parseMode(fromCommandLine: provider)
+    let expected = SpeculidApplicationMode.command(SpeculidCommandArgumentSet.unknown(arguments))
+    XCTAssertEqual(actual, expected)
+  }
+
+  func testParseModeUnknown() {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    let provider = SimpleCommandLineArgumentProvider(randomWithCount: 7)
+    let parser = SpeculidApplicationModeParser()
+    let actual = parser.parseMode(fromCommandLine: provider)
+    let expected = SpeculidApplicationMode.command(SpeculidCommandArgumentSet.unknown(provider.arguments))
+    XCTAssertEqual(actual, expected)
   }
 
   func testParseModeHelp() {

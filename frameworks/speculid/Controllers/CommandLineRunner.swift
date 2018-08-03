@@ -31,7 +31,7 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
         self.outputStream.write(Application.helpText)
         return completed()
       case let .unknown(arguments):
-        self.errorStream.write(Application.errorText)
+        self.errorStream.write(Application.unknownCommandMessage(fromArguments: arguments))
         self.outputStream.write(Application.helpText)
         error = UnknownArgumentsError(arguments: arguments)
         return completed()
