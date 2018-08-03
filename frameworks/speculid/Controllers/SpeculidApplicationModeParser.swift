@@ -2,7 +2,10 @@ import Foundation
 
 public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtocol {
   public func parseMode(fromCommandLine commandLine: CommandLineArgumentProviderProtocol) -> SpeculidApplicationMode {
-    var indicies = commandLine.arguments.startIndex == commandLine.arguments.endIndex ? [] : [commandLine.arguments.startIndex]
+    var indicies = [Int]()
+    if commandLine.arguments.first == Bundle.main.executablePath {
+      indicies.append(commandLine.arguments.startIndex)
+    }
     if let index = commandLine.arguments.index(of: "-NSDocumentRevisionsDebugMode") {
       indicies.append(index)
       indicies.append(index.advanced(by: 1))
