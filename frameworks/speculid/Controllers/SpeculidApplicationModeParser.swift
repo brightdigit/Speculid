@@ -35,3 +35,10 @@ public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtoc
     }
   }
 }
+
+@available(swift, obsoleted: 4.2)
+extension Array where Element: Equatable {
+  func firstIndex(of element: Element) -> Index? {
+    return index(of: element)
+  }
+}
