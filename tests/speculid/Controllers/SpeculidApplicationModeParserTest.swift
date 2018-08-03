@@ -59,12 +59,11 @@ class SpeculidApplicationModeParserTest: XCTestCase {
   }
 
   func testParseModeFile() {
-    let argumentSet = (0 ..< 100).map { _ in SimpleCommandLineArgumentProvider(randomWithCount: 100) }
-    for arguments in argumentSet {
-      let parser = SpeculidApplicationModeParser()
-      let actual = parser.parseMode(fromCommandLine: arguments)
-      let expected = SpeculidApplicationMode.command(SpeculidCommandArgumentSet.unknown(arguments.arguments))
-      XCTAssertEqual(actual, expected)
-    }
+    let fileURL = Bundle(for: type(of: self)).url(forResource: "dummy", withExtension: nil)!
+    let arguments = SimpleCommandLineArgumentProvider(arguments: ["--process", fileURL.path])
+    let parser = SpeculidApplicationModeParser()
+    let actual = parser.parseMode(fromCommandLine: arguments)
+    let expected = SpeculidApplicationMode.command(SpeculidCommandArgumentSet.process(fileURL))
+    XCTAssertEqual(actual, expected)
   }
 }
