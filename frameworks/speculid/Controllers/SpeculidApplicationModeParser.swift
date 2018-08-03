@@ -25,10 +25,10 @@ public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtoc
         if FileManager.default.fileExists(atPath: filePath) {
           return .command(.process(URL(fileURLWithPath: filePath)))
         } else {
-          return .command(.unknown(commandLine.arguments))
+          return .command(.unknown(arguments))
         }
       } else {
-        return .command(.unknown(commandLine.arguments))
+        return .command(.unknown(arguments))
       }
     } else {
       return .cocoa

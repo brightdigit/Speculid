@@ -38,20 +38,21 @@ class CommandLineRunnerTest: XCTestCase {
 
     let expectations = argumentStrings.map("Run Command Line Activity: ".appending).map(XCTestExpectation.init)
 
-    let argumentSet = argumentStrings.map { Array<String>.init(repeating: $0, count: 1) }.map(SpeculidCommandArgumentSet.unknown)
-    for (argument, expectation) in zip(argumentSet, expectations) {
+    let setOfArgumentLists = argumentStrings.map { Array<String>.init(repeating: $0, count: 1) }
+    for (arguments, expectation) in zip(setOfArgumentLists, expectations) {
       let outputStream = RecordedOutputStream()
       let errorStream = RecordedOutputStream()
       let commandLineRunner = CommandLineRunner(outputStream: outputStream, errorStream: errorStream)
-
-      let activity = commandLineRunner.activity(withArguments: argument) { activity, error in
+      let argumentSet = SpeculidCommandArgumentSet.unknown(arguments)
+      let errorString = Application.unknownCommandMessage(fromArguments: arguments)
+      let activity = commandLineRunner.activity(withArguments: argumentSet) { activity, error in
         XCTAssertNotNil(activity)
         XCTAssertNotNil(error)
         XCTAssertEqual(
           outputStream.strings,
           [Application.helpText]
         )
-        XCTAssertEqual(errorStream.strings, [Application.errorText])
+        XCTAssertEqual(errorStream.strings, [errorString])
         expectation.fulfill()
       }
 
