@@ -14,9 +14,9 @@ before_install:
 #  -in certs/mac_development.p12.enc -out certs/mac_development.p12 -d
 #- openssl aes-256-cbc -K $encrypted_3e2d534a03f2_key -iv $encrypted_3e2d534a03f2_iv
 #  -in certs/mac_development.cer.enc -out certs/mac_development.cer -d
-#- bundler install
-#- pod repo update
-#- pod install
+- bundler install
+- pod repo update
+- pod install
 script:
 #- "./decrypt-certs.sh"
 #- "./build-keychain.sh"
