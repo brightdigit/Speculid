@@ -28,7 +28,12 @@ open class Application: NSApplication, ApplicationProtocol {
     return NSApplication.shared as? ApplicationProtocol
   }
 
-  open static let errorText = "Unknown Command Paramter"
+  open static let unknownCommandMessagePrefix = "Unknown Command Arguments"
+
+  public static func unknownCommandMessage(fromArguments arguments: [String]) -> String {
+    return "\(unknownCommandMessagePrefix): \(arguments.joined(separator: " "))"
+  }
+
   open static let helpText: String! = {
     guard let url = Application.bundle.url(forResource: "help", withExtension: "txt") else {
       return nil
@@ -65,7 +70,8 @@ open class Application: NSApplication, ApplicationProtocol {
     imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
     commandLineRunner = CommandLineRunner(
       outputStream: FileHandle.standardOutput,
-      errorStream: FileHandle.standardError)
+      errorStream: FileHandle.standardError
+    )
 
     super.init()
   }
@@ -79,7 +85,8 @@ open class Application: NSApplication, ApplicationProtocol {
     imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
     commandLineRunner = CommandLineRunner(
       outputStream: FileHandle.standardOutput,
-      errorStream: FileHandle.standardError)
+      errorStream: FileHandle.standardError
+    )
 
     super.init(coder: coder)
   }
@@ -101,7 +108,8 @@ open class Application: NSApplication, ApplicationProtocol {
       trackingIdentifier: "UA-33667276-6",
       applicationName: "speculid",
       applicationVersion: applicationVersion,
-      customParameters: [.operatingSystemVersion: operatingSystem, .model: Sysctl.model])
+      customParameters: [.operatingSystemVersion: operatingSystem, .model: Sysctl.model]
+    )
 
     remoteObjectInterfaceProvider.remoteObjectProxyWithHandler { result in
       switch result {
@@ -167,5 +175,6 @@ open class Application: NSApplication, ApplicationProtocol {
   public let version = Version(
     bundle: bundle,
     dictionary: sbd,
-    versionControl: vcs)
+    versionControl: vcs
+  )
 }

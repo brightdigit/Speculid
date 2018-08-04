@@ -193,3 +193,6 @@ CairoSVG.xcconfig
 autorevision.json
 applications/mac/assets/assets
 tmp
+
+certs/*.cer
+certs/*.p12

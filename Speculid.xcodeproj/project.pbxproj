@@ -368,6 +368,8 @@
 		B3B5E9E81F96C74C004A6BEB /* CommandLineRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */; };
 		B3B5E9EA1F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */; };
 		B3B5E9EC1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */; };
+		B3C6CA8E2114C9EB000D5120 /* dummy in Resources */ = {isa = PBXBuildFile; fileRef = B3C6CA8D2114C9EB000D5120 /* dummy */; };
+		B3CB15702113AA8C00A6DC5C /* VersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CB156F2113AA8C00A6DC5C /* VersionProvider.swift */; };
 		B3D32A021F9A5D760042B46F /* help.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3D32A011F9A5D750042B46F /* help.txt */; };
 		B3D32A041F9A5E8F0042B46F /* CommandLineRunnerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */; };
 		B3D32A061F9A5FEE0042B46F /* FileHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D32A051F9A5FEE0042B46F /* FileHandle.swift */; };
@@ -1499,7 +1501,6 @@
 		B31BEAFB1F96269F00496E7A /* RegularExpressionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSet.swift; sourceTree = "<group>"; };
 		B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetProtocol.swift; sourceTree = "<group>"; };
 		B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetBuilderProtocol.swift; sourceTree = "<group>"; };
-		B31D2AEB1FBC8F1D008087A6 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		B32D69EA1F9EC5CA00C21C8C /* Speculid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speculid.entitlements; sourceTree = "<group>"; };
 		B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemProviderProtocol.swift; sourceTree = "<group>"; };
 		B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObjectInterfaceProviderProtocol.swift; sourceTree = "<group>"; };
@@ -1522,7 +1523,6 @@
 		B35B71251F904CF100BE477E /* SurfaceHandleBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurfaceHandleBuilder.h; sourceTree = "<group>"; };
 		B35B71261F904CF100BE477E /* SurfaceHandleBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurfaceHandleBuilder.m; sourceTree = "<group>"; };
 		B35B71291F9052B200BE477E /* CairoSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CairoSize.h; sourceTree = "<group>"; };
-		B35D13271FCF604C0047F1B8 /* Brewfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Brewfile; sourceTree = "<group>"; };
 		B36C2E8A1FA5B876003F48BD /* build.list */ = {isa = PBXFileReference; lastKnownFileType = text; path = build.list; sourceTree = "<group>"; };
 		B37C743E1F8C58F300DF505B /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37C74431F8C58F300DF505B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1573,6 +1573,8 @@
 		B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRunner.swift; sourceTree = "<group>"; };
 		B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParserProtocol.swift; sourceTree = "<group>"; };
 		B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParser.swift; sourceTree = "<group>"; };
+		B3C6CA8D2114C9EB000D5120 /* dummy */ = {isa = PBXFileReference; lastKnownFileType = text; path = dummy; sourceTree = "<group>"; };
+		B3CB156F2113AA8C00A6DC5C /* VersionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionProvider.swift; sourceTree = "<group>"; };
 		B3CEF3C41FB611D200F1DF87 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = shasum.sh; sourceTree = "<group>"; };
 		B3D32A011F9A5D750042B46F /* help.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = help.txt; sourceTree = "<group>"; };
@@ -4087,8 +4089,6 @@
 			isa = PBXGroup;
 			children = (
 				B3F1C92D20F675FC0072F7C0 /* codesign-framework.sh */,
-				B35D13271FCF604C0047F1B8 /* Brewfile */,
-				B31D2AEB1FBC8F1D008087A6 /* build.sh */,
 				B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */,
 				B3B049C81FA262A8002906B1 /* exportOptions.plist */,
 				B3033B1A1F9AEE9A00787279 /* .gitignore */,
@@ -4155,6 +4155,7 @@
 				B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */,
 				B3136DF31F90F73A0002B7AB /* ImageConversionBuilder.swift */,
 				B3136DF01F90F73A0002B7AB /* ImageConversionSetBuilder.swift */,
+				B317B0D01FA560EE00BB5E57 /* QuitMenuItem.swift */,
 				B31BEAFB1F96269F00496E7A /* RegularExpressionSet.swift */,
 				B31BEAF81F96268000496E7A /* RegularExpressionSetBuilder.swift */,
 				B33F0BB81F958695004A87DD /* RemoteObjectInterfaceProvider.swift */,
@@ -4162,9 +4163,8 @@
 				B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */,
 				B3136DF21F90F73A0002B7AB /* SpeculidBuilder.swift */,
 				B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */,
-				B33F0BBA1F9586A9004A87DD /* StatusItemProvider.swift */,
 				B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */,
-				B317B0D01FA560EE00BB5E57 /* QuitMenuItem.swift */,
+				B33F0BBA1F9586A9004A87DD /* StatusItemProvider.swift */,
 				B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */,
 			);
 			path = Controllers;
@@ -4243,6 +4243,7 @@
 				B3136E091F90F73B0002B7AB /* SpeculidSpecificationsFileProtocol.swift */,
 				B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */,
 				B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */,
+				B3CB156F2113AA8C00A6DC5C /* VersionProvider.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -4713,6 +4714,7 @@
 			children = (
 				B34188901F9A479900C5F356 /* SpeculidApplicationModeParserTest.swift */,
 				B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */,
+				B3C6CA8D2114C9EB000D5120 /* dummy */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -14157,6 +14159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C6CA8E2114C9EB000D5120 /* dummy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -14450,16 +14453,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RandomKit/RandomKit.framework",
-				"${BUILT_PRODUCTS_DIR}/ShiftOperations/ShiftOperations.framework",
-				"${BUILT_PRODUCTS_DIR}/Threadly/Threadly.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftVer/SwiftVer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RandomKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ShiftOperations.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Threadly.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftVer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -14602,6 +14599,7 @@
 				B3136E491F90F73B0002B7AB /* ImageConversionSetProtocol.swift in Sources */,
 				B3136E581F90F73B0002B7AB /* ProcessError.swift in Sources */,
 				B3136E541F90F73B0002B7AB /* ApplicationProtocol.swift in Sources */,
+				B3CB15702113AA8C00A6DC5C /* VersionProvider.swift in Sources */,
 				B3B5E9DA1F96C1C1004A6BEB /* SpeculidConfigurationBuilder.swift in Sources */,
 				B341888A1F9A44A700C5F356 /* CommandLineArgumentProviderProtocol.swift in Sources */,
 				B33A533E1F954FF800E74800 /* Result.swift in Sources */,
