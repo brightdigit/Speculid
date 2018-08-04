@@ -8,7 +8,7 @@
 import Foundation
 
 public struct AnalyticsSessionManager: AnalyticsSessionManagerProtocol {
-  #if DEBUG && false
+  #if DEBUG
     public static let defaultBaseUrl = URL(string: "https://www.google-analytics.com/debug/collect")!
   #else
     public static let defaultBaseUrl = URL(string: "https://www.google-analytics.com/collect")!
@@ -41,7 +41,14 @@ public struct AnalyticsSessionManager: AnalyticsSessionManagerProtocol {
     request.httpBody = parameterString.data(using: .utf8)
     request.httpMethod = "POST"
 
-    let dataTask = session.dataTask(with: request, completionHandler: { _, _, _ in
+    let dataTask = session.dataTask(with: request, completionHandler: { data, _, _ in
+      if let data = data {
+        #if DEBUG
+          if let text = String(data: data, encoding: .utf8) {
+            debugPrint(text)
+          }
+        #endif
+      }
       semaphore.signal()
     })
 

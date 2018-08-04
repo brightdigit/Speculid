@@ -14,7 +14,8 @@ public struct SpeculidImageSpecificationBuilder: SpeculidImageSpecificationBuild
   public func imageSpecification(
     forURL destinationURL: URL,
     withSpecifications specifications: SpeculidSpecificationsFileProtocol,
-    andAsset asset: AssetSpecificationProtocol) throws -> ImageSpecification {
+    andAsset asset: AssetSpecificationProtocol
+  ) throws -> ImageSpecification {
     let destinationFile = try ImageFile(url: destinationURL)
 
     let geometryObj: GeometryProtocol?
@@ -40,6 +41,7 @@ public struct SpeculidImageSpecificationBuilder: SpeculidImageSpecificationBuild
       file: destinationFile,
       geometryDimension: geometry,
       removeAlphaChannel: specifications.removeAlpha,
-      backgroundColor: specifications.background)
+      backgroundColor: specifications.background
+    )
   }
 }

@@ -1,6 +1,5 @@
 import Foundation
 public struct ScaledGeometry: GeometryProtocol {
-
   public let base: GeometryProtocol
   public let scale: Int
 
@@ -10,7 +9,6 @@ public struct ScaledGeometry: GeometryProtocol {
   }
 
   public var value: GeometryValue {
-
     return base.value * CGFloat(scale)
   }
 }

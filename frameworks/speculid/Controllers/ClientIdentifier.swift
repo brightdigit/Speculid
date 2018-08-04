@@ -12,13 +12,13 @@ public struct ClientIdentifier: ClientIdentifierDelegate {
   public let clientIdentifier: String
 
   public static func calculateIdentifier() -> String {
-    guard let _clientIdentifier = UserDefaults.standard.string(forKey: "clientIdentifier") else {
+    guard let clientIdentifier = UserDefaults.standard.string(forKey: "clientIdentifier") else {
       let uuid = UUID()
       UserDefaults.standard.set(uuid.uuidString, forKey: "clientIdentifier")
       return uuid.uuidString
     }
 
-    return _clientIdentifier
+    return clientIdentifier
   }
 
   public init() {

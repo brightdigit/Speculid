@@ -1,6 +1,6 @@
-import Foundation
 import AppKit
 import CairoSVG
+import Foundation
 /**
  MissingHashMarkAsPrefix:   "Invalid RGB string, missing '#' as prefix"
  UnableToScanHexValue:      "Scan hex error"
@@ -120,6 +120,7 @@ extension NSColor {
 
    - parameter includeAlpha: Whether the alpha should be included.
    */
+  // swiftlint:disable identifier_name
   public func hexString(_ includeAlpha: Bool = true) -> String {
     var r: CGFloat = 0
     var g: CGFloat = 0
@@ -133,6 +134,7 @@ extension NSColor {
       return String(format: "#%02X%02X%02X", Int(r * 255), Int(g * 255), Int(b * 255))
     }
   }
+  // swiftlint:enable identifier_name
 }
 
 extension NSColor: CairoColorProtocol {

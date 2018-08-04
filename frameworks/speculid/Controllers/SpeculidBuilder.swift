@@ -29,7 +29,6 @@ public extension SpeculidDocumentProtocol {
 }
 
 public struct SpeculidBuilder: SpeculidBuilderProtocol {
-
   public let tracker: AnalyticsTrackerProtocol?
   public let configuration: SpeculidConfigurationProtocol
   public let imageSpecificationBuilder: SpeculidImageSpecificationBuilderProtocol

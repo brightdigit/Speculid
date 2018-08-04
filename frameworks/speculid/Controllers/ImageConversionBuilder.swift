@@ -9,12 +9,14 @@ public struct ImageConversionBuilder: ImageConversionBuilderProtocol {
   public func conversion(
     forImage imageSpecification: AssetSpecificationProtocol,
     withSpecifications specifications: SpeculidSpecificationsFileProtocol,
-    andConfiguration configuration: SpeculidConfigurationProtocol) -> Result<ImageConversionTaskProtocol>? {
+    andConfiguration configuration: SpeculidConfigurationProtocol
+  ) -> Result<ImageConversionTaskProtocol>? {
     for builders in builders {
       if let conversion = builders.conversion(
         forImage: imageSpecification,
         withSpecifications: specifications,
-        andConfiguration: configuration) {
+        andConfiguration: configuration
+      ) {
         return conversion
       }
     }
