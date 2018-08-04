@@ -16,6 +16,7 @@ before_install:
 script:
 - "./scripts/decrypt-certs.sh"
 - "./scripts/build-keychain.sh"
+- xcodebuild test -workspace speculid.xcworkspace -scheme "Speculid"
 - xcodebuild archive -workspace speculid.xcworkspace -scheme "Speculid-Mac-App" -configuration
   Release -derivedDataPath ./build -archivePath ./build/Products/Speculid.xcarchive
 - xcodebuild -exportArchive -archivePath ./build/Products/Speculid.xcarchive -exportOptionsPlist

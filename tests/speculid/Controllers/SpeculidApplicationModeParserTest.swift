@@ -16,6 +16,29 @@ extension Array where Element == String {
   }
 }
 
+@available(swift, obsoleted: 4.2)
+extension Array {
+  func randomElement() -> Element? {
+    guard count > 0 else {
+      return nil
+    }
+    let index = Index(arc4random_uniform(UInt32(count)))
+    return self[index]
+  }
+}
+
+@available(swift, obsoleted: 4.2)
+extension String {
+  func randomElement() -> Character? {
+    guard count > 0 else {
+      return nil
+    }
+    let offset = Int(arc4random_uniform(UInt32(count)))
+    let index = self.index(startIndex, offsetBy: offset)
+    return self[index]
+  }
+}
+
 struct SimpleCommandLineArgumentProvider: CommandLineArgumentProviderProtocol {
   public let arguments: [String]
   public init(arguments: [String]) {
