@@ -1247,7 +1247,6 @@
 		B317B0D01FA560EE00BB5E57 /* QuitMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitMenuItem.swift; sourceTree = "<group>"; };
 		B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryValue.Multiply.swift; sourceTree = "<group>"; };
 		B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		B31BD6E820E7A1B400A560C2 /* fix_dylibs_script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = fix_dylibs_script.sh; sourceTree = "<group>"; };
 		B31BD6ED20E7E0D500A560C2 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
 		B31BD6F020E7E0D500A560C2 /* makeconv */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = makeconv; sourceTree = "<group>"; };
 		B31BD6F120E7E0D500A560C2 /* gencnval */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = gencnval; sourceTree = "<group>"; };
@@ -1501,6 +1500,11 @@
 		B31BEAFB1F96269F00496E7A /* RegularExpressionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSet.swift; sourceTree = "<group>"; };
 		B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetProtocol.swift; sourceTree = "<group>"; };
 		B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionSetBuilderProtocol.swift; sourceTree = "<group>"; };
+		B3220A4721154D1A00047BF6 /* fix_dylibs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = fix_dylibs.sh; sourceTree = "<group>"; };
+		B3220A4821154D1A00047BF6 /* codesign-framework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "codesign-framework.sh"; sourceTree = "<group>"; };
+		B3220A4921154D1A00047BF6 /* decrypt-certs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "decrypt-certs.sh"; sourceTree = "<group>"; };
+		B3220A4A21154D1A00047BF6 /* shasum.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = shasum.sh; sourceTree = "<group>"; };
+		B3220A4B21154D1A00047BF6 /* build-keychain.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-keychain.sh"; sourceTree = "<group>"; };
 		B32D69EA1F9EC5CA00C21C8C /* Speculid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speculid.entitlements; sourceTree = "<group>"; };
 		B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemProviderProtocol.swift; sourceTree = "<group>"; };
 		B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObjectInterfaceProviderProtocol.swift; sourceTree = "<group>"; };
@@ -1510,7 +1514,6 @@
 		B34188891F9A44A700C5F356 /* CommandLineArgumentProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineArgumentProviderProtocol.swift; sourceTree = "<group>"; };
 		B341888D1F9A460300C5F356 /* CommandLineArgumentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineArgumentProvider.swift; sourceTree = "<group>"; };
 		B34188901F9A479900C5F356 /* SpeculidApplicationModeParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParserTest.swift; sourceTree = "<group>"; };
-		B3423C791FDCDC3F0001AD7D /* setup-dependencies.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "setup-dependencies.sh"; sourceTree = "<group>"; };
 		B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileFormat.h; sourceTree = "<group>"; };
 		B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileProtocol.h; sourceTree = "<group>"; };
 		B34E83021F8FD90C0032268F /* GlibError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlibError.h; sourceTree = "<group>"; };
@@ -1518,7 +1521,6 @@
 		B34E83061F8FDC4C0032268F /* GeometryDimension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeometryDimension.h; sourceTree = "<group>"; };
 		B34E83081F8FDCB80032268F /* Dimension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dimension.h; sourceTree = "<group>"; };
 		B34E830A1F8FDDAC0032268F /* CairoColorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CairoColorProtocol.h; sourceTree = "<group>"; };
-		B357EBF61FCCA1F000FB152E /* fix_dylibs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = fix_dylibs.sh; sourceTree = "<group>"; };
 		B35B71221F9041B900BE477E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B35B71251F904CF100BE477E /* SurfaceHandleBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurfaceHandleBuilder.h; sourceTree = "<group>"; };
 		B35B71261F904CF100BE477E /* SurfaceHandleBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurfaceHandleBuilder.m; sourceTree = "<group>"; };
@@ -1560,9 +1562,7 @@
 		B3825EFA20F91806008F2A02 /* libgraphite2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libgraphite2.dylib; sourceTree = "<group>"; };
 		B3891BBD20F7CE010095E1FD /* CwlSysctl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CwlSysctl.swift; sourceTree = "<group>"; };
 		B3B049C81FA262A8002906B1 /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
-		B3B049CA1FA27D78002906B1 /* decrypt-certs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "decrypt-certs.sh"; sourceTree = "<group>"; };
 		B3B049CB1FA27D96002906B1 /* certs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = certs; sourceTree = "<group>"; };
-		B3B049CC1FA27E68002906B1 /* build-keychain.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-keychain.sh"; sourceTree = "<group>"; };
 		B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfigurationBuilder.swift; sourceTree = "<group>"; };
 		B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfigurationBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfiguration.swift; sourceTree = "<group>"; };
@@ -1576,7 +1576,6 @@
 		B3C6CA8D2114C9EB000D5120 /* dummy */ = {isa = PBXFileReference; lastKnownFileType = text; path = dummy; sourceTree = "<group>"; };
 		B3CB156F2113AA8C00A6DC5C /* VersionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionProvider.swift; sourceTree = "<group>"; };
 		B3CEF3C41FB611D200F1DF87 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = shasum.sh; sourceTree = "<group>"; };
 		B3D32A011F9A5D750042B46F /* help.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = help.txt; sourceTree = "<group>"; };
 		B3D32A031F9A5E8F0042B46F /* CommandLineRunnerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRunnerTest.swift; sourceTree = "<group>"; };
 		B3D32A051F9A5FEE0042B46F /* FileHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandle.swift; sourceTree = "<group>"; };
@@ -3251,7 +3250,6 @@
 		B3E9A9041FB4E0B200FD8E7A /* bin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bin; sourceTree = "<group>"; };
 		B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilder.swift; sourceTree = "<group>"; };
-		B3F1C92D20F675FC0072F7C0 /* codesign-framework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "codesign-framework.sh"; sourceTree = "<group>"; };
 		B3F8045820E5820B00030497 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
 		B3F8045A20E5820B00030497 /* pango-view */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "pango-view"; sourceTree = "<group>"; };
 		B3F8045C20E5820B00030497 /* pango.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = pango.rb; sourceTree = "<group>"; };
@@ -4088,17 +4086,10 @@
 		B3033B181F9AED7600787279 /* configuration */ = {
 			isa = PBXGroup;
 			children = (
-				B3F1C92D20F675FC0072F7C0 /* codesign-framework.sh */,
-				B3D2F6AC1FB3EB7E00BF7AC1 /* shasum.sh */,
 				B3B049C81FA262A8002906B1 /* exportOptions.plist */,
 				B3033B1A1F9AEE9A00787279 /* .gitignore */,
 				B3033B191F9AEE9900787279 /* .travis.yml */,
 				B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */,
-				B3B049CA1FA27D78002906B1 /* decrypt-certs.sh */,
-				B3B049CC1FA27E68002906B1 /* build-keychain.sh */,
-				B31BD6E820E7A1B400A560C2 /* fix_dylibs_script.sh */,
-				B357EBF61FCCA1F000FB152E /* fix_dylibs.sh */,
-				B3423C791FDCDC3F0001AD7D /* setup-dependencies.sh */,
 			);
 			name = configuration;
 			sourceTree = "<group>";
@@ -4709,6 +4700,18 @@
 			path = config;
 			sourceTree = "<group>";
 		};
+		B3220A4621154D1A00047BF6 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				B3220A4721154D1A00047BF6 /* fix_dylibs.sh */,
+				B3220A4821154D1A00047BF6 /* codesign-framework.sh */,
+				B3220A4921154D1A00047BF6 /* decrypt-certs.sh */,
+				B3220A4A21154D1A00047BF6 /* shasum.sh */,
+				B3220A4B21154D1A00047BF6 /* build-keychain.sh */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
 		B341888F1F9A478800C5F356 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -4722,6 +4725,7 @@
 		B37C74351F8C58F300DF505B = {
 			isa = PBXGroup;
 			children = (
+				B3220A4621154D1A00047BF6 /* scripts */,
 				B3CEF3C41FB611D200F1DF87 /* README.md */,
 				B3E9A9041FB4E0B200FD8E7A /* bin */,
 				B3B049CB1FA27D96002906B1 /* certs */,
@@ -14371,7 +14375,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT/codesign-framework.sh\"\n";
+			shellScript = "\"$SRCROOT/scripts/codesign-framework.sh\"\n";
 		};
 		B3B5E9D61F96AB1B004A6BEB /* warnings */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -14426,7 +14430,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/fix_dylibs_script.sh\" \"${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\"\n";
+			shellScript = "\"${SRCROOT}/scripts/fix_dylibs.sh\" \"${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\"\n";
 		};
 		BD6A812C7EF5D496661AC259 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
