@@ -511,7 +511,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "xcodebuild -workspace \"${SRCROOT}/../speculid.xcworkspace\" -scheme \"Speculid Application\" -derivedDataPath \"${PROJECT_TEMP_DIR}/speculid\" build -configuration Release SYMROOT=build CODE_SIGNING_REQUIRED=NO OBJROOT=\"${PROJECT_TEMP_DIR}/speculid\" SYMROOT=\"${PROJECT_TEMP_DIR}/speculid\"";
+			shellScript = "xcodebuild -workspace \"${SRCROOT}/../speculid.xcworkspace\" -scheme \"Speculid Application\" -derivedDataPath \"${PROJECT_TEMP_DIR}/speculid\" build -configuration Release SYMROOT=build CODE_SIGNING_REQUIRED=NO OBJROOT=\"${PROJECT_TEMP_DIR}/speculid\" SYMROOT=\"${PROJECT_TEMP_DIR}/speculid\"\n";
 		};
 		B38DDF241DA2E344005AA837 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -524,7 +524,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "find \"${SRCROOT}\" -name \"*.spcld\" -print0 |\nwhile IFS= read -r -d $'\\0' line; do\n\"${PROJECT_TEMP_DIR}/speculid/Release/Speculid.app/Contents/MacOS/Speculid\" \"$line\" &\ndone\nwait";
+			shellScript = "find \"${SRCROOT}\" -name \"*.spcld\" -print0 |\nwhile IFS= read -r -d $'\\0' line; do\n\"${PROJECT_TEMP_DIR}/speculid/Release/Speculid.app/Contents/MacOS/Speculid\" \"$line\" &\ndone\nwait\n";
 		};
 		B3AF65D51DA4055900BD008B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
