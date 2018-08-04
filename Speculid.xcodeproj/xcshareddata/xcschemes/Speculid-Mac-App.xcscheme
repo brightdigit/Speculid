@@ -94,11 +94,11 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--process &quot;${SRCROOT}/examples/Assets/AppIcon.speculid&quot;"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "ASBfdsadf"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--process &quot;${SRCROOT}/examples/Assets/Image Set.speculid&quot;"
