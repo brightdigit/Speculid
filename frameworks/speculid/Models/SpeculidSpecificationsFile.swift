@@ -1,5 +1,5 @@
-import Foundation
 import AppKit
+import Foundation
 
 public struct SpeculidSpecificationsFile: SpeculidSpecificationsFileProtocol, Codable {
   public let assetDirectoryRelativePath: String

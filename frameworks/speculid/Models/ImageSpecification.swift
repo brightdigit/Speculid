@@ -1,5 +1,5 @@
-import Cocoa
 import CairoSVG
+import Cocoa
 
 @objc open class ImageSpecification: NSObject, ImageSpecificationProtocol, NSSecureCoding {
   public static let supportsSecureCoding: Bool = true
@@ -12,8 +12,8 @@ import CairoSVG
     aCoder.encode(removeAlphaChannel, forKey: "removeAlphaChannel")
   }
 
+  // swiftlint:disable identifier_name
   public required init?(coder aDecoder: NSCoder) {
-
     let _file = aDecoder.decodeObject(forKey: "file") as? ImageFileProtocol
     let _dimensionValue = aDecoder.decodeObject(forKey: "geometryDimensionValue") as? UInt
     let _value = aDecoder.decodeObject(forKey: "geometryValue") as? CGFloat
@@ -29,6 +29,7 @@ import CairoSVG
     self.backgroundColor = backgroundColor
     self.removeAlphaChannel = removeAlphaChannel
   }
+  // swiftlint:enable identifier_name
 
   public let file: ImageFileProtocol
   public let geometryDimension: Geometry?

@@ -1,3 +1,0 @@
-ignore:
-  - "Pods" # can ignore folder and everything inside
-  - "tests"

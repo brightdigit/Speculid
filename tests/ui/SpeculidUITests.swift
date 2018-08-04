@@ -1,7 +1,6 @@
 import XCTest
 
 class SpeculidUITests: XCTestCase {
-
   override func setUp() {
     super.setUp()
 

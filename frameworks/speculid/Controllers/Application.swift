@@ -1,6 +1,14 @@
-import Foundation
 import AppKit
+import Foundation
 import SwiftVer
+
+extension OperatingSystemVersion {
+  var fullDescription: String {
+    return [self.majorVersion, self.minorVersion, self.patchVersion].map {
+      String(describing: $0)
+    }.joined(separator: ".")
+  }
+}
 
 var exceptionHandler: ((NSException) -> Void)?
 
@@ -20,7 +28,12 @@ open class Application: NSApplication, ApplicationProtocol {
     return NSApplication.shared as? ApplicationProtocol
   }
 
-  open static let errorText = "Unknown Command Paramter"
+  open static let unknownCommandMessagePrefix = "Unknown Command Arguments"
+
+  public static func unknownCommandMessage(fromArguments arguments: [String]) -> String {
+    return "\(unknownCommandMessagePrefix): \(arguments.joined(separator: " "))"
+  }
+
   open static let helpText: String! = {
     guard let url = Application.bundle.url(forResource: "help", withExtension: "txt") else {
       return nil
@@ -57,7 +70,8 @@ open class Application: NSApplication, ApplicationProtocol {
     imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
     commandLineRunner = CommandLineRunner(
       outputStream: FileHandle.standardOutput,
-      errorStream: FileHandle.standardError)
+      errorStream: FileHandle.standardError
+    )
 
     super.init()
   }
@@ -71,7 +85,8 @@ open class Application: NSApplication, ApplicationProtocol {
     imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
     commandLineRunner = CommandLineRunner(
       outputStream: FileHandle.standardOutput,
-      errorStream: FileHandle.standardError)
+      errorStream: FileHandle.standardError
+    )
 
     super.init(coder: coder)
   }
@@ -81,13 +96,20 @@ open class Application: NSApplication, ApplicationProtocol {
 
     configuration = configurationBuilder.configuration(fromCommandLine: CommandLineArgumentProvider())
 
-    let operatingSystem = ProcessInfo.processInfo.operatingSystemVersionString
+    let operatingSystem = ProcessInfo.processInfo.operatingSystemVersion.fullDescription
+    let applicationVersion: String
+    if let version = self.version {
+      applicationVersion = (try? version.fullDescription(withLocale: nil)) ?? ""
+    } else {
+      applicationVersion = ""
+    }
 
     let analyticsConfiguration = AnalyticsConfiguration(
       trackingIdentifier: "UA-33667276-6",
       applicationName: "speculid",
-      applicationVersion: String(describing: Application.version),
-      customParameters: [.operatingSystemVersion: operatingSystem])
+      applicationVersion: applicationVersion,
+      customParameters: [.operatingSystemVersion: operatingSystem, .model: Sysctl.model]
+    )
 
     remoteObjectInterfaceProvider.remoteObjectProxyWithHandler { result in
       switch result {
@@ -131,9 +153,12 @@ open class Application: NSApplication, ApplicationProtocol {
   }
 
   public func commandLineActivity(_: CommandLineActivityProtocol, hasCompletedWithError error: Error?) {
-
-    precondition(error == nil, error!.localizedDescription)
-    exit(0)
+    if let error = error {
+      FileHandle.standardError.write(error.localizedDescription)
+      exit(1)
+    } else {
+      exit(0)
+    }
   }
 
   public func quit(_ sender: Any?) {
@@ -146,10 +171,10 @@ open class Application: NSApplication, ApplicationProtocol {
 
   public static let sbd =
     Stage.dictionary(fromPlistAtURL: Application.bundle.url(forResource: "versions", withExtension: "plist")!)!
-  // StageBuildDictionaryProtocol! = nil
 
   public let version = Version(
     bundle: bundle,
     dictionary: sbd,
-    versionControl: vcs)!
+    versionControl: vcs
+  )
 }
