@@ -1,25 +1,24 @@
 PODS:
-  - RandomKit (1.6.0)
-  - SwiftVer (1.0.0)
+  - SwiftFormat/CLI (0.34.1)
+  - SwiftLint (0.27.0)
+  - SwiftVer (2.0.4)
 
 DEPENDENCIES:
-  - RandomKit (from `https://github.com/nvzqz/RandomKit.git`, branch `master`)
-  - SwiftVer (~> 1.0)
+  - SwiftFormat/CLI
+  - SwiftLint
+  - SwiftVer
 
-EXTERNAL SOURCES:
-  RandomKit:
-    :branch: master
-    :git: https://github.com/nvzqz/RandomKit.git
-
-CHECKOUT OPTIONS:
-  RandomKit:
-    :commit: c4c8649dd2eeafaed72d07c988936819e4617c82
-    :git: https://github.com/nvzqz/RandomKit.git
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftFormat
+    - SwiftLint
+    - SwiftVer
 
 SPEC CHECKSUMS:
-  RandomKit: 193d11478a87943021780e38f3be07a1c7c8419e
-  SwiftVer: 5a3cf6ae27a079efab5575d0161e5319cb7fbe15
+  SwiftFormat: 30408c64fbbb409387426b5cdd8225e0bd357e15
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
+  SwiftVer: 85fca0c0087660e0b07fe021efdd4b794046e465
 
-PODFILE CHECKSUM: 303e38c4e8692b7a8020ae6a60bb9cd05c73ac0a
+PODFILE CHECKSUM: 2ecd26879e8bf7a7ac71ae7dbb51d7fe0d3d478d
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.5.3

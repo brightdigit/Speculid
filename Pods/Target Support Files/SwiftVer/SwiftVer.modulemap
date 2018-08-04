@@ -1,6 +1,0 @@
-framework module SwiftVer {
-  umbrella header "SwiftVer-umbrella.h"
-
-  export *
-  module * { export * }
-}

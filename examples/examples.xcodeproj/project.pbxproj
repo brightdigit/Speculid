@@ -170,6 +170,7 @@
 
 /* Begin PBXFileReference section */
 		B30005CA1DB54EB1000A8166 /* Image Set.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Image Set.speculid"; sourceTree = "<group>"; };
+		B311EA4420F9448500636999 /* AppIcon.speculid */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppIcon.speculid; sourceTree = "<group>"; };
 		B38DDF3A1DA2E5AE005AA837 /* iOS AppIcon.speculid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iOS AppIcon.speculid"; sourceTree = "<group>"; };
 		B38F735B1DA2B357008469FE /* speculid-example-macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "speculid-example-macos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38F735E1DA2B357008469FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -298,6 +299,7 @@
 				B38DDF3A1DA2E5AE005AA837 /* iOS AppIcon.speculid */,
 				B38F73D71DA2C1F1008469FE /* geometry.svg */,
 				B38F73D51DA2C1AB008469FE /* macOS AppIcon.speculid */,
+				B311EA4420F9448500636999 /* AppIcon.speculid */,
 				B38F73D01DA2B600008469FE /* Assets.xcassets */,
 				B30005CA1DB54EB1000A8166 /* Image Set.speculid */,
 			);
@@ -385,7 +387,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0900;
 				TargetAttributes = {
 					B38DDF171DA2DF0D005AA837 = {
 						CreatedOnToolsVersion = 8.0;
@@ -509,7 +511,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "xcodebuild -workspace \"${SRCROOT}/../speculid.xcworkspace\" -scheme \"Speculid Application\" -derivedDataPath \"${PROJECT_TEMP_DIR}/speculid\" build -configuration Release SYMROOT=build CODE_SIGNING_REQUIRED=NO OBJROOT=\"${PROJECT_TEMP_DIR}/speculid\" SYMROOT=\"${PROJECT_TEMP_DIR}/speculid\"";
+			shellScript = "xcodebuild -workspace \"${SRCROOT}/../speculid.xcworkspace\" -scheme \"Speculid Application\" -derivedDataPath \"${PROJECT_TEMP_DIR}/speculid\" build -configuration Release SYMROOT=build CODE_SIGNING_REQUIRED=NO OBJROOT=\"${PROJECT_TEMP_DIR}/speculid\" SYMROOT=\"${PROJECT_TEMP_DIR}/speculid\"\n";
 		};
 		B38DDF241DA2E344005AA837 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -522,7 +524,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "find \"${SRCROOT}\" -name \"*.spcld\" -print0 |\nwhile IFS= read -r -d $'\\0' line; do\n\"${PROJECT_TEMP_DIR}/speculid/Release/Speculid.app/Contents/MacOS/Speculid\" \"$line\" &\ndone\nwait";
+			shellScript = "find \"${SRCROOT}\" -name \"*.spcld\" -print0 |\nwhile IFS= read -r -d $'\\0' line; do\n\"${PROJECT_TEMP_DIR}/speculid/Release/Speculid.app/Contents/MacOS/Speculid\" \"$line\" &\ndone\nwait\n";
 		};
 		B3AF65D51DA4055900BD008B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -716,12 +718,18 @@
 		B38F73551DA2AF53008469FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -743,12 +751,18 @@
 		B38F73561DA2AF53008469FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
