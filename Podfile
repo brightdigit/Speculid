@@ -27,7 +27,6 @@ target 'Speculid' do
   target 'SpeculidTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'RandomKit', '~> 5.2.3'
   end
 
 end

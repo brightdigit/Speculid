@@ -6,5 +6,8 @@ public enum ImageIdiom: String, Codable {
     ipad,
     mac,
     tv,
-    watch
+    watch,
+    car,
+    watchMarketing = "watch-marketing",
+    iosMarketing = "ios-marketing"
 }

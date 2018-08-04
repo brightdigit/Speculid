@@ -22,7 +22,8 @@ public struct AnalyticsConfiguration: AnalyticsConfigurationProtocol {
     applicationVersion: String,
     customParameters: AnalyticsParameterDictionary? = nil,
     clientIdentifierDelegate: ClientIdentifierDelegate? = nil,
-    userLanguage: String? = nil) {
+    userLanguage: String? = nil
+  ) {
     self.trackingIdentifier = trackingIdentifier
     self.applicationVersion = applicationVersion
     self.applicationName = applicationName

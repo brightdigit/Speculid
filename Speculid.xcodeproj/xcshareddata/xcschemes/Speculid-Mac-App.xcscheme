@@ -85,31 +85,35 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-help"
+            argument = "--help"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "&quot;${SRCROOT}/examples/Assets/macOS AppIcon.speculid&quot;"
+            argument = "--process &quot;${SRCROOT}/examples/Assets/macOS AppIcon.speculid&quot;"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "&quot;${SRCROOT}/examples/Assets/AppIcon.speculid&quot;"
+            argument = "--process &quot;${SRCROOT}/examples/Assets/AppIcon.speculid&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "&quot;${SRCROOT}/examples/Assets/Image Set.speculid&quot;"
+            argument = "ASBfdsadf"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "&quot;${SRCROOT}/applications/mac/assets/svg-appicon.speculid&quot;"
+            argument = "--process &quot;${SRCROOT}/examples/Assets/Image Set.speculid&quot;"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "&quot;${SRCROOT}/applications/mac/assets/svg-trayicon.speculid&quot;"
+            argument = "--process &quot;${SRCROOT}/applications/mac/assets/svg-appicon.speculid&quot;"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-version"
+            argument = "--process&quot;${SRCROOT}/applications/mac/assets/svg-trayicon.speculid&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--version"
             isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
