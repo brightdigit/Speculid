@@ -2,7 +2,10 @@ import Foundation
 
 public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtocol {
   public func parseMode(fromCommandLine commandLine: CommandLineArgumentProviderProtocol) -> SpeculidApplicationMode {
-    var indicies = [commandLine.arguments.startIndex]
+    var indicies = [Int]()
+    if commandLine.arguments.first == Bundle.main.executablePath {
+      indicies.append(commandLine.arguments.startIndex)
+    }
     if let index = commandLine.arguments.index(of: "-NSDocumentRevisionsDebugMode") {
       indicies.append(index)
       indicies.append(index.advanced(by: 1))
@@ -13,20 +16,29 @@ public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtoc
       return arguments
     }
     if arguments.count > 0 {
-      if arguments.contains("-help") {
+      if arguments.contains("--help") {
         return .command(.help)
-      } else if arguments.contains("-version") {
+      } else if arguments.contains("--version") {
         return .command(.version)
-      } else {
-        for argument in arguments {
-          if FileManager.default.fileExists(atPath: argument) {
-            return .command(.file(URL(fileURLWithPath: argument)))
-          }
+      } else if let index = arguments.firstIndex(of: "--process") {
+        let filePath = arguments[arguments.index(after: index)]
+        if FileManager.default.fileExists(atPath: filePath) {
+          return .command(.process(URL(fileURLWithPath: filePath)))
+        } else {
+          return .command(.unknown(arguments))
         }
-        return .command(.unknown(commandLine.arguments))
+      } else {
+        return .command(.unknown(arguments))
       }
     } else {
       return .cocoa
     }
+  }
+}
+
+@available(swift, obsoleted: 4.2)
+extension Array where Element: Equatable {
+  func firstIndex(of element: Element) -> Index? {
+    return index(of: element)
   }
 }
