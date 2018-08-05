@@ -86,7 +86,9 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
 
 
 <div class="readme-only" markdown="1">
-Enter your email address [here](//www.speculid.com#download) to get the latest version.
+
+Enter your email address [here](https://www.speculid.com#download) to get the latest version.
+
 </div>
 
 ## Usage
