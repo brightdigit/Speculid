@@ -143,36 +143,72 @@ To specifically remove the alpha channel, a true boolean value must be specified
 
 With **Speculid**, the process of building image assets can be automated in **Xcode**.
 
-1. Create and add the speculid files to your project folder as well as your source graphic files. 
+1. **Create the speculid files** and add them to your project folder as well as your source graphic files. 
 
-![Xcode Target Membership](/images/XcodeTargetMembership.png)
+    ![Xcode Target Membership](/images/XcodeTargetMembership.png)
 
-  * *Note: you don't need to add these files to your target membership*
+    * *Note: you don't need to add these files to your target membership*
 
-2. Add the *Run Script* Build Phase to the top of your project with the following code:
+2. **Edit the speculid file.**
 
-  ```bash
-  find "${SRCROOT}" -name "*.speculid" -print0 |
-  while IFS= read -r -d $'\0' line; do
-  speculid --process "$line" &
-  done
-  wait
-  ```
-![Xcode Build Phase Run Script](/images/XcodeBuildPhaseRunScript.png)
+    1. **Add the property for the source** - a relative path to the SVG, or PNG file.
+        ```json
+        {
+          "source" : "geometry.svg",
+          ...
+        }
+        ```
+    1. **Add the property for the set** - a relative path to the Image Set or App Icon folder.
+        ```json
+        {
+          "set" : "Assets.xcassets/iOS AppIcon.appiconset",
+          ...
+        }
+        ```
+    1. *optional* **Add the property for the geometry** - if this a conversion from a vector graphic (SVG) to an Image Set, you may want to supply the *1x* size.
+        ```json
+        {
+          "set" : "Assets.xcassets/Raster Image.imageset",
+          "source" : "layers.png",
+          "geometry" : "128"
+        }
+        ```
+    1. *optional* **Add the properties for the background color and alpha removal** - if this a conversion to an App Icon, you should remove any background transpareny and add a background color.
+        ```json
+        {
+          "set" : "Assets.xcassets/iOS AppIcon.appiconset",
+          "source" : "geometry.svg",
+          "background" : "#FFFFFFFF",
+          "remove-alpha" : true
+        }
+        ```
+
+    See the [file format section](#file-format) for more details.
+
+2. **Add the *Run Script* Build Phase** to the top of your project with the following code:
+
+    ```bash
+    find "${SRCROOT}" -name "*.speculid" -print0 |
+    while IFS= read -r -d $'\0' line; do
+    /Applications/Speculid/Contents/MacOS/Speculid --process "$line" &
+    done
+    wait
+    ```
+    ![Xcode Build Phase Run Script](/images/XcodeBuildPhaseRunScript.png)
 
 3. **Build the application.** This will create the graphics which you will use in your asset image set or app icon.
 
-![Xcode Unorganized Assets](/images/XcodeUnorganizedAssets.png)
+    ![Xcode Unorganized Assets](/images/XcodeUnorganizedAssets.png)
 
 4. **After the first build**, drag the images to the correct asset slot. Each rendered image file is suffixed denoting its slot.
 
-  *(source file base name)*.*(size)*@*(scale)*~*(idiom)*.(extension)
+    *(source file base name)*.*(size)*@*(scale)*~*(idiom)*.(extension)
 
-  **Examples**
+    **Examples**
 
-  * **logo.20x20@1x~ipad.png** - 20x20 size 1x scale for iPad
-  * **logo.60x60@3x~iphone.png** - 60x60 size 3x scale for iPhone
-  * **logo.83.5x83.5@2x~ipad.png** - 83.5x83.5 size 2x scale for iPad
+    * **logo.20x20@1x~ipad.png** - 20x20 size 1x scale for iPad
+    * **logo.60x60@3x~iphone.png** - 60x60 size 3x scale for iPhone
+    * **logo.83.5x83.5@2x~ipad.png** - 83.5x83.5 size 2x scale for iPad
 
 5. Build and Run. Done.
 
