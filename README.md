@@ -18,15 +18,24 @@ Part of the process of building an app for **watchOS**, **iOS**, or **macOS** is
 The problem is the need to:
 
 <section class="cards" markdown="1">
+
 <section class="card half" markdown="1">
-![Multiple Images](./images/mechanic.svg){:height="100px"}
-#### Manually Create Multiple Sizes
+
+![Multiple Images](/images/mechanic.svg){:height="100px"}{:class="html-only"}
+
+#### <img class="readme-only" src="/gh-pages/images/mechanic.svg" height="25pt"/> Manually Create Multiple Sizes
+
 Each graphic must be **manually updated, converted, resized**. For an Xcode Project, that means a Graphic Designer or Developer need to repeatedly update each size every time.
+
 </section>
 <section class="card half" markdown="1">
-![Multiple Images](./images/archive.svg){:height="100px"}
-#### Store Generated Image Files
+
+![Multiple Images](/images/archive.svg){:height="100px"}{:class="html-only"}
+
+#### <img class="readme-only" src="/gh-pages/images/archive.svg" height="25pt"/> Store Generated Image Files
+
 These generated files need to be stored in the repository. An Asset Catalog Image Set will need a 1x, 2x, 3x of each graphic and **App Icons may need as many 30 different sizes**.
+
 </section>
 </section>
 
@@ -45,14 +54,22 @@ For Apple developers, there is no application which prepares graphics files for 
 
 <section class="cards" markdown="1">
 <section class="card half" markdown="1">
-![Multiple Images](./images/machinery.svg){:height="100px"}
-#### Automate the process 
+
+![Multiple Images](/images/machinery.svg){:height="100px"}{:class="html-only"}
+
+#### <img class="readme-only" src="/gh-pages/images/machinery.svg" height="25pt"/> Automate the process 
+
 Speculid automates the process so **only one graphic file is needed**. Add Speculid to your build process and now the **conversions and resizing are automated** as part of the build process. Now there is no need for anyone to manually create each size for each device.
+
 </section>
 <section class="card half" markdown="1">
-![Multiple Images](./images/clean-code.svg){:height="100px"}
-#### Tidy Your Repo
+
+![Multiple Images](/images/clean-code.svg){:height="100px"}{:class="html-only"}
+
+#### <img class="readme-only" src="/gh-pages/images/clean-code.svg" height="25pt"/> Tidy Your Repo
+
 **Reduce the size of your code repo** by including a single vector or raster image and build all your nessecary png and pdf files at compile. That means **faster remote pulls and less redundancy.**
+
 </section>
 </section>
 
@@ -66,6 +83,7 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
 
 ## Download
 
+<!-- HTML-ONLY BEGIN -->
 <section class="signup-form-container">
   <div>If you are interested in <strong>downloading and using the current alpha, fill out the form below</strong> and you will receive a link to latest version.</div>
 <form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
@@ -78,6 +96,7 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
   &nbsp;
 </div>
 </section>
+<!-- HTML-ONLY END -->
 
 ## Usage
 
@@ -114,7 +133,7 @@ or
 
 #### Set `set`
 
-<img src="/images/SetExample.png" width="320" height="240" alt="Image Set Examples from Xcode">
+![Image Set Examples from Xcode](/images/SetExample.png){:height="240"}
 
 A set is an image set or app icon set used by Xcode. That path specified in the json could be relative to the `.speculid` file.
 
