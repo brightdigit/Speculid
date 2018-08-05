@@ -1,3 +1,4 @@
 [submodule "gh-pages"]
 	path = gh-pages
 	url = https://github.com/brightdigit/Speculid.git
+	branch = gh-pages
