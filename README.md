@@ -23,7 +23,7 @@ The problem is the need to:
 
 
 
-#### <img class="readme-only" src="https://raw.githubusercontent.com/brightdigit/Speculid/gh-pages/images/mechanic.svg" height="25pt"/> Manually Create Multiple Sizes
+#### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/mechanic.svg" height="25pt"/> Manually Create Multiple Sizes
 
 Each graphic must be **manually updated, converted, resized**. For an Xcode Project, that means a Graphic Designer or Developer need to repeatedly update each size every time.
 
@@ -32,7 +32,7 @@ Each graphic must be **manually updated, converted, resized**. For an Xcode Proj
 
 
 
-#### <img class="readme-only" src="https://raw.githubusercontent.com/brightdigit/Speculid/gh-pages/images/archive.svg" height="25pt"/> Store Generated Image Files
+#### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/archive.svg" height="25pt"/> Store Generated Image Files
 
 These generated files need to be stored in the repository. An Asset Catalog Image Set will need a 1x, 2x, 3x of each graphic and **App Icons may need as many 30 different sizes**.
 
@@ -50,14 +50,14 @@ For Apple developers, there is no application which prepares graphics files for 
 ### What Speculid Does
 
 
-![diagram](https://raw.githubusercontent.com/brightdigit/Speculid/gh-pages/images/Diagram.png)
+![diagram](https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/Diagram.png)
 
 <section class="cards" markdown="1">
 <section class="card half" markdown="1">
 
 
 
-#### <img class="readme-only" src="https://raw.githubusercontent.com/brightdigit/Speculid/gh-pages/images/machinery.svg" height="25pt"/> Automate the process 
+#### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/machinery.svg" height="25pt"/> Automate the process 
 
 Speculid automates the process so **only one graphic file is needed**. Add Speculid to your build process and now the **conversions and resizing are automated** as part of the build process. Now there is no need for anyone to manually create each size for each device.
 
@@ -66,7 +66,7 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
 
 
 
-#### <img class="readme-only" src="https://raw.githubusercontent.com/brightdigit/Speculid/gh-pages/images/clean-code.svg" height="25pt"/> Tidy Your Repo
+#### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/clean-code.svg" height="25pt"/> Tidy Your Repo
 
 **Reduce the size of your code repo** by including a single vector or raster image and build all your nessecary png and pdf files at compile. That means **faster remote pulls and less redundancy.**
 
@@ -124,7 +124,7 @@ or
 
 #### Set `set`
 
-![Image Set Examples from Xcode](https://raw.githubusercontent.com/brightdigit/Speculid/gh-pages/images/SetExample.png)
+![Image Set Examples from Xcode](https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/SetExample.png)
 
 A set is an image set or app icon set used by Xcode. That path specified in the json could be relative to the `.speculid` file.
 
@@ -155,7 +155,7 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
 1. **Create the speculid files** and add them to your project folder as well as your source graphic files. 
 
-    ![Xcode Target Membership](https://raw.githubusercontent.com/brightdigit/Speculid/gh-pages/images/XcodeTargetMembership.png)
+    ![Xcode Target Membership](https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/XcodeTargetMembership.png)
 
     * *Note: you don't need to add these files to your target membership*
 
@@ -204,11 +204,11 @@ With **Speculid**, the process of building image assets can be automated in **Xc
     done
     wait
     ```
-    ![Xcode Build Phase Run Script](https://raw.githubusercontent.com/brightdigit/Speculid/gh-pages/images/XcodeBuildPhaseRunScript.png)
+    ![Xcode Build Phase Run Script](https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/XcodeBuildPhaseRunScript.png)
 
 3. **Build the application.** This will create the graphics which you will use in your asset image set or app icon.
 
-    ![Xcode Unorganized Assets](https://raw.githubusercontent.com/brightdigit/Speculid/gh-pages/images/XcodeUnorganizedAssets.png)
+    ![Xcode Unorganized Assets](https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/XcodeUnorganizedAssets.png)
 
 4. **After the first build**, drag the images to the correct asset slot. Each rendered image file is suffixed denoting its slot.
 
