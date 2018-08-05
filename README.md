@@ -23,7 +23,7 @@ The problem is the need to:
 
 ![Multiple Images](/images/mechanic.svg){:height="100px"}{:class="html-only"}
 
-#### <img class="readme-only" src="/gh-pages/images/mechanic.svg" height="25pt"/> Manually Create Multiple Sizes
+#### <img class="readme-only" src="/images/mechanic.svg" height="25pt"/> Manually Create Multiple Sizes
 
 Each graphic must be **manually updated, converted, resized**. For an Xcode Project, that means a Graphic Designer or Developer need to repeatedly update each size every time.
 
@@ -32,7 +32,7 @@ Each graphic must be **manually updated, converted, resized**. For an Xcode Proj
 
 ![Multiple Images](/images/archive.svg){:height="100px"}{:class="html-only"}
 
-#### <img class="readme-only" src="/gh-pages/images/archive.svg" height="25pt"/> Store Generated Image Files
+#### <img class="readme-only" src="/images/archive.svg" height="25pt"/> Store Generated Image Files
 
 These generated files need to be stored in the repository. An Asset Catalog Image Set will need a 1x, 2x, 3x of each graphic and **App Icons may need as many 30 different sizes**.
 
@@ -57,7 +57,7 @@ For Apple developers, there is no application which prepares graphics files for 
 
 ![Multiple Images](/images/machinery.svg){:height="100px"}{:class="html-only"}
 
-#### <img class="readme-only" src="/gh-pages/images/machinery.svg" height="25pt"/> Automate the process 
+#### <img class="readme-only" src="/images/machinery.svg" height="25pt"/> Automate the process 
 
 Speculid automates the process so **only one graphic file is needed**. Add Speculid to your build process and now the **conversions and resizing are automated** as part of the build process. Now there is no need for anyone to manually create each size for each device.
 
@@ -66,7 +66,7 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
 
 ![Multiple Images](/images/clean-code.svg){:height="100px"}{:class="html-only"}
 
-#### <img class="readme-only" src="/gh-pages/images/clean-code.svg" height="25pt"/> Tidy Your Repo
+#### <img class="readme-only" src="/images/clean-code.svg" height="25pt"/> Tidy Your Repo
 
 **Reduce the size of your code repo** by including a single vector or raster image and build all your nessecary png and pdf files at compile. That means **faster remote pulls and less redundancy.**
 
@@ -97,6 +97,10 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
 </div>
 </section>
 <!-- HTML-ONLY END -->
+
+<div class="readme-only" markdown="1">
+Enter your email address [here](//www.speculid.com#download) to get the latest version.
+</div>
 
 ## Usage
 
