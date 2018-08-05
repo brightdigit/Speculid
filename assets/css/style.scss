@@ -1,0 +1,152 @@
+---
+---
+@import url('https://fonts.googleapis.com/css?family=Khula:300,700');
+@import "{{ site.theme }}";
+
+.cards {
+	text-align: center;
+  display: table;
+  clear: both;
+
+  .card {
+    @media screen and (min-width: 42em) {
+      display: table-cell; 
+      padding: 1em; 
+
+      &.half {
+        width: 50%;
+      } 
+      &.whole {
+      } 
+      &.third {
+        width: 33.33%;
+        width: calc(100% / 3);
+      }
+    }
+    p {
+      font-size: 0.75em;
+    }
+  }
+}
+
+#markdown-toc {
+  li > ul > li > ul {
+    display: none;
+  }
+  #markdown-toc-table-of-contents {
+    display: none;
+  }
+  & > li:first-child {
+    display: none;
+  }
+}
+
+#introduction {
+  display: none;
+}
+
+#table-of-contents {
+  display: none;
+}
+
+body, input, button {
+  font-family: "Khula", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.page-header {
+  form {
+    margin: -5px auto;
+    display: table;
+    & > div {
+      display: table-row;
+      & > input {
+        display: table-cell;
+        width: 100%;
+        margin: 5px 0;
+      }
+    }
+  }
+  button.open-popup {
+    padding: 8px 100px 0px;
+    background-color: $body-link-color;
+    color: #FFF;
+    border: 1px transparentize($border-color, 0.5) solid;
+    font-size: 1.5em;
+    border-radius: 5px;
+    font-weight: bold;
+    img {
+      height: 1em;
+      margin: 10px;
+    }
+    span {
+      margin-top: 10px;
+      display: block;
+      float: right;
+    }
+    &:hover {
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.signup-form-container {
+  background-color: saturate($code-bg-color, 33%);
+  padding: 40px;
+  display: table;
+  border: 1px $border-color solid;
+  border-radius: 5px;
+  .message {
+    display: table-row;
+    & , &.success {
+      visiblity: hidden;
+      opacity: 0;
+    }
+    &.visible,  &.failure {
+      visiblity: visible;
+      opacity: 0.5;
+    }
+    &.failure {
+      color: #F00;
+    }
+    &.success {
+      color: $section-headings-color;
+    }
+  }
+  form.signup-form {
+    width: 100%;
+    .row {
+    display: flex;
+    input {
+      margin: 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 1px transparentize(#000, 0.8) solid;
+      width: 186px;
+      &:first-child {
+        margin-left: 0px;
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
+      &[type="email"] {
+        flex-grow: 1;
+      }
+      &[type="submit"] {
+        background-color: darken($body-link-color, 10%);
+        color: darken(#FFF, 15%);
+        padding-left: 50px;
+        padding-right: 50px;
+        font-weight: bold;
+        border-color: transparentize($border-color, 0.5);
+        &:hover {
+          color: #fff;
+          background-color: $body-link-color;
+        }
+        width: 186px;
+      }
+    }
+    }
+  }
+}
