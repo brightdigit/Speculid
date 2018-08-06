@@ -104,12 +104,18 @@ Enter your email address [here](https://www.speculid.com#download) to get the la
 
 </div>
 
+## Installation
+
+Once you have unzipped the downloaded file, go ahead and copy the application *Speculid.App* to the Application folder.
+
 ## Usage
 
+Speculid only supports being called through a command line terminal. 
+
 ```bash
-$ speculid --process <file>
-$ speculid --help
-$ speculid --version
+$ /Applications/Speculid/Contents/MacOS/Speculid --process <file>
+$ /Applications/Speculid/Contents/MacOS/Speculid --help
+$ /Applications/Speculid/Contents/MacOS/Speculid --version
 
 Options:
   --help     Show this screen.
@@ -130,10 +136,10 @@ The `.speculid` file is a `json` file with the image set or app icon path, the g
 or
 ```json
 {
-"set" : "Assets.xcassets/iOS AppIcon.appiconset",
-"source" : "geometry.svg",
-"background" : "#FFFFFFFF",
-"remove-alpha" : true
+  "set" : "Assets.xcassets/iOS AppIcon.appiconset",
+  "source" : "geometry.svg",
+  "background" : "#FFFFFFFF",
+  "remove-alpha" : true
 }
 ```
 
