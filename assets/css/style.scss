@@ -36,9 +36,10 @@
   #markdown-toc-table-of-contents {
     display: none;
   }
-  & > li:first-child {
-    display: none;
-  }
+}
+
+h1#speculid {
+  display: none;
 }
 
 #introduction {
