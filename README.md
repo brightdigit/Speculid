@@ -4,14 +4,12 @@
 [![Beerpay](https://img.shields.io/beerpay/brightdigit/speculid.svg?maxAge=2592000)](https://beerpay.io/brightdigit/speculid)
 [![Gitter](https://img.shields.io/gitter/room/speculid/Lobby.js.svg?maxAge=2592000)](https://gitter.im/speculid/Lobby)
 
-## Table of Contents
-
 * TOC
 {:toc}
 
-## Introduction
+# Introduction
 
-### Challenges Managing Graphic Assets
+## Challenges Managing Graphic Assets
 
 Part of the process of building an app for **watchOS**, **iOS**, or **macOS** is including all the image assets and app icons in your application. That could be done by exporting all the various sizes from your graphics application. 
 
@@ -23,7 +21,7 @@ The problem is the need to:
 
 ![Multiple Images](/images/mechanic.svg){:height="100px"}{:class="html-only"}
 
-#### <img class="readme-only" src="/images/mechanic.svg" height="25pt"/> Manually Create Multiple Sizes
+### <img class="readme-only" src="/images/mechanic.svg" height="25pt"/> Manually Create Multiple Sizes
 
 Each graphic must be **manually updated, converted, resized**. For an Xcode Project, that means a Graphic Designer or Developer need to repeatedly update each size every time.
 
@@ -32,7 +30,7 @@ Each graphic must be **manually updated, converted, resized**. For an Xcode Proj
 
 ![Multiple Images](/images/archive.svg){:height="100px"}{:class="html-only"}
 
-#### <img class="readme-only" src="/images/archive.svg" height="25pt"/> Store Generated Image Files
+### <img class="readme-only" src="/images/archive.svg" height="25pt"/> Store Generated Image Files
 
 These generated files need to be stored in the repository. An Asset Catalog Image Set will need a 1x, 2x, 3x of each graphic and **App Icons may need as many 30 different sizes**.
 
@@ -47,7 +45,7 @@ For Apple developers, there is no application which prepares graphics files for 
 </section>
 </section> -->
 
-### What Speculid Does
+## What Speculid Does
 
 
 ![diagram](/images/Diagram.png)
@@ -57,7 +55,7 @@ For Apple developers, there is no application which prepares graphics files for 
 
 ![Multiple Images](/images/machinery.svg){:height="100px"}{:class="html-only"}
 
-#### <img class="readme-only" src="/images/machinery.svg" height="25pt"/> Automate the process 
+### <img class="readme-only" src="/images/machinery.svg" height="25pt"/> Automate the process 
 
 Speculid automates the process so **only one graphic file is needed**. Add Speculid to your build process and now the **conversions and resizing are automated** as part of the build process. Now there is no need for anyone to manually create each size for each device.
 
@@ -66,7 +64,7 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
 
 ![Multiple Images](/images/clean-code.svg){:height="100px"}{:class="html-only"}
 
-#### <img class="readme-only" src="/images/clean-code.svg" height="25pt"/> Tidy Your Repo
+### <img class="readme-only" src="/images/clean-code.svg" height="25pt"/> Tidy Your Repo
 
 **Reduce the size of your code repo** by including a single vector or raster image and build all your nessecary png and pdf files at compile. That means **faster remote pulls and less redundancy.**
 
@@ -81,7 +79,7 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
 * **Use Vector Image Files** Such As SVG as Source Imagery
 * Allow the **Removal of Transparency for App Icons**
 
-## Download
+# Download
 
 <!-- HTML-ONLY BEGIN -->
 <section class="signup-form-container">
@@ -104,11 +102,11 @@ Enter your email address [here](https://www.speculid.com#download) to get the la
 
 </div>
 
-## Installation
+# Installation
 
 Once you have unzipped the downloaded file, go ahead and **copy the application *Speculid.App* to the Applications folder**.
 
-## Usage
+# Usage
 
 Speculid only supports being called through a command line terminal.  
 
@@ -122,7 +120,7 @@ Options:
   --version  Show version.
 ```
 
-### File Format
+## File Format
 
 The `.speculid` file is a `json` file with the image set or app icon path, the graphic file source, and optionally the basic image geometry (width or height). Such as
 
@@ -143,17 +141,17 @@ or
 }
 ```
 
-#### Set `set`
+### Set `set`
 
 ![Image Set Examples from Xcode](/images/SetExample.png){:height="240"}
 
 A set is an image set or app icon set used by Xcode. That path specified in the json could be relative to the `.speculid` file.
 
-#### Source `source`
+### Source `source`
 
 The image source file which could be a SVG or any bitmap image type compatible with [imagemagick](http://www.imagemagick.org).
 
-#### Geometry *optional* `geometry`
+### Geometry *optional* `geometry`
 
 The destination geometry of image if needed (i.e. image set). It must be in the format of:
 
@@ -162,15 +160,15 @@ The destination geometry of image if needed (i.e. image set). It must be in the 
 
 You can only specify the height or the width. The other dimension is automatically calculated based on the aspect ration of the image.
 
-#### Background *optional* `background`
+### Background *optional* `background`
 
 As a requirement, **App Icons are required to exclude any alpha channels**. In order to remove a transparency from a source png or svg file, you can specify to remove the alpha channel and add a background color. The background color can be set with a string in a standard rgb, rgba, or hex code format (#RRGGBB or #AARRGGBB). If no alpha is specified an alpha of 1.0 is assumed.
 
-#### Remove Alpha *optional*  `remove-alpha`
+### Remove Alpha *optional*  `remove-alpha`
 
 To specifically remove the alpha channel, a true boolean value must be specified. This will remove the alpha channel from the file. Make sure to specify an opaque background color when removing the alpha channel.
 
-### Xcode Integration
+## Xcode Integration
 
 With **Speculid**, the process of building image assets can be automated in **Xcode**.
 
