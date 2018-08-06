@@ -4,14 +4,32 @@
 [![Beerpay](https://img.shields.io/beerpay/brightdigit/speculid.svg?maxAge=2592000)](https://beerpay.io/brightdigit/speculid)
 [![Gitter](https://img.shields.io/gitter/room/speculid/Lobby.js.svg?maxAge=2592000)](https://gitter.im/speculid/Lobby)
 
-## Table of Contents
+<!--ts-->
+   * [Introduction](#introduction)
+      * [Challenges Managing Graphic Assets](#challenges-managing-graphic-assets)
+         * [<a href="https://camo.githubusercontent.com/f84864b171328f85d86395a98401ce67c4a2f83c/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d656368616e69632e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/f84864b171328f85d86395a98401ce67c4a2f83c/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d656368616e69632e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/mechanic.svg" style="max-width:100\x;"></a> Manually Create Multiple Sizes](#-manually-create-multiple-sizes)
+         * [<a href="https://camo.githubusercontent.com/ce1d1e0deb43857c938016c58c7a008e043b9dfe/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f617263686976652e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/ce1d1e0deb43857c938016c58c7a008e043b9dfe/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f617263686976652e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/archive.svg" style="max-width:100\x;"></a> Store Generated Image Files](#-store-generated-image-files)
+      * [What Speculid Does](#what-speculid-does)
+         * [<a href="https://camo.githubusercontent.com/2abe35faea1b42b10a426f57fee564fd6fb60bc5/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d616368696e6572792e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/2abe35faea1b42b10a426f57fee564fd6fb60bc5/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d616368696e6572792e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/machinery.svg" style="max-width:100\x;"></a> Automate the process](#-automate-the-process)
+         * [<a href="https://camo.githubusercontent.com/f3de2019c718f4688351765967af24b99be59056/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f636c65616e2d636f64652e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/f3de2019c718f4688351765967af24b99be59056/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f636c65616e2d636f64652e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/clean-code.svg" style="max-width:100\x;"></a> Tidy Your Repo](#-tidy-your-repo)
+   * [Download](#download)
+   * [Installation](#installation)
+   * [Usage](#usage)
+      * [File Format](#file-format)
+         * [Set set](#set-set)
+         * [Source source](#source-source)
+         * [Geometry <em>optional</em> geometry](#geometry-optional-geometry)
+         * [Background <em>optional</em> background](#background-optional-background)
+         * [Remove Alpha <em>optional</em>  remove-alpha](#remove-alpha-optional--remove-alpha)
+      * [Xcode Integration](#xcode-integration)
 
-* TOC
-{:toc}
+<!-- Added by: leo, at:  -->
 
-## Introduction
+<!--te-->
 
-### Challenges Managing Graphic Assets
+# Introduction
+
+## Challenges Managing Graphic Assets
 
 Part of the process of building an app for **watchOS**, **iOS**, or **macOS** is including all the image assets and app icons in your application. That could be done by exporting all the various sizes from your graphics application. 
 
@@ -23,7 +41,7 @@ The problem is the need to:
 
 
 
-#### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/mechanic.svg" height="25pt"/> Manually Create Multiple Sizes
+### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/mechanic.svg" height="25pt"/> Manually Create Multiple Sizes
 
 Each graphic must be **manually updated, converted, resized**. For an Xcode Project, that means a Graphic Designer or Developer need to repeatedly update each size every time.
 
@@ -32,7 +50,7 @@ Each graphic must be **manually updated, converted, resized**. For an Xcode Proj
 
 
 
-#### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/archive.svg" height="25pt"/> Store Generated Image Files
+### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/archive.svg" height="25pt"/> Store Generated Image Files
 
 These generated files need to be stored in the repository. An Asset Catalog Image Set will need a 1x, 2x, 3x of each graphic and **App Icons may need as many 30 different sizes**.
 
@@ -47,7 +65,7 @@ For Apple developers, there is no application which prepares graphics files for 
 </section>
 </section> -->
 
-### What Speculid Does
+## What Speculid Does
 
 
 ![diagram](https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/Diagram.png)
@@ -57,7 +75,7 @@ For Apple developers, there is no application which prepares graphics files for 
 
 
 
-#### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/machinery.svg" height="25pt"/> Automate the process 
+### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/machinery.svg" height="25pt"/> Automate the process 
 
 Speculid automates the process so **only one graphic file is needed**. Add Speculid to your build process and now the **conversions and resizing are automated** as part of the build process. Now there is no need for anyone to manually create each size for each device.
 
@@ -66,7 +84,7 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
 
 
 
-#### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/clean-code.svg" height="25pt"/> Tidy Your Repo
+### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/clean-code.svg" height="25pt"/> Tidy Your Repo
 
 **Reduce the size of your code repo** by including a single vector or raster image and build all your nessecary png and pdf files at compile. That means **faster remote pulls and less redundancy.**
 
@@ -81,7 +99,7 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
 * **Use Vector Image Files** Such As SVG as Source Imagery
 * Allow the **Removal of Transparency for App Icons**
 
-## Download
+# Download
 
 
 
@@ -91,19 +109,25 @@ Enter your email address [here](https://www.speculid.com#download) to get the la
 
 </div>
 
-## Usage
+# Installation
+
+Once you have unzipped the downloaded file, go ahead and **copy the application *Speculid.App* to the Applications folder**.
+
+# Usage
+
+Speculid only supports being called through a command line terminal.  
 
 ```bash
-$ speculid --process <file>
-$ speculid --help
-$ speculid --version
+$ /Applications/Speculid/Contents/MacOS/Speculid --process <file>
+$ /Applications/Speculid/Contents/MacOS/Speculid --help
+$ /Applications/Speculid/Contents/MacOS/Speculid --version
 
 Options:
   --help     Show this screen.
   --version  Show version.
 ```
 
-### File Format
+## File Format
 
 The `.speculid` file is a `json` file with the image set or app icon path, the graphic file source, and optionally the basic image geometry (width or height). Such as
 
@@ -117,24 +141,24 @@ The `.speculid` file is a `json` file with the image set or app icon path, the g
 or
 ```json
 {
-"set" : "Assets.xcassets/iOS AppIcon.appiconset",
-"source" : "geometry.svg",
-"background" : "#FFFFFFFF",
-"remove-alpha" : true
+  "set" : "Assets.xcassets/iOS AppIcon.appiconset",
+  "source" : "geometry.svg",
+  "background" : "#FFFFFFFF",
+  "remove-alpha" : true
 }
 ```
 
-#### Set `set`
+### Set `set`
 
 ![Image Set Examples from Xcode](https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/SetExample.png)
 
 A set is an image set or app icon set used by Xcode. That path specified in the json could be relative to the `.speculid` file.
 
-#### Source `source`
+### Source `source`
 
 The image source file which could be a SVG or any bitmap image type compatible with [imagemagick](http://www.imagemagick.org).
 
-#### Geometry *optional* `geometry`
+### Geometry *optional* `geometry`
 
 The destination geometry of image if needed (i.e. image set). It must be in the format of:
 
@@ -143,15 +167,15 @@ The destination geometry of image if needed (i.e. image set). It must be in the 
 
 You can only specify the height or the width. The other dimension is automatically calculated based on the aspect ration of the image.
 
-#### Background *optional* `background`
+### Background *optional* `background`
 
 As a requirement, **App Icons are required to exclude any alpha channels**. In order to remove a transparency from a source png or svg file, you can specify to remove the alpha channel and add a background color. The background color can be set with a string in a standard rgb, rgba, or hex code format (#RRGGBB or #AARRGGBB). If no alpha is specified an alpha of 1.0 is assumed.
 
-#### Remove Alpha *optional*  `remove-alpha`
+### Remove Alpha *optional*  `remove-alpha`
 
 To specifically remove the alpha channel, a true boolean value must be specified. This will remove the alpha channel from the file. Make sure to specify an opaque background color when removing the alpha channel.
 
-### Xcode Integration
+## Xcode Integration
 
 With **Speculid**, the process of building image assets can be automated in **Xcode**.
 

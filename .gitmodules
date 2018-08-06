@@ -2,3 +2,6 @@
 	path = gh-pages
 	url = https://github.com/brightdigit/Speculid.git
 	branch = gh-pages
+[submodule "scripts/github-markdown-toc"]
+	path = scripts/github-markdown-toc
+	url = https://github.com/ekalinin/github-markdown-toc.git
