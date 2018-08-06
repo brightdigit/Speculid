@@ -196,3 +196,6 @@ tmp
 
 certs/*.cer
 certs/*.p12
+
+*.toc.*
+*.orig.*
