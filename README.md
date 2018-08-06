@@ -106,11 +106,11 @@ Enter your email address [here](https://www.speculid.com#download) to get the la
 
 ## Installation
 
-Once you have unzipped the downloaded file, go ahead and copy the application *Speculid.App* to the Application folder.
+Once you have unzipped the downloaded file, go ahead and **copy the application *Speculid.App* to the Applications folder**.
 
 ## Usage
 
-Speculid only supports being called through a command line terminal. 
+Speculid only supports being called through a command line terminal.  
 
 ```bash
 $ /Applications/Speculid/Contents/MacOS/Speculid --process <file>
