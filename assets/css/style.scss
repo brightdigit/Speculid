@@ -1,7 +1,33 @@
 ---
 ---
+
+$header-bg-color: #F1F1F1 !default;
+$header-bg-color-secondary: #F4F2F3 !default;
+$header-heading-color: #333 !default;
+
 @import url('https://fonts.googleapis.com/css?family=Khula:300,700');
 @import "{{ site.theme }}";
+
+.page-header {
+  background-image: url(/images/background-1.jpg);
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: top right; 
+  background-repeat: no-repeat;
+  @media screen and (max-width: 64em) {
+    background-size: cover;
+  }
+  h1 {
+    text-shadow: 5px 5px 5px #777;
+  }
+  h2 {
+    text-shadow: 2px 2px 2px #777; 
+  }
+  img {
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter:         drop-shadow(5px 5px 5px #222); 
+  }
+}
 
 .cards {
 	text-align: center;
