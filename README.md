@@ -140,7 +140,7 @@ This means **Speuclid** can...
 
 <div class="readme-only" markdown="1">
 
-Enter your email address [here](https://www.speculid.com#download) to get the latest version.
+Enter your email address [here](https://speculid.com#download) to get the latest version.
 
 </div>
 
