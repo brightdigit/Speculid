@@ -3,7 +3,7 @@
 
 $header-bg-color: #F1F1F1 !default;
 $header-bg-color-secondary: #F4F2F3 !default;
-$header-heading-color: #333 !default;
+$header-heading-color: #FFF !default;
 
 @import url('https://fonts.googleapis.com/css?family=Khula:300,700');
 @import "{{ site.theme }}";
@@ -18,12 +18,14 @@ $header-heading-color: #333 !default;
     background-size: cover;
   }
   h1 {
-    text-shadow: 5px 5px 5px #777;
+    text-shadow: 1px 1px 5px #666;
+    color: #FFF;
   }
   h2 {
-    text-shadow: 2px 2px 2px #777; 
+    text-shadow: 1px 1px 5px #666; 
+    -webkit-text-stroke: 1px #EEE;
   }
-  img {
+  & > img {
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter:         drop-shadow(5px 5px 5px #222); 
   }
