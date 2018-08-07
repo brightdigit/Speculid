@@ -9,9 +9,15 @@
       * [Challenges Managing Graphic Assets](#challenges-managing-graphic-assets)
          * [<a href="https://camo.githubusercontent.com/f84864b171328f85d86395a98401ce67c4a2f83c/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d656368616e69632e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/f84864b171328f85d86395a98401ce67c4a2f83c/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d656368616e69632e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/mechanic.svg" style="max-width:100\x;"></a> Manually Create Multiple Sizes](#-manually-create-multiple-sizes)
          * [<a href="https://camo.githubusercontent.com/ce1d1e0deb43857c938016c58c7a008e043b9dfe/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f617263686976652e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/ce1d1e0deb43857c938016c58c7a008e043b9dfe/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f617263686976652e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/archive.svg" style="max-width:100\x;"></a> Store Generated Image Files](#-store-generated-image-files)
+         * [What If You Had...](#what-if-you-had)
+            * [Graphic Management Care-Free](#graphic-management-care-free)
       * [What Speculid Does](#what-speculid-does)
          * [<a href="https://camo.githubusercontent.com/2abe35faea1b42b10a426f57fee564fd6fb60bc5/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d616368696e6572792e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/2abe35faea1b42b10a426f57fee564fd6fb60bc5/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d616368696e6572792e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/machinery.svg" style="max-width:100\x;"></a> Automate the process](#-automate-the-process)
          * [<a href="https://camo.githubusercontent.com/f3de2019c718f4688351765967af24b99be59056/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f636c65616e2d636f64652e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/f3de2019c718f4688351765967af24b99be59056/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f636c65616e2d636f64652e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/clean-code.svg" style="max-width:100\x;"></a> Tidy Your Repo](#-tidy-your-repo)
+         * [Features](#features)
+            * [Input File Types Supported](#input-file-types-supported)
+            * [Modifiers](#modifiers)
+            * [Output File Types Supported](#output-file-types-supported)
    * [Download](#download)
    * [Installation](#installation)
    * [Usage](#usage)
@@ -57,6 +63,31 @@ These generated files need to be stored in the repository. An Asset Catalog Imag
 </section>
 </section>
 
+### What If You Had...
+
+<section class="cards" markdown="1">
+
+<section class="card whole" markdown="1">
+
+
+
+
+
+
+
+
+<img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/emoji.svg" height="100px"/><img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/emoji.svg" height="75px"/><img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/emoji.svg" height="50px"/><img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/emoji.svg" height="25px"/><img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/emoji.svg" height="12px"/><img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/emoji.svg" height="6px"/>
+
+#### Graphic Management Care-Free
+
+* **No more maintaining several different resolutions** _of the same image._
+* **No dependency on your graphic designer** _to export the precise sizes every single time._
+* **No need to download every bloated resolution** _from your repository every time a change is made._
+
+</section>
+</section>
+
+
 <!-- <section class="cards" markdown="1">
 <section class="card whole" markdown="1">
 ![Multiple Images](./images/Logo-dashed.svg)
@@ -67,6 +98,7 @@ For Apple developers, there is no application which prepares graphics files for 
 
 ## What Speculid Does
 
+**Speculid** links a single image file to an Image Set or App Icon.
 
 ![diagram](https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/Diagram.png)
 
@@ -91,13 +123,29 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
 </section>
 </section>
 
--------
+### Features
 
-**Speculid** links any image file to an Image Set or App Icon and will automatically:
+This means **Speuclid** can...
 
-* Create Each Necessary Raster File **Resized**
-* **Use Vector Image Files** Such As SVG as Source Imagery
-* Allow the **Removal of Transparency for App Icons**
+* **take multiple input file types including SVG vector files** and raster PNG files
+* **automatically create each necessary resized raster file**
+* **remove of transparencies from PNG and SVG file** for App Icons
+* **export to PDF for vector images in an Image Set** as well as PNG
+
+#### Input File Types Supported 
+
+* **SVG** - Scalable Vector Graphics
+* **PNG** - Portable Network Graphics
+
+#### Modifiers 
+
+* [Adding Background Colors](#background-optional-background)
+* [Transparency Removal](#remove-alpha-optional--remove-alpha)
+
+#### Output File Types Supported 
+
+* **PNG** - Portable Network Graphics  
+* **PDF** - Portable Document Format 
 
 # Download
 
