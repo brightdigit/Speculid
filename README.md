@@ -52,7 +52,7 @@ These generated files need to be stored in the repository. An Asset Catalog Imag
 
 <img class="readme-only" src="/images/emoji.svg" height="100px"/><img class="readme-only" src="/images/emoji.svg" height="75px"/><img class="readme-only" src="/images/emoji.svg" height="50px"/><img class="readme-only" src="/images/emoji.svg" height="25px"/><img class="readme-only" src="/images/emoji.svg" height="12px"/><img class="readme-only" src="/images/emoji.svg" height="6px"/>
 
-#### Graphic Management Care-Free
+#### Care-Free Graphic Management 
 
 * **No more maintaining several different resolutions** _of the same image._
 * **No dependency on your graphic designer** _to export the precise sizes every single time._
