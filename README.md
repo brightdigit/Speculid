@@ -50,12 +50,7 @@ These generated files need to be stored in the repository. An Asset Catalog Imag
 ![Multiple Images](/images/emoji.svg){:height="12px"}{:class="html-only"}
 ![Multiple Images](/images/emoji.svg){:height="6px"}{:class="html-only"}
 
-<img class="readme-only" src="/images/emoji.svg" height="100px"/>
-<img class="readme-only" src="/images/emoji.svg" height="75px"/>
-<img class="readme-only" src="/images/emoji.svg" height="50px"/>
-<img class="readme-only" src="/images/emoji.svg" height="25px"/>
-<img class="readme-only" src="/images/emoji.svg" height="12px"/>
-<img class="readme-only" src="/images/emoji.svg" height="6px"/>
+<img class="readme-only" src="/images/emoji.svg" height="100px"/><img class="readme-only" src="/images/emoji.svg" height="75px"/><img class="readme-only" src="/images/emoji.svg" height="50px"/><img class="readme-only" src="/images/emoji.svg" height="25px"/><img class="readme-only" src="/images/emoji.svg" height="12px"/><img class="readme-only" src="/images/emoji.svg" height="6px"/>
 
 #### Graphic Management Care-Free
 
