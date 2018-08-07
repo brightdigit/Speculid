@@ -37,6 +37,36 @@ These generated files need to be stored in the repository. An Asset Catalog Imag
 </section>
 </section>
 
+### What If You Had...
+
+<section class="cards" markdown="1">
+
+<section class="card whole" markdown="1">
+
+![Multiple Images](/images/emoji.svg){:height="100px"}{:class="html-only"}
+![Multiple Images](/images/emoji.svg){:height="75px"}{:class="html-only"}
+![Multiple Images](/images/emoji.svg){:height="50px"}{:class="html-only"}
+![Multiple Images](/images/emoji.svg){:height="25px"}{:class="html-only"}
+![Multiple Images](/images/emoji.svg){:height="12px"}{:class="html-only"}
+![Multiple Images](/images/emoji.svg){:height="6px"}{:class="html-only"}
+
+<img class="readme-only" src="/images/emoji.svg" height="100px"/>
+<img class="readme-only" src="/images/emoji.svg" height="75px"/>
+<img class="readme-only" src="/images/emoji.svg" height="50px"/>
+<img class="readme-only" src="/images/emoji.svg" height="25px"/>
+<img class="readme-only" src="/images/emoji.svg" height="12px"/>
+<img class="readme-only" src="/images/emoji.svg" height="6px"/>
+
+#### Graphic Management Care-Free
+
+* **No more maintaining several different resolutions** _of the same image._
+* **No dependency on your graphic designer** _to export the precise sizes every single time._
+* **No need to download every bloated resolution** _from your repository every time a change is made._
+
+</section>
+</section>
+
+
 <!-- <section class="cards" markdown="1">
 <section class="card whole" markdown="1">
 ![Multiple Images](./images/Logo-dashed.svg){:height="100px"}
@@ -47,6 +77,7 @@ For Apple developers, there is no application which prepares graphics files for 
 
 ## What Speculid Does
 
+**Speculid** links a single image file to an Image Set or App Icon.
 
 ![diagram](/images/Diagram.png)
 
@@ -71,13 +102,29 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
 </section>
 </section>
 
--------
+### Features
 
-**Speculid** links any image file to an Image Set or App Icon and will automatically:
+This means **Speuclid** can...
 
-* Create Each Necessary Raster File **Resized**
-* **Use Vector Image Files** Such As SVG as Source Imagery
-* Allow the **Removal of Transparency for App Icons**
+* **take multiple input file types including SVG vector files** and raster PNG files
+* **automatically create each necessary resized raster file**
+* **remove of transparencies from PNG and SVG file** for App Icons
+* **export to PDF for vector images in an Image Set** as well as PNG
+
+#### Input File Types Supported 
+
+* **SVG** - Scalable Vector Graphics
+* **PNG** - Portable Network Graphics
+
+#### Modifiers 
+
+* [Adding Background Colors](#background-optional-background)
+* [Transparency Removal](#remove-alpha-optional--remove-alpha)
+
+#### Output File Types Supported 
+
+* **PNG** - Portable Network Graphics  
+* **PDF** - Portable Document Format 
 
 # Download
 
