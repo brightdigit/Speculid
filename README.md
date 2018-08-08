@@ -155,7 +155,7 @@ Options:
 
 ## File Format
 
-The `.speculid` file is a `json` file with the image set or app icon path, the graphic file source, and optionally basic image geometry (width or height). All path specified in the json file could be relative to the `.speculid` file or an absolute path. Such as
+The `.speculid` file is a `json` file with the image set or app icon path, the graphic file source, and optionally basic image geometry (width or height). All paths specified in the json file could be relative to the `.speculid` file or an absolute path. Such as
 
 ```json
 {
