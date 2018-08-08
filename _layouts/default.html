@@ -33,10 +33,52 @@
       src="https://www.facebook.com/tr?id=232965894223363&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
-
-
+    <!-- Reddit Conversion Pixel -->
+    <script>
+    var now=Date.now();var i=new Image();i.src="https://alb.reddit.com/snoo.gif?q=CAAHAAABAAoACQAAAAABmK4LAA==&s=gyUkALhGbpNoNYXblldzf_fWXWUUDK7QgaeTHvJbMiQ=&ts="+now;
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://alb.reddit.com/snoo.gif?q=CAAHAAABAAoACQAAAAABmK4LAA==&s=gyUkALhGbpNoNYXblldzf_fWXWUUDK7QgaeTHvJbMiQ="/>
+    </noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Reddit Conversion Pixel -->
+    <script type="text/javascript">
+    _linkedin_partner_id = "70948";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script><script type="text/javascript">
+    (function(){var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);})();
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=70948&fmt=gif" />
+    </noscript>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K4GFDMS');</script>
+    <!-- End Google Tag Manager -->
+    <!-- DO NOT MODIFY -->
+    <!-- Quora Pixel Code (JS Helper) -->
+    <script>
+    !function(q,e,v,n,t,s){if(q.qp) return; n=q.qp=function(){n.qp?n.qp.apply(n,arguments):n.queue.push(arguments);}; n.queue=[];t=document.createElement(e);t.async=!0;t.src=v; s=document.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s);}(window, 'script', 'https://a.quora.com/qevents.js');
+    qp('init', '9367c79de62f4359a8e2a22d2fcdcf31');
+    qp('track', 'ViewContent');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://q.quora.com/_/ad/9367c79de62f4359a8e2a22d2fcdcf31/pixel?tag=ViewContent&noscript=1"/></noscript>
+    <!-- End of Quora Pixel Code -->    
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4GFDMS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <section class="page-header">
       <img src="{{ site.logo_url }}"/>
       <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
@@ -49,7 +91,7 @@
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
       {% if site.show_signup %}
-        <button class="open-popup"><img src="/images/download.svg"> <span>Download</span></button>
+        <a href="#download" class="btn open-popup"><img src="/images/download.svg"> <span>Download</span></a>
       {% endif %}
     </section>
 
