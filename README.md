@@ -52,11 +52,11 @@ These generated files need to be stored in the repository. An Asset Catalog Imag
 
 <img class="readme-only" src="/images/emoji.svg" height="100px"/><img class="readme-only" src="/images/emoji.svg" height="75px"/><img class="readme-only" src="/images/emoji.svg" height="50px"/><img class="readme-only" src="/images/emoji.svg" height="25px"/><img class="readme-only" src="/images/emoji.svg" height="12px"/><img class="readme-only" src="/images/emoji.svg" height="6px"/>
 
-#### Care-Free Graphic Management 
+#### Care-Free Graphic Management Where...
 
-* **No more maintaining several different resolutions** _of the same image._
-* **No dependency on your graphic designer** _to export the precise sizes every single time._
-* **No need to download every bloated resolution** _from your repository every time a change is made._
+* **Only one file is needed** _for each Image Set and App Icon._
+* **Graphic Designers need only single file change** _each time rather than one for each device every time._
+* **Images are resized and converted automatically**
 
 </section>
 </section>
