@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           eventCategory: 'signup',
           eventAction: 'completed'
         });
-        qb && qp('track', 'CompleteRegistration');
+        qp && qp('track', 'CompleteRegistration');
         window.dataLayer = window.dataLayer || [];
          window.dataLayer.push({
          'event': 'signup-completed'
