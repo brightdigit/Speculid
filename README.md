@@ -107,7 +107,7 @@ This means **Speuclid** can...
 
 <!-- HTML-ONLY BEGIN -->
 <section class="signup-form-container">
-  <div>If you are interested in <strong>downloading the latest version, sign up below</strong> to get the latest version.</div>
+  <div>If you are interested in <strong>downloading the latest version <em>{{ site.github.releases[0].name  }}</em><br> sign up below</strong> to get the latest version.</div>
 <form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
   <div class="row">
   <input type="email" placeholder="Your Email Address" value="" name="EMAIL" id="mce-EMAIL" required>
@@ -125,8 +125,6 @@ This means **Speuclid** can...
 Enter your email address [here](https://speculid.com#download) to request access to the latest version.
 
 </div>
-
-----------
 
 # Table of Contents
 
