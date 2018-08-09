@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       if (type == "success") {
         window.setTimeout(function() {
          $message._hide();
-       }, 3000);
+       }, 10000);
       }
 
     };
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       });
       fbq && fbq('track', 'CompleteRegistration', { 'status' : (data.result || "failure")});
       if (data.result === "success") {
-        $message._show('success', data.msg);
+        $message._show('success', "Check your email soon for the download link.");
         ga && ga('send', 'event', {
           eventCategory: 'signup',
           eventAction: 'completed'
