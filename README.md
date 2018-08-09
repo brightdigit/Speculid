@@ -1,3 +1,35 @@
+
+
+<!--ts-->
+   * [Introduction](#introduction)
+      * [Challenges Managing Graphic Assets](#challenges-managing-graphic-assets)
+         * [<a href="https://camo.githubusercontent.com/f84864b171328f85d86395a98401ce67c4a2f83c/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d656368616e69632e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/f84864b171328f85d86395a98401ce67c4a2f83c/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d656368616e69632e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/mechanic.svg" style="max-width:100\x;"></a> Manually Create Multiple Sizes](#-manually-create-multiple-sizes)
+         * [<a href="https://camo.githubusercontent.com/ce1d1e0deb43857c938016c58c7a008e043b9dfe/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f617263686976652e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/ce1d1e0deb43857c938016c58c7a008e043b9dfe/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f617263686976652e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/archive.svg" style="max-width:100\x;"></a> Store Generated Image Files](#-store-generated-image-files)
+         * [What If You Had...](#what-if-you-had)
+            * [Care-Free Graphic Management Where...](#care-free-graphic-management-where)
+      * [What Speculid Does](#what-speculid-does)
+         * [<a href="https://camo.githubusercontent.com/2abe35faea1b42b10a426f57fee564fd6fb60bc5/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d616368696e6572792e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/2abe35faea1b42b10a426f57fee564fd6fb60bc5/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d616368696e6572792e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/machinery.svg" style="max-width:100\x;"></a> Automate the process](#-automate-the-process)
+         * [<a href="https://camo.githubusercontent.com/f3de2019c718f4688351765967af24b99be59056/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f636c65616e2d636f64652e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/f3de2019c718f4688351765967af24b99be59056/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f636c65616e2d636f64652e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/clean-code.svg" style="max-width:100\x;"></a> Tidy Your Repo](#-tidy-your-repo)
+         * [Features](#features)
+            * [Input File Types Supported](#input-file-types-supported)
+            * [Modifiers](#modifiers)
+            * [Output File Types Supported](#output-file-types-supported)
+   * [Download](#download)
+   * [Table of Contents](#table-of-contents)
+   * [Installation](#installation)
+   * [Usage](#usage)
+      * [File Format](#file-format)
+         * [Set set](#set-set)
+         * [Source source](#source-source)
+         * [Geometry <em>optional</em> geometry](#geometry-optional-geometry)
+         * [Background <em>optional</em> background](#background-optional-background)
+         * [Remove Alpha <em>optional</em>  remove-alpha](#remove-alpha-optional--remove-alpha)
+      * [Xcode Integration and Automation](#xcode-integration-and-automation)
+
+<!-- Added by: leo, at:  -->
+
+<!--te-->
+
 # Introduction
 
 ## Challenges Managing Graphic Assets
@@ -115,35 +147,7 @@ Enter your email address [here](https://speculid.com#download) to request access
 
 # Table of Contents
 
-<!--ts-->
-   * [Introduction](#introduction)
-      * [Challenges Managing Graphic Assets](#challenges-managing-graphic-assets)
-         * [<a href="https://camo.githubusercontent.com/f84864b171328f85d86395a98401ce67c4a2f83c/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d656368616e69632e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/f84864b171328f85d86395a98401ce67c4a2f83c/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d656368616e69632e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/mechanic.svg" style="max-width:100\x;"></a> Manually Create Multiple Sizes](#-manually-create-multiple-sizes)
-         * [<a href="https://camo.githubusercontent.com/ce1d1e0deb43857c938016c58c7a008e043b9dfe/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f617263686976652e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/ce1d1e0deb43857c938016c58c7a008e043b9dfe/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f617263686976652e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/archive.svg" style="max-width:100\x;"></a> Store Generated Image Files](#-store-generated-image-files)
-         * [What If You Had...](#what-if-you-had)
-            * [Care-Free Graphic Management Where...](#care-free-graphic-management-where)
-      * [What Speculid Does](#what-speculid-does)
-         * [<a href="https://camo.githubusercontent.com/2abe35faea1b42b10a426f57fee564fd6fb60bc5/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d616368696e6572792e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/2abe35faea1b42b10a426f57fee564fd6fb60bc5/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d616368696e6572792e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/machinery.svg" style="max-width:100\x;"></a> Automate the process](#-automate-the-process)
-         * [<a href="https://camo.githubusercontent.com/f3de2019c718f4688351765967af24b99be59056/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f636c65616e2d636f64652e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/f3de2019c718f4688351765967af24b99be59056/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f636c65616e2d636f64652e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/clean-code.svg" style="max-width:100\x;"></a> Tidy Your Repo](#-tidy-your-repo)
-         * [Features](#features)
-            * [Input File Types Supported](#input-file-types-supported)
-            * [Modifiers](#modifiers)
-            * [Output File Types Supported](#output-file-types-supported)
-   * [Download](#download)
-   * [Table of Contents](#table-of-contents)
-   * [Installation](#installation)
-   * [Usage](#usage)
-      * [File Format](#file-format)
-         * [Set set](#set-set)
-         * [Source source](#source-source)
-         * [Geometry <em>optional</em> geometry](#geometry-optional-geometry)
-         * [Background <em>optional</em> background](#background-optional-background)
-         * [Remove Alpha <em>optional</em>  remove-alpha](#remove-alpha-optional--remove-alpha)
-      * [Xcode Integration and Automation](#xcode-integration-and-automation)
 
-<!-- Added by: leo, at:  -->
-
-<!--te-->
 
 # Installation
 
