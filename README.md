@@ -47,7 +47,7 @@ An asset catalog image set will need a 1x, 2x, 3x of each graphic and **App Icon
 
 * **Only one file is needed** _for each Image Set and App Icon._
 * **Graphic Designers need only export a single file change** _each time rather than as many as serveral scaled copies._
-* **Resizing and conversion is done behind the scenes** ) _based on a single source image._
+* **Resizing and conversion is done behind the scenes** _based on a single source image._
 
 </section>
 </section>
