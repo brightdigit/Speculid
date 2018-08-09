@@ -1,3 +1,9 @@
+[{{ site.github.project_tagline }}](#){:class="html-only"}
+
+<!--ts-->
+
+<!--te-->
+
 # Introduction
 
 ## Challenges Managing Graphic Assets

@@ -337,3 +337,8 @@ body, input, button {
     }
   }
 }
+
+.main-content a.html-only:first-child{
+  display: none;
+}
+
