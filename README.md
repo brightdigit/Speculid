@@ -1,12 +1,3 @@
-[![Twitter](https://img.shields.io/badge/Twitter-@leogdion-blue.svg?style=flat)](http://twitter.com/leogdion)
-[![Codecov](https://img.shields.io/codecov/c/github/brightdigit/speculid.svg?maxAge=2592000)](https://codecov.io/gh/brightdigit/speculid/branch)
-[![Travis](https://img.shields.io/travis/brightdigit/speculid.svg)](https://travis-ci.org/brightdigit/speculid)
-[![Beerpay](https://img.shields.io/beerpay/brightdigit/speculid.svg?maxAge=2592000)](https://beerpay.io/brightdigit/speculid)
-[![Gitter](https://img.shields.io/gitter/room/speculid/Lobby.js.svg?maxAge=2592000)](https://gitter.im/speculid/Lobby)
-
-* TOC
-{:toc}
-
 # Introduction
 
 ## Challenges Managing Graphic Assets
@@ -116,11 +107,11 @@ This means **Speuclid** can...
 
 <!-- HTML-ONLY BEGIN -->
 <section class="signup-form-container">
-  <div>If you are interested in <strong>downloading and using the current alpha, fill out the form below</strong> and you will receive a link to latest version.</div>
+  <div>If you are interested in <strong>downloading the latest version, sign up below</strong> to get the latest version.</div>
 <form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
   <div class="row">
   <input type="email" placeholder="Your Email Address" value="" name="EMAIL" id="mce-EMAIL" required>
-  <input type="submit" value="Download">
+  <input type="submit" value="Sign Up">
   </div>
 </form>
 <div class="message">
@@ -131,9 +122,16 @@ This means **Speuclid** can...
 
 <div class="readme-only" markdown="1">
 
-Enter your email address [here](https://speculid.com#download) to get the latest version.
+Enter your email address [here](https://speculid.com#download) to request access to the latest version.
 
 </div>
+
+----------
+
+# Table of Contents
+
+* TOC
+{:toc}
 
 # Installation
 

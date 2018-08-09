@@ -70,7 +70,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <section class="page-header">
-      <img src="{{ site.logo_url }}"/>
+      <img src="{{ site.logo_url }}" width="250" height="250"/>
       <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
 <!--       {% if site.github.is_project_page %}
@@ -81,7 +81,20 @@
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
       {% if site.show_signup %}
-        <a href="#download" class="btn open-popup"><img src="/images/download.svg"> <span>Download</span></a>
+<!--         <a href="#download" class="btn open-popup"><img src="/images/download.svg"> <span>Download</span></a> -->
+<section class="signup-form-container">
+<form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
+  <div class="row">
+  <input type="email" placeholder="Your Email Address" value="" name="EMAIL" id="mce-EMAIL" required>
+  </div>
+  <div class="row">
+  <input type="submit" value="Download">
+  </div>
+</form>
+<div class="message">
+  &nbsp;
+</div>
+</section>
       {% endif %}
     </section>
 

@@ -3,11 +3,14 @@
 
 $header-bg-color: #F1F1F1 !default;
 $header-bg-color-secondary: #F4F2F3 !default;
-$header-heading-color: #FFF !default;
+$header-heading-color: #333 !default;
 
-@import url('https://fonts.googleapis.com/css?family=Khula:300,700');
+@import url('https://fonts.googleapis.com/css?family=Khula:300,600,800');
 @import "{{ site.theme }}";
 
+strong {
+  font-weight: 600;
+}
 .page-header {
   background-image: url(/images/background-1.jpg);
   background-size: contain;
@@ -17,17 +20,15 @@ $header-heading-color: #FFF !default;
   @media screen and (max-width: 64em) {
     background-size: cover;
   }
-  h1 {
-    text-shadow: 1px 1px 5px #666;
-    color: #FFF;
+  & > img {
+    -webkit-filter: drop-shadow(5px 5px 2px #222);
+    filter:         drop-shadow(5px 5px 2px #222); 
+    width: 250px;
+    height: 250px;
   }
   h2 {
-    text-shadow: 1px 1px 5px #666; 
-    -webkit-text-stroke: 1px #EEE;
-  }
-  & > img {
-    -webkit-filter: drop-shadow(5px 5px 5px #222);
-    filter:         drop-shadow(5px 5px 5px #222); 
+
+    font-weight: 600;
   }
 }
 
@@ -80,7 +81,13 @@ text-align: left;
     display: none;
   }
   #markdown-toc-table-of-contents {
-    display: none;
+    font-weight: 100;
+    opacity: 0.5;
+    &:before {
+      content: "▶︎ ";
+      font-size: 0.8em;
+      line-height: 1em;
+    }
   }
 }
 
@@ -92,15 +99,20 @@ h1#speculid {
   display: none;
 }
 
-#table-of-contents {
-  display: none;
-}
-
 body, input, button {
   font-family: "Khula", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .page-header {
+  .signup-form-container {
+    & > div {
+      color: #333;
+      font-size: 1.5em;
+    }
+    min-width: 250px;
+    @media screen and (min-width: 42em) {
+      width: 400px;
+    }
   form {
     margin: -5px auto;
     display: table;
@@ -109,9 +121,11 @@ body, input, button {
       & > input {
         display: table-cell;
         width: 100%;
+        font-size: 1.25em;
         margin: 5px 0;
       }
     }
+  }
   }
   a.btn.open-popup {
     padding: 8px 100px 0px;
@@ -139,11 +153,41 @@ body, input, button {
 }
 
 .signup-form-container {
-  background-color: saturate($code-bg-color, 33%);
-  padding: 40px;
   display: table;
-  border: 1px $border-color solid;
-  border-radius: 5px;
+  .main-content > & {
+    background-color: saturate($code-bg-color, 33%);
+    border: 1px $border-color solid;
+    border-radius: 5px;
+    padding: 40px;
+    form.signup-form {
+      input {
+        width: 250px;
+        &[type="submit"] { 
+        padding-left: 50px;
+        padding-right: 50px;
+
+        }
+      }
+    }
+  }
+  .page-header > & {
+    margin: auto;
+    & > .message {
+
+      font-weight: 800;
+      margin-top: 1em;
+
+      &.visible,  &.failure {
+        opacity: 0.8;
+      }
+      &.failure:before {
+        content: "❗"
+      }
+      &.success.visible:before {
+        content: "📩"
+      }
+    }
+  }
   .message {
     display: table-row;
     & , &.success {
@@ -170,7 +214,6 @@ body, input, button {
       padding: 5px 10px;
       border-radius: 5px;
       border: 1px transparentize(#000, 0.8) solid;
-      width: 186px;
       &:first-child {
         margin-left: 0px;
       }
@@ -183,15 +226,14 @@ body, input, button {
       &[type="submit"] {
         background-color: darken($body-link-color, 10%);
         color: darken(#FFF, 15%);
-        padding-left: 50px;
-        padding-right: 50px;
-        font-weight: bold;
         border-color: transparentize($border-color, 0.5);
-        &:hover {
+        .main-content & {
+          font-weight: bold;
+        }
+        .page-header > &, &:hover {
           color: #fff;
           background-color: $body-link-color;
         }
-        width: 186px;
       }
     }
     }
