@@ -117,7 +117,7 @@ This means **Speuclid** can...
 
 * **take multiple input file types including SVG vector files** and raster PNG files
 * **automatically create each necessary resized raster file**
-* **remove of transparencies from PNG and SVG file** for App Icons
+* **remove transparencies from PNG and SVG file** for App Icons
 * **export to PDF for vector images in Image Sets** as well as PNG
 
 #### Input File Types Supported 
