@@ -3,3 +3,5 @@ theme: jekyll-theme-cayman
 show_downloads: false
 google_analytics: UA-33667276-14
 show_signup: true
+plugins:
+  - jekyll-sitemap
