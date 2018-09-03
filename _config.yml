@@ -6,13 +6,15 @@ show_signup: true
 plugins:
   - jekyll-sitemap
 exclude:
-  - "*"
-include:
-  - "index.md"
-  - "images"
-  - "*.png"
-  - "*.svg"
-  - "*.ico"
-  - "browserconfig.*"
-  - "*.webmanifest"
-  - "assets/js/signup-form.js"
+  - applications
+  - bin
+  - CairoSVG*
+  - certs
+  - examples
+  - frameworks
+  - scripts
+  - Speculid*
+  - tests
+  - "*.plist"
+  - Gemfile*
+  - Podfile*
