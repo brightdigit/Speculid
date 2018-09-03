@@ -1,2 +1,0 @@
-#include "Pods/Target Support Files/Pods-CairoSVG/Pods-CairoSVG.release.xcconfig"
-#include "CairoSVG.xcconfig"
