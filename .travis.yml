@@ -6,7 +6,7 @@ branches:
   except:
   - develop
   - gh-pages
-osx_image: xcode9.4
+osx_image: xcode10
 xcode_workspace: speculid.xcworkspace
 xcode_scheme: Speculid-Mac-App
 before_install:
