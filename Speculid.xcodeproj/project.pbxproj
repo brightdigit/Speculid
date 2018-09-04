@@ -298,7 +298,6 @@
 		B31BEAFE1F9626AC00496E7A /* RegularExpressionSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */; };
 		B31BEB001F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */; };
 		B3242E9A213DBE6C0063037C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3242E99213DBE6C0063037C /* main.swift */; };
-		B3242EA0213DBF060063037C /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3242E97213DBE6C0063037C /* speculid */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B33A533E1F954FF800E74800 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A533D1F954FF800E74800 /* Result.swift */; };
 		B33F0BB61F958640004A87DD /* StatusItemProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */; };
 		B33F0BB71F958640004A87DD /* RemoteObjectInterfaceProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */; };
@@ -359,6 +358,7 @@
 		B3891B8520F6406B00FEDF89 /* libfribidi.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8083020E585BF00030497 /* libfribidi.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3891B8620F6406B00FEDF89 /* libfribidi.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8083220E585BF00030497 /* libfribidi.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3891BBE20F7CE010095E1FD /* CwlSysctl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3891BBD20F7CE010095E1FD /* CwlSysctl.swift */; };
+		B3A2BCF9213F2622005FC8A1 /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3242E97213DBE6C0063037C /* speculid */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3B5E9DA1F96C1C1004A6BEB /* SpeculidConfigurationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */; };
 		B3B5E9DC1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */; };
 		B3B5E9DE1F96C2A2004A6BEB /* SpeculidConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */; };
@@ -1043,16 +1043,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		B3242E9F213DBEE00063037C /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 12;
-			files = (
-				B3242EA0213DBF060063037C /* speculid in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B33A533F1F95568F00E74800 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1083,6 +1073,16 @@
 				B37C747B1F8C5ADA00DF505B /* SpeculidKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3A2BCF8213F25F4005FC8A1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 12;
+			files = (
+				B3A2BCF9213F2622005FC8A1 /* speculid in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B3E211A620E57290009EA554 /* CopyFiles */ = {
@@ -14059,7 +14059,7 @@
 				B37C747F1F8C5ADA00DF505B /* Embed Frameworks */,
 				F11FED44F4FDA27EB1AD0F15 /* [CP] Embed Pods Frameworks */,
 				B32D69ED1F9ED4A600C21C8C /* Codesign Dynamic Libraries */,
-				B3242E9F213DBEE00063037C /* CopyFiles */,
+				B3A2BCF8213F25F4005FC8A1 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -14859,6 +14859,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MLT7M394S7;
+				INSTALL_PATH = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -14873,6 +14874,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MLT7M394S7;
+				INSTALL_PATH = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = speculid;
