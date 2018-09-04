@@ -1,4 +1,4 @@
-@testable import Speculid
+@testable import SpeculidKit
 import SwiftVer
 import XCTest
 
