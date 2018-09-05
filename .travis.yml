@@ -23,6 +23,7 @@ script:
 - open Build/Products/App/Speculid.app
 - osascript -e 'tell application "Speculid" to quit'
 - diff examples/shasum <(./scripts/shasum.sh)
+- "./Build/Products/App/Speculid.app/Contents/SharedSupport/speculid" --version
 before_deploy:
 - git config --global user.email "builds@travis-ci.com"
 - git config --global user.name "Travis CI"
