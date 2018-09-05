@@ -1,35 +1,12 @@
 import AppKit
 import Foundation
 
-// first look for bundle that's in parent folder
-
-
-// next look for bundle that's in /Applications
-
-
-// next use workspace
 guard let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.brightdigit.Speculid-Mac-App") else {
   #warning("TODO: Handle If Speculid Bundle Isn't Installed")
   exit(1)
 }
 
-guard let bundle = Bundle(url: url) else {
-  #warning("TODO: Handle If Speculid Bundle Isn't Installed")
-  exit(1)
-}
-
-guard let buildNumberString = bundle.infoDictionary?[kCFBundleVersionKey as String] as? String else {
-  #warning("TODO: Unable to handle version string")
-  exit(1)
-  
-}
-
-guard let buildNumber = Int(buildNumberString) else {
-  #warning("TODO: Unable to handle version string")
-  exit(1)
-}
-
-guard let executableURL = bundle.executableURL else {
+guard let executableURL = Bundle(url: url)?.executableURL else {
   #warning("TODO: Handle If Speculid Bundle Isn't Installed")
   exit(1)
 }

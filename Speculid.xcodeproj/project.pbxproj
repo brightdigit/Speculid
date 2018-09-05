@@ -369,7 +369,6 @@
 		B3B5E9E81F96C74C004A6BEB /* CommandLineRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */; };
 		B3B5E9EA1F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */; };
 		B3B5E9EC1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */; };
-		B3BE3FDA2140086E00675A44 /* version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE3FD92140086E00675A44 /* version.swift */; };
 		B3BF4C42213ED5CB003744F4 /* SpeculidKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C74731F8C5ADA00DF505B /* SpeculidKit.framework */; };
 		B3C6CA8E2114C9EB000D5120 /* dummy in Resources */ = {isa = PBXBuildFile; fileRef = B3C6CA8D2114C9EB000D5120 /* dummy */; };
 		B3CB15702113AA8C00A6DC5C /* VersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CB156F2113AA8C00A6DC5C /* VersionProvider.swift */; };
@@ -1597,7 +1596,6 @@
 		B3B5E9E71F96C74C004A6BEB /* CommandLineRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRunner.swift; sourceTree = "<group>"; };
 		B3B5E9E91F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParserProtocol.swift; sourceTree = "<group>"; };
 		B3B5E9EB1F96C7D5004A6BEB /* SpeculidApplicationModeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParser.swift; sourceTree = "<group>"; };
-		B3BE3FD92140086E00675A44 /* version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = version.swift; sourceTree = "<group>"; };
 		B3C6CA8D2114C9EB000D5120 /* dummy */ = {isa = PBXFileReference; lastKnownFileType = text; path = dummy; sourceTree = "<group>"; };
 		B3CB156F2113AA8C00A6DC5C /* VersionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionProvider.swift; sourceTree = "<group>"; };
 		B3CEF3C41FB611D200F1DF87 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -4748,7 +4746,6 @@
 			isa = PBXGroup;
 			children = (
 				B3242E99213DBE6C0063037C /* main.swift */,
-				B3BE3FD92140086E00675A44 /* version.swift */,
 			);
 			path = command;
 			sourceTree = "<group>";
@@ -14036,7 +14033,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3242E9D213DBE6C0063037C /* Build configuration list for PBXNativeTarget "Speculid-Mac-Cmd" */;
 			buildPhases = (
-				B3BE3FDB2140089000675A44 /* ShellScript */,
 				B3242E93213DBE6C0063037C /* Sources */,
 				B3242E94213DBE6C0063037C /* Frameworks */,
 				B3242E95213DBE6C0063037C /* CopyFiles */,
@@ -14458,23 +14454,6 @@
 			shellPath = /bin/sh;
 			shellScript = "TAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" -type f\\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
 		};
-		B3BE3FDB2140089000675A44 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "echo \"let DEFAULT_BUNDLE_VERSION = ${DEFAULT_BUNDLE_VERSION}\" > \"${SRCROOT}/applications/command/version.swift\"\n";
-		};
 		B3D329F91F9A55A20042B46F /* swiftformat */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -14612,7 +14591,6 @@
 			files = (
 				B3136DDE1F90EF470002B7AB /* Application.swift in Sources */,
 				B35B71231F9041B900BE477E /* main.swift in Sources */,
-				B3BE3FDA2140086E00675A44 /* version.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
