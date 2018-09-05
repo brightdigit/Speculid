@@ -92,12 +92,18 @@ class CommandLineRunnerTest: XCTestCase {
     let versionProvider = MockVersionProvider()
     let commandLineRunner = CommandLineRunner(outputStream: outputStream, errorStream: errorStream, versionProvider: versionProvider)
 
+    var expectedStrings = [versionProvider.version!.developmentDescription]
+
+    #if DEBUG
+      expectedStrings.append(" DEBUG")
+    #endif
+
     let activity = commandLineRunner.activity(withArguments: argument) { activity, error in
       XCTAssertNotNil(activity)
       XCTAssertNil(error)
       XCTAssertEqual(
         outputStream.strings,
-        [versionProvider.version!.developmentDescription]
+        expectedStrings
       )
       XCTAssertEqual(errorStream.strings, [])
       expectation.fulfill()
