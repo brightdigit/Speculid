@@ -23,6 +23,7 @@ script:
 - open Build/Products/App/Speculid.app
 - osascript -e 'tell application "Speculid" to quit'
 - diff examples/shasum <(./scripts/shasum.sh)
+- ./build/Products/App/Speculid.app/Contents/SharedSupport/speculid --version
 after_failure:
 - "./scripts/shasum.sh"
 - find "examples/Assets/." -type f \( -iname \*.icns -o -iname \*.png -o -iname \*.pdf
