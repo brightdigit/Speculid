@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/macos,swift,xcode,objective-c,jekyll
 
 ### Jekyll ###
@@ -197,3 +196,5 @@ examples/*/*.xcassets/*/*.pdf
 playgrounds
 
 .version
+
+applications/command/version.swift
