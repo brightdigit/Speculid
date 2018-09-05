@@ -6,7 +6,7 @@ branches:
   except:
   - develop
   - gh-pages
-osx_image: xcode9.4
+osx_image: xcode10
 xcode_workspace: speculid.xcworkspace
 xcode_scheme: Speculid-Mac-App
 before_install:
@@ -17,31 +17,13 @@ script:
 - "./scripts/decrypt-certs.sh"
 - "./scripts/build-keychain.sh"
 - xcodebuild test -workspace speculid.xcworkspace -scheme "Speculid"
-- xcodebuild archive -workspace speculid.xcworkspace -scheme "Speculid-Mac-App" -configuration
-  Release -derivedDataPath ./build -archivePath ./build/Products/Speculid.xcarchive
-- xcodebuild -exportArchive -archivePath ./build/Products/Speculid.xcarchive -exportOptionsPlist
-  ./exportOptions.plist -exportPath ./build/Products/App
+- xcodebuild archive -workspace speculid.xcworkspace -scheme "Speculid-Mac-App" -configuration Release -derivedDataPath ./build -archivePath ./build/Products/Speculid.xcarchive
+- xcodebuild -exportArchive -archivePath ./build/Products/Speculid.xcarchive -exportOptionsPlist ./exportOptions.plist -exportPath ./build/Products/App
 - ditto -c -k --sequesterRsrc --keepParent ./build/Products/App/Speculid.app build/Speculid.zip
 - open Build/Products/App/Speculid.app
 - osascript -e 'tell application "Speculid" to quit'
 - diff examples/shasum <(./scripts/shasum.sh)
-before_deploy:
-- git config --global user.email "builds@travis-ci.com"
-- git config --global user.name "Travis CI"
-- export GIT_TAG=v`./bin/package.sh ./build/Products/App/Speculid.app`.$TRAVIS_BUILD_NUMBER-dev
-- git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-- git push -q https://${TRAVIS_SECURE_TOKEN_NAME}@github.com/brightdigit/speculid
-  --tags
-#deploy:
-#  provider: releases
-#  prerelease: true
-#  api_key:
-#    secure: kB1IJxdHO6n3vTU6qR4klgASWhMzZmiiKYuKppgjZ5zq/dwTma8Ls3PabZcCoo8Bb+tZVXrohLweKwqP+IjH+oydV+9qt4oh2Q6po6gS+Qj3bTMQ+KrZYc699p32JVASQsRgLkYSUQHFT1wR4R5tlGw3A+tevJFlG56tC2WV1Sw=
-#  file: build/Speculid.zip
-#  skip_cleanup: true
-#  on:
-#    tags: false
-#    all_branches: true
+- ./build/Products/App/Speculid.app/Contents/SharedSupport/speculid --version
 after_failure:
 - "./scripts/shasum.sh"
 - find "examples/Assets/." -type f \( -iname \*.icns -o -iname \*.png -o -iname \*.pdf
