@@ -25,20 +25,10 @@ struct TerminationError: Error {
 }
 
 let speculidMacAppBundleIdentifier = "com.brightdigit.Speculid-Mac-App"
-// NSMetadataQuery *query = [[NSMetadataQuery alloc] init];
-// [query setSearchScopes: @[@"/Applications"]];  // if you want to isolate to Applications
-// NSPredicate *pred = [NSPredicate predicateWithFormat:@"kMDItemKind == 'Application'"];
-//
-//// Register for NSMetadataQueryDidFinishGatheringNotification here because you need that to
-//// know when the query has completed
-//
-// [query setPredicate:pred];
-// [query startQuery];
 
 func findApplicationBundle(withIdentifier identifer: String, _ callback: @escaping (Bundle?) -> Void) {
   let query = NSMetadataQuery()
-  let observer = NotificationCenter.default.addObserver(forName: NSNotification.Name.NSMetadataQueryDidFinishGathering, object: nil, queue: nil) { _ in
-    // NotificationCenter.default.removeObserver(observer)
+  NotificationCenter.default.addObserver(forName: NSNotification.Name.NSMetadataQueryDidFinishGathering, object: nil, queue: nil) { _ in
     for result in query.results {
       if let item = result as? NSMetadataItem {
         if let path = item.value(forAttribute: NSMetadataItemPathKey) as? String {
@@ -59,42 +49,63 @@ func findApplicationBundle(withIdentifier identifer: String, _ callback: @escapi
   query.start()
 }
 
-//
-// guard let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: speculidMacAppBundleIdentifier) else {
-//  #warning("TODO: Handle If Speculid Bundle Isn't Installed")
-//  print("It doesn't look like Speculid is installed.")
-//  print("You may want to download the latest version and install it in your Applications folder:")
-//  print("https://speculid.com")
-//
-//  exit(1)
-// }
-
-func runApplication(withBundleIdentifier identifier: String, completion: @escaping (Error?) -> Void) {
+func runApplication(fromBundle bundle: Bundle,  withArguments arguments: [String]?,  completion: @escaping (Error?) -> Void) {
+  
+  guard let executableURL = bundle.executableURL else {
+    completion(BundleNotFoundError(identifier: bundle.bundleIdentifier!))
+    return
+  }
+  
+  
+  let arguments = [String](CommandLine.arguments[1...])
+  let sourceApplicationName = URL(fileURLWithPath: CommandLine.arguments[0]).lastPathComponent
+  let environment = ProcessInfo.processInfo.environment.merging(["sourceApplicationName": sourceApplicationName], uniquingKeysWith: { $1 })
+  let process = Process()
+  process.terminationHandler = {
+    completion(TerminationError(status: $0.terminationStatus, reason: $0.terminationReason))
+  }
+  process.executableURL = executableURL
+  process.arguments = arguments
+  process.environment = environment
+  process.standardOutput = FileHandle.standardOutput
+  process.standardError = FileHandle.standardError
+  process.launch()
+}
+func runApplication(withBundleIdentifier identifier: String, fromApplicationPathURL applicationPathURL: URL?,   withArguments arguments: [String]?, completion: @escaping (Error?) -> Void) {
+  if let applicationPathURL = applicationPathURL {
+    if let bundle = Bundle(url: applicationPathURL) {
+      if bundle.bundleIdentifier == identifier {
+        runApplication(fromBundle: bundle, withArguments: arguments, completion: completion)
+        return
+      }
+    }
+  }
   findApplicationBundle(withIdentifier: speculidMacAppBundleIdentifier) { bundle in
 
-    guard let executableURL = bundle?.executableURL else {
+    
+    guard let bundle = bundle else {
       completion(BundleNotFoundError(identifier: identifier))
       return
     }
-
-    let arguments = [String](CommandLine.arguments[1...])
-    let sourceApplicationName = URL(fileURLWithPath: CommandLine.arguments[0]).lastPathComponent
-    let environment = ProcessInfo.processInfo.environment.merging(["sourceApplicationName": sourceApplicationName], uniquingKeysWith: { $1 })
-    let process = Process()
-    process.terminationHandler = {
-      completion(TerminationError(status: $0.terminationStatus, reason: $0.terminationReason))
-    }
-    process.executableURL = executableURL
-    process.arguments = arguments
-    process.environment = environment
-    process.standardOutput = FileHandle.standardOutput
-    process.standardError = FileHandle.standardError
-    process.launch()
+    runApplication(fromBundle: bundle, withArguments: nil, completion: completion)
+    
   }
 }
 
 DispatchQueue.main.async {
-  runApplication(withBundleIdentifier: speculidMacAppBundleIdentifier, completion: { error in
+  let arguments : [String]?
+  let applicationPathURL : URL?
+  if let index = CommandLine.arguments.firstIndex(of: "--useLocation") {
+    var tempArguments = CommandLine.arguments
+    applicationPathURL = URL(fileURLWithPath: CommandLine.arguments[index+1])
+    tempArguments.removeSubrange((index...index+1))
+    arguments = tempArguments
+  } else {
+    applicationPathURL = nil
+    arguments = nil
+  }
+  
+  runApplication(withBundleIdentifier: speculidMacAppBundleIdentifier, fromApplicationPathURL: applicationPathURL, withArguments: arguments , completion: { error in
     if (error as? BundleNotFoundError) != nil {
       #warning("TODO: Handle If Speculid Bundle Isn't Installed")
       print("It doesn't look like Speculid is installed.")
