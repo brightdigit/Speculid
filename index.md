@@ -141,14 +141,20 @@ Enter your email address [here](https://speculid.com#download) to request access
 
 Once you have unzipped the file, go ahead, and **copy the application *Speculid.App* to the Applications folder**.
 
+A command line tool is included in the application bundle. Copy the command line tool to your /bin/ folder:
+
+```base
+$ sudo copy /Applications/Speculid/Contents/SharedSupport/speculid /usr/local/bin
+```
+
 # Usage
 
-Speculid only supports being called through a command line terminal for now.  
+**Right now**, Speculid only supports being called through a command line terminal for now. Once you have copied the command to your */usr/local/bin* folder you should be able to access it easy.
 
 ```bash
-$ /Applications/Speculid/Contents/MacOS/Speculid --process <file>
-$ /Applications/Speculid/Contents/MacOS/Speculid --help
-$ /Applications/Speculid/Contents/MacOS/Speculid --version
+$ speculid --process <file>
+$ speculid --help
+$ speculid --version
 
 Options:
   --help     Show this screen.
