@@ -59,6 +59,9 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
         }
         error = Application.current.builder.build(document: document)
         return completed()
+      case .debugLocation:
+        self.outputStream.write(Bundle.main.bundleURL.absoluteString)
+        return completed()
       }
     }
     operation.completionBlock = {
