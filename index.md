@@ -144,7 +144,7 @@ Once you have unzipped the file, go ahead, and **copy the application *Speculid.
 A command line tool is included in the application bundle. Copy the command line tool to your /bin/ folder:
 
 ```base
-$ sudo copy /Applications/Speculid/Contents/SharedSupport/speculid /usr/local/bin
+$ sudo cp /Applications/Speculid/Contents/SharedSupport/speculid /usr/local/bin
 ```
 
 # Usage
