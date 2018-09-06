@@ -1,14 +1,20 @@
 
-# Created by https://www.gitignore.io/api/macos,swift,xcode,objective-c
+# Created by https://www.gitignore.io/api/macos,swift,xcode,objective-c,jekyll
+
+### Jekyll ###
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
 
 ### macOS ###
-*.DS_Store
+# General
+.DS_Store
 .AppleDouble
 .LSOverride
 
 # Icon must end with two \r
 Icon
-
 
 # Thumbnails
 ._*
@@ -37,12 +43,7 @@ Temporary Items
 ## Build generated
 build/
 DerivedData/
-Products/
 
-## Various settings
-# Xcode
-#
-build/
 ## Various settings
 *.pbxuser
 !default.pbxuser
@@ -56,7 +57,6 @@ xcuserdata/
 
 ## Other
 *.moved-aside
-*.xcuserstate
 *.xccheckout
 *.xcscmblueprint
 
@@ -66,10 +66,23 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
-# CocoaPods - Refactored to standalone file
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+# Pods/
+#
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# *.xcworkspace
 
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
 
-# Carthage - Refactored to standalone file
+Carthage/Build
 
 # fastlane
 #
@@ -80,7 +93,7 @@ xcuserdata/
 
 fastlane/report.xml
 fastlane/Preview.html
-fastlane/screenshots
+fastlane/screenshots/**/*.png
 fastlane/test_output
 
 # Code Injection
@@ -113,14 +126,9 @@ playground.xcworkspace
 #
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 # Packages/
+# Package.pins
+# Package.resolved
 .build/
-xcuserdata
-*.xccheckout
-*.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
 
 # CocoaPods
 #
@@ -129,39 +137,21 @@ DerivedData
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 Pods/
+#
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# *.xcworkspace
 
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
-Carthage/Build
-# Package.pins
-.build/
-
-# CocoaPods - Refactored to standalone file
-
-# Carthage - Refactored to standalone file
 
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
-# https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
-
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots
-fastlane/test_output
-__PROJECT_NAME__.framework.zip
-
-examples/*/*.xcassets/*/*.png
-examples/*/*.xcassets/*/*.pdf
-
-playgrounds
-
-.version
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
 
 
@@ -170,11 +160,11 @@ playgrounds
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-## Build generated
+## User settings
 
-## Various settings
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 
-## Other
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 
 ### Xcode Patch ###
 *.xcodeproj/*
@@ -183,7 +173,8 @@ playgrounds
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 
-# End of https://www.gitignore.io/api/macos,swift,xcode,objective-c
+
+# End of https://www.gitignore.io/api/macos,swift,xcode,objective-c,jekyll
 
 Products
 *tests/*.png
@@ -199,3 +190,10 @@ certs/*.p12
 
 *.toc.*
 *.orig.*
+
+examples/*/*.xcassets/*/*.png
+examples/*/*.xcassets/*/*.pdf
+
+playgrounds
+
+.version

@@ -39,8 +39,16 @@ open class Application: NSApplication, ApplicationProtocol {
       return nil
     }
 
-    guard let text = try? String(contentsOf: url) else {
+    guard let format = try? String(contentsOf: url) else {
       return nil
+    }
+
+    let text: String
+
+    if let sourceApplicationName = ProcessInfo.processInfo.environment["sourceApplicationName"] ?? Bundle.main.executableURL?.lastPathComponent {
+      text = format.replacingOccurrences(of: "$ speculid", with: "$ " + sourceApplicationName)
+    } else {
+      text = format
     }
 
     return text
