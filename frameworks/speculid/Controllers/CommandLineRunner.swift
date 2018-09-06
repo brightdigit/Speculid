@@ -41,6 +41,9 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
         } else {
           self.outputStream.write("\(Application.bundle.infoDictionary?["CFBundleShortVersionString"]) (\(Application.bundle.infoDictionary?["CFBundleVersion"]))")
         }
+        #if DEBUG
+          self.outputStream.write(" DEBUG")
+        #endif
         return completed()
       case let .process(url):
         let tryDocument: SpeculidDocumentProtocol?
@@ -55,6 +58,9 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
           return completed()
         }
         error = Application.current.builder.build(document: document)
+        return completed()
+      case .debugLocation:
+        self.outputStream.write(Bundle.main.bundleURL.absoluteString)
         return completed()
       }
     }

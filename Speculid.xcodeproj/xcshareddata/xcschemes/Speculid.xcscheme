@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B37C74721F8C5ADA00DF505B"
-               BuildableName = "Speculid.framework"
+               BuildableName = "SpeculidKit.framework"
                BlueprintName = "Speculid"
-               ReferencedContainer = "container:speculid.xcodeproj">
+               ReferencedContainer = "container:Speculid.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,7 +36,7 @@
                BlueprintIdentifier = "B3136E7D1F90FD2E0002B7AB"
                BuildableName = "SpeculidTests.xctest"
                BlueprintName = "SpeculidTests"
-               ReferencedContainer = "container:speculid.xcodeproj">
+               ReferencedContainer = "container:Speculid.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B37C74721F8C5ADA00DF505B"
-            BuildableName = "Speculid.framework"
+            BuildableName = "SpeculidKit.framework"
             BlueprintName = "Speculid"
-            ReferencedContainer = "container:speculid.xcodeproj">
+            ReferencedContainer = "container:Speculid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B37C74721F8C5ADA00DF505B"
-            BuildableName = "Speculid.framework"
+            BuildableName = "SpeculidKit.framework"
             BlueprintName = "Speculid"
-            ReferencedContainer = "container:speculid.xcodeproj">
+            ReferencedContainer = "container:Speculid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -84,9 +84,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B37C74721F8C5ADA00DF505B"
-            BuildableName = "Speculid.framework"
+            BuildableName = "SpeculidKit.framework"
             BlueprintName = "Speculid"
-            ReferencedContainer = "container:speculid.xcodeproj">
+            ReferencedContainer = "container:Speculid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
