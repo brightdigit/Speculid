@@ -1,6 +1,6 @@
 import Cocoa
 import CoreFoundation
-import Speculid
+import SpeculidKit
 
 @objc open class ServiceDelegate: NSObject, NSXPCListenerDelegate {
   public func listener(_: NSXPCListener, shouldAcceptNewConnection newConnection: NSXPCConnection) -> Bool {

@@ -1,32 +1,6 @@
-
+[{{ site.github.project_tagline }}](#){:class="html-only"}
 
 <!--ts-->
-   * [Introduction](#introduction)
-      * [Challenges Managing Graphic Assets](#challenges-managing-graphic-assets)
-         * [<a href="https://camo.githubusercontent.com/f84864b171328f85d86395a98401ce67c4a2f83c/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d656368616e69632e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/f84864b171328f85d86395a98401ce67c4a2f83c/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d656368616e69632e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/mechanic.svg" style="max-width:100\x;"></a> Manually Create Multiple Sizes](#-manually-create-multiple-sizes)
-         * [<a href="https://camo.githubusercontent.com/ce1d1e0deb43857c938016c58c7a008e043b9dfe/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f617263686976652e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/ce1d1e0deb43857c938016c58c7a008e043b9dfe/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f617263686976652e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/archive.svg" style="max-width:100\x;"></a> Store Generated Image Files](#-store-generated-image-files)
-         * [What If You Had...](#what-if-you-had)
-            * [Care-Free Graphic Management Where...](#care-free-graphic-management-where)
-      * [What Speculid Does](#what-speculid-does)
-         * [<a href="https://camo.githubusercontent.com/2abe35faea1b42b10a426f57fee564fd6fb60bc5/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d616368696e6572792e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/2abe35faea1b42b10a426f57fee564fd6fb60bc5/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f6d616368696e6572792e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/machinery.svg" style="max-width:100\x;"></a> Automate the process](#-automate-the-process)
-         * [<a href="https://camo.githubusercontent.com/f3de2019c718f4688351765967af24b99be59056/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f636c65616e2d636f64652e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/f3de2019c718f4688351765967af24b99be59056/68747470733a2f2f63646e2e7261776769742e636f6d2f62726967687464696769742f53706563756c69642f67682d70616765732f696d616765732f636c65616e2d636f64652e737667" height="25pt" data-canonical-src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/clean-code.svg" style="max-width:100\x;"></a> Tidy Your Repo](#-tidy-your-repo)
-         * [Features](#features)
-            * [Input File Types Supported](#input-file-types-supported)
-            * [Modifiers](#modifiers)
-            * [Output File Types Supported](#output-file-types-supported)
-   * [Download](#download)
-   * [Table of Contents](#table-of-contents)
-   * [Installation](#installation)
-   * [Usage](#usage)
-      * [File Format](#file-format)
-         * [Set set](#set-set)
-         * [Source source](#source-source)
-         * [Geometry <em>optional</em> geometry](#geometry-optional-geometry)
-         * [Background <em>optional</em> background](#background-optional-background)
-         * [Remove Alpha <em>optional</em>  remove-alpha](#remove-alpha-optional--remove-alpha)
-      * [Xcode Integration and Automation](#xcode-integration-and-automation)
-
-<!-- Added by: leo, at:  -->
 
 <!--te-->
 
@@ -42,18 +16,18 @@ That means developers need to:
 
 <section class="card half" markdown="1">
 
+![Multiple Images](/images/mechanic.svg){:height="100px"}{:class="html-only"}
 
-
-### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/mechanic.svg" height="25pt"/> Manually Create Multiple Sizes
+### <img class="readme-only" src="/images/mechanic.svg" height="25pt"/> Manually Create Multiple Sizes
 
 Each graphic must be **manually converted and resized several times for each update**.
 
 </section>
 <section class="card half" markdown="1">
 
+![Multiple Images](/images/archive.svg){:height="100px"}{:class="html-only"}
 
-
-### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/archive.svg" height="25pt"/> Store Generated Image Files
+### <img class="readme-only" src="/images/archive.svg" height="25pt"/> Store Generated Image Files
 
 An asset catalog image set will need a 1x, 2x, 3x of each graphic and **App Icons may need as many 30 different sizes**.
 
@@ -66,14 +40,14 @@ An asset catalog image set will need a 1x, 2x, 3x of each graphic and **App Icon
 
 <section class="card whole" markdown="1">
 
+![Multiple Images](/images/emoji.svg){:height="100px"}{:class="html-only"}
+![Multiple Images](/images/emoji.svg){:height="75px"}{:class="html-only"}
+![Multiple Images](/images/emoji.svg){:height="50px"}{:class="html-only"}
+![Multiple Images](/images/emoji.svg){:height="25px"}{:class="html-only"}
+![Multiple Images](/images/emoji.svg){:height="12px"}{:class="html-only"}
+![Multiple Images](/images/emoji.svg){:height="6px"}{:class="html-only"}
 
-
-
-
-
-
-
-<img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/emoji.svg" height="100px"/><img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/emoji.svg" height="75px"/><img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/emoji.svg" height="50px"/><img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/emoji.svg" height="25px"/><img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/emoji.svg" height="12px"/><img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/emoji.svg" height="6px"/>
+<img class="readme-only" src="/images/emoji.svg" height="100px"/><img class="readme-only" src="/images/emoji.svg" height="75px"/><img class="readme-only" src="/images/emoji.svg" height="50px"/><img class="readme-only" src="/images/emoji.svg" height="25px"/><img class="readme-only" src="/images/emoji.svg" height="12px"/><img class="readme-only" src="/images/emoji.svg" height="6px"/>
 
 #### Care-Free Graphic Management Where...
 
@@ -88,23 +62,23 @@ An asset catalog image set will need a 1x, 2x, 3x of each graphic and **App Icon
 
 **Speculid** links a single graphic file to an Image Set or App Icon and automatically renders different resolutions, file types, and sizes for all the image specifications required.
 
-![diagram](https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/Diagram.png)
+![diagram](/images/Diagram.png)
 
 <section class="cards" markdown="1">
 <section class="card half" markdown="1">
 
+![Multiple Images](/images/machinery.svg){:height="100px"}{:class="html-only"}
 
-
-### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/machinery.svg" height="25pt"/> Automate the process 
+### <img class="readme-only" src="/images/machinery.svg" height="25pt"/> Automate the process 
 
 Speculid automates the process so **only one graphic file is needed**. Add Speculid to your build process and now the **conversions and resizing are automated** as part of the build process. Now there is no need for anyone to manually create each size for each device every time.
 
 </section>
 <section class="card half" markdown="1">
 
+![Multiple Images](/images/clean-code.svg){:height="100px"}{:class="html-only"}
 
-
-### <img class="readme-only" src="https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/clean-code.svg" height="25pt"/> Tidy Your Repo
+### <img class="readme-only" src="/images/clean-code.svg" height="25pt"/> Tidy Your Repo
 
 **Reduce the size of your repository** by including a single vector or raster image and ignore all your automated png and pdf files at compile. That means **faster remote pulls, less redundancy, and complete syncronization between sizes.**
 
@@ -137,7 +111,20 @@ This means **Speuclid** can...
 
 # Download
 
-
+<!-- HTML-ONLY BEGIN -->
+<section class="signup-form-container">
+  <div>If you are interested in <strong>downloading the latest version <em>{{ site.github.releases[0].name  }}</em><br> sign up below</strong> to get the latest version.</div>
+<form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
+  <div class="row">
+  <input type="email" placeholder="Your Email Address" value="" name="EMAIL" id="mce-EMAIL" required>
+  <input type="submit" value="Sign Up">
+  </div>
+</form>
+<div class="message">
+  &nbsp;
+</div>
+</section>
+<!-- HTML-ONLY END -->
 
 <div class="readme-only" markdown="1">
 
@@ -147,7 +134,8 @@ Enter your email address [here](https://speculid.com#download) to request access
 
 # Table of Contents
 
-
+* TOC
+{:toc}
 
 # Installation
 
@@ -196,7 +184,7 @@ or
 
 ### Set `set`
 
-![Image Set Examples from Xcode](https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/SetExample.png)
+![Image Set Examples from Xcode](/images/SetExample.png){:height="240"}
 
 A set is an image set or app icon used by Xcode.
 
@@ -229,7 +217,7 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
 1. **Create the speculid file** and add it to your project folder as well as your source graphic files. 
 
-    ![Xcode Target Membership](https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/XcodeTargetMembership.png)
+    ![Xcode Target Membership](/images/XcodeTargetMembership.png)
 
     * *Note: you don't need to add these files to any target membership*
 
@@ -281,11 +269,11 @@ With **Speculid**, the process of building image assets can be automated in **Xc
     done
     wait
     ```
-    ![Xcode Build Phase Run Script](https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/XcodeBuildPhaseRunScript.png)
+    ![Xcode Build Phase Run Script](/images/XcodeBuildPhaseRunScript.png)
 
 3. **Build the application.** This will create the graphics which you will use in your asset image set or app icon.
 
-    ![Xcode Unorganized Assets](https://cdn.rawgit.com/brightdigit/Speculid/gh-pages/images/XcodeUnorganizedAssets.png)
+    ![Xcode Unorganized Assets](/images/XcodeUnorganizedAssets.png)
 
 4. **After the first build**, drag the images to the correct asset slot. Each rendered image file is suffixed denoting its slot.
 

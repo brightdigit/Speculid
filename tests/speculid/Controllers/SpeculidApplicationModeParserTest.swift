@@ -1,4 +1,4 @@
-@testable import Speculid
+@testable import SpeculidKit
 import XCTest
 
 private let _alphanumericcharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
