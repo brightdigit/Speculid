@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SOURCE=gh-pages/README.md 
+SOURCE=index.md 
 DESTINATION=README.md
 
 cat $SOURCE | \

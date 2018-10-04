@@ -27,6 +27,8 @@ public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtoc
         } else {
           return .command(.unknown(arguments))
         }
+      } else if arguments.contains("--debugLocation") {
+        return .command(.debugLocation)
       } else {
         return .command(.unknown(arguments))
       }
