@@ -62,7 +62,7 @@ open class Application: NSApplication, ApplicationProtocol {
   open private(set) var builder: SpeculidBuilderProtocol!
 
   open let statusItemProvider: StatusItemProviderProtocol
-  open let remoteObjectInterfaceProvider: ServiceObjectInterfaceProvider
+  open let remoteObjectInterfaceProvider: RemoteObjectInterfaceProviderProtocol
   open let regularExpressionBuilder: RegularExpressionSetBuilderProtocol
   open let configurationBuilder: SpeculidConfigurationBuilderProtocol
   open let jsonDecoder: JSONDecoder
