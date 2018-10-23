@@ -1,4 +1,3 @@
 import Foundation
 
-public protocol SpeculidArgumentsProtocol {
-}
+public protocol SpeculidArgumentsProtocol {}

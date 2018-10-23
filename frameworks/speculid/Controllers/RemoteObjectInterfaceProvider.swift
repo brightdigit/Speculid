@@ -1,7 +1,6 @@
 import Foundation
 
-public struct NoServiceReturnedError: Error {
-}
+public struct NoServiceReturnedError: Error {}
 
 public struct RemoteObjectInterfaceProvider: RemoteObjectInterfaceProviderProtocol {
   public func remoteObjectProxyWithHandler(_ handler: (Result<ServiceProtocol>) -> Void) {

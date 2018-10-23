@@ -114,6 +114,10 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--version"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--install"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
