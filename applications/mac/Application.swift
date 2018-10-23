@@ -1,5 +1,4 @@
 import Cocoa
 import SpeculidKit
 
-open class Application: SpeculidKit.Application {
-}
+open class Application: SpeculidKit.Application {}
