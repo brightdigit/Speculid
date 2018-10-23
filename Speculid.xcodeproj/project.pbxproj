@@ -308,10 +308,6 @@
 		B34188911F9A479900C5F356 /* SpeculidApplicationModeParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34188901F9A479900C5F356 /* SpeculidApplicationModeParserTest.swift */; };
 		B34B52C8217E5D700080E6DC /* InstallType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B52C7217E5D700080E6DC /* InstallType.swift */; };
 		B34B52CA217E5FC40080E6DC /* CommandLineInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B52C9217E5FC40080E6DC /* CommandLineInstaller.swift */; };
-		B34B52D4217E69CE0080E6DC /* Speculid_Mac_Installer.m in Sources */ = {isa = PBXBuildFile; fileRef = B34B52D3217E69CE0080E6DC /* Speculid_Mac_Installer.m */; };
-		B34B52D6217E69CE0080E6DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B34B52D5217E69CE0080E6DC /* main.m */; };
-		B34B52DA217E69CE0080E6DC /* Speculid-Mac-Installer.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = B34B52CF217E69CE0080E6DC /* Speculid-Mac-Installer.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B34B52DF217EB2670080E6DC /* Speculid-Mac-Installer.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = B34B52CF217E69CE0080E6DC /* Speculid-Mac-Installer.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B34E82FB1F8FD4EF0032268F /* ImageFileFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E82FF1F8FD6860032268F /* ImageFileProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E83041F8FD90C0032268F /* GlibError.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E83021F8FD90C0032268F /* GlibError.h */; };
@@ -1016,13 +1012,6 @@
 			remoteGlobalIDString = B37C74881F8C5B5C00DF505B;
 			remoteInfo = CairoSVG;
 		};
-		B34B52D8217E69CE0080E6DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B37C74361F8C58F300DF505B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B34B52CE217E69CE0080E6DC;
-			remoteInfo = "Speculid-Mac-Installer";
-		};
 		B37C745C1F8C590D00DF505B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B37C74361F8C58F300DF505B /* Project object */;
@@ -1068,10 +1057,9 @@
 		B34B52DE217EB2530080E6DC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
+			dstPath = Library/PrivilegedHelperTools;
 			dstSubfolderSpec = 1;
 			files = (
-				B34B52DF217EB2670080E6DC /* Speculid-Mac-Installer.xpc in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1082,7 +1070,6 @@
 			dstSubfolderSpec = 16;
 			files = (
 				B37C745E1F8C590D00DF505B /* Speculid-Mac-XPC.xpc in Embed XPC Services */,
-				B34B52DA217E69CE0080E6DC /* Speculid-Mac-Installer.xpc in Embed XPC Services */,
 			);
 			name = "Embed XPC Services";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1563,12 +1550,6 @@
 		B34188901F9A479900C5F356 /* SpeculidApplicationModeParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplicationModeParserTest.swift; sourceTree = "<group>"; };
 		B34B52C7217E5D700080E6DC /* InstallType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallType.swift; sourceTree = "<group>"; };
 		B34B52C9217E5FC40080E6DC /* CommandLineInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineInstaller.swift; sourceTree = "<group>"; };
-		B34B52CF217E69CE0080E6DC /* Speculid-Mac-Installer.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = "Speculid-Mac-Installer.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B34B52D1217E69CE0080E6DC /* Speculid_Mac_InstallerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid_Mac_InstallerProtocol.h; sourceTree = "<group>"; };
-		B34B52D2217E69CE0080E6DC /* Speculid_Mac_Installer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid_Mac_Installer.h; sourceTree = "<group>"; };
-		B34B52D3217E69CE0080E6DC /* Speculid_Mac_Installer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Speculid_Mac_Installer.m; sourceTree = "<group>"; };
-		B34B52D5217E69CE0080E6DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B34B52D7217E69CE0080E6DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileFormat.h; sourceTree = "<group>"; };
 		B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileProtocol.h; sourceTree = "<group>"; };
 		B34E83021F8FD90C0032268F /* GlibError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlibError.h; sourceTree = "<group>"; };
@@ -3995,13 +3976,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B34B52CC217E69CE0080E6DC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B37C743B1F8C58F300DF505B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -4801,18 +4775,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		B34B52D0217E69CE0080E6DC /* Speculid-Mac-Installer */ = {
-			isa = PBXGroup;
-			children = (
-				B34B52D1217E69CE0080E6DC /* Speculid_Mac_InstallerProtocol.h */,
-				B34B52D2217E69CE0080E6DC /* Speculid_Mac_Installer.h */,
-				B34B52D3217E69CE0080E6DC /* Speculid_Mac_Installer.m */,
-				B34B52D5217E69CE0080E6DC /* main.m */,
-				B34B52D7217E69CE0080E6DC /* Info.plist */,
-			);
-			path = "Speculid-Mac-Installer";
-			sourceTree = "<group>";
-		};
 		B37C74351F8C58F300DF505B = {
 			isa = PBXGroup;
 			children = (
@@ -4825,7 +4787,6 @@
 				B3136E6A1F90FCD90002B7AB /* tests */,
 				B37C74401F8C58F300DF505B /* applications */,
 				B3136DB51F90E23E0002B7AB /* frameworks */,
-				B34B52D0217E69CE0080E6DC /* Speculid-Mac-Installer */,
 				B37C743F1F8C58F300DF505B /* Products */,
 				B37C74801F8C5AE200DF505B /* Frameworks */,
 				ACD4DBE14098687CAAFBB2FA /* Pods */,
@@ -4843,7 +4804,6 @@
 				B3136E7E1F90FD2E0002B7AB /* SpeculidTests.xctest */,
 				B3136E8D1F90FD3D0002B7AB /* CairoSVGTests.xctest */,
 				B3242E97213DBE6C0063037C /* speculid */,
-				B34B52CF217E69CE0080E6DC /* Speculid-Mac-Installer.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -14101,23 +14061,6 @@
 			productReference = B3242E97213DBE6C0063037C /* speculid */;
 			productType = "com.apple.product-type.tool";
 		};
-		B34B52CE217E69CE0080E6DC /* Speculid-Mac-Installer */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B34B52DB217E69CE0080E6DC /* Build configuration list for PBXNativeTarget "Speculid-Mac-Installer" */;
-			buildPhases = (
-				B34B52CB217E69CE0080E6DC /* Sources */,
-				B34B52CC217E69CE0080E6DC /* Frameworks */,
-				B34B52CD217E69CE0080E6DC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Speculid-Mac-Installer";
-			productName = "Speculid-Mac-Installer";
-			productReference = B34B52CF217E69CE0080E6DC /* Speculid-Mac-Installer.xpc */;
-			productType = "com.apple.product-type.xpc-service";
-		};
 		B37C743D1F8C58F300DF505B /* Speculid-Mac-App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B37C744C1F8C58F300DF505B /* Build configuration list for PBXNativeTarget "Speculid-Mac-App" */;
@@ -14140,7 +14083,6 @@
 				B37C745D1F8C590D00DF505B /* PBXTargetDependency */,
 				B37C74791F8C5ADA00DF505B /* PBXTargetDependency */,
 				B37C748F1F8C5B5C00DF505B /* PBXTargetDependency */,
-				B34B52D9217E69CE0080E6DC /* PBXTargetDependency */,
 			);
 			name = "Speculid-Mac-App";
 			productName = "Speculid-Mac-App";
@@ -14237,10 +14179,6 @@
 						CreatedOnToolsVersion = 10.0;
 						ProvisioningStyle = Automatic;
 					};
-					B34B52CE217E69CE0080E6DC = {
-						CreatedOnToolsVersion = 10.0;
-						ProvisioningStyle = Automatic;
-					};
 					B37C743D1F8C58F300DF505B = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -14288,7 +14226,6 @@
 				B3136E7D1F90FD2E0002B7AB /* SpeculidTests */,
 				B3136E8C1F90FD3D0002B7AB /* CairoSVGTests */,
 				B3242E96213DBE6C0063037C /* Speculid-Mac-Cmd */,
-				B34B52CE217E69CE0080E6DC /* Speculid-Mac-Installer */,
 			);
 		};
 /* End PBXProject section */
@@ -14310,13 +14247,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B3136E8B1F90FD3D0002B7AB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B34B52CD217E69CE0080E6DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -14671,15 +14601,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B34B52CB217E69CE0080E6DC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B34B52D6217E69CE0080E6DC /* main.m in Sources */,
-				B34B52D4217E69CE0080E6DC /* Speculid_Mac_Installer.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B37C743A1F8C58F300DF505B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -14821,11 +14742,6 @@
 			isa = PBXTargetDependency;
 			target = B37C74881F8C5B5C00DF505B /* CairoSVG */;
 			targetProxy = B3136E931F90FD3D0002B7AB /* PBXContainerItemProxy */;
-		};
-		B34B52D9217E69CE0080E6DC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B34B52CE217E69CE0080E6DC /* Speculid-Mac-Installer */;
-			targetProxy = B34B52D8217E69CE0080E6DC /* PBXContainerItemProxy */;
 		};
 		B37C745D1F8C590D00DF505B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -14981,41 +14897,6 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = speculid;
 				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		B34B52DC217E69CE0080E6DC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = MLT7M394S7;
-				INFOPLIST_FILE = "Speculid-Mac-Installer/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-Installer";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		B34B52DD217E69CE0080E6DC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = MLT7M394S7;
-				INFOPLIST_FILE = "Speculid-Mac-Installer/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-Installer";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -15417,15 +15298,6 @@
 			buildConfigurations = (
 				B3242E9B213DBE6C0063037C /* Debug */,
 				B3242E9C213DBE6C0063037C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B34B52DB217E69CE0080E6DC /* Build configuration list for PBXNativeTarget "Speculid-Mac-Installer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B34B52DC217E69CE0080E6DC /* Debug */,
-				B34B52DD217E69CE0080E6DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
