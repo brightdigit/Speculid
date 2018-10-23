@@ -30,5 +30,9 @@
 	<string>Copyright © 2017 Bright Digit, LLC. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
 	<string>$(TARGET_NAME:c99extidentifier).Application</string>
+	<key>SMAuthorizedClients</key>
+	<array>
+		<string>com.brightdigit.Speculid-Mac-Installer</string>
+	</array>
 </dict>
 </plist>
