@@ -1558,6 +1558,7 @@
 		B323FC12217FB5F500D95E9C /* ServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
 		B3242E97213DBE6C0063037C /* speculid */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = speculid; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3242E99213DBE6C0063037C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B326F24821810F580072D652 /* CodeSignUpdate.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = CodeSignUpdate.sh; sourceTree = "<group>"; };
 		B32D69EA1F9EC5CA00C21C8C /* Speculid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speculid.entitlements; sourceTree = "<group>"; };
 		B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemProviderProtocol.swift; sourceTree = "<group>"; };
 		B33A533B1F954F8C00E74800 /* RemoteObjectInterfaceProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObjectInterfaceProviderProtocol.swift; sourceTree = "<group>"; };
@@ -4776,6 +4777,7 @@
 		B3220A4621154D1A00047BF6 /* scripts */ = {
 			isa = PBXGroup;
 			children = (
+				B326F24821810F580072D652 /* CodeSignUpdate.sh */,
 				B3220A4721154D1A00047BF6 /* fix_dylibs.sh */,
 				B3220A4821154D1A00047BF6 /* codesign-framework.sh */,
 				B3220A4921154D1A00047BF6 /* decrypt-certs.sh */,
