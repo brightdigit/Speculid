@@ -3,7 +3,7 @@ import Security
 import ServiceManagement
 
 public struct CommandLineInstaller {
-  public static func start(_ completed: () -> Void) {
+  public static func start(_ completed: @escaping () -> Void) {
     var authorizationRef: AuthorizationRef?
 
     let status = AuthorizationCreate(nil, nil, AuthorizationFlags(rawValue: 0), &authorizationRef)
@@ -35,5 +35,15 @@ public struct CommandLineInstaller {
         completed()
       }
     }
+  }
+}
+
+extension CommandLineInstaller {
+  public static func startSync() {
+    let semaphore = DispatchSemaphore(value: 0)
+    start {
+      semaphore.signal()
+    }
+    semaphore.wait(timeout: .now() + 100)
   }
 }

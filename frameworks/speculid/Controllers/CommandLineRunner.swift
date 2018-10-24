@@ -63,7 +63,8 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
         return completed()
       case let .install(type):
         if type.contains(.command) {
-          CommandLineInstaller.start(completed)
+          CommandLineInstaller.startSync()
+          return completed()
         } else {
           return completed()
         }
