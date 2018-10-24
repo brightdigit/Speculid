@@ -1552,7 +1552,7 @@
 		B3220A4A21154D1A00047BF6 /* shasum.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = shasum.sh; sourceTree = "<group>"; };
 		B3220A4B21154D1A00047BF6 /* build-keychain.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-keychain.sh"; sourceTree = "<group>"; };
 		B323FC01217FB2C300D95E9C /* Speculid-Mac-Installer.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = "Speculid-Mac-Installer.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B323FC09217FB2C400D95E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B323FC09217FB2C400D95E9C /* Speculid-Mac-Installer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Speculid-Mac-Installer-Info.plist"; sourceTree = "<group>"; };
 		B323FC0E217FB44400D95E9C /* Speculid-Mac-Installer-Launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Speculid-Mac-Installer-Launchd.plist"; sourceTree = "<group>"; };
 		B323FC10217FB5CB00D95E9C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B323FC12217FB5F500D95E9C /* ServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
@@ -4790,7 +4790,7 @@
 		B323FC02217FB2C400D95E9C /* Speculid-Installer */ = {
 			isa = PBXGroup;
 			children = (
-				B323FC09217FB2C400D95E9C /* Info.plist */,
+				B323FC09217FB2C400D95E9C /* Speculid-Mac-Installer-Info.plist */,
 				B323FC0E217FB44400D95E9C /* Speculid-Mac-Installer-Launchd.plist */,
 				B323FC10217FB5CB00D95E9C /* main.swift */,
 				B323FC12217FB5F500D95E9C /* ServiceDelegate.swift */,
@@ -15008,10 +15008,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
-				INFOPLIST_FILE = "Speculid-Installer/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Speculid-Installer/Speculid-Mac-Installer-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MTL_FAST_MATH = YES;				
+        OTHER_LDFLAGS = (
+          "-sectcreate",
+          __TEXT,
+          __info_plist,
+          "\"$(SRCROOT)/Speculid-Installer/Speculid-Mac-Installer-Info.plist\"",
+          "-sectcreate",
+          __TEXT,
+          __launchd_plist,
+          "\"$(SRCROOT)/Speculid-Installer/Speculid-Mac-Installer-Launchd.plist\"",
+        );
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-Installer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -15030,9 +15040,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
-				INFOPLIST_FILE = "Speculid-Installer/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Speculid-Installer/Speculid-Mac-Installer-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MTL_FAST_MATH = YES;
+				MTL_FAST_MATH = YES;				  
+        OTHER_LDFLAGS = (
+          "-sectcreate",
+          __TEXT,
+          __info_plist,
+          "\"$(SRCROOT)/Speculid-Installer/Speculid-Mac-Installer-Info.plist\"",
+          "-sectcreate",
+          __TEXT,
+          __launchd_plist,
+          "\"$(SRCROOT)/Speculid-Installer/Speculid-Mac-Installer-Launchd.plist\"",
+        );
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-Installer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
