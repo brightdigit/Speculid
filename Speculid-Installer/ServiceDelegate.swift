@@ -1,16 +1,10 @@
 import Cocoa
 import CoreFoundation
 
-@objc public protocol InstallerProtocol {
-  func hello(name: String) -> String
-}
-
 public class Installer : NSObject, InstallerProtocol {
-  public func hello(name: String) -> String {
-    return ["hello", name].joined(separator:" ")
+  public func hello(name: String, _ completed: (String) -> Void) {
+    completed(["hello", name].joined(separator:" "))
   }
-  
-  
 }
 
 @objc open class ServiceDelegate: NSObject, NSXPCListenerDelegate {

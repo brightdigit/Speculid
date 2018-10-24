@@ -18,6 +18,22 @@ public struct CommandLineInstaller {
     let result = SMJobBless(kSMDomainSystemLaunchd, "com.brightdigit.Speculid-Mac-Installer" as CFString, authorizationRef, &cfError)
     debugPrint(result)
     debugPrint(cfError?.takeRetainedValue())
-    completed()
+
+    Application.current.withInstaller {
+      result in
+
+      switch result {
+      case let .success(installer):
+        installer.hello(name: "Foo", { value in
+
+          debugPrint(value)
+          completed()
+        })
+
+      case let .error(error):
+        debugPrint(error)
+        completed()
+      }
+    }
   }
 }
