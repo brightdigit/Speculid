@@ -37,7 +37,7 @@
 	<key>SMPrivilegedExecutables</key>
 	<dict>
 		<key>com.brightdigit.Speculid-Mac-Installer</key>
-		<string>identifier com.brightdigit.Speculid-Mac-Installer and certificate leaf[subject.CN] = "Mac Developer: Leo Dion (5VZ4KT69B9)"</string>
+		<string>identifier com.brightdigit.Speculid-Mac-Installer</string>
 	</dict>
 </dict>
 </plist>
