@@ -1,8 +1,8 @@
 import Cocoa
 import CoreFoundation
 
-public class Installer : NSObject, InstallerProtocol {
-  public func hello(name: String, _ completed: (String) -> Void) {
+public class Installer: NSObject, InstallerProtocol {
+  public func hello(name: String, _ completed: @escaping (String) -> Void) {
     completed(["hello", name].joined(separator:" "))
   }
 }

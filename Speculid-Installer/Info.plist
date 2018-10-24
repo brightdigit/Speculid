@@ -24,7 +24,7 @@
 	<string>Copyright © 2018 Bright Digit, LLC. All rights reserved.</string>
 	<key>SMAuthorizedClients</key>
 	<array>
-		<string>identifier com.brightdigit.Speculid-Mac-App</string>
+		<string>identifier "com.brightdigit.Speculid-Mac-App" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Leo Dion (5VZ4KT69B9)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
 	</array>
 	<key>XPCService</key>
 	<dict>

@@ -14091,6 +14091,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B323FC0A217FB2C400D95E9C /* Build configuration list for PBXNativeTarget "Speculid-Mac-Installer" */;
 			buildPhases = (
+				B326F2492181111D0072D652 /* Update CodeSign */,
 				B323FBFD217FB2C300D95E9C /* Sources */,
 				B323FBFE217FB2C300D95E9C /* Frameworks */,
 				B323FBFF217FB2C300D95E9C /* Resources */,
@@ -14125,6 +14126,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B37C744C1F8C58F300DF505B /* Build configuration list for PBXNativeTarget "Speculid-Mac-App" */;
 			buildPhases = (
+				B326F24A2181113D0072D652 /* ShellScript */,
 				6B0E6A3126F4611E46C09D7C /* [CP] Check Pods Manifest.lock */,
 				B3D329F91F9A55A20042B46F /* swiftformat */,
 				B37C743A1F8C58F300DF505B /* Sources */,
@@ -14516,6 +14518,41 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
+		B326F2492181111D0072D652 /* Update CodeSign */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Update CodeSign";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}\"/scripts/CodeSignUpdate.sh\n";
+		};
+		B326F24A2181113D0072D652 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}\"/scripts/CodeSignUpdate.sh\n\n";
 		};
 		B32D69ED1F9ED4A600C21C8C /* Codesign Dynamic Libraries */ = {
 			isa = PBXShellScriptBuildPhase;
