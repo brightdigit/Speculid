@@ -298,7 +298,7 @@
 		B31BEAFE1F9626AC00496E7A /* RegularExpressionSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */; };
 		B31BEB001F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */; };
 		B323FC0D217FB34900D95E9C /* Speculid-Mac-Installer.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = B323FC01217FB2C300D95E9C /* Speculid-Mac-Installer.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B323FC0F217FB44400D95E9C /* launchd.plist in Resources */ = {isa = PBXBuildFile; fileRef = B323FC0E217FB44400D95E9C /* launchd.plist */; };
+		B323FC0F217FB44400D95E9C /* Speculid-Mac-Installer-Launchd.plist in Resources */ = {isa = PBXBuildFile; fileRef = B323FC0E217FB44400D95E9C /* Speculid-Mac-Installer-Launchd.plist */; };
 		B323FC11217FB5CB00D95E9C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B323FC10217FB5CB00D95E9C /* main.swift */; };
 		B323FC13217FB5F500D95E9C /* ServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B323FC12217FB5F500D95E9C /* ServiceDelegate.swift */; };
 		B3242E9A213DBE6C0063037C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3242E99213DBE6C0063037C /* main.swift */; };
@@ -991,6 +991,8 @@
 		B3F80CAE20E586A000030497 /* libharfbuzz-icu.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8096B20E585E800030497 /* libharfbuzz-icu.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3F80CAF20E586A000030497 /* libharfbuzz-subset.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8096C20E585E800030497 /* libharfbuzz-subset.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3FAD3EB1FA564D0004381A7 /* VersionMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */; };
+		B3FDF6452180A3FF00455A43 /* InstallerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDF6442180A3FF00455A43 /* InstallerProtocol.swift */; };
+		B3FDF6462180A3FF00455A43 /* InstallerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDF6442180A3FF00455A43 /* InstallerProtocol.swift */; };
 		CBE9EF18228D2DADFC9D264F /* Pods_Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */; };
 /* End PBXBuildFile section */
 
@@ -1550,12 +1552,8 @@
 		B3220A4A21154D1A00047BF6 /* shasum.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = shasum.sh; sourceTree = "<group>"; };
 		B3220A4B21154D1A00047BF6 /* build-keychain.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-keychain.sh"; sourceTree = "<group>"; };
 		B323FC01217FB2C300D95E9C /* Speculid-Mac-Installer.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = "Speculid-Mac-Installer.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B323FC03217FB2C400D95E9C /* Speculid_InstallerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid_InstallerProtocol.h; sourceTree = "<group>"; };
-		B323FC04217FB2C400D95E9C /* Speculid_Installer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid_Installer.h; sourceTree = "<group>"; };
-		B323FC05217FB2C400D95E9C /* Speculid_Installer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Speculid_Installer.m; sourceTree = "<group>"; };
-		B323FC07217FB2C400D95E9C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B323FC09217FB2C400D95E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B323FC0E217FB44400D95E9C /* launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = launchd.plist; sourceTree = "<group>"; };
+		B323FC0E217FB44400D95E9C /* Speculid-Mac-Installer-Launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Speculid-Mac-Installer-Launchd.plist"; sourceTree = "<group>"; };
 		B323FC10217FB5CB00D95E9C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B323FC12217FB5F500D95E9C /* ServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
 		B3242E97213DBE6C0063037C /* speculid */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = speculid; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3953,6 +3951,7 @@
 		B3F809C820E585E900030497 /* api-index-0-9-30.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-30.html"; sourceTree = "<group>"; };
 		B3F809CA20E585E900030497 /* HarfBuzz-0.0.gir */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "HarfBuzz-0.0.gir"; sourceTree = "<group>"; };
 		B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionMenuItem.swift; sourceTree = "<group>"; };
+		B3FDF6442180A3FF00455A43 /* InstallerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallerProtocol.swift; sourceTree = "<group>"; };
 		C743CA092B2436D579EB1965 /* Pods-Speculid-Mac-XPC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-XPC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-XPC/Pods-Speculid-Mac-XPC.debug.xcconfig"; sourceTree = "<group>"; };
 		C7A962F08D51F2247E1ADBEF /* Pods-SpeculidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeculidTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests.release.xcconfig"; sourceTree = "<group>"; };
 		DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speculid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4308,6 +4307,7 @@
 				B33A53391F954E4B00E74800 /* StatusItemProviderProtocol.swift */,
 				B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */,
 				B3CB156F2113AA8C00A6DC5C /* VersionProvider.swift */,
+				B3FDF6442180A3FF00455A43 /* InstallerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -4788,12 +4788,8 @@
 		B323FC02217FB2C400D95E9C /* Speculid-Installer */ = {
 			isa = PBXGroup;
 			children = (
-				B323FC03217FB2C400D95E9C /* Speculid_InstallerProtocol.h */,
-				B323FC04217FB2C400D95E9C /* Speculid_Installer.h */,
-				B323FC05217FB2C400D95E9C /* Speculid_Installer.m */,
-				B323FC07217FB2C400D95E9C /* main.m */,
 				B323FC09217FB2C400D95E9C /* Info.plist */,
-				B323FC0E217FB44400D95E9C /* launchd.plist */,
+				B323FC0E217FB44400D95E9C /* Speculid-Mac-Installer-Launchd.plist */,
 				B323FC10217FB5CB00D95E9C /* main.swift */,
 				B323FC12217FB5F500D95E9C /* ServiceDelegate.swift */,
 			);
@@ -14326,7 +14322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B323FC0F217FB44400D95E9C /* launchd.plist in Resources */,
+				B323FC0F217FB44400D95E9C /* Speculid-Mac-Installer-Launchd.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -14676,6 +14672,7 @@
 			files = (
 				B323FC13217FB5F500D95E9C /* ServiceDelegate.swift in Sources */,
 				B323FC11217FB5CB00D95E9C /* main.swift in Sources */,
+				B3FDF6462180A3FF00455A43 /* InstallerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -14755,6 +14752,7 @@
 				B3FAD3EB1FA564D0004381A7 /* VersionMenuItem.swift in Sources */,
 				B3D32A061F9A5FEE0042B46F /* FileHandle.swift in Sources */,
 				B3136DD51F90E45F0002B7AB /* ServiceProtocol.swift in Sources */,
+				B3FDF6452180A3FF00455A43 /* InstallerProtocol.swift in Sources */,
 				B3136E4C1F90F73B0002B7AB /* AnalyticsEventProtocol.swift in Sources */,
 				B31BEB001F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift in Sources */,
 				B3E9A9031FB4DDE400FD8E7A /* Version.swift in Sources */,
@@ -14967,6 +14965,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -14976,6 +14975,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-Installer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -14987,6 +14987,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -14995,6 +14996,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-Installer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 			};
