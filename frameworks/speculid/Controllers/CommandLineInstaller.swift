@@ -6,13 +6,14 @@ public struct CommandLineInstaller {
   public static func start(_ completed: @escaping () -> Void) {
     var authorizationRef: AuthorizationRef?
 
-    let status = AuthorizationCreate(nil, nil, AuthorizationFlags(rawValue: 0), &authorizationRef)
-    var items = AuthorizationItem(name: kAuthorizationRightExecute, valueLength: 0, value: nil, flags: 0)
+    //let status = AuthorizationCreate(nil, nil, AuthorizationFlags(rawValue: 0), &authorizationRef)
+    var items = AuthorizationItem(name: kSMRightBlessPrivilegedHelper, valueLength: 0, value: nil, flags: 0)
 
     var rights = AuthorizationRights(count: 1, items: &items)
     let flags: AuthorizationFlags = [.interactionAllowed, .extendRights, .preAuthorize]
 
-    let err = AuthorizationCopyRights(authorizationRef!, &rights, nil, flags, nil)
+    //let err = AuthorizationCopyRights(authorizationRef!, &rights, nil, flags, nil)
+    
 
     var cfError: Unmanaged<CFError>?
     let result = SMJobBless(kSMDomainSystemLaunchd, "com.brightdigit.Speculid-Mac-Installer" as CFString, authorizationRef, &cfError)
