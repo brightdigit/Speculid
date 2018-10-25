@@ -33,4 +33,6 @@ public class Installer: NSObject, InstallerProtocol {
     newConnection.resume()
     return true
   }
+  
+  
 }
