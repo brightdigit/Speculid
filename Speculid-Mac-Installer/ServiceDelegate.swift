@@ -2,9 +2,54 @@ import Cocoa
 import CoreFoundation
 
 public class Installer: NSObject, InstallerProtocol {
+  public func installCommandLineTool(fromBundleURL bundleURL: URL, _ completed: @escaping (NSError?) -> Void) {
+    guard let bundle = Bundle(url: bundleURL) else {
+      fatalError()
+    }
+    
+    guard let speculidCommandURL = bundle.sharedSupportURL?.appendingPathComponent("speculid") else {
+      fatalError()
+    }
+    
+    guard FileManager.default.fileExists(atPath: speculidCommandURL.path) else {
+      fatalError()
+    }
+    
+    let binDirectoryURL = URL(fileURLWithPath: "/usr/local/bin", isDirectory: true)
+    
+    var isDirectory : ObjCBool = false
+    
+    let binDirExists = FileManager.default.fileExists(atPath: binDirectoryURL.path, isDirectory: &isDirectory)
+    
+    guard isDirectory.boolValue && binDirExists else {
+      fatalError()
+    }
+    
+    let destURL = binDirectoryURL.appendingPathComponent(speculidCommandURL.lastPathComponent)
+    
+    var error : Error?
+    do {
+      try FileManager.default.copyItem(at: speculidCommandURL, to: destURL)
+    } catch let err {
+      error = err
+    }
+  }
+  
+  public func installCommandLineTool(fromBundleURL bundleURL: URL) {
+    guard let bundle = Bundle(url: bundleURL) else {
+      return
+    }
+    
+    guard let executableURL = bundle.url(forAuxiliaryExecutable: "speculid") else {
+      return
+    }
+  }
+  
   public func hello(name: String, _ completed: @escaping (String) -> Void) {
     completed(["hello", name].joined(separator:" "))
   }
+  
+  
 }
 
 @objc open class ServiceDelegate: NSObject, NSXPCListenerDelegate {

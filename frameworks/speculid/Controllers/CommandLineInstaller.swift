@@ -2,24 +2,34 @@ import Foundation
 import Security
 import ServiceManagement
 
+struct TimeoutError: Error {}
+struct OSStatusError: Error {
+  let osStatus: OSStatus
+}
+
 public struct CommandLineInstaller {
-  public static func start(_ completed: @escaping () -> Void) {
+  public static func start(_ completed: @escaping (Error?) -> Void) {
     var authorizationRef: AuthorizationRef?
 
-    // let status = AuthorizationCreate(nil, nil, AuthorizationFlags(rawValue: 0), &authorizationRef)
     var items = AuthorizationItem(name: kSMRightBlessPrivilegedHelper, valueLength: 0, value: nil, flags: 0)
 
     var rights = AuthorizationRights(count: 1, items: &items)
     let flags: AuthorizationFlags = [.interactionAllowed, .extendRights, .preAuthorize]
 
-    let stats = AuthorizationCreate(&rights, nil, flags, &authorizationRef)
-    // let err = AuthorizationCopyRights(authorizationRef!, &rights, nil, flags, nil)
+    let osStatus = AuthorizationCreate(&rights, nil, flags, &authorizationRef)
+
+    guard osStatus == errAuthorizationSuccess else {
+      completed(OSStatusError(osStatus: osStatus))
+      return
+    }
 
     var cfError: Unmanaged<CFError>?
     let result = SMJobBless(kSMDomainSystemLaunchd, "com.brightdigit.Speculid-Mac-Installer" as CFString, authorizationRef, &cfError)
-    debugPrint(result)
-    debugPrint(cfError?.takeRetainedValue())
 
+    guard result else {
+      completed(cfError?.takeRetainedValue())
+      return
+    }
     Application.current.withInstaller {
       result in
 
@@ -28,23 +38,35 @@ public struct CommandLineInstaller {
         installer.hello(name: "Foo", { value in
 
           debugPrint(value)
-          completed()
+          completed(nil)
         })
 
       case let .error(error):
         debugPrint(error)
-        completed()
+        completed(nil)
       }
     }
   }
 }
 
 extension CommandLineInstaller {
-  public static func startSync() {
+  public static func startSync() -> Error? {
+    var error: Error?
     let semaphore = DispatchSemaphore(value: 0)
     start {
+      error = $0
       semaphore.signal()
     }
-    semaphore.wait(timeout: .now() + 10)
+    let result = semaphore.wait(timeout: .now() + 10)
+    if let error = error {
+      return error
+    } else {
+      switch result {
+      case .success:
+        return nil
+      case .timedOut:
+        return TimeoutError()
+      }
+    }
   }
 }
