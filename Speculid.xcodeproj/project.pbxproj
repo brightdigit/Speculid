@@ -14127,8 +14127,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B37C744C1F8C58F300DF505B /* Build configuration list for PBXNativeTarget "Speculid-Mac-App" */;
 			buildPhases = (
-				B326F24A2181113D0072D652 /* ShellScript */,
 				6B0E6A3126F4611E46C09D7C /* [CP] Check Pods Manifest.lock */,
+				B326F24A2181113D0072D652 /* ShellScript */,
 				B3D329F91F9A55A20042B46F /* swiftformat */,
 				B37C743A1F8C58F300DF505B /* Sources */,
 				B37C743B1F8C58F300DF505B /* Frameworks */,

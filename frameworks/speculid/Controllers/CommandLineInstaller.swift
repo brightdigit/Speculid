@@ -35,12 +35,10 @@ public struct CommandLineInstaller {
 
       switch result {
       case let .success(installer):
-        installer.hello(name: "Foo", { value in
-
-          debugPrint(value)
-          completed(nil)
+        installer.installCommandLineTool(fromBundleURL: Bundle.main, { (error) in
+          debugPrint(error)
+          completed(error)
         })
-
       case let .error(error):
         debugPrint(error)
         completed(nil)

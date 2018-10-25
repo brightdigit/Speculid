@@ -17,3 +17,4 @@ for lib in $deps; do
       install_name_tool -change $dependency @rpath/`basename $dependency` "$dylib"
     done
 done
+	
