@@ -1,18 +1,34 @@
 import Cocoa
 import CoreFoundation
 
+public enum InstallerErrorCode : Int {
+  public typealias RawValue = Int
+  case bundleNotFound = 1
+  case sharedSupportNotFound = 2
+  case speculidCommandNotFound = 3
+  case usrLocalBinDirNotFound = 4
+}
+
+public struct InstallerError {
+  private init () {}
+  static func error(fromCode code: InstallerErrorCode) -> NSError {
+    return NSError(domain: Bundle.main.bundleIdentifier!, code: code.rawValue, userInfo: nil)
+  }
+}
+
 public class Installer: NSObject, InstallerProtocol {
   public func installCommandLineTool(fromBundleURL bundleURL: URL, _ completed: @escaping (NSError?) -> Void) {
+    
     guard let bundle = Bundle(url: bundleURL) else {
-      fatalError()
+      return completed(InstallerError.error(fromCode: .bundleNotFound))
     }
     
     guard let speculidCommandURL = bundle.sharedSupportURL?.appendingPathComponent("speculid") else {
-      fatalError()
+      return completed(InstallerError.error(fromCode: .sharedSupportNotFound))
     }
     
     guard FileManager.default.fileExists(atPath: speculidCommandURL.path) else {
-      fatalError()
+      return completed(InstallerError.error(fromCode: .speculidCommandNotFound))
     }
     
     let binDirectoryURL = URL(fileURLWithPath: "/usr/local/bin", isDirectory: true)
@@ -22,27 +38,18 @@ public class Installer: NSObject, InstallerProtocol {
     let binDirExists = FileManager.default.fileExists(atPath: binDirectoryURL.path, isDirectory: &isDirectory)
     
     guard isDirectory.boolValue && binDirExists else {
-      fatalError()
+      return completed(InstallerError.error(fromCode: .usrLocalBinDirNotFound))
     }
     
     let destURL = binDirectoryURL.appendingPathComponent(speculidCommandURL.lastPathComponent)
     
-    var error : Error?
     do {
       try FileManager.default.copyItem(at: speculidCommandURL, to: destURL)
-    } catch let err {
-      error = err
-    }
-  }
-  
-  public func installCommandLineTool(fromBundleURL bundleURL: URL) {
-    guard let bundle = Bundle(url: bundleURL) else {
-      return
+    } catch let error as NSError {
+      completed(error)
     }
     
-    guard let executableURL = bundle.url(forAuxiliaryExecutable: "speculid") else {
-      return
-    }
+    completed(nil)
   }
   
   public func hello(name: String, _ completed: @escaping (String) -> Void) {
