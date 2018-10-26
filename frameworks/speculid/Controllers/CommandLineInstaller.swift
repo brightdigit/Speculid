@@ -37,6 +37,8 @@ public struct CommandLineInstaller {
       case let .success(installer):
         installer.installCommandLineTool(fromBundleURL: Bundle.main.bundleURL, { error in
           debugPrint(error)
+          var cfError: Unmanaged<CFError>?
+          SMJobRemove(kSMDomainSystemLaunchd, "com.brightdigit.Speculid-Mac-Installer" as CFString, authorizationRef, true, &cfError)
           completed(error)
         })
       case let .error(error):
