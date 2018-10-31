@@ -262,7 +262,6 @@
 		B31BD9D320E7E0DA00A560C2 /* libicuio.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C120E7E0D600A560C2 /* libicuio.dylib */; };
 		B31BD9D520E7E0DA00A560C2 /* libicutest.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C320E7E0D600A560C2 /* libicutest.dylib */; };
 		B31BD9D620E7E0DA00A560C2 /* libicuio.61.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C420E7E0D600A560C2 /* libicuio.61.dylib */; };
-		B31BD9D820E7E0DA00A560C2 /* libicudata.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C620E7E0D600A560C2 /* libicudata.dylib */; };
 		B31BD9D920E7E0DA00A560C2 /* libicuio.61.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C720E7E0D600A560C2 /* libicuio.61.1.dylib */; };
 		B31BD9DB20E7E0DA00A560C2 /* libicutu.61.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C920E7E0D600A560C2 /* libicutu.61.dylib */; };
 		B31BD9DC20E7E0DA00A560C2 /* libicui18n.61.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7CA20E7E0D600A560C2 /* libicui18n.61.1.dylib */; };
@@ -280,7 +279,6 @@
 		B31BDAFD20E7E26200A560C2 /* libicuio.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7C120E7E0D600A560C2 /* libicuio.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BDAFE20E7E26200A560C2 /* libicutest.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7C320E7E0D600A560C2 /* libicutest.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BDAFF20E7E26200A560C2 /* libicuio.61.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7C420E7E0D600A560C2 /* libicuio.61.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B31BDB0020E7E26200A560C2 /* libicudata.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7C620E7E0D600A560C2 /* libicudata.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BDB0120E7E26200A560C2 /* libicuio.61.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7C720E7E0D600A560C2 /* libicuio.61.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BDB0220E7E26200A560C2 /* libicutu.61.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7C920E7E0D600A560C2 /* libicutu.61.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BDB0320E7E26200A560C2 /* libicui18n.61.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7CA20E7E0D600A560C2 /* libicui18n.61.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -1134,7 +1132,6 @@
 				B31BDAFD20E7E26200A560C2 /* libicuio.dylib in CopyFiles */,
 				B31BDAFE20E7E26200A560C2 /* libicutest.dylib in CopyFiles */,
 				B31BDAFF20E7E26200A560C2 /* libicuio.61.dylib in CopyFiles */,
-				B31BDB0020E7E26200A560C2 /* libicudata.dylib in CopyFiles */,
 				B31BDB0120E7E26200A560C2 /* libicuio.61.1.dylib in CopyFiles */,
 				B31BDB0220E7E26200A560C2 /* libicutu.61.dylib in CopyFiles */,
 				B31BDB0320E7E26200A560C2 /* libicui18n.61.1.dylib in CopyFiles */,
@@ -1502,9 +1499,7 @@
 		B31BD7C320E7E0D600A560C2 /* libicutest.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libicutest.dylib; sourceTree = "<group>"; };
 		B31BD7C420E7E0D600A560C2 /* libicuio.61.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libicuio.61.dylib; sourceTree = "<group>"; };
 		B31BD7C520E7E0D600A560C2 /* libicuio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libicuio.a; sourceTree = "<group>"; };
-		B31BD7C620E7E0D600A560C2 /* libicudata.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libicudata.dylib; sourceTree = "<group>"; };
 		B31BD7C720E7E0D600A560C2 /* libicuio.61.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libicuio.61.1.dylib; sourceTree = "<group>"; };
-		B31BD7C820E7E0D600A560C2 /* libicudata.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libicudata.a; sourceTree = "<group>"; };
 		B31BD7C920E7E0D600A560C2 /* libicutu.61.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libicutu.61.dylib; sourceTree = "<group>"; };
 		B31BD7CA20E7E0D600A560C2 /* libicui18n.61.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libicui18n.61.1.dylib; sourceTree = "<group>"; };
 		B31BD7CB20E7E0D600A560C2 /* libicutu.61.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libicutu.61.1.dylib; sourceTree = "<group>"; };
@@ -4055,7 +4050,6 @@
 				B31BD9D320E7E0DA00A560C2 /* libicuio.dylib in Frameworks */,
 				B31BD9D520E7E0DA00A560C2 /* libicutest.dylib in Frameworks */,
 				B31BD9D620E7E0DA00A560C2 /* libicuio.61.dylib in Frameworks */,
-				B31BD9D820E7E0DA00A560C2 /* libicudata.dylib in Frameworks */,
 				B31BD9D920E7E0DA00A560C2 /* libicuio.61.1.dylib in Frameworks */,
 				B31BD9DB20E7E0DA00A560C2 /* libicutu.61.dylib in Frameworks */,
 				B31BD9DC20E7E0DA00A560C2 /* libicui18n.61.1.dylib in Frameworks */,
@@ -4641,9 +4635,7 @@
 				B31BD7C320E7E0D600A560C2 /* libicutest.dylib */,
 				B31BD7C420E7E0D600A560C2 /* libicuio.61.dylib */,
 				B31BD7C520E7E0D600A560C2 /* libicuio.a */,
-				B31BD7C620E7E0D600A560C2 /* libicudata.dylib */,
 				B31BD7C720E7E0D600A560C2 /* libicuio.61.1.dylib */,
-				B31BD7C820E7E0D600A560C2 /* libicudata.a */,
 				B31BD7C920E7E0D600A560C2 /* libicutu.61.dylib */,
 				B31BD7CA20E7E0D600A560C2 /* libicui18n.61.1.dylib */,
 				B31BD7CB20E7E0D600A560C2 /* libicutu.61.1.dylib */,
