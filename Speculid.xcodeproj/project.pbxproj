@@ -336,7 +336,6 @@
 		B3825F0420F9183F008F2A02 /* libgraphite2.3.0.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3825EF920F91806008F2A02 /* libgraphite2.3.0.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3891B8320F6402F00FEDF89 /* libcroco-0.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8078920E5858100030497 /* libcroco-0.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3891B8420F6402F00FEDF89 /* libcroco-0.6.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8078C20E5858100030497 /* libcroco-0.6.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B3891B8520F6406B00FEDF89 /* libfribidi.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8083020E585BF00030497 /* libfribidi.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3891B8620F6406B00FEDF89 /* libfribidi.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8083220E585BF00030497 /* libfribidi.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3891BBE20F7CE010095E1FD /* CwlSysctl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3891BBD20F7CE010095E1FD /* CwlSysctl.swift */; };
 		B3A2BCF9213F2622005FC8A1 /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3242E97213DBE6C0063037C /* speculid */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -410,7 +409,6 @@
 		B3E204EB20E568C3009EA554 /* ftbdf.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F50720E568A6009EA554 /* ftbdf.h */; };
 		B3E204EC20E568C3009EA554 /* ftrender.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F50820E568A6009EA554 /* ftrender.h */; };
 		B3E204ED20E568C3009EA554 /* ft2build.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F50920E568A6009EA554 /* ft2build.h */; };
-		B3E204EF20E568C3009EA554 /* libfreetype.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F50C20E568A6009EA554 /* libfreetype.dylib */; };
 		B3E204F220E568C3009EA554 /* libfreetype.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F51020E568A6009EA554 /* libfreetype.6.dylib */; };
 		B3E204FC20E568C3009EA554 /* gdk-pixbuf-animation.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F52520E568A6009EA554 /* gdk-pixbuf-animation.h */; };
 		B3E204FD20E568C3009EA554 /* gdk-pixbuf-marshal.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F52620E568A6009EA554 /* gdk-pixbuf-marshal.h */; };
@@ -715,7 +713,6 @@
 		B3E207EE20E568C6009EA554 /* fontconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F9F720E568AE009EA554 /* fontconfig.h */; };
 		B3E207EF20E568C6009EA554 /* fcprivate.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F9F820E568AE009EA554 /* fcprivate.h */; };
 		B3E207F020E568C6009EA554 /* fcfreetype.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F9F920E568AE009EA554 /* fcfreetype.h */; };
-		B3E207F520E568C6009EA554 /* libfontconfig.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2FA0020E568AE009EA554 /* libfontconfig.dylib */; };
 		B3E207F620E568C6009EA554 /* libfontconfig.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2FA0120E568AE009EA554 /* libfontconfig.1.dylib */; };
 		B3E209FA20E568C8009EA554 /* autosprintf.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2FC1C20E568B2009EA554 /* autosprintf.h */; };
 		B3E209FB20E568C8009EA554 /* gettext-po.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2FC1D20E568B2009EA554 /* gettext-po.h */; };
@@ -736,7 +733,6 @@
 		B3E211AA20E57AC3009EA554 /* libcairo-script-interpreter.2.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F99C20E568AE009EA554 /* libcairo-script-interpreter.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211AB20E57B5E009EA554 /* libpixman-1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F4CA20E568A5009EA554 /* libpixman-1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211AC20E57B5E009EA554 /* libpixman-1.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F4CC20E568A5009EA554 /* libpixman-1.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B3E211AD20E57B5E009EA554 /* libfreetype.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F50C20E568A6009EA554 /* libfreetype.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211AE20E57B5E009EA554 /* libfreetype.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F51020E568A6009EA554 /* libfreetype.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211AF20E57B5E009EA554 /* libgdk_pixbuf-2.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F53620E568A6009EA554 /* libgdk_pixbuf-2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211B020E57B5E009EA554 /* libgdk_pixbuf-2.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F53920E568A6009EA554 /* libgdk_pixbuf-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -896,7 +892,6 @@
 		B3F808B920E585C000030497 /* fribidi-arabic.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8082620E585BF00030497 /* fribidi-arabic.h */; };
 		B3F808BA20E585C000030497 /* fribidi-shape.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8082720E585BF00030497 /* fribidi-shape.h */; };
 		B3F808BB20E585C000030497 /* fribidi-joining-types-list.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8082820E585BF00030497 /* fribidi-joining-types-list.h */; };
-		B3F808C120E585C000030497 /* libfribidi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8083020E585BF00030497 /* libfribidi.dylib */; };
 		B3F808C320E585C000030497 /* libfribidi.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8083220E585BF00030497 /* libfribidi.0.dylib */; };
 		B3F80B0320E585E900030497 /* hb-buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8093320E585E800030497 /* hb-buffer.h */; };
 		B3F80B0420E585E900030497 /* hb-set.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8093420E585E800030497 /* hb-set.h */; };
@@ -1068,7 +1063,6 @@
 				B3825F0320F9183E008F2A02 /* libgraphite2.3.dylib in CopyFiles */,
 				B3825F0420F9183F008F2A02 /* libgraphite2.3.0.1.dylib in CopyFiles */,
 				B3F80CAB20E586A000030497 /* libharfbuzz.0.dylib in CopyFiles */,
-				B3891B8520F6406B00FEDF89 /* libfribidi.dylib in CopyFiles */,
 				B3891B8620F6406B00FEDF89 /* libfribidi.0.dylib in CopyFiles */,
 				B3F8057E20E584E700030497 /* libpng16.16.dylib in CopyFiles */,
 				B3F80CA720E5866A00030497 /* libpng16.dylib in CopyFiles */,
@@ -1108,7 +1102,6 @@
 				B3E211A720E572B2009EA554 /* libcairo.2.dylib in CopyFiles */,
 				B3E211AB20E57B5E009EA554 /* libpixman-1.dylib in CopyFiles */,
 				B3E211AC20E57B5E009EA554 /* libpixman-1.0.dylib in CopyFiles */,
-				B3E211AD20E57B5E009EA554 /* libfreetype.dylib in CopyFiles */,
 				B3E211AE20E57B5E009EA554 /* libfreetype.6.dylib in CopyFiles */,
 				B3E211AF20E57B5E009EA554 /* libgdk_pixbuf-2.0.dylib in CopyFiles */,
 				B3E211B020E57B5E009EA554 /* libgdk_pixbuf-2.0.0.dylib in CopyFiles */,
@@ -1556,10 +1549,6 @@
 		B3E2F4CA20E568A5009EA554 /* libpixman-1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libpixman-1.dylib"; sourceTree = "<group>"; };
 		B3E2F4CB20E568A5009EA554 /* libpixman-1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpixman-1.a"; sourceTree = "<group>"; };
 		B3E2F4CC20E568A5009EA554 /* libpixman-1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libpixman-1.0.dylib"; sourceTree = "<group>"; };
-		B3E2F4CF20E568A5009EA554 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
-		B3E2F4D120E568A5009EA554 /* freetype-config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "freetype-config"; sourceTree = "<group>"; };
-		B3E2F4D320E568A5009EA554 /* freetype.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = freetype.rb; sourceTree = "<group>"; };
-		B3E2F4D420E568A5009EA554 /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
 		B3E2F4D820E568A5009EA554 /* ftsnames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftsnames.h; sourceTree = "<group>"; };
 		B3E2F4D920E568A5009EA554 /* ftwinfnt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftwinfnt.h; sourceTree = "<group>"; };
 		B3E2F4DA20E568A5009EA554 /* ftsizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftsizes.h; sourceTree = "<group>"; };
@@ -1609,19 +1598,7 @@
 		B3E2F50720E568A6009EA554 /* ftbdf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftbdf.h; sourceTree = "<group>"; };
 		B3E2F50820E568A6009EA554 /* ftrender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftrender.h; sourceTree = "<group>"; };
 		B3E2F50920E568A6009EA554 /* ft2build.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ft2build.h; sourceTree = "<group>"; };
-		B3E2F50A20E568A6009EA554 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		B3E2F50C20E568A6009EA554 /* libfreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfreetype.dylib; sourceTree = "<group>"; };
-		B3E2F50E20E568A6009EA554 /* freetype2.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = freetype2.pc; sourceTree = "<group>"; };
-		B3E2F50F20E568A6009EA554 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfreetype.a; sourceTree = "<group>"; };
 		B3E2F51020E568A6009EA554 /* libfreetype.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfreetype.6.dylib; sourceTree = "<group>"; };
-		B3E2F51420E568A6009EA554 /* freetype-config.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = "freetype-config.1"; sourceTree = "<group>"; };
-		B3E2F51620E568A6009EA554 /* freetype2.m4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = freetype2.m4; sourceTree = "<group>"; };
-		B3E2F51920E568A6009EA554 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
-		B3E2F51B20E568A6009EA554 /* gdk-pixbuf-pixdata */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "gdk-pixbuf-pixdata"; sourceTree = "<group>"; };
-		B3E2F51C20E568A6009EA554 /* gdk-pixbuf-query-loaders */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "gdk-pixbuf-query-loaders"; sourceTree = "<group>"; };
-		B3E2F51D20E568A6009EA554 /* gdk-pixbuf-csource */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "gdk-pixbuf-csource"; sourceTree = "<group>"; };
-		B3E2F51E20E568A6009EA554 /* gdk-pixbuf-thumbnailer */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "gdk-pixbuf-thumbnailer"; sourceTree = "<group>"; };
-		B3E2F52020E568A6009EA554 /* gdk-pixbuf.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = "gdk-pixbuf.rb"; sourceTree = "<group>"; };
 		B3E2F52120E568A6009EA554 /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
 		B3E2F52520E568A6009EA554 /* gdk-pixbuf-animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gdk-pixbuf-animation.h"; sourceTree = "<group>"; };
 		B3E2F52620E568A6009EA554 /* gdk-pixbuf-marshal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gdk-pixbuf-marshal.h"; sourceTree = "<group>"; };
@@ -2088,517 +2065,10 @@
 		B3E2F98F20E568AE009EA554 /* libcairo-gobject.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libcairo-gobject.2.dylib"; sourceTree = "<group>"; };
 		B3E2F99920E568AE009EA554 /* libcairo-trace.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libcairo-trace.0.dylib"; sourceTree = "<group>"; };
 		B3E2F99C20E568AE009EA554 /* libcairo-script-interpreter.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libcairo-script-interpreter.2.dylib"; sourceTree = "<group>"; };
-		B3E2F9E620E568AE009EA554 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
-		B3E2F9E820E568AE009EA554 /* fc-list */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "fc-list"; sourceTree = "<group>"; };
-		B3E2F9E920E568AE009EA554 /* fc-pattern */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "fc-pattern"; sourceTree = "<group>"; };
-		B3E2F9EA20E568AE009EA554 /* fc-validate */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "fc-validate"; sourceTree = "<group>"; };
-		B3E2F9EB20E568AE009EA554 /* fc-query */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "fc-query"; sourceTree = "<group>"; };
-		B3E2F9EC20E568AE009EA554 /* fc-cache */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "fc-cache"; sourceTree = "<group>"; };
-		B3E2F9ED20E568AE009EA554 /* fc-cat */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "fc-cat"; sourceTree = "<group>"; };
-		B3E2F9EE20E568AE009EA554 /* fc-match */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "fc-match"; sourceTree = "<group>"; };
-		B3E2F9EF20E568AE009EA554 /* fc-conflist */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "fc-conflist"; sourceTree = "<group>"; };
-		B3E2F9F020E568AE009EA554 /* fc-scan */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "fc-scan"; sourceTree = "<group>"; };
-		B3E2F9F220E568AE009EA554 /* fontconfig.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = fontconfig.rb; sourceTree = "<group>"; };
-		B3E2F9F320E568AE009EA554 /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
-		B3E2F9F420E568AE009EA554 /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
 		B3E2F9F720E568AE009EA554 /* fontconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fontconfig.h; sourceTree = "<group>"; };
 		B3E2F9F820E568AE009EA554 /* fcprivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fcprivate.h; sourceTree = "<group>"; };
 		B3E2F9F920E568AE009EA554 /* fcfreetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fcfreetype.h; sourceTree = "<group>"; };
-		B3E2F9FA20E568AE009EA554 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		B3E2F9FB20E568AE009EA554 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
-		B3E2F9FC20E568AE009EA554 /* NEWS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NEWS; sourceTree = "<group>"; };
-		B3E2F9FF20E568AE009EA554 /* fontconfig.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fontconfig.pc; sourceTree = "<group>"; };
-		B3E2FA0020E568AE009EA554 /* libfontconfig.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfontconfig.dylib; sourceTree = "<group>"; };
 		B3E2FA0120E568AE009EA554 /* libfontconfig.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfontconfig.1.dylib; sourceTree = "<group>"; };
-		B3E2FA0220E568AE009EA554 /* libfontconfig.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfontconfig.a; sourceTree = "<group>"; };
-		B3E2FA0620E568AE009EA554 /* fonts.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fonts.conf; sourceTree = "<group>"; };
-		B3E2FA0820E568AE009EA554 /* 65-nonlatin.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "65-nonlatin.conf"; sourceTree = "<group>"; };
-		B3E2FA0920E568AE009EA554 /* 30-metric-aliases.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "30-metric-aliases.conf"; sourceTree = "<group>"; };
-		B3E2FA0A20E568AE009EA554 /* 80-delicious.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "80-delicious.conf"; sourceTree = "<group>"; };
-		B3E2FA0B20E568AE009EA554 /* 20-unhint-small-vera.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "20-unhint-small-vera.conf"; sourceTree = "<group>"; };
-		B3E2FA0C20E568AE009EA554 /* 65-fonts-persian.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "65-fonts-persian.conf"; sourceTree = "<group>"; };
-		B3E2FA0D20E568AE009EA554 /* 10-hinting-slight.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "10-hinting-slight.conf"; sourceTree = "<group>"; };
-		B3E2FA0E20E568AE009EA554 /* 51-local.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "51-local.conf"; sourceTree = "<group>"; };
-		B3E2FA0F20E568AE009EA554 /* 45-latin.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "45-latin.conf"; sourceTree = "<group>"; };
-		B3E2FA1020E568AE009EA554 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		B3E2FA1120E568AE009EA554 /* 49-sansserif.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "49-sansserif.conf"; sourceTree = "<group>"; };
-		B3E2FA1220E568AE009EA554 /* 40-nonlatin.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "40-nonlatin.conf"; sourceTree = "<group>"; };
-		B3E2FA1320E568AE009EA554 /* 60-latin.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "60-latin.conf"; sourceTree = "<group>"; };
-		B3E2FA1420E568AE009EA554 /* 60-generic.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "60-generic.conf"; sourceTree = "<group>"; };
-		B3E2FA1520E568AE009EA554 /* 45-generic.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "45-generic.conf"; sourceTree = "<group>"; };
-		B3E2FA1620E568AE009EA554 /* 69-unifont.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "69-unifont.conf"; sourceTree = "<group>"; };
-		B3E2FA1720E568AE009EA554 /* 50-user.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "50-user.conf"; sourceTree = "<group>"; };
-		B3E2FA1820E568AE009EA554 /* 10-scale-bitmap-fonts.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "10-scale-bitmap-fonts.conf"; sourceTree = "<group>"; };
-		B3E2FA1920E568AE009EA554 /* 90-synthetic.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "90-synthetic.conf"; sourceTree = "<group>"; };
-		B3E2FA1D20E568AE009EA554 /* fonts-conf.5 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fonts-conf.5"; sourceTree = "<group>"; };
-		B3E2FA1F20E568AE009EA554 /* FcDefaultSubstitute.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcDefaultSubstitute.3; sourceTree = "<group>"; };
-		B3E2FA2020E568AE009EA554 /* FcIsLower.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcIsLower.3; sourceTree = "<group>"; };
-		B3E2FA2120E568AE009EA554 /* FcStrCmpIgnoreCase.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrCmpIgnoreCase.3; sourceTree = "<group>"; };
-		B3E2FA2220E568AE009EA554 /* FcLangGetCharSet.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangGetCharSet.3; sourceTree = "<group>"; };
-		B3E2FA2320E568AE009EA554 /* FcCharSetSubtractCount.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetSubtractCount.3; sourceTree = "<group>"; };
-		B3E2FA2420E568AF009EA554 /* FcDirScan.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcDirScan.3; sourceTree = "<group>"; };
-		B3E2FA2520E568AF009EA554 /* FcStrStrIgnoreCase.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrStrIgnoreCase.3; sourceTree = "<group>"; };
-		B3E2FA2620E568AF009EA554 /* FcPatternAdd-Type.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "FcPatternAdd-Type.3"; sourceTree = "<group>"; };
-		B3E2FA2720E568AF009EA554 /* FcLangSetCreate.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangSetCreate.3; sourceTree = "<group>"; };
-		B3E2FA2820E568AF009EA554 /* FcCharSetSubtract.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetSubtract.3; sourceTree = "<group>"; };
-		B3E2FA2920E568AF009EA554 /* FcCacheCopySet.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCacheCopySet.3; sourceTree = "<group>"; };
-		B3E2FA2A20E568AF009EA554 /* FcFreeTypeCharSetAndSpacing.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFreeTypeCharSetAndSpacing.3; sourceTree = "<group>"; };
-		B3E2FA2B20E568AF009EA554 /* FcConfigReference.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigReference.3; sourceTree = "<group>"; };
-		B3E2FA2C20E568AF009EA554 /* FcConfigGetBlanks.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigGetBlanks.3; sourceTree = "<group>"; };
-		B3E2FA2D20E568AF009EA554 /* FcConfigGetConfigFiles.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigGetConfigFiles.3; sourceTree = "<group>"; };
-		B3E2FA2E20E568AF009EA554 /* FcDirCacheLoadFile.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcDirCacheLoadFile.3; sourceTree = "<group>"; };
-		B3E2FA2F20E568AF009EA554 /* FcCharSetDestroy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetDestroy.3; sourceTree = "<group>"; };
-		B3E2FA3020E568AF009EA554 /* FcNameParse.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcNameParse.3; sourceTree = "<group>"; };
-		B3E2FA3120E568AF009EA554 /* FcCharSetIntersectCount.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetIntersectCount.3; sourceTree = "<group>"; };
-		B3E2FA3220E568AF009EA554 /* FcRangeCreateDouble.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcRangeCreateDouble.3; sourceTree = "<group>"; };
-		B3E2FA3320E568AF009EA554 /* FcCacheCreateTagFile.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCacheCreateTagFile.3; sourceTree = "<group>"; };
-		B3E2FA3420E568AF009EA554 /* FcMatrixMultiply.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcMatrixMultiply.3; sourceTree = "<group>"; };
-		B3E2FA3520E568AF009EA554 /* FcConfigGetConfigDirs.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigGetConfigDirs.3; sourceTree = "<group>"; };
-		B3E2FA3620E568AF009EA554 /* FcNameUnregisterObjectTypes.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcNameUnregisterObjectTypes.3; sourceTree = "<group>"; };
-		B3E2FA3720E568AF009EA554 /* FcConfigGetFontDirs.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigGetFontDirs.3; sourceTree = "<group>"; };
-		B3E2FA3820E568AF009EA554 /* FcCharSetEqual.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetEqual.3; sourceTree = "<group>"; };
-		B3E2FA3920E568AF009EA554 /* FcConfigSubstitute.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigSubstitute.3; sourceTree = "<group>"; };
-		B3E2FA3A20E568AF009EA554 /* FcCharSetAddChar.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetAddChar.3; sourceTree = "<group>"; };
-		B3E2FA3B20E568AF009EA554 /* FcConfigDestroy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigDestroy.3; sourceTree = "<group>"; };
-		B3E2FA3C20E568AF009EA554 /* FcFontSetSortDestroy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFontSetSortDestroy.3; sourceTree = "<group>"; };
-		B3E2FA3D20E568AF009EA554 /* FcFini.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFini.3; sourceTree = "<group>"; };
-		B3E2FA3E20E568AF009EA554 /* FcPatternRemove.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternRemove.3; sourceTree = "<group>"; };
-		B3E2FA3F20E568AF009EA554 /* FcDirCacheValid.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcDirCacheValid.3; sourceTree = "<group>"; };
-		B3E2FA4020E568AF009EA554 /* FcConfigEnableHome.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigEnableHome.3; sourceTree = "<group>"; };
-		B3E2FA4120E568AF009EA554 /* FcFileIsDir.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFileIsDir.3; sourceTree = "<group>"; };
-		B3E2FA4220E568AF009EA554 /* FcGetLangs.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcGetLangs.3; sourceTree = "<group>"; };
-		B3E2FA4320E568AF009EA554 /* FcPatternDuplicate.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternDuplicate.3; sourceTree = "<group>"; };
-		B3E2FA4420E568AF009EA554 /* FcFreeTypeQueryAll.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFreeTypeQueryAll.3; sourceTree = "<group>"; };
-		B3E2FA4520E568AF009EA554 /* FcCacheNumFont.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCacheNumFont.3; sourceTree = "<group>"; };
-		B3E2FA4620E568AF009EA554 /* FcNameRegisterConstants.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcNameRegisterConstants.3; sourceTree = "<group>"; };
-		B3E2FA4720E568AF009EA554 /* FcInitLoadConfigAndFonts.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcInitLoadConfigAndFonts.3; sourceTree = "<group>"; };
-		B3E2FA4820E568AF009EA554 /* FcPatternEqualSubset.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternEqualSubset.3; sourceTree = "<group>"; };
-		B3E2FA4920E568AF009EA554 /* FcObjectSetBuild.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcObjectSetBuild.3; sourceTree = "<group>"; };
-		B3E2FA4A20E568AF009EA554 /* FcCharSetHasChar.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetHasChar.3; sourceTree = "<group>"; };
-		B3E2FA4B20E568AF009EA554 /* FcFontSetList.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFontSetList.3; sourceTree = "<group>"; };
-		B3E2FA4C20E568AF009EA554 /* FcInitLoadConfig.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcInitLoadConfig.3; sourceTree = "<group>"; };
-		B3E2FA4D20E568AF009EA554 /* FcConfigSetRescanInterval.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigSetRescanInterval.3; sourceTree = "<group>"; };
-		B3E2FA4E20E568AF009EA554 /* FcCacheSubdir.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCacheSubdir.3; sourceTree = "<group>"; };
-		B3E2FA4F20E568AF009EA554 /* FcFreeTypeCharSet.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFreeTypeCharSet.3; sourceTree = "<group>"; };
-		B3E2FA5020E568AF009EA554 /* FcLangSetUnion.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangSetUnion.3; sourceTree = "<group>"; };
-		B3E2FA5120E568AF009EA554 /* FcPatternGet-Type.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "FcPatternGet-Type.3"; sourceTree = "<group>"; };
-		B3E2FA5220E568AF009EA554 /* FcCharSetCount.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetCount.3; sourceTree = "<group>"; };
-		B3E2FA5320E568AF009EA554 /* FcConfigParseAndLoadFromMemory.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigParseAndLoadFromMemory.3; sourceTree = "<group>"; };
-		B3E2FA5420E568AF009EA554 /* FcToLower.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcToLower.3; sourceTree = "<group>"; };
-		B3E2FA5520E568AF009EA554 /* FcMatrixEqual.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcMatrixEqual.3; sourceTree = "<group>"; };
-		B3E2FA5620E568AF009EA554 /* FcConfigAppFontAddFile.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigAppFontAddFile.3; sourceTree = "<group>"; };
-		B3E2FA5720E568AF009EA554 /* FcFontMatch.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFontMatch.3; sourceTree = "<group>"; };
-		B3E2FA5820E568AF009EA554 /* FcPatternGet.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternGet.3; sourceTree = "<group>"; };
-		B3E2FA5920E568AF009EA554 /* FcMatrixRotate.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcMatrixRotate.3; sourceTree = "<group>"; };
-		B3E2FA5A20E568AF009EA554 /* FcValueEqual.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcValueEqual.3; sourceTree = "<group>"; };
-		B3E2FA5B20E568AF009EA554 /* FcStrSetDel.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrSetDel.3; sourceTree = "<group>"; };
-		B3E2FA5C20E568AF009EA554 /* FcStrListNext.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrListNext.3; sourceTree = "<group>"; };
-		B3E2FA5D20E568AF009EA554 /* FcAtomicDeleteNew.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcAtomicDeleteNew.3; sourceTree = "<group>"; };
-		B3E2FA5E20E568AF009EA554 /* FcLangSetDel.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangSetDel.3; sourceTree = "<group>"; };
-		B3E2FA5F20E568AF009EA554 /* FcStrSetMember.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrSetMember.3; sourceTree = "<group>"; };
-		B3E2FA6020E568AF009EA554 /* FcPatternBuild.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternBuild.3; sourceTree = "<group>"; };
-		B3E2FA6120E568AF009EA554 /* FcCharSetIntersect.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetIntersect.3; sourceTree = "<group>"; };
-		B3E2FA6220E568AF009EA554 /* FcPatternEqual.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternEqual.3; sourceTree = "<group>"; };
-		B3E2FA6320E568AF009EA554 /* FcStrStr.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrStr.3; sourceTree = "<group>"; };
-		B3E2FA6420E568AF009EA554 /* FcStrSetCreate.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrSetCreate.3; sourceTree = "<group>"; };
-		B3E2FA6520E568AF009EA554 /* FcDirCacheLoad.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcDirCacheLoad.3; sourceTree = "<group>"; };
-		B3E2FA6620E568AF009EA554 /* FcStrFree.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrFree.3; sourceTree = "<group>"; };
-		B3E2FA6720E568AF009EA554 /* FcWeightFromOpenTypeDouble.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcWeightFromOpenTypeDouble.3; sourceTree = "<group>"; };
-		B3E2FA6820E568AF009EA554 /* FcMatrixScale.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcMatrixScale.3; sourceTree = "<group>"; };
-		B3E2FA6920E568AF009EA554 /* FcFontRenderPrepare.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFontRenderPrepare.3; sourceTree = "<group>"; };
-		B3E2FA6A20E568AF009EA554 /* FcAtomicReplaceOrig.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcAtomicReplaceOrig.3; sourceTree = "<group>"; };
-		B3E2FA6B20E568AF009EA554 /* FcFontSetSort.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFontSetSort.3; sourceTree = "<group>"; };
-		B3E2FA6C20E568AF009EA554 /* FcMatrixShear.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcMatrixShear.3; sourceTree = "<group>"; };
-		B3E2FA6D20E568AF009EA554 /* FcWeightToOpenTypeDouble.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcWeightToOpenTypeDouble.3; sourceTree = "<group>"; };
-		B3E2FA6E20E568AF009EA554 /* FcInitReinitialize.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcInitReinitialize.3; sourceTree = "<group>"; };
-		B3E2FA6F20E568AF009EA554 /* FcCacheNumSubdir.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCacheNumSubdir.3; sourceTree = "<group>"; };
-		B3E2FA7020E568AF009EA554 /* FcConfigGetCacheDirs.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigGetCacheDirs.3; sourceTree = "<group>"; };
-		B3E2FA7120E568AF009EA554 /* FcPatternReference.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternReference.3; sourceTree = "<group>"; };
-		B3E2FA7220E568AF009EA554 /* FcStrListFirst.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrListFirst.3; sourceTree = "<group>"; };
-		B3E2FA7320E568AF009EA554 /* FcObjectSetCreate.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcObjectSetCreate.3; sourceTree = "<group>"; };
-		B3E2FA7420E568AF009EA554 /* FcConfigAppFontAddDir.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigAppFontAddDir.3; sourceTree = "<group>"; };
-		B3E2FA7520E568AF009EA554 /* FcAtomicOrigFile.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcAtomicOrigFile.3; sourceTree = "<group>"; };
-		B3E2FA7620E568AF009EA554 /* FcCharSetMerge.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetMerge.3; sourceTree = "<group>"; };
-		B3E2FA7720E568AF009EA554 /* FcConfigSubstituteWithPat.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigSubstituteWithPat.3; sourceTree = "<group>"; };
-		B3E2FA7820E568AF009EA554 /* FcCacheDir.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCacheDir.3; sourceTree = "<group>"; };
-		B3E2FA7920E568AF009EA554 /* FcAtomicLock.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcAtomicLock.3; sourceTree = "<group>"; };
-		B3E2FA7A20E568AF009EA554 /* FcStrDowncase.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrDowncase.3; sourceTree = "<group>"; };
-		B3E2FA7B20E568AF009EA554 /* FcValueDestroy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcValueDestroy.3; sourceTree = "<group>"; };
-		B3E2FA7C20E568AF009EA554 /* FcPatternDel.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternDel.3; sourceTree = "<group>"; };
-		B3E2FA7D20E568AF009EA554 /* FcNameRegisterObjectTypes.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcNameRegisterObjectTypes.3; sourceTree = "<group>"; };
-		B3E2FA7E20E568AF009EA554 /* FcConfigHome.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigHome.3; sourceTree = "<group>"; };
-		B3E2FA7F20E568AF009EA554 /* FcDirCacheUnload.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcDirCacheUnload.3; sourceTree = "<group>"; };
-		B3E2FA8020E568AF009EA554 /* FcIsUpper.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcIsUpper.3; sourceTree = "<group>"; };
-		B3E2FA8120E568AF009EA554 /* FcObjectSetDestroy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcObjectSetDestroy.3; sourceTree = "<group>"; };
-		B3E2FA8220E568AF009EA554 /* FcCharSetDelChar.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetDelChar.3; sourceTree = "<group>"; };
-		B3E2FA8320E568AF009EA554 /* FcGetVersion.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcGetVersion.3; sourceTree = "<group>"; };
-		B3E2FA8420E568AF009EA554 /* FcLangSetHash.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangSetHash.3; sourceTree = "<group>"; };
-		B3E2FA8520E568AF009EA554 /* FcAtomicDestroy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcAtomicDestroy.3; sourceTree = "<group>"; };
-		B3E2FA8620E568AF009EA554 /* FcConfigFilename.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigFilename.3; sourceTree = "<group>"; };
-		B3E2FA8720E568AF009EA554 /* FcConfigUptoDate.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigUptoDate.3; sourceTree = "<group>"; };
-		B3E2FA8820E568AF009EA554 /* FcDirCacheRescan.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcDirCacheRescan.3; sourceTree = "<group>"; };
-		B3E2FA8920E568AF009EA554 /* FcUtf16ToUcs4.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcUtf16ToUcs4.3; sourceTree = "<group>"; };
-		B3E2FA8A20E568AF009EA554 /* FcDirCacheCreateUUID.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcDirCacheCreateUUID.3; sourceTree = "<group>"; };
-		B3E2FA8B20E568AF009EA554 /* FcPatternHash.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternHash.3; sourceTree = "<group>"; };
-		B3E2FA8C20E568AF009EA554 /* FcLangSetGetLangs.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangSetGetLangs.3; sourceTree = "<group>"; };
-		B3E2FA8D20E568AF009EA554 /* FcLangSetCopy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangSetCopy.3; sourceTree = "<group>"; };
-		B3E2FA8E20E568AF009EA554 /* FcConfigGetCurrent.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigGetCurrent.3; sourceTree = "<group>"; };
-		B3E2FA8F20E568AF009EA554 /* FcLangNormalize.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangNormalize.3; sourceTree = "<group>"; };
-		B3E2FA9020E568AF009EA554 /* FcStrBasename.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrBasename.3; sourceTree = "<group>"; };
-		B3E2FA9120E568AF009EA554 /* FcWeightToOpenType.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcWeightToOpenType.3; sourceTree = "<group>"; };
-		B3E2FA9220E568AF009EA554 /* FcAtomicUnlock.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcAtomicUnlock.3; sourceTree = "<group>"; };
-		B3E2FA9320E568AF009EA554 /* FcPatternCreate.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternCreate.3; sourceTree = "<group>"; };
-		B3E2FA9420E568AF009EA554 /* FcPatternFilter.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternFilter.3; sourceTree = "<group>"; };
-		B3E2FA9520E568AF009EA554 /* FcRangeDestroy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcRangeDestroy.3; sourceTree = "<group>"; };
-		B3E2FA9620E568AF009EA554 /* FcFontSetDestroy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFontSetDestroy.3; sourceTree = "<group>"; };
-		B3E2FA9720E568AF009EA554 /* FcStrCopy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrCopy.3; sourceTree = "<group>"; };
-		B3E2FA9820E568AF009EA554 /* FcStrCopyFilename.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrCopyFilename.3; sourceTree = "<group>"; };
-		B3E2FA9920E568AF009EA554 /* FcConfigGetCache.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigGetCache.3; sourceTree = "<group>"; };
-		B3E2FA9A20E568AF009EA554 /* FcFontSort.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFontSort.3; sourceTree = "<group>"; };
-		B3E2FA9B20E568AF009EA554 /* FcPatternFormat.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternFormat.3; sourceTree = "<group>"; };
-		B3E2FA9C20E568AF009EA554 /* FcConfigGetRescanInterval.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigGetRescanInterval.3; sourceTree = "<group>"; };
-		B3E2FA9D20E568AF009EA554 /* FcCharSetFirstPage.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetFirstPage.3; sourceTree = "<group>"; };
-		B3E2FA9E20E568AF009EA554 /* FcLangSetCompare.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangSetCompare.3; sourceTree = "<group>"; };
-		B3E2FA9F20E568AF009EA554 /* FcNameConstant.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcNameConstant.3; sourceTree = "<group>"; };
-		B3E2FAA020E568AF009EA554 /* FcStrSetDestroy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrSetDestroy.3; sourceTree = "<group>"; };
-		B3E2FAA120E568AF009EA554 /* FcLangSetHasLang.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangSetHasLang.3; sourceTree = "<group>"; };
-		B3E2FAA220E568AF009EA554 /* FcDirSave.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcDirSave.3; sourceTree = "<group>"; };
-		B3E2FAA320E568AF009EA554 /* FcGetDefaultLangs.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcGetDefaultLangs.3; sourceTree = "<group>"; };
-		B3E2FAA420E568AF009EA554 /* FcStrListCreate.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrListCreate.3; sourceTree = "<group>"; };
-		B3E2FAA520E568AF009EA554 /* FcUcs4ToUtf8.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcUcs4ToUtf8.3; sourceTree = "<group>"; };
-		B3E2FAA620E568AF009EA554 /* FcDirCacheClean.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcDirCacheClean.3; sourceTree = "<group>"; };
-		B3E2FAA720E568AF009EA554 /* FcNameUnparse.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcNameUnparse.3; sourceTree = "<group>"; };
-		B3E2FAA820E568AF009EA554 /* FcCharSetCreate.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetCreate.3; sourceTree = "<group>"; };
-		B3E2FAA920E568AF009EA554 /* FcConfigSetSysRoot.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigSetSysRoot.3; sourceTree = "<group>"; };
-		B3E2FAAA20E568AF009EA554 /* FcCharSetIsSubset.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetIsSubset.3; sourceTree = "<group>"; };
-		B3E2FAAB20E568AF009EA554 /* FcRangeGetDouble.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcRangeGetDouble.3; sourceTree = "<group>"; };
-		B3E2FAAC20E568AF009EA554 /* FcObjectSetAdd.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcObjectSetAdd.3; sourceTree = "<group>"; };
-		B3E2FAAD20E568AF009EA554 /* FcBlanksCreate.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcBlanksCreate.3; sourceTree = "<group>"; };
-		B3E2FAAE20E568AF009EA554 /* FcLangSetDestroy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangSetDestroy.3; sourceTree = "<group>"; };
-		B3E2FAAF20E568AF009EA554 /* FcNameGetObjectType.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcNameGetObjectType.3; sourceTree = "<group>"; };
-		B3E2FAB020E568AF009EA554 /* FcNameUnregisterConstants.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcNameUnregisterConstants.3; sourceTree = "<group>"; };
-		B3E2FAB120E568AF009EA554 /* FcPatternGetWithBinding.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternGetWithBinding.3; sourceTree = "<group>"; };
-		B3E2FAB220E568AF009EA554 /* FcAtomicNewFile.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcAtomicNewFile.3; sourceTree = "<group>"; };
-		B3E2FAB320E568AF009EA554 /* FcConfigParseAndLoad.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigParseAndLoad.3; sourceTree = "<group>"; };
-		B3E2FAB420E568AF009EA554 /* FcValueSave.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcValueSave.3; sourceTree = "<group>"; };
-		B3E2FAB520E568AF009EA554 /* FcFontList.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFontList.3; sourceTree = "<group>"; };
-		B3E2FAB620E568AF009EA554 /* FcConfigCreate.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigCreate.3; sourceTree = "<group>"; };
-		B3E2FAB720E568AF009EA554 /* FcRangeCreateInteger.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcRangeCreateInteger.3; sourceTree = "<group>"; };
-		B3E2FAB820E568AF009EA554 /* FcNameGetConstant.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcNameGetConstant.3; sourceTree = "<group>"; };
-		B3E2FAB920E568AF009EA554 /* FcFreeTypeCharIndex.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFreeTypeCharIndex.3; sourceTree = "<group>"; };
-		B3E2FABA20E568AF009EA554 /* FcFontSetAdd.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFontSetAdd.3; sourceTree = "<group>"; };
-		B3E2FABB20E568AF009EA554 /* FcStrCmp.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrCmp.3; sourceTree = "<group>"; };
-		B3E2FABC20E568AF009EA554 /* FcStrSetAdd.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrSetAdd.3; sourceTree = "<group>"; };
-		B3E2FABD20E568AF009EA554 /* FcFontSetPrint.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFontSetPrint.3; sourceTree = "<group>"; };
-		B3E2FABE20E568AF009EA554 /* FcConfigAppFontClear.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigAppFontClear.3; sourceTree = "<group>"; };
-		B3E2FABF20E568AF009EA554 /* FcPatternAddWeak.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternAddWeak.3; sourceTree = "<group>"; };
-		B3E2FAC020E568AF009EA554 /* FcCharSetNew.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetNew.3; sourceTree = "<group>"; };
-		B3E2FAC120E568AF009EA554 /* FcStrSetAddFilename.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrSetAddFilename.3; sourceTree = "<group>"; };
-		B3E2FAC220E568B0009EA554 /* FcConfigFileInfoIterInit.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigFileInfoIterInit.3; sourceTree = "<group>"; };
-		B3E2FAC320E568B0009EA554 /* FcWeightFromOpenType.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcWeightFromOpenType.3; sourceTree = "<group>"; };
-		B3E2FAC420E568B0009EA554 /* FcUtf16Len.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcUtf16Len.3; sourceTree = "<group>"; };
-		B3E2FAC520E568B0009EA554 /* FcValuePrint.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcValuePrint.3; sourceTree = "<group>"; };
-		B3E2FAC620E568B0009EA554 /* FcConfigFileInfoIterNext.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigFileInfoIterNext.3; sourceTree = "<group>"; };
-		B3E2FAC720E568B0009EA554 /* FcConfigFileInfoIterGet.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigFileInfoIterGet.3; sourceTree = "<group>"; };
-		B3E2FAC820E568B0009EA554 /* FcLangSetSubtract.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangSetSubtract.3; sourceTree = "<group>"; };
-		B3E2FAC920E568B0009EA554 /* FcUtf8Len.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcUtf8Len.3; sourceTree = "<group>"; };
-		B3E2FACA20E568B0009EA554 /* FcBlanksIsMember.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcBlanksIsMember.3; sourceTree = "<group>"; };
-		B3E2FACB20E568B0009EA554 /* FcBlanksDestroy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcBlanksDestroy.3; sourceTree = "<group>"; };
-		B3E2FACC20E568B0009EA554 /* FcUtf8ToUcs4.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcUtf8ToUcs4.3; sourceTree = "<group>"; };
-		B3E2FACD20E568B0009EA554 /* FcPatternDestroy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternDestroy.3; sourceTree = "<group>"; };
-		B3E2FACE20E568B0009EA554 /* FcLangSetAdd.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangSetAdd.3; sourceTree = "<group>"; };
-		B3E2FACF20E568B0009EA554 /* FcPatternPrint.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternPrint.3; sourceTree = "<group>"; };
-		B3E2FAD020E568B0009EA554 /* FcConfigGetSysRoot.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigGetSysRoot.3; sourceTree = "<group>"; };
-		B3E2FAD120E568B0009EA554 /* FcFontSetCreate.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFontSetCreate.3; sourceTree = "<group>"; };
-		B3E2FAD220E568B0009EA554 /* FcMatrixCopy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcMatrixCopy.3; sourceTree = "<group>"; };
-		B3E2FAD320E568B0009EA554 /* FcInit.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcInit.3; sourceTree = "<group>"; };
-		B3E2FAD420E568B0009EA554 /* FcInitBringUptoDate.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcInitBringUptoDate.3; sourceTree = "<group>"; };
-		B3E2FAD520E568B0009EA554 /* FcLangSetContains.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangSetContains.3; sourceTree = "<group>"; };
-		B3E2FAD620E568B0009EA554 /* FcDirCacheUnlink.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcDirCacheUnlink.3; sourceTree = "<group>"; };
-		B3E2FAD720E568B0009EA554 /* FcCharSetUnion.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetUnion.3; sourceTree = "<group>"; };
-		B3E2FAD820E568B0009EA554 /* FcRangeCopy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcRangeCopy.3; sourceTree = "<group>"; };
-		B3E2FAD920E568B0009EA554 /* FcConfigBuildFonts.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigBuildFonts.3; sourceTree = "<group>"; };
-		B3E2FADA20E568B0009EA554 /* FcFreeTypeQueryFace.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFreeTypeQueryFace.3; sourceTree = "<group>"; };
-		B3E2FADB20E568B0009EA554 /* FcStrListDone.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrListDone.3; sourceTree = "<group>"; };
-		B3E2FADC20E568B0009EA554 /* FcCharSetCoverage.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetCoverage.3; sourceTree = "<group>"; };
-		B3E2FADD20E568B0009EA554 /* FcFontSetMatch.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFontSetMatch.3; sourceTree = "<group>"; };
-		B3E2FADE20E568B0009EA554 /* FcBlanksAdd.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcBlanksAdd.3; sourceTree = "<group>"; };
-		B3E2FADF20E568B0009EA554 /* FcStrDirname.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrDirname.3; sourceTree = "<group>"; };
-		B3E2FAE020E568B0009EA554 /* FcPatternAdd.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcPatternAdd.3; sourceTree = "<group>"; };
-		B3E2FAE120E568B0009EA554 /* FcStrPlus.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrPlus.3; sourceTree = "<group>"; };
-		B3E2FAE220E568B0009EA554 /* FcStrSetEqual.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcStrSetEqual.3; sourceTree = "<group>"; };
-		B3E2FAE320E568B0009EA554 /* FcFreeTypeQuery.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFreeTypeQuery.3; sourceTree = "<group>"; };
-		B3E2FAE420E568B0009EA554 /* FcFileScan.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcFileScan.3; sourceTree = "<group>"; };
-		B3E2FAE520E568B0009EA554 /* FcAtomicCreate.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcAtomicCreate.3; sourceTree = "<group>"; };
-		B3E2FAE620E568B0009EA554 /* FcConfigSetCurrent.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigSetCurrent.3; sourceTree = "<group>"; };
-		B3E2FAE720E568B0009EA554 /* FcLangSetEqual.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcLangSetEqual.3; sourceTree = "<group>"; };
-		B3E2FAE820E568B0009EA554 /* FcCharSetNextPage.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetNextPage.3; sourceTree = "<group>"; };
-		B3E2FAE920E568B0009EA554 /* FcCharSetCopy.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcCharSetCopy.3; sourceTree = "<group>"; };
-		B3E2FAEA20E568B0009EA554 /* FcConfigGetFonts.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcConfigGetFonts.3; sourceTree = "<group>"; };
-		B3E2FAEB20E568B0009EA554 /* FcMatrixInit.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcMatrixInit.3; sourceTree = "<group>"; };
-		B3E2FAEC20E568B0009EA554 /* FcDirCacheRead.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FcDirCacheRead.3; sourceTree = "<group>"; };
-		B3E2FAEE20E568B0009EA554 /* fc-validate.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = "fc-validate.1"; sourceTree = "<group>"; };
-		B3E2FAEF20E568B0009EA554 /* fc-scan.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = "fc-scan.1"; sourceTree = "<group>"; };
-		B3E2FAF020E568B0009EA554 /* fc-cat.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = "fc-cat.1"; sourceTree = "<group>"; };
-		B3E2FAF120E568B0009EA554 /* fc-list.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = "fc-list.1"; sourceTree = "<group>"; };
-		B3E2FAF220E568B0009EA554 /* fc-match.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = "fc-match.1"; sourceTree = "<group>"; };
-		B3E2FAF320E568B0009EA554 /* fc-cache.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = "fc-cache.1"; sourceTree = "<group>"; };
-		B3E2FAF420E568B0009EA554 /* fc-pattern.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = "fc-pattern.1"; sourceTree = "<group>"; };
-		B3E2FAF520E568B0009EA554 /* fc-query.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = "fc-query.1"; sourceTree = "<group>"; };
-		B3E2FAF620E568B0009EA554 /* fc-conflist.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = "fc-conflist.1"; sourceTree = "<group>"; };
-		B3E2FAF920E568B0009EA554 /* fonts.dtd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fonts.dtd; sourceTree = "<group>"; };
-		B3E2FAFC20E568B0009EA554 /* 65-khmer.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "65-khmer.conf"; sourceTree = "<group>"; };
-		B3E2FAFD20E568B0009EA554 /* 65-nonlatin.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "65-nonlatin.conf"; sourceTree = "<group>"; };
-		B3E2FAFE20E568B0009EA554 /* 10-hinting-medium.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "10-hinting-medium.conf"; sourceTree = "<group>"; };
-		B3E2FAFF20E568B0009EA554 /* 30-metric-aliases.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "30-metric-aliases.conf"; sourceTree = "<group>"; };
-		B3E2FB0020E568B0009EA554 /* 10-sub-pixel-vbgr.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "10-sub-pixel-vbgr.conf"; sourceTree = "<group>"; };
-		B3E2FB0120E568B0009EA554 /* 10-unhinted.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "10-unhinted.conf"; sourceTree = "<group>"; };
-		B3E2FB0220E568B0009EA554 /* 11-lcdfilter-default.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "11-lcdfilter-default.conf"; sourceTree = "<group>"; };
-		B3E2FB0320E568B0009EA554 /* 80-delicious.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "80-delicious.conf"; sourceTree = "<group>"; };
-		B3E2FB0420E568B0009EA554 /* 20-unhint-small-vera.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "20-unhint-small-vera.conf"; sourceTree = "<group>"; };
-		B3E2FB0520E568B0009EA554 /* 10-hinting-full.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "10-hinting-full.conf"; sourceTree = "<group>"; };
-		B3E2FB0620E568B0009EA554 /* 65-fonts-persian.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "65-fonts-persian.conf"; sourceTree = "<group>"; };
-		B3E2FB0720E568B0009EA554 /* 10-no-sub-pixel.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "10-no-sub-pixel.conf"; sourceTree = "<group>"; };
-		B3E2FB0820E568B0009EA554 /* 10-hinting-slight.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "10-hinting-slight.conf"; sourceTree = "<group>"; };
-		B3E2FB0920E568B0009EA554 /* 51-local.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "51-local.conf"; sourceTree = "<group>"; };
-		B3E2FB0A20E568B0009EA554 /* 45-latin.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "45-latin.conf"; sourceTree = "<group>"; };
-		B3E2FB0B20E568B0009EA554 /* 10-sub-pixel-rgb.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "10-sub-pixel-rgb.conf"; sourceTree = "<group>"; };
-		B3E2FB0C20E568B0009EA554 /* 10-autohint.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "10-autohint.conf"; sourceTree = "<group>"; };
-		B3E2FB0D20E568B0009EA554 /* 49-sansserif.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "49-sansserif.conf"; sourceTree = "<group>"; };
-		B3E2FB0E20E568B0009EA554 /* 40-nonlatin.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "40-nonlatin.conf"; sourceTree = "<group>"; };
-		B3E2FB0F20E568B0009EA554 /* 70-no-bitmaps.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "70-no-bitmaps.conf"; sourceTree = "<group>"; };
-		B3E2FB1020E568B0009EA554 /* 60-latin.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "60-latin.conf"; sourceTree = "<group>"; };
-		B3E2FB1120E568B0009EA554 /* 25-unhint-nonlatin.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "25-unhint-nonlatin.conf"; sourceTree = "<group>"; };
-		B3E2FB1220E568B0009EA554 /* 60-generic.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "60-generic.conf"; sourceTree = "<group>"; };
-		B3E2FB1320E568B0009EA554 /* 45-generic.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "45-generic.conf"; sourceTree = "<group>"; };
-		B3E2FB1420E568B0009EA554 /* 11-lcdfilter-legacy.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "11-lcdfilter-legacy.conf"; sourceTree = "<group>"; };
-		B3E2FB1520E568B0009EA554 /* 10-sub-pixel-bgr.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "10-sub-pixel-bgr.conf"; sourceTree = "<group>"; };
-		B3E2FB1620E568B0009EA554 /* 70-yes-bitmaps.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "70-yes-bitmaps.conf"; sourceTree = "<group>"; };
-		B3E2FB1720E568B0009EA554 /* 69-unifont.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "69-unifont.conf"; sourceTree = "<group>"; };
-		B3E2FB1820E568B0009EA554 /* 50-user.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "50-user.conf"; sourceTree = "<group>"; };
-		B3E2FB1920E568B0009EA554 /* 10-scale-bitmap-fonts.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "10-scale-bitmap-fonts.conf"; sourceTree = "<group>"; };
-		B3E2FB1A20E568B0009EA554 /* 90-synthetic.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "90-synthetic.conf"; sourceTree = "<group>"; };
-		B3E2FB1B20E568B0009EA554 /* 10-hinting-none.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "10-hinting-none.conf"; sourceTree = "<group>"; };
-		B3E2FB1C20E568B0009EA554 /* 10-sub-pixel-vrgb.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "10-sub-pixel-vrgb.conf"; sourceTree = "<group>"; };
-		B3E2FB1D20E568B0009EA554 /* 11-lcdfilter-light.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "11-lcdfilter-light.conf"; sourceTree = "<group>"; };
-		B3E2FB2020E568B0009EA554 /* fontconfig.loc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fontconfig.loc; sourceTree = "<group>"; };
-		B3E2FB2120E568B0009EA554 /* fontconfig.its */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fontconfig.its; sourceTree = "<group>"; };
-		B3E2FB2420E568B0009EA554 /* fontconfig-user.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fontconfig-user.txt"; sourceTree = "<group>"; };
-		B3E2FB2520E568B0009EA554 /* fontconfig-devel.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "fontconfig-devel.pdf"; sourceTree = "<group>"; };
-		B3E2FB2720E568B0009EA554 /* fcpatternget.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatternget.html; sourceTree = "<group>"; };
-		B3E2FB2820E568B0009EA554 /* fcfini.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfini.html; sourceTree = "<group>"; };
-		B3E2FB2920E568B0009EA554 /* fcconfiggetsysroot.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfiggetsysroot.html; sourceTree = "<group>"; };
-		B3E2FB2A20E568B0009EA554 /* fcstrlistfirst.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrlistfirst.html; sourceTree = "<group>"; };
-		B3E2FB2B20E568B0009EA554 /* fcpatternreference.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatternreference.html; sourceTree = "<group>"; };
-		B3E2FB2C20E568B0009EA554 /* fcutf16len.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcutf16len.html; sourceTree = "<group>"; };
-		B3E2FB2D20E568B0009EA554 /* fcfreetypecharindex.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfreetypecharindex.html; sourceTree = "<group>"; };
-		B3E2FB2E20E568B0009EA554 /* fcutf16toucs4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcutf16toucs4.html; sourceTree = "<group>"; };
-		B3E2FB2F20E568B0009EA554 /* fcconfiggetcache.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfiggetcache.html; sourceTree = "<group>"; };
-		B3E2FB3020E568B0009EA554 /* fccharsetfirstpage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetfirstpage.html; sourceTree = "<group>"; };
-		B3E2FB3120E568B0009EA554 /* fcobjectsetbuild.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcobjectsetbuild.html; sourceTree = "<group>"; };
-		B3E2FB3220E568B0009EA554 /* fcstrfree.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrfree.html; sourceTree = "<group>"; };
-		B3E2FB3320E568B0009EA554 /* fcconfigbuildfonts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigbuildfonts.html; sourceTree = "<group>"; };
-		B3E2FB3420E568B0009EA554 /* fccharsetunion.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetunion.html; sourceTree = "<group>"; };
-		B3E2FB3520E568B0009EA554 /* fcconfighome.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfighome.html; sourceTree = "<group>"; };
-		B3E2FB3620E568B0009EA554 /* fclangsetcreate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclangsetcreate.html; sourceTree = "<group>"; };
-		B3E2FB3720E568B0009EA554 /* fclangsetgetlangs.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclangsetgetlangs.html; sourceTree = "<group>"; };
-		B3E2FB3820E568B0009EA554 /* fcucs4toutf8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcucs4toutf8.html; sourceTree = "<group>"; };
-		B3E2FB3920E568B0009EA554 /* fcconfigparseandloadfrommemory.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigparseandloadfrommemory.html; sourceTree = "<group>"; };
-		B3E2FB3A20E568B0009EA554 /* fcdircacheloadfile.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcdircacheloadfile.html; sourceTree = "<group>"; };
-		B3E2FB3B20E568B0009EA554 /* fccachenumfont.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccachenumfont.html; sourceTree = "<group>"; };
-		B3E2FB3C20E568B0009EA554 /* fcweightfromopentypedouble.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcweightfromopentypedouble.html; sourceTree = "<group>"; };
-		B3E2FB3D20E568B0009EA554 /* fcnamegetobjecttype.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcnamegetobjecttype.html; sourceTree = "<group>"; };
-		B3E2FB3E20E568B0009EA554 /* fcvalueequal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcvalueequal.html; sourceTree = "<group>"; };
-		B3E2FB3F20E568B0009EA554 /* fclangsetdel.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclangsetdel.html; sourceTree = "<group>"; };
-		B3E2FB4020E568B0009EA554 /* fcconfigenablehome.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigenablehome.html; sourceTree = "<group>"; };
-		B3E2FB4120E568B0009EA554 /* fcconfiggetconfigfiles.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfiggetconfigfiles.html; sourceTree = "<group>"; };
-		B3E2FB4220E568B0009EA554 /* fcutf8toucs4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcutf8toucs4.html; sourceTree = "<group>"; };
-		B3E2FB4320E568B0009EA554 /* fccharsetnew.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetnew.html; sourceTree = "<group>"; };
-		B3E2FB4420E568B0009EA554 /* fcnameregisterobjecttypes.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcnameregisterobjecttypes.html; sourceTree = "<group>"; };
-		B3E2FB4520E568B0009EA554 /* fcconfigparseandload.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigparseandload.html; sourceTree = "<group>"; };
-		B3E2FB4620E568B0009EA554 /* fcstrsetcreate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrsetcreate.html; sourceTree = "<group>"; };
-		B3E2FB4720E568B0009EA554 /* fccharsetcoverage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetcoverage.html; sourceTree = "<group>"; };
-		B3E2FB4820E568B0009EA554 /* fccachesubdir.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccachesubdir.html; sourceTree = "<group>"; };
-		B3E2FB4920E568B0009EA554 /* fcpatternprint.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatternprint.html; sourceTree = "<group>"; };
-		B3E2FB4A20E568B0009EA554 /* fcfontsetprint.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfontsetprint.html; sourceTree = "<group>"; };
-		B3E2FB4B20E568B0009EA554 /* fcconfiggetfontdirs.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfiggetfontdirs.html; sourceTree = "<group>"; };
-		B3E2FB4C20E568B0009EA554 /* fcmatrixequal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcmatrixequal.html; sourceTree = "<group>"; };
-		B3E2FB4D20E568B0009EA554 /* fcobjectsetdestroy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcobjectsetdestroy.html; sourceTree = "<group>"; };
-		B3E2FB4E20E568B0009EA554 /* fcfilescan.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfilescan.html; sourceTree = "<group>"; };
-		B3E2FB4F20E568B0009EA554 /* fclangsetequal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclangsetequal.html; sourceTree = "<group>"; };
-		B3E2FB5020E568B0009EA554 /* ln12.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ln12.html; sourceTree = "<group>"; };
-		B3E2FB5120E568B0009EA554 /* fcstrsetdestroy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrsetdestroy.html; sourceTree = "<group>"; };
-		B3E2FB5220E568B0009EA554 /* fcpatternformat.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatternformat.html; sourceTree = "<group>"; };
-		B3E2FB5320E568B0009EA554 /* fccharsetissubset.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetissubset.html; sourceTree = "<group>"; };
-		B3E2FB5420E568B0009EA554 /* fcatomicdestroy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcatomicdestroy.html; sourceTree = "<group>"; };
-		B3E2FB5520E568B0009EA554 /* fcmatrixscale.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcmatrixscale.html; sourceTree = "<group>"; };
-		B3E2FB5620E568B0009EA554 /* fclangsetadd.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclangsetadd.html; sourceTree = "<group>"; };
-		B3E2FB5720E568B0009EA554 /* fcgetlangs.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcgetlangs.html; sourceTree = "<group>"; };
-		B3E2FB5820E568B0009EA554 /* fcconfigcreate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigcreate.html; sourceTree = "<group>"; };
-		B3E2FB5920E568B0009EA554 /* fccachedir.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccachedir.html; sourceTree = "<group>"; };
-		B3E2FB5A20E568B0009EA554 /* fcnamegetconstant.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcnamegetconstant.html; sourceTree = "<group>"; };
-		B3E2FB5B20E568B0009EA554 /* fcfreetypecharsetandspacing.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfreetypecharsetandspacing.html; sourceTree = "<group>"; };
-		B3E2FB5C20E568B0009EA554 /* fcconfigappfontaddfile.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigappfontaddfile.html; sourceTree = "<group>"; };
-		B3E2FB5D20E568B0009EA554 /* fcisupper.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcisupper.html; sourceTree = "<group>"; };
-		B3E2FB5E20E568B0009EA554 /* fcinitreinitialize.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcinitreinitialize.html; sourceTree = "<group>"; };
-		B3E2FB5F20E568B0009EA554 /* fccharsetmerge.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetmerge.html; sourceTree = "<group>"; };
-		B3E2FB6020E568B0009EA554 /* fcnameunregisterobjecttypes.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcnameunregisterobjecttypes.html; sourceTree = "<group>"; };
-		B3E2FB6120E568B0009EA554 /* fcatomiccreate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcatomiccreate.html; sourceTree = "<group>"; };
-		B3E2FB6220E568B0009EA554 /* fcweightfromopentype.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcweightfromopentype.html; sourceTree = "<group>"; };
-		B3E2FB6320E568B0009EA554 /* fcstrcmp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrcmp.html; sourceTree = "<group>"; };
-		B3E2FB6420E568B0009EA554 /* fcconfiggetrescaninterval.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfiggetrescaninterval.html; sourceTree = "<group>"; };
-		B3E2FB6520E568B0009EA554 /* fcconfiggetfonts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfiggetfonts.html; sourceTree = "<group>"; };
-		B3E2FB6620E568B0009EA554 /* fcpatternbuild.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatternbuild.html; sourceTree = "<group>"; };
-		B3E2FB6720E568B0009EA554 /* fcmatrixshear.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcmatrixshear.html; sourceTree = "<group>"; };
-		B3E2FB6820E568B0009EA554 /* fcrangecopy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcrangecopy.html; sourceTree = "<group>"; };
-		B3E2FB6920E568B0009EA554 /* fcfileisdir.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfileisdir.html; sourceTree = "<group>"; };
-		B3E2FB6A20E568B0009EA554 /* fcatomicnewfile.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcatomicnewfile.html; sourceTree = "<group>"; };
-		B3E2FB6B20E568B0009EA554 /* fcatomiclock.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcatomiclock.html; sourceTree = "<group>"; };
-		B3E2FB6C20E568B0009EA554 /* fcnameunparse.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcnameunparse.html; sourceTree = "<group>"; };
-		B3E2FB6D20E568B1009EA554 /* fcmatrixmultiply.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcmatrixmultiply.html; sourceTree = "<group>"; };
-		B3E2FB6E20E568B1009EA554 /* fcstrsetdel.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrsetdel.html; sourceTree = "<group>"; };
-		B3E2FB6F20E568B1009EA554 /* fclanggetcharset.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclanggetcharset.html; sourceTree = "<group>"; };
-		B3E2FB7020E568B1009EA554 /* fcfontsetdestroy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfontsetdestroy.html; sourceTree = "<group>"; };
-		B3E2FB7120E568B1009EA554 /* fccharsetsubtractcount.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetsubtractcount.html; sourceTree = "<group>"; };
-		B3E2FB7220E568B1009EA554 /* fcstrcopy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrcopy.html; sourceTree = "<group>"; };
-		B3E2FB7320E568B1009EA554 /* fccharsetintersectcount.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetintersectcount.html; sourceTree = "<group>"; };
-		B3E2FB7420E568B1009EA554 /* x19.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = x19.html; sourceTree = "<group>"; };
-		B3E2FB7520E568B1009EA554 /* fcpatterncreate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatterncreate.html; sourceTree = "<group>"; };
-		B3E2FB7620E568B1009EA554 /* fcutf8len.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcutf8len.html; sourceTree = "<group>"; };
-		B3E2FB7720E568B1009EA554 /* fccharsethaschar.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsethaschar.html; sourceTree = "<group>"; };
-		B3E2FB7820E568B1009EA554 /* fcgetdefaultlangs.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcgetdefaultlangs.html; sourceTree = "<group>"; };
-		B3E2FB7920E568B1009EA554 /* fcdircacheclean.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcdircacheclean.html; sourceTree = "<group>"; };
-		B3E2FB7A20E568B1009EA554 /* fcobjectsetadd.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcobjectsetadd.html; sourceTree = "<group>"; };
-		B3E2FB7B20E568B1009EA554 /* fcconfigfileinfoiterget.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigfileinfoiterget.html; sourceTree = "<group>"; };
-		B3E2FB7C20E568B1009EA554 /* fcstrstrignorecase.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrstrignorecase.html; sourceTree = "<group>"; };
-		B3E2FB7D20E568B1009EA554 /* fclangnormalize.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclangnormalize.html; sourceTree = "<group>"; };
-		B3E2FB7E20E568B1009EA554 /* fcconfigfileinfoiterinit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigfileinfoiterinit.html; sourceTree = "<group>"; };
-		B3E2FB7F20E568B1009EA554 /* fcmatrixcopy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcmatrixcopy.html; sourceTree = "<group>"; };
-		B3E2FB8020E568B1009EA554 /* fcconfigsetcurrent.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigsetcurrent.html; sourceTree = "<group>"; };
-		B3E2FB8120E568B1009EA554 /* fclangsetdestroy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclangsetdestroy.html; sourceTree = "<group>"; };
-		B3E2FB8220E568B1009EA554 /* fclangsetcopy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclangsetcopy.html; sourceTree = "<group>"; };
-		B3E2FB8320E568B1009EA554 /* fcstrdowncase.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrdowncase.html; sourceTree = "<group>"; };
-		B3E2FB8420E568B1009EA554 /* fcpatternget-type.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "fcpatternget-type.html"; sourceTree = "<group>"; };
-		B3E2FB8520E568B1009EA554 /* fcpatternadd-type.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "fcpatternadd-type.html"; sourceTree = "<group>"; };
-		B3E2FB8620E568B1009EA554 /* fcstrsetadd.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrsetadd.html; sourceTree = "<group>"; };
-		B3E2FB8720E568B1009EA554 /* fcgetversion.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcgetversion.html; sourceTree = "<group>"; };
-		B3E2FB8820E568B1009EA554 /* fcpatternremove.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatternremove.html; sourceTree = "<group>"; };
-		B3E2FB8920E568B1009EA554 /* fcrangecreateinteger.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcrangecreateinteger.html; sourceTree = "<group>"; };
-		B3E2FB8A20E568B1009EA554 /* fcnameconstant.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcnameconstant.html; sourceTree = "<group>"; };
-		B3E2FB8B20E568B1009EA554 /* fclangsetcontains.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclangsetcontains.html; sourceTree = "<group>"; };
-		B3E2FB8C20E568B1009EA554 /* fcconfigsetrescaninterval.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigsetrescaninterval.html; sourceTree = "<group>"; };
-		B3E2FB8D20E568B1009EA554 /* fcconfiggetcachedirs.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfiggetcachedirs.html; sourceTree = "<group>"; };
-		B3E2FB8E20E568B1009EA554 /* fcdirsave.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcdirsave.html; sourceTree = "<group>"; };
-		B3E2FB8F20E568B1009EA554 /* fcobjectsetcreate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcobjectsetcreate.html; sourceTree = "<group>"; };
-		B3E2FB9020E568B1009EA554 /* fcatomicunlock.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcatomicunlock.html; sourceTree = "<group>"; };
-		B3E2FB9120E568B1009EA554 /* fcnameunregisterconstants.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcnameunregisterconstants.html; sourceTree = "<group>"; };
-		B3E2FB9220E568B1009EA554 /* fccharsetcreate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetcreate.html; sourceTree = "<group>"; };
-		B3E2FB9320E568B1009EA554 /* fccharsetcount.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetcount.html; sourceTree = "<group>"; };
-		B3E2FB9420E568B1009EA554 /* fcrangecreatedouble.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcrangecreatedouble.html; sourceTree = "<group>"; };
-		B3E2FB9520E568B1009EA554 /* fcatomicdeletenew.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcatomicdeletenew.html; sourceTree = "<group>"; };
-		B3E2FB9620E568B1009EA554 /* fclangsethaslang.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclangsethaslang.html; sourceTree = "<group>"; };
-		B3E2FB9720E568B1009EA554 /* fcpatternduplicate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatternduplicate.html; sourceTree = "<group>"; };
-		B3E2FB9820E568B1009EA554 /* fcstrplus.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrplus.html; sourceTree = "<group>"; };
-		B3E2FB9920E568B1009EA554 /* fcstrsetaddfilename.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrsetaddfilename.html; sourceTree = "<group>"; };
-		B3E2FB9A20E568B1009EA554 /* fcpatterndestroy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatterndestroy.html; sourceTree = "<group>"; };
-		B3E2FB9B20E568B1009EA554 /* fccharsetdelchar.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetdelchar.html; sourceTree = "<group>"; };
-		B3E2FB9C20E568B1009EA554 /* fcatomicorigfile.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcatomicorigfile.html; sourceTree = "<group>"; };
-		B3E2FB9D20E568B1009EA554 /* fccharsetdestroy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetdestroy.html; sourceTree = "<group>"; };
-		B3E2FB9E20E568B1009EA554 /* fcinitloadconfig.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcinitloadconfig.html; sourceTree = "<group>"; };
-		B3E2FB9F20E568B1009EA554 /* fcblanksadd.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcblanksadd.html; sourceTree = "<group>"; };
-		B3E2FBA020E568B1009EA554 /* fcstrstr.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrstr.html; sourceTree = "<group>"; };
-		B3E2FBA120E568B1009EA554 /* fcfontsetsort.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfontsetsort.html; sourceTree = "<group>"; };
-		B3E2FBA220E568B1009EA554 /* fcinit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcinit.html; sourceTree = "<group>"; };
-		B3E2FBA320E568B1009EA554 /* fccharsetintersect.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetintersect.html; sourceTree = "<group>"; };
-		B3E2FBA420E568B1009EA554 /* fcpatterndel.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatterndel.html; sourceTree = "<group>"; };
-		B3E2FBA520E568B1009EA554 /* fcstrlistcreate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrlistcreate.html; sourceTree = "<group>"; };
-		B3E2FBA620E568B1009EA554 /* fccharsetnextpage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetnextpage.html; sourceTree = "<group>"; };
-		B3E2FBA720E568B1009EA554 /* fcconfigreference.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigreference.html; sourceTree = "<group>"; };
-		B3E2FBA820E568B1009EA554 /* fcconfiguptodate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfiguptodate.html; sourceTree = "<group>"; };
-		B3E2FBA920E568B1009EA554 /* fcvalueprint.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcvalueprint.html; sourceTree = "<group>"; };
-		B3E2FBAA20E568B1009EA554 /* fcblanksismember.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcblanksismember.html; sourceTree = "<group>"; };
-		B3E2FBAB20E568B1009EA554 /* fcconfigsubstitute.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigsubstitute.html; sourceTree = "<group>"; };
-		B3E2FBAC20E568B1009EA554 /* fcconfigfilename.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigfilename.html; sourceTree = "<group>"; };
-		B3E2FBAD20E568B1009EA554 /* fcatomicreplaceorig.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcatomicreplaceorig.html; sourceTree = "<group>"; };
-		B3E2FBAE20E568B1009EA554 /* fcpatternhash.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatternhash.html; sourceTree = "<group>"; };
-		B3E2FBAF20E568B1009EA554 /* fcblanksdestroy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcblanksdestroy.html; sourceTree = "<group>"; };
-		B3E2FBB020E568B1009EA554 /* fcpatternadd.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatternadd.html; sourceTree = "<group>"; };
-		B3E2FBB120E568B1009EA554 /* fcconfiggetconfigdirs.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfiggetconfigdirs.html; sourceTree = "<group>"; };
-		B3E2FBB220E568B1009EA554 /* fcdircacheunload.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcdircacheunload.html; sourceTree = "<group>"; };
-		B3E2FBB320E568B1009EA554 /* fcfontsort.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfontsort.html; sourceTree = "<group>"; };
-		B3E2FBB420E568B1009EA554 /* fcstrcmpignorecase.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrcmpignorecase.html; sourceTree = "<group>"; };
-		B3E2FBB520E568B1009EA554 /* fcpatternequal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatternequal.html; sourceTree = "<group>"; };
-		B3E2FBB620E568B1009EA554 /* fccharsetaddchar.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetaddchar.html; sourceTree = "<group>"; };
-		B3E2FBB720E568B1009EA554 /* fcconfiggetcurrent.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfiggetcurrent.html; sourceTree = "<group>"; };
-		B3E2FBB820E568B1009EA554 /* fcstrcopyfilename.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrcopyfilename.html; sourceTree = "<group>"; };
-		B3E2FBB920E568B1009EA554 /* fcdircacheunlink.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcdircacheunlink.html; sourceTree = "<group>"; };
-		B3E2FBBA20E568B1009EA554 /* fcfreetypequeryface.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfreetypequeryface.html; sourceTree = "<group>"; };
-		B3E2FBBB20E568B1009EA554 /* fcmatrixinit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcmatrixinit.html; sourceTree = "<group>"; };
-		B3E2FBBC20E568B1009EA554 /* fcstrdirname.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrdirname.html; sourceTree = "<group>"; };
-		B3E2FBBD20E568B1009EA554 /* fctolower.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fctolower.html; sourceTree = "<group>"; };
-		B3E2FBBE20E568B1009EA554 /* fccachecopyset.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccachecopyset.html; sourceTree = "<group>"; };
-		B3E2FBBF20E568B1009EA554 /* fcblankscreate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcblankscreate.html; sourceTree = "<group>"; };
-		B3E2FBC020E568B1009EA554 /* fcnameparse.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcnameparse.html; sourceTree = "<group>"; };
-		B3E2FBC120E568B1009EA554 /* fcnameregisterconstants.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcnameregisterconstants.html; sourceTree = "<group>"; };
-		B3E2FBC220E568B1009EA554 /* fcstrsetequal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrsetequal.html; sourceTree = "<group>"; };
-		B3E2FBC320E568B1009EA554 /* x31.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = x31.html; sourceTree = "<group>"; };
-		B3E2FBC420E568B1009EA554 /* fcfontsetlist.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfontsetlist.html; sourceTree = "<group>"; };
-		B3E2FBC520E568B1009EA554 /* fccachenumsubdir.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccachenumsubdir.html; sourceTree = "<group>"; };
-		B3E2FBC620E568B1009EA554 /* fcfreetypequeryall.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfreetypequeryall.html; sourceTree = "<group>"; };
-		B3E2FBC720E568B1009EA554 /* fcpatternequalsubset.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatternequalsubset.html; sourceTree = "<group>"; };
-		B3E2FBC820E568B1009EA554 /* fcweighttoopentypedouble.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcweighttoopentypedouble.html; sourceTree = "<group>"; };
-		B3E2FBC920E568B1009EA554 /* fcpatternfilter.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatternfilter.html; sourceTree = "<group>"; };
-		B3E2FBCA20E568B1009EA554 /* fcdirscan.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcdirscan.html; sourceTree = "<group>"; };
-		B3E2FBCB20E568B1009EA554 /* fccachecreatetagfile.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccachecreatetagfile.html; sourceTree = "<group>"; };
-		B3E2FBCC20E568B1009EA554 /* fcfontrenderprepare.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfontrenderprepare.html; sourceTree = "<group>"; };
-		B3E2FBCD20E568B1009EA554 /* fccharsetcopy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetcopy.html; sourceTree = "<group>"; };
-		B3E2FBCE20E568B1009EA554 /* fcdircachevalid.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcdircachevalid.html; sourceTree = "<group>"; };
-		B3E2FBCF20E568B1009EA554 /* fcdircachecreateuuid.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcdircachecreateuuid.html; sourceTree = "<group>"; };
-		B3E2FBD020E568B1009EA554 /* fclangsetunion.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclangsetunion.html; sourceTree = "<group>"; };
-		B3E2FBD120E568B1009EA554 /* fcstrlistdone.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrlistdone.html; sourceTree = "<group>"; };
-		B3E2FBD220E568B1009EA554 /* t1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = t1.html; sourceTree = "<group>"; };
-		B3E2FBD320E568B1009EA554 /* fcstrbasename.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrbasename.html; sourceTree = "<group>"; };
-		B3E2FBD420E568B1009EA554 /* fcdircacherescan.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcdircacherescan.html; sourceTree = "<group>"; };
-		B3E2FBD520E568B1009EA554 /* fcpatterngetwithbinding.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatterngetwithbinding.html; sourceTree = "<group>"; };
-		B3E2FBD620E568B1009EA554 /* fcdircacheread.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcdircacheread.html; sourceTree = "<group>"; };
-		B3E2FBD720E568B1009EA554 /* fcvaluedestroy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcvaluedestroy.html; sourceTree = "<group>"; };
-		B3E2FBD820E568B1009EA554 /* fcconfigfileinfoiternext.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigfileinfoiternext.html; sourceTree = "<group>"; };
-		B3E2FBD920E568B1009EA554 /* fcconfiggetblanks.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfiggetblanks.html; sourceTree = "<group>"; };
-		B3E2FBDA20E568B1009EA554 /* fcfontsetadd.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfontsetadd.html; sourceTree = "<group>"; };
-		B3E2FBDB20E568B1009EA554 /* fcfreetypecharset.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfreetypecharset.html; sourceTree = "<group>"; };
-		B3E2FBDC20E568B1009EA554 /* fcislower.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcislower.html; sourceTree = "<group>"; };
-		B3E2FBDD20E568B1009EA554 /* fcpatternaddweak.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcpatternaddweak.html; sourceTree = "<group>"; };
-		B3E2FBDE20E568B1009EA554 /* fcconfigappfontadddir.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigappfontadddir.html; sourceTree = "<group>"; };
-		B3E2FBDF20E568B1009EA554 /* fcfontsetsortdestroy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfontsetsortdestroy.html; sourceTree = "<group>"; };
-		B3E2FBE020E568B1009EA554 /* fcconfigsubstitutewithpat.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigsubstitutewithpat.html; sourceTree = "<group>"; };
-		B3E2FBE120E568B1009EA554 /* fcfontsetmatch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfontsetmatch.html; sourceTree = "<group>"; };
-		B3E2FBE220E568B1009EA554 /* fcinitloadconfigandfonts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcinitloadconfigandfonts.html; sourceTree = "<group>"; };
-		B3E2FBE320E568B1009EA554 /* fcmatrixrotate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcmatrixrotate.html; sourceTree = "<group>"; };
-		B3E2FBE420E568B1009EA554 /* fcdefaultsubstitute.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcdefaultsubstitute.html; sourceTree = "<group>"; };
-		B3E2FBE520E568B1009EA554 /* fcinitbringuptodate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcinitbringuptodate.html; sourceTree = "<group>"; };
-		B3E2FBE620E568B1009EA554 /* fcrangegetdouble.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcrangegetdouble.html; sourceTree = "<group>"; };
-		B3E2FBE720E568B1009EA554 /* fcfontlist.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfontlist.html; sourceTree = "<group>"; };
-		B3E2FBE820E568B1009EA554 /* x103.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = x103.html; sourceTree = "<group>"; };
-		B3E2FBE920E568B1009EA554 /* fcstrsetmember.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrsetmember.html; sourceTree = "<group>"; };
-		B3E2FBEA20E568B1009EA554 /* fclangsetsubtract.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclangsetsubtract.html; sourceTree = "<group>"; };
-		B3E2FBEB20E568B1009EA554 /* fcdircacheload.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcdircacheload.html; sourceTree = "<group>"; };
-		B3E2FBEC20E568B1009EA554 /* fcvaluesave.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcvaluesave.html; sourceTree = "<group>"; };
-		B3E2FBED20E568B1009EA554 /* fccharsetsubtract.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetsubtract.html; sourceTree = "<group>"; };
-		B3E2FBEE20E568B1009EA554 /* fcfreetypequery.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfreetypequery.html; sourceTree = "<group>"; };
-		B3E2FBEF20E568B1009EA554 /* fcconfigsetsysroot.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigsetsysroot.html; sourceTree = "<group>"; };
-		B3E2FBF020E568B1009EA554 /* fcfontmatch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfontmatch.html; sourceTree = "<group>"; };
-		B3E2FBF120E568B1009EA554 /* fcstrlistnext.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcstrlistnext.html; sourceTree = "<group>"; };
-		B3E2FBF220E568B1009EA554 /* fcweighttoopentype.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcweighttoopentype.html; sourceTree = "<group>"; };
-		B3E2FBF320E568B1009EA554 /* fcfontsetcreate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcfontsetcreate.html; sourceTree = "<group>"; };
-		B3E2FBF420E568B1009EA554 /* fcconfigappfontclear.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigappfontclear.html; sourceTree = "<group>"; };
-		B3E2FBF520E568B1009EA554 /* fclangsethash.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclangsethash.html; sourceTree = "<group>"; };
-		B3E2FBF620E568B1009EA554 /* fccharsetequal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fccharsetequal.html; sourceTree = "<group>"; };
-		B3E2FBF720E568B1009EA554 /* fcrangedestroy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcrangedestroy.html; sourceTree = "<group>"; };
-		B3E2FBF820E568B1009EA554 /* fclangsetcompare.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fclangsetcompare.html; sourceTree = "<group>"; };
-		B3E2FBF920E568B1009EA554 /* fcconfigdestroy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fcconfigdestroy.html; sourceTree = "<group>"; };
-		B3E2FBFA20E568B1009EA554 /* fontconfig-devel.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fontconfig-devel.txt"; sourceTree = "<group>"; };
-		B3E2FBFB20E568B1009EA554 /* fontconfig-user.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "fontconfig-user.pdf"; sourceTree = "<group>"; };
-		B3E2FBFC20E568B1009EA554 /* fontconfig-user.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "fontconfig-user.html"; sourceTree = "<group>"; };
 		B3E2FBFF20E568B2009EA554 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
 		B3E2FC0120E568B2009EA554 /* msgconv */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = msgconv; sourceTree = "<group>"; };
 		B3E2FC0220E568B2009EA554 /* msggrep */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = msggrep; sourceTree = "<group>"; };
@@ -3335,11 +2805,6 @@
 		B3F807B520E5858100030497 /* libcroco-cr-selector.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "libcroco-cr-selector.html"; sourceTree = "<group>"; };
 		B3F807B620E5858100030497 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
 		B3F807B720E5858100030497 /* libcroco-cr-string.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "libcroco-cr-string.html"; sourceTree = "<group>"; };
-		B3F8080A20E585BF00030497 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
-		B3F8080C20E585BF00030497 /* fribidi */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = fribidi; sourceTree = "<group>"; };
-		B3F8080E20E585BF00030497 /* fribidi.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = fribidi.rb; sourceTree = "<group>"; };
-		B3F8080F20E585BF00030497 /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
-		B3F8081020E585BF00030497 /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
 		B3F8081320E585BF00030497 /* fribidi-begindecls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "fribidi-begindecls.h"; sourceTree = "<group>"; };
 		B3F8081420E585BF00030497 /* fribidi-config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "fribidi-config.h"; sourceTree = "<group>"; };
 		B3F8081520E585BF00030497 /* fribidi-joining-types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "fribidi-joining-types.h"; sourceTree = "<group>"; };
@@ -3362,45 +2827,7 @@
 		B3F8082620E585BF00030497 /* fribidi-arabic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "fribidi-arabic.h"; sourceTree = "<group>"; };
 		B3F8082720E585BF00030497 /* fribidi-shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "fribidi-shape.h"; sourceTree = "<group>"; };
 		B3F8082820E585BF00030497 /* fribidi-joining-types-list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "fribidi-joining-types-list.h"; sourceTree = "<group>"; };
-		B3F8082920E585BF00030497 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		B3F8082A20E585BF00030497 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
-		B3F8082B20E585BF00030497 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
-		B3F8082C20E585BF00030497 /* NEWS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NEWS; sourceTree = "<group>"; };
-		B3F8082F20E585BF00030497 /* fribidi.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi.pc; sourceTree = "<group>"; };
-		B3F8083020E585BF00030497 /* libfribidi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfribidi.dylib; sourceTree = "<group>"; };
-		B3F8083120E585BF00030497 /* libfribidi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfribidi.a; sourceTree = "<group>"; };
 		B3F8083220E585BF00030497 /* libfribidi.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfribidi.0.dylib; sourceTree = "<group>"; };
-		B3F8083620E585BF00030497 /* fribidi_get_bidi_type_name.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_bidi_type_name.3; sourceTree = "<group>"; };
-		B3F8083720E585BF00030497 /* fribidi_get_type_internal.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_type_internal.3; sourceTree = "<group>"; };
-		B3F8083820E585BF00030497 /* fribidi_shape.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_shape.3; sourceTree = "<group>"; };
-		B3F8083920E585BF00030497 /* fribidi_set_reorder_nsm.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_set_reorder_nsm.3; sourceTree = "<group>"; };
-		B3F8083A20E585BF00030497 /* fribidi_get_mirror_char.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_mirror_char.3; sourceTree = "<group>"; };
-		B3F8083B20E585BF00030497 /* fribidi_charset_to_unicode.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_charset_to_unicode.3; sourceTree = "<group>"; };
-		B3F8083C20E585BF00030497 /* fribidi_remove_bidi_marks.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_remove_bidi_marks.3; sourceTree = "<group>"; };
-		B3F8083D20E585BF00030497 /* fribidi_parse_charset.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_parse_charset.3; sourceTree = "<group>"; };
-		B3F8083E20E585BF00030497 /* fribidi_set_mirroring.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_set_mirroring.3; sourceTree = "<group>"; };
-		B3F8083F20E585BF00030497 /* fribidi_mirroring_status.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_mirroring_status.3; sourceTree = "<group>"; };
-		B3F8084020E585BF00030497 /* fribidi_get_par_embedding_levels_ex.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_par_embedding_levels_ex.3; sourceTree = "<group>"; };
-		B3F8084120E585BF00030497 /* fribidi_get_bidi_type.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_bidi_type.3; sourceTree = "<group>"; };
-		B3F8084220E585BF00030497 /* fribidi_get_joining_types.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_joining_types.3; sourceTree = "<group>"; };
-		B3F8084320E585BF00030497 /* fribidi_shape_mirroring.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_shape_mirroring.3; sourceTree = "<group>"; };
-		B3F8084420E585BF00030497 /* fribidi_log2vis_get_embedding_levels.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_log2vis_get_embedding_levels.3; sourceTree = "<group>"; };
-		B3F8084520E585BF00030497 /* fribidi_get_par_direction.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_par_direction.3; sourceTree = "<group>"; };
-		B3F8084620E585BF00030497 /* fribidi_shape_arabic.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_shape_arabic.3; sourceTree = "<group>"; };
-		B3F8084720E585BF00030497 /* fribidi_get_bracket.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_bracket.3; sourceTree = "<group>"; };
-		B3F8084820E585BF00030497 /* fribidi_get_par_embedding_levels.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_par_embedding_levels.3; sourceTree = "<group>"; };
-		B3F8084920E585BF00030497 /* fribidi_get_joining_type.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_joining_type.3; sourceTree = "<group>"; };
-		B3F8084A20E585BF00030497 /* fribidi_unicode_to_charset.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_unicode_to_charset.3; sourceTree = "<group>"; };
-		B3F8084B20E585BF00030497 /* fribidi_reorder_nsm_status.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_reorder_nsm_status.3; sourceTree = "<group>"; };
-		B3F8084C20E585BF00030497 /* fribidi_join_arabic.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_join_arabic.3; sourceTree = "<group>"; };
-		B3F8084D20E585BF00030497 /* fribidi_get_bracket_types.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_bracket_types.3; sourceTree = "<group>"; };
-		B3F8084E20E585BF00030497 /* fribidi_log2vis.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_log2vis.3; sourceTree = "<group>"; };
-		B3F8084F20E585BF00030497 /* fribidi_get_type.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_type.3; sourceTree = "<group>"; };
-		B3F8085020E585BF00030497 /* fribidi_set_debug.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_set_debug.3; sourceTree = "<group>"; };
-		B3F8085120E585BF00030497 /* fribidi_get_bidi_types.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_bidi_types.3; sourceTree = "<group>"; };
-		B3F8085220E585BF00030497 /* fribidi_reorder_line.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_reorder_line.3; sourceTree = "<group>"; };
-		B3F8085320E585BF00030497 /* fribidi_debug_status.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_debug_status.3; sourceTree = "<group>"; };
-		B3F8085420E585BF00030497 /* fribidi_get_joining_type_name.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_joining_type_name.3; sourceTree = "<group>"; };
 		B3F8093320E585E800030497 /* hb-buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hb-buffer.h"; sourceTree = "<group>"; };
 		B3F8093420E585E800030497 /* hb-set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hb-set.h"; sourceTree = "<group>"; };
 		B3F8093520E585E800030497 /* hb-face.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hb-face.h"; sourceTree = "<group>"; };
@@ -3536,7 +2963,6 @@
 				B31BD9DC20E7E0DA00A560C2 /* libicui18n.61.1.dylib in Frameworks */,
 				B31BD9DD20E7E0DA00A560C2 /* libicutu.61.1.dylib in Frameworks */,
 				B3F80B3020E585EA00030497 /* libharfbuzz.0.dylib in Frameworks */,
-				B3F808C120E585C000030497 /* libfribidi.dylib in Frameworks */,
 				B3F808C320E585C000030497 /* libfribidi.0.dylib in Frameworks */,
 				B31BD9E620E7E0DA00A560C2 /* libicudata.61.1.dylib in Frameworks */,
 				B31BD9E720E7E0DA00A560C2 /* libicutest.61.1.dylib in Frameworks */,
@@ -3566,7 +2992,6 @@
 				205A5AF735ED0AFE6D8E3753 /* Pods_CairoSVG.framework in Frameworks */,
 				B3E206EE20E568C5009EA554 /* libgthread-2.0.0.dylib in Frameworks */,
 				B3E207F620E568C6009EA554 /* libfontconfig.1.dylib in Frameworks */,
-				B3E207F520E568C6009EA554 /* libfontconfig.dylib in Frameworks */,
 				B3E204B620E568C3009EA554 /* libpixman-1.dylib in Frameworks */,
 				B3F8050620E5820B00030497 /* libpango-1.0.a in Frameworks */,
 				B3F807E120E5858200030497 /* libcroco-0.6.a in Frameworks */,
@@ -3580,7 +3005,6 @@
 				B3E204F220E568C3009EA554 /* libfreetype.6.dylib in Frameworks */,
 				B3F804F920E5820B00030497 /* libpangoft2-1.0.0.dylib in Frameworks */,
 				B3F8067820E5851A00030497 /* libpcre16.dylib in Frameworks */,
-				B3E204EF20E568C3009EA554 /* libfreetype.dylib in Frameworks */,
 				B3E206E620E568C5009EA554 /* libglib-2.0.0.dylib in Frameworks */,
 				B3E206F020E568C5009EA554 /* libgio-2.0.0.dylib in Frameworks */,
 				B3E2079120E568C6009EA554 /* libcairo-gobject.2.dylib in Frameworks */,
@@ -4582,32 +4006,10 @@
 		B3E2F4CE20E568A5009EA554 /* 2.9.1 */ = {
 			isa = PBXGroup;
 			children = (
-				B3E2F4CF20E568A5009EA554 /* INSTALL_RECEIPT.json */,
-				B3E2F4D020E568A5009EA554 /* bin */,
-				B3E2F4D220E568A5009EA554 /* .brew */,
-				B3E2F4D420E568A5009EA554 /* ChangeLog */,
 				B3E2F4D520E568A5009EA554 /* include */,
-				B3E2F50A20E568A6009EA554 /* README */,
 				B3E2F50B20E568A6009EA554 /* lib */,
-				B3E2F51120E568A6009EA554 /* share */,
 			);
 			path = 2.9.1;
-			sourceTree = "<group>";
-		};
-		B3E2F4D020E568A5009EA554 /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F4D120E568A5009EA554 /* freetype-config */,
-			);
-			path = bin;
-			sourceTree = "<group>";
-		};
-		B3E2F4D220E568A5009EA554 /* .brew */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F4D320E568A5009EA554 /* freetype.rb */,
-			);
-			path = .brew;
 			sourceTree = "<group>";
 		};
 		B3E2F4D520E568A5009EA554 /* include */ = {
@@ -4693,53 +4095,9 @@
 		B3E2F50B20E568A6009EA554 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				B3E2F50C20E568A6009EA554 /* libfreetype.dylib */,
-				B3E2F50D20E568A6009EA554 /* pkgconfig */,
-				B3E2F50F20E568A6009EA554 /* libfreetype.a */,
 				B3E2F51020E568A6009EA554 /* libfreetype.6.dylib */,
 			);
 			path = lib;
-			sourceTree = "<group>";
-		};
-		B3E2F50D20E568A6009EA554 /* pkgconfig */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F50E20E568A6009EA554 /* freetype2.pc */,
-			);
-			path = pkgconfig;
-			sourceTree = "<group>";
-		};
-		B3E2F51120E568A6009EA554 /* share */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F51220E568A6009EA554 /* man */,
-				B3E2F51520E568A6009EA554 /* aclocal */,
-			);
-			path = share;
-			sourceTree = "<group>";
-		};
-		B3E2F51220E568A6009EA554 /* man */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F51320E568A6009EA554 /* man1 */,
-			);
-			path = man;
-			sourceTree = "<group>";
-		};
-		B3E2F51320E568A6009EA554 /* man1 */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F51420E568A6009EA554 /* freetype-config.1 */,
-			);
-			path = man1;
-			sourceTree = "<group>";
-		};
-		B3E2F51520E568A6009EA554 /* aclocal */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F51620E568A6009EA554 /* freetype2.m4 */,
-			);
-			path = aclocal;
 			sourceTree = "<group>";
 		};
 		B3E2F51720E568A6009EA554 /* gdk-pixbuf */ = {
@@ -4753,9 +4111,6 @@
 		B3E2F51820E568A6009EA554 /* 2.36.12 */ = {
 			isa = PBXGroup;
 			children = (
-				B3E2F51920E568A6009EA554 /* INSTALL_RECEIPT.json */,
-				B3E2F51A20E568A6009EA554 /* bin */,
-				B3E2F51F20E568A6009EA554 /* .brew */,
 				B3E2F52120E568A6009EA554 /* AUTHORS */,
 				B3E2F52220E568A6009EA554 /* include */,
 				B3E2F53220E568A6009EA554 /* README */,
@@ -4765,25 +4120,6 @@
 				B3E2F55A20E568A6009EA554 /* share */,
 			);
 			path = 2.36.12;
-			sourceTree = "<group>";
-		};
-		B3E2F51A20E568A6009EA554 /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F51B20E568A6009EA554 /* gdk-pixbuf-pixdata */,
-				B3E2F51C20E568A6009EA554 /* gdk-pixbuf-query-loaders */,
-				B3E2F51D20E568A6009EA554 /* gdk-pixbuf-csource */,
-				B3E2F51E20E568A6009EA554 /* gdk-pixbuf-thumbnailer */,
-			);
-			path = bin;
-			sourceTree = "<group>";
-		};
-		B3E2F51F20E568A6009EA554 /* .brew */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F52020E568A6009EA554 /* gdk-pixbuf.rb */,
-			);
-			path = .brew;
 			sourceTree = "<group>";
 		};
 		B3E2F52220E568A6009EA554 /* include */ = {
@@ -7246,44 +6582,10 @@
 		B3E2F9E520E568AE009EA554 /* 2.13.0 */ = {
 			isa = PBXGroup;
 			children = (
-				B3E2F9E620E568AE009EA554 /* INSTALL_RECEIPT.json */,
-				B3E2F9E720E568AE009EA554 /* bin */,
-				B3E2F9F120E568AE009EA554 /* .brew */,
-				B3E2F9F320E568AE009EA554 /* ChangeLog */,
-				B3E2F9F420E568AE009EA554 /* AUTHORS */,
 				B3E2F9F520E568AE009EA554 /* include */,
-				B3E2F9FA20E568AE009EA554 /* README */,
-				B3E2F9FB20E568AE009EA554 /* COPYING */,
-				B3E2F9FC20E568AE009EA554 /* NEWS */,
 				B3E2F9FD20E568AE009EA554 /* lib */,
-				B3E2FA0320E568AE009EA554 /* .bottle */,
-				B3E2FA1A20E568AE009EA554 /* share */,
 			);
 			path = 2.13.0;
-			sourceTree = "<group>";
-		};
-		B3E2F9E720E568AE009EA554 /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F9E820E568AE009EA554 /* fc-list */,
-				B3E2F9E920E568AE009EA554 /* fc-pattern */,
-				B3E2F9EA20E568AE009EA554 /* fc-validate */,
-				B3E2F9EB20E568AE009EA554 /* fc-query */,
-				B3E2F9EC20E568AE009EA554 /* fc-cache */,
-				B3E2F9ED20E568AE009EA554 /* fc-cat */,
-				B3E2F9EE20E568AE009EA554 /* fc-match */,
-				B3E2F9EF20E568AE009EA554 /* fc-conflist */,
-				B3E2F9F020E568AE009EA554 /* fc-scan */,
-			);
-			path = bin;
-			sourceTree = "<group>";
-		};
-		B3E2F9F120E568AE009EA554 /* .brew */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F9F220E568AE009EA554 /* fontconfig.rb */,
-			);
-			path = .brew;
 			sourceTree = "<group>";
 		};
 		B3E2F9F520E568AE009EA554 /* include */ = {
@@ -7307,650 +6609,9 @@
 		B3E2F9FD20E568AE009EA554 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				B3E2F9FE20E568AE009EA554 /* pkgconfig */,
-				B3E2FA0020E568AE009EA554 /* libfontconfig.dylib */,
 				B3E2FA0120E568AE009EA554 /* libfontconfig.1.dylib */,
-				B3E2FA0220E568AE009EA554 /* libfontconfig.a */,
 			);
 			path = lib;
-			sourceTree = "<group>";
-		};
-		B3E2F9FE20E568AE009EA554 /* pkgconfig */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F9FF20E568AE009EA554 /* fontconfig.pc */,
-			);
-			path = pkgconfig;
-			sourceTree = "<group>";
-		};
-		B3E2FA0320E568AE009EA554 /* .bottle */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FA0420E568AE009EA554 /* etc */,
-			);
-			path = .bottle;
-			sourceTree = "<group>";
-		};
-		B3E2FA0420E568AE009EA554 /* etc */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FA0520E568AE009EA554 /* fonts */,
-			);
-			path = etc;
-			sourceTree = "<group>";
-		};
-		B3E2FA0520E568AE009EA554 /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FA0620E568AE009EA554 /* fonts.conf */,
-				B3E2FA0720E568AE009EA554 /* conf.d */,
-			);
-			path = fonts;
-			sourceTree = "<group>";
-		};
-		B3E2FA0720E568AE009EA554 /* conf.d */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FA0820E568AE009EA554 /* 65-nonlatin.conf */,
-				B3E2FA0920E568AE009EA554 /* 30-metric-aliases.conf */,
-				B3E2FA0A20E568AE009EA554 /* 80-delicious.conf */,
-				B3E2FA0B20E568AE009EA554 /* 20-unhint-small-vera.conf */,
-				B3E2FA0C20E568AE009EA554 /* 65-fonts-persian.conf */,
-				B3E2FA0D20E568AE009EA554 /* 10-hinting-slight.conf */,
-				B3E2FA0E20E568AE009EA554 /* 51-local.conf */,
-				B3E2FA0F20E568AE009EA554 /* 45-latin.conf */,
-				B3E2FA1020E568AE009EA554 /* README */,
-				B3E2FA1120E568AE009EA554 /* 49-sansserif.conf */,
-				B3E2FA1220E568AE009EA554 /* 40-nonlatin.conf */,
-				B3E2FA1320E568AE009EA554 /* 60-latin.conf */,
-				B3E2FA1420E568AE009EA554 /* 60-generic.conf */,
-				B3E2FA1520E568AE009EA554 /* 45-generic.conf */,
-				B3E2FA1620E568AE009EA554 /* 69-unifont.conf */,
-				B3E2FA1720E568AE009EA554 /* 50-user.conf */,
-				B3E2FA1820E568AE009EA554 /* 10-scale-bitmap-fonts.conf */,
-				B3E2FA1920E568AE009EA554 /* 90-synthetic.conf */,
-			);
-			path = conf.d;
-			sourceTree = "<group>";
-		};
-		B3E2FA1A20E568AE009EA554 /* share */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FA1B20E568AE009EA554 /* man */,
-				B3E2FAF720E568B0009EA554 /* xml */,
-				B3E2FAFA20E568B0009EA554 /* fontconfig */,
-				B3E2FB1E20E568B0009EA554 /* gettext */,
-				B3E2FB2220E568B0009EA554 /* doc */,
-			);
-			path = share;
-			sourceTree = "<group>";
-		};
-		B3E2FA1B20E568AE009EA554 /* man */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FA1C20E568AE009EA554 /* man5 */,
-				B3E2FA1E20E568AE009EA554 /* man3 */,
-				B3E2FAED20E568B0009EA554 /* man1 */,
-			);
-			path = man;
-			sourceTree = "<group>";
-		};
-		B3E2FA1C20E568AE009EA554 /* man5 */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FA1D20E568AE009EA554 /* fonts-conf.5 */,
-			);
-			path = man5;
-			sourceTree = "<group>";
-		};
-		B3E2FA1E20E568AE009EA554 /* man3 */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FA1F20E568AE009EA554 /* FcDefaultSubstitute.3 */,
-				B3E2FA2020E568AE009EA554 /* FcIsLower.3 */,
-				B3E2FA2120E568AE009EA554 /* FcStrCmpIgnoreCase.3 */,
-				B3E2FA2220E568AE009EA554 /* FcLangGetCharSet.3 */,
-				B3E2FA2320E568AE009EA554 /* FcCharSetSubtractCount.3 */,
-				B3E2FA2420E568AF009EA554 /* FcDirScan.3 */,
-				B3E2FA2520E568AF009EA554 /* FcStrStrIgnoreCase.3 */,
-				B3E2FA2620E568AF009EA554 /* FcPatternAdd-Type.3 */,
-				B3E2FA2720E568AF009EA554 /* FcLangSetCreate.3 */,
-				B3E2FA2820E568AF009EA554 /* FcCharSetSubtract.3 */,
-				B3E2FA2920E568AF009EA554 /* FcCacheCopySet.3 */,
-				B3E2FA2A20E568AF009EA554 /* FcFreeTypeCharSetAndSpacing.3 */,
-				B3E2FA2B20E568AF009EA554 /* FcConfigReference.3 */,
-				B3E2FA2C20E568AF009EA554 /* FcConfigGetBlanks.3 */,
-				B3E2FA2D20E568AF009EA554 /* FcConfigGetConfigFiles.3 */,
-				B3E2FA2E20E568AF009EA554 /* FcDirCacheLoadFile.3 */,
-				B3E2FA2F20E568AF009EA554 /* FcCharSetDestroy.3 */,
-				B3E2FA3020E568AF009EA554 /* FcNameParse.3 */,
-				B3E2FA3120E568AF009EA554 /* FcCharSetIntersectCount.3 */,
-				B3E2FA3220E568AF009EA554 /* FcRangeCreateDouble.3 */,
-				B3E2FA3320E568AF009EA554 /* FcCacheCreateTagFile.3 */,
-				B3E2FA3420E568AF009EA554 /* FcMatrixMultiply.3 */,
-				B3E2FA3520E568AF009EA554 /* FcConfigGetConfigDirs.3 */,
-				B3E2FA3620E568AF009EA554 /* FcNameUnregisterObjectTypes.3 */,
-				B3E2FA3720E568AF009EA554 /* FcConfigGetFontDirs.3 */,
-				B3E2FA3820E568AF009EA554 /* FcCharSetEqual.3 */,
-				B3E2FA3920E568AF009EA554 /* FcConfigSubstitute.3 */,
-				B3E2FA3A20E568AF009EA554 /* FcCharSetAddChar.3 */,
-				B3E2FA3B20E568AF009EA554 /* FcConfigDestroy.3 */,
-				B3E2FA3C20E568AF009EA554 /* FcFontSetSortDestroy.3 */,
-				B3E2FA3D20E568AF009EA554 /* FcFini.3 */,
-				B3E2FA3E20E568AF009EA554 /* FcPatternRemove.3 */,
-				B3E2FA3F20E568AF009EA554 /* FcDirCacheValid.3 */,
-				B3E2FA4020E568AF009EA554 /* FcConfigEnableHome.3 */,
-				B3E2FA4120E568AF009EA554 /* FcFileIsDir.3 */,
-				B3E2FA4220E568AF009EA554 /* FcGetLangs.3 */,
-				B3E2FA4320E568AF009EA554 /* FcPatternDuplicate.3 */,
-				B3E2FA4420E568AF009EA554 /* FcFreeTypeQueryAll.3 */,
-				B3E2FA4520E568AF009EA554 /* FcCacheNumFont.3 */,
-				B3E2FA4620E568AF009EA554 /* FcNameRegisterConstants.3 */,
-				B3E2FA4720E568AF009EA554 /* FcInitLoadConfigAndFonts.3 */,
-				B3E2FA4820E568AF009EA554 /* FcPatternEqualSubset.3 */,
-				B3E2FA4920E568AF009EA554 /* FcObjectSetBuild.3 */,
-				B3E2FA4A20E568AF009EA554 /* FcCharSetHasChar.3 */,
-				B3E2FA4B20E568AF009EA554 /* FcFontSetList.3 */,
-				B3E2FA4C20E568AF009EA554 /* FcInitLoadConfig.3 */,
-				B3E2FA4D20E568AF009EA554 /* FcConfigSetRescanInterval.3 */,
-				B3E2FA4E20E568AF009EA554 /* FcCacheSubdir.3 */,
-				B3E2FA4F20E568AF009EA554 /* FcFreeTypeCharSet.3 */,
-				B3E2FA5020E568AF009EA554 /* FcLangSetUnion.3 */,
-				B3E2FA5120E568AF009EA554 /* FcPatternGet-Type.3 */,
-				B3E2FA5220E568AF009EA554 /* FcCharSetCount.3 */,
-				B3E2FA5320E568AF009EA554 /* FcConfigParseAndLoadFromMemory.3 */,
-				B3E2FA5420E568AF009EA554 /* FcToLower.3 */,
-				B3E2FA5520E568AF009EA554 /* FcMatrixEqual.3 */,
-				B3E2FA5620E568AF009EA554 /* FcConfigAppFontAddFile.3 */,
-				B3E2FA5720E568AF009EA554 /* FcFontMatch.3 */,
-				B3E2FA5820E568AF009EA554 /* FcPatternGet.3 */,
-				B3E2FA5920E568AF009EA554 /* FcMatrixRotate.3 */,
-				B3E2FA5A20E568AF009EA554 /* FcValueEqual.3 */,
-				B3E2FA5B20E568AF009EA554 /* FcStrSetDel.3 */,
-				B3E2FA5C20E568AF009EA554 /* FcStrListNext.3 */,
-				B3E2FA5D20E568AF009EA554 /* FcAtomicDeleteNew.3 */,
-				B3E2FA5E20E568AF009EA554 /* FcLangSetDel.3 */,
-				B3E2FA5F20E568AF009EA554 /* FcStrSetMember.3 */,
-				B3E2FA6020E568AF009EA554 /* FcPatternBuild.3 */,
-				B3E2FA6120E568AF009EA554 /* FcCharSetIntersect.3 */,
-				B3E2FA6220E568AF009EA554 /* FcPatternEqual.3 */,
-				B3E2FA6320E568AF009EA554 /* FcStrStr.3 */,
-				B3E2FA6420E568AF009EA554 /* FcStrSetCreate.3 */,
-				B3E2FA6520E568AF009EA554 /* FcDirCacheLoad.3 */,
-				B3E2FA6620E568AF009EA554 /* FcStrFree.3 */,
-				B3E2FA6720E568AF009EA554 /* FcWeightFromOpenTypeDouble.3 */,
-				B3E2FA6820E568AF009EA554 /* FcMatrixScale.3 */,
-				B3E2FA6920E568AF009EA554 /* FcFontRenderPrepare.3 */,
-				B3E2FA6A20E568AF009EA554 /* FcAtomicReplaceOrig.3 */,
-				B3E2FA6B20E568AF009EA554 /* FcFontSetSort.3 */,
-				B3E2FA6C20E568AF009EA554 /* FcMatrixShear.3 */,
-				B3E2FA6D20E568AF009EA554 /* FcWeightToOpenTypeDouble.3 */,
-				B3E2FA6E20E568AF009EA554 /* FcInitReinitialize.3 */,
-				B3E2FA6F20E568AF009EA554 /* FcCacheNumSubdir.3 */,
-				B3E2FA7020E568AF009EA554 /* FcConfigGetCacheDirs.3 */,
-				B3E2FA7120E568AF009EA554 /* FcPatternReference.3 */,
-				B3E2FA7220E568AF009EA554 /* FcStrListFirst.3 */,
-				B3E2FA7320E568AF009EA554 /* FcObjectSetCreate.3 */,
-				B3E2FA7420E568AF009EA554 /* FcConfigAppFontAddDir.3 */,
-				B3E2FA7520E568AF009EA554 /* FcAtomicOrigFile.3 */,
-				B3E2FA7620E568AF009EA554 /* FcCharSetMerge.3 */,
-				B3E2FA7720E568AF009EA554 /* FcConfigSubstituteWithPat.3 */,
-				B3E2FA7820E568AF009EA554 /* FcCacheDir.3 */,
-				B3E2FA7920E568AF009EA554 /* FcAtomicLock.3 */,
-				B3E2FA7A20E568AF009EA554 /* FcStrDowncase.3 */,
-				B3E2FA7B20E568AF009EA554 /* FcValueDestroy.3 */,
-				B3E2FA7C20E568AF009EA554 /* FcPatternDel.3 */,
-				B3E2FA7D20E568AF009EA554 /* FcNameRegisterObjectTypes.3 */,
-				B3E2FA7E20E568AF009EA554 /* FcConfigHome.3 */,
-				B3E2FA7F20E568AF009EA554 /* FcDirCacheUnload.3 */,
-				B3E2FA8020E568AF009EA554 /* FcIsUpper.3 */,
-				B3E2FA8120E568AF009EA554 /* FcObjectSetDestroy.3 */,
-				B3E2FA8220E568AF009EA554 /* FcCharSetDelChar.3 */,
-				B3E2FA8320E568AF009EA554 /* FcGetVersion.3 */,
-				B3E2FA8420E568AF009EA554 /* FcLangSetHash.3 */,
-				B3E2FA8520E568AF009EA554 /* FcAtomicDestroy.3 */,
-				B3E2FA8620E568AF009EA554 /* FcConfigFilename.3 */,
-				B3E2FA8720E568AF009EA554 /* FcConfigUptoDate.3 */,
-				B3E2FA8820E568AF009EA554 /* FcDirCacheRescan.3 */,
-				B3E2FA8920E568AF009EA554 /* FcUtf16ToUcs4.3 */,
-				B3E2FA8A20E568AF009EA554 /* FcDirCacheCreateUUID.3 */,
-				B3E2FA8B20E568AF009EA554 /* FcPatternHash.3 */,
-				B3E2FA8C20E568AF009EA554 /* FcLangSetGetLangs.3 */,
-				B3E2FA8D20E568AF009EA554 /* FcLangSetCopy.3 */,
-				B3E2FA8E20E568AF009EA554 /* FcConfigGetCurrent.3 */,
-				B3E2FA8F20E568AF009EA554 /* FcLangNormalize.3 */,
-				B3E2FA9020E568AF009EA554 /* FcStrBasename.3 */,
-				B3E2FA9120E568AF009EA554 /* FcWeightToOpenType.3 */,
-				B3E2FA9220E568AF009EA554 /* FcAtomicUnlock.3 */,
-				B3E2FA9320E568AF009EA554 /* FcPatternCreate.3 */,
-				B3E2FA9420E568AF009EA554 /* FcPatternFilter.3 */,
-				B3E2FA9520E568AF009EA554 /* FcRangeDestroy.3 */,
-				B3E2FA9620E568AF009EA554 /* FcFontSetDestroy.3 */,
-				B3E2FA9720E568AF009EA554 /* FcStrCopy.3 */,
-				B3E2FA9820E568AF009EA554 /* FcStrCopyFilename.3 */,
-				B3E2FA9920E568AF009EA554 /* FcConfigGetCache.3 */,
-				B3E2FA9A20E568AF009EA554 /* FcFontSort.3 */,
-				B3E2FA9B20E568AF009EA554 /* FcPatternFormat.3 */,
-				B3E2FA9C20E568AF009EA554 /* FcConfigGetRescanInterval.3 */,
-				B3E2FA9D20E568AF009EA554 /* FcCharSetFirstPage.3 */,
-				B3E2FA9E20E568AF009EA554 /* FcLangSetCompare.3 */,
-				B3E2FA9F20E568AF009EA554 /* FcNameConstant.3 */,
-				B3E2FAA020E568AF009EA554 /* FcStrSetDestroy.3 */,
-				B3E2FAA120E568AF009EA554 /* FcLangSetHasLang.3 */,
-				B3E2FAA220E568AF009EA554 /* FcDirSave.3 */,
-				B3E2FAA320E568AF009EA554 /* FcGetDefaultLangs.3 */,
-				B3E2FAA420E568AF009EA554 /* FcStrListCreate.3 */,
-				B3E2FAA520E568AF009EA554 /* FcUcs4ToUtf8.3 */,
-				B3E2FAA620E568AF009EA554 /* FcDirCacheClean.3 */,
-				B3E2FAA720E568AF009EA554 /* FcNameUnparse.3 */,
-				B3E2FAA820E568AF009EA554 /* FcCharSetCreate.3 */,
-				B3E2FAA920E568AF009EA554 /* FcConfigSetSysRoot.3 */,
-				B3E2FAAA20E568AF009EA554 /* FcCharSetIsSubset.3 */,
-				B3E2FAAB20E568AF009EA554 /* FcRangeGetDouble.3 */,
-				B3E2FAAC20E568AF009EA554 /* FcObjectSetAdd.3 */,
-				B3E2FAAD20E568AF009EA554 /* FcBlanksCreate.3 */,
-				B3E2FAAE20E568AF009EA554 /* FcLangSetDestroy.3 */,
-				B3E2FAAF20E568AF009EA554 /* FcNameGetObjectType.3 */,
-				B3E2FAB020E568AF009EA554 /* FcNameUnregisterConstants.3 */,
-				B3E2FAB120E568AF009EA554 /* FcPatternGetWithBinding.3 */,
-				B3E2FAB220E568AF009EA554 /* FcAtomicNewFile.3 */,
-				B3E2FAB320E568AF009EA554 /* FcConfigParseAndLoad.3 */,
-				B3E2FAB420E568AF009EA554 /* FcValueSave.3 */,
-				B3E2FAB520E568AF009EA554 /* FcFontList.3 */,
-				B3E2FAB620E568AF009EA554 /* FcConfigCreate.3 */,
-				B3E2FAB720E568AF009EA554 /* FcRangeCreateInteger.3 */,
-				B3E2FAB820E568AF009EA554 /* FcNameGetConstant.3 */,
-				B3E2FAB920E568AF009EA554 /* FcFreeTypeCharIndex.3 */,
-				B3E2FABA20E568AF009EA554 /* FcFontSetAdd.3 */,
-				B3E2FABB20E568AF009EA554 /* FcStrCmp.3 */,
-				B3E2FABC20E568AF009EA554 /* FcStrSetAdd.3 */,
-				B3E2FABD20E568AF009EA554 /* FcFontSetPrint.3 */,
-				B3E2FABE20E568AF009EA554 /* FcConfigAppFontClear.3 */,
-				B3E2FABF20E568AF009EA554 /* FcPatternAddWeak.3 */,
-				B3E2FAC020E568AF009EA554 /* FcCharSetNew.3 */,
-				B3E2FAC120E568AF009EA554 /* FcStrSetAddFilename.3 */,
-				B3E2FAC220E568B0009EA554 /* FcConfigFileInfoIterInit.3 */,
-				B3E2FAC320E568B0009EA554 /* FcWeightFromOpenType.3 */,
-				B3E2FAC420E568B0009EA554 /* FcUtf16Len.3 */,
-				B3E2FAC520E568B0009EA554 /* FcValuePrint.3 */,
-				B3E2FAC620E568B0009EA554 /* FcConfigFileInfoIterNext.3 */,
-				B3E2FAC720E568B0009EA554 /* FcConfigFileInfoIterGet.3 */,
-				B3E2FAC820E568B0009EA554 /* FcLangSetSubtract.3 */,
-				B3E2FAC920E568B0009EA554 /* FcUtf8Len.3 */,
-				B3E2FACA20E568B0009EA554 /* FcBlanksIsMember.3 */,
-				B3E2FACB20E568B0009EA554 /* FcBlanksDestroy.3 */,
-				B3E2FACC20E568B0009EA554 /* FcUtf8ToUcs4.3 */,
-				B3E2FACD20E568B0009EA554 /* FcPatternDestroy.3 */,
-				B3E2FACE20E568B0009EA554 /* FcLangSetAdd.3 */,
-				B3E2FACF20E568B0009EA554 /* FcPatternPrint.3 */,
-				B3E2FAD020E568B0009EA554 /* FcConfigGetSysRoot.3 */,
-				B3E2FAD120E568B0009EA554 /* FcFontSetCreate.3 */,
-				B3E2FAD220E568B0009EA554 /* FcMatrixCopy.3 */,
-				B3E2FAD320E568B0009EA554 /* FcInit.3 */,
-				B3E2FAD420E568B0009EA554 /* FcInitBringUptoDate.3 */,
-				B3E2FAD520E568B0009EA554 /* FcLangSetContains.3 */,
-				B3E2FAD620E568B0009EA554 /* FcDirCacheUnlink.3 */,
-				B3E2FAD720E568B0009EA554 /* FcCharSetUnion.3 */,
-				B3E2FAD820E568B0009EA554 /* FcRangeCopy.3 */,
-				B3E2FAD920E568B0009EA554 /* FcConfigBuildFonts.3 */,
-				B3E2FADA20E568B0009EA554 /* FcFreeTypeQueryFace.3 */,
-				B3E2FADB20E568B0009EA554 /* FcStrListDone.3 */,
-				B3E2FADC20E568B0009EA554 /* FcCharSetCoverage.3 */,
-				B3E2FADD20E568B0009EA554 /* FcFontSetMatch.3 */,
-				B3E2FADE20E568B0009EA554 /* FcBlanksAdd.3 */,
-				B3E2FADF20E568B0009EA554 /* FcStrDirname.3 */,
-				B3E2FAE020E568B0009EA554 /* FcPatternAdd.3 */,
-				B3E2FAE120E568B0009EA554 /* FcStrPlus.3 */,
-				B3E2FAE220E568B0009EA554 /* FcStrSetEqual.3 */,
-				B3E2FAE320E568B0009EA554 /* FcFreeTypeQuery.3 */,
-				B3E2FAE420E568B0009EA554 /* FcFileScan.3 */,
-				B3E2FAE520E568B0009EA554 /* FcAtomicCreate.3 */,
-				B3E2FAE620E568B0009EA554 /* FcConfigSetCurrent.3 */,
-				B3E2FAE720E568B0009EA554 /* FcLangSetEqual.3 */,
-				B3E2FAE820E568B0009EA554 /* FcCharSetNextPage.3 */,
-				B3E2FAE920E568B0009EA554 /* FcCharSetCopy.3 */,
-				B3E2FAEA20E568B0009EA554 /* FcConfigGetFonts.3 */,
-				B3E2FAEB20E568B0009EA554 /* FcMatrixInit.3 */,
-				B3E2FAEC20E568B0009EA554 /* FcDirCacheRead.3 */,
-			);
-			path = man3;
-			sourceTree = "<group>";
-		};
-		B3E2FAED20E568B0009EA554 /* man1 */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FAEE20E568B0009EA554 /* fc-validate.1 */,
-				B3E2FAEF20E568B0009EA554 /* fc-scan.1 */,
-				B3E2FAF020E568B0009EA554 /* fc-cat.1 */,
-				B3E2FAF120E568B0009EA554 /* fc-list.1 */,
-				B3E2FAF220E568B0009EA554 /* fc-match.1 */,
-				B3E2FAF320E568B0009EA554 /* fc-cache.1 */,
-				B3E2FAF420E568B0009EA554 /* fc-pattern.1 */,
-				B3E2FAF520E568B0009EA554 /* fc-query.1 */,
-				B3E2FAF620E568B0009EA554 /* fc-conflist.1 */,
-			);
-			path = man1;
-			sourceTree = "<group>";
-		};
-		B3E2FAF720E568B0009EA554 /* xml */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FAF820E568B0009EA554 /* fontconfig */,
-			);
-			path = xml;
-			sourceTree = "<group>";
-		};
-		B3E2FAF820E568B0009EA554 /* fontconfig */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FAF920E568B0009EA554 /* fonts.dtd */,
-			);
-			path = fontconfig;
-			sourceTree = "<group>";
-		};
-		B3E2FAFA20E568B0009EA554 /* fontconfig */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FAFB20E568B0009EA554 /* conf.avail */,
-			);
-			path = fontconfig;
-			sourceTree = "<group>";
-		};
-		B3E2FAFB20E568B0009EA554 /* conf.avail */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FAFC20E568B0009EA554 /* 65-khmer.conf */,
-				B3E2FAFD20E568B0009EA554 /* 65-nonlatin.conf */,
-				B3E2FAFE20E568B0009EA554 /* 10-hinting-medium.conf */,
-				B3E2FAFF20E568B0009EA554 /* 30-metric-aliases.conf */,
-				B3E2FB0020E568B0009EA554 /* 10-sub-pixel-vbgr.conf */,
-				B3E2FB0120E568B0009EA554 /* 10-unhinted.conf */,
-				B3E2FB0220E568B0009EA554 /* 11-lcdfilter-default.conf */,
-				B3E2FB0320E568B0009EA554 /* 80-delicious.conf */,
-				B3E2FB0420E568B0009EA554 /* 20-unhint-small-vera.conf */,
-				B3E2FB0520E568B0009EA554 /* 10-hinting-full.conf */,
-				B3E2FB0620E568B0009EA554 /* 65-fonts-persian.conf */,
-				B3E2FB0720E568B0009EA554 /* 10-no-sub-pixel.conf */,
-				B3E2FB0820E568B0009EA554 /* 10-hinting-slight.conf */,
-				B3E2FB0920E568B0009EA554 /* 51-local.conf */,
-				B3E2FB0A20E568B0009EA554 /* 45-latin.conf */,
-				B3E2FB0B20E568B0009EA554 /* 10-sub-pixel-rgb.conf */,
-				B3E2FB0C20E568B0009EA554 /* 10-autohint.conf */,
-				B3E2FB0D20E568B0009EA554 /* 49-sansserif.conf */,
-				B3E2FB0E20E568B0009EA554 /* 40-nonlatin.conf */,
-				B3E2FB0F20E568B0009EA554 /* 70-no-bitmaps.conf */,
-				B3E2FB1020E568B0009EA554 /* 60-latin.conf */,
-				B3E2FB1120E568B0009EA554 /* 25-unhint-nonlatin.conf */,
-				B3E2FB1220E568B0009EA554 /* 60-generic.conf */,
-				B3E2FB1320E568B0009EA554 /* 45-generic.conf */,
-				B3E2FB1420E568B0009EA554 /* 11-lcdfilter-legacy.conf */,
-				B3E2FB1520E568B0009EA554 /* 10-sub-pixel-bgr.conf */,
-				B3E2FB1620E568B0009EA554 /* 70-yes-bitmaps.conf */,
-				B3E2FB1720E568B0009EA554 /* 69-unifont.conf */,
-				B3E2FB1820E568B0009EA554 /* 50-user.conf */,
-				B3E2FB1920E568B0009EA554 /* 10-scale-bitmap-fonts.conf */,
-				B3E2FB1A20E568B0009EA554 /* 90-synthetic.conf */,
-				B3E2FB1B20E568B0009EA554 /* 10-hinting-none.conf */,
-				B3E2FB1C20E568B0009EA554 /* 10-sub-pixel-vrgb.conf */,
-				B3E2FB1D20E568B0009EA554 /* 11-lcdfilter-light.conf */,
-			);
-			path = conf.avail;
-			sourceTree = "<group>";
-		};
-		B3E2FB1E20E568B0009EA554 /* gettext */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FB1F20E568B0009EA554 /* its */,
-			);
-			path = gettext;
-			sourceTree = "<group>";
-		};
-		B3E2FB1F20E568B0009EA554 /* its */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FB2020E568B0009EA554 /* fontconfig.loc */,
-				B3E2FB2120E568B0009EA554 /* fontconfig.its */,
-			);
-			path = its;
-			sourceTree = "<group>";
-		};
-		B3E2FB2220E568B0009EA554 /* doc */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FB2320E568B0009EA554 /* fontconfig */,
-			);
-			path = doc;
-			sourceTree = "<group>";
-		};
-		B3E2FB2320E568B0009EA554 /* fontconfig */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FB2420E568B0009EA554 /* fontconfig-user.txt */,
-				B3E2FB2520E568B0009EA554 /* fontconfig-devel.pdf */,
-				B3E2FB2620E568B0009EA554 /* fontconfig-devel */,
-				B3E2FBFA20E568B1009EA554 /* fontconfig-devel.txt */,
-				B3E2FBFB20E568B1009EA554 /* fontconfig-user.pdf */,
-				B3E2FBFC20E568B1009EA554 /* fontconfig-user.html */,
-			);
-			path = fontconfig;
-			sourceTree = "<group>";
-		};
-		B3E2FB2620E568B0009EA554 /* fontconfig-devel */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2FB2720E568B0009EA554 /* fcpatternget.html */,
-				B3E2FB2820E568B0009EA554 /* fcfini.html */,
-				B3E2FB2920E568B0009EA554 /* fcconfiggetsysroot.html */,
-				B3E2FB2A20E568B0009EA554 /* fcstrlistfirst.html */,
-				B3E2FB2B20E568B0009EA554 /* fcpatternreference.html */,
-				B3E2FB2C20E568B0009EA554 /* fcutf16len.html */,
-				B3E2FB2D20E568B0009EA554 /* fcfreetypecharindex.html */,
-				B3E2FB2E20E568B0009EA554 /* fcutf16toucs4.html */,
-				B3E2FB2F20E568B0009EA554 /* fcconfiggetcache.html */,
-				B3E2FB3020E568B0009EA554 /* fccharsetfirstpage.html */,
-				B3E2FB3120E568B0009EA554 /* fcobjectsetbuild.html */,
-				B3E2FB3220E568B0009EA554 /* fcstrfree.html */,
-				B3E2FB3320E568B0009EA554 /* fcconfigbuildfonts.html */,
-				B3E2FB3420E568B0009EA554 /* fccharsetunion.html */,
-				B3E2FB3520E568B0009EA554 /* fcconfighome.html */,
-				B3E2FB3620E568B0009EA554 /* fclangsetcreate.html */,
-				B3E2FB3720E568B0009EA554 /* fclangsetgetlangs.html */,
-				B3E2FB3820E568B0009EA554 /* fcucs4toutf8.html */,
-				B3E2FB3920E568B0009EA554 /* fcconfigparseandloadfrommemory.html */,
-				B3E2FB3A20E568B0009EA554 /* fcdircacheloadfile.html */,
-				B3E2FB3B20E568B0009EA554 /* fccachenumfont.html */,
-				B3E2FB3C20E568B0009EA554 /* fcweightfromopentypedouble.html */,
-				B3E2FB3D20E568B0009EA554 /* fcnamegetobjecttype.html */,
-				B3E2FB3E20E568B0009EA554 /* fcvalueequal.html */,
-				B3E2FB3F20E568B0009EA554 /* fclangsetdel.html */,
-				B3E2FB4020E568B0009EA554 /* fcconfigenablehome.html */,
-				B3E2FB4120E568B0009EA554 /* fcconfiggetconfigfiles.html */,
-				B3E2FB4220E568B0009EA554 /* fcutf8toucs4.html */,
-				B3E2FB4320E568B0009EA554 /* fccharsetnew.html */,
-				B3E2FB4420E568B0009EA554 /* fcnameregisterobjecttypes.html */,
-				B3E2FB4520E568B0009EA554 /* fcconfigparseandload.html */,
-				B3E2FB4620E568B0009EA554 /* fcstrsetcreate.html */,
-				B3E2FB4720E568B0009EA554 /* fccharsetcoverage.html */,
-				B3E2FB4820E568B0009EA554 /* fccachesubdir.html */,
-				B3E2FB4920E568B0009EA554 /* fcpatternprint.html */,
-				B3E2FB4A20E568B0009EA554 /* fcfontsetprint.html */,
-				B3E2FB4B20E568B0009EA554 /* fcconfiggetfontdirs.html */,
-				B3E2FB4C20E568B0009EA554 /* fcmatrixequal.html */,
-				B3E2FB4D20E568B0009EA554 /* fcobjectsetdestroy.html */,
-				B3E2FB4E20E568B0009EA554 /* fcfilescan.html */,
-				B3E2FB4F20E568B0009EA554 /* fclangsetequal.html */,
-				B3E2FB5020E568B0009EA554 /* ln12.html */,
-				B3E2FB5120E568B0009EA554 /* fcstrsetdestroy.html */,
-				B3E2FB5220E568B0009EA554 /* fcpatternformat.html */,
-				B3E2FB5320E568B0009EA554 /* fccharsetissubset.html */,
-				B3E2FB5420E568B0009EA554 /* fcatomicdestroy.html */,
-				B3E2FB5520E568B0009EA554 /* fcmatrixscale.html */,
-				B3E2FB5620E568B0009EA554 /* fclangsetadd.html */,
-				B3E2FB5720E568B0009EA554 /* fcgetlangs.html */,
-				B3E2FB5820E568B0009EA554 /* fcconfigcreate.html */,
-				B3E2FB5920E568B0009EA554 /* fccachedir.html */,
-				B3E2FB5A20E568B0009EA554 /* fcnamegetconstant.html */,
-				B3E2FB5B20E568B0009EA554 /* fcfreetypecharsetandspacing.html */,
-				B3E2FB5C20E568B0009EA554 /* fcconfigappfontaddfile.html */,
-				B3E2FB5D20E568B0009EA554 /* fcisupper.html */,
-				B3E2FB5E20E568B0009EA554 /* fcinitreinitialize.html */,
-				B3E2FB5F20E568B0009EA554 /* fccharsetmerge.html */,
-				B3E2FB6020E568B0009EA554 /* fcnameunregisterobjecttypes.html */,
-				B3E2FB6120E568B0009EA554 /* fcatomiccreate.html */,
-				B3E2FB6220E568B0009EA554 /* fcweightfromopentype.html */,
-				B3E2FB6320E568B0009EA554 /* fcstrcmp.html */,
-				B3E2FB6420E568B0009EA554 /* fcconfiggetrescaninterval.html */,
-				B3E2FB6520E568B0009EA554 /* fcconfiggetfonts.html */,
-				B3E2FB6620E568B0009EA554 /* fcpatternbuild.html */,
-				B3E2FB6720E568B0009EA554 /* fcmatrixshear.html */,
-				B3E2FB6820E568B0009EA554 /* fcrangecopy.html */,
-				B3E2FB6920E568B0009EA554 /* fcfileisdir.html */,
-				B3E2FB6A20E568B0009EA554 /* fcatomicnewfile.html */,
-				B3E2FB6B20E568B0009EA554 /* fcatomiclock.html */,
-				B3E2FB6C20E568B0009EA554 /* fcnameunparse.html */,
-				B3E2FB6D20E568B1009EA554 /* fcmatrixmultiply.html */,
-				B3E2FB6E20E568B1009EA554 /* fcstrsetdel.html */,
-				B3E2FB6F20E568B1009EA554 /* fclanggetcharset.html */,
-				B3E2FB7020E568B1009EA554 /* fcfontsetdestroy.html */,
-				B3E2FB7120E568B1009EA554 /* fccharsetsubtractcount.html */,
-				B3E2FB7220E568B1009EA554 /* fcstrcopy.html */,
-				B3E2FB7320E568B1009EA554 /* fccharsetintersectcount.html */,
-				B3E2FB7420E568B1009EA554 /* x19.html */,
-				B3E2FB7520E568B1009EA554 /* fcpatterncreate.html */,
-				B3E2FB7620E568B1009EA554 /* fcutf8len.html */,
-				B3E2FB7720E568B1009EA554 /* fccharsethaschar.html */,
-				B3E2FB7820E568B1009EA554 /* fcgetdefaultlangs.html */,
-				B3E2FB7920E568B1009EA554 /* fcdircacheclean.html */,
-				B3E2FB7A20E568B1009EA554 /* fcobjectsetadd.html */,
-				B3E2FB7B20E568B1009EA554 /* fcconfigfileinfoiterget.html */,
-				B3E2FB7C20E568B1009EA554 /* fcstrstrignorecase.html */,
-				B3E2FB7D20E568B1009EA554 /* fclangnormalize.html */,
-				B3E2FB7E20E568B1009EA554 /* fcconfigfileinfoiterinit.html */,
-				B3E2FB7F20E568B1009EA554 /* fcmatrixcopy.html */,
-				B3E2FB8020E568B1009EA554 /* fcconfigsetcurrent.html */,
-				B3E2FB8120E568B1009EA554 /* fclangsetdestroy.html */,
-				B3E2FB8220E568B1009EA554 /* fclangsetcopy.html */,
-				B3E2FB8320E568B1009EA554 /* fcstrdowncase.html */,
-				B3E2FB8420E568B1009EA554 /* fcpatternget-type.html */,
-				B3E2FB8520E568B1009EA554 /* fcpatternadd-type.html */,
-				B3E2FB8620E568B1009EA554 /* fcstrsetadd.html */,
-				B3E2FB8720E568B1009EA554 /* fcgetversion.html */,
-				B3E2FB8820E568B1009EA554 /* fcpatternremove.html */,
-				B3E2FB8920E568B1009EA554 /* fcrangecreateinteger.html */,
-				B3E2FB8A20E568B1009EA554 /* fcnameconstant.html */,
-				B3E2FB8B20E568B1009EA554 /* fclangsetcontains.html */,
-				B3E2FB8C20E568B1009EA554 /* fcconfigsetrescaninterval.html */,
-				B3E2FB8D20E568B1009EA554 /* fcconfiggetcachedirs.html */,
-				B3E2FB8E20E568B1009EA554 /* fcdirsave.html */,
-				B3E2FB8F20E568B1009EA554 /* fcobjectsetcreate.html */,
-				B3E2FB9020E568B1009EA554 /* fcatomicunlock.html */,
-				B3E2FB9120E568B1009EA554 /* fcnameunregisterconstants.html */,
-				B3E2FB9220E568B1009EA554 /* fccharsetcreate.html */,
-				B3E2FB9320E568B1009EA554 /* fccharsetcount.html */,
-				B3E2FB9420E568B1009EA554 /* fcrangecreatedouble.html */,
-				B3E2FB9520E568B1009EA554 /* fcatomicdeletenew.html */,
-				B3E2FB9620E568B1009EA554 /* fclangsethaslang.html */,
-				B3E2FB9720E568B1009EA554 /* fcpatternduplicate.html */,
-				B3E2FB9820E568B1009EA554 /* fcstrplus.html */,
-				B3E2FB9920E568B1009EA554 /* fcstrsetaddfilename.html */,
-				B3E2FB9A20E568B1009EA554 /* fcpatterndestroy.html */,
-				B3E2FB9B20E568B1009EA554 /* fccharsetdelchar.html */,
-				B3E2FB9C20E568B1009EA554 /* fcatomicorigfile.html */,
-				B3E2FB9D20E568B1009EA554 /* fccharsetdestroy.html */,
-				B3E2FB9E20E568B1009EA554 /* fcinitloadconfig.html */,
-				B3E2FB9F20E568B1009EA554 /* fcblanksadd.html */,
-				B3E2FBA020E568B1009EA554 /* fcstrstr.html */,
-				B3E2FBA120E568B1009EA554 /* fcfontsetsort.html */,
-				B3E2FBA220E568B1009EA554 /* fcinit.html */,
-				B3E2FBA320E568B1009EA554 /* fccharsetintersect.html */,
-				B3E2FBA420E568B1009EA554 /* fcpatterndel.html */,
-				B3E2FBA520E568B1009EA554 /* fcstrlistcreate.html */,
-				B3E2FBA620E568B1009EA554 /* fccharsetnextpage.html */,
-				B3E2FBA720E568B1009EA554 /* fcconfigreference.html */,
-				B3E2FBA820E568B1009EA554 /* fcconfiguptodate.html */,
-				B3E2FBA920E568B1009EA554 /* fcvalueprint.html */,
-				B3E2FBAA20E568B1009EA554 /* fcblanksismember.html */,
-				B3E2FBAB20E568B1009EA554 /* fcconfigsubstitute.html */,
-				B3E2FBAC20E568B1009EA554 /* fcconfigfilename.html */,
-				B3E2FBAD20E568B1009EA554 /* fcatomicreplaceorig.html */,
-				B3E2FBAE20E568B1009EA554 /* fcpatternhash.html */,
-				B3E2FBAF20E568B1009EA554 /* fcblanksdestroy.html */,
-				B3E2FBB020E568B1009EA554 /* fcpatternadd.html */,
-				B3E2FBB120E568B1009EA554 /* fcconfiggetconfigdirs.html */,
-				B3E2FBB220E568B1009EA554 /* fcdircacheunload.html */,
-				B3E2FBB320E568B1009EA554 /* fcfontsort.html */,
-				B3E2FBB420E568B1009EA554 /* fcstrcmpignorecase.html */,
-				B3E2FBB520E568B1009EA554 /* fcpatternequal.html */,
-				B3E2FBB620E568B1009EA554 /* fccharsetaddchar.html */,
-				B3E2FBB720E568B1009EA554 /* fcconfiggetcurrent.html */,
-				B3E2FBB820E568B1009EA554 /* fcstrcopyfilename.html */,
-				B3E2FBB920E568B1009EA554 /* fcdircacheunlink.html */,
-				B3E2FBBA20E568B1009EA554 /* fcfreetypequeryface.html */,
-				B3E2FBBB20E568B1009EA554 /* fcmatrixinit.html */,
-				B3E2FBBC20E568B1009EA554 /* fcstrdirname.html */,
-				B3E2FBBD20E568B1009EA554 /* fctolower.html */,
-				B3E2FBBE20E568B1009EA554 /* fccachecopyset.html */,
-				B3E2FBBF20E568B1009EA554 /* fcblankscreate.html */,
-				B3E2FBC020E568B1009EA554 /* fcnameparse.html */,
-				B3E2FBC120E568B1009EA554 /* fcnameregisterconstants.html */,
-				B3E2FBC220E568B1009EA554 /* fcstrsetequal.html */,
-				B3E2FBC320E568B1009EA554 /* x31.html */,
-				B3E2FBC420E568B1009EA554 /* fcfontsetlist.html */,
-				B3E2FBC520E568B1009EA554 /* fccachenumsubdir.html */,
-				B3E2FBC620E568B1009EA554 /* fcfreetypequeryall.html */,
-				B3E2FBC720E568B1009EA554 /* fcpatternequalsubset.html */,
-				B3E2FBC820E568B1009EA554 /* fcweighttoopentypedouble.html */,
-				B3E2FBC920E568B1009EA554 /* fcpatternfilter.html */,
-				B3E2FBCA20E568B1009EA554 /* fcdirscan.html */,
-				B3E2FBCB20E568B1009EA554 /* fccachecreatetagfile.html */,
-				B3E2FBCC20E568B1009EA554 /* fcfontrenderprepare.html */,
-				B3E2FBCD20E568B1009EA554 /* fccharsetcopy.html */,
-				B3E2FBCE20E568B1009EA554 /* fcdircachevalid.html */,
-				B3E2FBCF20E568B1009EA554 /* fcdircachecreateuuid.html */,
-				B3E2FBD020E568B1009EA554 /* fclangsetunion.html */,
-				B3E2FBD120E568B1009EA554 /* fcstrlistdone.html */,
-				B3E2FBD220E568B1009EA554 /* t1.html */,
-				B3E2FBD320E568B1009EA554 /* fcstrbasename.html */,
-				B3E2FBD420E568B1009EA554 /* fcdircacherescan.html */,
-				B3E2FBD520E568B1009EA554 /* fcpatterngetwithbinding.html */,
-				B3E2FBD620E568B1009EA554 /* fcdircacheread.html */,
-				B3E2FBD720E568B1009EA554 /* fcvaluedestroy.html */,
-				B3E2FBD820E568B1009EA554 /* fcconfigfileinfoiternext.html */,
-				B3E2FBD920E568B1009EA554 /* fcconfiggetblanks.html */,
-				B3E2FBDA20E568B1009EA554 /* fcfontsetadd.html */,
-				B3E2FBDB20E568B1009EA554 /* fcfreetypecharset.html */,
-				B3E2FBDC20E568B1009EA554 /* fcislower.html */,
-				B3E2FBDD20E568B1009EA554 /* fcpatternaddweak.html */,
-				B3E2FBDE20E568B1009EA554 /* fcconfigappfontadddir.html */,
-				B3E2FBDF20E568B1009EA554 /* fcfontsetsortdestroy.html */,
-				B3E2FBE020E568B1009EA554 /* fcconfigsubstitutewithpat.html */,
-				B3E2FBE120E568B1009EA554 /* fcfontsetmatch.html */,
-				B3E2FBE220E568B1009EA554 /* fcinitloadconfigandfonts.html */,
-				B3E2FBE320E568B1009EA554 /* fcmatrixrotate.html */,
-				B3E2FBE420E568B1009EA554 /* fcdefaultsubstitute.html */,
-				B3E2FBE520E568B1009EA554 /* fcinitbringuptodate.html */,
-				B3E2FBE620E568B1009EA554 /* fcrangegetdouble.html */,
-				B3E2FBE720E568B1009EA554 /* fcfontlist.html */,
-				B3E2FBE820E568B1009EA554 /* x103.html */,
-				B3E2FBE920E568B1009EA554 /* fcstrsetmember.html */,
-				B3E2FBEA20E568B1009EA554 /* fclangsetsubtract.html */,
-				B3E2FBEB20E568B1009EA554 /* fcdircacheload.html */,
-				B3E2FBEC20E568B1009EA554 /* fcvaluesave.html */,
-				B3E2FBED20E568B1009EA554 /* fccharsetsubtract.html */,
-				B3E2FBEE20E568B1009EA554 /* fcfreetypequery.html */,
-				B3E2FBEF20E568B1009EA554 /* fcconfigsetsysroot.html */,
-				B3E2FBF020E568B1009EA554 /* fcfontmatch.html */,
-				B3E2FBF120E568B1009EA554 /* fcstrlistnext.html */,
-				B3E2FBF220E568B1009EA554 /* fcweighttoopentype.html */,
-				B3E2FBF320E568B1009EA554 /* fcfontsetcreate.html */,
-				B3E2FBF420E568B1009EA554 /* fcconfigappfontclear.html */,
-				B3E2FBF520E568B1009EA554 /* fclangsethash.html */,
-				B3E2FBF620E568B1009EA554 /* fccharsetequal.html */,
-				B3E2FBF720E568B1009EA554 /* fcrangedestroy.html */,
-				B3E2FBF820E568B1009EA554 /* fclangsetcompare.html */,
-				B3E2FBF920E568B1009EA554 /* fcconfigdestroy.html */,
-			);
-			path = "fontconfig-devel";
 			sourceTree = "<group>";
 		};
 		B3E2FBFD20E568B1009EA554 /* gettext */ = {
@@ -10105,36 +8766,10 @@
 		B3F8080920E585BF00030497 /* 1.0.3 */ = {
 			isa = PBXGroup;
 			children = (
-				B3F8080A20E585BF00030497 /* INSTALL_RECEIPT.json */,
-				B3F8080B20E585BF00030497 /* bin */,
-				B3F8080D20E585BF00030497 /* .brew */,
-				B3F8080F20E585BF00030497 /* ChangeLog */,
-				B3F8081020E585BF00030497 /* AUTHORS */,
 				B3F8081120E585BF00030497 /* include */,
-				B3F8082920E585BF00030497 /* README */,
-				B3F8082A20E585BF00030497 /* TODO */,
-				B3F8082B20E585BF00030497 /* COPYING */,
-				B3F8082C20E585BF00030497 /* NEWS */,
 				B3F8082D20E585BF00030497 /* lib */,
-				B3F8083320E585BF00030497 /* share */,
 			);
 			path = 1.0.3;
-			sourceTree = "<group>";
-		};
-		B3F8080B20E585BF00030497 /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8080C20E585BF00030497 /* fribidi */,
-			);
-			path = bin;
-			sourceTree = "<group>";
-		};
-		B3F8080D20E585BF00030497 /* .brew */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8080E20E585BF00030497 /* fribidi.rb */,
-			);
-			path = .brew;
 			sourceTree = "<group>";
 		};
 		B3F8081120E585BF00030497 /* include */ = {
@@ -10177,74 +8812,9 @@
 		B3F8082D20E585BF00030497 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				B3F8082E20E585BF00030497 /* pkgconfig */,
-				B3F8083020E585BF00030497 /* libfribidi.dylib */,
-				B3F8083120E585BF00030497 /* libfribidi.a */,
 				B3F8083220E585BF00030497 /* libfribidi.0.dylib */,
 			);
 			path = lib;
-			sourceTree = "<group>";
-		};
-		B3F8082E20E585BF00030497 /* pkgconfig */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8082F20E585BF00030497 /* fribidi.pc */,
-			);
-			path = pkgconfig;
-			sourceTree = "<group>";
-		};
-		B3F8083320E585BF00030497 /* share */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8083420E585BF00030497 /* man */,
-			);
-			path = share;
-			sourceTree = "<group>";
-		};
-		B3F8083420E585BF00030497 /* man */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8083520E585BF00030497 /* man3 */,
-			);
-			path = man;
-			sourceTree = "<group>";
-		};
-		B3F8083520E585BF00030497 /* man3 */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8083620E585BF00030497 /* fribidi_get_bidi_type_name.3 */,
-				B3F8083720E585BF00030497 /* fribidi_get_type_internal.3 */,
-				B3F8083820E585BF00030497 /* fribidi_shape.3 */,
-				B3F8083920E585BF00030497 /* fribidi_set_reorder_nsm.3 */,
-				B3F8083A20E585BF00030497 /* fribidi_get_mirror_char.3 */,
-				B3F8083B20E585BF00030497 /* fribidi_charset_to_unicode.3 */,
-				B3F8083C20E585BF00030497 /* fribidi_remove_bidi_marks.3 */,
-				B3F8083D20E585BF00030497 /* fribidi_parse_charset.3 */,
-				B3F8083E20E585BF00030497 /* fribidi_set_mirroring.3 */,
-				B3F8083F20E585BF00030497 /* fribidi_mirroring_status.3 */,
-				B3F8084020E585BF00030497 /* fribidi_get_par_embedding_levels_ex.3 */,
-				B3F8084120E585BF00030497 /* fribidi_get_bidi_type.3 */,
-				B3F8084220E585BF00030497 /* fribidi_get_joining_types.3 */,
-				B3F8084320E585BF00030497 /* fribidi_shape_mirroring.3 */,
-				B3F8084420E585BF00030497 /* fribidi_log2vis_get_embedding_levels.3 */,
-				B3F8084520E585BF00030497 /* fribidi_get_par_direction.3 */,
-				B3F8084620E585BF00030497 /* fribidi_shape_arabic.3 */,
-				B3F8084720E585BF00030497 /* fribidi_get_bracket.3 */,
-				B3F8084820E585BF00030497 /* fribidi_get_par_embedding_levels.3 */,
-				B3F8084920E585BF00030497 /* fribidi_get_joining_type.3 */,
-				B3F8084A20E585BF00030497 /* fribidi_unicode_to_charset.3 */,
-				B3F8084B20E585BF00030497 /* fribidi_reorder_nsm_status.3 */,
-				B3F8084C20E585BF00030497 /* fribidi_join_arabic.3 */,
-				B3F8084D20E585BF00030497 /* fribidi_get_bracket_types.3 */,
-				B3F8084E20E585BF00030497 /* fribidi_log2vis.3 */,
-				B3F8084F20E585BF00030497 /* fribidi_get_type.3 */,
-				B3F8085020E585BF00030497 /* fribidi_set_debug.3 */,
-				B3F8085120E585BF00030497 /* fribidi_get_bidi_types.3 */,
-				B3F8085220E585BF00030497 /* fribidi_reorder_line.3 */,
-				B3F8085320E585BF00030497 /* fribidi_debug_status.3 */,
-				B3F8085420E585BF00030497 /* fribidi_get_joining_type_name.3 */,
-			);
-			path = man3;
 			sourceTree = "<group>";
 		};
 		B3F8092520E585E800030497 /* harfbuzz */ = {
