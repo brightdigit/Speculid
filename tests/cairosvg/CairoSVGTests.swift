@@ -64,10 +64,12 @@ class CairoSVGTests: XCTestCase {
     let bundle = Bundle(for: type(of: self))
     let url = bundle.url(forResource: "geometry", withExtension: "svg")!
     let srcImageFile = ImageFile(url: url, fileFormat: .svg)
+    // swiftlint:disable:next force_try
     let imageHandle = try! ImageHandleBuilder.shared.imageHandle(fromFile: srcImageFile)
     let destDirURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
     let destImageFile = ImageFile(url: destDirURL.appendingPathComponent(UUID().uuidString), fileFormat: .png)
     let specs = ImageSpecification(file: destImageFile, geometry: GeometryDimension(value: expectedWidth, dimension: .width), removeAlphaChannel: true, backgroundColor: NSColor.cyan)
+    // swiftlint:disable:next force_try
     try! CairoInterface.exportImage(imageHandle, withSpecification: specs)
     XCTAssert(FileManager.default.fileExists(atPath: destImageFile.url.path))
     let image = NSImage(byReferencing: destImageFile.url)
