@@ -710,11 +710,8 @@
 		B3E2077E20E568C5009EA554 /* cairo-ps.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F97A20E568AE009EA554 /* cairo-ps.h */; };
 		B3E2079020E568C6009EA554 /* libcairo.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F98E20E568AE009EA554 /* libcairo.2.dylib */; };
 		B3E2079120E568C6009EA554 /* libcairo-gobject.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F98F20E568AE009EA554 /* libcairo-gobject.2.dylib */; };
-		B3E2079220E568C6009EA554 /* libcairo.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F99020E568AE009EA554 /* libcairo.dylib */; };
 		B3E2079A20E568C6009EA554 /* libcairo-trace.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F99920E568AE009EA554 /* libcairo-trace.0.dylib */; };
-		B3E2079C20E568C6009EA554 /* libcairo-trace.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F99B20E568AE009EA554 /* libcairo-trace.dylib */; };
 		B3E2079D20E568C6009EA554 /* libcairo-script-interpreter.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F99C20E568AE009EA554 /* libcairo-script-interpreter.2.dylib */; };
-		B3E2079E20E568C6009EA554 /* libcairo-gobject.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F99D20E568AE009EA554 /* libcairo-gobject.dylib */; };
 		B3E207EE20E568C6009EA554 /* fontconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F9F720E568AE009EA554 /* fontconfig.h */; };
 		B3E207EF20E568C6009EA554 /* fcprivate.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F9F820E568AE009EA554 /* fcprivate.h */; };
 		B3E207F020E568C6009EA554 /* fcfreetype.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F9F920E568AE009EA554 /* fcfreetype.h */; };
@@ -2073,12 +2070,6 @@
 		B3E2F80820E568AB009EA554 /* libgthread-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libgthread-2.0.0.dylib"; sourceTree = "<group>"; };
 		B3E2F80B20E568AB009EA554 /* glibconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glibconfig.h; sourceTree = "<group>"; };
 		B3E2F80C20E568AB009EA554 /* libgio-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libgio-2.0.0.dylib"; sourceTree = "<group>"; };
-		B3E2F96320E568AD009EA554 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
-		B3E2F96520E568AD009EA554 /* cairo-trace */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "cairo-trace"; sourceTree = "<group>"; };
-		B3E2F96620E568AD009EA554 /* cairo-sphinx */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "cairo-sphinx"; sourceTree = "<group>"; };
-		B3E2F96820E568AD009EA554 /* cairo.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = cairo.rb; sourceTree = "<group>"; };
-		B3E2F96920E568AD009EA554 /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
-		B3E2F96A20E568AD009EA554 /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
 		B3E2F96D20E568AD009EA554 /* cairo-version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-version.h"; sourceTree = "<group>"; };
 		B3E2F96E20E568AD009EA554 /* cairo-script-interpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-script-interpreter.h"; sourceTree = "<group>"; };
 		B3E2F96F20E568AD009EA554 /* cairo-svg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-svg.h"; sourceTree = "<group>"; };
@@ -2093,100 +2084,10 @@
 		B3E2F97820E568AE009EA554 /* cairo-tee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-tee.h"; sourceTree = "<group>"; };
 		B3E2F97920E568AE009EA554 /* cairo-ft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-ft.h"; sourceTree = "<group>"; };
 		B3E2F97A20E568AE009EA554 /* cairo-ps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-ps.h"; sourceTree = "<group>"; };
-		B3E2F97B20E568AE009EA554 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		B3E2F97C20E568AE009EA554 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
-		B3E2F97D20E568AE009EA554 /* NEWS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NEWS; sourceTree = "<group>"; };
-		B3E2F97F20E568AE009EA554 /* libcairo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcairo.a; sourceTree = "<group>"; };
-		B3E2F98120E568AE009EA554 /* cairo-ft.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cairo-ft.pc"; sourceTree = "<group>"; };
-		B3E2F98220E568AE009EA554 /* cairo-quartz-image.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cairo-quartz-image.pc"; sourceTree = "<group>"; };
-		B3E2F98320E568AE009EA554 /* cairo-tee.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cairo-tee.pc"; sourceTree = "<group>"; };
-		B3E2F98420E568AE009EA554 /* cairo-gobject.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cairo-gobject.pc"; sourceTree = "<group>"; };
-		B3E2F98520E568AE009EA554 /* cairo-pdf.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cairo-pdf.pc"; sourceTree = "<group>"; };
-		B3E2F98620E568AE009EA554 /* cairo-fc.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cairo-fc.pc"; sourceTree = "<group>"; };
-		B3E2F98720E568AE009EA554 /* cairo.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cairo.pc; sourceTree = "<group>"; };
-		B3E2F98820E568AE009EA554 /* cairo-png.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cairo-png.pc"; sourceTree = "<group>"; };
-		B3E2F98920E568AE009EA554 /* cairo-svg.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cairo-svg.pc"; sourceTree = "<group>"; };
-		B3E2F98A20E568AE009EA554 /* cairo-quartz.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cairo-quartz.pc"; sourceTree = "<group>"; };
-		B3E2F98B20E568AE009EA554 /* cairo-quartz-font.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cairo-quartz-font.pc"; sourceTree = "<group>"; };
-		B3E2F98C20E568AE009EA554 /* cairo-ps.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cairo-ps.pc"; sourceTree = "<group>"; };
-		B3E2F98D20E568AE009EA554 /* cairo-script.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cairo-script.pc"; sourceTree = "<group>"; };
 		B3E2F98E20E568AE009EA554 /* libcairo.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcairo.2.dylib; sourceTree = "<group>"; };
 		B3E2F98F20E568AE009EA554 /* libcairo-gobject.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libcairo-gobject.2.dylib"; sourceTree = "<group>"; };
-		B3E2F99020E568AE009EA554 /* libcairo.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcairo.dylib; sourceTree = "<group>"; };
-		B3E2F99120E568AE009EA554 /* libcairo-script-interpreter.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libcairo-script-interpreter.dylib"; sourceTree = "<group>"; };
-		B3E2F99320E568AE009EA554 /* cairo-fdr.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "cairo-fdr.a"; sourceTree = "<group>"; };
-		B3E2F99420E568AE009EA554 /* cairo-sphinx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "cairo-sphinx.a"; sourceTree = "<group>"; };
-		B3E2F99720E568AE009EA554 /* libcairo-trace.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libcairo-trace.a"; sourceTree = "<group>"; };
 		B3E2F99920E568AE009EA554 /* libcairo-trace.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libcairo-trace.0.dylib"; sourceTree = "<group>"; };
-		B3E2F99B20E568AE009EA554 /* libcairo-trace.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libcairo-trace.dylib"; sourceTree = "<group>"; };
 		B3E2F99C20E568AE009EA554 /* libcairo-script-interpreter.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libcairo-script-interpreter.2.dylib"; sourceTree = "<group>"; };
-		B3E2F99D20E568AE009EA554 /* libcairo-gobject.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libcairo-gobject.dylib"; sourceTree = "<group>"; };
-		B3E2F99E20E568AE009EA554 /* libcairo-gobject.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libcairo-gobject.a"; sourceTree = "<group>"; };
-		B3E2F99F20E568AE009EA554 /* libcairo-script-interpreter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libcairo-script-interpreter.a"; sourceTree = "<group>"; };
-		B3E2F9A420E568AE009EA554 /* cairo-surfaces.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-surfaces.html"; sourceTree = "<group>"; };
-		B3E2F9A520E568AE009EA554 /* cairo-Win32-Fonts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-Win32-Fonts.html"; sourceTree = "<group>"; };
-		B3E2F9A620E568AE009EA554 /* cairo-cairo-font-face-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-cairo-font-face-t.html"; sourceTree = "<group>"; };
-		B3E2F9A720E568AE009EA554 /* up-insensitive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "up-insensitive.png"; sourceTree = "<group>"; };
-		B3E2F9A820E568AE009EA554 /* cairo-PNG-Support.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-PNG-Support.html"; sourceTree = "<group>"; };
-		B3E2F9A920E568AE009EA554 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		B3E2F9AA20E568AE009EA554 /* index-1.10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index-1.10.html"; sourceTree = "<group>"; };
-		B3E2F9AB20E568AE009EA554 /* bindings-patterns.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "bindings-patterns.html"; sourceTree = "<group>"; };
-		B3E2F9AC20E568AE009EA554 /* cairo-User-Fonts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-User-Fonts.html"; sourceTree = "<group>"; };
-		B3E2F9AD20E568AE009EA554 /* bindings-return-values.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "bindings-return-values.html"; sourceTree = "<group>"; };
-		B3E2F9AE20E568AE009EA554 /* cairo-cairo-surface-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-cairo-surface-t.html"; sourceTree = "<group>"; };
-		B3E2F9AF20E568AE009EA554 /* cairo-Quartz-Surfaces.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-Quartz-Surfaces.html"; sourceTree = "<group>"; };
-		B3E2F9B020E568AE009EA554 /* cairo-text.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-text.html"; sourceTree = "<group>"; };
-		B3E2F9B120E568AE009EA554 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
-		B3E2F9B220E568AE009EA554 /* cairo-PDF-Surfaces.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-PDF-Surfaces.html"; sourceTree = "<group>"; };
-		B3E2F9B320E568AE009EA554 /* cairo-Regions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-Regions.html"; sourceTree = "<group>"; };
-		B3E2F9B420E568AE009EA554 /* cairo-Types.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-Types.html"; sourceTree = "<group>"; };
-		B3E2F9B520E568AE009EA554 /* bindings-streams.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "bindings-streams.html"; sourceTree = "<group>"; };
-		B3E2F9B620E568AE009EA554 /* cairo-cairo-pattern-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-cairo-pattern-t.html"; sourceTree = "<group>"; };
-		B3E2F9B720E568AE009EA554 /* index-all.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index-all.html"; sourceTree = "<group>"; };
-		B3E2F9B820E568AE009EA554 /* right-insensitive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-insensitive.png"; sourceTree = "<group>"; };
-		B3E2F9B920E568AE009EA554 /* index-1.6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index-1.6.html"; sourceTree = "<group>"; };
-		B3E2F9BA20E568AE009EA554 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
-		B3E2F9BB20E568AE009EA554 /* cairo-XLib-Surfaces.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-XLib-Surfaces.html"; sourceTree = "<group>"; };
-		B3E2F9BC20E568AE009EA554 /* cairo-support.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-support.html"; sourceTree = "<group>"; };
-		B3E2F9BD20E568AE009EA554 /* language-bindings.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "language-bindings.html"; sourceTree = "<group>"; };
-		B3E2F9BE20E568AE009EA554 /* cairo-Error-handling.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-Error-handling.html"; sourceTree = "<group>"; };
-		B3E2F9BF20E568AE009EA554 /* cairo-XCB-Surfaces.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-XCB-Surfaces.html"; sourceTree = "<group>"; };
-		B3E2F9C020E568AE009EA554 /* cairo-Script-Surfaces.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-Script-Surfaces.html"; sourceTree = "<group>"; };
-		B3E2F9C120E568AE009EA554 /* cairo-Paths.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-Paths.html"; sourceTree = "<group>"; };
-		B3E2F9C220E568AE009EA554 /* cairo-XLib-XRender-Backend.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-XLib-XRender-Backend.html"; sourceTree = "<group>"; };
-		B3E2F9C320E568AE009EA554 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
-		B3E2F9C420E568AE009EA554 /* cairo-Transformations.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-Transformations.html"; sourceTree = "<group>"; };
-		B3E2F9C520E568AE009EA554 /* cairo-Win32-Surfaces.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-Win32-Surfaces.html"; sourceTree = "<group>"; };
-		B3E2F9C620E568AE009EA554 /* cairo-cairo-font-options-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-cairo-font-options-t.html"; sourceTree = "<group>"; };
-		B3E2F9C720E568AE009EA554 /* cairo-FreeType-Fonts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-FreeType-Fonts.html"; sourceTree = "<group>"; };
-		B3E2F9C820E568AE009EA554 /* bindings-errors.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "bindings-errors.html"; sourceTree = "<group>"; };
-		B3E2F9C920E568AE009EA554 /* cairo-Raster-Sources.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-Raster-Sources.html"; sourceTree = "<group>"; };
-		B3E2F9CA20E568AE009EA554 /* cairo-drawing.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-drawing.html"; sourceTree = "<group>"; };
-		B3E2F9CB20E568AE009EA554 /* cairo-cairo-device-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-cairo-device-t.html"; sourceTree = "<group>"; };
-		B3E2F9CC20E568AE009EA554 /* cairo.devhelp2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cairo.devhelp2; sourceTree = "<group>"; };
-		B3E2F9CD20E568AE009EA554 /* index-1.4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index-1.4.html"; sourceTree = "<group>"; };
-		B3E2F9CE20E568AE009EA554 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
-		B3E2F9CF20E568AE009EA554 /* index-1.14.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index-1.14.html"; sourceTree = "<group>"; };
-		B3E2F9D020E568AE009EA554 /* bindings-fonts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "bindings-fonts.html"; sourceTree = "<group>"; };
-		B3E2F9D120E568AE009EA554 /* index-1.8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index-1.8.html"; sourceTree = "<group>"; };
-		B3E2F9D220E568AE009EA554 /* cairo-Image-Surfaces.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-Image-Surfaces.html"; sourceTree = "<group>"; };
-		B3E2F9D320E568AE009EA554 /* bindings-overloading.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "bindings-overloading.html"; sourceTree = "<group>"; };
-		B3E2F9D420E568AE009EA554 /* cairo-cairo-scaled-font-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-cairo-scaled-font-t.html"; sourceTree = "<group>"; };
-		B3E2F9D520E568AE009EA554 /* cairo-Quartz-(CGFont)-Fonts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-Quartz-(CGFont)-Fonts.html"; sourceTree = "<group>"; };
-		B3E2F9D620E568AE009EA554 /* left-insensitive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-insensitive.png"; sourceTree = "<group>"; };
-		B3E2F9D720E568AE009EA554 /* bindings-path.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "bindings-path.html"; sourceTree = "<group>"; };
-		B3E2F9D820E568AE009EA554 /* cairo-SVG-Surfaces.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-SVG-Surfaces.html"; sourceTree = "<group>"; };
-		B3E2F9D920E568AE009EA554 /* cairo-fonts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-fonts.html"; sourceTree = "<group>"; };
-		B3E2F9DA20E568AE009EA554 /* index-1.12.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index-1.12.html"; sourceTree = "<group>"; };
-		B3E2F9DB20E568AE009EA554 /* cairo-cairo-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-cairo-t.html"; sourceTree = "<group>"; };
-		B3E2F9DC20E568AE009EA554 /* bindings-surfaces.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "bindings-surfaces.html"; sourceTree = "<group>"; };
-		B3E2F9DD20E568AE009EA554 /* cairo-Recording-Surfaces.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-Recording-Surfaces.html"; sourceTree = "<group>"; };
-		B3E2F9DE20E568AE009EA554 /* cairo-Version-Information.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-Version-Information.html"; sourceTree = "<group>"; };
-		B3E2F9DF20E568AE009EA554 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
-		B3E2F9E020E568AE009EA554 /* cairo-PostScript-Surfaces.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-PostScript-Surfaces.html"; sourceTree = "<group>"; };
-		B3E2F9E120E568AE009EA554 /* bindings-memory.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "bindings-memory.html"; sourceTree = "<group>"; };
-		B3E2F9E220E568AE009EA554 /* index-1.2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index-1.2.html"; sourceTree = "<group>"; };
-		B3E2F9E320E568AE009EA554 /* cairo-cairo-matrix-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cairo-cairo-matrix-t.html"; sourceTree = "<group>"; };
 		B3E2F9E620E568AE009EA554 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
 		B3E2F9E820E568AE009EA554 /* fc-list */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "fc-list"; sourceTree = "<group>"; };
 		B3E2F9E920E568AE009EA554 /* fc-pattern */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "fc-pattern"; sourceTree = "<group>"; };
@@ -3643,7 +3544,6 @@
 				B3F8075520E5855F00030497 /* libffi.6.dylib in Frameworks */,
 				B3F8067120E5851A00030497 /* libpcre.dylib in Frameworks */,
 				B3E2050C20E568C3009EA554 /* libgdk_pixbuf-2.0.dylib in Frameworks */,
-				B3E2079220E568C6009EA554 /* libcairo.dylib in Frameworks */,
 				B3E2118120E568D0009EA554 /* librsvg-2.dylib in Frameworks */,
 				B3E2079D20E568C6009EA554 /* libcairo-script-interpreter.2.dylib in Frameworks */,
 				B3E20A0320E568C8009EA554 /* libintl.dylib in Frameworks */,
@@ -3660,9 +3560,7 @@
 				B3F8067720E5851A00030497 /* libpcre32.dylib in Frameworks */,
 				B3F8067320E5851A00030497 /* libpcrecpp.0.dylib in Frameworks */,
 				B3E206EB20E568C5009EA554 /* libgmodule-2.0.0.dylib in Frameworks */,
-				B3E2079E20E568C6009EA554 /* libcairo-gobject.dylib in Frameworks */,
 				B3F8067B20E5851A00030497 /* libpcre32.0.dylib in Frameworks */,
-				B3E2079C20E568C6009EA554 /* libcairo-trace.dylib in Frameworks */,
 				B3F8066A20E5851A00030497 /* libpcre.1.dylib in Frameworks */,
 				B3E20A0420E568C8009EA554 /* libintl.8.dylib in Frameworks */,
 				205A5AF735ED0AFE6D8E3753 /* Pods_CairoSVG.framework in Frameworks */,
@@ -4599,23 +4497,23 @@
 		B3E2F4B820E568A5009EA554 /* dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				B3825EED20F91806008F2A02 /* graphite2 */,
-				B31BD6EB20E7E0D500A560C2 /* icu4c */,
-				B3F8092520E585E800030497 /* harfbuzz */,
-				B3F8080820E585BF00030497 /* fribidi */,
-				B3F8075B20E5858100030497 /* libcroco */,
-				B3F8073020E5855F00030497 /* libffi */,
-				B3F8058020E5851900030497 /* pcre */,
-				B3F8053E20E584B300030497 /* libpng */,
-				B3F8045620E5820B00030497 /* pango */,
-				B3E2F4B920E568A5009EA554 /* pixman */,
-				B3E2F4CD20E568A5009EA554 /* freetype */,
-				B3E2F51720E568A6009EA554 /* gdk-pixbuf */,
-				B3E2F6C920E568A9009EA554 /* glib */,
 				B3E2F96120E568AD009EA554 /* cairo */,
 				B3E2F9E420E568AE009EA554 /* fontconfig */,
+				B3E2F4CD20E568A5009EA554 /* freetype */,
+				B3F8080820E585BF00030497 /* fribidi */,
+				B3E2F51720E568A6009EA554 /* gdk-pixbuf */,
 				B3E2FBFD20E568B1009EA554 /* gettext */,
+				B3E2F6C920E568A9009EA554 /* glib */,
+				B3825EED20F91806008F2A02 /* graphite2 */,
+				B3F8092520E585E800030497 /* harfbuzz */,
+				B31BD6EB20E7E0D500A560C2 /* icu4c */,
+				B3F8075B20E5858100030497 /* libcroco */,
+				B3F8073020E5855F00030497 /* libffi */,
+				B3F8053E20E584B300030497 /* libpng */,
 				B3E2045E20E568C0009EA554 /* librsvg */,
+				B3F8045620E5820B00030497 /* pango */,
+				B3F8058020E5851900030497 /* pcre */,
+				B3E2F4B920E568A5009EA554 /* pixman */,
 			);
 			path = dependencies;
 			sourceTree = "<group>";
@@ -7283,36 +7181,10 @@
 		B3E2F96220E568AD009EA554 /* 1.14.12 */ = {
 			isa = PBXGroup;
 			children = (
-				B3E2F96320E568AD009EA554 /* INSTALL_RECEIPT.json */,
-				B3E2F96420E568AD009EA554 /* bin */,
-				B3E2F96720E568AD009EA554 /* .brew */,
-				B3E2F96920E568AD009EA554 /* ChangeLog */,
-				B3E2F96A20E568AD009EA554 /* AUTHORS */,
 				B3E2F96B20E568AD009EA554 /* include */,
-				B3E2F97B20E568AE009EA554 /* README */,
-				B3E2F97C20E568AE009EA554 /* COPYING */,
-				B3E2F97D20E568AE009EA554 /* NEWS */,
 				B3E2F97E20E568AE009EA554 /* lib */,
-				B3E2F9A020E568AE009EA554 /* share */,
 			);
 			path = 1.14.12;
-			sourceTree = "<group>";
-		};
-		B3E2F96420E568AD009EA554 /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F96520E568AD009EA554 /* cairo-trace */,
-				B3E2F96620E568AD009EA554 /* cairo-sphinx */,
-			);
-			path = bin;
-			sourceTree = "<group>";
-		};
-		B3E2F96720E568AD009EA554 /* .brew */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F96820E568AD009EA554 /* cairo.rb */,
-			);
-			path = .brew;
 			sourceTree = "<group>";
 		};
 		B3E2F96B20E568AD009EA554 /* include */ = {
@@ -7347,144 +7219,18 @@
 		B3E2F97E20E568AE009EA554 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				B3E2F97F20E568AE009EA554 /* libcairo.a */,
-				B3E2F98020E568AE009EA554 /* pkgconfig */,
 				B3E2F98E20E568AE009EA554 /* libcairo.2.dylib */,
 				B3E2F98F20E568AE009EA554 /* libcairo-gobject.2.dylib */,
-				B3E2F99020E568AE009EA554 /* libcairo.dylib */,
-				B3E2F99120E568AE009EA554 /* libcairo-script-interpreter.dylib */,
 				B3E2F99220E568AE009EA554 /* cairo */,
 				B3E2F99C20E568AE009EA554 /* libcairo-script-interpreter.2.dylib */,
-				B3E2F99D20E568AE009EA554 /* libcairo-gobject.dylib */,
-				B3E2F99E20E568AE009EA554 /* libcairo-gobject.a */,
-				B3E2F99F20E568AE009EA554 /* libcairo-script-interpreter.a */,
 			);
 			path = lib;
-			sourceTree = "<group>";
-		};
-		B3E2F98020E568AE009EA554 /* pkgconfig */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F98120E568AE009EA554 /* cairo-ft.pc */,
-				B3E2F98220E568AE009EA554 /* cairo-quartz-image.pc */,
-				B3E2F98320E568AE009EA554 /* cairo-tee.pc */,
-				B3E2F98420E568AE009EA554 /* cairo-gobject.pc */,
-				B3E2F98520E568AE009EA554 /* cairo-pdf.pc */,
-				B3E2F98620E568AE009EA554 /* cairo-fc.pc */,
-				B3E2F98720E568AE009EA554 /* cairo.pc */,
-				B3E2F98820E568AE009EA554 /* cairo-png.pc */,
-				B3E2F98920E568AE009EA554 /* cairo-svg.pc */,
-				B3E2F98A20E568AE009EA554 /* cairo-quartz.pc */,
-				B3E2F98B20E568AE009EA554 /* cairo-quartz-font.pc */,
-				B3E2F98C20E568AE009EA554 /* cairo-ps.pc */,
-				B3E2F98D20E568AE009EA554 /* cairo-script.pc */,
-			);
-			path = pkgconfig;
 			sourceTree = "<group>";
 		};
 		B3E2F99220E568AE009EA554 /* cairo */ = {
 			isa = PBXGroup;
 			children = (
-				B3E2F99320E568AE009EA554 /* cairo-fdr.a */,
-				B3E2F99420E568AE009EA554 /* cairo-sphinx.a */,
-				B3E2F99720E568AE009EA554 /* libcairo-trace.a */,
 				B3E2F99920E568AE009EA554 /* libcairo-trace.0.dylib */,
-				B3E2F99B20E568AE009EA554 /* libcairo-trace.dylib */,
-			);
-			path = cairo;
-			sourceTree = "<group>";
-		};
-		B3E2F9A020E568AE009EA554 /* share */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F9A120E568AE009EA554 /* gtk-doc */,
-			);
-			path = share;
-			sourceTree = "<group>";
-		};
-		B3E2F9A120E568AE009EA554 /* gtk-doc */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F9A220E568AE009EA554 /* html */,
-			);
-			path = "gtk-doc";
-			sourceTree = "<group>";
-		};
-		B3E2F9A220E568AE009EA554 /* html */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F9A320E568AE009EA554 /* cairo */,
-			);
-			path = html;
-			sourceTree = "<group>";
-		};
-		B3E2F9A320E568AE009EA554 /* cairo */ = {
-			isa = PBXGroup;
-			children = (
-				B3E2F9A420E568AE009EA554 /* cairo-surfaces.html */,
-				B3E2F9A520E568AE009EA554 /* cairo-Win32-Fonts.html */,
-				B3E2F9A620E568AE009EA554 /* cairo-cairo-font-face-t.html */,
-				B3E2F9A720E568AE009EA554 /* up-insensitive.png */,
-				B3E2F9A820E568AE009EA554 /* cairo-PNG-Support.html */,
-				B3E2F9A920E568AE009EA554 /* index.html */,
-				B3E2F9AA20E568AE009EA554 /* index-1.10.html */,
-				B3E2F9AB20E568AE009EA554 /* bindings-patterns.html */,
-				B3E2F9AC20E568AE009EA554 /* cairo-User-Fonts.html */,
-				B3E2F9AD20E568AE009EA554 /* bindings-return-values.html */,
-				B3E2F9AE20E568AE009EA554 /* cairo-cairo-surface-t.html */,
-				B3E2F9AF20E568AE009EA554 /* cairo-Quartz-Surfaces.html */,
-				B3E2F9B020E568AE009EA554 /* cairo-text.html */,
-				B3E2F9B120E568AE009EA554 /* up.png */,
-				B3E2F9B220E568AE009EA554 /* cairo-PDF-Surfaces.html */,
-				B3E2F9B320E568AE009EA554 /* cairo-Regions.html */,
-				B3E2F9B420E568AE009EA554 /* cairo-Types.html */,
-				B3E2F9B520E568AE009EA554 /* bindings-streams.html */,
-				B3E2F9B620E568AE009EA554 /* cairo-cairo-pattern-t.html */,
-				B3E2F9B720E568AE009EA554 /* index-all.html */,
-				B3E2F9B820E568AE009EA554 /* right-insensitive.png */,
-				B3E2F9B920E568AE009EA554 /* index-1.6.html */,
-				B3E2F9BA20E568AE009EA554 /* home.png */,
-				B3E2F9BB20E568AE009EA554 /* cairo-XLib-Surfaces.html */,
-				B3E2F9BC20E568AE009EA554 /* cairo-support.html */,
-				B3E2F9BD20E568AE009EA554 /* language-bindings.html */,
-				B3E2F9BE20E568AE009EA554 /* cairo-Error-handling.html */,
-				B3E2F9BF20E568AE009EA554 /* cairo-XCB-Surfaces.html */,
-				B3E2F9C020E568AE009EA554 /* cairo-Script-Surfaces.html */,
-				B3E2F9C120E568AE009EA554 /* cairo-Paths.html */,
-				B3E2F9C220E568AE009EA554 /* cairo-XLib-XRender-Backend.html */,
-				B3E2F9C320E568AE009EA554 /* left.png */,
-				B3E2F9C420E568AE009EA554 /* cairo-Transformations.html */,
-				B3E2F9C520E568AE009EA554 /* cairo-Win32-Surfaces.html */,
-				B3E2F9C620E568AE009EA554 /* cairo-cairo-font-options-t.html */,
-				B3E2F9C720E568AE009EA554 /* cairo-FreeType-Fonts.html */,
-				B3E2F9C820E568AE009EA554 /* bindings-errors.html */,
-				B3E2F9C920E568AE009EA554 /* cairo-Raster-Sources.html */,
-				B3E2F9CA20E568AE009EA554 /* cairo-drawing.html */,
-				B3E2F9CB20E568AE009EA554 /* cairo-cairo-device-t.html */,
-				B3E2F9CC20E568AE009EA554 /* cairo.devhelp2 */,
-				B3E2F9CD20E568AE009EA554 /* index-1.4.html */,
-				B3E2F9CE20E568AE009EA554 /* style.css */,
-				B3E2F9CF20E568AE009EA554 /* index-1.14.html */,
-				B3E2F9D020E568AE009EA554 /* bindings-fonts.html */,
-				B3E2F9D120E568AE009EA554 /* index-1.8.html */,
-				B3E2F9D220E568AE009EA554 /* cairo-Image-Surfaces.html */,
-				B3E2F9D320E568AE009EA554 /* bindings-overloading.html */,
-				B3E2F9D420E568AE009EA554 /* cairo-cairo-scaled-font-t.html */,
-				B3E2F9D520E568AE009EA554 /* cairo-Quartz-(CGFont)-Fonts.html */,
-				B3E2F9D620E568AE009EA554 /* left-insensitive.png */,
-				B3E2F9D720E568AE009EA554 /* bindings-path.html */,
-				B3E2F9D820E568AE009EA554 /* cairo-SVG-Surfaces.html */,
-				B3E2F9D920E568AE009EA554 /* cairo-fonts.html */,
-				B3E2F9DA20E568AE009EA554 /* index-1.12.html */,
-				B3E2F9DB20E568AE009EA554 /* cairo-cairo-t.html */,
-				B3E2F9DC20E568AE009EA554 /* bindings-surfaces.html */,
-				B3E2F9DD20E568AE009EA554 /* cairo-Recording-Surfaces.html */,
-				B3E2F9DE20E568AE009EA554 /* cairo-Version-Information.html */,
-				B3E2F9DF20E568AE009EA554 /* right.png */,
-				B3E2F9E020E568AE009EA554 /* cairo-PostScript-Surfaces.html */,
-				B3E2F9E120E568AE009EA554 /* bindings-memory.html */,
-				B3E2F9E220E568AE009EA554 /* index-1.2.html */,
-				B3E2F9E320E568AE009EA554 /* cairo-cairo-matrix-t.html */,
 			);
 			path = cairo;
 			sourceTree = "<group>";
