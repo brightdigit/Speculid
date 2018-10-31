@@ -688,9 +688,6 @@
 		B3E206D320E568C5009EA554 /* ginetaddressmask.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F7EB20E568AB009EA554 /* ginetaddressmask.h */; };
 		B3E206D420E568C5009EA554 /* gsocketconnection.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F7EC20E568AB009EA554 /* gsocketconnection.h */; };
 		B3E206D520E568C5009EA554 /* giostream.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2F7ED20E568AB009EA554 /* giostream.h */; };
-		B3E206D920E568C5009EA554 /* libgmodule-2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F7F220E568AB009EA554 /* libgmodule-2.0.dylib */; };
-		B3E206DB20E568C5009EA554 /* libgthread-2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F7F420E568AB009EA554 /* libgthread-2.0.dylib */; };
-		B3E206E520E568C5009EA554 /* libgobject-2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F7FF20E568AB009EA554 /* libgobject-2.0.dylib */; };
 		B3E206E620E568C5009EA554 /* libglib-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F80020E568AB009EA554 /* libglib-2.0.0.dylib */; };
 		B3E206E920E568C5009EA554 /* libgobject-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F80320E568AB009EA554 /* libgobject-2.0.0.dylib */; };
 		B3E206EB20E568C5009EA554 /* libgmodule-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2F80520E568AB009EA554 /* libgmodule-2.0.0.dylib */; };
@@ -726,13 +723,10 @@
 		B3E209FA20E568C8009EA554 /* autosprintf.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2FC1C20E568B2009EA554 /* autosprintf.h */; };
 		B3E209FB20E568C8009EA554 /* gettext-po.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2FC1D20E568B2009EA554 /* gettext-po.h */; };
 		B3E209FC20E568C8009EA554 /* libintl.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2FC1E20E568B2009EA554 /* libintl.h */; };
-		B3E20A0020E568C8009EA554 /* libgettextlib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2FC2320E568B2009EA554 /* libgettextlib.dylib */; };
 		B3E20A0120E568C8009EA554 /* libgettextpo.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2FC2420E568B2009EA554 /* libgettextpo.0.dylib */; };
 		B3E20A0320E568C8009EA554 /* libintl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2FC2620E568B2009EA554 /* libintl.dylib */; };
 		B3E20A0420E568C8009EA554 /* libintl.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2FC2720E568B2009EA554 /* libintl.8.dylib */; };
 		B3E20A0C20E568C8009EA554 /* libgettextsrc-0.19.8.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2FC3020E568B2009EA554 /* libgettextsrc-0.19.8.1.dylib */; };
-		B3E20A0E20E568C8009EA554 /* libgettextsrc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2FC3220E568B2009EA554 /* libgettextsrc.dylib */; };
-		B3E20A1120E568C8009EA554 /* libgettextpo.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2FC3520E568B2009EA554 /* libgettextpo.dylib */; };
 		B3E20B1020E568C9009EA554 /* gettext.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2FD9C20E568B4009EA554 /* gettext.h */; };
 		B3E2117420E568D0009EA554 /* librsvg-features.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2046A20E568C0009EA554 /* librsvg-features.h */; };
 		B3E2117520E568D0009EA554 /* rsvg-cairo.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E2046B20E568C0009EA554 /* rsvg-cairo.h */; };
@@ -749,9 +743,6 @@
 		B3E211AE20E57B5E009EA554 /* libfreetype.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F51020E568A6009EA554 /* libfreetype.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211AF20E57B5E009EA554 /* libgdk_pixbuf-2.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F53620E568A6009EA554 /* libgdk_pixbuf-2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211B020E57B5E009EA554 /* libgdk_pixbuf-2.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F53920E568A6009EA554 /* libgdk_pixbuf-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B3E211B120E57B5E009EA554 /* libgmodule-2.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F7F220E568AB009EA554 /* libgmodule-2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B3E211B220E57B5E009EA554 /* libgthread-2.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F7F420E568AB009EA554 /* libgthread-2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B3E211B320E57B5E009EA554 /* libgobject-2.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F7FF20E568AB009EA554 /* libgobject-2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211B420E57B5E009EA554 /* libglib-2.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F80020E568AB009EA554 /* libglib-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211B720E57B5E009EA554 /* libgobject-2.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F80320E568AB009EA554 /* libgobject-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211B820E57B5E009EA554 /* libgmodule-2.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F80520E568AB009EA554 /* libgmodule-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -760,12 +751,9 @@
 		B3E211BB20E57B5E009EA554 /* libcairo-gobject.2.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F98F20E568AE009EA554 /* libcairo-gobject.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211BC20E57B5E009EA554 /* libcairo-trace.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2F99920E568AE009EA554 /* libcairo-trace.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211BD20E57B5E009EA554 /* libfontconfig.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2FA0120E568AE009EA554 /* libfontconfig.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B3E211BE20E57B5E009EA554 /* libgettextlib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2FC2320E568B2009EA554 /* libgettextlib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211BF20E57B5E009EA554 /* libgettextpo.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2FC2420E568B2009EA554 /* libgettextpo.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211C020E57B5E009EA554 /* libasprintf.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2FC2520E568B2009EA554 /* libasprintf.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211C120E57B5E009EA554 /* libintl.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2FC2720E568B2009EA554 /* libintl.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B3E211C220E57B5E009EA554 /* libgettextsrc.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2FC3220E568B2009EA554 /* libgettextsrc.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B3E211C320E57B5E009EA554 /* libgettextpo.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2FC3520E568B2009EA554 /* libgettextpo.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211C420E57BA0009EA554 /* libgettextlib-0.19.8.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2FC3420E568B2009EA554 /* libgettextlib-0.19.8.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E211C520E57BCC009EA554 /* libgettextsrc-0.19.8.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E2FC3020E568B2009EA554 /* libgettextsrc-0.19.8.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3E9A9011FB4DCCA00FD8E7A /* autorevision.json in Resources */ = {isa = PBXBuildFile; fileRef = B3E9A9001FB4DCCA00FD8E7A /* autorevision.json */; };
@@ -1139,9 +1127,6 @@
 				B3E211AE20E57B5E009EA554 /* libfreetype.6.dylib in CopyFiles */,
 				B3E211AF20E57B5E009EA554 /* libgdk_pixbuf-2.0.dylib in CopyFiles */,
 				B3E211B020E57B5E009EA554 /* libgdk_pixbuf-2.0.0.dylib in CopyFiles */,
-				B3E211B120E57B5E009EA554 /* libgmodule-2.0.dylib in CopyFiles */,
-				B3E211B220E57B5E009EA554 /* libgthread-2.0.dylib in CopyFiles */,
-				B3E211B320E57B5E009EA554 /* libgobject-2.0.dylib in CopyFiles */,
 				B3E211B420E57B5E009EA554 /* libglib-2.0.0.dylib in CopyFiles */,
 				B3E211B720E57B5E009EA554 /* libgobject-2.0.0.dylib in CopyFiles */,
 				B3E211B820E57B5E009EA554 /* libgmodule-2.0.0.dylib in CopyFiles */,
@@ -1150,12 +1135,9 @@
 				B3E211BB20E57B5E009EA554 /* libcairo-gobject.2.dylib in CopyFiles */,
 				B3E211BC20E57B5E009EA554 /* libcairo-trace.0.dylib in CopyFiles */,
 				B3E211BD20E57B5E009EA554 /* libfontconfig.1.dylib in CopyFiles */,
-				B3E211BE20E57B5E009EA554 /* libgettextlib.dylib in CopyFiles */,
 				B3E211BF20E57B5E009EA554 /* libgettextpo.0.dylib in CopyFiles */,
 				B3E211C020E57B5E009EA554 /* libasprintf.dylib in CopyFiles */,
 				B3E211C120E57B5E009EA554 /* libintl.8.dylib in CopyFiles */,
-				B3E211C220E57B5E009EA554 /* libgettextsrc.dylib in CopyFiles */,
-				B3E211C320E57B5E009EA554 /* libgettextpo.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2097,9 +2079,6 @@
 		B3E2F7EB20E568AB009EA554 /* ginetaddressmask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ginetaddressmask.h; sourceTree = "<group>"; };
 		B3E2F7EC20E568AB009EA554 /* gsocketconnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gsocketconnection.h; sourceTree = "<group>"; };
 		B3E2F7ED20E568AB009EA554 /* giostream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = giostream.h; sourceTree = "<group>"; };
-		B3E2F7F220E568AB009EA554 /* libgmodule-2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libgmodule-2.0.dylib"; sourceTree = "<group>"; };
-		B3E2F7F420E568AB009EA554 /* libgthread-2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libgthread-2.0.dylib"; sourceTree = "<group>"; };
-		B3E2F7FF20E568AB009EA554 /* libgobject-2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libgobject-2.0.dylib"; sourceTree = "<group>"; };
 		B3E2F80020E568AB009EA554 /* libglib-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libglib-2.0.0.dylib"; sourceTree = "<group>"; };
 		B3E2F80320E568AB009EA554 /* libgobject-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libgobject-2.0.0.dylib"; sourceTree = "<group>"; };
 		B3E2F80520E568AB009EA554 /* libgmodule-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libgmodule-2.0.0.dylib"; sourceTree = "<group>"; };
@@ -2763,7 +2742,6 @@
 		B3E2FC1F20E568B2009EA554 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		B3E2FC2020E568B2009EA554 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		B3E2FC2120E568B2009EA554 /* NEWS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NEWS; sourceTree = "<group>"; };
-		B3E2FC2320E568B2009EA554 /* libgettextlib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libgettextlib.dylib; sourceTree = "<group>"; };
 		B3E2FC2420E568B2009EA554 /* libgettextpo.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libgettextpo.0.dylib; sourceTree = "<group>"; };
 		B3E2FC2520E568B2009EA554 /* libasprintf.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libasprintf.dylib; sourceTree = "<group>"; };
 		B3E2FC2620E568B2009EA554 /* libintl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libintl.dylib; sourceTree = "<group>"; };
@@ -2776,11 +2754,8 @@
 		B3E2FC2E20E568B2009EA554 /* user-email */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "user-email"; sourceTree = "<group>"; };
 		B3E2FC2F20E568B2009EA554 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libintl.a; sourceTree = "<group>"; };
 		B3E2FC3020E568B2009EA554 /* libgettextsrc-0.19.8.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libgettextsrc-0.19.8.1.dylib"; sourceTree = "<group>"; };
-		B3E2FC3120E568B2009EA554 /* libgettextpo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgettextpo.a; sourceTree = "<group>"; };
-		B3E2FC3220E568B2009EA554 /* libgettextsrc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libgettextsrc.dylib; sourceTree = "<group>"; };
 		B3E2FC3320E568B2009EA554 /* libasprintf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libasprintf.a; sourceTree = "<group>"; };
 		B3E2FC3420E568B2009EA554 /* libgettextlib-0.19.8.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libgettextlib-0.19.8.1.dylib"; sourceTree = "<group>"; };
-		B3E2FC3520E568B2009EA554 /* libgettextpo.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libgettextpo.dylib; sourceTree = "<group>"; };
 		B3E2FC3920E568B2009EA554 /* gettext.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gettext.3; sourceTree = "<group>"; };
 		B3E2FC3A20E568B2009EA554 /* dcgettext.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dcgettext.3; sourceTree = "<group>"; };
 		B3E2FC3B20E568B2009EA554 /* textdomain.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = textdomain.3; sourceTree = "<group>"; };
@@ -3800,7 +3775,6 @@
 				B3F8067120E5851A00030497 /* libpcre.dylib in Frameworks */,
 				B3E2050C20E568C3009EA554 /* libgdk_pixbuf-2.0.dylib in Frameworks */,
 				B3E2079220E568C6009EA554 /* libcairo.dylib in Frameworks */,
-				B3E206E520E568C5009EA554 /* libgobject-2.0.dylib in Frameworks */,
 				B3E2118120E568D0009EA554 /* librsvg-2.dylib in Frameworks */,
 				B3E2079D20E568C6009EA554 /* libcairo-script-interpreter.2.dylib in Frameworks */,
 				B3E20A0320E568C8009EA554 /* libintl.dylib in Frameworks */,
@@ -3808,14 +3782,12 @@
 				B3E206E920E568C5009EA554 /* libgobject-2.0.0.dylib in Frameworks */,
 				B3E20A0120E568C8009EA554 /* libgettextpo.0.dylib in Frameworks */,
 				B3F8067020E5851A00030497 /* libpcreposix.0.dylib in Frameworks */,
-				B3E20A1120E568C8009EA554 /* libgettextpo.dylib in Frameworks */,
 				B3E2117C20E568D0009EA554 /* librsvg-2.2.dylib in Frameworks */,
 				B3F8050220E5820B00030497 /* libpango-1.0.dylib in Frameworks */,
 				B3E204B820E568C3009EA554 /* libpixman-1.0.dylib in Frameworks */,
 				B3F8050120E5820B00030497 /* libpangoft2-1.0.dylib in Frameworks */,
 				B3F8067620E5851A00030497 /* libpcre16.0.dylib in Frameworks */,
 				B3F804F820E5820B00030497 /* libpango-1.0.0.dylib in Frameworks */,
-				B3E20A0020E568C8009EA554 /* libgettextlib.dylib in Frameworks */,
 				B3F8067720E5851A00030497 /* libpcre32.dylib in Frameworks */,
 				B3F8067320E5851A00030497 /* libpcrecpp.0.dylib in Frameworks */,
 				B3E206EB20E568C5009EA554 /* libgmodule-2.0.0.dylib in Frameworks */,
@@ -3832,7 +3804,6 @@
 				B3F8050620E5820B00030497 /* libpango-1.0.a in Frameworks */,
 				B3F807E120E5858200030497 /* libcroco-0.6.a in Frameworks */,
 				B3E2050E20E568C3009EA554 /* libgdk_pixbuf-2.0.0.dylib in Frameworks */,
-				B3E206DB20E568C5009EA554 /* libgthread-2.0.dylib in Frameworks */,
 				B3F804FE20E5820B00030497 /* libpangocairo-1.0.0.dylib in Frameworks */,
 				B3F8067A20E5851A00030497 /* libpcrecpp.dylib in Frameworks */,
 				B3E20A0C20E568C8009EA554 /* libgettextsrc-0.19.8.1.dylib in Frameworks */,
@@ -3840,14 +3811,12 @@
 				B3E2079A20E568C6009EA554 /* libcairo-trace.0.dylib in Frameworks */,
 				B3F804FD20E5820B00030497 /* libpangocairo-1.0.dylib in Frameworks */,
 				B3E204F220E568C3009EA554 /* libfreetype.6.dylib in Frameworks */,
-				B3E20A0E20E568C8009EA554 /* libgettextsrc.dylib in Frameworks */,
 				B3F804F920E5820B00030497 /* libpangoft2-1.0.0.dylib in Frameworks */,
 				B3F8067820E5851A00030497 /* libpcre16.dylib in Frameworks */,
 				B3E204EF20E568C3009EA554 /* libfreetype.dylib in Frameworks */,
 				B3E206E620E568C5009EA554 /* libglib-2.0.0.dylib in Frameworks */,
 				B3E206F020E568C5009EA554 /* libgio-2.0.0.dylib in Frameworks */,
 				B3E2079120E568C6009EA554 /* libcairo-gobject.2.dylib in Frameworks */,
-				B3E206D920E568C5009EA554 /* libgmodule-2.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7408,9 +7377,6 @@
 		B3E2F7F120E568AB009EA554 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				B3E2F7F220E568AB009EA554 /* libgmodule-2.0.dylib */,
-				B3E2F7F420E568AB009EA554 /* libgthread-2.0.dylib */,
-				B3E2F7FF20E568AB009EA554 /* libgobject-2.0.dylib */,
 				B3E2F80020E568AB009EA554 /* libglib-2.0.0.dylib */,
 				B3E2F80320E568AB009EA554 /* libgobject-2.0.0.dylib */,
 				B3E2F80520E568AB009EA554 /* libgmodule-2.0.0.dylib */,
@@ -8448,7 +8414,6 @@
 		B3E2FC2220E568B2009EA554 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				B3E2FC2320E568B2009EA554 /* libgettextlib.dylib */,
 				B3E2FC2420E568B2009EA554 /* libgettextpo.0.dylib */,
 				B3E2FC2520E568B2009EA554 /* libasprintf.dylib */,
 				B3E2FC2620E568B2009EA554 /* libintl.dylib */,
@@ -8457,11 +8422,8 @@
 				B3E2FC2920E568B2009EA554 /* gettext */,
 				B3E2FC2F20E568B2009EA554 /* libintl.a */,
 				B3E2FC3020E568B2009EA554 /* libgettextsrc-0.19.8.1.dylib */,
-				B3E2FC3120E568B2009EA554 /* libgettextpo.a */,
-				B3E2FC3220E568B2009EA554 /* libgettextsrc.dylib */,
 				B3E2FC3320E568B2009EA554 /* libasprintf.a */,
 				B3E2FC3420E568B2009EA554 /* libgettextlib-0.19.8.1.dylib */,
-				B3E2FC3520E568B2009EA554 /* libgettextpo.dylib */,
 			);
 			path = lib;
 			sourceTree = "<group>";
