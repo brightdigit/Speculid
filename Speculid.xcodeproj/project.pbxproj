@@ -15,6 +15,7 @@
 		8CFE676AD2939E9961A20D07 /* Pods_Speculid_Mac_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BDAD4963D80A5FF54A9272 /* Pods_Speculid_Mac_AppUITests.framework */; };
 		B3033B1E1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3033B1D1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift */; };
 		B3033B201F9AEFE600787279 /* AssetSpecificationDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3033B1F1F9AEFE600787279 /* AssetSpecificationDocument.swift */; };
+		B3081399218A067800DB07D0 /* geometry.svg in Resources */ = {isa = PBXBuildFile; fileRef = B3081398218A067300DB07D0 /* geometry.svg */; };
 		B3136DCE1F90E45F0002B7AB /* ErrorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */; };
 		B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC11F90E27B0002B7AB /* FileFormat.swift */; };
 		B3136DD11F90E45F0002B7AB /* ImageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DBB1F90E27B0002B7AB /* ImageFile.swift */; };
@@ -1225,6 +1226,7 @@
 		B3033B1F1F9AEFE600787279 /* AssetSpecificationDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSpecificationDocument.swift; sourceTree = "<group>"; };
 		B3033B211F9AF03F00787279 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = Assets.xcassets/AppIcon.appiconset/Contents.json; sourceTree = "<group>"; };
 		B3033B231F9AF05900787279 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Contents.json; path = Assets.xcassets/TrayIcon.imageset/Contents.json; sourceTree = "<group>"; };
+		B3081398218A067300DB07D0 /* geometry.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = geometry.svg; sourceTree = "<group>"; };
 		B3136DBB1F90E27B0002B7AB /* ImageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFile.swift; sourceTree = "<group>"; };
 		B3136DBC1F90E27B0002B7AB /* Speculid_Mac_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid_Mac_Framework.h; sourceTree = "<group>"; };
 		B3136DBE1F90E27B0002B7AB /* ImageSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSpecification.swift; sourceTree = "<group>"; };
@@ -4356,6 +4358,7 @@
 		B3136E991F90FD550002B7AB /* cairosvg */ = {
 			isa = PBXGroup;
 			children = (
+				B3081398218A067300DB07D0 /* geometry.svg */,
 				B3136E8F1F90FD3D0002B7AB /* CairoSVGTests.swift */,
 				B3136E911F90FD3D0002B7AB /* Info.plist */,
 			);
@@ -14318,6 +14321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3081399218A067800DB07D0 /* geometry.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -14956,7 +14960,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
-				INFOPLIST_FILE = CairoSVGTests/Info.plist;
+				INFOPLIST_FILE = tests/cairosvg/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.CairoSVGTests;
@@ -14974,7 +14978,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
-				INFOPLIST_FILE = CairoSVGTests/Info.plist;
+				INFOPLIST_FILE = tests/cairosvg/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.CairoSVGTests;
