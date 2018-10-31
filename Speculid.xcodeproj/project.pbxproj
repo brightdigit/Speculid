@@ -266,7 +266,6 @@
 		B31BD9DB20E7E0DA00A560C2 /* libicutu.61.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7C920E7E0D600A560C2 /* libicutu.61.dylib */; };
 		B31BD9DC20E7E0DA00A560C2 /* libicui18n.61.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7CA20E7E0D600A560C2 /* libicui18n.61.1.dylib */; };
 		B31BD9DD20E7E0DA00A560C2 /* libicutu.61.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7CB20E7E0D600A560C2 /* libicutu.61.1.dylib */; };
-		B31BD9DE20E7E0DA00A560C2 /* libicudata.61.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7CC20E7E0D600A560C2 /* libicudata.61.dylib */; };
 		B31BD9DF20E7E0DA00A560C2 /* libicuuc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7CD20E7E0D600A560C2 /* libicuuc.dylib */; };
 		B31BD9E220E7E0DA00A560C2 /* libicutu.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7D020E7E0D600A560C2 /* libicutu.dylib */; };
 		B31BD9E320E7E0DA00A560C2 /* libicui18n.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B31BD7D120E7E0D600A560C2 /* libicui18n.dylib */; };
@@ -283,7 +282,6 @@
 		B31BDB0220E7E26200A560C2 /* libicutu.61.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7C920E7E0D600A560C2 /* libicutu.61.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BDB0320E7E26200A560C2 /* libicui18n.61.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7CA20E7E0D600A560C2 /* libicui18n.61.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BDB0420E7E26200A560C2 /* libicutu.61.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7CB20E7E0D600A560C2 /* libicutu.61.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B31BDB0520E7E26200A560C2 /* libicudata.61.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7CC20E7E0D600A560C2 /* libicudata.61.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BDB0620E7E26200A560C2 /* libicuuc.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7CD20E7E0D600A560C2 /* libicuuc.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BDB0720E7E26200A560C2 /* libicutu.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7D020E7E0D600A560C2 /* libicutu.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BDB0820E7E26200A560C2 /* libicui18n.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B31BD7D120E7E0D600A560C2 /* libicui18n.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -1136,7 +1134,6 @@
 				B31BDB0220E7E26200A560C2 /* libicutu.61.dylib in CopyFiles */,
 				B31BDB0320E7E26200A560C2 /* libicui18n.61.1.dylib in CopyFiles */,
 				B31BDB0420E7E26200A560C2 /* libicutu.61.1.dylib in CopyFiles */,
-				B31BDB0520E7E26200A560C2 /* libicudata.61.dylib in CopyFiles */,
 				B31BDB0620E7E26200A560C2 /* libicuuc.dylib in CopyFiles */,
 				B31BDB0720E7E26200A560C2 /* libicutu.dylib in CopyFiles */,
 				B31BDB0820E7E26200A560C2 /* libicui18n.dylib in CopyFiles */,
@@ -1503,7 +1500,6 @@
 		B31BD7C920E7E0D600A560C2 /* libicutu.61.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libicutu.61.dylib; sourceTree = "<group>"; };
 		B31BD7CA20E7E0D600A560C2 /* libicui18n.61.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libicui18n.61.1.dylib; sourceTree = "<group>"; };
 		B31BD7CB20E7E0D600A560C2 /* libicutu.61.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libicutu.61.1.dylib; sourceTree = "<group>"; };
-		B31BD7CC20E7E0D600A560C2 /* libicudata.61.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libicudata.61.dylib; sourceTree = "<group>"; };
 		B31BD7CD20E7E0D600A560C2 /* libicuuc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libicuuc.dylib; sourceTree = "<group>"; };
 		B31BD7CE20E7E0D600A560C2 /* libicuuc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libicuuc.a; sourceTree = "<group>"; };
 		B31BD7CF20E7E0D600A560C2 /* libicutu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libicutu.a; sourceTree = "<group>"; };
@@ -4054,7 +4050,6 @@
 				B31BD9DB20E7E0DA00A560C2 /* libicutu.61.dylib in Frameworks */,
 				B31BD9DC20E7E0DA00A560C2 /* libicui18n.61.1.dylib in Frameworks */,
 				B31BD9DD20E7E0DA00A560C2 /* libicutu.61.1.dylib in Frameworks */,
-				B31BD9DE20E7E0DA00A560C2 /* libicudata.61.dylib in Frameworks */,
 				B31BD9DF20E7E0DA00A560C2 /* libicuuc.dylib in Frameworks */,
 				B31BD9E220E7E0DA00A560C2 /* libicutu.dylib in Frameworks */,
 				B31BD9E320E7E0DA00A560C2 /* libicui18n.dylib in Frameworks */,
@@ -4639,7 +4634,6 @@
 				B31BD7C920E7E0D600A560C2 /* libicutu.61.dylib */,
 				B31BD7CA20E7E0D600A560C2 /* libicui18n.61.1.dylib */,
 				B31BD7CB20E7E0D600A560C2 /* libicutu.61.1.dylib */,
-				B31BD7CC20E7E0D600A560C2 /* libicudata.61.dylib */,
 				B31BD7CD20E7E0D600A560C2 /* libicuuc.dylib */,
 				B31BD7CE20E7E0D600A560C2 /* libicuuc.a */,
 				B31BD7CF20E7E0D600A560C2 /* libicutu.a */,
