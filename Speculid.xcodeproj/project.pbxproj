@@ -932,23 +932,15 @@
 		B3F80B1F20E585E900030497 /* hb-ot-math.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8094F20E585E800030497 /* hb-ot-math.h */; };
 		B3F80B2020E585EA00030497 /* hb-icu.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8095020E585E800030497 /* hb-icu.h */; };
 		B3F80B2120E585EA00030497 /* hb-ft.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8095120E585E800030497 /* hb-ft.h */; };
-		B3F80B2720E585EA00030497 /* libharfbuzz-icu.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8095820E585E800030497 /* libharfbuzz-icu.dylib */; };
 		B3F80B2820E585EA00030497 /* libharfbuzz-subset.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8095920E585E800030497 /* libharfbuzz-subset.0.dylib */; };
 		B3F80B2D20E585EA00030497 /* libharfbuzz-gobject.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8095F20E585E800030497 /* libharfbuzz-gobject.0.dylib */; };
 		B3F80B3020E585EA00030497 /* libharfbuzz.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8096420E585E800030497 /* libharfbuzz.0.dylib */; };
-		B3F80B3320E585EA00030497 /* libharfbuzz-gobject.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8096720E585E800030497 /* libharfbuzz-gobject.dylib */; };
-		B3F80B3520E585EA00030497 /* libharfbuzz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8096A20E585E800030497 /* libharfbuzz.dylib */; };
 		B3F80B3620E585EA00030497 /* libharfbuzz-icu.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8096B20E585E800030497 /* libharfbuzz-icu.0.dylib */; };
-		B3F80B3720E585EA00030497 /* libharfbuzz-subset.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F8096C20E585E800030497 /* libharfbuzz-subset.dylib */; };
 		B3F80CA720E5866A00030497 /* libpng16.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8055C20E584B300030497 /* libpng16.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B3F80CA820E586A000030497 /* libharfbuzz-icu.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8095820E585E800030497 /* libharfbuzz-icu.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3F80CA920E586A000030497 /* libharfbuzz-subset.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8095920E585E800030497 /* libharfbuzz-subset.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3F80CAA20E586A000030497 /* libharfbuzz-gobject.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8095F20E585E800030497 /* libharfbuzz-gobject.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3F80CAB20E586A000030497 /* libharfbuzz.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8096420E585E800030497 /* libharfbuzz.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B3F80CAC20E586A000030497 /* libharfbuzz-gobject.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8096720E585E800030497 /* libharfbuzz-gobject.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B3F80CAD20E586A000030497 /* libharfbuzz.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8096A20E585E800030497 /* libharfbuzz.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3F80CAE20E586A000030497 /* libharfbuzz-icu.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8096B20E585E800030497 /* libharfbuzz-icu.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B3F80CAF20E586A000030497 /* libharfbuzz-subset.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8096C20E585E800030497 /* libharfbuzz-subset.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3FAD3EB1FA564D0004381A7 /* VersionMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */; };
 		B3FDF6452180A3FF00455A43 /* InstallerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDF6442180A3FF00455A43 /* InstallerProtocol.swift */; };
 		CBE9EF18228D2DADFC9D264F /* Pods_Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */; };
@@ -1086,17 +1078,13 @@
 				B3F80CAA20E586A000030497 /* libharfbuzz-gobject.0.dylib in CopyFiles */,
 				B3891B8320F6402F00FEDF89 /* libcroco-0.6.dylib in CopyFiles */,
 				B3891B8420F6402F00FEDF89 /* libcroco-0.6.3.dylib in CopyFiles */,
-				B3F80CAC20E586A000030497 /* libharfbuzz-gobject.dylib in CopyFiles */,
-				B3F80CAD20E586A000030497 /* libharfbuzz.dylib in CopyFiles */,
 				B3F80CAE20E586A000030497 /* libharfbuzz-icu.0.dylib in CopyFiles */,
-				B3F80CAF20E586A000030497 /* libharfbuzz-subset.dylib in CopyFiles */,
 				B31BDB0120E7E26200A560C2 /* libicuio.61.1.dylib in CopyFiles */,
 				B31BDB0320E7E26200A560C2 /* libicui18n.61.1.dylib in CopyFiles */,
 				B31BDB0420E7E26200A560C2 /* libicutu.61.1.dylib in CopyFiles */,
 				B31BDB0B20E7E26200A560C2 /* libicudata.61.1.dylib in CopyFiles */,
 				B31BDB0C20E7E26200A560C2 /* libicutest.61.1.dylib in CopyFiles */,
 				B31BDB0D20E7E26200A560C2 /* libicuuc.61.1.dylib in CopyFiles */,
-				B3F80CA820E586A000030497 /* libharfbuzz-icu.dylib in CopyFiles */,
 				B31BD6E920E7A6A400A560C2 /* libffi.dylib in CopyFiles */,
 				B31BD6EA20E7A6A400A560C2 /* libffi.6.dylib in CopyFiles */,
 				B3F80CA920E586A000030497 /* libharfbuzz-subset.0.dylib in CopyFiles */,
@@ -3512,14 +3500,6 @@
 		B3F8085220E585BF00030497 /* fribidi_reorder_line.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_reorder_line.3; sourceTree = "<group>"; };
 		B3F8085320E585BF00030497 /* fribidi_debug_status.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_debug_status.3; sourceTree = "<group>"; };
 		B3F8085420E585BF00030497 /* fribidi_get_joining_type_name.3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fribidi_get_joining_type_name.3; sourceTree = "<group>"; };
-		B3F8092720E585E800030497 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
-		B3F8092920E585E800030497 /* hb-ot-shape-closure */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "hb-ot-shape-closure"; sourceTree = "<group>"; };
-		B3F8092A20E585E800030497 /* hb-view */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "hb-view"; sourceTree = "<group>"; };
-		B3F8092B20E585E800030497 /* hb-shape */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "hb-shape"; sourceTree = "<group>"; };
-		B3F8092C20E585E800030497 /* hb-subset */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "hb-subset"; sourceTree = "<group>"; };
-		B3F8092E20E585E800030497 /* harfbuzz.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = harfbuzz.rb; sourceTree = "<group>"; };
-		B3F8092F20E585E800030497 /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
-		B3F8093020E585E800030497 /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
 		B3F8093320E585E800030497 /* hb-buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hb-buffer.h"; sourceTree = "<group>"; };
 		B3F8093420E585E800030497 /* hb-set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hb-set.h"; sourceTree = "<group>"; };
 		B3F8093520E585E800030497 /* hb-face.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hb-face.h"; sourceTree = "<group>"; };
@@ -3551,117 +3531,10 @@
 		B3F8094F20E585E800030497 /* hb-ot-math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hb-ot-math.h"; sourceTree = "<group>"; };
 		B3F8095020E585E800030497 /* hb-icu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hb-icu.h"; sourceTree = "<group>"; };
 		B3F8095120E585E800030497 /* hb-ft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hb-ft.h"; sourceTree = "<group>"; };
-		B3F8095220E585E800030497 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		B3F8095320E585E800030497 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
-		B3F8095420E585E800030497 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
-		B3F8095520E585E800030497 /* NEWS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NEWS; sourceTree = "<group>"; };
-		B3F8095720E585E800030497 /* libharfbuzz-icu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libharfbuzz-icu.a"; sourceTree = "<group>"; };
-		B3F8095820E585E800030497 /* libharfbuzz-icu.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libharfbuzz-icu.dylib"; sourceTree = "<group>"; };
 		B3F8095920E585E800030497 /* libharfbuzz-subset.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libharfbuzz-subset.0.dylib"; sourceTree = "<group>"; };
-		B3F8095B20E585E800030497 /* harfbuzz-gobject.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "harfbuzz-gobject.pc"; sourceTree = "<group>"; };
-		B3F8095C20E585E800030497 /* harfbuzz-subset.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "harfbuzz-subset.pc"; sourceTree = "<group>"; };
-		B3F8095D20E585E800030497 /* harfbuzz.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = harfbuzz.pc; sourceTree = "<group>"; };
-		B3F8095E20E585E800030497 /* harfbuzz-icu.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "harfbuzz-icu.pc"; sourceTree = "<group>"; };
 		B3F8095F20E585E800030497 /* libharfbuzz-gobject.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libharfbuzz-gobject.0.dylib"; sourceTree = "<group>"; };
-		B3F8096020E585E800030497 /* libharfbuzz-gobject.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libharfbuzz-gobject.a"; sourceTree = "<group>"; };
-		B3F8096320E585E800030497 /* harfbuzz-config.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "harfbuzz-config.cmake"; sourceTree = "<group>"; };
 		B3F8096420E585E800030497 /* libharfbuzz.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libharfbuzz.0.dylib; sourceTree = "<group>"; };
-		B3F8096520E585E800030497 /* libharfbuzz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libharfbuzz.a; sourceTree = "<group>"; };
-		B3F8096620E585E800030497 /* libharfbuzz-subset.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libharfbuzz-subset.a"; sourceTree = "<group>"; };
-		B3F8096720E585E800030497 /* libharfbuzz-gobject.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libharfbuzz-gobject.dylib"; sourceTree = "<group>"; };
-		B3F8096920E585E800030497 /* HarfBuzz-0.0.typelib */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HarfBuzz-0.0.typelib"; sourceTree = "<group>"; };
-		B3F8096A20E585E800030497 /* libharfbuzz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libharfbuzz.dylib; sourceTree = "<group>"; };
 		B3F8096B20E585E800030497 /* libharfbuzz-icu.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libharfbuzz-icu.0.dylib"; sourceTree = "<group>"; };
-		B3F8096C20E585E800030497 /* libharfbuzz-subset.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libharfbuzz-subset.dylib"; sourceTree = "<group>"; };
-		B3F8097120E585E800030497 /* api-index-full.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-full.html"; sourceTree = "<group>"; };
-		B3F8097220E585E800030497 /* what-is-harfbuzz.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "what-is-harfbuzz.html"; sourceTree = "<group>"; };
-		B3F8097320E585E800030497 /* harfbuzz-Shaping.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-Shaping.html"; sourceTree = "<group>"; };
-		B3F8097420E585E800030497 /* api-index-1-0-5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-1-0-5.html"; sourceTree = "<group>"; };
-		B3F8097520E585E800030497 /* api-index-1-4-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-1-4-2.html"; sourceTree = "<group>"; };
-		B3F8097620E585E800030497 /* plans-and-caching.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "plans-and-caching.html"; sourceTree = "<group>"; };
-		B3F8097720E585E800030497 /* what-about-the-other-scripts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "what-about-the-other-scripts.html"; sourceTree = "<group>"; };
-		B3F8097820E585E800030497 /* deprecated-api-index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "deprecated-api-index.html"; sourceTree = "<group>"; };
-		B3F8097920E585E800030497 /* up-insensitive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "up-insensitive.png"; sourceTree = "<group>"; };
-		B3F8097A20E585E800030497 /* clusters.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = clusters.html; sourceTree = "<group>"; };
-		B3F8097B20E585E800030497 /* api-index-0-9-28.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-28.html"; sourceTree = "<group>"; };
-		B3F8097C20E585E800030497 /* harfbuzz.devhelp2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = harfbuzz.devhelp2; sourceTree = "<group>"; };
-		B3F8097D20E585E800030497 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		B3F8097E20E585E800030497 /* api-index-1-4-3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-1-4-3.html"; sourceTree = "<group>"; };
-		B3F8097F20E585E800030497 /* harfbuzz-hb-common.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-common.html"; sourceTree = "<group>"; };
-		B3F8098020E585E800030497 /* shaping-and-shape-plans.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "shaping-and-shape-plans.html"; sourceTree = "<group>"; };
-		B3F8098120E585E800030497 /* api-index-0-9-7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-7.html"; sourceTree = "<group>"; };
-		B3F8098220E585E800030497 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
-		B3F8098320E585E800030497 /* harfbuzz-hb-glib.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-glib.html"; sourceTree = "<group>"; };
-		B3F8098420E585E800030497 /* using-your-own-font-functions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "using-your-own-font-functions.html"; sourceTree = "<group>"; };
-		B3F8098520E585E800030497 /* harfbuzz-hb-ot.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-ot.html"; sourceTree = "<group>"; };
-		B3F8098620E585E800030497 /* api-index-1-5-0.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-1-5-0.html"; sourceTree = "<group>"; };
-		B3F8098720E585E800030497 /* harfbuzz-hb-ot-layout.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-ot-layout.html"; sourceTree = "<group>"; };
-		B3F8098820E585E800030497 /* api-index-0-9-42.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-42.html"; sourceTree = "<group>"; };
-		B3F8098920E585E800030497 /* customizing-unicode-functions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "customizing-unicode-functions.html"; sourceTree = "<group>"; };
-		B3F8098A20E585E800030497 /* fonts-and-faces.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "fonts-and-faces.html"; sourceTree = "<group>"; };
-		B3F8098B20E585E800030497 /* api-index-0-9-39.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-39.html"; sourceTree = "<group>"; };
-		B3F8098C20E585E800030497 /* level-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "level-2.html"; sourceTree = "<group>"; };
-		B3F8098D20E585E800030497 /* right-insensitive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-insensitive.png"; sourceTree = "<group>"; };
-		B3F8098E20E585E800030497 /* harfbuzz-hb-font.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-font.html"; sourceTree = "<group>"; };
-		B3F8098F20E585E800030497 /* pt02.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = pt02.html; sourceTree = "<group>"; };
-		B3F8099020E585E800030497 /* harfbuzz-hb-face.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-face.html"; sourceTree = "<group>"; };
-		B3F8099120E585E800030497 /* harfbuzz-hb-graphite2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-graphite2.html"; sourceTree = "<group>"; };
-		B3F8099220E585E800030497 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
-		B3F8099320E585E800030497 /* api-index-0-9-22.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-22.html"; sourceTree = "<group>"; };
-		B3F8099420E585E800030497 /* install-harfbuzz.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "install-harfbuzz.html"; sourceTree = "<group>"; };
-		B3F8099520E585E800030497 /* harfbuzz-hb-ot-math.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-ot-math.html"; sourceTree = "<group>"; };
-		B3F8099620E585E800030497 /* reordering-in-levels-0-and-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "reordering-in-levels-0-and-1.html"; sourceTree = "<group>"; };
-		B3F8099720E585E800030497 /* api-index-1-2-3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-1-2-3.html"; sourceTree = "<group>"; };
-		B3F8099820E585E800030497 /* api-index-0-9-38.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-38.html"; sourceTree = "<group>"; };
-		B3F8099920E585E800030497 /* object-tree.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "object-tree.html"; sourceTree = "<group>"; };
-		B3F8099A20E585E800030497 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
-		B3F8099B20E585E800030497 /* the-distinction-between-levels-0-and-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "the-distinction-between-levels-0-and-1.html"; sourceTree = "<group>"; };
-		B3F8099C20E585E800030497 /* api-index-0-9-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-2.html"; sourceTree = "<group>"; };
-		B3F8099D20E585E800030497 /* harfbuzz-hb-coretext.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-coretext.html"; sourceTree = "<group>"; };
-		B3F8099E20E585E800030497 /* harfbuzz-hb-unicode.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-unicode.html"; sourceTree = "<group>"; };
-		B3F8099F20E585E800030497 /* why-is-it-called-harfbuzz.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "why-is-it-called-harfbuzz.html"; sourceTree = "<group>"; };
-		B3F809A020E585E800030497 /* harfbuzz-hb-uniscribe.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-uniscribe.html"; sourceTree = "<group>"; };
-		B3F809A120E585E800030497 /* harfbuzz-hb-icu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-icu.html"; sourceTree = "<group>"; };
-		B3F809A220E585E800030497 /* annotation-glossary.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "annotation-glossary.html"; sourceTree = "<group>"; };
-		B3F809A320E585E800030497 /* setting-buffer-properties.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "setting-buffer-properties.html"; sourceTree = "<group>"; };
-		B3F809A420E585E800030497 /* harfbuzz-hb-blob.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-blob.html"; sourceTree = "<group>"; };
-		B3F809A520E585E800030497 /* buffers-language-script-and-direction.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "buffers-language-script-and-direction.html"; sourceTree = "<group>"; };
-		B3F809A620E585E800030497 /* harfbuzz-hb-ot-tag.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-ot-tag.html"; sourceTree = "<group>"; };
-		B3F809A720E585E800030497 /* pt01.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = pt01.html; sourceTree = "<group>"; };
-		B3F809A820E585E800030497 /* harfbuzz-hb-shape-plan.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-shape-plan.html"; sourceTree = "<group>"; };
-		B3F809A920E585E800030497 /* adding-text-to-the-buffer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "adding-text-to-the-buffer.html"; sourceTree = "<group>"; };
-		B3F809AA20E585E800030497 /* api-index-0-9-20.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-20.html"; sourceTree = "<group>"; };
-		B3F809AB20E585E800030497 /* harfbuzz-hb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb.html"; sourceTree = "<group>"; };
-		B3F809AC20E585E800030497 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
-		B3F809AD20E585E800030497 /* api-index-0-9-41.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-41.html"; sourceTree = "<group>"; };
-		B3F809AE20E585E800030497 /* HarfBuzz.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = HarfBuzz.svg; sourceTree = "<group>"; };
-		B3F809AF20E585E800030497 /* harfbuzz-hb-set.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-set.html"; sourceTree = "<group>"; };
-		B3F809B020E585E800030497 /* using-harfbuzzs-native-opentype-implementation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "using-harfbuzzs-native-opentype-implementation.html"; sourceTree = "<group>"; };
-		B3F809B120E585E800030497 /* api-index-0-9-31.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-31.html"; sourceTree = "<group>"; };
-		B3F809B220E585E800030497 /* harfbuzz-hb-ot-font.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-ot-font.html"; sourceTree = "<group>"; };
-		B3F809B320E585E800030497 /* harfbuzz-hb-gobject.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-gobject.html"; sourceTree = "<group>"; };
-		B3F809B420E585E800030497 /* HarfBuzz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HarfBuzz.png; sourceTree = "<group>"; };
-		B3F809B520E585E800030497 /* api-index-0-9-8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-8.html"; sourceTree = "<group>"; };
-		B3F809B620E585E800030497 /* harfbuzz-Buffers.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-Buffers.html"; sourceTree = "<group>"; };
-		B3F809B720E585E800030497 /* building.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = building.html; sourceTree = "<group>"; };
-		B3F809B820E585E800030497 /* harfbuzz-hb-ft.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-ft.html"; sourceTree = "<group>"; };
-		B3F809B920E585E900030497 /* left-insensitive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-insensitive.png"; sourceTree = "<group>"; };
-		B3F809BA20E585E900030497 /* api-index-0-9-11.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-11.html"; sourceTree = "<group>"; };
-		B3F809BB20E585E900030497 /* ch08.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ch08.html; sourceTree = "<group>"; };
-		B3F809BC20E585E900030497 /* api-index-1-1-3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-1-1-3.html"; sourceTree = "<group>"; };
-		B3F809BD20E585E900030497 /* api-index-1-1-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-1-1-2.html"; sourceTree = "<group>"; };
-		B3F809BE20E585E900030497 /* harfbuzz-hb-deprecated.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-deprecated.html"; sourceTree = "<group>"; };
-		B3F809BF20E585E900030497 /* harfbuzz-hb-ot-shape.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-ot-shape.html"; sourceTree = "<group>"; };
-		B3F809C020E585E900030497 /* api-index-0-9-5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-5.html"; sourceTree = "<group>"; };
-		B3F809C120E585E900030497 /* api-index-0-9-10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-10.html"; sourceTree = "<group>"; };
-		B3F809C220E585E900030497 /* harfbuzz-hb-version.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "harfbuzz-hb-version.html"; sourceTree = "<group>"; };
-		B3F809C320E585E900030497 /* api-index-1-3-3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-1-3-3.html"; sourceTree = "<group>"; };
-		B3F809C420E585E900030497 /* api-index-1-6-0.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-1-6-0.html"; sourceTree = "<group>"; };
-		B3F809C520E585E900030497 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
-		B3F809C620E585E900030497 /* hello-harfbuzz.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "hello-harfbuzz.html"; sourceTree = "<group>"; };
-		B3F809C720E585E900030497 /* a-clustering-example-for-levels-0-and-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "a-clustering-example-for-levels-0-and-1.html"; sourceTree = "<group>"; };
-		B3F809C820E585E900030497 /* api-index-0-9-30.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "api-index-0-9-30.html"; sourceTree = "<group>"; };
-		B3F809CA20E585E900030497 /* HarfBuzz-0.0.gir */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "HarfBuzz-0.0.gir"; sourceTree = "<group>"; };
 		B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionMenuItem.swift; sourceTree = "<group>"; };
 		B3FDF6442180A3FF00455A43 /* InstallerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallerProtocol.swift; sourceTree = "<group>"; };
 		C743CA092B2436D579EB1965 /* Pods-Speculid-Mac-XPC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-XPC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-XPC/Pods-Speculid-Mac-XPC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -3753,11 +3626,7 @@
 				B3F8057920E584B300030497 /* libpng.dylib in Frameworks */,
 				B3F8057A20E584B300030497 /* libpng16.dylib in Frameworks */,
 				B3F80B2D20E585EA00030497 /* libharfbuzz-gobject.0.dylib in Frameworks */,
-				B3F80B3320E585EA00030497 /* libharfbuzz-gobject.dylib in Frameworks */,
-				B3F80B3520E585EA00030497 /* libharfbuzz.dylib in Frameworks */,
 				B3F80B3620E585EA00030497 /* libharfbuzz-icu.0.dylib in Frameworks */,
-				B3F80B3720E585EA00030497 /* libharfbuzz-subset.dylib in Frameworks */,
-				B3F80B2720E585EA00030497 /* libharfbuzz-icu.dylib in Frameworks */,
 				B3F80B2820E585EA00030497 /* libharfbuzz-subset.0.dylib in Frameworks */,
 				B3F807DE20E5858200030497 /* libcroco-0.6.dylib in Frameworks */,
 				B3F807E020E5858200030497 /* libcroco-0.6.3.dylib in Frameworks */,
@@ -10643,39 +10512,10 @@
 		B3F8092620E585E800030497 /* 1.7.6_2 */ = {
 			isa = PBXGroup;
 			children = (
-				B3F8092720E585E800030497 /* INSTALL_RECEIPT.json */,
-				B3F8092820E585E800030497 /* bin */,
-				B3F8092D20E585E800030497 /* .brew */,
-				B3F8092F20E585E800030497 /* ChangeLog */,
-				B3F8093020E585E800030497 /* AUTHORS */,
 				B3F8093120E585E800030497 /* include */,
-				B3F8095220E585E800030497 /* README */,
-				B3F8095320E585E800030497 /* TODO */,
-				B3F8095420E585E800030497 /* COPYING */,
-				B3F8095520E585E800030497 /* NEWS */,
 				B3F8095620E585E800030497 /* lib */,
-				B3F8096D20E585E800030497 /* share */,
 			);
 			path = 1.7.6_2;
-			sourceTree = "<group>";
-		};
-		B3F8092820E585E800030497 /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8092920E585E800030497 /* hb-ot-shape-closure */,
-				B3F8092A20E585E800030497 /* hb-view */,
-				B3F8092B20E585E800030497 /* hb-shape */,
-				B3F8092C20E585E800030497 /* hb-subset */,
-			);
-			path = bin;
-			sourceTree = "<group>";
-		};
-		B3F8092D20E585E800030497 /* .brew */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8092E20E585E800030497 /* harfbuzz.rb */,
-			);
-			path = .brew;
 			sourceTree = "<group>";
 		};
 		B3F8093120E585E800030497 /* include */ = {
@@ -10727,186 +10567,12 @@
 		B3F8095620E585E800030497 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				B3F8095720E585E800030497 /* libharfbuzz-icu.a */,
-				B3F8095820E585E800030497 /* libharfbuzz-icu.dylib */,
-				B3F8095920E585E800030497 /* libharfbuzz-subset.0.dylib */,
-				B3F8095A20E585E800030497 /* pkgconfig */,
 				B3F8095F20E585E800030497 /* libharfbuzz-gobject.0.dylib */,
-				B3F8096020E585E800030497 /* libharfbuzz-gobject.a */,
-				B3F8096120E585E800030497 /* cmake */,
-				B3F8096420E585E800030497 /* libharfbuzz.0.dylib */,
-				B3F8096520E585E800030497 /* libharfbuzz.a */,
-				B3F8096620E585E800030497 /* libharfbuzz-subset.a */,
-				B3F8096720E585E800030497 /* libharfbuzz-gobject.dylib */,
-				B3F8096820E585E800030497 /* girepository-1.0 */,
-				B3F8096A20E585E800030497 /* libharfbuzz.dylib */,
 				B3F8096B20E585E800030497 /* libharfbuzz-icu.0.dylib */,
-				B3F8096C20E585E800030497 /* libharfbuzz-subset.dylib */,
+				B3F8095920E585E800030497 /* libharfbuzz-subset.0.dylib */,
+				B3F8096420E585E800030497 /* libharfbuzz.0.dylib */,
 			);
 			path = lib;
-			sourceTree = "<group>";
-		};
-		B3F8095A20E585E800030497 /* pkgconfig */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8095B20E585E800030497 /* harfbuzz-gobject.pc */,
-				B3F8095C20E585E800030497 /* harfbuzz-subset.pc */,
-				B3F8095D20E585E800030497 /* harfbuzz.pc */,
-				B3F8095E20E585E800030497 /* harfbuzz-icu.pc */,
-			);
-			path = pkgconfig;
-			sourceTree = "<group>";
-		};
-		B3F8096120E585E800030497 /* cmake */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8096220E585E800030497 /* harfbuzz */,
-			);
-			path = cmake;
-			sourceTree = "<group>";
-		};
-		B3F8096220E585E800030497 /* harfbuzz */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8096320E585E800030497 /* harfbuzz-config.cmake */,
-			);
-			path = harfbuzz;
-			sourceTree = "<group>";
-		};
-		B3F8096820E585E800030497 /* girepository-1.0 */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8096920E585E800030497 /* HarfBuzz-0.0.typelib */,
-			);
-			path = "girepository-1.0";
-			sourceTree = "<group>";
-		};
-		B3F8096D20E585E800030497 /* share */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8096E20E585E800030497 /* gtk-doc */,
-				B3F809C920E585E900030497 /* gir-1.0 */,
-			);
-			path = share;
-			sourceTree = "<group>";
-		};
-		B3F8096E20E585E800030497 /* gtk-doc */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8096F20E585E800030497 /* html */,
-			);
-			path = "gtk-doc";
-			sourceTree = "<group>";
-		};
-		B3F8096F20E585E800030497 /* html */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8097020E585E800030497 /* harfbuzz */,
-			);
-			path = html;
-			sourceTree = "<group>";
-		};
-		B3F8097020E585E800030497 /* harfbuzz */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8097120E585E800030497 /* api-index-full.html */,
-				B3F8097220E585E800030497 /* what-is-harfbuzz.html */,
-				B3F8097320E585E800030497 /* harfbuzz-Shaping.html */,
-				B3F8097420E585E800030497 /* api-index-1-0-5.html */,
-				B3F8097520E585E800030497 /* api-index-1-4-2.html */,
-				B3F8097620E585E800030497 /* plans-and-caching.html */,
-				B3F8097720E585E800030497 /* what-about-the-other-scripts.html */,
-				B3F8097820E585E800030497 /* deprecated-api-index.html */,
-				B3F8097920E585E800030497 /* up-insensitive.png */,
-				B3F8097A20E585E800030497 /* clusters.html */,
-				B3F8097B20E585E800030497 /* api-index-0-9-28.html */,
-				B3F8097C20E585E800030497 /* harfbuzz.devhelp2 */,
-				B3F8097D20E585E800030497 /* index.html */,
-				B3F8097E20E585E800030497 /* api-index-1-4-3.html */,
-				B3F8097F20E585E800030497 /* harfbuzz-hb-common.html */,
-				B3F8098020E585E800030497 /* shaping-and-shape-plans.html */,
-				B3F8098120E585E800030497 /* api-index-0-9-7.html */,
-				B3F8098220E585E800030497 /* up.png */,
-				B3F8098320E585E800030497 /* harfbuzz-hb-glib.html */,
-				B3F8098420E585E800030497 /* using-your-own-font-functions.html */,
-				B3F8098520E585E800030497 /* harfbuzz-hb-ot.html */,
-				B3F8098620E585E800030497 /* api-index-1-5-0.html */,
-				B3F8098720E585E800030497 /* harfbuzz-hb-ot-layout.html */,
-				B3F8098820E585E800030497 /* api-index-0-9-42.html */,
-				B3F8098920E585E800030497 /* customizing-unicode-functions.html */,
-				B3F8098A20E585E800030497 /* fonts-and-faces.html */,
-				B3F8098B20E585E800030497 /* api-index-0-9-39.html */,
-				B3F8098C20E585E800030497 /* level-2.html */,
-				B3F8098D20E585E800030497 /* right-insensitive.png */,
-				B3F8098E20E585E800030497 /* harfbuzz-hb-font.html */,
-				B3F8098F20E585E800030497 /* pt02.html */,
-				B3F8099020E585E800030497 /* harfbuzz-hb-face.html */,
-				B3F8099120E585E800030497 /* harfbuzz-hb-graphite2.html */,
-				B3F8099220E585E800030497 /* home.png */,
-				B3F8099320E585E800030497 /* api-index-0-9-22.html */,
-				B3F8099420E585E800030497 /* install-harfbuzz.html */,
-				B3F8099520E585E800030497 /* harfbuzz-hb-ot-math.html */,
-				B3F8099620E585E800030497 /* reordering-in-levels-0-and-1.html */,
-				B3F8099720E585E800030497 /* api-index-1-2-3.html */,
-				B3F8099820E585E800030497 /* api-index-0-9-38.html */,
-				B3F8099920E585E800030497 /* object-tree.html */,
-				B3F8099A20E585E800030497 /* left.png */,
-				B3F8099B20E585E800030497 /* the-distinction-between-levels-0-and-1.html */,
-				B3F8099C20E585E800030497 /* api-index-0-9-2.html */,
-				B3F8099D20E585E800030497 /* harfbuzz-hb-coretext.html */,
-				B3F8099E20E585E800030497 /* harfbuzz-hb-unicode.html */,
-				B3F8099F20E585E800030497 /* why-is-it-called-harfbuzz.html */,
-				B3F809A020E585E800030497 /* harfbuzz-hb-uniscribe.html */,
-				B3F809A120E585E800030497 /* harfbuzz-hb-icu.html */,
-				B3F809A220E585E800030497 /* annotation-glossary.html */,
-				B3F809A320E585E800030497 /* setting-buffer-properties.html */,
-				B3F809A420E585E800030497 /* harfbuzz-hb-blob.html */,
-				B3F809A520E585E800030497 /* buffers-language-script-and-direction.html */,
-				B3F809A620E585E800030497 /* harfbuzz-hb-ot-tag.html */,
-				B3F809A720E585E800030497 /* pt01.html */,
-				B3F809A820E585E800030497 /* harfbuzz-hb-shape-plan.html */,
-				B3F809A920E585E800030497 /* adding-text-to-the-buffer.html */,
-				B3F809AA20E585E800030497 /* api-index-0-9-20.html */,
-				B3F809AB20E585E800030497 /* harfbuzz-hb.html */,
-				B3F809AC20E585E800030497 /* style.css */,
-				B3F809AD20E585E800030497 /* api-index-0-9-41.html */,
-				B3F809AE20E585E800030497 /* HarfBuzz.svg */,
-				B3F809AF20E585E800030497 /* harfbuzz-hb-set.html */,
-				B3F809B020E585E800030497 /* using-harfbuzzs-native-opentype-implementation.html */,
-				B3F809B120E585E800030497 /* api-index-0-9-31.html */,
-				B3F809B220E585E800030497 /* harfbuzz-hb-ot-font.html */,
-				B3F809B320E585E800030497 /* harfbuzz-hb-gobject.html */,
-				B3F809B420E585E800030497 /* HarfBuzz.png */,
-				B3F809B520E585E800030497 /* api-index-0-9-8.html */,
-				B3F809B620E585E800030497 /* harfbuzz-Buffers.html */,
-				B3F809B720E585E800030497 /* building.html */,
-				B3F809B820E585E800030497 /* harfbuzz-hb-ft.html */,
-				B3F809B920E585E900030497 /* left-insensitive.png */,
-				B3F809BA20E585E900030497 /* api-index-0-9-11.html */,
-				B3F809BB20E585E900030497 /* ch08.html */,
-				B3F809BC20E585E900030497 /* api-index-1-1-3.html */,
-				B3F809BD20E585E900030497 /* api-index-1-1-2.html */,
-				B3F809BE20E585E900030497 /* harfbuzz-hb-deprecated.html */,
-				B3F809BF20E585E900030497 /* harfbuzz-hb-ot-shape.html */,
-				B3F809C020E585E900030497 /* api-index-0-9-5.html */,
-				B3F809C120E585E900030497 /* api-index-0-9-10.html */,
-				B3F809C220E585E900030497 /* harfbuzz-hb-version.html */,
-				B3F809C320E585E900030497 /* api-index-1-3-3.html */,
-				B3F809C420E585E900030497 /* api-index-1-6-0.html */,
-				B3F809C520E585E900030497 /* right.png */,
-				B3F809C620E585E900030497 /* hello-harfbuzz.html */,
-				B3F809C720E585E900030497 /* a-clustering-example-for-levels-0-and-1.html */,
-				B3F809C820E585E900030497 /* api-index-0-9-30.html */,
-			);
-			path = harfbuzz;
-			sourceTree = "<group>";
-		};
-		B3F809C920E585E900030497 /* gir-1.0 */ = {
-			isa = PBXGroup;
-			children = (
-				B3F809CA20E585E900030497 /* HarfBuzz-0.0.gir */,
-			);
-			path = "gir-1.0";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
