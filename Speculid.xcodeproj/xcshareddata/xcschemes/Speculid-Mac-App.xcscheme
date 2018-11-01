@@ -48,6 +48,16 @@
                ReferencedContainer = "container:Speculid.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B3136E8C1F90FD3D0002B7AB"
+               BuildableName = "CairoSVGTests.xctest"
+               BlueprintName = "CairoSVGTests"
+               ReferencedContainer = "container:Speculid.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -92,7 +102,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--process &quot;${SRCROOT}/examples/Assets/AppIcon.speculid&quot;"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "ASBfdsadf"
@@ -116,7 +126,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--install"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
       <EnvironmentVariables>

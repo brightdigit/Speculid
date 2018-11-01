@@ -16,9 +16,9 @@ before_install:
 script:
 - "./scripts/decrypt-certs.sh"
 - "./scripts/build-keychain.sh"
-- xcodebuild test -workspace speculid.xcworkspace -scheme "Speculid"
-- xcodebuild archive -workspace speculid.xcworkspace -scheme "Speculid-Mac-App" -configuration Release -derivedDataPath ./build -archivePath ./build/Products/Speculid.xcarchive
-- xcodebuild -exportArchive -archivePath ./build/Products/Speculid.xcarchive -exportOptionsPlist ./exportOptions.plist -exportPath ./build/Products/App
+- xcodebuild test -quiet -workspace speculid.xcworkspace -scheme "Speculid"
+- xcodebuild archive -quiet -workspace speculid.xcworkspace -scheme "Speculid-Mac-App" -configuration Release -derivedDataPath ./build -archivePath ./build/Products/Speculid.xcarchive
+- xcodebuild -quiet -exportArchive -archivePath ./build/Products/Speculid.xcarchive -exportOptionsPlist ./exportOptions.plist -exportPath ./build/Products/App
 - ditto -c -k --sequesterRsrc --keepParent ./build/Products/App/Speculid.app build/Speculid.zip
 - open Build/Products/App/Speculid.app
 - osascript -e 'tell application "Speculid" to quit'
