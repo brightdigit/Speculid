@@ -5,10 +5,12 @@ env:
 branches:
   except:
   - develop
+git:
+  quiet: true
 osx_image: xcode10
 xcode_workspace: Speculid.xcworkspace
 xcode_scheme: Speculid-Mac-App
-before_install:
+install:
 - bundler install --quiet
 - pod repo update --silent
 - pod install --silent
