@@ -1,5 +1,0 @@
-coverage_service: cobertura_xml
-workspace: Speculid.xcworkspace
-xcodeproj: Speculid.xcodeproj
-scheme: Speculid-Mac-App
-source_directory: framework
