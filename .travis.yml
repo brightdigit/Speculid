@@ -5,18 +5,19 @@ env:
 branches:
   except:
   - develop
-  - gh-pages
-osx_image: xcode10
-xcode_workspace: speculid.xcworkspace
+git:
+  quiet: true
+osx_image: xcode10.1
+xcode_workspace: Speculid.xcworkspace
 xcode_scheme: Speculid-Mac-App
-before_install:
-- bundler install
-- pod repo update
-- pod install
+install:
+- bundler install --quiet
+- pod repo update --silent
+- pod install --silent
 script:
-- "./scripts/decrypt-certs.sh"
-- "./scripts/build-keychain.sh"
-- xcodebuild test -quiet -workspace speculid.xcworkspace -scheme "Speculid"
+- ./scripts/decrypt-certs.sh >/dev/null
+- ./scripts/build-keychain.sh >/dev/null
+- xcodebuild test -enableCodeCoverage YES -quiet -workspace speculid.xcworkspace -scheme "Speculid-Mac-App"
 - xcodebuild archive -quiet -workspace speculid.xcworkspace -scheme "Speculid-Mac-App" -configuration Release -derivedDataPath ./build -archivePath ./build/Products/Speculid.xcarchive
 - xcodebuild -quiet -exportArchive -archivePath ./build/Products/Speculid.xcarchive -exportOptionsPlist ./exportOptions.plist -exportPath ./build/Products/App
 - ditto -c -k --sequesterRsrc --keepParent ./build/Products/App/Speculid.app build/Speculid.zip
@@ -24,6 +25,8 @@ script:
 - osascript -e 'tell application "Speculid" to quit'
 - diff examples/shasum <(./scripts/shasum.sh)
 - ./build/Products/App/Speculid.app/Contents/SharedSupport/speculid --version --useLocation ./build/Products/App/Speculid.app
+after_success:
+- bash <(curl -s https://codecov.io/bash) -J "Speculid"
 after_failure:
 - "./scripts/shasum.sh"
 - find "examples/Assets/." -type f \( -iname \*.icns -o -iname \*.png -o -iname \*.pdf
