@@ -1086,6 +1086,7 @@
 		7DD68C68194F71BF3C7B683C /* Pods-CairoSVG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CairoSVG.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CairoSVG/Pods-CairoSVG.debug.xcconfig"; sourceTree = "<group>"; };
 		87434B3EFCD8AF7732299E58 /* Pods-Speculid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid/Pods-Speculid.release.xcconfig"; sourceTree = "<group>"; };
 		9F8599C40CCA72FBF9FA1098 /* Pods_CairoSVG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CairoSVG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30216EF218B805E004C4BEA /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		B3033B191F9AEE9900787279 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		B3033B1A1F9AEE9A00787279 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B3033B1D1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSpecificationDocumentProtocol.swift; sourceTree = "<group>"; };
@@ -1828,6 +1829,7 @@
 		B3E2FD7520E568B4009EA554 /* eval-plural.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "eval-plural.h"; sourceTree = "<group>"; };
 		B3E2FD7620E568B4009EA554 /* verify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = verify.h; sourceTree = "<group>"; };
 		B3E2FD9C20E568B4009EA554 /* gettext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gettext.h; sourceTree = "<group>"; };
+		B3E33EB8218B99FA002A26AD /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = codecov.yml; sourceTree = "<group>"; };
 		B3E9A9001FB4DCCA00FD8E7A /* autorevision.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = autorevision.json; sourceTree = "<group>"; };
 		B3E9A9021FB4DDE400FD8E7A /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		B3E9A9041FB4E0B200FD8E7A /* bin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bin; sourceTree = "<group>"; };
@@ -2133,10 +2135,12 @@
 		B3033B181F9AED7600787279 /* configuration */ = {
 			isa = PBXGroup;
 			children = (
+				B30216EF218B805E004C4BEA /* Gemfile */,
 				B3B049C81FA262A8002906B1 /* exportOptions.plist */,
 				B3033B1A1F9AEE9A00787279 /* .gitignore */,
 				B3033B191F9AEE9900787279 /* .travis.yml */,
 				B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */,
+				B3E33EB8218B99FA002A26AD /* codecov.yml */,
 			);
 			name = configuration;
 			sourceTree = "<group>";
@@ -5226,7 +5230,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --quiet\n";
 		};
 		B326F24A2181113D0072D652 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -6040,7 +6044,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7DD68C68194F71BF3C7B683C /* Pods-CairoSVG.debug.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Speculid.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -6093,7 +6097,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72377B2194FCD69B6D9FED05 /* Pods-CairoSVG.release.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Speculid.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
