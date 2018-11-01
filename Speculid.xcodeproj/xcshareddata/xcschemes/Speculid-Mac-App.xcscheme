@@ -26,10 +26,28 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B37C74881F8C5B5C00DF505B"
+            BuildableName = "CairoSVG.framework"
+            BlueprintName = "CairoSVG"
+            ReferencedContainer = "container:Speculid.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B37C74721F8C5ADA00DF505B"
+            BuildableName = "SpeculidKit.framework"
+            BlueprintName = "Speculid"
+            ReferencedContainer = "container:Speculid.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B3136E5F1F90FCCF0002B7AB"
@@ -45,6 +63,16 @@
                BlueprintIdentifier = "B3136E7D1F90FD2E0002B7AB"
                BuildableName = "SpeculidTests.xctest"
                BlueprintName = "SpeculidTests"
+               ReferencedContainer = "container:Speculid.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B3136E8C1F90FD3D0002B7AB"
+               BuildableName = "CairoSVGTests.xctest"
+               BlueprintName = "CairoSVGTests"
                ReferencedContainer = "container:Speculid.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -92,7 +120,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--process &quot;${SRCROOT}/examples/Assets/AppIcon.speculid&quot;"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "ASBfdsadf"
@@ -116,7 +144,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--install"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
       <EnvironmentVariables>

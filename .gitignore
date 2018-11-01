@@ -197,3 +197,4 @@ examples/*/*.xcassets/*/*.pdf
 playgrounds
 
 .version
+*.coverage.txt
