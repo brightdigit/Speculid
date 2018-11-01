@@ -7,7 +7,7 @@ branches:
   - develop
 git:
   quiet: true
-osx_image: xcode10
+osx_image: xcode10.1
 xcode_workspace: Speculid.xcworkspace
 xcode_scheme: Speculid-Mac-App
 install:
