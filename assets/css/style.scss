@@ -365,4 +365,11 @@ body, input, button {
   h3 + p > img {
     margin-left: 40px;
   }
+  img {
+    border: 8px solid #333;
+    border-radius: 8px;
+    &.logo {
+      border: none;
+    }
+  }
 }
