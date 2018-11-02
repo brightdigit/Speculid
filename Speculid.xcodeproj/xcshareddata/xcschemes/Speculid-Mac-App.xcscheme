@@ -120,7 +120,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--process &quot;${SRCROOT}/examples/Assets/AppIcon.speculid&quot;"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "ASBfdsadf"
@@ -140,7 +140,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--version"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--install"
