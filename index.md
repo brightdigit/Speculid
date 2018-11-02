@@ -214,7 +214,8 @@ To specifically remove the alpha channel, a true boolean value must be specified
 ## Exporting SVGs for Speculid
 
 <div id="exporting-svgs-section" markdown="1">
-### Sketch 
+
+### ![Sketch Logo](images/svg-export/sketch/logo.svg){:height="50px"}{:class="logo"} Sketch 
 
 ![Sketch iOS App Icon Template Window][sketch-step-1]
 1. Open **Sketch** and create a new document using the **iOS App Icon** Template. If you are using an existing project, you can skip to step 3.
@@ -253,7 +254,6 @@ To specifically remove the alpha channel, a true boolean value must be specified
     ![Illustrator Export Format][illustrator-step-2]
 2. Under **Formats**, update the format to **SVG**.
 
-    ![Illustrator Export Dialog][illustrator-step-3]
 3. Select **Export Artboard** and choose the destination for your **SVG file** and **Save**.
 
 </div>
