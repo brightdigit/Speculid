@@ -362,14 +362,41 @@ body, input, button {
 }
 
 #exporting-svgs-section {
-  h3 + p > img {
+  header {
+    text-align: center;
+    p {
+      margin: 0;
+    }
+    img.logo {
+      width: 80px;
+    }
+    h3 {
+      margin-top: 0;
+      font-size: 2em;
+      margin: auto;
+    }
+  }
+  li > p:nth-child(2) {
+    text-align: center;
+    & > img {
+      margin-left: -40px;
+    }
+  }
+  header + p {
     margin-left: 40px;
+    text-align: center;
+    & > img {
+      margin-left: -40px;
+    }
   }
   img {
     border: 8px solid #333;
     border-radius: 8px;
     &.logo {
       border: none;
+      border-radius: 0px;
+      text-align: center;
+      margin: auto;
     }
   }
 }
