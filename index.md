@@ -215,7 +215,11 @@ To specifically remove the alpha channel, a true boolean value must be specified
 
 <div id="exporting-svgs-section" markdown="1">
 
-### ![Sketch Logo](images/svg-export/sketch/logo.svg){:height="50px"}{:class="logo"} Sketch 
+<header markdown="1">
+![Sketch Logo](images/svg-export/sketch/logo.svg){:class="logo"}{:class="html-only"} 
+
+### Sketch 
+</header>
 
 ![Sketch iOS App Icon Template Window][sketch-step-1]
 1. Open **Sketch** and create a new document using the **iOS App Icon** Template. If you are using an existing project, you can skip to step 3.
@@ -232,10 +236,14 @@ To specifically remove the alpha channel, a true boolean value must be specified
     ![Sketch Export Window][sketch-step-5]
 5. Select your duplicated slice and select **Export**.
 
-    ![Sketch Save Dialog][sketch-step-6]
 6. Select the destination for your **SVG file** and **Save**.
 
+
+<header markdown="1">
+![Photoshop Logo](images/svg-export/photoshop/logo.svg){:class="logo"}{:class="html-only"}
+
 ### Photoshop
+</header>
 
 ![Photoshop Export Menu][photoshop-step-1]
 1. Open your **Photoshop** document, select **File**...**Export**...**Export As...**.
@@ -246,7 +254,11 @@ To specifically remove the alpha channel, a true boolean value must be specified
     ![Photoshop Save Dialog][photoshop-step-3]
 3. Select **Export All** and choose the destination for your **SVG file** and **Save**.
 
+<header markdown="1">
+![Illustrator Logo](images/svg-export/illustrator/logo.svg){:class="logo"}
+
 ### Illustrator
+</header>
 
 ![Illustrator Export Menu][illustrator-step-1]
 1. Open your **Illustrator** document, select **File**...**Export**...**Export for Screens...**.
@@ -338,13 +350,13 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
 **Speculid** ©2018, BrightDigit, LLC. 
 
-[sketch-step-1]:       images/svg-export/sketch/step-1.jpg "Sketch iOS App Icon Template Window"
-[sketch-step-2]:       images/svg-export/sketch/step-2.jpg "Sketch Slice Panel"
-[sketch-step-3]:       images/svg-export/sketch/step-3.jpg "Sketch Present Format"
-[sketch-step-4]:       images/svg-export/sketch/step-4.jpg "Sketch Export Menu"
-[sketch-step-5]:       images/svg-export/sketch/step-5.jpg "Sketch Export Window"
-[photoshop-step-1]:    images/svg-export/photoshop/step-1.jpg "Photoshop Export Menu"
-[photoshop-step-2]:    images/svg-export/photoshop/step-2.jpg "Photoshop Export Format"
-[photoshop-step-3]:    images/svg-export/photoshop/step-3.jpg "Photoshop Save Dialog"
-[illustrator-step-1]:  images/svg-export/illustrator/step-1.jpg "Illustrator Export Menu"
-[illustrator-step-2]:  images/svg-export/illustrator/step-2.jpg "Illustrator Export Format"
+[sketch-step-1]:       /images/svg-export/sketch/step-1.jpg "Sketch iOS App Icon Template Window"
+[sketch-step-2]:       /images/svg-export/sketch/step-2.jpg "Sketch Slice Panel"
+[sketch-step-3]:       /images/svg-export/sketch/step-3.jpg "Sketch Present Format"
+[sketch-step-4]:       /images/svg-export/sketch/step-4.jpg "Sketch Export Menu"
+[sketch-step-5]:       /images/svg-export/sketch/step-5.jpg "Sketch Export Window"
+[photoshop-step-1]:    /images/svg-export/photoshop/step-1.jpg "Photoshop Export Menu"
+[photoshop-step-2]:    /images/svg-export/photoshop/step-2.jpg "Photoshop Export Format"
+[photoshop-step-3]:    /images/svg-export/photoshop/step-3.jpg "Photoshop Save Dialog"
+[illustrator-step-1]:  /images/svg-export/illustrator/step-1.jpg "Illustrator Export Menu"
+[illustrator-step-2]:  /images/svg-export/illustrator/step-2.jpg "Illustrator Export Format"
