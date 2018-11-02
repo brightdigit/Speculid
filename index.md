@@ -211,6 +211,38 @@ The background color can be set in a standard rgb, rgba, or hex code format (#RR
 
 To specifically remove the alpha channel, a true boolean value must be specified. This will remove the alpha channel from the file. Make sure to specify an opaque background color when removing the alpha channel.
 
+## Exporting SVGs for Speculid
+
+### Sketch 
+
+1. Open **Sketch** and create a new document using the **iOS App Icon** Template. If you are using an exisiting project, you can skip to step 3.
+
+2. Once you are in the template, duplicate one of the icon size slices on the left side.
+
+3. On the right size, change the **preset format** to **SVG**.
+
+4. In the top menu, select **File**...**Export**. 
+
+5. Select your duplicated slice and select **Export**.
+
+6. Select the destination for your **SVG file** and **Save**.
+
+### Photoshop
+
+1. Open your **Photoshop** document, select **File**...**Export**...**Export As...**.
+
+2. Under the **File Settings** on the right, change the format to **SVG**.
+
+3. Select **Export All** and choose the destination for your **SVG file** and **Save**.
+
+### Illustrator
+
+1. Open your **Illustrator** document, select **File**...**Export**...**Export for Screens...**.
+
+2. Under **Formats**, update the format to **SVG**.
+
+3. Select **Export Artboard** and choose the destination for your **SVG file** and **Save**.
+
 ## Xcode Integration and Automation
 
 With **Speculid**, the process of building image assets can be automated in **Xcode**.
