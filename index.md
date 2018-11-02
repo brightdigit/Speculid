@@ -338,15 +338,13 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
 **Speculid** ©2018, BrightDigit, LLC. 
 
-[sketch-step-1]:        https://via.placeholder.com/600x400/333/ccc.png?text=sketch-step-1
-[sketch-step-2]:        https://via.placeholder.com/600x400/333/ccc.png?text=sketch-step-2
-[sketch-step-3]:        https://via.placeholder.com/600x400/333/ccc.png?text=sketch-step-3
-[sketch-step-4]:        https://via.placeholder.com/600x400/333/ccc.png?text=sketch-step-4
-[sketch-step-5]:        https://via.placeholder.com/600x400/333/ccc.png?text=sketch-step-5
-[sketch-step-6]:        https://via.placeholder.com/600x400/333/ccc.png?text=sketch-step-6
-[photoshop-step-1]:     https://via.placeholder.com/600x400/333/ccc.png?text=photoshop-step-1
-[photoshop-step-2]:     https://via.placeholder.com/600x400/333/ccc.png?text=photoshop-step-2
-[photoshop-step-3]:     https://via.placeholder.com/600x400/333/ccc.png?text=photoshop-step-3
-[illustrator-step-1]:   https://via.placeholder.com/600x400/333/ccc.png?text=illustrator-step-1
-[illustrator-step-2]:   https://via.placeholder.com/600x400/333/ccc.png?text=illustrator-step-2
-[illustrator-step-3]:   https://via.placeholder.com/600x400/333/ccc.png?text=illustrator-step-3
+[sketch-step-1]:       images/svg-export/sketch/step-1.jpg "Sketch iOS App Icon Template Window"
+[sketch-step-2]:       images/svg-export/sketch/step-2.jpg "Sketch Slice Panel"
+[sketch-step-3]:       images/svg-export/sketch/step-3.jpg "Sketch Present Format"
+[sketch-step-4]:       images/svg-export/sketch/step-4.jpg "Sketch Export Menu"
+[sketch-step-5]:       images/svg-export/sketch/step-5.jpg "Sketch Export Window"
+[photoshop-step-1]:    images/svg-export/photoshop/step-1.jpg "Photoshop Export Menu"
+[photoshop-step-2]:    images/svg-export/photoshop/step-2.jpg "Photoshop Export Format"
+[photoshop-step-3]:    images/svg-export/photoshop/step-3.jpg "Photoshop Save Dialog"
+[illustrator-step-1]:  images/svg-export/illustrator/step-1.jpg "Illustrator Export Menu"
+[illustrator-step-2]:  images/svg-export/illustrator/step-2.jpg "Illustrator Export Format"
