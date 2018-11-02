@@ -83,14 +83,21 @@
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
       {% if site.show_signup %}
-<!--         <a href="#download" class="btn open-popup"><img src="/images/download.svg"> <span>Download</span></a> -->
+
+{% assign download_count = 0 %}
+{% for release in site.github.releases %}
+  {% for asset in release.assets %}
+    {% assign download_count = download_count | plus: asset.download_count %}
+  {% endfor %}
+{% endfor %}
+
 <section class="signup-form-container">
 <form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
   <div class="row">
   <input type="email" placeholder="Your Email Address" value="" name="EMAIL" id="mce-EMAIL" required>
   </div>
   <div class="row">
-  <input type="submit" value="Download">
+  <div class="button-container"><input type="submit" value="Download"><span><img style="margin-top: 3px; float: left;" height="16px" src="images/download.svg">{{download_count}}</span></div>
   </div>
 </form>
 <div class="message">
