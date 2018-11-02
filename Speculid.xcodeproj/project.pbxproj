@@ -1422,6 +1422,7 @@
 		B3891BBD20F7CE010095E1FD /* CwlSysctl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CwlSysctl.swift; sourceTree = "<group>"; };
 		B3B049C81FA262A8002906B1 /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
 		B3B049CB1FA27D96002906B1 /* certs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = certs; sourceTree = "<group>"; };
+		B3B27DE6218BC9D000569056 /* Speculid-Mac-XPC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Speculid-Mac-XPC.entitlements"; sourceTree = "<group>"; };
 		B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfigurationBuilder.swift; sourceTree = "<group>"; };
 		B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfigurationBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidConfiguration.swift; sourceTree = "<group>"; };
@@ -2623,6 +2624,7 @@
 		B37C74351F8C58F300DF505B = {
 			isa = PBXGroup;
 			children = (
+				B3B27DE6218BC9D000569056 /* Speculid-Mac-XPC.entitlements */,
 				B3220A4621154D1A00047BF6 /* scripts */,
 				B3CEF3C41FB611D200F1DF87 /* README.md */,
 				B3E9A9041FB4E0B200FD8E7A /* bin */,
@@ -4971,6 +4973,9 @@
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
 							com.apple.Sandbox = {
 								enabled = 0;
 							};
@@ -4980,6 +4985,11 @@
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
+						};
 					};
 					B37C74721F8C5ADA00DF505B = {
 						CreatedOnToolsVersion = 9.0;
@@ -5914,11 +5924,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Speculid.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/applications/mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-App";
@@ -5935,11 +5945,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Speculid.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/applications/mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-App";
@@ -5960,6 +5970,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/applications/xpc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-XPC";
@@ -5981,6 +5992,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/applications/xpc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-XPC";
@@ -6075,10 +6087,7 @@
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/libffi/3.2.1/lib",
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/libcroco/0.6.12/lib",
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/fribidi/1.0.3/lib",
-					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/fribidi/1.0.2/lib",
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/harfbuzz/1.7.6_2/lib",
-					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/harfbuzz/1.7.5/lib",
-					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/harfbuzz/1.7.4/lib",
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/icu4c/61.1/lib",
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/graphite2/1.3.11/lib",
 				);
@@ -6128,10 +6137,7 @@
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/libffi/3.2.1/lib",
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/libcroco/0.6.12/lib",
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/fribidi/1.0.3/lib",
-					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/fribidi/1.0.2/lib",
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/harfbuzz/1.7.6_2/lib",
-					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/harfbuzz/1.7.5/lib",
-					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/harfbuzz/1.7.4/lib",
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/icu4c/61.1/lib",
 					"$(PROJECT_DIR)/frameworks/cairosvg/dependencies/graphite2/1.3.11/lib",
 				);
