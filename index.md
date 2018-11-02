@@ -213,35 +213,50 @@ To specifically remove the alpha channel, a true boolean value must be specified
 
 ## Exporting SVGs for Speculid
 
+<div id="exporting-svgs-section" markdown="1">
 ### Sketch 
 
-1. Open **Sketch** and create a new document using the **iOS App Icon** Template. If you are using an exisiting project, you can skip to step 3.
+![Sketch iOS App Icon Template Window][sketch-step-1]
+1. Open **Sketch** and create a new document using the **iOS App Icon** Template. If you are using an existing project, you can skip to step 3.
 
+    ![Sketch Slice Panel][sketch-step-2]
 2. Once you are in the template, duplicate one of the icon size slices on the left side.
 
+    ![Sketch Present Format][sketch-step-3]
 3. On the right size, change the **preset format** to **SVG**.
 
+    ![Sketch Export Menu][sketch-step-4]
 4. In the top menu, select **File**...**Export**. 
 
+    ![Sketch Export Window][sketch-step-5]
 5. Select your duplicated slice and select **Export**.
 
+    ![Sketch Save Dialog][sketch-step-6]
 6. Select the destination for your **SVG file** and **Save**.
 
 ### Photoshop
 
+![Photoshop Export Menu][photoshop-step-1]
 1. Open your **Photoshop** document, select **File**...**Export**...**Export As...**.
 
+    ![Photoshop Export Format][photoshop-step-2]
 2. Under the **File Settings** on the right, change the format to **SVG**.
 
+    ![Photoshop Save Dialog][photoshop-step-3]
 3. Select **Export All** and choose the destination for your **SVG file** and **Save**.
 
 ### Illustrator
 
+![Illustrator Export Menu][illustrator-step-1]
 1. Open your **Illustrator** document, select **File**...**Export**...**Export for Screens...**.
 
+    ![Illustrator Export Format][illustrator-step-2]
 2. Under **Formats**, update the format to **SVG**.
 
+    ![Illustrator Export Dialog][illustrator-step-3]
 3. Select **Export Artboard** and choose the destination for your **SVG file** and **Save**.
+
+</div>
 
 ## Xcode Integration and Automation
 
@@ -322,3 +337,16 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 -----
 
 **Speculid** ©2018, BrightDigit, LLC. 
+
+[sketch-step-1]:        https://via.placeholder.com/600x400/333/ccc.png?text=sketch-step-1
+[sketch-step-2]:        https://via.placeholder.com/600x400/333/ccc.png?text=sketch-step-2
+[sketch-step-3]:        https://via.placeholder.com/600x400/333/ccc.png?text=sketch-step-3
+[sketch-step-4]:        https://via.placeholder.com/600x400/333/ccc.png?text=sketch-step-4
+[sketch-step-5]:        https://via.placeholder.com/600x400/333/ccc.png?text=sketch-step-5
+[sketch-step-6]:        https://via.placeholder.com/600x400/333/ccc.png?text=sketch-step-6
+[photoshop-step-1]:     https://via.placeholder.com/600x400/333/ccc.png?text=photoshop-step-1
+[photoshop-step-2]:     https://via.placeholder.com/600x400/333/ccc.png?text=photoshop-step-2
+[photoshop-step-3]:     https://via.placeholder.com/600x400/333/ccc.png?text=photoshop-step-3
+[illustrator-step-1]:   https://via.placeholder.com/600x400/333/ccc.png?text=illustrator-step-1
+[illustrator-step-2]:   https://via.placeholder.com/600x400/333/ccc.png?text=illustrator-step-2
+[illustrator-step-3]:   https://via.placeholder.com/600x400/333/ccc.png?text=illustrator-step-3

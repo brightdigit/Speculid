@@ -361,3 +361,8 @@ body, input, button {
   display: none;
 }
 
+#exporting-svgs-section {
+  h3 + p > img {
+    margin-left: 40px;
+  }
+}
