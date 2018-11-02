@@ -5288,7 +5288,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT/scripts/codesign-framework.sh\"\n";
+			shellScript = "#\"$SRCROOT/scripts/codesign-framework.sh\"\n";
 		};
 		B3B5E9D61F96AB1B004A6BEB /* warnings */ = {
 			isa = PBXShellScriptBuildPhase;
