@@ -5,6 +5,7 @@ env:
 branches:
   except:
   - develop
+  - feature/document-update
 git:
   quiet: true
 osx_image: xcode10.1
