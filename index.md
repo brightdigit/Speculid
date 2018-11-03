@@ -161,7 +161,7 @@ Options:
   --version  Show version.
 ```
 
-## File Format
+## File Format and Properties
 
 The `.speculid` file is a `json` file with the image set or app icon path, the graphic file source, and optionally basic image geometry (width or height). All paths specified in the json file could be relative to the `.speculid` file or an absolute path. Such as
 
@@ -218,7 +218,7 @@ To specifically remove the alpha channel, a true boolean value must be specified
 <header markdown="1">
 ![Sketch Logo](images/svg-export/sketch/logo.svg){:class="logo"}{:class="html-only"} 
 
-### Sketch 
+### <img class="readme-only" src="/images/svg-export/sketch/logo.svg" height="25pt"/> Sketch 
 </header>
 
 ![Sketch iOS App Icon Template Window][sketch-step-1]
@@ -242,7 +242,7 @@ To specifically remove the alpha channel, a true boolean value must be specified
 <header markdown="1">
 ![Photoshop Logo](images/svg-export/photoshop/logo.svg){:class="logo"}{:class="html-only"}
 
-### Photoshop
+### <img class="readme-only" src="/images/svg-export/photoshop/logo.svg" height="25pt"/> Photoshop
 </header>
 
 ![Photoshop Export Menu][photoshop-step-1]
@@ -255,9 +255,9 @@ To specifically remove the alpha channel, a true boolean value must be specified
 3. Select **Export All** and choose the destination for your **SVG file** and **Save**.
 
 <header markdown="1">
-![Illustrator Logo](images/svg-export/illustrator/logo.svg){:class="logo"}
+![Illustrator Logo](images/svg-export/illustrator/logo.svg){:class="logo"}{:class="html-only"}
 
-### Illustrator
+### <img class="readme-only" src="/images/svg-export/illustrator/logo.svg" height="25pt"/> Illustrator
 </header>
 
 ![Illustrator Export Menu][illustrator-step-1]
