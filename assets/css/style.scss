@@ -83,7 +83,7 @@ text-align: left;
 }
 
 #markdown-toc {
-  li > ul > li > ul {
+  li > ul > li > ul > li > ul {
     display: none;
   }
   #markdown-toc-table-of-contents {
@@ -94,6 +94,9 @@ text-align: left;
       font-size: 0.8em;
       line-height: 1em;
     }
+  }
+  code, em {
+    display: none;
   }
 }
 
