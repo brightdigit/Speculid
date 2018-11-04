@@ -403,3 +403,13 @@ body, input, button {
     }
   }
 }
+
+ul.social-share {
+  display: inline;
+  position: static;
+  li {
+    float: left;
+    display: inline;
+    padding: 5px;
+  }
+}
