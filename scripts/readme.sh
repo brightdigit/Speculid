@@ -5,8 +5,8 @@ DESTINATION=README.md
 
 cat $SOURCE | \
 	perl -pe 's/\{\:height="[^"]+"\}//g' | \
-	perl -pe 's/\]\(\/([^\/])/\]\(https\:\/\/cdn.rawgit.com\/brightdigit\/Speculid\/gh-pages\/$1/g' | \
-	perl -pe 's/src="\//src="https\:\/\/cdn.rawgit.com\/brightdigit\/Speculid\/gh-pages\//g' | \
+	perl -pe 's/\]\(\/([^\/])/\]\(https\:\/\/rawcdn.githack.com\/brightdigit\/Speculid\/master\/$1/g' | \
+	perl -pe 's/src="\//src="https\:\/\/rawcdn.githack.com\/brightdigit\/Speculid\/master\//g' | \
 	perl -pe 's/\!?\[.+\{\:class="html-only"\}//g' | \
 	perl -0pe 's/\<\!-- HTML-ONLY BEGIN --\>.*\<\!-- HTML-ONLY END --\>//gms' | \
 	perl -0pe 's/\* TOC.*{:toc}//gms' | \

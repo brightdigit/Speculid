@@ -73,6 +73,5 @@ public struct AssetSpecification: AssetSpecificationProtocol, Codable {
     //    }
   }
 
-  public func encode(to _: Encoder) throws {
-  }
+  public func encode(to _: Encoder) throws {}
 }

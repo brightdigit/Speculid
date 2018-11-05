@@ -83,21 +83,52 @@
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
       {% if site.show_signup %}
-<!--         <a href="#download" class="btn open-popup"><img src="/images/download.svg"> <span>Download</span></a> -->
+
+{% assign download_count = 0 %}
+{% for release in site.github.releases %}
+  {% for asset in release.assets %}
+    {% assign download_count = download_count | plus: asset.download_count %}
+  {% endfor %}
+{% endfor %}
+
 <section class="signup-form-container">
 <form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
   <div class="row">
   <input type="email" placeholder="Your Email Address" value="" name="EMAIL" id="mce-EMAIL" required>
   </div>
   <div class="row">
-  <input type="submit" value="Download">
+  <div class="button-container"><input type="submit" value="Download"><span><img style="" height="16px" src="images/download.svg">{{download_count}}</span></div>
   </div>
 </form>
 <div class="message">
   &nbsp;
 </div>
 </section>
+<section class="social-share">
       {% endif %}
+      <h2>Share</h2>
+      <ul class="social-share">
+        <li>
+      <a href="mailto:?&subject=Check Out Speculid&body=Hey,%0AAre%20you%20looking%20for%20a%20tool%20to%20help%20deal%20with%20graphics%20in%20your%20apps?%20Check%20out%20Speculid%3A%0Ahttps%3A//speculid.com">
+        <img src="/images/social/email.png" width="16">Email</a>
+    </li>
+        <li>
+      <a target="_blank" href="https://twitter.com/share?url=https%3A%2F%2Fbit.ly%2F2Rwp7cV&text=Looking%20for%20help%20managing%20graphics%20and%20assets%20in%20your%20iOS%20projects%3F%20Take%20a%20look%20at%20%23Speculid%3A&via=leogdion"><img src="/images/social/twitter.png" width="16">Twitter</a>
+    </li>
+        <li>
+      <a target="_blank" href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fbit.ly%2F2OlqOIg&title=Looking%20for%20help%20managing%20graphics%20and%20assets%20in%20your%20iOS%20projects%3F%20Take%20a%20look%20at%20%23Speculid%3A"><img src="/images/social/linkedin.png" width="16">LinkedIn</a>
+
+    </li>
+        <li>
+      <a target="_blank" href="http://bufferapp.com/add?text=Looking%20for%20help%20managing%20graphics%20and%20assets%20in%20your%20iOS%20projects%3F%20Take%20a%20look%20at%20%23Speculid%3A&url=https%3A%2F%2Fbit.ly%2F2zqluho"><img src="/images/social/buffer.png" width="16">Buffer</a>
+    </li>
+        <li>
+      <a target="_blank" href="http://reddit.com/submit?url=https%3A%2F%2Fbit.ly%2F2RyZkRn&title=Looking%20for%20help%20managing%20graphics%20and%20assets%20in%20your%20iOS%20projects%3F%20Take%20a%20look%20at%20%23Speculid%3A"><img src="/images/social/reddit.png" width="16">Reddit</a>
+    </li>
+
+
+  </ul>
+</section>
     </section>
 
     <section class="main-content">

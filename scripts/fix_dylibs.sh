@@ -1,86 +1,39 @@
 #!/bin/sh
 
+FRAMEWORKS_FOLDER_PATH="`dirname $1`/Frameworks/"
 LIBS=`otool -L "$1" | grep "/opt\|Cellar" | awk -F' ' '{ print $1 }'`
 for lib in $LIBS; do
-  echo $lib
+  EXPECTED_PATH="`dirname $1`/Frameworks/`basename $lib`"
+  if [ ! -f $EXPECTED_PATH ]; then
+  IFS='.' read -ra FILENAME_COMPS <<< "`basename $lib`"
+  ACTUAL_PATH=`find $FRAMEWORKS_FOLDER_PATH -name "${FILENAME_COMPS[0]}*.*"`
+  install_name_tool -id @rpath/`basename $ACTUAL_PATH` "`dirname $1`/Frameworks/`basename $ACTUAL_PATH`"
+  install_name_tool -change $lib @rpath/`basename $ACTUAL_PATH` "$1"
+  echo "Fixing `basename $lib` (`basename $ACTUAL_PATH`) for Framework"
+  else
   install_name_tool -id @rpath/`basename $lib` "`dirname $1`/Frameworks/`basename $lib`"
   install_name_tool -change $lib @rpath/`basename $lib` "$1"
-#   dylib="`dirname $1`/Frameworks/`basename $lib`"
-#   deps=`otool -L "$dylib" | grep "/opt\|Cellar" | awk -F' ' '{ print $1 }'`
-#   for dependency in $DEPS; do
-#     echo "Fixing $dependency"
-#     install_name_tool -id @rpath/`basename $dependency` "$dylib"
-#     install_name_tool -change $dependency @rpath/`basename $dependency` "$dylib"
-# #DEPCOUNT=$((DEPCOUNT+1))
-# done
+  echo "Fixing `basename $lib` for Framework"
+  fi
 done
 
-FRAMEWORKS_FOLDER_PATH="`dirname $1`/Frameworks/"
 deps=`ls "$FRAMEWORKS_FOLDER_PATH" | awk -F' ' '{ print $1 }'`
 for lib in $deps; do
-  echo "Fixing $dependency"
-#   install_name_tool -id @rpath/`basename $dependency` "$dylib"
-#   install_name_tool -change $dependency @rpath/`basename $dependency` "$dylib"
-# #DEPCOUNT=$((DEPCOUNT+1))
-echo $lib
   install_name_tool -id @rpath/`basename $lib` "`dirname $1`/Frameworks/`basename $lib`"
   install_name_tool -change $lib @rpath/`basename $lib` "$1"
   dylib="`dirname $1`/Frameworks/`basename $lib`"
-  deps=`otool -L "$dylib" | grep "/opt\|Cellar" | awk -F' ' '{ print $1 }'`
+  deps=`otool -L "$dylib" | grep "/opt\|Cellar\|loader_path" | awk -F' ' '{ print $1 }'`
   for dependency in $deps; do
-      echo "Fixing $dependency"
-#install_name_tool -id @rpath/`basename $dependency` "$dylib"
+      EXPECTED_PATH="`dirname $1`/Frameworks/`basename $dependency`"
+      if [ ! -f $EXPECTED_PATH ]; then
+      IFS='.' read -ra FILENAME_COMPS <<< "`basename $dependency`"
+      ACTUAL_PATH=`find $FRAMEWORKS_FOLDER_PATH -name "${FILENAME_COMPS[0]}*.*"`
+      install_name_tool -change $dependency @rpath/`basename $ACTUAL_PATH` "$dylib"
+      echo "Fixing `basename $dependency` (`basename $ACTUAL_PATH`) for `basename $dylib`"
+      else
       install_name_tool -change $dependency @rpath/`basename $dependency` "$dylib"
-#DEPCOUNT=$((DEPCOUNT+1))
+      echo "Fixing `basename $dependency` for `basename $dylib`"
+      fi
     done
 done
-##
-###  fix_dylibs.sh
-###  speculid
-###
-###  Created by Leo Dion on 11/27/17.
-###  Copyright © 2017 Bright Digit, LLC. All rights reserved.
-##
-#
-#for (( c=1; c<=10; c++ ))
-#do
-#  echo "Iteration: $c"
-#  DEPCOUNT=0
-#  DYLIBS=`ls "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH"`
-#  for dylib in $DYLIBS; do
-#otool -L "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/$dylib"
-#    DEPS=`otool -L "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/$dylib" | grep "/opt\|Cellar" | awk -F' ' '{ print $1 }'`
-#
-##    for dependency in $DEPS; do
-##   echo "Installing $dependency"
-##install -m 755 $dependency "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH"
-#
-##    done
-#    for dependency in $DEPS; do
-#      echo "Fixing $dependency"
-#      install_name_tool -id @rpath/`basename $dependency` "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/$dylib"
-#      install_name_tool -change $dependency @rpath/`basename $dependency` "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/$dylib"
-#      DEPCOUNT=$((DEPCOUNT+1))
-#    done
-#  done
-#  echo "Dependency Count: $DEPCOUNT"
-#  if [ $DEPCOUNT -eq 0 ]; then exit; fi
-#done
-#
-#
-#DEPS=`otool -L "$TARGET" | grep "/opt\|Cellar" | awk -F' ' '{ print $1 }'`
-#for dependency in $DEPS; do
-#  echo "Installing $dependency"
-##  install -m 755 $dependency "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH"
-#  install_name_tool -id @rpath/`basename $dependency` "$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/`basename $dependency`"
-#  install_name_tool -change $dependency @rpath/`basename $dependency` "$BUILT_PRODUCTS_DIR/$EXECUTABLE_PATH"
-#  otool -L "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/`basename $dependency`"
-#  BASENAME=`basename $dependency`
-##  SUBDEPS=`otool -L "$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/$BASENAME" | grep "/opt\|Cellar" | awk -F' ' '{ print $1 }'`
-##  for subdependency in $SUBDEPS; do
-##    echo "Installing `basename $subdependency` for $BASENAME"
-##    install_name_tool -id @rpath/`basename $subdependency` "$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/`basename $subdependency`"
-##    install_name_tool -change $dependency @rpath/`basename $subdependency` "$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/$BASENAME"
-##  done
-#
-#done
+	
