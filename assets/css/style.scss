@@ -42,7 +42,7 @@ strong {
 	text-align: center;
   display: table;
   clear: both;
-      width: 100%;
+  width: 100%;
 
   .card {
     @media screen and (min-width: 42em) {
@@ -63,13 +63,13 @@ strong {
       font-size: 0.75em;
     }
     ul {
-text-align: left;
+      text-align: left;
       margin: 0 12%;
-    @media screen and (min-width: 42em) {
-      width: 500px;
-      margin: 0 auto;
-      font-size: 0.825em;
-    }
+      @media screen and (min-width: 42em) {
+        width: 500px;
+        margin: 0 auto;
+        font-size: 0.825em;
+      }
       & > li {
         & > strong {
           &:after {
@@ -122,19 +122,19 @@ body, input, button {
     @media screen and (min-width: 42em) {
       width: 400px;
     }
-  form {
-    margin: -5px auto;
-    display: table;
-    & > div {
-      display: table-row;
-      & > input {
-        display: table-cell;
-        width: 100%;
-        font-size: 1.25em;
-        margin: 5px 0;
+    form {
+      margin: -5px auto;
+      display: table;
+      & > div {
+        display: table-row;
+        & > input {
+          display: table-cell;
+          width: 100%;
+          font-size: 1.25em;
+          margin: 5px 0;
+        }
       }
     }
-  }
   }
   a.btn.open-popup {
     padding: 8px 100px 0px;
@@ -173,8 +173,8 @@ body, input, button {
       input {
         width: 250px;
         &[type="submit"] { 
-        padding-left: 50px;
-        padding-right: 50px;
+          padding-left: 50px;
+          padding-right: 50px;
 
         }
       }
@@ -218,53 +218,53 @@ body, input, button {
   form.signup-form {
     width: 100%;
     .row {
-    display: flex;
-    input {
-      padding: 5px 10px;
+      display: flex;
+      input {
+        padding: 5px 10px;
 
-    }
-    .button-container > input {
-      margin: 0;
+      }
+      .button-container > input {
+        margin: 0;
         float: left;
         width: 300px;
         position: absolute;
         top: -1px;
         left: -1px;
-    }
-    .button-container {
-      width: 100%;
-      position: relative;
-      & > :last-child {
-        background-color: #FFF;
-        float: right;
-        width: 80px;
-        padding: 6px;
-        text-align: center;
-        font-weight: 600;
-        border-radius: 0px 5px 5px 0px;
       }
-    }
-    input, .button-container {
-      margin: 10px;
-      border-radius: 5px;
-      border: 1px transparentize(#000, 0.8) solid;
-      
-      &[type="email"] {
-        flex-grow: 1;
-      }
-      &[type="submit"] {
-        background-color: darken($body-link-color, 10%);
-        color: darken(#FFF, 15%);
-        border-color: transparentize($border-color, 0.5);
-        .main-content & {
-          font-weight: bold;
-        }
-        .page-header > &, &:hover {
-          color: #fff;
-          background-color: $body-link-color;
+      .button-container {
+        width: 100%;
+        position: relative;
+        & > :last-child {
+          background-color: #FFF;
+          float: right;
+          width: 80px;
+          padding: 6px;
+          text-align: center;
+          font-weight: 600;
+          border-radius: 0px 5px 5px 0px;
         }
       }
-    }
+      input, .button-container {
+        margin: 10px;
+        border-radius: 5px;
+        border: 1px transparentize(#000, 0.8) solid;
+
+        &[type="email"] {
+          flex-grow: 1;
+        }
+        &[type="submit"] {
+          background-color: darken($body-link-color, 10%);
+          color: darken(#FFF, 15%);
+          border-color: transparentize($border-color, 0.5);
+          .main-content & {
+            font-weight: bold;
+          }
+          .page-header > &, &:hover {
+            color: #fff;
+            background-color: $body-link-color;
+          }
+        }
+      }
     }
   }
 }
@@ -404,12 +404,33 @@ body, input, button {
   }
 }
 
-ul.social-share {
-  display: inline;
-  position: static;
-  li {
-    float: left;
-    display: inline;
-    padding: 5px;
+.social-share {
+  font-size: 1.2em;
+  text-align: center;
+  & > h2 {
+    font-weight: 100;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    font-size: 0.9em;
+  }
+  & > ul {
+    border-top: solid 1px;
+    display: inline-block;
+    margin: auto;
+    padding: 0px 10px;
+    list-style: none;
+    font-size: 1em;
+    & > li {
+      float: left;
+      display: inline;
+      padding: 5px;
+      margin: 5px;
+      & > a {
+        & > img:first-child {
+          padding-right: 5px;
+        }
+      }
+    }
   }
 }
