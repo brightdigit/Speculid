@@ -415,7 +415,6 @@ body, input, button {
     font-size: 0.9em;
   }
   & > ul {
-    border-top: solid 1px;
     display: inline-block;
     margin: auto;
     padding: 0px 10px;
@@ -424,9 +423,18 @@ body, input, button {
     & > li {
       float: left;
       display: inline;
-      padding: 5px;
       margin: 5px;
       & > a {
+        display: block;
+        border-radius: 5px;
+        padding: 8px 16px 5px;
+        background-color: #FFF;
+        opacity: 0.75;
+        &:hover {
+          text-decoration: none;
+          background-color: #FFF;
+          opacity: 1.0;
+        }
         & > img:first-child {
           padding-right: 5px;
         }
