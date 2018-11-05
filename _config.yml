@@ -22,3 +22,5 @@ exclude:
   - Pods
   - "*.orig.*"
   - "*.toc.*"
+  - /build/*
+  - /DerivedData/* 

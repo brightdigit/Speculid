@@ -3,8 +3,7 @@ import Foundation
 public struct InvalidDocumentURL: Error {
   public let url: URL
 }
-extension Operation: CommandLineActivityProtocol {
-}
+extension Operation: CommandLineActivityProtocol {}
 
 public struct UnknownArgumentsError: Error {
   public let arguments: [String]
@@ -62,6 +61,13 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
       case .debugLocation:
         self.outputStream.write(Bundle.main.bundleURL.absoluteString)
         return completed()
+      case let .install(type):
+        if type.contains(.command) {
+          error = CommandLineInstaller.startSync()
+          return completed()
+        } else {
+          return completed()
+        }
       }
     }
     operation.completionBlock = {
