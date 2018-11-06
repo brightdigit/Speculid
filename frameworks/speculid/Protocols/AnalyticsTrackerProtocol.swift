@@ -14,5 +14,4 @@ public extension AnalyticsTrackerProtocol {
   }
 }
 
-extension NSException: Error {
-}
+extension NSException: Error {}
