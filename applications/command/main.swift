@@ -49,14 +49,12 @@ func findApplicationBundle(withIdentifier identifer: String, _ callback: @escapi
   query.start()
 }
 
-func runApplication(fromBundle bundle: Bundle,  withArguments arguments: [String]?,  completion: @escaping (Error?) -> Void) {
-  
+func runApplication(fromBundle bundle: Bundle, withArguments arguments: [String]?, completion: @escaping (Error?) -> Void) {
   guard let executableURL = bundle.executableURL else {
     completion(BundleNotFoundError(identifier: bundle.bundleIdentifier!))
     return
   }
-  
-  
+
   let arguments = [String](CommandLine.arguments[1...])
   let sourceApplicationName = URL(fileURLWithPath: CommandLine.arguments[0]).lastPathComponent
   let environment = ProcessInfo.processInfo.environment.merging(["sourceApplicationName": sourceApplicationName], uniquingKeysWith: { $1 })
@@ -71,7 +69,7 @@ func runApplication(fromBundle bundle: Bundle,  withArguments arguments: [String
   process.standardError = FileHandle.standardError
   process.launch()
 }
-func runApplication(withBundleIdentifier identifier: String, fromApplicationPathURL applicationPathURL: URL?,   withArguments arguments: [String]?, completion: @escaping (Error?) -> Void) {
+func runApplication(withBundleIdentifier identifier: String, fromApplicationPathURL applicationPathURL: URL?, withArguments arguments: [String]?, completion: @escaping (Error?) -> Void) {
   if let applicationPathURL = applicationPathURL {
     if let bundle = Bundle(url: applicationPathURL) {
       if bundle.bundleIdentifier == identifier {
@@ -82,30 +80,28 @@ func runApplication(withBundleIdentifier identifier: String, fromApplicationPath
   }
   findApplicationBundle(withIdentifier: speculidMacAppBundleIdentifier) { bundle in
 
-    
     guard let bundle = bundle else {
       completion(BundleNotFoundError(identifier: identifier))
       return
     }
     runApplication(fromBundle: bundle, withArguments: nil, completion: completion)
-    
   }
 }
 
 DispatchQueue.main.async {
-  let arguments : [String]?
-  let applicationPathURL : URL?
+  let arguments: [String]?
+  let applicationPathURL: URL?
   if let index = CommandLine.arguments.firstIndex(of: "--useLocation") {
     var tempArguments = CommandLine.arguments
-    applicationPathURL = URL(fileURLWithPath: CommandLine.arguments[index+1])
-    tempArguments.removeSubrange((index...index+1))
+    applicationPathURL = URL(fileURLWithPath: CommandLine.arguments[index + 1])
+    tempArguments.removeSubrange((index ... index + 1))
     arguments = tempArguments
   } else {
     applicationPathURL = nil
     arguments = nil
   }
-  
-  runApplication(withBundleIdentifier: speculidMacAppBundleIdentifier, fromApplicationPathURL: applicationPathURL, withArguments: arguments , completion: { error in
+
+  runApplication(withBundleIdentifier: speculidMacAppBundleIdentifier, fromApplicationPathURL: applicationPathURL, withArguments: arguments, completion: { error in
     if (error as? BundleNotFoundError) != nil {
       #warning("TODO: Handle If Speculid Bundle Isn't Installed")
       print("It doesn't look like Speculid is installed.")

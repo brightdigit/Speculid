@@ -20,6 +20,10 @@ func exceptionHandlerMethod(exception: NSException) {
 
 public typealias RegularExpressionArgumentSet = (String, options: NSRegularExpression.Options)
 open class Application: NSApplication, ApplicationProtocol {
+  public func withInstaller(_ completed: (Result<InstallerProtocol>) -> Void) {
+    installerObjectInterfaceProvider.remoteObjectProxyWithHandler(completed)
+  }
+
   public func document(url: URL) throws -> SpeculidDocumentProtocol {
     return try SpeculidDocument(url: url, decoder: jsonDecoder, configuration: configuration)
   }
@@ -56,6 +60,7 @@ open class Application: NSApplication, ApplicationProtocol {
   open private(set) var commandLineActivity: CommandLineActivityProtocol?
   open private(set) var statusItem: NSStatusItem?
   open private(set) var service: ServiceProtocol!
+  open private(set) var installer: InstallerProtocol!
   open private(set) var regularExpressions: RegularExpressionSetProtocol!
   open private(set) var tracker: AnalyticsTrackerProtocol!
   open private(set) var configuration: SpeculidConfigurationProtocol!
@@ -63,6 +68,7 @@ open class Application: NSApplication, ApplicationProtocol {
 
   open let statusItemProvider: StatusItemProviderProtocol
   open let remoteObjectInterfaceProvider: RemoteObjectInterfaceProviderProtocol
+  open let installerObjectInterfaceProvider: InstallerObjectInterfaceProviderProtocol
   open let regularExpressionBuilder: RegularExpressionSetBuilderProtocol
   open let configurationBuilder: SpeculidConfigurationBuilderProtocol
   open let jsonDecoder: JSONDecoder
@@ -72,6 +78,7 @@ open class Application: NSApplication, ApplicationProtocol {
   public override init() {
     statusItemProvider = StatusItemProvider()
     remoteObjectInterfaceProvider = RemoteObjectInterfaceProvider()
+    installerObjectInterfaceProvider = InstallerObjectInterfaceProvider()
     regularExpressionBuilder = RegularExpressionSetBuilder()
     configurationBuilder = SpeculidConfigurationBuilder()
     jsonDecoder = JSONDecoder()
@@ -87,6 +94,7 @@ open class Application: NSApplication, ApplicationProtocol {
   public required init?(coder: NSCoder) {
     statusItemProvider = StatusItemProvider()
     remoteObjectInterfaceProvider = RemoteObjectInterfaceProvider()
+    installerObjectInterfaceProvider = InstallerObjectInterfaceProvider()
     regularExpressionBuilder = RegularExpressionSetBuilder()
     configurationBuilder = SpeculidConfigurationBuilder(coder: coder)
     jsonDecoder = JSONDecoder()
