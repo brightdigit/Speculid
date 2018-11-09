@@ -1,10 +1,11 @@
 import AppKit
+import CairoSVG
 import Foundation
 
 public struct SpeculidSpecificationsFile: SpeculidSpecificationsFileProtocol, Codable {
   public let assetDirectoryRelativePath: String
   public let sourceImageRelativePath: String
-  public let geometry: Geometry?
+  public let geometry: GeometryDimension?
   public let background: NSColor?
   public let removeAlpha: Bool
 
@@ -22,10 +23,10 @@ public struct SpeculidSpecificationsFile: SpeculidSpecificationsFileProtocol, Co
     sourceImageRelativePath = try container.decode(String.self, forKey: CodingKeys.sourceImageRelativePath)
     removeAlpha = try container.decodeIfPresent(Bool.self, forKey: CodingKeys.removeAlpha) ?? false
 
-    let geometry: Geometry?
+    let geometry: GeometryDimension?
 
     if let geometryString = try container.decodeIfPresent(String.self, forKey: CodingKeys.geometry) {
-      geometry = try Geometry(string: geometryString)
+      geometry = try GeometryDimension(string: geometryString)
     } else {
       geometry = nil
     }

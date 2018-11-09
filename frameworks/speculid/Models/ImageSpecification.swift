@@ -25,32 +25,22 @@ import Cocoa
     }
 
     self.file = file
-    geometryDimension = Geometry(dimension: dimension, value: value)
+    // geometryDimension = Geometry(dimension: dimension, value: value)
+    geometry = GeometryDimension(value: value, dimension: dimension)
     self.backgroundColor = backgroundColor
     self.removeAlphaChannel = removeAlphaChannel
   }
   // swiftlint:enable identifier_name
 
   public let file: ImageFileProtocol
-  public let geometryDimension: Geometry?
+  public let geometry: GeometryDimension
   public let removeAlphaChannel: Bool
   public let backgroundColor: CairoColorProtocol?
-  public init(file: ImageFileProtocol, geometryDimension: Geometry? = nil, removeAlphaChannel: Bool = false, backgroundColor: CairoColorProtocol? = nil) {
+  public init(file: ImageFileProtocol, geometryDimension: GeometryDimension? = nil, removeAlphaChannel: Bool = false, backgroundColor: CairoColorProtocol? = nil) {
     self.file = file
-    self.geometryDimension = geometryDimension
+    geometry = geometryDimension ?? GeometryDimension(value: 0, dimension: .unspecified)
     self.removeAlphaChannel = removeAlphaChannel
     self.backgroundColor = backgroundColor
     super.init()
-  }
-
-  public var geometry: CairoSVG.GeometryDimension {
-    guard let geometryDimension = self.geometryDimension else {
-      return CairoSVG.GeometryDimension(value: 0, dimension: .unspecified)
-    }
-    switch geometryDimension.value {
-    case let .height(value): return CairoSVG.GeometryDimension(value: value, dimension: .height)
-    case let .width(value): return CairoSVG.GeometryDimension(value: value, dimension: .width)
-    case let .scale(value): return CairoSVG.GeometryDimension(value: value, dimension: .scale)
-    }
   }
 }
