@@ -17,7 +17,6 @@
 		B3033B201F9AEFE600787279 /* AssetSpecificationDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3033B1F1F9AEFE600787279 /* AssetSpecificationDocument.swift */; };
 		B3081399218A067800DB07D0 /* geometry.svg in Resources */ = {isa = PBXBuildFile; fileRef = B3081398218A067300DB07D0 /* geometry.svg */; };
 		B3136DCE1F90E45F0002B7AB /* ErrorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */; };
-		B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC11F90E27B0002B7AB /* FileFormat.swift */; };
 		B3136DD11F90E45F0002B7AB /* ImageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DBB1F90E27B0002B7AB /* ImageFile.swift */; };
 		B3136DD41F90E45F0002B7AB /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DCC1F90E2A20002B7AB /* Service.swift */; };
 		B3136DD51F90E45F0002B7AB /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC61F90E2A20002B7AB /* ServiceProtocol.swift */; };
@@ -1098,7 +1097,6 @@
 		B3136DBC1F90E27B0002B7AB /* Speculid_Mac_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid_Mac_Framework.h; sourceTree = "<group>"; };
 		B3136DBE1F90E27B0002B7AB /* ImageSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSpecification.swift; sourceTree = "<group>"; };
 		B3136DC01F90E27B0002B7AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3136DC11F90E27B0002B7AB /* FileFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileFormat.swift; sourceTree = "<group>"; };
 		B3136DC31F90E2A10002B7AB /* layers.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = layers.svg; sourceTree = "<group>"; };
 		B3136DC61F90E2A20002B7AB /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCollection.swift; sourceTree = "<group>"; };
@@ -2237,7 +2235,6 @@
 				B3033B1F1F9AEFE600787279 /* AssetSpecificationDocument.swift */,
 				B341888D1F9A460300C5F356 /* CommandLineArgumentProvider.swift */,
 				B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */,
-				B3136DC11F90E27B0002B7AB /* FileFormat.swift */,
 				B3136DFB1F90F73A0002B7AB /* Geometry.swift */,
 				B3136E031F90F73A0002B7AB /* GeometryValue.swift */,
 				B3891BBD20F7CE010095E1FD /* CwlSysctl.swift */,
@@ -5487,7 +5484,6 @@
 				B33F0BB61F958640004A87DD /* StatusItemProviderProtocol.swift in Sources */,
 				B34B52C8217E5D700080E6DC /* InstallType.swift in Sources */,
 				B3136E4E1F90F73B0002B7AB /* AssetSpecificationProtocol.swift in Sources */,
-				B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */,
 				B317B0D11FA560EE00BB5E57 /* QuitMenuItem.swift in Sources */,
 				B3136E421F90F73B0002B7AB /* ImageIdiom.swift in Sources */,
 				B3D32A081F9A73740042B46F /* AsyncBlockOperation.swift in Sources */,
