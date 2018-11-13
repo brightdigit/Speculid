@@ -86,14 +86,8 @@ strong {
   li > ul > li > ul > li > ul {
     display: none;
   }
-  #markdown-toc-table-of-contents {
-    font-weight: 100;
-    opacity: 0.5;
-    &:before {
-      content: "▶︎ ";
-      font-size: 0.8em;
-      line-height: 1em;
-    }
+  & > li:nth-child(-n+3) {
+    display: none;
   }
   code, em {
     display: none;
