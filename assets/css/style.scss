@@ -107,6 +107,24 @@ body, input, button {
 }
 
 .page-header {
+    .install {
+      padding-bottom: 1em;
+      & > h3 {
+        margin-top: 0;
+      }
+      & > section {
+        h4 {
+          font-weight: 100;
+        }
+        margin-bottom: 1em;
+        code {
+          background-color: #000;
+          padding: 1em;
+          width: 100%;
+          color: #FFF;
+        }
+      }
+    }
   .signup-form-container {
     & > div {
       color: #333;
