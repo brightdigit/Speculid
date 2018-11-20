@@ -524,7 +524,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "find \"${SRCROOT}\" -name \"*.spcld\" -print0 |\nwhile IFS= read -r -d $'\\0' line; do\n\"${PROJECT_TEMP_DIR}/speculid/Release/Speculid.app/Contents/MacOS/Speculid\" \"$line\" &\ndone\nwait\n";
+			shellScript = "find \"${SRCROOT}\" -name \"*.speculid\" -print0 |\nwhile IFS= read -r -d $'\\0' line; do\nspeculid \"$line\" &\ndone\nwait\n";
 		};
 		B3AF65D51DA4055900BD008B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
