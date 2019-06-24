@@ -19,6 +19,6 @@ platform :ios do
   desc "Speculid"
   lane :build do
     #capture_screenshots(scheme: "examples")
-    speculid(text: "test")
+    speculid
   end
 end
