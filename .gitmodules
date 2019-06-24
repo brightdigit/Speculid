@@ -4,3 +4,6 @@
 [submodule "packages/homebrew"]
 	path = packages/homebrew
 	url = https://github.com/brightdigit/homebrew-speculid.git
+[submodule "packages/fastlane"]
+	path = packages/fastlane
+	url = https://github.com/brightdigit/fastlane-plugin-speculid.git
