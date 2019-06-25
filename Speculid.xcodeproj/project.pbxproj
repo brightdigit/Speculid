@@ -17,7 +17,6 @@
 		B3033B201F9AEFE600787279 /* AssetSpecificationDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3033B1F1F9AEFE600787279 /* AssetSpecificationDocument.swift */; };
 		B3081399218A067800DB07D0 /* geometry.svg in Resources */ = {isa = PBXBuildFile; fileRef = B3081398218A067300DB07D0 /* geometry.svg */; };
 		B3136DCE1F90E45F0002B7AB /* ErrorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */; };
-		B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC11F90E27B0002B7AB /* FileFormat.swift */; };
 		B3136DD11F90E45F0002B7AB /* ImageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DBB1F90E27B0002B7AB /* ImageFile.swift */; };
 		B3136DD41F90E45F0002B7AB /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DCC1F90E2A20002B7AB /* Service.swift */; };
 		B3136DD51F90E45F0002B7AB /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DC61F90E2A20002B7AB /* ServiceProtocol.swift */; };
@@ -38,12 +37,11 @@
 		B3136E331F90F73B0002B7AB /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DF71F90F73A0002B7AB /* String.swift */; };
 		B3136E341F90F73B0002B7AB /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DF81F90F73A0002B7AB /* CGFloat.swift */; };
 		B3136E351F90F73B0002B7AB /* AnalyticsParameterDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DFA1F90F73A0002B7AB /* AnalyticsParameterDictionary.swift */; };
-		B3136E361F90F73B0002B7AB /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DFB1F90F73A0002B7AB /* Geometry.swift */; };
+		B3136E361F90F73B0002B7AB /* GeometryDimension.Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DFB1F90F73A0002B7AB /* GeometryDimension.Codable.swift */; };
 		B3136E371F90F73B0002B7AB /* SpeculidSpecificationsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136DFC1F90F73A0002B7AB /* SpeculidSpecificationsFile.swift */; };
-		B3136E3B1F90F73B0002B7AB /* ScaledGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E001F90F73A0002B7AB /* ScaledGeometry.swift */; };
+		B3136E3B1F90F73B0002B7AB /* GeometryDimension.ScalingBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E001F90F73A0002B7AB /* GeometryDimension.ScalingBy.swift */; };
 		B3136E3C1F90F73B0002B7AB /* SpeculidDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */; };
 		B3136E3D1F90F73B0002B7AB /* AnalyticsParameterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E021F90F73A0002B7AB /* AnalyticsParameterKey.swift */; };
-		B3136E3E1F90F73B0002B7AB /* GeometryValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E031F90F73A0002B7AB /* GeometryValue.swift */; };
 		B3136E3F1F90F73B0002B7AB /* AssetSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E041F90F73A0002B7AB /* AssetSpecification.swift */; };
 		B3136E401F90F73B0002B7AB /* AnalyticsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E051F90F73A0002B7AB /* AnalyticsConfiguration.swift */; };
 		B3136E421F90F73B0002B7AB /* ImageIdiom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3136E071F90F73A0002B7AB /* ImageIdiom.swift */; };
@@ -334,6 +332,8 @@
 		B3891B8420F6402F00FEDF89 /* libcroco-0.6.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8078C20E5858100030497 /* libcroco-0.6.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3891B8620F6406B00FEDF89 /* libfribidi.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8083220E585BF00030497 /* libfribidi.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3891BBE20F7CE010095E1FD /* CwlSysctl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3891BBD20F7CE010095E1FD /* CwlSysctl.swift */; };
+		B394EEBF2195FE46004EB090 /* BadGeometryCGSizeValueError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B394EEBE2195FE46004EB090 /* BadGeometryCGSizeValueError.swift */; };
+		B394EEC02195FE4A004EB090 /* BadGeometryStringValueError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B394EEBC2195FE2D004EB090 /* BadGeometryStringValueError.swift */; };
 		B3A2BCF9213F2622005FC8A1 /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3242E97213DBE6C0063037C /* speculid */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3B5E9DA1F96C1C1004A6BEB /* SpeculidConfigurationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9D81F96C1BE004A6BEB /* SpeculidConfigurationBuilder.swift */; };
 		B3B5E9DC1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5E9DB1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift */; };
@@ -1098,7 +1098,6 @@
 		B3136DBC1F90E27B0002B7AB /* Speculid_Mac_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Speculid_Mac_Framework.h; sourceTree = "<group>"; };
 		B3136DBE1F90E27B0002B7AB /* ImageSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSpecification.swift; sourceTree = "<group>"; };
 		B3136DC01F90E27B0002B7AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3136DC11F90E27B0002B7AB /* FileFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileFormat.swift; sourceTree = "<group>"; };
 		B3136DC31F90E2A10002B7AB /* layers.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = layers.svg; sourceTree = "<group>"; };
 		B3136DC61F90E2A20002B7AB /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCollection.swift; sourceTree = "<group>"; };
@@ -1119,12 +1118,11 @@
 		B3136DF71F90F73A0002B7AB /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B3136DF81F90F73A0002B7AB /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		B3136DFA1F90F73A0002B7AB /* AnalyticsParameterDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsParameterDictionary.swift; sourceTree = "<group>"; };
-		B3136DFB1F90F73A0002B7AB /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		B3136DFB1F90F73A0002B7AB /* GeometryDimension.Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryDimension.Codable.swift; sourceTree = "<group>"; };
 		B3136DFC1F90F73A0002B7AB /* SpeculidSpecificationsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidSpecificationsFile.swift; sourceTree = "<group>"; };
-		B3136E001F90F73A0002B7AB /* ScaledGeometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledGeometry.swift; sourceTree = "<group>"; };
+		B3136E001F90F73A0002B7AB /* GeometryDimension.ScalingBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryDimension.ScalingBy.swift; sourceTree = "<group>"; };
 		B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeculidDocument.swift; sourceTree = "<group>"; };
 		B3136E021F90F73A0002B7AB /* AnalyticsParameterKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsParameterKey.swift; sourceTree = "<group>"; };
-		B3136E031F90F73A0002B7AB /* GeometryValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryValue.swift; sourceTree = "<group>"; };
 		B3136E041F90F73A0002B7AB /* AssetSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetSpecification.swift; sourceTree = "<group>"; };
 		B3136E051F90F73A0002B7AB /* AnalyticsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsConfiguration.swift; sourceTree = "<group>"; };
 		B3136E071F90F73A0002B7AB /* ImageIdiom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageIdiom.swift; sourceTree = "<group>"; };
@@ -1420,6 +1418,8 @@
 		B3825EF620F91806008F2A02 /* Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Font.h; sourceTree = "<group>"; };
 		B3825EF920F91806008F2A02 /* libgraphite2.3.0.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libgraphite2.3.0.1.dylib; sourceTree = "<group>"; };
 		B3891BBD20F7CE010095E1FD /* CwlSysctl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CwlSysctl.swift; sourceTree = "<group>"; };
+		B394EEBC2195FE2D004EB090 /* BadGeometryStringValueError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadGeometryStringValueError.swift; sourceTree = "<group>"; };
+		B394EEBE2195FE46004EB090 /* BadGeometryCGSizeValueError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadGeometryCGSizeValueError.swift; sourceTree = "<group>"; };
 		B3B049C81FA262A8002906B1 /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
 		B3B049CB1FA27D96002906B1 /* certs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = certs; sourceTree = "<group>"; };
 		B3B27DE6218BC9D000569056 /* Speculid-Mac-XPC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Speculid-Mac-XPC.entitlements"; sourceTree = "<group>"; };
@@ -2217,6 +2217,8 @@
 		B3136DF51F90F73A0002B7AB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B3136DFB1F90F73A0002B7AB /* GeometryDimension.Codable.swift */,
+				B3136E001F90F73A0002B7AB /* GeometryDimension.ScalingBy.swift */,
 				B3136DF81F90F73A0002B7AB /* CGFloat.swift */,
 				B3D32A051F9A5FEE0042B46F /* FileHandle.swift */,
 				B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */,
@@ -2237,15 +2239,11 @@
 				B3033B1F1F9AEFE600787279 /* AssetSpecificationDocument.swift */,
 				B341888D1F9A460300C5F356 /* CommandLineArgumentProvider.swift */,
 				B3136DC91F90E2A20002B7AB /* ErrorCollection.swift */,
-				B3136DC11F90E27B0002B7AB /* FileFormat.swift */,
-				B3136DFB1F90F73A0002B7AB /* Geometry.swift */,
-				B3136E031F90F73A0002B7AB /* GeometryValue.swift */,
 				B3891BBD20F7CE010095E1FD /* CwlSysctl.swift */,
 				B3136DBB1F90E27B0002B7AB /* ImageFile.swift */,
 				B3136E071F90F73A0002B7AB /* ImageIdiom.swift */,
 				B3136DBE1F90E27B0002B7AB /* ImageSpecification.swift */,
 				B33A533D1F954FF800E74800 /* Result.swift */,
-				B3136E001F90F73A0002B7AB /* ScaledGeometry.swift */,
 				B3B5E9DF1F96C416004A6BEB /* SpeculidApplicationMode.swift */,
 				B3B5E9E11F96C44D004A6BEB /* SpeculidCommandArgumentSet.swift */,
 				B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */,
@@ -2301,6 +2299,8 @@
 				B3136E1E1F90F73B0002B7AB /* MissingRequiredInstallationError.swift */,
 				B3136E1F1F90F73B0002B7AB /* ProcessError.swift */,
 				B3136E211F90F73B0002B7AB /* UnknownConversionError.swift */,
+				B394EEBC2195FE2D004EB090 /* BadGeometryStringValueError.swift */,
+				B394EEBE2195FE46004EB090 /* BadGeometryCGSizeValueError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -5476,7 +5476,6 @@
 				B3136E351F90F73B0002B7AB /* AnalyticsParameterDictionary.swift in Sources */,
 				B3136E431F90F73B0002B7AB /* SpeculidSpecificationsFileProtocol.swift in Sources */,
 				B3B5E9E61F96C604004A6BEB /* CommandLineRunnerProtocol.swift in Sources */,
-				B3136E3E1F90F73B0002B7AB /* GeometryValue.swift in Sources */,
 				B3136DDF1F90EFB10002B7AB /* Application.swift in Sources */,
 				B3136E331F90F73B0002B7AB /* String.swift in Sources */,
 				B3136E521F90F73B0002B7AB /* AnalyticsTrackerProtocol.swift in Sources */,
@@ -5487,7 +5486,6 @@
 				B33F0BB61F958640004A87DD /* StatusItemProviderProtocol.swift in Sources */,
 				B34B52C8217E5D700080E6DC /* InstallType.swift in Sources */,
 				B3136E4E1F90F73B0002B7AB /* AssetSpecificationProtocol.swift in Sources */,
-				B3136DCF1F90E45F0002B7AB /* FileFormat.swift in Sources */,
 				B317B0D11FA560EE00BB5E57 /* QuitMenuItem.swift in Sources */,
 				B3136E421F90F73B0002B7AB /* ImageIdiom.swift in Sources */,
 				B3D32A081F9A73740042B46F /* AsyncBlockOperation.swift in Sources */,
@@ -5501,6 +5499,7 @@
 				B3136E5B1F90FB710002B7AB /* ImageSpecification.swift in Sources */,
 				B3136E401F90F73B0002B7AB /* AnalyticsConfiguration.swift in Sources */,
 				B3136E301F90F73B0002B7AB /* ImageConversionBuilder.swift in Sources */,
+				B394EEBF2195FE46004EB090 /* BadGeometryCGSizeValueError.swift in Sources */,
 				B3136E2D1F90F73B0002B7AB /* ImageConversionSetBuilder.swift in Sources */,
 				B31BEAFC1F96269F00496E7A /* RegularExpressionSet.swift in Sources */,
 				B3136E511F90F73B0002B7AB /* AnalyticsConfigurationProtocol.swift in Sources */,
@@ -5524,13 +5523,14 @@
 				B3136E4F1F90F73B0002B7AB /* GeometryProtocol.swift in Sources */,
 				B3B5E9E81F96C74C004A6BEB /* CommandLineRunner.swift in Sources */,
 				B3136E2F1F90F73B0002B7AB /* SpeculidBuilder.swift in Sources */,
+				B394EEC02195FE4A004EB090 /* BadGeometryStringValueError.swift in Sources */,
 				B3136E341F90F73B0002B7AB /* CGFloat.swift in Sources */,
 				B3B5E9E01F96C416004A6BEB /* SpeculidApplicationMode.swift in Sources */,
 				B3033B1E1F9AEFC100787279 /* AssetSpecificationDocumentProtocol.swift in Sources */,
 				B3136E5A1F90F73B0002B7AB /* UnknownConversionError.swift in Sources */,
 				B3136E551F90F73B0002B7AB /* ImageConversionBuilderProtocol.swift in Sources */,
 				B3B5E9DE1F96C2A2004A6BEB /* SpeculidConfiguration.swift in Sources */,
-				B3136E361F90F73B0002B7AB /* Geometry.swift in Sources */,
+				B3136E361F90F73B0002B7AB /* GeometryDimension.Codable.swift in Sources */,
 				B3136E3F1F90F73B0002B7AB /* AssetSpecification.swift in Sources */,
 				B3136E321F90F73B0002B7AB /* NSColor.swift in Sources */,
 				B3136E491F90F73B0002B7AB /* ImageConversionSetProtocol.swift in Sources */,
@@ -5546,7 +5546,7 @@
 				B318906A1F918F0300D0EFA0 /* GeometryValue.Multiply.swift in Sources */,
 				B3136E571F90F73B0002B7AB /* MissingRequiredInstallationError.swift in Sources */,
 				B31BEAFE1F9626AC00496E7A /* RegularExpressionSetProtocol.swift in Sources */,
-				B3136E3B1F90F73B0002B7AB /* ScaledGeometry.swift in Sources */,
+				B3136E3B1F90F73B0002B7AB /* GeometryDimension.ScalingBy.swift in Sources */,
 				B3B5E9EA1F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift in Sources */,
 				B3136E471F90F73B0002B7AB /* ClientIdentifierDelegate.swift in Sources */,
 				B3136DCE1F90E45F0002B7AB /* ErrorCollection.swift in Sources */,

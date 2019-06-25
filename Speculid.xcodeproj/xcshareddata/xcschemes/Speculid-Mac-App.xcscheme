@@ -116,7 +116,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--process &quot;${SRCROOT}/examples/Assets/macOS AppIcon.speculid&quot;"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--process &quot;${SRCROOT}/examples/Assets/AppIcon.speculid&quot;"

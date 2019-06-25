@@ -1,3 +1,4 @@
+import CairoSVG
 import Foundation
 
 @available(*, deprecated: 2.0.0)
@@ -18,21 +19,14 @@ public struct SpeculidImageSpecificationBuilder: SpeculidImageSpecificationBuild
   ) throws -> ImageSpecification {
     let destinationFile = try ImageFile(url: destinationURL)
 
-    let geometryObj: GeometryProtocol?
+    let geometry: GeometryDimension?
 
     if let size = asset.size {
-      geometryObj = try Geometry(size: size, preferWidth: true).scaling(by: asset.scale)
+      geometry = try GeometryDimension(size: size, preferWidth: true).scalingBy(asset.scale ?? 1.0)
     } else if let specificationsGeomtetry = specifications.geometry {
-      geometryObj = specificationsGeomtetry.scaling(by: asset.scale)
+      geometry = specificationsGeomtetry.scalingBy(asset.scale ?? 1.0)
     } else if let scale = asset.scale {
-      geometryObj = Geometry(value: .scale(scale))
-    } else {
-      geometryObj = nil
-    }
-
-    let geometry: Geometry?
-    if let geometryValue = geometryObj?.value {
-      geometry = Geometry(value: geometryValue)
+      geometry = GeometryDimension(value: scale, dimension: .scale)
     } else {
       geometry = nil
     }
