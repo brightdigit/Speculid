@@ -11,7 +11,7 @@ osx_image: xcode10.1
 xcode_workspace: Speculid.xcworkspace
 xcode_scheme: Speculid-Mac-App
 install:
-- bundler install --quiet
+- bundler install
 - pod repo update --silent
 - pod install --silent
 script:
