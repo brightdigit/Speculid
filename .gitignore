@@ -198,3 +198,4 @@ playgrounds
 
 .version
 *.coverage.txt
+**/fastlane/report.xml 
