@@ -113,8 +113,6 @@ This means **Speculid** can...
 
 There are 3 ways to download Speculid: Email Signup, Homebrew, and Github Releases:
 
-<!-- HTML-ONLY BEGIN -->
-
 ## Email Signup
 
 Email signup allows for you to get delivered updates to your email box of new features and updates...
@@ -131,8 +129,6 @@ Email signup allows for you to get delivered updates to your email box of new fe
   &nbsp;
 </div>
 </section>
-
-<!-- HTML-ONLY END -->
 
 <div class="readme-only" markdown="1">
 To download <strong>Speculid</strong>, enter your email address <a href="https://speculid.com#download">here</a> to request access to the latest version.
