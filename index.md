@@ -111,9 +111,16 @@ This means **Speculid** can...
 
 # Download
 
+There are 3 ways to download Speculid: Email Signup, Homebrew, and Github Releases:
+
 <!-- HTML-ONLY BEGIN -->
+
+## Email Signup
+
+Email signup allows for you to get delivered updates to your email box of new features and updates...
+
 <section class="signup-form-container">
-  <div>If you are interested in <strong>downloading the latest version <em>{{ site.github.releases[0].name  }}</em><br> sign up below</strong> to get the latest version.</div>
+  <div><strong>Sign up below</strong> to get the latest version.</div>
 <form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
   <div class="row">
   <input type="email" placeholder="Your Email Address" value="" name="EMAIL" id="mce-EMAIL" required>
@@ -125,6 +132,30 @@ This means **Speculid** can...
 </div>
 </section>
 
+<!-- HTML-ONLY END -->
+
+<div class="readme-only" markdown="1">
+To download <strong>Speculid</strong>, enter your email address <a href="https://speculid.com#download">here</a> to request access to the latest version.
+</div>
+
+## Homebrew
+
+If you are already using [Homebrew](https://brew.sh), installing via the homebrew command allows for easy installation as well as staying up-to-date on new releases. To install, type:
+
+```bash
+brew cask install brightdigit/speculid/speculid
+```
+
+This will automatically install the terminal command for easy scripting.
+
+## Github Releases
+
+You can directly download the application from the Github Repo releases page.
+
+<a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+<a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+
+<!-- HTML-ONLY BEGIN -->
 # Documentation
 
 * TOC
@@ -132,19 +163,38 @@ This means **Speculid** can...
 
 <!-- HTML-ONLY END -->
 
-<div class="readme-only" markdown="1">
-To download <strong>Speculid</strong>, enter your email address <a href="https://speculid.com#download">here</a> to request access to the latest version.
-</div>
 
 # Installation
 
-
-Once you have unzipped the file, go ahead and **copy the application *Speculid.App* to the Applications folder**.
+Once you have downloaded the zip file (i.e *Not Homebrew*), go ahead and **copy the application *Speculid.App* to the Applications folder**.
 
 A command line tool is included in the application bundle. Copy the command line tool to your /bin/ folder:
 
 ```base
 $ sudo cp /Applications/Speculid.app/Contents/SharedSupport/speculid /usr/local/bin
+```
+
+## Fastlane Integration
+
+Once you have the application installed, if you are using [Fastlane](https://fastlane.tools), you can integrate with your actions, by adding the plugin after installation:
+
+```bash
+fastlane add_plugin speculid
+```
+
+Then in your `Fastfile` add `speculid` to your action:
+
+```ruby
+default_platform(:ios)
+
+platform :ios do
+  desc "Application Build"
+  lane :build do
+    ...
+    speculid
+    ...
+  end
+end
 ```
 
 # Usage
@@ -336,6 +386,8 @@ With **Speculid**, the process of building image assets can be automated in **Xc
     wait
     ```
     ![Xcode Build Phase Run Script](/images/XcodeBuildPhaseRunScript.jpg)
+
+    If you are using [fastlane](https://fastlane.tools) to build your application. You can [use the plugin to build every `.speculid` file in your directory](\#fastlane-integration).
 
 3. **Build the application.** This will create the graphics which you will use in your asset image set or app icon.
 
