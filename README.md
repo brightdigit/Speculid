@@ -15,22 +15,25 @@
             * [Modifiers](#modifiers)
             * [Output File Types Supported](#output-file-types-supported)
    * [Download](#download)
-   * [Table of Contents](#table-of-contents)
+      * [Email Signup](#email-signup)
+      * [Homebrew](#homebrew)
+      * [Github Releases](#github-releases)
    * [Installation](#installation)
+      * [Fastlane Integration](#fastlane-integration)
    * [Usage](#usage)
       * [File Format and Properties](#file-format-and-properties)
-         * [Set set](#set-set)
-         * [Source source](#source-source)
-         * [Geometry <em>optional</em> geometry](#geometry-optional-geometry)
-         * [Background <em>optional</em> background](#background-optional-background)
-         * [Remove Alpha <em>optional</em>  remove-alpha](#remove-alpha-optional--remove-alpha)
+         * [Set](#set)
+         * [Source](#source)
+         * [Geometry <em>optional</em>](#geometry-optional)
+         * [Background <em>optional</em>](#background-optional)
+         * [Remove Alpha <em>optional</em>](#remove-alpha-optional)
       * [Exporting SVGs for Speculid](#exporting-svgs-for-speculid)
          * [<a href="https://camo.githubusercontent.com/c4927857dc237bf89384c088d756947123fc99ac/68747470733a2f2f72617763646e2e6769746861636b2e636f6d2f62726967687464696769742f53706563756c69642f6d61737465722f696d616765732f7376672d6578706f72742f736b657463682f6c6f676f2e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/c4927857dc237bf89384c088d756947123fc99ac/68747470733a2f2f72617763646e2e6769746861636b2e636f6d2f62726967687464696769742f53706563756c69642f6d61737465722f696d616765732f7376672d6578706f72742f736b657463682f6c6f676f2e737667" height="25pt" data-canonical-src="https://rawcdn.githack.com/brightdigit/Speculid/master/images/svg-export/sketch/logo.svg" style="max-width:100\x;"></a> Sketch](#-sketch)
          * [<a href="https://camo.githubusercontent.com/9d31aa3af7de5ff522c42117c2a5b6bd631ed636/68747470733a2f2f72617763646e2e6769746861636b2e636f6d2f62726967687464696769742f53706563756c69642f6d61737465722f696d616765732f7376672d6578706f72742f70686f746f73686f702f6c6f676f2e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/9d31aa3af7de5ff522c42117c2a5b6bd631ed636/68747470733a2f2f72617763646e2e6769746861636b2e636f6d2f62726967687464696769742f53706563756c69642f6d61737465722f696d616765732f7376672d6578706f72742f70686f746f73686f702f6c6f676f2e737667" height="25pt" data-canonical-src="https://rawcdn.githack.com/brightdigit/Speculid/master/images/svg-export/photoshop/logo.svg" style="max-width:100\x;"></a> Photoshop](#-photoshop)
          * [<a href="https://camo.githubusercontent.com/b12eea760a21557d856ae2c3a0dcfc65070fe560/68747470733a2f2f72617763646e2e6769746861636b2e636f6d2f62726967687464696769742f53706563756c69642f6d61737465722f696d616765732f7376672d6578706f72742f696c6c7573747261746f722f6c6f676f2e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/b12eea760a21557d856ae2c3a0dcfc65070fe560/68747470733a2f2f72617763646e2e6769746861636b2e636f6d2f62726967687464696769742f53706563756c69642f6d61737465722f696d616765732f7376672d6578706f72742f696c6c7573747261746f722f6c6f676f2e737667" height="25pt" data-canonical-src="https://rawcdn.githack.com/brightdigit/Speculid/master/images/svg-export/illustrator/logo.svg" style="max-width:100\x;"></a> Illustrator](#-illustrator)
       * [Xcode Integration and Automation](#xcode-integration-and-automation)
 
-<!-- Added by: leo, at:  -->
+<!-- Added by: leo, at: Tue Jun 25 13:52:18 EDT 2019 -->
 
 <!--te-->
 
@@ -117,7 +120,7 @@ Speculid automates the process so **only one graphic file is needed**. Add Specu
 
 ### Features
 
-This means **Speuclid** can...
+This means **Speculid** can...
 
 * **take multiple input file types including SVG vector files** and raster PNG files
 * **automatically create each necessary resized raster file**
@@ -141,21 +144,39 @@ This means **Speuclid** can...
 
 # Download
 
+There are 3 ways to download Speculid: Email Signup, Homebrew, and Github Releases:
 
+## Email Signup
+
+Email signup allows for you to get delivered updates to your email box of new features and updates...
 
 <div class="readme-only" markdown="1">
-
-Enter your email address [here](https://speculid.com#download) to request access to the latest version.
-
+To download <strong>Speculid</strong>, enter your email address <a href="https://speculid.com#download">here</a> to request access to the latest version.
 </div>
 
-# Table of Contents
+## Homebrew
+
+If you are already using [Homebrew](https://brew.sh), installing via the homebrew command allows for easy installation as well as staying up-to-date on new releases. To install, type:
+
+```bash
+brew cask install brightdigit/speculid/speculid
+```
+
+This will automatically install the terminal command for easy scripting.
+
+## Github Releases
+
+You can directly download the application from the Github Repo releases page.
+
+<a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+<a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+
 
 
 
 # Installation
 
-Once you have unzipped the file, go ahead, and **copy the application *Speculid.App* to the Applications folder**.
+Once you have downloaded the zip file (i.e *Not Homebrew*), go ahead and **copy the application *Speculid.App* to the Applications folder**.
 
 A command line tool is included in the application bundle. Copy the command line tool to your /bin/ folder:
 
@@ -163,9 +184,32 @@ A command line tool is included in the application bundle. Copy the command line
 $ sudo cp /Applications/Speculid.app/Contents/SharedSupport/speculid /usr/local/bin
 ```
 
+## Fastlane Integration
+
+Once you have the application installed, if you are using [Fastlane](https://fastlane.tools), you can integrate with your actions, by adding the plugin after installation:
+
+```bash
+fastlane add_plugin speculid
+```
+
+Then in your `Fastfile` add `speculid` to your action:
+
+```ruby
+default_platform(:ios)
+
+platform :ios do
+  desc "Application Build"
+  lane :build do
+    ...
+    speculid
+    ...
+  end
+end
+```
+
 # Usage
 
-**Right now**, Speculid only supports being called through a command line terminal for now. Once you have copied the command to your */usr/local/bin* folder you should be able to access it easy.
+Speculid only supports being called through a command line terminal for now. Once you have copied the command to your */usr/local/bin* folder you should be able to access it easily.
 
 ```bash
 $ speculid --process <file>
@@ -179,7 +223,9 @@ Options:
 
 ## File Format and Properties
 
-The `.speculid` file is a `json` file with the image set or app icon path, the graphic file source, and optionally basic image geometry (width or height). All paths specified in the json file could be relative to the `.speculid` file or an absolute path. Such as
+The `.speculid` file is a `json` file with the image set or app icon path, the graphic file source, and optionally basic image geometry (width or height). All paths specified in the json file could be relative to the `.speculid` file `Assets.xcassets/Raster Image.imageset` or an absolute path `/Users/leo/Documents/Projects/Speculid/examples/Assets/Assets.xcassets/Raster Image.imageset`.
+
+Here are some examples of a `.speculid` file:
 
 ```json
 {
@@ -198,32 +244,37 @@ or
 }
 ```
 
-### Set `set`
+### Set 
+`set`
 
 ![Image Set Examples from Xcode](https://rawcdn.githack.com/brightdigit/Speculid/master/images/SetExample.png)
 
-A set is an image set or app icon used by Xcode.
+Set is the path to the Image Set or App Icon folder used by Xcode. For more information on Image Sets, App Icons, and Asset Catalogs, check out [this article here](https://learningswift.brightdigit.com/asset-catalogs-image-sets-app-icons/).
 
-### Source `source`
+### Source 
+`source`
 
-The image source file which could be a SVG or PNG file.
+The path to the image source file. This can be either a SVG or PNG file.
 
-### Geometry *optional* `geometry`
+### Geometry *optional* 
+`geometry`
 
 The destination geometry of image if needed (i.e. image set). It must be in the format of:
 
 * *width* (ex. "128") - for specifying the width of the destination image
 * x*height* (ex. "x128") - for specifying the height of the destination image
 
-You can only specify the height or the width. The other dimension is automatically calculated based on the aspect ration of the image.
+You can only specify the height or the width. The other dimension is automatically calculated based on the aspect ratio of the image.
 
-### Background *optional* `background`
+### Background *optional* 
+`background`
 
-As a requirement, **App Icons are required to exclude any alpha channels**. In order to remove a transparency from a source PNG or SVG file, you can specify to remove the alpha channel and add a background color. 
+**App Icons are required to exclude any alpha channels**. In order to remove a transparency from a source PNG or SVG file, you can specify to remove the alpha channel and add a background color. 
 
 The background color can be set in a standard rgb, rgba, or hex code format (#RRGGBB or #AARRGGBB). If no alpha is specified an alpha of 1.0 is assumed.
 
-### Remove Alpha *optional*  `remove-alpha`
+### Remove Alpha *optional*  
+`remove-alpha`
 
 To specifically remove the alpha channel, a true boolean value must be specified. This will remove the alpha channel from the file. Make sure to specify an opaque background color when removing the alpha channel.
 
@@ -247,7 +298,7 @@ To specifically remove the alpha channel, a true boolean value must be specified
 3. On the right size, change the **preset format** to **SVG**.
 
     ![Sketch Export Menu][sketch-step-4]
-4. In the top menu, select **File**...**Export**. 
+4. In the top menu, select **File** > **Export**. 
 
     ![Sketch Export Window][sketch-step-5]
 5. Select your duplicated slice and select **Export**.
@@ -262,7 +313,7 @@ To specifically remove the alpha channel, a true boolean value must be specified
 </header>
 
 ![Photoshop Export Menu][photoshop-step-1]
-1. Open your **Photoshop** document, select **File**...**Export**...**Export As...**.
+1. Open your **Photoshop** document and select **File** > **Export** > **Export As...**.
 
     ![Photoshop Export Format][photoshop-step-2]
 2. Under the **File Settings** on the right, change the format to **SVG**.
@@ -288,63 +339,65 @@ To specifically remove the alpha channel, a true boolean value must be specified
 
 ## Xcode Integration and Automation
 
-With **Speculid**, the process of building image assets can be automated in **Xcode**.
+With **Speculid**, the process of building image assets can be automated in **Xcode**. Here is how to setup your project the first time:
 
-1. **Create the speculid file** and add it to your project folder as well as your source graphic files. 
+1. **Create the speculid file** and add it to your project folder, along with your source graphic files.
 
     ![Xcode Target Membership](https://rawcdn.githack.com/brightdigit/Speculid/master/images/XcodeTargetMembership.png)
 
     * *Note: you don't need to add these files to any target membership*
 
-2. **Edit the speculid file.**
+2. In the speculid file, **Add the property for the source** - the path to the SVG or PNG file.
+  ```json
+  {
+    "source" : "geometry.svg",
+    ...
+  }
+  ```
+3. In the speculid file, **Add the property for the set** - the path to the Image Set or App Icon folder.
+  ```json
+  {
+    "set" : "Assets.xcassets/iOS AppIcon.appiconset",
+    ...
+  }
+  ```
+4. *optional* In the speculid file, **Add the property for the geometry** - if this a conversion from a vector graphic (SVG) to an Image Set, you may want to supply the *1x* size.
+  ```json
+  {
+    "set" : "Assets.xcassets/Raster Image.imageset",
+    "source" : "layers.png",
+    "geometry" : "128"
+  }
+  ```
 
-    1. **Add the property for the source** - the path to the SVG or PNG file.
-        ```json
-        {
-          "source" : "geometry.svg",
-          ...
-        }
-        ```
-    1. **Add the property for the set** - the path to the Image Set or App Icon folder.
-        ```json
-        {
-          "set" : "Assets.xcassets/iOS AppIcon.appiconset",
-          ...
-        }
-        ```
-    1. *optional* **Add the property for the geometry** - if this a conversion from a vector graphic (SVG) to an Image Set, you may want to supply the *1x* size.
-        ```json
-        {
-          "set" : "Assets.xcassets/Raster Image.imageset",
-          "source" : "layers.png",
-          "geometry" : "128"
-        }
-        ```
-        If you specify *128* in the *geometry* property, that means the width for the *1x* image will be *128 pixels*, the width for the *2x* image will be *256 pixels*, and the width for the *3x* image will be *384 pixels*. Heights will be calculated based on the aspect ratio of the SVG file.
-        Vector images in an image set will be converted to a iOS compatible PDF file.
+    If you specify *128* in the *geometry* property, that means the width for the *1x* image will be *128 pixels*, the width for the *2x* image will be *256 pixels*, and the width for the *3x* image will be *384 pixels*. Heights will be calculated based on the aspect ratio of the SVG file.
+
+    Vector images in an image set will be converted to a iOS compatible PDF file.
         
-    1. *optional* **Add the properties for the background color and alpha removal** - if this a conversion to an App Icon, you should remove any background transpareny and add a background color.
-        ```json
-        {
-          "set" : "Assets.xcassets/iOS AppIcon.appiconset",
-          "source" : "geometry.svg",
-          "background" : "#FFFFFFFF",
-          "remove-alpha" : true
-        }
-        ```
+5. *optional* In the speculid file, **Add the properties for the background color and alpha removal** - if this a conversion to an App Icon, you should remove any background transparency and add a background color.
+  ```json
+  {
+    "set" : "Assets.xcassets/iOS AppIcon.appiconset",
+    "source" : "geometry.svg",
+    "background" : "#FFFFFFFF",
+    "remove-alpha" : true
+  }
+  ```
 
-    See the [file format section](#file-format) for more details.
+    See the [file format section](#file-format-and-properties) for more details.
 
 2. **Add the *Run Script* Build Phase** to the top of your project with the following code:
 
     ```bash
     find "${SRCROOT}" -name "*.speculid" -print0 |
     while IFS= read -r -d $'\0' line; do
-    /Applications/Speculid/Contents/MacOS/Speculid --process "$line" &
+    speculid --process "$line" &
     done
     wait
     ```
-    ![Xcode Build Phase Run Script](https://rawcdn.githack.com/brightdigit/Speculid/master/images/XcodeBuildPhaseRunScript.png)
+    ![Xcode Build Phase Run Script](https://rawcdn.githack.com/brightdigit/Speculid/master/images/XcodeBuildPhaseRunScript.jpg)
+
+    If you are using [fastlane](https://fastlane.tools) to build your application. You can [use the plugin to build every `.speculid` file in your directory](\#fastlane-integration).
 
 3. **Build the application.** This will create the graphics which you will use in your asset image set or app icon.
 
@@ -360,7 +413,7 @@ With **Speculid**, the process of building image assets can be automated in **Xc
     * **logo.60x60@3x~iphone.png** - 60x60 size 3x scale for iPhone
     * **logo.83.5x83.5@2x~ipad.png** - 83.5x83.5 size 2x scale for iPad
 
-5. Build and Run. Done.
+5. **Build, Run, and Done!**
 
 -----
 
