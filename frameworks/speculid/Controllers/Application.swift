@@ -154,7 +154,7 @@ open class Application: NSApplication, ApplicationProtocol {
         .size: ("(\\d+\\.?\\d*)x(\\d+\\.?\\d*)", options: []),
         .number: ("\\d", options: [])
       ])
-    } catch let error {
+    } catch {
       assertionFailure("Failed to parse regular expression: \(error)")
     }
 

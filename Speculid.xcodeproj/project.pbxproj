@@ -4780,7 +4780,6 @@
 				B3136E7A1F90FD2E0002B7AB /* Sources */,
 				B3136E7B1F90FD2E0002B7AB /* Frameworks */,
 				B3136E7C1F90FD2E0002B7AB /* Resources */,
-				C467F507FA1A90CD666AC710 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -5363,31 +5362,13 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C467F507FA1A90CD666AC710 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftVer/SwiftVer.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftVer.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F11FED44F4FDA27EB1AD0F15 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Speculid-Mac-App/Pods-Speculid-Mac-App-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Speculid-Mac-App/Pods-Speculid-Mac-App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SwiftVer/SwiftVer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -5396,7 +5377,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Speculid-Mac-App/Pods-Speculid-Mac-App-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Speculid-Mac-App/Pods-Speculid-Mac-App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -5835,7 +5816,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFAULT_BUNDLE_VERSION = 5;
+				DEFAULT_BUNDLE_VERSION = 6;
 				DEFAULT_SEMVER_VERSION = 2.0.0;
 				DYLIB_COMPATIBILITY_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DYLIB_CURRENT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
@@ -5900,7 +5881,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFAULT_BUNDLE_VERSION = 5;
+				DEFAULT_BUNDLE_VERSION = 6;
 				DEFAULT_SEMVER_VERSION = 2.0.0;
 				DYLIB_COMPATIBILITY_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DYLIB_CURRENT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
