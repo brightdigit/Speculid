@@ -3,103 +3,86 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "layers.20x20@2x~iphone.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "layers.20x20@3x~iphone.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "layers.29x29@2x~iphone.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "layers.29x29@3x~iphone.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "layers.40x40@2x~iphone.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "layers.40x40@3x~iphone.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "layers.60x60@2x~iphone.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "layers.60x60@3x~iphone.png",
       "scale" : "3x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "layers.20x20@1x~ipad.png",
       "scale" : "1x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "layers.20x20@2x~ipad.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "layers.29x29@1x~ipad.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "layers.29x29@2x~ipad.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "layers.40x40@1x~ipad.png",
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "layers.40x40@2x~ipad.png",
       "scale" : "2x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "layers.76x76@1x~ipad.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "layers.76x76@2x~ipad.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "layers.83.5x83.5@2x~ipad.png",
       "scale" : "2x"
     },
     {
@@ -110,7 +93,6 @@
     {
       "size" : "24x24",
       "idiom" : "watch",
-      "filename" : "layers.24x24@2x~watch.png",
       "scale" : "2x",
       "role" : "notificationCenter",
       "subtype" : "38mm"
@@ -118,7 +100,6 @@
     {
       "size" : "27.5x27.5",
       "idiom" : "watch",
-      "filename" : "layers.27.5x27.5@2x~watch.png",
       "scale" : "2x",
       "role" : "notificationCenter",
       "subtype" : "42mm"
@@ -126,21 +107,18 @@
     {
       "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "layers.29x29@2x~watch.png",
       "role" : "companionSettings",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "layers.29x29@3x~watch.png",
       "role" : "companionSettings",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "watch",
-      "filename" : "layers.40x40@2x~watch.png",
       "scale" : "2x",
       "role" : "appLauncher",
       "subtype" : "38mm"
@@ -162,7 +140,6 @@
     {
       "size" : "86x86",
       "idiom" : "watch",
-      "filename" : "layers.86x86@2x~watch.png",
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "38mm"
@@ -170,7 +147,6 @@
     {
       "size" : "98x98",
       "idiom" : "watch",
-      "filename" : "layers.98x98@2x~watch.png",
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "42mm"
