@@ -53,7 +53,33 @@ public struct AssetSpecification: AssetSpecificationProtocol, Codable {
     }
   }
 
-  public func encode(to _: Encoder) throws {}
+  func formatSize(_ size: CGSize) -> String {
+    let width = Int(size.width.rounded())
+    let height = Int(size.height.rounded())
+    return "\(width)x\(height)"
+  }
+
+  func formatScale(_ scale: CGFloat) -> String {
+    let scale = Int(scale.rounded())
+    return "\(scale)"
+  }
+
+  public func encode(to encoder: Encoder) throws {
+    var container = encoder.container(keyedBy: CodingKeys.self)
+    if let size = size {
+      try container.encode(formatSize(size), forKey: .size)
+    }
+
+    if let scale = scale {
+      try container.encode(formatScale(scale), forKey: .scale)
+    }
+
+    if let filename = filename {
+      try container.encode(filename, forKey: .filename)
+    }
+
+    try container.encode(idiom, forKey: .idiom)
+  }
 
   public init?(_ item: AssetCatalogItem) {
     guard let idiom = ImageIdiom(rawValue: item.idiom) else {

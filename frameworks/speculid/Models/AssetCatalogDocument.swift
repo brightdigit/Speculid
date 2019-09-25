@@ -7,7 +7,7 @@
 //
 import Foundation
 
-public class AssetCatalogItem: NSObject, NSSecureCoding {
+@objc open class AssetCatalogItem: NSObject, NSSecureCoding {
   public static let supportsSecureCoding: Bool = true
 
   public func encode(with aCoder: NSCoder) {
