@@ -1,5 +1,13 @@
 import Foundation
 
+public protocol AssetSpecificationFileProtocol {
+  var url: URL { get }
+  var document: AssetSpecificationDocumentProtocol { get }
+}
+public struct AssetSpecificationFile: AssetSpecificationFileProtocol {
+  public let url: URL
+  public let document: AssetSpecificationDocumentProtocol
+}
 public struct AssetSpecificationDocument: AssetSpecificationDocumentProtocol, Codable {
   public let images: [AssetSpecificationProtocol]
 
@@ -16,5 +24,9 @@ public struct AssetSpecificationDocument: AssetSpecificationDocumentProtocol, Co
   public func encode(to encoder: Encoder) throws {
     var container = try encoder.container(keyedBy: CodingKeys.self)
     try container.encode(images.map(AssetSpecification.init(specifications:)), forKey: .images)
+  }
+
+  public init(fromItems items: [AssetCatalogItem]) {
+    images = items.compactMap(AssetSpecification.init)
   }
 }

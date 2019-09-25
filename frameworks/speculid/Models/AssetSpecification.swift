@@ -51,27 +51,17 @@ public struct AssetSpecification: AssetSpecificationProtocol, Codable {
     } else {
       size = nil
     }
-
-    //
-    //
-    //    if let scaleString = dictionary["scale"]?.firstMatchGroups(regex: scaleRegex)?[1], let value = Double(scaleString) {
-    //      scale = CGFloat(value)
-    //    } else {
-    //      scale = nil
-    //    }
-    //
-    //    guard let idiomString = dictionary["idiom"], let idiom = ImageIdiom(rawValue: idiomString) else {
-    //      return nil
-    //    }
-    //
-    //
-    //
-    //    if let dimensionStrings = dictionary["size"]?.firstMatchGroups(regex: sizeRegex), let width = Double(dimensionStrings[1]), let height = Double(dimensionStrings[2]) {
-    //      size = CGSize(width: width, height: height)
-    //    } else {
-    //      size = nil
-    //    }
   }
 
   public func encode(to _: Encoder) throws {}
+
+  public init?(_ item: AssetCatalogItem) {
+    guard let idiom = ImageIdiom(rawValue: item.idiom) else {
+      return nil
+    }
+    self.idiom = idiom
+    filename = item.filename
+    scale = item.scale
+    size = item.size
+  }
 }

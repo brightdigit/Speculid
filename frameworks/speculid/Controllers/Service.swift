@@ -2,6 +2,19 @@ import CairoSVG
 import Cocoa
 
 public final class Service: NSObject, ServiceProtocol {
+  public func updateAssetCatalogAtURL(_ url: URL, withItems items: [AssetCatalogItem], _ callback: @escaping ((NSError?) -> Void)) {
+    let document = AssetSpecificationDocument(fromItems: items)
+    let encoder = JSONEncoder()
+    do {
+      let data = try encoder.encode(document)
+      try data.write(to: url)
+    } catch {
+      callback(error as NSError)
+      return
+    }
+    callback(nil)
+  }
+
   public func exportImageAtURL(_ url: URL, toSpecifications specifications: [ImageSpecification], _ callback: @escaping ((NSError?) -> Void)) {
     let imageFile = ImageFile(url: url, format: .svg)
     let builtImageHandle: ImageHandle?

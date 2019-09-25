@@ -76,6 +76,7 @@
 		B3136EB01F9124730002B7AB /* svg-trayicon.speculid in Resources */ = {isa = PBXBuildFile; fileRef = B3136EA21F910BC90002B7AB /* svg-trayicon.speculid */; };
 		B317B0D11FA560EE00BB5E57 /* QuitMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317B0D01FA560EE00BB5E57 /* QuitMenuItem.swift */; };
 		B318906A1F918F0300D0EFA0 /* GeometryValue.Multiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */; };
+		B319DCB1233BE09700F9381E /* AssetCatalogDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319DCAF233BE00400F9381E /* AssetCatalogDocument.swift */; };
 		B31BD6EA20E7A6A400A560C2 /* libffi.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8074120E5855F00030497 /* libffi.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B31BD91520E7E0D800A560C2 /* translit.h in Headers */ = {isa = PBXBuildFile; fileRef = B31BD70020E7E0D500A560C2 /* translit.h */; };
 		B31BD91620E7E0D800A560C2 /* ustdio.h in Headers */ = {isa = PBXBuildFile; fileRef = B31BD70120E7E0D500A560C2 /* ustdio.h */; };
@@ -1161,6 +1162,7 @@
 		B317B0D01FA560EE00BB5E57 /* QuitMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitMenuItem.swift; sourceTree = "<group>"; };
 		B31890691F918F0300D0EFA0 /* GeometryValue.Multiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryValue.Multiply.swift; sourceTree = "<group>"; };
 		B318906D1F91A06B00D0EFA0 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		B319DCAF233BE00400F9381E /* AssetCatalogDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCatalogDocument.swift; sourceTree = "<group>"; };
 		B31BD70020E7E0D500A560C2 /* translit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = translit.h; sourceTree = "<group>"; };
 		B31BD70120E7E0D500A560C2 /* ustdio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ustdio.h; sourceTree = "<group>"; };
 		B31BD70220E7E0D500A560C2 /* utf_old.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf_old.h; sourceTree = "<group>"; };
@@ -2250,6 +2252,7 @@
 				B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */,
 				B3136DFC1F90F73A0002B7AB /* SpeculidSpecificationsFile.swift */,
 				B34B52C7217E5D700080E6DC /* InstallType.swift */,
+				B319DCAF233BE00400F9381E /* AssetCatalogDocument.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -5546,6 +5549,7 @@
 				B3B5E9DA1F96C1C1004A6BEB /* SpeculidConfigurationBuilder.swift in Sources */,
 				B34B52CA217E5FC40080E6DC /* CommandLineInstaller.swift in Sources */,
 				B341888A1F9A44A700C5F356 /* CommandLineArgumentProviderProtocol.swift in Sources */,
+				B319DCB1233BE09700F9381E /* AssetCatalogDocument.swift in Sources */,
 				B33A533E1F954FF800E74800 /* Result.swift in Sources */,
 				B3136E591F90F73B0002B7AB /* ArrayError.swift in Sources */,
 				B3136E2E1F90F73B0002B7AB /* AnalyticsSessionManager.swift in Sources */,
