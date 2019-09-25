@@ -9,7 +9,7 @@ DEPENDENCIES:
   - SwiftVer
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - SwiftFormat
     - SwiftLint
     - SwiftVer
@@ -21,4 +21,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 432b032d04411cede9e0269a79b2d07c89f85f01
 
-COCOAPODS: 1.8.0
+COCOAPODS: 1.7.2

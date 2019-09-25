@@ -5,6 +5,7 @@ public final class Service: NSObject, ServiceProtocol {
   public func updateAssetCatalogAtURL(_ url: URL, withItems items: [AssetCatalogItem], _ callback: @escaping ((NSError?) -> Void)) {
     let document = AssetSpecificationDocument(fromItems: items)
     let encoder = JSONEncoder()
+    encoder.outputFormatting = .prettyPrinted
     do {
       let data = try encoder.encode(document)
       try data.write(to: url)
