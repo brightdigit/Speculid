@@ -4780,6 +4780,7 @@
 				B3136E7A1F90FD2E0002B7AB /* Sources */,
 				B3136E7B1F90FD2E0002B7AB /* Frameworks */,
 				B3136E7C1F90FD2E0002B7AB /* Resources */,
+				AB8615DAE34FEF509F2B61FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -4949,27 +4950,33 @@
 				TargetAttributes = {
 					B3136E5F1F90FCCF0002B7AB = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B37C743D1F8C58F300DF505B;
 					};
 					B3136E7D1F90FD2E0002B7AB = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 					};
 					B3136E8C1F90FD3D0002B7AB = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 					};
 					B3242E96213DBE6C0063037C = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 					};
 					B326F24E21811B970072D652 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 					};
 					B37C743D1F8C58F300DF505B = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HardenedRuntime = {
@@ -4982,7 +4989,7 @@
 					};
 					B37C74521F8C590D00DF505B = {
 						CreatedOnToolsVersion = 9.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HardenedRuntime = {
@@ -4992,7 +4999,7 @@
 					};
 					B37C74721F8C5ADA00DF505B = {
 						CreatedOnToolsVersion = 9.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 					};
 					B37C74881F8C5B5C00DF505B = {
@@ -5199,6 +5206,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AB8615DAE34FEF509F2B61FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftVer/SwiftVer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftVer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpeculidTests/Pods-SpeculidTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B3136E9C1F9100CB0002B7AB /* Autorevision */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -5225,7 +5250,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/frameworks\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline";
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/frameworks\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline\n";
 		};
 		B318906C1F91A02000D0EFA0 /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -5601,7 +5626,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "Speculid-Mac-App";
 			};
 			name = Debug;
@@ -5620,7 +5645,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "Speculid-Mac-App";
 			};
 			name = Release;
@@ -5639,7 +5664,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SpeculidTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -5657,7 +5682,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SpeculidTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -5675,7 +5700,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.CairoSVGTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -5693,7 +5718,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.CairoSVGTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -5707,7 +5732,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = speculid;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -5720,7 +5745,7 @@
 				INSTALL_PATH = "";
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = speculid;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -5749,7 +5774,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -5777,7 +5802,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -5920,7 +5945,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(PROJECT_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -5941,7 +5966,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(PROJECT_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -5963,7 +5988,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -5984,7 +6009,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -6007,7 +6032,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)Kit";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -6031,7 +6056,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-Mac-Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)Kit";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
