@@ -28,17 +28,17 @@ open class Application: NSApplication, ApplicationProtocol {
     return try SpeculidDocument(url: url, decoder: jsonDecoder, configuration: configuration)
   }
 
-  open static var current: ApplicationProtocol! {
+  public static var current: ApplicationProtocol! {
     return NSApplication.shared as? ApplicationProtocol
   }
 
-  open static let unknownCommandMessagePrefix = "Unknown Command Arguments"
+  public static let unknownCommandMessagePrefix = "Unknown Command Arguments"
 
   public static func unknownCommandMessage(fromArguments arguments: [String]) -> String {
     return "\(unknownCommandMessagePrefix): \(arguments.joined(separator: " "))"
   }
 
-  open static let helpText: String! = {
+  public static let helpText: String! = {
     guard let url = Application.bundle.url(forResource: "help", withExtension: "txt") else {
       return nil
     }
@@ -66,13 +66,13 @@ open class Application: NSApplication, ApplicationProtocol {
   open private(set) var configuration: SpeculidConfigurationProtocol!
   open private(set) var builder: SpeculidBuilderProtocol!
 
-  open let statusItemProvider: StatusItemProviderProtocol
-  open let remoteObjectInterfaceProvider: RemoteObjectInterfaceProviderProtocol
-  open let installerObjectInterfaceProvider: InstallerObjectInterfaceProviderProtocol
-  open let regularExpressionBuilder: RegularExpressionSetBuilderProtocol
-  open let configurationBuilder: SpeculidConfigurationBuilderProtocol
-  open let jsonDecoder: JSONDecoder
-  open let imageSpecificationBuilder: SpeculidImageSpecificationBuilderProtocol
+  public let statusItemProvider: StatusItemProviderProtocol
+  public let remoteObjectInterfaceProvider: RemoteObjectInterfaceProviderProtocol
+  public let installerObjectInterfaceProvider: InstallerObjectInterfaceProviderProtocol
+  public let regularExpressionBuilder: RegularExpressionSetBuilderProtocol
+  public let configurationBuilder: SpeculidConfigurationBuilderProtocol
+  public let jsonDecoder: JSONDecoder
+  public let imageSpecificationBuilder: SpeculidImageSpecificationBuilderProtocol
   open var commandLineRunner: CommandLineRunnerProtocol
 
   public override init() {

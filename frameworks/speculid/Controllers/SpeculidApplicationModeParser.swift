@@ -6,7 +6,7 @@ public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtoc
     if commandLine.arguments.first == Bundle.main.executablePath {
       indicies.append(commandLine.arguments.startIndex)
     }
-    if let index = commandLine.arguments.index(of: "-NSDocumentRevisionsDebugMode") {
+    if let index = commandLine.arguments.firstIndex(of: "-NSDocumentRevisionsDebugMode") {
       indicies.append(index)
       indicies.append(index.advanced(by: 1))
     }
@@ -39,10 +39,10 @@ public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtoc
     }
   }
 }
-
-@available(swift, obsoleted: 4.2)
-extension Array where Element: Equatable {
-  func firstIndex(of element: Element) -> Index? {
-    return index(of: element)
-  }
-}
+//
+// @available(swift, obsoleted: 4.2)
+// extension Array where Element: Equatable {
+//  func firstIndex(of element: Element) -> Index? {
+//    return firstIndex(of: element)
+//  }
+// }
