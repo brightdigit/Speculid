@@ -14,7 +14,7 @@ public enum SpeculidCommandArgumentSet: Equatable {
   case help
   case unknown([String])
   case version
-  case process(URL)
+  case process(URL, Bool)
   case install(InstallType)
   case debugLocation
 }

@@ -23,7 +23,7 @@ public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtoc
       } else if let index = arguments.firstIndex(of: "--process") {
         let filePath = arguments[arguments.index(after: index)]
         if FileManager.default.fileExists(atPath: filePath) {
-          return .command(.process(URL(fileURLWithPath: filePath)))
+          return .command(.process(URL(fileURLWithPath: filePath), true))
         } else {
           return .command(.unknown(arguments))
         }
