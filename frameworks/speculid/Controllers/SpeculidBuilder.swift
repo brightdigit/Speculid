@@ -5,10 +5,10 @@ public typealias ImageConversionPair = (image: AssetSpecificationProtocol, conve
 public typealias ImageConversionDictionary = [String: ImageConversionPair]
 
 public extension SpeculidDocumentProtocol {
-  public var sourceImageURL: URL {
+  var sourceImageURL: URL {
     return url.deletingLastPathComponent().appendingPathComponent(specificationsFile.sourceImageRelativePath)
   }
-  public func destinationName(forImage image: AssetSpecificationProtocol) -> String {
+  func destinationName(forImage image: AssetSpecificationProtocol) -> String {
     if let filename = image.filename {
       return filename
     } else if let scale = image.scale {
@@ -23,9 +23,15 @@ public extension SpeculidDocumentProtocol {
     }
   }
 
-  public func destinationURL(forImage image: AssetSpecificationProtocol) -> URL {
+  @available(*, unavailable)
+  func destinationURL(forImage image: AssetSpecificationProtocol) -> URL {
     return url.deletingLastPathComponent().appendingPathComponent(specificationsFile.assetDirectoryRelativePath, isDirectory: true).appendingPathComponent(destinationName(forImage: image))
   }
+
+  func destinationURL(forFileName fileName: String) -> URL {
+    return url.deletingLastPathComponent().appendingPathComponent(specificationsFile.assetDirectoryRelativePath, isDirectory: true).appendingPathComponent(fileName)
+  }
+  // destinationFileNames
 }
 
 public struct SpeculidBuilder: SpeculidBuilderProtocol {
@@ -35,14 +41,38 @@ public struct SpeculidBuilder: SpeculidBuilderProtocol {
 
   public func build(document: SpeculidDocumentProtocol, callback: @escaping ((Error?) -> Void)) {
     let imageSpecifications: [ImageSpecification]
+
+    let destinationFileNames = document.assetFile.document.images.map {
+      asset in
+      (asset, document.destinationName(forImage: asset))
+    }
     do {
-      imageSpecifications = try document.asset.images.map { (asset) -> ImageSpecification in
-        return try self.imageSpecificationBuilder.imageSpecification(forURL: document.destinationURL(forImage: asset), withSpecifications: document.specificationsFile, andAsset: asset)
+      imageSpecifications = try destinationFileNames.map { (asset, fileName) -> ImageSpecification in
+        try self.imageSpecificationBuilder.imageSpecification(forURL: document.destinationURL(forFileName: fileName), withSpecifications: document.specificationsFile, andAsset: asset)
       }
-    } catch let error {
+    } catch {
       return callback(error)
     }
-    Application.current.service.exportImageAtURL(document.sourceImageURL, toSpecifications: imageSpecifications, callback)
+    Application.current.service.exportImageAtURL(document.sourceImageURL, toSpecifications: imageSpecifications) {
+      error in
+      if let error = error {
+        callback(error)
+        return
+      }
+      let mode = self.configuration.mode
+      guard case let .command(args) = mode else {
+        callback(error)
+        return
+      }
+      guard case let .process(_, true) = args else {
+        callback(error)
+        return
+      }
+      let items = destinationFileNames.map(
+        AssetCatalogItem.init
+      )
+      Application.current.service.updateAssetCatalogAtURL(document.assetFile.url, withItems: items, callback)
+    }
   }
 }
 

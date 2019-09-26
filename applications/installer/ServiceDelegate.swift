@@ -36,7 +36,7 @@ public class Installer: NSObject, InstallerProtocol {
 
     let binDirExists = FileManager.default.fileExists(atPath: binDirectoryURL.path, isDirectory: &isDirectory)
 
-    guard isDirectory.boolValue && binDirExists else {
+    guard isDirectory.boolValue, binDirExists else {
       return completed(InstallerError.error(fromCode: .usrLocalBinDirNotFound))
     }
 

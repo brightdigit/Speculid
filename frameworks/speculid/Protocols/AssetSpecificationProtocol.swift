@@ -12,4 +12,6 @@ public protocol AssetSpecificationProtocol {
   var scale: CGFloat? { get }
   var size: CGSize? { get }
   var filename: String? { get }
+  var role: AppleWatchRole? { get }
+  var subtype: AppleWatchType? { get }
 }
