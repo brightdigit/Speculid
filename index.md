@@ -199,7 +199,7 @@ end
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Mn4pknYqzH0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="display: block; margin: auto;" allowfullscreen></iframe>
 
-Speculid only supports being called through a command line terminal for now. Once you have copied the command to your */usr/local/bin* folder you should be able to access it easily.
+**Speculid** only supports being called through a command line terminal for now. Once you have copied the command to your */usr/local/bin* folder you should be able to access it easily.
 
 ```bash
 $ speculid --process <file>
@@ -407,7 +407,7 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
 -----
 
-**Speculid** ©2018, BrightDigit, LLC. 
+**Speculid** ©2019, BrightDigit, LLC. 
 
 [sketch-step-1]:       /images/svg-export/sketch/step-1.jpg "Sketch iOS App Icon Template Window"
 [sketch-step-2]:       /images/svg-export/sketch/step-2.jpg "Sketch Slice Panel"
