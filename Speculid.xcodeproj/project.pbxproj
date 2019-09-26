@@ -743,6 +743,12 @@
 		B3E9A9031FB4DDE400FD8E7A /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E9A9021FB4DDE400FD8E7A /* Version.swift */; };
 		B3F0ECF01F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */; };
 		B3F0ECF21F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */; };
+		B3F6E279233C3BF100B28DA2 /* AssetSpecificationFileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F6E278233C3BF100B28DA2 /* AssetSpecificationFileProtocol.swift */; };
+		B3F6E27B233C3DC400B28DA2 /* AssetSpecificationFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F6E27A233C3DC400B28DA2 /* AssetSpecificationFile.swift */; };
+		B3F6E27D233C3EE100B28DA2 /* AssetCatalogItemSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F6E27C233C3EE100B28DA2 /* AssetCatalogItemSize.swift */; };
+		B3F6E27F233C3F0C00B28DA2 /* NSNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F6E27E233C3F0C00B28DA2 /* NSNumber.swift */; };
+		B3F6E281233C3F2E00B28DA2 /* AssetSpecificationMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F6E280233C3F2E00B28DA2 /* AssetSpecificationMetadata.swift */; };
+		B3F6E283233C3F7300B28DA2 /* AssetSpecificationMetadataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F6E282233C3F7300B28DA2 /* AssetSpecificationMetadataProtocol.swift */; };
 		B3F804D420E5820B00030497 /* pango.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8046220E5820B00030497 /* pango.h */; };
 		B3F804D520E5820B00030497 /* pangoft2.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8046320E5820B00030497 /* pangoft2.h */; };
 		B3F804D620E5820B00030497 /* pango-item.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8046420E5820B00030497 /* pango-item.h */; };
@@ -1838,6 +1844,12 @@
 		B3E9A9041FB4E0B200FD8E7A /* bin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bin; sourceTree = "<group>"; };
 		B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilder.swift; sourceTree = "<group>"; };
+		B3F6E278233C3BF100B28DA2 /* AssetSpecificationFileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSpecificationFileProtocol.swift; sourceTree = "<group>"; };
+		B3F6E27A233C3DC400B28DA2 /* AssetSpecificationFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSpecificationFile.swift; sourceTree = "<group>"; };
+		B3F6E27C233C3EE100B28DA2 /* AssetCatalogItemSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCatalogItemSize.swift; sourceTree = "<group>"; };
+		B3F6E27E233C3F0C00B28DA2 /* NSNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNumber.swift; sourceTree = "<group>"; };
+		B3F6E280233C3F2E00B28DA2 /* AssetSpecificationMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSpecificationMetadata.swift; sourceTree = "<group>"; };
+		B3F6E282233C3F7300B28DA2 /* AssetSpecificationMetadataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSpecificationMetadataProtocol.swift; sourceTree = "<group>"; };
 		B3F8046220E5820B00030497 /* pango.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pango.h; sourceTree = "<group>"; };
 		B3F8046320E5820B00030497 /* pangoft2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pangoft2.h; sourceTree = "<group>"; };
 		B3F8046420E5820B00030497 /* pango-item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pango-item.h"; sourceTree = "<group>"; };
@@ -2227,6 +2239,7 @@
 				B3136DF61F90F73A0002B7AB /* NSColor.swift */,
 				B3136DF71F90F73A0002B7AB /* String.swift */,
 				B3E9A9021FB4DDE400FD8E7A /* Version.swift */,
+				B3F6E27E233C3F0C00B28DA2 /* NSNumber.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2253,6 +2266,10 @@
 				B3B5E9DD1F96C2A2004A6BEB /* SpeculidConfiguration.swift */,
 				B3136E011F90F73A0002B7AB /* SpeculidDocument.swift */,
 				B3136DFC1F90F73A0002B7AB /* SpeculidSpecificationsFile.swift */,
+				B3F6E278233C3BF100B28DA2 /* AssetSpecificationFileProtocol.swift */,
+				B3F6E27A233C3DC400B28DA2 /* AssetSpecificationFile.swift */,
+				B3F6E27C233C3EE100B28DA2 /* AssetCatalogItemSize.swift */,
+				B3F6E280233C3F2E00B28DA2 /* AssetSpecificationMetadata.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2291,6 +2308,7 @@
 				B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */,
 				B3CB156F2113AA8C00A6DC5C /* VersionProvider.swift */,
 				B3FDF6442180A3FF00455A43 /* InstallerProtocol.swift */,
+				B3F6E282233C3F7300B28DA2 /* AssetSpecificationMetadataProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -5476,6 +5494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F6E27B233C3DC400B28DA2 /* AssetSpecificationFile.swift in Sources */,
 				B3B5E9E41F96C5F1004A6BEB /* CommandLineActivityProtocol.swift in Sources */,
 				B3891BBE20F7CE010095E1FD /* CwlSysctl.swift in Sources */,
 				B3136E3D1F90F73B0002B7AB /* AnalyticsParameterKey.swift in Sources */,
@@ -5491,6 +5510,7 @@
 				B3136E461F90F73B0002B7AB /* ImageConversionTaskProtocol.swift in Sources */,
 				B3136E3C1F90F73B0002B7AB /* SpeculidDocument.swift in Sources */,
 				B3B5E9E21F96C44D004A6BEB /* SpeculidCommandArgumentSet.swift in Sources */,
+				B3F6E27D233C3EE100B28DA2 /* AssetCatalogItemSize.swift in Sources */,
 				B33F0BB91F958695004A87DD /* RemoteObjectInterfaceProvider.swift in Sources */,
 				B33F0BB61F958640004A87DD /* StatusItemProviderProtocol.swift in Sources */,
 				B34B52C8217E5D700080E6DC /* InstallType.swift in Sources */,
@@ -5527,6 +5547,7 @@
 				B3E9A9031FB4DDE400FD8E7A /* Version.swift in Sources */,
 				B3136E531F90F73B0002B7AB /* SpeculidBuilderProtocol.swift in Sources */,
 				B3136E4B1F90F73B0002B7AB /* SpeculidConfigurationProtocol.swift in Sources */,
+				B3F6E281233C3F2E00B28DA2 /* AssetSpecificationMetadata.swift in Sources */,
 				B3136E4A1F90F73B0002B7AB /* SpeculidDocumentProtocol.swift in Sources */,
 				B3033B201F9AEFE600787279 /* AssetSpecificationDocument.swift in Sources */,
 				B3136E4F1F90F73B0002B7AB /* GeometryProtocol.swift in Sources */,
@@ -5547,6 +5568,7 @@
 				B3136E541F90F73B0002B7AB /* ApplicationProtocol.swift in Sources */,
 				B3CB15702113AA8C00A6DC5C /* VersionProvider.swift in Sources */,
 				B3B5E9DA1F96C1C1004A6BEB /* SpeculidConfigurationBuilder.swift in Sources */,
+				B3F6E27F233C3F0C00B28DA2 /* NSNumber.swift in Sources */,
 				B34B52CA217E5FC40080E6DC /* CommandLineInstaller.swift in Sources */,
 				B341888A1F9A44A700C5F356 /* CommandLineArgumentProviderProtocol.swift in Sources */,
 				B319DCB1233BE09700F9381E /* AssetCatalogItem.swift in Sources */,
@@ -5559,8 +5581,10 @@
 				B3136E3B1F90F73B0002B7AB /* GeometryDimension.ScalingBy.swift in Sources */,
 				B3B5E9EA1F96C777004A6BEB /* SpeculidApplicationModeParserProtocol.swift in Sources */,
 				B3136E471F90F73B0002B7AB /* ClientIdentifierDelegate.swift in Sources */,
+				B3F6E283233C3F7300B28DA2 /* AssetSpecificationMetadataProtocol.swift in Sources */,
 				B3136DCE1F90E45F0002B7AB /* ErrorCollection.swift in Sources */,
 				B3136E271F90F73B0002B7AB /* AnalyticsTracker.swift in Sources */,
+				B3F6E279233C3BF100B28DA2 /* AssetSpecificationFileProtocol.swift in Sources */,
 				B3B5E9DC1F96C1D2004A6BEB /* SpeculidConfigurationBuilderProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
