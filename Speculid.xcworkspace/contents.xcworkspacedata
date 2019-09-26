@@ -5,9 +5,6 @@
       location = "group:Speculid.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:examples/examples.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

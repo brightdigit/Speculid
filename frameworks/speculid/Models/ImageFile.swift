@@ -14,48 +14,43 @@ public class ImageFile: NSObject, ImageFileProtocol, NSSecureCoding {
 
   public func encode(with aCoder: NSCoder) {
     aCoder.encode(url, forKey: "url")
-    aCoder.encode(fileFormat.imageFileFormat.rawValue, forKey: "fileFormatValue")
+    aCoder.encode(format.rawValue, forKey: "format")
   }
 
-  // swiftlint:disable identifier_name
   public required init?(coder aDecoder: NSCoder) {
-    let _url = aDecoder.decodeObject(forKey: "url") as? URL
-    let _fileFormatValue = aDecoder.decodeObject(forKey: "fileFormatValue") as? UInt
+    let urlOptional = aDecoder.decodeObject(forKey: "url") as? URL
+    let formatRawValueOptional = aDecoder.decodeObject(forKey: "format") as? UInt
 
-    guard let url = _url, let fileFormatValue = _fileFormatValue, let fileFormat = FileFormat(rawValue: fileFormatValue) else {
+    guard let url = urlOptional, let formatRawValue = formatRawValueOptional, let format = ImageFileFormat(rawValue: formatRawValue) else {
       return nil
     }
 
     self.url = url
-    self.fileFormat = fileFormat
+    self.format = format
   }
   // swiftlint:enable identifier_name
   public let url: URL
-  public let fileFormat: FileFormat
-  public init(url: URL, fileFormat: FileFormat) {
+  public let format: ImageFileFormat
+  public init(url: URL, format: ImageFileFormat) {
     self.url = url
-    self.fileFormat = fileFormat
+    self.format = format
     super.init()
-  }
-
-  public var format: ImageFileFormat {
-    return fileFormat.imageFileFormat
   }
 }
 
 extension ImageFile {
   public convenience init(url: URL) throws {
     let pathExtension = url.pathExtension
-    let fileFormat: FileFormat
+    let format: ImageFileFormat
     if pathExtension.caseInsensitiveCompare("png") == .orderedSame {
-      fileFormat = .png
+      format = .png
     } else if pathExtension.caseInsensitiveCompare("svg") == .orderedSame {
-      fileFormat = .svg
+      format = .svg
     } else if pathExtension.caseInsensitiveCompare("pdf") == .orderedSame {
-      fileFormat = .pdf
+      format = .pdf
     } else {
       throw UnknownFileFormatError(forURL: url)
     }
-    self.init(url: url, fileFormat: fileFormat)
+    self.init(url: url, format: format)
   }
 }

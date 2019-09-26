@@ -88,7 +88,7 @@ extension NSColor {
       throw UIColorInputError.unableToScanHexValue
     }
 
-    switch hexString.characters.count {
+    switch hexString.count {
     case 3:
       self.init(hex3: UInt16(hexValue))
     case 4:
@@ -162,15 +162,15 @@ extension String {
 
     let index = self.index(startIndex, offsetBy: 1)
     let hexString = self[index...]
-    switch hexString.characters.count {
+    switch hexString.count {
     case 4:
       return "#"
-        + hexString.substring(from: characters.index(startIndex, offsetBy: 1))
-        + hexString.substring(to: characters.index(startIndex, offsetBy: 1))
+        + hexString.substring(from: self.index(startIndex, offsetBy: 1))
+        + hexString.substring(to: self.index(startIndex, offsetBy: 1))
     case 8:
       return "#"
-        + hexString.substring(from: characters.index(startIndex, offsetBy: 2))
-        + hexString.substring(to: characters.index(startIndex, offsetBy: 2))
+        + hexString.substring(from: self.index(startIndex, offsetBy: 2))
+        + hexString.substring(to: self.index(startIndex, offsetBy: 2))
     default:
       return nil
     }
