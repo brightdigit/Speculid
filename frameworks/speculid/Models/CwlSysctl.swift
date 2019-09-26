@@ -26,9 +26,9 @@ public struct Sysctl {
       }
 
       // Run the actual request with an appropriately sized array buffer
-      let data = Array<Int8>(repeating: 0, count: requiredSize)
+      let data = [Int8](repeating: 0, count: requiredSize)
       let result = data.withUnsafeBufferPointer { dataBuffer -> Int32 in
-        return Darwin.sysctl(UnsafeMutablePointer<Int32>(mutating: keysPointer.baseAddress), UInt32(keys.count), UnsafeMutableRawPointer(mutating: dataBuffer.baseAddress), &requiredSize, nil, 0)
+        Darwin.sysctl(UnsafeMutablePointer<Int32>(mutating: keysPointer.baseAddress), UInt32(keys.count), UnsafeMutableRawPointer(mutating: dataBuffer.baseAddress), &requiredSize, nil, 0)
       }
       if result != 0 {
         throw POSIXErrorCode(rawValue: errno).map { Error.posixError($0) } ?? Error.unknown
@@ -41,7 +41,7 @@ public struct Sysctl {
   /// Convert a sysctl name string like "hw.memsize" to the array of `sysctl` identifiers (e.g. [CTL_HW, HW_MEMSIZE])
   public static func keysForName(_ name: String) throws -> [Int32] {
     var keysBufferSize = Int(CTL_MAXNAME)
-    var keysBuffer = Array<Int32>(repeating: 0, count: keysBufferSize)
+    var keysBuffer = [Int32](repeating: 0, count: keysBufferSize)
     try keysBuffer.withUnsafeMutableBufferPointer { (lbp: inout UnsafeMutableBufferPointer<Int32>) throws in
       try name.withCString { (nbp: UnsafePointer<Int8>) throws in
         guard sysctlnametomib(nbp, lbp.baseAddress, &keysBufferSize) == 0 else {

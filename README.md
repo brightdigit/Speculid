@@ -33,7 +33,7 @@
          * [<a href="https://camo.githubusercontent.com/b12eea760a21557d856ae2c3a0dcfc65070fe560/68747470733a2f2f72617763646e2e6769746861636b2e636f6d2f62726967687464696769742f53706563756c69642f6d61737465722f696d616765732f7376672d6578706f72742f696c6c7573747261746f722f6c6f676f2e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/b12eea760a21557d856ae2c3a0dcfc65070fe560/68747470733a2f2f72617763646e2e6769746861636b2e636f6d2f62726967687464696769742f53706563756c69642f6d61737465722f696d616765732f7376672d6578706f72742f696c6c7573747261746f722f6c6f676f2e737667" height="25pt" data-canonical-src="https://rawcdn.githack.com/brightdigit/Speculid/master/images/svg-export/illustrator/logo.svg" style="max-width:100\x;"></a> Illustrator](#-illustrator)
       * [Xcode Integration and Automation](#xcode-integration-and-automation)
 
-<!-- Added by: leo, at: Tue Jun 25 13:52:18 EDT 2019 -->
+<!-- Added by: leo, at: Thu Sep 26 10:46:47 EDT 2019 -->
 
 <!--te-->
 
@@ -93,6 +93,8 @@ An asset catalog image set will need a 1x, 2x, 3x of each graphic and **App Icon
 
 ## What Speculid Does
 
+![Speculid In Use](https://rawcdn.githack.com/brightdigit/Speculid/master/images/Speculid-In-Use.gif)
+
 **Speculid** links a single graphic file to an Image Set or App Icon and automatically renders different resolutions, file types, and sizes for all the image specifications required.
 
 ![diagram](https://rawcdn.githack.com/brightdigit/Speculid/master/images/Diagram.png)
@@ -149,6 +151,19 @@ There are 3 ways to download Speculid: Email Signup, Homebrew, and Github Releas
 ## Email Signup
 
 Email signup allows for you to get delivered updates to your email box of new features and updates...
+
+<section class="signup-form-container">
+  <div><strong>Sign up below</strong> to get the latest version.</div>
+<form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
+  <div class="row">
+  <input type="email" placeholder="Your Email Address" value="" name="EMAIL" id="mce-EMAIL" required>
+  <input type="submit" value="Sign Up">
+  </div>
+</form>
+<div class="message">
+  &nbsp;
+</div>
+</section>
 
 <div class="readme-only" markdown="1">
 To download <strong>Speculid</strong>, enter your email address <a href="https://speculid.com#download">here</a> to request access to the latest version.
@@ -208,6 +223,8 @@ end
 ```
 
 # Usage
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mn4pknYqzH0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="display: block; margin: auto;" allowfullscreen></iframe>
 
 Speculid only supports being called through a command line terminal for now. Once you have copied the command to your */usr/local/bin* folder you should be able to access it easily.
 
@@ -403,7 +420,7 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
     ![Xcode Unorganized Assets](https://rawcdn.githack.com/brightdigit/Speculid/master/images/XcodeUnorganizedAssets.png)
 
-4. **After the first build**, drag the images to the correct asset slot. Each rendered image file is suffixed denoting its slot.
+    If the asset catalog does not already have file names for each image in the asset, Speculid will automatically update the asset catalog and name the files using the following pattern:
 
     *(source file base name)*.*(size)*@*(scale)*~*(idiom)*.(extension)
 
@@ -413,7 +430,7 @@ With **Speculid**, the process of building image assets can be automated in **Xc
     * **logo.60x60@3x~iphone.png** - 60x60 size 3x scale for iPhone
     * **logo.83.5x83.5@2x~ipad.png** - 83.5x83.5 size 2x scale for iPad
 
-5. **Build, Run, and Done!**
+5. **Enjoy!**
 
 -----
 

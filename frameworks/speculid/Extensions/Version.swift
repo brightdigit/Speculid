@@ -2,7 +2,7 @@ import Foundation
 import SwiftVer
 
 public extension Version {
-  public var developmentDescription: String {
+  var developmentDescription: String {
     let buildnumbers = VersionMenuItem.buildNumbers(fromResource: "build", withExtension: "list")
     let title: String
     if buildnumbers?.contains(build) == true {
