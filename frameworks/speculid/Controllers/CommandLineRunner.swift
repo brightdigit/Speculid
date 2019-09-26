@@ -44,7 +44,7 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
           self.outputStream.write(" DEBUG")
         #endif
         return completed()
-      case let .process(url):
+      case let .process(url, update):
         let tryDocument: SpeculidDocumentProtocol?
         do {
           tryDocument = try Application.current.document(url: url)

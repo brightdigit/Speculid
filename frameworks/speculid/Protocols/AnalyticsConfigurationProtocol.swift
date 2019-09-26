@@ -11,7 +11,7 @@ public protocol AnalyticsConfigurationProtocol {
 }
 
 public extension AnalyticsConfigurationProtocol {
-  public var parameters: AnalyticsParameterDictionary {
+  var parameters: AnalyticsParameterDictionary {
     var dictionary = customParameters
 
     let mainParameters: AnalyticsParameterDictionary = [

@@ -94,7 +94,7 @@ DispatchQueue.main.async {
   if let index = CommandLine.arguments.firstIndex(of: "--useLocation") {
     var tempArguments = CommandLine.arguments
     applicationPathURL = URL(fileURLWithPath: CommandLine.arguments[index + 1])
-    tempArguments.removeSubrange((index ... index + 1))
+    tempArguments.removeSubrange(index ... index + 1)
     arguments = tempArguments
   } else {
     applicationPathURL = nil
