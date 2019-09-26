@@ -5,7 +5,13 @@ public enum AppleWatchRole: String, Codable {
 }
 
 public enum AppleWatchType: String, Codable {
-  case size38 = "38mm", size42 = "42mm"
+  case size38 = "38mm", size40 = "40mm", size42 = "42mm", size44 = "44mm"
+}
+
+extension CGFloat {
+  var clean: String {
+    return truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : description
+  }
 }
 
 public struct AssetSpecification: AssetSpecificationProtocol, Codable {
@@ -68,12 +74,12 @@ public struct AssetSpecification: AssetSpecificationProtocol, Codable {
       size = nil
     }
 
-    role = try container.decode(AppleWatchRole.self, forKey: .role)
+    role = try container.decodeIfPresent(AppleWatchRole.self, forKey: .role)
     subtype = try container.decodeIfPresent(AppleWatchType.self, forKey: .subtype)
   }
 
   func formatSize(_ size: CGSize) -> String {
-    return "\(size.width)x\(size.height)"
+    return "\(size.width.clean)x\(size.height.clean)"
   }
 
   func formatScale(_ scale: CGFloat) -> String {

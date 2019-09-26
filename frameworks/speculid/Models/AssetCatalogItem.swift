@@ -7,65 +7,6 @@
 //
 import Foundation
 
-extension NSNumber {
-  // CGFloat -> NSNumber
-  private convenience init(doubleOrFloat: Double) {
-    self.init(value: doubleOrFloat)
-  }
-  private convenience init(doubleOrFloat: Float) {
-    self.init(value: doubleOrFloat)
-  }
-  convenience init(cgFloat: CGFloat) {
-    self.init(doubleOrFloat: cgFloat.native)
-  }
-
-  // NSNumber -> CGFloat
-  private func doubleOrFloatValue() -> Double {
-    return doubleValue
-  }
-  private func doubleOrFloatValue() -> Float {
-    return floatValue
-  }
-  var cgFloatValue: CGFloat {
-    return CGFloat(floatLiteral: doubleOrFloatValue())
-  }
-}
-
-@objc open class AssetCatalogItemSize: NSObject, NSSecureCoding {
-  public static let supportsSecureCoding: Bool = true
-
-  public func encode(with coder: NSCoder) {
-    coder.encode(width, forKey: "width")
-    coder.encode(height, forKey: "height")
-  }
-
-  public required init?(coder: NSCoder) {
-    guard let width = coder.decodeObject(forKey: "width") as? NSNumber else {
-      return nil
-    }
-
-    guard let height = coder.decodeObject(forKey: "height") as? NSNumber else {
-      return nil
-    }
-
-    self.width = width
-    self.height = height
-  }
-
-  public let width: NSNumber
-  public let height: NSNumber
-
-  public init(size: CGSize) {
-    width = size.width as NSNumber
-    height = size.height as NSNumber
-  }
-}
-
-extension AssetCatalogItemSize {
-  var cgSize: CGSize {
-    return CGSize(width: width.cgFloatValue, height: height.cgFloatValue)
-  }
-}
 @objc open class AssetCatalogItem: NSObject, NSSecureCoding {
   public static let supportsSecureCoding: Bool = true
 

@@ -181,6 +181,10 @@ open class Application: NSApplication, ApplicationProtocol {
     terminate(sender)
   }
 
+  public static var author: String {
+    bundle.bundleIdentifier!.components(separatedBy: "-").first!
+  }
+
   public static let bundle = Bundle(for: Application.self)
 
   public static let vcs = VersionControlInfo(jsonResource: "autorevision", fromBundle: Application.bundle)
