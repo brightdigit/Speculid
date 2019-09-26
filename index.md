@@ -60,7 +60,7 @@ An asset catalog image set will need a 1x, 2x, 3x of each graphic and **App Icon
 
 ## What Speculid Does
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Mn4pknYqzH0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+![Speculid In Use](/images/Speculid-In-Use.gif)
 
 **Speculid** links a single graphic file to an Image Set or App Icon and automatically renders different resolutions, file types, and sizes for all the image specifications required.
 
@@ -196,6 +196,8 @@ end
 ```
 
 # Usage
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mn4pknYqzH0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="display: block; margin: auto;" allowfullscreen></iframe>
 
 Speculid only supports being called through a command line terminal for now. Once you have copied the command to your */usr/local/bin* folder you should be able to access it easily.
 
@@ -391,7 +393,7 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
     ![Xcode Unorganized Assets](/images/XcodeUnorganizedAssets.png)
 
-4. **After the first build**, drag the images to the correct asset slot. Each rendered image file is suffixed denoting its slot.
+    If the asset catalog does not already have file names for each image in the asset, Speculid will automatically update the asset catalog and name the files using the following pattern:
 
     *(source file base name)*.*(size)*@*(scale)*~*(idiom)*.(extension)
 
@@ -401,7 +403,7 @@ With **Speculid**, the process of building image assets can be automated in **Xc
     * **logo.60x60@3x~iphone.png** - 60x60 size 3x scale for iPhone
     * **logo.83.5x83.5@2x~ipad.png** - 83.5x83.5 size 2x scale for iPad
 
-5. **Build, Run, and Done!**
+5. **Enjoy!**
 
 -----
 
