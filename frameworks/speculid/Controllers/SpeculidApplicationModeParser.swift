@@ -6,7 +6,7 @@ public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtoc
     if commandLine.arguments.first == Bundle.main.executablePath {
       indicies.append(commandLine.arguments.startIndex)
     }
-    if let index = commandLine.arguments.index(of: "-NSDocumentRevisionsDebugMode") {
+    if let index = commandLine.arguments.firstIndex(of: "-NSDocumentRevisionsDebugMode") {
       indicies.append(index)
       indicies.append(index.advanced(by: 1))
     }
@@ -23,7 +23,7 @@ public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtoc
       } else if let index = arguments.firstIndex(of: "--process") {
         let filePath = arguments[arguments.index(after: index)]
         if FileManager.default.fileExists(atPath: filePath) {
-          return .command(.process(URL(fileURLWithPath: filePath)))
+          return .command(.process(URL(fileURLWithPath: filePath), true))
         } else {
           return .command(.unknown(arguments))
         }
@@ -39,10 +39,10 @@ public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtoc
     }
   }
 }
-
-@available(swift, obsoleted: 4.2)
-extension Array where Element: Equatable {
-  func firstIndex(of element: Element) -> Index? {
-    return index(of: element)
-  }
-}
+//
+// @available(swift, obsoleted: 4.2)
+// extension Array where Element: Equatable {
+//  func firstIndex(of element: Element) -> Index? {
+//    return firstIndex(of: element)
+//  }
+// }
