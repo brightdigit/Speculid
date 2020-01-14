@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Page_1"
+   data-name="Page 1"
+   viewBox="0 0 207.83762 274.46"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   width="100%"
+   height="100%"
+   sodipodi:docname="codeigniter.svg">
+  <metadata
+     id="metadata3544">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3542" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="587"
+     inkscape:window-height="476"
+     id="namedview3540"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.4379535"
+     inkscape:cx="176.19999"
+     inkscape:cy="65.044997"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Page_1" />
+  <title
+     id="title3535">code-ignitor</title>
+  <g
+     id="Layer_1-2"
+     data-name="Layer 1"
+     transform="translate(-47.760009,-60.02)">
+    <path
+       d="m 47.76,334.48 c 1.22,-7.76 2.07,-15.61 3.73,-23.27 6.26,-28.9 19.84,-54.33 37.71,-77.62 20.42,-26.62 44.82,-49.37 70,-71.39 14.57,-12.77 29,-25.75 40,-41.87 C 207,109 213.12,97 215,83.11 c 1,-7.27 0,-13.65 -3.43,-23.09 2.69,2.29 5.49,4.48 8.07,6.9 17.5,16.42 30.16,35.66 34.77,59.62 2.8,14.54 0.27,28.5 -3.65,42.51"
+       id="path3538"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
