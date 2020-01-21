@@ -12,7 +12,7 @@ public enum InstallerErrorCode: Int {
 public struct InstallerError {
   private init() {}
   static func error(fromCode code: InstallerErrorCode) -> NSError {
-    return NSError(domain: Bundle.main.bundleIdentifier!, code: code.rawValue, userInfo: nil)
+    NSError(domain: Bundle.main.bundleIdentifier!, code: code.rawValue, userInfo: nil)
   }
 }
 

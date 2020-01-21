@@ -3,7 +3,7 @@ import SwiftVer
 
 extension Version {
   public var buildHexidecimal: String {
-    return String(format: "%05x", build)
+    String(format: "%05x", build)
   }
 }
 
