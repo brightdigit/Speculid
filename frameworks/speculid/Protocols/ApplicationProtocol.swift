@@ -2,7 +2,7 @@ import Foundation
 import SwiftVer
 
 public protocol ApplicationProtocol: VersionProvider {
-  func document(url: URL) throws -> SpeculidDocumentProtocol
+  func documents(url: URL) throws -> [SpeculidDocumentProtocol]
   var builder: SpeculidBuilderProtocol! { get }
   var service: ServiceProtocol! { get }
   // var installer: InstallerProtocol! { get }

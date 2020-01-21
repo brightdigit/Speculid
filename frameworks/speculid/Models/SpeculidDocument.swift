@@ -3,7 +3,6 @@ import Foundation
 public struct SpeculidDocument: SpeculidDocumentProtocol {
   public let url: URL
   public let specificationsFile: SpeculidSpecificationsFileProtocol
-  // public let asset: AssetSpecificationDocumentProtocol
   public let assetFile: AssetSpecificationFileProtocol
 
   public init(url: URL, decoder: JSONDecoder, configuration _: SpeculidConfigurationProtocol? = nil) throws {

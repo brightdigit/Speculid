@@ -10,7 +10,7 @@ public enum AppleWatchType: String, Codable {
 
 extension CGFloat {
   var clean: String {
-    return truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : description
+    truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : description
   }
 }
 
@@ -79,7 +79,7 @@ public struct AssetSpecification: AssetSpecificationProtocol, Codable {
   }
 
   func formatSize(_ size: CGSize) -> String {
-    return "\(size.width.clean)x\(size.height.clean)"
+    "\(size.width.clean)x\(size.height.clean)"
   }
 
   func formatScale(_ scale: CGFloat) -> String {

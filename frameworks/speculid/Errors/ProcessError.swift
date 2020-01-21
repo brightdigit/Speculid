@@ -5,10 +5,10 @@ public struct ProcessError: Error, CustomStringConvertible {
   public let message: String
 
   public var localizedDescription: String {
-    return message
+    message
   }
 
   public var description: String {
-    return message
+    message
   }
 }

@@ -8,6 +8,31 @@
 
 import Foundation
 
+extension URL {
+    func relativePath(from base: URL) -> String? {
+        // Ensure that both URLs represent files:
+        guard self.isFileURL && base.isFileURL else {
+            return nil
+        }
+
+        // Remove/replace "." and "..", make paths absolute:
+        let destComponents = self.standardized.pathComponents
+        let baseComponents = base.standardized.pathComponents
+
+        // Find number of common path components:
+        var i = 0
+        while i < destComponents.count && i < baseComponents.count
+            && destComponents[i] == baseComponents[i] {
+                i += 1
+        }
+
+        // Build relative path:
+        var relComponents = Array(repeating: "..", count: baseComponents.count - i)
+        relComponents.append(contentsOf: destComponents[i...])
+        return relComponents.joined(separator: "/")
+    }
+}
+
 let folderContentsJson = """
 {
   "info" : {
@@ -76,6 +101,27 @@ for case let url as URL in enumerator {
   
   try! FileManager.default.copyItem(at: appIconContentsUrl, to: appIconSetUrl.appendingPathComponent("Contents.json"))
   try! FileManager.default.copyItem(at: imageSetContentsUrl, to: imageSetUrl.appendingPathComponent("Contents.json"))
-  try! FileManager.default.copyItem(at: appIconSpeculidUrl, to: appIconSpecUrl)
-    try! FileManager.default.copyItem(at: imageSetSpeculidUrl, to: imageSetSpecUrl)
+  
+  let appIconSpecText = """
+{
+"set" : "\(appIconContentsUrl.relativePath(from: appIconSpecUrl)!)",
+"source" : "\(url.relativePath(from: appIconSpecUrl)!)",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}
+"""
+  
+    let imageSetSpecText = """
+  {
+    "set" : "\(imageSetContentsUrl.relativePath(from: imageSetSpecUrl)!)",
+  "source" : "\(url.relativePath(from: imageSetSpecUrl)!)"
+  }
+  """
+  try! appIconSpecText.write(to: appIconSpecUrl, atomically: true, encoding: .utf8)
+  
+  //try! FileManager.default.copyItem(at: appIconSpeculidUrl, to: appIconSpecUrl)
+ //   try! FileManager.default.copyItem(at: imageSetSpeculidUrl, to:
+  //    imageSetSpecUrl)
+  
+  try! imageSetSpecText.write(to: imageSetSpecUrl, atomically: true, encoding: .utf8)
 }
