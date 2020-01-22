@@ -12,8 +12,6 @@ osx_image: xcode11
 xcode_workspace: Speculid.xcworkspace
 xcode_scheme: Speculid-Mac-App
 xcode_destination: platform=macOS
-before_install:
-- brew install openssl
 install:
 - bundler install
 - pod repo update --silent
