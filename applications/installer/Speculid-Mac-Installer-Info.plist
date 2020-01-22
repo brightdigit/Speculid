@@ -14,7 +14,7 @@
 	<string>$(DEFAULT_BUNDLE_VERSION)</string>
 	<key>SMAuthorizedClients</key>
 	<array>
-		<string>identifier "com.brightdigit.Speculid-Mac-App" and anchor apple generic and Invalid Mac Developer CN: Apple Development: Leo Dion (5VZ4KT69B9) and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		<string>identifier "com.brightdigit.Speculid-Mac-App" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Leo Dion (5VZ4KT69B9)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
 	</array>
 </dict>
 </plist>
