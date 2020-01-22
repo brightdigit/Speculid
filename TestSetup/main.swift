@@ -104,8 +104,8 @@ for case let url as URL in enumerator {
   
   let appIconSpecText = """
 {
-"set" : "\(appIconSetUrl.relativePath(from: appIconSpecUrl)!)",
-"source" : "\(url.relativePath(from: appIconSpecUrl)!)",
+  "set" : "\(appIconSetUrl.relativePath(from: appIconSpecUrl.deletingLastPathComponent())!)",
+"source" : "\(url.relativePath(from: appIconSpecUrl.deletingLastPathComponent())!)",
 "background" : "#FFFFFF",
 "remove-alpha" : true
 }
@@ -113,8 +113,8 @@ for case let url as URL in enumerator {
   
     let imageSetSpecText = """
   {
-    "set" : "\(imageSetUrl.relativePath(from: imageSetSpecUrl)!)",
-  "source" : "\(url.relativePath(from: imageSetSpecUrl)!)"
+    "set" : "\(imageSetUrl.relativePath(from: imageSetSpecUrl.deletingLastPathComponent())!)",
+  "source" : "\(url.relativePath(from: imageSetSpecUrl.deletingLastPathComponent())!)"
   }
   """
   try! appIconSpecText.write(to: appIconSpecUrl, atomically: true, encoding: .utf8)

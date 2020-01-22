@@ -92,14 +92,14 @@ public extension SpeculidBuilderProtocol {
   func build(documents: [SpeculidDocumentProtocol]) -> Error? {
     var errors = [Error]()
     let group = DispatchGroup()
-    let queue = DispatchQueue(label: "errors", qos: .default, attributes: .concurrent)
-
+    let errorQueue = DispatchQueue(label: "errors", qos: .default, attributes: .concurrent)
+    let buildQueue = DispatchQueue(label: "builder", qos: .userInitiated, attributes: .concurrent)
     for document in documents {
       group.enter()
-      DispatchQueue.global().async {
-        self.build(document: document) { (errorOpt) in
+      buildQueue.async {
+        self.build(document: document) { errorOpt in
           if let error = errorOpt {
-            queue.async(group: nil, qos: .default, flags: .barrier) {
+            errorQueue.async(group: nil, qos: .default, flags: .barrier) {
               errors.append(error)
               group.leave()
             }
@@ -109,6 +109,7 @@ public extension SpeculidBuilderProtocol {
         }
       }
     }
+
     group.wait()
     return ArrayError.error(for: errors)
   }
