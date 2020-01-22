@@ -13,7 +13,7 @@ xcode_workspace: Speculid.xcworkspace
 xcode_scheme: Speculid-Mac-App
 xcode_destination: platform=macOS
 install:
-- bundler install
+- bundle install
 - pod repo update --silent
 - pod install --silent
 script:
