@@ -14,7 +14,7 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
   private let _versionProvider: VersionProvider?
 
   public var versionProvider: VersionProvider {
-    return _versionProvider ?? Application.current
+    _versionProvider ?? Application.current
   }
   public init(outputStream: TextOutputStream, errorStream: TextOutputStream, versionProvider: VersionProvider? = nil) {
     self.outputStream = outputStream
@@ -45,18 +45,18 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
         #endif
         return completed()
       case let .process(url, update):
-        let tryDocument: SpeculidDocumentProtocol?
+        let documents: [SpeculidDocumentProtocol]
         do {
-          tryDocument = try Application.current.document(url: url)
+          documents = try Application.current.documents(url: url)
         } catch let caughtError {
           error = caughtError
           return completed()
         }
-        guard let document = tryDocument else {
-          error = InvalidDocumentURL(url: url)
-          return completed()
-        }
-        error = Application.current.builder.build(document: document)
+//        guard let document = tryDocument else {
+//          error = InvalidDocumentURL(url: url)
+//          return completed()
+//        }
+        error = Application.current.builder.build(documents: documents)
         return completed()
       case .debugLocation:
         self.outputStream.write(Bundle.main.bundleURL.absoluteString)

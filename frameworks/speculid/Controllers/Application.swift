@@ -4,7 +4,7 @@ import SwiftVer
 
 extension OperatingSystemVersion {
   var fullDescription: String {
-    return [self.majorVersion, self.minorVersion, self.patchVersion].map {
+    [majorVersion, minorVersion, patchVersion].map {
       String(describing: $0)
     }.joined(separator: ".")
   }
@@ -24,18 +24,32 @@ open class Application: NSApplication, ApplicationProtocol {
     installerObjectInterfaceProvider.remoteObjectProxyWithHandler(completed)
   }
 
-  public func document(url: URL) throws -> SpeculidDocumentProtocol {
-    return try SpeculidDocument(url: url, decoder: jsonDecoder, configuration: configuration)
+  public func documents(url: URL) throws -> [SpeculidDocumentProtocol] {
+    var isDirectory: ObjCBool = false
+    let exists = FileManager.default.fileExists(atPath: url.path, isDirectory: &isDirectory)
+    if exists, isDirectory.boolValue == true {
+      guard let enumerator = FileManager.default.enumerator(at: url, includingPropertiesForKeys: nil) else {
+        throw InvalidDocumentURL(url: url)
+      }
+      return enumerator.compactMap { (item) -> SpeculidDocument? in
+        guard let url = item as? URL else {
+          return nil
+        }
+        return try? SpeculidDocument(url: url, decoder: jsonDecoder, configuration: configuration)
+      }
+    } else {
+      return [try SpeculidDocument(url: url, decoder: jsonDecoder, configuration: configuration)]
+    }
   }
 
   public static var current: ApplicationProtocol! {
-    return NSApplication.shared as? ApplicationProtocol
+    NSApplication.shared as? ApplicationProtocol
   }
 
   public static let unknownCommandMessagePrefix = "Unknown Command Arguments"
 
   public static func unknownCommandMessage(fromArguments arguments: [String]) -> String {
-    return "\(unknownCommandMessagePrefix): \(arguments.joined(separator: " "))"
+    "\(unknownCommandMessagePrefix): \(arguments.joined(separator: " "))"
   }
 
   public static let helpText: String! = {
