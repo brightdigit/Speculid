@@ -12,7 +12,7 @@ extension String {
 
 extension Array where Element == String {
   static func randomElements(ofCount count: Int) -> Array {
-    return (0 ..< count).map { _ in String.randomAlphanumeric(ofLength: 100) }
+    (0 ..< count).map { _ in String.randomAlphanumeric(ofLength: 100) }
   }
 }
 //
@@ -114,7 +114,7 @@ class SpeculidApplicationModeParserTest: XCTestCase {
     let arguments = SimpleCommandLineArgumentProvider(arguments: ["--process", fileURL.path])
     let parser = SpeculidApplicationModeParser()
     let actual = parser.parseMode(fromCommandLine: arguments)
-    let expected = SpeculidApplicationMode.command(SpeculidCommandArgumentSet.process(fileURL))
+    let expected = SpeculidApplicationMode.command(SpeculidCommandArgumentSet.process(fileURL, true))
     XCTAssertEqual(actual, expected)
   }
 }
