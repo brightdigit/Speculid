@@ -17,8 +17,11 @@ security unlock-keychain -p $CUSTOM_KEYCHAIN_PASSWORD macos-build.keychain
 # Set keychain timeout to 3 hours for long builds
 security set-keychain-settings -lut 7200 macos-build.keychain
 
+security import ./certs/development.cer -k macos-build.keychain -A
 security import ./certs/mac_development.p12 -k macos-build.keychain -P $CERTIFICATE_PASSWORD -A
 security import ./certs/mac_development.cer -k macos-build.keychain -A
+security import ./certs/mac_development_20.p12 -k macos-build.keychain -P $APPLE_DEVELOPMENT_PASSWORD -A
+security import ./certs/mac_development_20.cer -k macos-build.keychain -A
 security import ./tmp/certs/developer_id.p12 -k macos-build.keychain -P $CERTIFICATE_PASSWORD -A
 security import ./tmp/certs/developer_id.cer -k macos-build.keychain -A
 

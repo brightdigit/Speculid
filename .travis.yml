@@ -13,12 +13,12 @@ xcode_workspace: Speculid.xcworkspace
 xcode_scheme: Speculid-Mac-App
 xcode_destination: platform=macOS
 install:
-- bundler install
+- bundle install
 - pod repo update --silent
 - pod install --silent
 script:
-- ./scripts/decrypt-certs.sh >/dev/null
-- ./scripts/build-keychain.sh >/dev/null
+- ./scripts/decrypt-certs.sh 
+- ./scripts/build-keychain.sh 
 - xcodebuild test -enableCodeCoverage YES -quiet -workspace speculid.xcworkspace -scheme "Speculid-Mac-App"
 - xcodebuild archive -quiet -workspace speculid.xcworkspace -scheme "Speculid-Mac-App" -configuration Release -derivedDataPath ./build -archivePath ./build/Products/Speculid.xcarchive
 - xcodebuild -quiet -exportArchive -archivePath ./build/Products/Speculid.xcarchive -exportOptionsPlist ./exportOptions.plist -exportPath ./build/Products/App
