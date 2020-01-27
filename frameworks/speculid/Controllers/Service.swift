@@ -36,8 +36,8 @@ public final class Service: NSObject, ServiceProtocol {
     var errors = [NSError]()
 
     for specs in specifications {
+      group.enter()
       exportQueue.async(flags: .barrier) {
-        group.enter()
         do {
           try CairoInterface.exportImage(imageHandle, withSpecification: specs)
         } catch let error as NSError {
