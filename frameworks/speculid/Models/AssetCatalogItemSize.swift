@@ -32,6 +32,6 @@ import Foundation
 
 extension AssetCatalogItemSize {
   var cgSize: CGSize {
-    return CGSize(width: width.cgFloatValue, height: height.cgFloatValue)
+    CGSize(width: width.cgFloatValue, height: height.cgFloatValue)
   }
 }

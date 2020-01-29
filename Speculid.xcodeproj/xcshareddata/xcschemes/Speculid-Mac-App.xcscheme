@@ -113,7 +113,7 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--process &quot;${SRCROOT}/examples/Assets/macOS AppIcon.speculid&quot;"
+            argument = "--process &quot;/Users/leo/Documents/Projects/Xconate/AppIcon.speculid&quot;"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
@@ -134,6 +134,10 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--process&quot;${SRCROOT}/applications/mac/assets/svg-trayicon.speculid&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--process &quot;${SRCROOT}/examples/Assets/icons&quot;"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument

@@ -199,3 +199,5 @@ playgrounds
 .version
 *.coverage.txt
 **/fastlane/report.xml 
+examples/Assets/Assets.xcassets/icons/
+examples/Assets/icons/

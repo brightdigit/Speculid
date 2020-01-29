@@ -14,7 +14,7 @@ public struct Sysctl {
 
   /// Access the raw data for an array of sysctl identifiers.
   public static func dataForKeys(_ keys: [Int32]) throws -> [Int8] {
-    return try keys.withUnsafeBufferPointer { keysPointer throws -> [Int8] in
+    try keys.withUnsafeBufferPointer { keysPointer throws -> [Int8] in
       // Preflight the request to get the required data size
       var requiredSize = 0
       let preFlightResult = Darwin.sysctl(UnsafeMutablePointer<Int32>(mutating: keysPointer.baseAddress), UInt32(keys.count), nil, &requiredSize, nil, 0)
@@ -69,12 +69,12 @@ public struct Sysctl {
 
   /// Invoke `sysctl` with an array of identifers, interpreting the returned buffer as the specified type. This function will throw `Error.invalidSize` if the size of buffer returned from `sysctl` fails to match the size of `T`.
   public static func valueOfType<T>(_ type: T.Type, forKeys keys: Int32...) throws -> T {
-    return try valueOfType(type, forKeys: keys)
+    try valueOfType(type, forKeys: keys)
   }
 
   /// Invoke `sysctl` with the specified name, interpreting the returned buffer as the specified type. This function will throw `Error.invalidSize` if the size of buffer returned from `sysctl` fails to match the size of `T`.
   public static func valueOfType<T>(_ type: T.Type, forName name: String) throws -> T {
-    return try valueOfType(type, forKeys: keysForName(name))
+    try valueOfType(type, forKeys: keysForName(name))
   }
 
   /// Invoke `sysctl` with an array of identifers, interpreting the returned buffer as a `String`. This function will throw `Error.malformedUTF8` if the buffer returned from `sysctl` cannot be interpreted as a UTF8 buffer.
@@ -90,17 +90,17 @@ public struct Sysctl {
 
   /// Invoke `sysctl` with an array of identifers, interpreting the returned buffer as a `String`. This function will throw `Error.malformedUTF8` if the buffer returned from `sysctl` cannot be interpreted as a UTF8 buffer.
   public static func stringForKeys(_ keys: Int32...) throws -> String {
-    return try stringForKeys(keys)
+    try stringForKeys(keys)
   }
 
   /// Invoke `sysctl` with the specified name, interpreting the returned buffer as a `String`. This function will throw `Error.malformedUTF8` if the buffer returned from `sysctl` cannot be interpreted as a UTF8 buffer.
   public static func stringForName(_ name: String) throws -> String {
-    return try stringForKeys(keysForName(name))
+    try stringForKeys(keysForName(name))
   }
 
   /// e.g. "MyComputer.local" (from System Preferences -> Sharing -> Computer Name) or
   /// "My-Name-iPhone" (from Settings -> General -> About -> Name)
-  public static var hostName: String { return try! Sysctl.stringForKeys([CTL_KERN, KERN_HOSTNAME]) }
+  public static var hostName: String { try! Sysctl.stringForKeys([CTL_KERN, KERN_HOSTNAME]) }
 
   /// e.g. "x86_64" or "N71mAP"
   /// NOTE: this is *corrected* on iOS devices to fetch hw.model
@@ -123,30 +123,30 @@ public struct Sysctl {
   }
 
   /// e.g. "8" or "2"
-  public static var activeCPUs: Int32 { return try! Sysctl.valueOfType(Int32.self, forKeys: [CTL_HW, HW_AVAILCPU]) }
+  public static var activeCPUs: Int32 { try! Sysctl.valueOfType(Int32.self, forKeys: [CTL_HW, HW_AVAILCPU]) }
 
   /// e.g. "15.3.0" or "15.0.0"
-  public static var osRelease: String { return try! Sysctl.stringForKeys([CTL_KERN, KERN_OSRELEASE]) }
+  public static var osRelease: String { try! Sysctl.stringForKeys([CTL_KERN, KERN_OSRELEASE]) }
 
   /// e.g. "Darwin" or "Darwin"
-  public static var osType: String { return try! Sysctl.stringForKeys([CTL_KERN, KERN_OSTYPE]) }
+  public static var osType: String { try! Sysctl.stringForKeys([CTL_KERN, KERN_OSTYPE]) }
 
   /// e.g. "15D21" or "13D20"
-  public static var osVersion: String { return try! Sysctl.stringForKeys([CTL_KERN, KERN_OSVERSION]) }
+  public static var osVersion: String { try! Sysctl.stringForKeys([CTL_KERN, KERN_OSVERSION]) }
 
   /// e.g. "Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015; root:xnu-3248.30.4~1/RELEASE_X86_64" or
   /// "Darwin Kernel Version 15.0.0: Wed Dec  9 22:19:38 PST 2015; root:xnu-3248.31.3~2/RELEASE_ARM64_S8000"
-  public static var version: String { return try! Sysctl.stringForKeys([CTL_KERN, KERN_VERSION]) }
+  public static var version: String { try! Sysctl.stringForKeys([CTL_KERN, KERN_VERSION]) }
 
   #if os(macOS)
     /// e.g. 199506 (not available on iOS)
-    public static var osRev: Int32 { return try! Sysctl.valueOfType(Int32.self, forKeys: [CTL_KERN, KERN_OSREV]) }
+    public static var osRev: Int32 { try! Sysctl.valueOfType(Int32.self, forKeys: [CTL_KERN, KERN_OSREV]) }
 
     /// e.g. 2659000000 (not available on iOS)
-    public static var cpuFreq: Int64 { return try! Sysctl.valueOfType(Int64.self, forName: "hw.cpufrequency") }
+    public static var cpuFreq: Int64 { try! Sysctl.valueOfType(Int64.self, forName: "hw.cpufrequency") }
 
     /// e.g. 25769803776 (not available on iOS)
-    public static var memSize: UInt64 { return try! Sysctl.valueOfType(UInt64.self, forKeys: [CTL_HW, HW_MEMSIZE]) }
+    public static var memSize: UInt64 { try! Sysctl.valueOfType(UInt64.self, forKeys: [CTL_HW, HW_MEMSIZE]) }
   #endif
 }
 

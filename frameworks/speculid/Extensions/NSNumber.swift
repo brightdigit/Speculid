@@ -14,12 +14,12 @@ extension NSNumber {
 
   // NSNumber -> CGFloat
   private func doubleOrFloatValue() -> Double {
-    return doubleValue
+    doubleValue
   }
   private func doubleOrFloatValue() -> Float {
-    return floatValue
+    floatValue
   }
   var cgFloatValue: CGFloat {
-    return CGFloat(floatLiteral: doubleOrFloatValue())
+    CGFloat(floatLiteral: doubleOrFloatValue())
   }
 }

@@ -6,7 +6,7 @@ public typealias ImageConversionDictionary = [String: ImageConversionPair]
 
 public extension SpeculidDocumentProtocol {
   var sourceImageURL: URL {
-    return url.deletingLastPathComponent().appendingPathComponent(specificationsFile.sourceImageRelativePath)
+    url.deletingLastPathComponent().appendingPathComponent(specificationsFile.sourceImageRelativePath)
   }
   func destinationName(forImage image: AssetSpecificationProtocol) -> String {
     if let filename = image.filename {
@@ -25,11 +25,11 @@ public extension SpeculidDocumentProtocol {
 
   @available(*, unavailable)
   func destinationURL(forImage image: AssetSpecificationProtocol) -> URL {
-    return url.deletingLastPathComponent().appendingPathComponent(specificationsFile.assetDirectoryRelativePath, isDirectory: true).appendingPathComponent(destinationName(forImage: image))
+    url.deletingLastPathComponent().appendingPathComponent(specificationsFile.assetDirectoryRelativePath, isDirectory: true).appendingPathComponent(destinationName(forImage: image))
   }
 
   func destinationURL(forFileName fileName: String) -> URL {
-    return url.deletingLastPathComponent().appendingPathComponent(specificationsFile.assetDirectoryRelativePath, isDirectory: true).appendingPathComponent(fileName)
+    url.deletingLastPathComponent().appendingPathComponent(specificationsFile.assetDirectoryRelativePath, isDirectory: true).appendingPathComponent(fileName)
   }
   // destinationFileNames
 }
@@ -87,5 +87,30 @@ public extension SpeculidBuilderProtocol {
     }
     semaphone.wait()
     return result
+  }
+
+  func build(documents: [SpeculidDocumentProtocol]) -> Error? {
+    var errors = [Error]()
+    let group = DispatchGroup()
+    let errorQueue = DispatchQueue(label: "errors", qos: .default, attributes: .concurrent)
+    let buildQueue = DispatchQueue(label: "builder", qos: .userInitiated, attributes: .concurrent)
+    for document in documents {
+      group.enter()
+      buildQueue.async {
+        self.build(document: document) { errorOpt in
+          if let error = errorOpt {
+            errorQueue.async(group: nil, qos: .default, flags: .barrier) {
+              errors.append(error)
+              group.leave()
+            }
+          } else {
+            group.leave()
+          }
+        }
+      }
+    }
+
+    group.wait()
+    return ArrayError.error(for: errors)
   }
 }
