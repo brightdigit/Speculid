@@ -3,15 +3,15 @@ import XCTest
 
 extension NSColor: CairoColorProtocol {
   public var red: Double {
-    return Double(redComponent)
+    Double(redComponent)
   }
 
   public var green: Double {
-    return Double(greenComponent)
+    Double(greenComponent)
   }
 
   public var blue: Double {
-    return Double(blueComponent)
+    Double(blueComponent)
   }
 }
 class ImageFile: NSObject, ImageFileProtocol {

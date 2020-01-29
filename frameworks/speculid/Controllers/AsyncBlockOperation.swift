@@ -28,11 +28,11 @@ open class AsyncBlockOperation: Operation {
   }
 
   open override var isAsynchronous: Bool {
-    return true
+    true
   }
 
   open override var isExecuting: Bool {
-    get { return _executing }
+    get { _executing }
     set {
       let key = "isExecuting"
       willChangeValue(forKey: key)
@@ -42,7 +42,7 @@ open class AsyncBlockOperation: Operation {
   }
 
   open override var isFinished: Bool {
-    get { return _finished }
+    get { _finished }
     set {
       let key = "isFinished"
       willChangeValue(forKey: key)

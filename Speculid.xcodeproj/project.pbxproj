@@ -273,6 +273,9 @@
 		B31BEAFE1F9626AC00496E7A /* RegularExpressionSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAFD1F9626AC00496E7A /* RegularExpressionSetProtocol.swift */; };
 		B31BEB001F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAFF1F9626BB00496E7A /* RegularExpressionSetBuilderProtocol.swift */; };
 		B3242E9A213DBE6C0063037C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3242E99213DBE6C0063037C /* main.swift */; };
+		B324472423D2458300549D30 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324472323D2458300549D30 /* main.swift */; };
+		B324472A23D245A600549D30 /* organize_icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324472823D245A500549D30 /* organize_icons.swift */; };
+		B324472B23D245A600549D30 /* mfizz.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324472923D245A500549D30 /* mfizz.swift */; };
 		B326F25621811BA20072D652 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B323FC10217FB5CB00D95E9C /* main.swift */; };
 		B326F25721811BA20072D652 /* ServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B323FC12217FB5F500D95E9C /* ServiceDelegate.swift */; };
 		B326F25821811C870072D652 /* InstallerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDF6442180A3FF00455A43 /* InstallerProtocol.swift */; };
@@ -966,6 +969,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		B324471F23D2458300549D30 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		B326F24D21811B970072D652 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1368,6 +1380,10 @@
 		B323FC12217FB5F500D95E9C /* ServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
 		B3242E97213DBE6C0063037C /* speculid */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = speculid; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3242E99213DBE6C0063037C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B324472123D2458300549D30 /* TestSetup */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestSetup; sourceTree = BUILT_PRODUCTS_DIR; };
+		B324472323D2458300549D30 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B324472823D245A500549D30 /* organize_icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = organize_icons.swift; path = scripts/organize_icons.swift; sourceTree = SOURCE_ROOT; };
+		B324472923D245A500549D30 /* mfizz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mfizz.swift; path = scripts/mfizz.swift; sourceTree = SOURCE_ROOT; };
 		B326F24821810F580072D652 /* CodeSignUpdate.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = CodeSignUpdate.sh; sourceTree = "<group>"; };
 		B326F24F21811B970072D652 /* com.brightdigit.Speculid-Mac-Installer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "com.brightdigit.Speculid-Mac-Installer"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32D69EA1F9EC5CA00C21C8C /* Speculid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speculid.entitlements; sourceTree = "<group>"; };
@@ -2040,6 +2056,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B324471E23D2458300549D30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B326F24C21811B970072D652 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -2621,6 +2644,16 @@
 			path = command;
 			sourceTree = "<group>";
 		};
+		B324472223D2458300549D30 /* TestSetup */ = {
+			isa = PBXGroup;
+			children = (
+				B324472923D245A500549D30 /* mfizz.swift */,
+				B324472823D245A500549D30 /* organize_icons.swift */,
+				B324472323D2458300549D30 /* main.swift */,
+			);
+			path = TestSetup;
+			sourceTree = "<group>";
+		};
 		B326F25021811B970072D652 /* installer */ = {
 			isa = PBXGroup;
 			children = (
@@ -2655,6 +2688,7 @@
 				B3136E6A1F90FCD90002B7AB /* tests */,
 				B37C74401F8C58F300DF505B /* applications */,
 				B3136DB51F90E23E0002B7AB /* frameworks */,
+				B324472223D2458300549D30 /* TestSetup */,
 				B37C743F1F8C58F300DF505B /* Products */,
 				B37C74801F8C5AE200DF505B /* Frameworks */,
 				ACD4DBE14098687CAAFBB2FA /* Pods */,
@@ -2673,6 +2707,7 @@
 				B3136E8D1F90FD3D0002B7AB /* CairoSVGTests.xctest */,
 				B3242E97213DBE6C0063037C /* speculid */,
 				B326F24F21811B970072D652 /* com.brightdigit.Speculid-Mac-Installer */,
+				B324472123D2458300549D30 /* TestSetup */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -4849,6 +4884,23 @@
 			productReference = B3242E97213DBE6C0063037C /* speculid */;
 			productType = "com.apple.product-type.tool";
 		};
+		B324472023D2458300549D30 /* TestSetup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B324472723D2458300549D30 /* Build configuration list for PBXNativeTarget "TestSetup" */;
+			buildPhases = (
+				B324471D23D2458300549D30 /* Sources */,
+				B324471E23D2458300549D30 /* Frameworks */,
+				B324471F23D2458300549D30 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestSetup;
+			productName = TestSetup;
+			productReference = B324472123D2458300549D30 /* TestSetup */;
+			productType = "com.apple.product-type.tool";
+		};
 		B326F24E21811B970072D652 /* com.brightdigit.Speculid-Mac-Installer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B326F25321811B980072D652 /* Build configuration list for PBXNativeTarget "com.brightdigit.Speculid-Mac-Installer" */;
@@ -4965,7 +5017,7 @@
 		B37C74361F8C58F300DF505B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Bright Digit, LLC";
 				TargetAttributes = {
@@ -4988,6 +5040,10 @@
 					B3242E96213DBE6C0063037C = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1110;
+						ProvisioningStyle = Automatic;
+					};
+					B324472023D2458300549D30 = {
+						CreatedOnToolsVersion = 11.3.1;
 						ProvisioningStyle = Automatic;
 					};
 					B326F24E21811B970072D652 = {
@@ -5052,6 +5108,7 @@
 				B3136E8C1F90FD3D0002B7AB /* CairoSVGTests */,
 				B3242E96213DBE6C0063037C /* Speculid-Mac-Cmd */,
 				B326F24E21811B970072D652 /* com.brightdigit.Speculid-Mac-Installer */,
+				B324472023D2458300549D30 /* TestSetup */,
 			);
 		};
 /* End PBXProject section */
@@ -5374,7 +5431,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/tests\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline";
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/tests\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline\n";
 		};
 		B3E211A820E573B9009EA554 /* Installing Libaries */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -5459,6 +5516,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3242E9A213DBE6C0063037C /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B324471D23D2458300549D30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B324472B23D245A600549D30 /* mfizz.swift in Sources */,
+				B324472423D2458300549D30 /* main.swift in Sources */,
+				B324472A23D245A600549D30 /* organize_icons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5777,6 +5844,35 @@
 			};
 			name = Release;
 		};
+		B324472523D2458300549D30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B324472623D2458300549D30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		B326F25421811B980072D652 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -5869,7 +5965,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFAULT_BUNDLE_VERSION = 6;
+				DEFAULT_BUNDLE_VERSION = 8;
 				DEFAULT_SEMVER_VERSION = 2.0.0;
 				DYLIB_COMPATIBILITY_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DYLIB_CURRENT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
@@ -5934,7 +6030,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFAULT_BUNDLE_VERSION = 6;
+				DEFAULT_BUNDLE_VERSION = 8;
 				DEFAULT_SEMVER_VERSION = 2.0.0;
 				DYLIB_COMPATIBILITY_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
 				DYLIB_CURRENT_VERSION = "$(DEFAULT_BUNDLE_VERSION)";
@@ -6224,6 +6320,15 @@
 			buildConfigurations = (
 				B3242E9B213DBE6C0063037C /* Debug */,
 				B3242E9C213DBE6C0063037C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B324472723D2458300549D30 /* Build configuration list for PBXNativeTarget "TestSetup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B324472523D2458300549D30 /* Debug */,
+				B324472623D2458300549D30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

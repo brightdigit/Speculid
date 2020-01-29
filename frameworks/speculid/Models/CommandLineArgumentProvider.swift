@@ -8,6 +8,6 @@ public struct CommandLineArgumentProvider: CommandLineArgumentProviderProtocol {
   }
 
   public var arguments: [String] {
-    return commandLine.arguments
+    commandLine.arguments
   }
 }

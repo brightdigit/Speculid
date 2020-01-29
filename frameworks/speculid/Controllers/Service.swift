@@ -2,6 +2,7 @@ import CairoSVG
 import Cocoa
 
 public final class Service: NSObject, ServiceProtocol {
+  let exportQueue = DispatchQueue(label: "export", qos: .default, attributes: .concurrent)
   public func updateAssetCatalogAtURL(_ url: URL, withItems items: [AssetCatalogItem], _ callback: @escaping ((NSError?) -> Void)) {
     let document = AssetSpecificationDocument(fromItems: items)
     let encoder = JSONEncoder()
@@ -17,6 +18,7 @@ public final class Service: NSObject, ServiceProtocol {
   }
 
   public func exportImageAtURL(_ url: URL, toSpecifications specifications: [ImageSpecification], _ callback: @escaping ((NSError?) -> Void)) {
+    let errorQueue = DispatchQueue(label: "error", qos: .default, attributes: .concurrent)
     let imageFile = ImageFile(url: url, format: .svg)
     let builtImageHandle: ImageHandle?
     do {
@@ -34,12 +36,16 @@ public final class Service: NSObject, ServiceProtocol {
     var errors = [NSError]()
 
     for specs in specifications {
-      DispatchQueue.main.async {
-        group.enter()
+      group.enter()
+      exportQueue.async(flags: .barrier) {
         do {
           try CairoInterface.exportImage(imageHandle, withSpecification: specs)
         } catch let error as NSError {
-          errors.append(error)
+          errorQueue.async(flags: .barrier) {
+            errors.append(error)
+            group.leave()
+          }
+          return
         }
         group.leave()
       }
