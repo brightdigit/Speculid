@@ -11,10 +11,10 @@ swift build
 swift test  --enable-code-coverage
 
 if [[ $TRAVIS_OS_NAME = 'osx' ]]; then
-  xcrun llvm-cov export -format="lcov" .build/debug/${{FRAMEWORK_NAME}}PackageTests.xctest/Contents/MacOS/${{FRAMEWORK_NAME}}PackageTests -instr-profile .build/debug/codecov/default.profdata > info.lcov
+  xcrun llvm-cov export -format="lcov" .build/debug/${FRAMEWORK_NAME}PackageTests.xctest/Contents/MacOS/${FRAMEWORK_NAME}PackageTests -instr-profile .build/debug/codecov/default.profdata > info.lcov
   bash <(curl https://codecov.io/bash) -F travis -F macOS -n $TRAVIS_JOB_NUMBER-$TRAVIS_OS_NAME
 else
-  llvm-cov export -format="lcov" .build/x86_64-unknown-linux/debug/${{FRAMEWORK_NAME}}PackageTests.xctest -instr-profile .build/debug/codecov/default.profdata > info.lcov
+  llvm-cov export -format="lcov" .build/x86_64-unknown-linux/debug/${FRAMEWORK_NAME}PackageTests.xctest -instr-profile .build/debug/codecov/default.profdata > info.lcov
   bash <(curl https://codecov.io/bash) -F travis -F bionic -n $TRAVIS_JOB_NUMBER-$TRAVIS_OS_NAME
 fi
 

@@ -9,3 +9,5 @@ identifier_name:
     - id
 excluded:
   - Tests/*/XCTestManifests.swift
+  - DerivedData
+  - .build

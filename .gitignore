@@ -1,11 +1,12 @@
-
 # Created by https://www.gitignore.io/api/swiftpm,swiftpackagemanager,xcode,swift,macos
 # Edit at https://www.gitignore.io/?templates=swiftpm,swiftpackagemanager,xcode,swift,macos
+
 
 ### macOS ###
 # General
 .DS_Store
 *.DS_Store
+
 .AppleDouble
 .LSOverride
 
@@ -44,6 +45,7 @@ DerivedData/
 # Xcode
 #
 build/
+
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -58,6 +60,7 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcuserstate
+
 *.xcscmblueprint
 
 ## Obj-C/Swift specific
@@ -85,14 +88,16 @@ DerivedData
 *.xcuserstate
 
 # CocoaPods
+
 # We recommend against adding the Pods directory to your .gitignore. However
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
+
 Example/Pods/
 Example/*.xcworkspace
 
 # Carthage
+
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
@@ -103,6 +108,7 @@ Dependencies/
 .accio/
 
 # fastlane
+
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
@@ -120,6 +126,7 @@ VCS.swift
 
 iOSInjectionProject/
 Products
+
 
 ### SwiftPackageManager ###
 Packages
@@ -144,6 +151,7 @@ xcuserdata
 ## Xcode Patch
 /*.xcodeproj/*
 .swiftpm
+
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
@@ -156,3 +164,4 @@ xcuserdata
 *.xcworkspace
 Pods
 *.lcov
+Brewfile.lock.json
