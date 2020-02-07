@@ -20,9 +20,15 @@ sed -i '' "s/_USER_NAME/$USER_NAME/g" Example/project.yml
 pod spec create $(git remote get-url origin) --silent
 
 perl -pi -e '$_ .= qq(Lorem Description\n) if /spec.description  = <<-DESC/' $PACKAGE_NAME.podspec
+sed -i '' 's|spec.summary.*|spec.summary      = "Lorem Ipsum"|g' $PACKAGE_NAME.podspec 
 sed -i '' 's|"MIT (example)"|{ :type => "MIT", :file => "LICENSE" }|g' $PACKAGE_NAME.podspec
 sed -i '' 's|spec.source_files  =.*|spec.source_files  = "Sources/**/*.swift"|g' $PACKAGE_NAME.podspec 
 sed -i '' 's|spec.exclude_files.*|spec.swift_versions = "5"|g' $PACKAGE_NAME.podspec 
+
+sed -i '' 's|spec.ios.deployment_target.*|spec.ios.deployment_target = "8.0"|g' $PACKAGE_NAME.podspec
+sed -i '' 's|spec.osx.deployment_target.*|spec.osx.deployment_target = "10.9"|g' $PACKAGE_NAME.podspec
+sed -i '' 's|spec.watchos.deployment_target.*|spec.watchos.deployment_target = "2.0"|g' $PACKAGE_NAME.podspec
+sed -i '' 's|spec.tvos.deployment_target.*|spec.tvos.deployment_target = "9.0"|g' $PACKAGE_NAME.podspec
 
 swift build
 swift test
