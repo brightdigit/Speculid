@@ -26,9 +26,13 @@
 
 # Requirements 
 
-* CocoaPods
-* XCodeGen
-* SourceDocs
+* [CocoaPods](https://cocoapods.org)
+* [XCodeGen](https://github.com/yonaskolb/XcodeGen)
+* [SourceDocs](https://github.com/eneko/SourceDocs)
+
+# How to get started
+
+Run `./setup.sh` once you have your own repo. It will create the corresponding files for your Swift Package/Cocoapod.
 
 # DESCRIPTION HERE
 
