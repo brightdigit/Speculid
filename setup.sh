@@ -33,3 +33,9 @@ sed -i '' 's|spec.exclude_files.*|spec.swift_versions = "5"|g' $PACKAGE_NAME.pod
 swift build
 swift test
 sourcedocs generate --spm-module $PACKAGE_NAME --output-folder docs
+pushd Example
+xcodegen generate
+pod init
+sed -i '' "s|# Pods for.*|pod '$PACKAGE_NAME', :path => '../'|g" Podfile 
+pod install
+popd 

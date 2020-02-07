@@ -1,6 +1,6 @@
 name: Example
 options:
-  bundleIdPrefix: com._USER_NAME
+  bundleIdPrefix: com.brightdigit
 targets:
   iOS_Example:
     type: application
@@ -10,19 +10,19 @@ targets:
     dependencies:
       - target: iOS_Example.watchOS_Example
     info:
-      path: Application/iOS.Info.plist
+      path: iOS.Info.plist
   iOS_Example.watchOS_Example:
     type: application.watchapp2
     platform: watchOS
     deploymentTarget: "2.0"
-    sources: [watchOS/App]
+    #sources: [watchOS/App]
     dependencies:
       - target: iOS_Example.watchOS_Example.watchOS_Example_Extension
     info:
       path: watchOS_Example.Info.plist
       properties:
         WKWatchKitApp: true
-        WKCompanionAppBundleIdentifier: com._USER_NAME.iOS-Example
+        WKCompanionAppBundleIdentifier: com.brightdigit.iOS-Example
   iOS_Example.watchOS_Example.watchOS_Example_Extension:
     type: watchkit2-extension
     platform: watchOS
@@ -33,7 +33,7 @@ targets:
       properties:
         NSExtension:
           NSExtensionAttributes:
-            WKAppBundleIdentifier : com._USER_NAME.iOS-Example.watchOS-Example
+            WKAppBundleIdentifier : com.brightdigit.iOS-Example.watchOS-Example
           NSExtensionPointIdentifier: com.apple.watchkit
         WKExtensionDelegateClassName: $(PRODUCT_MODULE_NAME).ExtensionDelegate
   tvOS_Example:
