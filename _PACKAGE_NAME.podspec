@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint _PACKAGE_NAME.podspec' to ensure this is a
+#  Be sure to run `pod spec lint EggSeed.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "_PACKAGE_NAME"
+  spec.name         = "EggSeed"
   spec.version      = "0.0.1"
   # spec.summary      = "Summary Here"
 
@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
   #
   #                 DESC
 
-  spec.homepage     = "https://github.com/_USER_NAME/_PACKAGE_NAME"
+  spec.homepage     = "https://github.com/brightdigit/EggSeed"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -77,7 +77,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/_USER_NAME/_PACKAGE_NAME.git", :tag => "0.0.1" }
+  spec.source       = { :git => "https://github.com/brightdigit/EggSeed.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
