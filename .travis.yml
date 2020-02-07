@@ -7,7 +7,7 @@ jobs:
       osx_image: xcode11.3
 env:
   global:
-  - FRAMEWORK_NAME=EggSeed
+  - FRAMEWORK_NAME=_PACKAGE_NAME
 before_install:
   - ./Scripts/before_install.sh
 script:
