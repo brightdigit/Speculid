@@ -28,7 +28,7 @@ sed -i '' "s/_USER_NAME/$USER_NAME/g" Example/project.yml
 pod spec create $(git remote get-url origin) --silent
 
 perl -pi -e '$_ .= qq(Lorem Description\n) if /spec.description  = <<-DESC/' $PACKAGE_NAME.podspec
-sed -i '' 's|"MIT (example)"|{ :type => "MIT", :file => "LICENSE" }"|g' $PACKAGE_NAME.podspec
+sed -i '' 's|"MIT (example)"|{ :type => "MIT", :file => "LICENSE" }|g' $PACKAGE_NAME.podspec
 sed -i '' 's|spec.source_files  =.*|spec.source_files  = "Sources/**/*.swift"|g' $PACKAGE_NAME.podspec 
 sed -i '' 's|spec.exclude_files.*|spec.swift_versions = "5"|g' $PACKAGE_NAME.podspec 
 
