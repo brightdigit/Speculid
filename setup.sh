@@ -22,3 +22,6 @@ sed -i '' "s/_USER_NAME/$USER_NAME/g" .travis.yml
 sed -i '' "s/_USER_NAME/$USER_NAME/g" README.md
 sed -i '' "s/_USER_NAME/$USER_NAME/g" _PACKAGE_NAME.podspec
 sed -i '' "s/_USER_NAME/$USER_NAME/g" LICENSE
+
+sed -i '' 's|spec.source_files  =.*|spec.source_files  = "Sources/**/*.swift"|g' EggSeed.podspec 
+sed -i '' 's|spec.exclude_files|#spec.exclude_files|g' EggSeed.podspec 
