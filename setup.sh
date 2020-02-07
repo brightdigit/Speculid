@@ -13,14 +13,14 @@ sed -i '' "s/_PACKAGE_NAME/$PACKAGE_NAME/g" .github/workflows/macOS.yml
 sed -i '' "s/_PACKAGE_NAME/$PACKAGE_NAME/g" .github/workflows/ubuntu.yml
 sed -i '' "s/_PACKAGE_NAME/$PACKAGE_NAME/g" .travis.yml
 sed -i '' "s/_PACKAGE_NAME/$PACKAGE_NAME/g" README.md
-sed -i '' "s/_PACKAGE_NAME/$PACKAGE_NAME/g" _PACKAGE_NAME.podspec
+#sed -i '' "s/_PACKAGE_NAME/$PACKAGE_NAME/g" _PACKAGE_NAME.podspec
 sed -i '' "s/_PACKAGE_NAME/$PACKAGE_NAME/g" LICENSE
 
 sed -i '' "s/_USER_NAME/$USER_NAME/g" .github/workflows/macOS.yml
 sed -i '' "s/_USER_NAME/$USER_NAME/g" .github/workflows/ubuntu.yml
 sed -i '' "s/_USER_NAME/$USER_NAME/g" .travis.yml
 sed -i '' "s/_USER_NAME/$USER_NAME/g" README.md
-sed -i '' "s/_USER_NAME/$USER_NAME/g" _PACKAGE_NAME.podspec
+#sed -i '' "s/_USER_NAME/$USER_NAME/g" _PACKAGE_NAME.podspec
 sed -i '' "s/_USER_NAME/$USER_NAME/g" LICENSE
 
 pod spec create $(git remote get-url origin) --silent
