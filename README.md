@@ -5,7 +5,6 @@
 ![GitHub](https://img.shields.io/github/license/_USER_NAME/_PACKAGE_NAME)
 ![GitHub issues](https://img.shields.io/github/issues/_USER_NAME/_PACKAGE_NAME)
 [![Beerpay](https://img.shields.io/beerpay/_USER_NAME/_PACKAGE_NAME.svg?maxAge=2592000)](https://beerpay.io/_USER_NAME/_PACKAGE_NAME)
-[![Analytics](https://ga-beacon.appspot.com/UA-33667276-5/_USER_NAME/_PACKAGE_NAME?flat&useReferer)](https://github.com/igrigorik/ga-beacon)
 
 [![macOS](https://github.com/_USER_NAME/_PACKAGE_NAME/workflows/macOS/badge.svg)](https://github.com/_USER_NAME/_PACKAGE_NAME/actions?query=workflow%3AmacOS)
 [![ubuntu](https://github.com/_USER_NAME/_PACKAGE_NAME/workflows/ubuntu/badge.svg)](https://github.com/_USER_NAME/_PACKAGE_NAME/actions?query=workflow%3Aubuntu)
@@ -32,7 +31,18 @@
 
 # How to get started
 
-Run `./setup.sh` once you have your own repo. It will create the corresponding files for your Swift Package/Cocoapod.
+1. [Use the template](https://github.com/brightdigit/EggSeed/generate)
+2. Run [`./setup.sh`](https://github.com/brightdigit/EggSeed/blob/master/setup.sh) once you have your own repo. 
+3. It will create the corresponding files for your Swift Package/Cocoapod/Carthage.
+4. Customize by 
+  * updating Package.swift
+  * supported OSes in Pod spec
+  * update [SwiftFormat](https://github.com/brightdigit/EggSeed/blob/master/.swiftformat) and [SwiftLint](https://github.com/brightdigit/EggSeed/blob/master/.swiftlint.yml) settings
+  * Add Documentation and Notes to README.md
+  * update [travis-ci](https://github.com/brightdigit/EggSeed/blob/master/.travis.yml) or [github actions files](https://github.com/brightdigit/EggSeed/tree/master/.github/workflows)
+  * integrate third-party analysis services and badges such as [CodeCov](https://codecov.io), [CodeClimate](https://codeclimate.com), [CodeFactor](https://www.codefactor.io/dashboard), [Hound](https://houndci.com)
+5. Code Away!
+5. Add to [SwiftPM](https://github.com/daveverwer/SwiftPMLibrary)
 
 # DESCRIPTION HERE
 
