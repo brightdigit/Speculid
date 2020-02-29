@@ -32,6 +32,10 @@ jobs:
       run: swift package dump-package | jq -e ".products | length > 0"
     - name: CocoaPods Action
       run: pod lib lint
+    - name: Upload to CodeCov.io
+      run: bash <(curl https://codecov.io/bash) -F github -F macos -n ${{ github.sha }}
+      env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
