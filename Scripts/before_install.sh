@@ -1,11 +1,13 @@
 #!/bin/bash
 
+SWIFT_VER="5.1.3"
+
 if [[ $TRAVIS_OS_NAME = 'osx' ]]; then
   brew update
   brew bundle
-else
-  wget -q https://swift.org/builds/swift-5.1.3-release/ubuntu1804/swift-5.1.3-RELEASE/swift-5.1.3-RELEASE-ubuntu18.04.tar.gz
-  tar xzf swift-5.1.3-RELEASE-ubuntu18.04.tar.gz
-  ls ${PWD}/swift-5.1.3-RELEASE-ubuntu18.04/usr/bin
-  export PATH="${PWD}/swift-5.1.3-RELEASE-ubuntu18.04/usr/bin:$PATH"
+elif [[ $TRAVIS_OS_NAME = 'linux' ]]; then
+  RELEASE_DOT=$(lsb_release -sr)
+  RELEASE_NUM=${RELEASE_DOT//[-._]/}
+  wget https://swift.org/builds/swift-${SWIFT_VER}-release/ubuntu${RELEASE_NUM}/swift-${SWIFT_VER}-RELEASE/swift-${SWIFT_VER}-RELEASE-ubuntu${RELEASE_DOT}.tar.gz
+  tar xzf swift-${SWIFT_VER}-RELEASE-ubuntu${RELEASE_DOT}.tar.gz
 fi

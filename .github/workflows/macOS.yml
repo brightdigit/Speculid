@@ -28,6 +28,8 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     - name: Build Documentation
       run: sourcedocs generate --spm-module ${{ env.PACKAGE_NAME }} --output-folder docs
+    - name: Verify Valid Swift Package
+      run: swift package dump-package | jq -e ".products | length > 0"
     - name: CocoaPods Action
       run: pod lib lint
     - name: Commit files
