@@ -3,7 +3,7 @@
 SWIFT_VER="5.1.3"
 
 if [[ $TRAVIS_OS_NAME = 'osx' ]]; then
-  brew update
+  brew update >/dev/null
   brew bundle
 elif [[ $TRAVIS_OS_NAME = 'linux' ]]; then
   RELEASE_DOT=$(lsb_release -sr)
