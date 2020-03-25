@@ -12,18 +12,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Download Swift 5.1.3
-      run: wget -q https://swift.org/builds/swift-5.1.3-release/ubuntu1804/swift-5.1.3-RELEASE/swift-5.1.3-RELEASE-ubuntu18.04.tar.gz
-    - name: Extract Swift 5.1.3
-      run: tar xzf swift-5.1.3-RELEASE-ubuntu18.04.tar.gz
+    - name: Download Swift 5.2
+      run: wget -q https://swift.org/builds/swift-5.2-release/ubuntu1804/swift-5.2-RELEASE/swift-5.2-RELEASE-ubuntu18.04.tar.gz
+    - name: Extract Swift 5.2
+      run: tar xzf swift-5.2-RELEASE-ubuntu18.04.tar.gz
     - name: Add Path
-      run: echo "::add-path::$GITHUB_WORKSPACE/swift-5.1.3-RELEASE-ubuntu18.04/usr/bin"
+      run: echo "::add-path::$GITHUB_WORKSPACE/swift-5.2-RELEASE-ubuntu18.04/usr/bin"
     - name: Build
       run: swift build
     - name: Run tests
-      run: swift test --enable-code-coverage
+      run: swift test --enable-test-discovery --enable-code-coverage
     - name: Prepare Code Coverage
-      run: llvm-cov export -format="lcov" .build/x86_64-unknown-linux/debug/${{ env.PACKAGE_NAME }}PackageTests.xctest -instr-profile .build/debug/codecov/default.profdata > info.lcov
+      run: llvm-cov export -format="lcov" .build/x86_64-unknown-linux-gnu/debug/${{ env.PACKAGE_NAME }}PackageTests.xctest -instr-profile .build/debug/codecov/default.profdata > info.lcov
     - name: Upload to CodeCov.io
       run: bash <(curl https://codecov.io/bash) -F github -F bionic -n ${{ github.sha }}
       env:
