@@ -1,0 +1,16 @@
+PODS:
+  - Speculid (2.0.0.pre.beta.2)
+
+DEPENDENCIES:
+  - Speculid (from `../`)
+
+EXTERNAL SOURCES:
+  Speculid:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Speculid: df1458b9a38d2a0f29623a64a3cd36334198810a
+
+PODFILE CHECKSUM: 100806bf03b5b5b5620d6da907f10a2da105ec6b
+
+COCOAPODS: 1.8.4
