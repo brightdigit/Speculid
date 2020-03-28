@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SWIFT_VER="5.1.3"
+SWIFT_VER="5.2"
 
 if [[ $TRAVIS_OS_NAME = 'osx' ]]; then
   brew update >/dev/null
