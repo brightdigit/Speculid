@@ -1,3 +1,3 @@
 struct Speculid {
-    var text = "Hello, World!"
+  var text = "Hello, World!"
 }
