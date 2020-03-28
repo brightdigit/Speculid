@@ -11,3 +11,4 @@ excluded:
   - Tests/*/XCTestManifests.swift
   - DerivedData
   - .build
+  - _archive
