@@ -12,3 +12,4 @@ excluded:
   - DerivedData
   - .build
   - _archive
+  - vendor
