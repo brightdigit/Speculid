@@ -1,6 +1,6 @@
 import Foundation
 
-guard let defaults = UserDefaults.init(suiteName: "MLT7M394S7.group.com.brightdigit.Speculid") else {
+guard let defaults = UserDefaults(suiteName: "MLT7M394S7.group.com.brightdigit.Speculid") else {
   fatalError("No defaults")
 }
 
