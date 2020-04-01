@@ -21,6 +21,7 @@ class DefaultsObject: ObservableObject {
   init() {
     cancellable = defaults.publisher(for: \.count).receive(on: DispatchQueue.main).assign(to: \DefaultsObject.count, on: self)
     count = defaults.integer(forKey: "count")
+    print(count)
   }
 }
 
