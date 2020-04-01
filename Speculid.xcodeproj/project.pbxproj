@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3796B7C2432C50100E5F5F9 /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3DB4824243166FC00B1DA4F /* speculid */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B3796B7C2432C50100E5F5F9 /* spcld in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3DB4824243166FC00B1DA4F /* spcld */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3AD544E243410120035BCA6 /* speculid.sdef in Resources */ = {isa = PBXBuildFile; fileRef = B3AD544D243410120035BCA6 /* speculid.sdef */; };
-		B3AD5450243410B50035BCA6 /* SpeculidApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD544F243410B50035BCA6 /* SpeculidApplication.swift */; };
-		B3AD5452243412270035BCA6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB4826243166FC00B1DA4F /* main.swift */; };
 		B3DB480B2431642100B1DA4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB480A2431642100B1DA4F /* AppDelegate.swift */; };
 		B3DB480D2431642100B1DA4F /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB480C2431642100B1DA4F /* Document.swift */; };
 		B3DB480F2431642100B1DA4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB480E2431642100B1DA4F /* ContentView.swift */; };
@@ -18,6 +16,7 @@
 		B3DB48142431642600B1DA4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48132431642600B1DA4F /* Assets.xcassets */; };
 		B3DB48172431642600B1DA4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48162431642600B1DA4F /* Preview Assets.xcassets */; };
 		B3DB481A2431642600B1DA4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48182431642600B1DA4F /* Main.storyboard */; };
+		B3E8D6B22434D71000B34464 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB4826243166FC00B1DA4F /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +33,10 @@
 		B3796B7A2432C33600E5F5F9 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 8;
-			dstPath = "";
-			dstSubfolderSpec = 12;
+			dstPath = Contents/Helpers;
+			dstSubfolderSpec = 1;
 			files = (
-				B3796B7C2432C50100E5F5F9 /* speculid in CopyFiles */,
+				B3796B7C2432C50100E5F5F9 /* spcld in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -55,7 +54,6 @@
 /* Begin PBXFileReference section */
 		B3796B792432B7FF00E5F5F9 /* Command.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Command.entitlements; sourceTree = "<group>"; };
 		B3AD544D243410120035BCA6 /* speculid.sdef */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = speculid.sdef; sourceTree = "<group>"; };
-		B3AD544F243410B50035BCA6 /* SpeculidApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplication.swift; sourceTree = "<group>"; };
 		B3DB48072431642100B1DA4F /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DB480A2431642100B1DA4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3DB480C2431642100B1DA4F /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -66,8 +64,9 @@
 		B3DB48192431642600B1DA4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3DB481B2431642600B1DA4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3DB481C2431642600B1DA4F /* Speculid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speculid.entitlements; sourceTree = "<group>"; };
-		B3DB4824243166FC00B1DA4F /* speculid */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = speculid; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3DB4824243166FC00B1DA4F /* spcld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = spcld; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DB4826243166FC00B1DA4F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B3E8D6B52434EB5500B34464 /* Command.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Command.plist; path = Speculid/Command.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				B3DB48072431642100B1DA4F /* Speculid.app */,
-				B3DB4824243166FC00B1DA4F /* speculid */,
+				B3DB4824243166FC00B1DA4F /* spcld */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,7 +118,6 @@
 				B3DB48102431642100B1DA4F /* Document.xcdatamodeld */,
 				B3DB48152431642600B1DA4F /* Preview Content */,
 				B3AD544D243410120035BCA6 /* speculid.sdef */,
-				B3AD544F243410B50035BCA6 /* SpeculidApplication.swift */,
 			);
 			path = Speculid;
 			sourceTree = "<group>";
@@ -135,6 +133,7 @@
 		B3DB4825243166FC00B1DA4F /* speculid */ = {
 			isa = PBXGroup;
 			children = (
+				B3E8D6B52434EB5500B34464 /* Command.plist */,
 				B3796B792432B7FF00E5F5F9 /* Command.entitlements */,
 				B3DB4826243166FC00B1DA4F /* main.swift */,
 			);
@@ -163,9 +162,9 @@
 			productReference = B3DB48072431642100B1DA4F /* Speculid.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B3DB4823243166FC00B1DA4F /* speculid */ = {
+		B3DB4823243166FC00B1DA4F /* spcld */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B3DB4828243166FC00B1DA4F /* Build configuration list for PBXNativeTarget "speculid" */;
+			buildConfigurationList = B3DB4828243166FC00B1DA4F /* Build configuration list for PBXNativeTarget "spcld" */;
 			buildPhases = (
 				B3DB4820243166FC00B1DA4F /* Sources */,
 				B3DB4821243166FC00B1DA4F /* Frameworks */,
@@ -175,9 +174,9 @@
 			);
 			dependencies = (
 			);
-			name = speculid;
+			name = spcld;
 			productName = speculid;
-			productReference = B3DB4824243166FC00B1DA4F /* speculid */;
+			productReference = B3DB4824243166FC00B1DA4F /* spcld */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -211,7 +210,7 @@
 			projectRoot = "";
 			targets = (
 				B3DB48062431642100B1DA4F /* Speculid */,
-				B3DB4823243166FC00B1DA4F /* speculid */,
+				B3DB4823243166FC00B1DA4F /* spcld */,
 			);
 		};
 /* End PBXProject section */
@@ -237,10 +236,8 @@
 			files = (
 				B3DB48122431642100B1DA4F /* Document.xcdatamodeld in Sources */,
 				B3DB480D2431642100B1DA4F /* Document.swift in Sources */,
-				B3AD5452243412270035BCA6 /* main.swift in Sources */,
 				B3DB480B2431642100B1DA4F /* AppDelegate.swift in Sources */,
 				B3DB480F2431642100B1DA4F /* ContentView.swift in Sources */,
-				B3AD5450243410B50035BCA6 /* SpeculidApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E8D6B22434D71000B34464 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +254,7 @@
 /* Begin PBXTargetDependency section */
 		B3796B7E2432C87600E5F5F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B3DB4823243166FC00B1DA4F /* speculid */;
+			target = B3DB4823243166FC00B1DA4F /* spcld */;
 			targetProxy = B3796B7D2432C87600E5F5F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -322,6 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_ASSET_PATHS = "\"Speculid/Preview Content\"";
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -399,6 +398,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"Speculid/Preview Content\"";
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -467,6 +467,8 @@
 				CODE_SIGN_ENTITLEMENTS = Speculid/Command.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = MLT7M394S7;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -486,7 +488,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Speculid/Command.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 3.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -535,6 +539,8 @@
 				CODE_SIGN_ENTITLEMENTS = Speculid/Command.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = MLT7M394S7;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -548,7 +554,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Speculid/Command.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 3.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.Speculid-macOS-Cmd";
@@ -582,7 +590,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B3DB4828243166FC00B1DA4F /* Build configuration list for PBXNativeTarget "speculid" */ = {
+		B3DB4828243166FC00B1DA4F /* Build configuration list for PBXNativeTarget "spcld" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3DB4829243166FC00B1DA4F /* Debug */,
