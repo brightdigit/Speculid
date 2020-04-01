@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B3796B7C2432C50100E5F5F9 /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3DB4824243166FC00B1DA4F /* speculid */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B3AD544E243410120035BCA6 /* speculid.sdef in Resources */ = {isa = PBXBuildFile; fileRef = B3AD544D243410120035BCA6 /* speculid.sdef */; };
+		B3AD5450243410B50035BCA6 /* SpeculidApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD544F243410B50035BCA6 /* SpeculidApplication.swift */; };
+		B3AD5452243412270035BCA6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB4826243166FC00B1DA4F /* main.swift */; };
 		B3DB480B2431642100B1DA4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB480A2431642100B1DA4F /* AppDelegate.swift */; };
 		B3DB480D2431642100B1DA4F /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB480C2431642100B1DA4F /* Document.swift */; };
 		B3DB480F2431642100B1DA4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB480E2431642100B1DA4F /* ContentView.swift */; };
@@ -15,7 +18,6 @@
 		B3DB48142431642600B1DA4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48132431642600B1DA4F /* Assets.xcassets */; };
 		B3DB48172431642600B1DA4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48162431642600B1DA4F /* Preview Assets.xcassets */; };
 		B3DB481A2431642600B1DA4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48182431642600B1DA4F /* Main.storyboard */; };
-		B3DB4827243166FC00B1DA4F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB4826243166FC00B1DA4F /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		B3796B792432B7FF00E5F5F9 /* Command.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Command.entitlements; sourceTree = "<group>"; };
+		B3AD544D243410120035BCA6 /* speculid.sdef */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = speculid.sdef; sourceTree = "<group>"; };
+		B3AD544F243410B50035BCA6 /* SpeculidApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApplication.swift; sourceTree = "<group>"; };
 		B3DB48072431642100B1DA4F /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DB480A2431642100B1DA4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3DB480C2431642100B1DA4F /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 				B3DB481C2431642600B1DA4F /* Speculid.entitlements */,
 				B3DB48102431642100B1DA4F /* Document.xcdatamodeld */,
 				B3DB48152431642600B1DA4F /* Preview Content */,
+				B3AD544D243410120035BCA6 /* speculid.sdef */,
+				B3AD544F243410B50035BCA6 /* SpeculidApplication.swift */,
 			);
 			path = Speculid;
 			sourceTree = "<group>";
@@ -217,6 +223,7 @@
 			files = (
 				B3DB481A2431642600B1DA4F /* Main.storyboard in Resources */,
 				B3DB48172431642600B1DA4F /* Preview Assets.xcassets in Resources */,
+				B3AD544E243410120035BCA6 /* speculid.sdef in Resources */,
 				B3DB48142431642600B1DA4F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,8 +237,10 @@
 			files = (
 				B3DB48122431642100B1DA4F /* Document.xcdatamodeld in Sources */,
 				B3DB480D2431642100B1DA4F /* Document.swift in Sources */,
+				B3AD5452243412270035BCA6 /* main.swift in Sources */,
 				B3DB480B2431642100B1DA4F /* AppDelegate.swift in Sources */,
 				B3DB480F2431642100B1DA4F /* ContentView.swift in Sources */,
+				B3AD5450243410B50035BCA6 /* SpeculidApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3DB4827243166FC00B1DA4F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
