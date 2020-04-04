@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B303554A24381F1200A8EAB9 /* SpeculidKit in Frameworks */ = {isa = PBXBuildFile; productRef = B303554924381F1200A8EAB9 /* SpeculidKit */; };
 		B3796B7C2432C50100E5F5F9 /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3DB4824243166FC00B1DA4F /* speculid */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3DB480B2431642100B1DA4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB480A2431642100B1DA4F /* AppDelegate.swift */; };
 		B3DB480D2431642100B1DA4F /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB480C2431642100B1DA4F /* Document.swift */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		B3796B792432B7FF00E5F5F9 /* Command.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Command.entitlements; sourceTree = "<group>"; };
 		B37A52372435014400FEA6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B39F286B243817F700A69B85 /* SpeculidKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SpeculidKit; sourceTree = "<group>"; };
 		B3DB48072431642100B1DA4F /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DB480A2431642100B1DA4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3DB480C2431642100B1DA4F /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B303554A24381F1200A8EAB9 /* SpeculidKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +88,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B303554824381F1200A8EAB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B37A5236243500C900FEA6E9 /* command */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,12 +105,22 @@
 			path = command;
 			sourceTree = "<group>";
 		};
+		B39F13FE243817AB00A69B85 /* packages */ = {
+			isa = PBXGroup;
+			children = (
+				B39F286B243817F700A69B85 /* SpeculidKit */,
+			);
+			path = packages;
+			sourceTree = "<group>";
+		};
 		B3DB47FC243162DA00B1DA4F = {
 			isa = PBXGroup;
 			children = (
+				B39F13FE243817AB00A69B85 /* packages */,
 				B37A5236243500C900FEA6E9 /* command */,
 				B3DB48092431642100B1DA4F /* Speculid */,
 				B3DB48082431642100B1DA4F /* Products */,
+				B303554824381F1200A8EAB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +175,9 @@
 				B3796B7E2432C87600E5F5F9 /* PBXTargetDependency */,
 			);
 			name = Speculid;
+			packageProductDependencies = (
+				B303554924381F1200A8EAB9 /* SpeculidKit */,
+			);
 			productName = Speculid;
 			productReference = B3DB48072431642100B1DA4F /* Speculid.app */;
 			productType = "com.apple.product-type.application";
@@ -343,6 +366,27 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/libpng/1.6.34/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/pixman/0.34.0_1/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/freetype/2.9.1/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/pango/1.42.1/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/gdk-pixbuf/2.36.12/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/icu4c/61.1/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/harfbuzz/1.7.6_2/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/glib/2.56.1/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/graphite2/1.3.11/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/cairo/1.14.12/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/cairo/1.14.12/lib/cairo",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/fribidi/1.0.3/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/fontconfig/2.13.0/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/libcroco/0.6.12/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/gettext/0.19.8.1/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/librsvg/2.42.2_2/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/pcre/8.42/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/libffi/3.2.1/lib",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 3.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -414,6 +458,27 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/libpng/1.6.34/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/pixman/0.34.0_1/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/freetype/2.9.1/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/pango/1.42.1/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/gdk-pixbuf/2.36.12/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/icu4c/61.1/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/harfbuzz/1.7.6_2/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/glib/2.56.1/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/graphite2/1.3.11/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/cairo/1.14.12/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/cairo/1.14.12/lib/cairo",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/fribidi/1.0.3/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/fontconfig/2.13.0/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/libcroco/0.6.12/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/gettext/0.19.8.1/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/librsvg/2.42.2_2/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/pcre/8.42/lib",
+					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/libffi/3.2.1/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 3.0;
@@ -596,6 +661,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B303554924381F1200A8EAB9 /* SpeculidKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpeculidKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B3DB48102431642100B1DA4F /* Document.xcdatamodeld */ = {
