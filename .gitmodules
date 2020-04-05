@@ -4,4 +4,4 @@
 [submodule "packages/SpeculidKit"]
 	path = packages/SpeculidKit
 	url = https://github.com/brightdigit/SpeculidKit.git
-  branch = release/v3.0.0-alpha.1
+  	branch = release/v3.0.0-alpha.1
