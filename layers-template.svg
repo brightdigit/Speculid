@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0beta2 (2b71d25, 2019-12-03)"
+   sodipodi:docname="layers-template.svg"
+   xml:space="preserve"
+   style="enable-background:new 0 0 250 250;"
+   viewBox="0 0 250 250"
+   y="0px"
+   x="0px"
+   id="Layer_1"
+   version="1.1"><metadata
+   id="metadata29"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs27" /><sodipodi:namedview
+   inkscape:current-layer="Layer_1"
+   inkscape:window-maximized="0"
+   inkscape:window-y="300"
+   inkscape:window-x="1135"
+   inkscape:cy="128.3984"
+   inkscape:cx="57.293651"
+   inkscape:zoom="0.91001678"
+   showgrid="false"
+   id="namedview25"
+   inkscape:window-height="866"
+   inkscape:window-width="1400"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   inkscape:document-rotation="0"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+<style
+   id="style10"
+   type="text/css">
+	.st0{fill:#273B7A;}
+	.st1{fill:#121149;}
+	.st2{fill:#FF314F;}
+	.st3{fill:#FF6262;}
+	.st4{fill:#FFC5BD;}
+	.st5{fill:#FFAD9E;}
+</style>
+<path
+   d="M 125 0 A 125 125 0 0 0 0 125 A 125 125 0 0 0 125 250 A 125 125 0 0 0 250 125 A 125 125 0 0 0 125 0 z M 106.09961 53.900391 L 192.80078 53.900391 L 192.80078 140.59961 L 171.09961 140.59961 L 171.09961 162.19922 L 142.30078 162.19922 L 142.30078 191.09961 L 142.19922 191.09961 L 98.900391 191.09961 L 55.599609 191.09961 L 55.599609 104.40039 L 84.400391 104.40039 L 84.400391 75.5 L 106.09961 75.5 L 106.09961 53.900391 z "
+   style="fill:#273b7a"
+   id="circle12" />
+
+
+
+
+
+</svg>
