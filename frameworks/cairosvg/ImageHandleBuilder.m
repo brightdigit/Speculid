@@ -33,8 +33,12 @@ static ImageHandleBuilder * _shared = nil;
   {
     case kSvg:
       rsvgHandle = rsvg_handle_new_from_file(file.url.path.UTF8String , &gerror);
-      *error = [[GlibError alloc] initWithGError: gerror];
-      return [[SVGImageHandle alloc] initWithRsvgHandle: rsvgHandle];
+      *error = [[GlibError alloc] initWithGError: gerror withURL:file.url];
+      if (error != nil) {
+        return nil;
+      } else {
+        return [[SVGImageHandle alloc] initWithRsvgHandle: rsvgHandle];
+      }
     case kPng:
      sourceSurface = cairo_image_surface_create_from_png(file.url.path.UTF8String);
       return [[PNGImageHandle alloc] initWithSurface: sourceSurface];
