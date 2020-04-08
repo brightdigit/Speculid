@@ -57,7 +57,7 @@
 	<true/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
-	<key>LSUIElement</key>
+	<key>LSMultipleInstancesProhibited</key>
 	<true/>
 </dict>
 </plist>

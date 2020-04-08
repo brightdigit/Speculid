@@ -27,4 +27,9 @@ class Document: NSPersistentDocument {
     let windowController = NSWindowController(window: window)
     addWindowController(windowController)
   }
+  
+  override func close() {
+    NotificationCenter.default.post(name: NSNotification.Name("DocumentClosing"), object: nil)
+    super.close()
+  }
 }
