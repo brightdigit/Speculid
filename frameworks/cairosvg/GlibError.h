@@ -11,7 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @interface GlibError : NSError
+@property (readonly, copy) NSURL * _Nonnull sourceURL;
 @property (readonly) GError * _Nonnull gerror;
-- (id) initWithGError: (GError *  _Nonnull) gerror;
+- (id) initWithGError: (GError *  _Nonnull) gerror withURL: (NSURL * _Nonnull) url;
 @end
 NS_ASSUME_NONNULL_END
