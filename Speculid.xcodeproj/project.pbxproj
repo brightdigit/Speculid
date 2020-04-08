@@ -2010,6 +2010,8 @@
 		B3F8095F20E585E800030497 /* libharfbuzz-gobject.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libharfbuzz-gobject.0.dylib"; sourceTree = "<group>"; };
 		B3F8096420E585E800030497 /* libharfbuzz.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libharfbuzz.0.dylib; sourceTree = "<group>"; };
 		B3F8096B20E585E800030497 /* libharfbuzz-icu.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libharfbuzz-icu.0.dylib"; sourceTree = "<group>"; };
+		B3F8DE13243E77250028BD75 /* badassetPath.speculid */ = {isa = PBXFileReference; lastKnownFileType = text; path = badassetPath.speculid; sourceTree = "<group>"; };
+		B3F8DE14243E77400028BD75 /* badsourcePath.speculid */ = {isa = PBXFileReference; lastKnownFileType = text; path = badsourcePath.speculid; sourceTree = "<group>"; };
 		B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionMenuItem.swift; sourceTree = "<group>"; };
 		B3FDF6442180A3FF00455A43 /* InstallerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallerProtocol.swift; sourceTree = "<group>"; };
 		C743CA092B2436D579EB1965 /* Pods-Speculid-Mac-XPC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-XPC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-XPC/Pods-Speculid-Mac-XPC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -2678,6 +2680,7 @@
 		B37C74351F8C58F300DF505B = {
 			isa = PBXGroup;
 			children = (
+				B3F8DE15243E77580028BD75 /* samples */,
 				B3B27DE6218BC9D000569056 /* Speculid-Mac-XPC.entitlements */,
 				B3220A4621154D1A00047BF6 /* scripts */,
 				B3CEF3C41FB611D200F1DF87 /* README.md */,
@@ -4105,6 +4108,15 @@
 				B3F8096420E585E800030497 /* libharfbuzz.0.dylib */,
 			);
 			path = lib;
+			sourceTree = "<group>";
+		};
+		B3F8DE15243E77580028BD75 /* samples */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8DE14243E77400028BD75 /* badsourcePath.speculid */,
+				B3F8DE13243E77250028BD75 /* badassetPath.speculid */,
+			);
+			path = samples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

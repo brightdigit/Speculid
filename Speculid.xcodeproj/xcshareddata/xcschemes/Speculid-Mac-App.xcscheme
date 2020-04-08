@@ -121,6 +121,14 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "--process &quot;${SRCROOT}/samples/badassetPath.speculid&quot;"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--process &quot;${SRCROOT}/samples/badsourcePath.speculid&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "ASBfdsadf"
             isEnabled = "NO">
          </CommandLineArgument>
