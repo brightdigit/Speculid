@@ -29,6 +29,13 @@ let speculidMacAppBundleIdentifier = "com.brightdigit.Speculid-Mac-App"
 func findApplicationBundle(withIdentifier identifer: String, _ callback: @escaping (Bundle?) -> Void) {
   let query = NSMetadataQuery()
   NotificationCenter.default.addObserver(forName: NSNotification.Name.NSMetadataQueryDidFinishGathering, object: nil, queue: nil) { _ in
+    
+    let bundles = query.results.compactMap{ $0 as? NSMetadataItem }.compactMap {
+      $0.value(forAttribute: NSMetadataItemPathKey) as? String
+    }.map{
+      URL.init(fileURLWithPath: $0)
+    }.compactMap( Bundle.init(url:)).filter{$0.bundleIdentifier == identifer}
+    dump(bundles)
     for result in query.results {
       if let item = result as? NSMetadataItem {
         if let path = item.value(forAttribute: NSMetadataItemPathKey) as? String {
