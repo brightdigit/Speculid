@@ -24,7 +24,6 @@ public final class Service: NSObject, ServiceProtocol {
     do {
       builtImageHandle = try ImageHandleBuilder.shared.imageHandle(fromFile: imageFile)
     } catch let error as NSError {
-      dump(error)
       callback(error)
       return
     }

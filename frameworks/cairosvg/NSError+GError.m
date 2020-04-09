@@ -14,7 +14,7 @@
   NSString * message = [[NSString alloc] initWithUTF8String:gerror->message];
   NSDictionary * underlyingUserInfo = [[NSDictionary alloc] initWithObjectsAndKeys: message, NSLocalizedDescriptionKey, nil];
   NSError * underlyingError = [[NSError alloc] initWithDomain:@"GErrorDomain" code:gerror->code userInfo:underlyingUserInfo];
-  NSDictionary * newUserInfo = [[NSDictionary alloc] initWithObjectsAndKeys:underlyingError, NSUnderlyingErrorKey, url.path, NSFilePathErrorKey, nil];
+  NSDictionary * newUserInfo = [[NSDictionary alloc] initWithObjectsAndKeys:underlyingError, NSUnderlyingErrorKey, url.path, NSFilePathErrorKey, message, NSLocalizedDescriptionKey, nil];
   self = [self initWithDomain:@"CairoErrorDomain" code:1100 userInfo:newUserInfo];
   return self;
 }
