@@ -292,8 +292,6 @@
 		B34B52CA217E5FC40080E6DC /* CommandLineInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B52C9217E5FC40080E6DC /* CommandLineInstaller.swift */; };
 		B34E82FB1F8FD4EF0032268F /* ImageFileFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E82FF1F8FD6860032268F /* ImageFileProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B34E83041F8FD90C0032268F /* GlibError.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E83021F8FD90C0032268F /* GlibError.h */; };
-		B34E83051F8FD90C0032268F /* GlibError.m in Sources */ = {isa = PBXBuildFile; fileRef = B34E83031F8FD90C0032268F /* GlibError.m */; };
 		B34E83071F8FDCA30032268F /* GeometryDimension.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E83061F8FDC4C0032268F /* GeometryDimension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E83091F8FDCB80032268F /* Dimension.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E83081F8FDCB80032268F /* Dimension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34E830B1F8FDDAC0032268F /* CairoColorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B34E830A1F8FDDAC0032268F /* CairoColorProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -909,6 +907,8 @@
 		B3F80CAA20E586A000030497 /* libharfbuzz-gobject.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8095F20E585E800030497 /* libharfbuzz-gobject.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3F80CAB20E586A000030497 /* libharfbuzz.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8096420E585E800030497 /* libharfbuzz.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3F80CAE20E586A000030497 /* libharfbuzz-icu.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F8096B20E585E800030497 /* libharfbuzz-icu.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B3F8DE1D243E9A1F0028BD75 /* NSError+GError.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8DE1B243E9A1F0028BD75 /* NSError+GError.h */; };
+		B3F8DE1E243E9A1F0028BD75 /* NSError+GError.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F8DE1C243E9A1F0028BD75 /* NSError+GError.m */; };
 		B3FAD3EB1FA564D0004381A7 /* VersionMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */; };
 		B3FDF6452180A3FF00455A43 /* InstallerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDF6442180A3FF00455A43 /* InstallerProtocol.swift */; };
 		CBE9EF18228D2DADFC9D264F /* Pods_Speculid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB0AF202D3672415910AFDE /* Pods_Speculid.framework */; };
@@ -1399,8 +1399,6 @@
 		B34B52C9217E5FC40080E6DC /* CommandLineInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineInstaller.swift; sourceTree = "<group>"; };
 		B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileFormat.h; sourceTree = "<group>"; };
 		B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFileProtocol.h; sourceTree = "<group>"; };
-		B34E83021F8FD90C0032268F /* GlibError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlibError.h; sourceTree = "<group>"; };
-		B34E83031F8FD90C0032268F /* GlibError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlibError.m; sourceTree = "<group>"; };
 		B34E83061F8FDC4C0032268F /* GeometryDimension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeometryDimension.h; sourceTree = "<group>"; };
 		B34E83081F8FDCB80032268F /* Dimension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dimension.h; sourceTree = "<group>"; };
 		B34E830A1F8FDDAC0032268F /* CairoColorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CairoColorProtocol.h; sourceTree = "<group>"; };
@@ -2012,6 +2010,8 @@
 		B3F8096B20E585E800030497 /* libharfbuzz-icu.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libharfbuzz-icu.0.dylib"; sourceTree = "<group>"; };
 		B3F8DE13243E77250028BD75 /* badassetPath.speculid */ = {isa = PBXFileReference; lastKnownFileType = text; path = badassetPath.speculid; sourceTree = "<group>"; };
 		B3F8DE14243E77400028BD75 /* badsourcePath.speculid */ = {isa = PBXFileReference; lastKnownFileType = text; path = badsourcePath.speculid; sourceTree = "<group>"; };
+		B3F8DE1B243E9A1F0028BD75 /* NSError+GError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+GError.h"; sourceTree = "<group>"; };
+		B3F8DE1C243E9A1F0028BD75 /* NSError+GError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+GError.m"; sourceTree = "<group>"; };
 		B3FAD3EA1FA564D0004381A7 /* VersionMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionMenuItem.swift; sourceTree = "<group>"; };
 		B3FDF6442180A3FF00455A43 /* InstallerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallerProtocol.swift; sourceTree = "<group>"; };
 		C743CA092B2436D579EB1965 /* Pods-Speculid-Mac-XPC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speculid-Mac-XPC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speculid-Mac-XPC/Pods-Speculid-Mac-XPC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -2773,8 +2773,6 @@
 				B37C748C1F8C5B5C00DF505B /* Info.plist */,
 				B34E82FA1F8FD4EF0032268F /* ImageFileFormat.h */,
 				B34E82FE1F8FD6860032268F /* ImageFileProtocol.h */,
-				B34E83021F8FD90C0032268F /* GlibError.h */,
-				B34E83031F8FD90C0032268F /* GlibError.m */,
 				B34E83061F8FDC4C0032268F /* GeometryDimension.h */,
 				B34E83081F8FDCB80032268F /* Dimension.h */,
 				B34E830A1F8FDDAC0032268F /* CairoColorProtocol.h */,
@@ -2783,6 +2781,8 @@
 				B35B71291F9052B200BE477E /* CairoSize.h */,
 				B3136DD81F90E96A0002B7AB /* cairo.h */,
 				B3136DDA1F90EA520002B7AB /* rsvg.h */,
+				B3F8DE1B243E9A1F0028BD75 /* NSError+GError.h */,
+				B3F8DE1C243E9A1F0028BD75 /* NSError+GError.m */,
 			);
 			path = cairosvg;
 			sourceTree = "<group>";
@@ -4170,7 +4170,6 @@
 				B3E2065F20E568C4009EA554 /* gdbusinterface.h in Headers */,
 				B3E2066320E568C4009EA554 /* gdbusproxy.h in Headers */,
 				B3E206A620E568C5009EA554 /* gtlsdatabase.h in Headers */,
-				B34E83041F8FD90C0032268F /* GlibError.h in Headers */,
 				B3E2064020E568C4009EA554 /* gthread.h in Headers */,
 				B3E207EE20E568C6009EA554 /* fontconfig.h in Headers */,
 				B31BD99F20E7E0D900A560C2 /* locid.h in Headers */,
@@ -4800,6 +4799,7 @@
 				B31BD95620E7E0D900A560C2 /* utrace.h in Headers */,
 				B31BD98820E7E0D900A560C2 /* umachine.h in Headers */,
 				B3F80B1420E585E900030497 /* hb-ot-font.h in Headers */,
+				B3F8DE1D243E9A1F0028BD75 /* NSError+GError.h in Headers */,
 				B3E2062520E568C4009EA554 /* gstring.h in Headers */,
 				B3E2067020E568C5009EA554 /* gresource.h in Headers */,
 				B3F8056C20E584B300030497 /* png.h in Headers */,
@@ -5672,13 +5672,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B34E83051F8FD90C0032268F /* GlibError.m in Sources */,
 				B37C74A51F8C5C7400DF505B /* PNGImageHandle.m in Sources */,
 				B37C74AF1F8C5C7400DF505B /* ImageHandleBuilder.m in Sources */,
 				B37C74AC1F8C5C7400DF505B /* PDFSurface.m in Sources */,
 				B37C74AD1F8C5C7400DF505B /* SVGImageHandle.m in Sources */,
 				B35B71281F904CF100BE477E /* SurfaceHandleBuilder.m in Sources */,
 				B37C74AE1F8C5C7400DF505B /* PNGSurface.m in Sources */,
+				B3F8DE1E243E9A1F0028BD75 /* NSError+GError.m in Sources */,
 				B37C74A61F8C5C7400DF505B /* CairoInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
