@@ -1856,6 +1856,9 @@
 		B3E9A9001FB4DCCA00FD8E7A /* autorevision.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = autorevision.json; sourceTree = "<group>"; };
 		B3E9A9021FB4DDE400FD8E7A /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		B3E9A9041FB4E0B200FD8E7A /* bin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bin; sourceTree = "<group>"; };
+		B3EC99A2243EA409008D5081 /* badSVG.speculid */ = {isa = PBXFileReference; lastKnownFileType = text; path = badSVG.speculid; sourceTree = "<group>"; };
+		B3EC99A3243EA409008D5081 /* badJSON.speculid */ = {isa = PBXFileReference; lastKnownFileType = text; path = badJSON.speculid; sourceTree = "<group>"; };
+		B3EC99A5243EA4D5008D5081 /* missingJSON.speculid */ = {isa = PBXFileReference; lastKnownFileType = text; path = missingJSON.speculid; sourceTree = "<group>"; };
 		B3F0ECEF1F9E6A4D0078690E /* SpeculidImageSpecificationBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilderProtocol.swift; sourceTree = "<group>"; };
 		B3F0ECF11F9E6AAD0078690E /* SpeculidImageSpecificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidImageSpecificationBuilder.swift; sourceTree = "<group>"; };
 		B3F6E278233C3BF100B28DA2 /* AssetSpecificationFileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSpecificationFileProtocol.swift; sourceTree = "<group>"; };
@@ -4114,6 +4117,9 @@
 			isa = PBXGroup;
 			children = (
 				B3F8DE14243E77400028BD75 /* badsourcePath.speculid */,
+				B3EC99A3243EA409008D5081 /* badJSON.speculid */,
+				B3EC99A5243EA4D5008D5081 /* missingJSON.speculid */,
+				B3EC99A2243EA409008D5081 /* badSVG.speculid */,
 				B3F8DE13243E77250028BD75 /* badassetPath.speculid */,
 			);
 			path = samples;
