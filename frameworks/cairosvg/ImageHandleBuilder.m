@@ -33,8 +33,8 @@ static ImageHandleBuilder * _shared = nil;
   {
     case kSvg:
       rsvgHandle = rsvg_handle_new_from_file(file.url.path.UTF8String , &gerror);
-      *error = [[NSError alloc] initWithGError: gerror withURL:file.url];
-      if (error != nil) {
+      if (gerror != nil) {
+        *error = [[NSError alloc] initWithGError: gerror withURL:file.url];
         return nil;
       } else {
         return [[SVGImageHandle alloc] initWithRsvgHandle: rsvgHandle];
