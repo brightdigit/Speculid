@@ -9,7 +9,7 @@
 #import "rsvg.h"
 #import "SVGImageHandle.h"
 #import "PNGImageHandle.h"
-#import "GlibError.h"
+#import "NSError+GError.h"
 
 
 @implementation ImageHandleBuilder
@@ -33,7 +33,7 @@ static ImageHandleBuilder * _shared = nil;
   {
     case kSvg:
       rsvgHandle = rsvg_handle_new_from_file(file.url.path.UTF8String , &gerror);
-      *error = [[GlibError alloc] initWithGError: gerror withURL:file.url];
+      *error = [[NSError alloc] initWithGError: gerror withURL:file.url];
       if (error != nil) {
         return nil;
       } else {
