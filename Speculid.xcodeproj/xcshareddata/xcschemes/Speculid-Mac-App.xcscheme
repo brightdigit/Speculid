@@ -88,7 +88,7 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -118,6 +118,18 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--process &quot;${SRCROOT}/examples/Assets/AppIcon.speculid&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--process &quot;${SRCROOT}/samples/badassetPath.speculid&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--process &quot;${SRCROOT}/samples/badsourcePath.speculid&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--process &quot;${SRCROOT}/samples/badJSON.speculid&quot;"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
@@ -153,7 +165,7 @@
          <EnvironmentVariable
             key = "sourceApplicationName"
             value = "spcld"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>
