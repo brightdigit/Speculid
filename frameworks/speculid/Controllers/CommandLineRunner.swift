@@ -68,6 +68,22 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
         } else {
           return completed()
         }
+      case let .initialize(asset: asset, image: image, destination: destination):
+        let file = SpeculidSpecificationsFile(assetURL: asset, sourceImageURL: image, destinationURL: destination)
+        let jsonEncoder = JSONEncoder()
+        if #available(OSX 10.15, *) {
+          jsonEncoder.outputFormatting = [.prettyPrinted, .withoutEscapingSlashes]
+        } else {
+          jsonEncoder.outputFormatting = [.prettyPrinted]
+        }
+
+        do {
+          let data = try jsonEncoder.encode(file)
+          try data.write(to: destination, options: .atomic)
+        } catch let caughtError {
+          error = caughtError
+        }
+        return completed()
       }
     }
     operation.completionBlock = {
