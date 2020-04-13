@@ -40,6 +40,8 @@ extension Array where Element == String {
 // }
 
 struct SimpleCommandLineArgumentProvider: CommandLineArgumentProviderProtocol {
+  var environment: [String : String]
+  
   public let arguments: [String]
   public init(arguments: [String]) {
     self.arguments = arguments

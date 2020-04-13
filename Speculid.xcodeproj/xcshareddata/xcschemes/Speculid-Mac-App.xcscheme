@@ -88,7 +88,7 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -154,6 +154,14 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--version"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--process &quot;${SRCROOT}/svg-appicon.speculid&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--initialize &quot;${SRCROOT}/svg-appicon.speculid&quot; &quot;${SRCROOT}/applications/mac/assets/layers.svg&quot; &quot;${SRCROOT}/applications/mac/assets/Assets.xcassets/TrayIcon.imageset&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument

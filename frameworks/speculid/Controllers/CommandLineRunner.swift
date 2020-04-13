@@ -22,6 +22,19 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
     _versionProvider = versionProvider
   }
 
+  fileprivate func saveSpeculidFileURL(_ destination: URL, usingImageURL image: URL, forAssetURL asset: URL) throws {
+    let file = SpeculidSpecificationsFile(assetURL: asset, sourceImageURL: image, destinationURL: destination)
+    let jsonEncoder = JSONEncoder()
+    if #available(OSX 10.15, *) {
+      jsonEncoder.outputFormatting = [.prettyPrinted, .withoutEscapingSlashes]
+    } else {
+      jsonEncoder.outputFormatting = [.prettyPrinted]
+    }
+
+    let data = try jsonEncoder.encode(file)
+    try data.write(to: destination, options: .atomic)
+  }
+
   public func activity(withArguments arguments: SpeculidCommandArgumentSet, _ completed: @escaping (CommandLineActivityProtocol, Error?) -> Void) -> CommandLineActivityProtocol {
     var error: Error?
     let operation = AsyncBlockOperation { completed in
@@ -52,10 +65,6 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
           error = caughtError
           return completed()
         }
-//        guard let document = tryDocument else {
-//          error = InvalidDocumentURL(url: url)
-//          return completed()
-//        }
         error = Application.current.builder.build(documents: documents)
         return completed()
       case .debugLocation:
@@ -68,6 +77,14 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
         } else {
           return completed()
         }
+      case let .initialize(asset: asset, image: image, destination: destination):
+        do {
+          try self.saveSpeculidFileURL(destination, usingImageURL: image, forAssetURL: asset)
+        } catch let caughtError {
+          error = caughtError
+        }
+
+        return completed()
       }
     }
     operation.completionBlock = {
