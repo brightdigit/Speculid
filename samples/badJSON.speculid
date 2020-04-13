@@ -1,0 +1,7 @@
+{
+"set" : "AppIcon.appiconset",
+"source" : "geometry.svg",
+"background" : "#EC3ZZZSSX",
+"remove-alpha" : flase
+}
+

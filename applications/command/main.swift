@@ -27,26 +27,21 @@ struct TerminationError: Error {
 let speculidMacAppBundleIdentifier = "com.brightdigit.Speculid-Mac-App"
 
 func findApplicationBundle(withIdentifier identifer: String, _ callback: @escaping (Bundle?) -> Void) {
-  let query = NSMetadataQuery()
-  NotificationCenter.default.addObserver(forName: NSNotification.Name.NSMetadataQueryDidFinishGathering, object: nil, queue: nil) { _ in
-    for result in query.results {
-      if let item = result as? NSMetadataItem {
-        if let path = item.value(forAttribute: NSMetadataItemPathKey) as? String {
-          if let bundle = Bundle(url: URL(fileURLWithPath: path)) {
-            if bundle.bundleIdentifier == identifer {
-              callback(bundle)
-              return
-            }
-          }
-        }
-      }
-    }
-    callback(nil)
+  if let bundle = Bundle(path: "/Applications/Speculid.app"), bundle.bundleIdentifier == speculidMacAppBundleIdentifier {
+    callback(bundle)
+    return
   }
-  let predicate = NSPredicate(format: "kMDItemKind == 'Application'")
-  query.valueListAttributes = [NSMetadataItemURLKey]
-  query.predicate = predicate
-  query.start()
+  guard let urls = LSCopyApplicationURLsForBundleIdentifier(identifer as CFString, nil)?.takeRetainedValue() as? [URL] else {
+    callback(nil)
+    return
+  }
+  for url in urls {
+    if let bundle = Bundle(url: url) {
+      callback(bundle)
+      return
+    }
+  }
+  callback(nil)
 }
 
 func runApplication(fromBundle bundle: Bundle, withArguments arguments: [String]?, completion: @escaping (Error?) -> Void) {
@@ -54,7 +49,7 @@ func runApplication(fromBundle bundle: Bundle, withArguments arguments: [String]
     completion(BundleNotFoundError(identifier: bundle.bundleIdentifier!))
     return
   }
-
+  debugPrint(executableURL.path)
   let arguments = [String](CommandLine.arguments[1...])
   let sourceApplicationName = URL(fileURLWithPath: CommandLine.arguments[0]).lastPathComponent
   let environment = ProcessInfo.processInfo.environment.merging(["sourceApplicationName": sourceApplicationName], uniquingKeysWith: { $1 })
