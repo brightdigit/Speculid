@@ -121,6 +121,18 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "--process &quot;${SRCROOT}/samples/badassetPath.speculid&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--process &quot;${SRCROOT}/samples/badsourcePath.speculid&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--process &quot;${SRCROOT}/samples/badJSON.speculid&quot;"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "ASBfdsadf"
             isEnabled = "NO">
          </CommandLineArgument>
@@ -142,7 +154,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--version"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--install"
@@ -153,7 +165,7 @@
          <EnvironmentVariable
             key = "sourceApplicationName"
             value = "spcld"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>
