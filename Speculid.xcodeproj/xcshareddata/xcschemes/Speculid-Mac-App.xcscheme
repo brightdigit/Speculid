@@ -158,11 +158,11 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--process &quot;${SRCROOT}/svg-appicon.speculid&quot;"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--initialize &quot;${SRCROOT}/svg-appicon.speculid&quot; &quot;${SRCROOT}/applications/mac/assets/layers.svg&quot; &quot;${SRCROOT}/applications/mac/assets/Assets.xcassets/TrayIcon.imageset&quot;"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--install"
