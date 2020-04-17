@@ -16,5 +16,6 @@ public enum SpeculidCommandArgumentSet: Equatable {
   case version
   case process(URL, Bool)
   case install(InstallType)
+  case initialize(asset: URL, image: URL, destination: URL)
   case debugLocation
 }
