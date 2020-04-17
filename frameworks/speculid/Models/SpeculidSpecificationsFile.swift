@@ -2,6 +2,31 @@ import AppKit
 import CairoSVG
 import Foundation
 
+extension URL {
+  func relativePath(from base: URL) -> String? {
+    // Ensure that both URLs represent files:
+    guard isFileURL, base.isFileURL else {
+      return nil
+    }
+
+    // Remove/replace "." and "..", make paths absolute:
+    let destComponents = standardized.pathComponents
+    let baseComponents = base.standardized.pathComponents
+
+    // Find number of common path components:
+    var index = 0
+    while index < destComponents.count, index < baseComponents.count,
+      destComponents[index] == baseComponents[index] {
+      index += 1
+    }
+
+    // Build relative path:
+    var relComponents = Array(repeating: "..", count: baseComponents.count - index - 1)
+    relComponents.append(contentsOf: destComponents[index...])
+    return relComponents.joined(separator: "/")
+  }
+}
+
 public struct SpeculidSpecificationsFile: SpeculidSpecificationsFileProtocol, Codable {
   public let assetDirectoryRelativePath: String
   public let sourceImageRelativePath: String
@@ -15,6 +40,20 @@ public struct SpeculidSpecificationsFile: SpeculidSpecificationsFileProtocol, Co
     case geometry
     case background
     case removeAlpha = "remove-alpha"
+  }
+
+  public init(assetURL: URL, sourceImageURL: URL, destinationURL: URL) {
+    let actualAssetURL: URL
+    if assetURL.pathExtension.lowercased() == "json" {
+      actualAssetURL = assetURL.deletingLastPathComponent()
+    } else {
+      actualAssetURL = assetURL
+    }
+    assetDirectoryRelativePath = actualAssetURL.relativePath(from: destinationURL) ?? actualAssetURL.path
+    sourceImageRelativePath = sourceImageURL.relativePath(from: destinationURL) ?? sourceImageURL.path
+    geometry = nil
+    background = nil
+    removeAlpha = actualAssetURL.pathExtension.lowercased() == "appiconset"
   }
 
   public init(from decoder: Decoder) throws {
