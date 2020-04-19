@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/dice-four.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/dice-four.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

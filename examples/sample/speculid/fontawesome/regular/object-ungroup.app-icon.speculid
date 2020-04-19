@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/regular/object-ungroup.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/regular/object-ungroup.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

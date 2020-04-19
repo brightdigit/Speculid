@@ -1,6 +1,6 @@
 {
-"set" : "../../../Assets.xcassets/App Icons/mfizz/html5.appiconset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/html5.svg",
+"set" : "../../Assets.xcassets/App Icons/mfizz/html5.appiconset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/html5.svg",
 "background" : "#FFFFFF",
 "remove-alpha" : true
 }

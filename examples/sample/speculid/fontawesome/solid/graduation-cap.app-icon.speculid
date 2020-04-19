@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/graduation-cap.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/graduation-cap.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

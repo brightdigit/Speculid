@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/money-check-alt.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/money-check-alt.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

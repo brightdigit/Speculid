@@ -1,4 +1,4 @@
 {
-"set" : "../../../Assets.xcassets/Image Sets/mfizz/php-alt.imageset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/php-alt.svg"
+"set" : "../../Assets.xcassets/Image Sets/mfizz/php-alt.imageset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/php-alt.svg"
 }

@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/regular/question-circle.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/regular/question-circle.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

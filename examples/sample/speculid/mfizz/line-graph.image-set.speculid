@@ -1,4 +1,4 @@
 {
-"set" : "../../../Assets.xcassets/Image Sets/mfizz/line-graph.imageset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/line-graph.svg"
+"set" : "../../Assets.xcassets/Image Sets/mfizz/line-graph.imageset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/line-graph.svg"
 }

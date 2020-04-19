@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/hotel.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/hotel.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

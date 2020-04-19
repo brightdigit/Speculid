@@ -1,6 +1,6 @@
 {
-"set" : "../../../Assets.xcassets/App Icons/mfizz/ruby-on-rails-alt.appiconset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/ruby-on-rails-alt.svg",
+"set" : "../../Assets.xcassets/App Icons/mfizz/ruby-on-rails-alt.appiconset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/ruby-on-rails-alt.svg",
 "background" : "#FFFFFF",
 "remove-alpha" : true
 }

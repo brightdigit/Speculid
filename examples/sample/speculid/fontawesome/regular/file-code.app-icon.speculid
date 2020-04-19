@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/regular/file-code.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/regular/file-code.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/handshake-alt-slash.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/handshake-alt-slash.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/cloud-showers-heavy.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/cloud-showers-heavy.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

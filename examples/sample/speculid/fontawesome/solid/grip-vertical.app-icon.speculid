@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/grip-vertical.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/grip-vertical.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

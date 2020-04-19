@@ -1,4 +1,4 @@
 {
-"set" : "../../../Assets.xcassets/Image Sets/mfizz/codeigniter.imageset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/codeigniter.svg"
+"set" : "../../Assets.xcassets/Image Sets/mfizz/codeigniter.imageset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/codeigniter.svg"
 }

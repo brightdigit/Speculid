@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/star-and-crescent.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/star-and-crescent.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

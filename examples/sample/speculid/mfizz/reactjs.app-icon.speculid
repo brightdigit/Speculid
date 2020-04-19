@@ -1,6 +1,6 @@
 {
-"set" : "../../../Assets.xcassets/App Icons/mfizz/reactjs.appiconset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/reactjs.svg",
+"set" : "../../Assets.xcassets/App Icons/mfizz/reactjs.appiconset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/reactjs.svg",
 "background" : "#FFFFFF",
 "remove-alpha" : true
 }

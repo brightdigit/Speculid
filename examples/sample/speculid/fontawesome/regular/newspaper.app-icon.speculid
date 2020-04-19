@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/regular/newspaper.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/regular/newspaper.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

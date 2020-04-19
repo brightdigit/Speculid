@@ -1,6 +1,6 @@
 {
-"set" : "../../../Assets.xcassets/App Icons/mfizz/freecodecamp.appiconset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/freecodecamp.svg",
+"set" : "../../Assets.xcassets/App Icons/mfizz/freecodecamp.appiconset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/freecodecamp.svg",
 "background" : "#FFFFFF",
 "remove-alpha" : true
 }

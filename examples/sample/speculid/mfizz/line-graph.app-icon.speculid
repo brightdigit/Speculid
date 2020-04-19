@@ -1,6 +1,6 @@
 {
-"set" : "../../../Assets.xcassets/App Icons/mfizz/line-graph.appiconset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/line-graph.svg",
+"set" : "../../Assets.xcassets/App Icons/mfizz/line-graph.appiconset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/line-graph.svg",
 "background" : "#FFFFFF",
 "remove-alpha" : true
 }

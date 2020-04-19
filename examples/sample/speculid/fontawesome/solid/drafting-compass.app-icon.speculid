@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/drafting-compass.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/drafting-compass.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

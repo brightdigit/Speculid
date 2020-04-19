@@ -1,6 +1,6 @@
 {
-"set" : "../../../Assets.xcassets/App Icons/mfizz/csharp.appiconset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/csharp.svg",
+"set" : "../../Assets.xcassets/App Icons/mfizz/csharp.appiconset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/csharp.svg",
 "background" : "#FFFFFF",
 "remove-alpha" : true
 }

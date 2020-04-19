@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/brands/buy-n-large.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/brands/buy-n-large.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

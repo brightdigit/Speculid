@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/brands/cloudversify.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/brands/cloudversify.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/bread-slice.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/bread-slice.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

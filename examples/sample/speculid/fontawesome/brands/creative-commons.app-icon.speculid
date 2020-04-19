@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/brands/creative-commons.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/brands/creative-commons.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

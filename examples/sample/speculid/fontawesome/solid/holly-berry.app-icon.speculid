@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/holly-berry.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/holly-berry.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

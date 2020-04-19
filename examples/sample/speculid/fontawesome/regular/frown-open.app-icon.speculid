@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/regular/frown-open.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/regular/frown-open.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

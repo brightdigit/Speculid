@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/regular/hand-paper.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/regular/hand-paper.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

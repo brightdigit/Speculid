@@ -1,6 +1,6 @@
 {
-"set" : "../../../Assets.xcassets/App Icons/mfizz/perl.appiconset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/perl.svg",
+"set" : "../../Assets.xcassets/App Icons/mfizz/perl.appiconset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/perl.svg",
 "background" : "#FFFFFF",
 "remove-alpha" : true
 }

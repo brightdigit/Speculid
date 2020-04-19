@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/dice-d6.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/dice-d6.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

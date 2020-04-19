@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/smoking-ban.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/smoking-ban.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

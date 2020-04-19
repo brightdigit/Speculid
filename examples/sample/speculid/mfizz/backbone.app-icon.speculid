@@ -1,6 +1,6 @@
 {
-"set" : "../../../Assets.xcassets/App Icons/mfizz/backbone.appiconset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/backbone.svg",
+"set" : "../../Assets.xcassets/App Icons/mfizz/backbone.appiconset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/backbone.svg",
 "background" : "#FFFFFF",
 "remove-alpha" : true
 }

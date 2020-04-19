@@ -1,6 +1,6 @@
 {
-"set" : "../../../Assets.xcassets/App Icons/mfizz/google.appiconset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/google.svg",
+"set" : "../../Assets.xcassets/App Icons/mfizz/google.appiconset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/google.svg",
 "background" : "#FFFFFF",
 "remove-alpha" : true
 }

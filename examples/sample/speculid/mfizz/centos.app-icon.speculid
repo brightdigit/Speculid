@@ -1,6 +1,6 @@
 {
-"set" : "../../../Assets.xcassets/App Icons/mfizz/centos.appiconset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/centos.svg",
+"set" : "../../Assets.xcassets/App Icons/mfizz/centos.appiconset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/centos.svg",
 "background" : "#FFFFFF",
 "remove-alpha" : true
 }

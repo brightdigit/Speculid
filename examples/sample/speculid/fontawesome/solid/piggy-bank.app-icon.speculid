@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/piggy-bank.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/piggy-bank.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

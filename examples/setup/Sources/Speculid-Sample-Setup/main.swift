@@ -17,14 +17,21 @@ extension URL {
             return nil
         }
 
+        //this is the new part, clearly, need to use workBase in lower part
+        var workBase = base
+        if workBase.pathExtension != "" {
+            workBase = workBase.deletingLastPathComponent()
+        }
+
         // Remove/replace "." and "..", make paths absolute:
-        let destComponents = self.standardized.pathComponents
-        let baseComponents = base.standardized.pathComponents
+        let destComponents = self.standardized.resolvingSymlinksInPath().pathComponents
+        let baseComponents = workBase.standardized.resolvingSymlinksInPath().pathComponents
 
         // Find number of common path components:
         var i = 0
-        while i < destComponents.count && i < baseComponents.count
-            && destComponents[i] == baseComponents[i] {
+        while i < destComponents.count &&
+              i < baseComponents.count &&
+              destComponents[i] == baseComponents[i] {
                 i += 1
         }
 
@@ -122,9 +129,9 @@ func download(_ name: String, from url: URL, relativeSVGPath: String) -> Promise
         
         try? FileManager.default.createDirectory(at: speculidDirUrl, withIntermediateDirectories: true)
         
-        let imageSetNameAssetDirUrl = imageSetsUrl.appendingPathComponent(name, isDirectory: true)
+        let imageSetNameAssetDirUrl = imageSetsUrl.appendingPathComponent(name)
         
-        let appIconNameAssetDirUrl = appIconsUrl.appendingPathComponent(name, isDirectory: true)
+        let appIconNameAssetDirUrl = appIconsUrl.appendingPathComponent(name)
         
         try? createAssetFolder(at: imageSetNameAssetDirUrl)
         try? createAssetFolder(at: appIconNameAssetDirUrl)
@@ -140,13 +147,13 @@ func download(_ name: String, from url: URL, relativeSVGPath: String) -> Promise
         
         appIconSpeculidUrl = speculidDirUrl.appendingPathComponent(svgName).appendingPathExtension("app-icon").appendingPathExtension("speculid")
         
-        imageSetAssetDirUrl = imageSetAssetParentDirUrl.appendingPathComponent(svgName + ".imageset", isDirectory: true)
-        appIconAssetDirUrl = appIconAssetParentDirUrl.appendingPathComponent(svgName + ".appiconset", isDirectory: true)
+        imageSetAssetDirUrl = imageSetAssetParentDirUrl.appendingPathComponent(svgName + ".imageset")
+        appIconAssetDirUrl = appIconAssetParentDirUrl.appendingPathComponent(svgName + ".appiconset")
         
         let appIconSpecText = """
         {
-        "set" : "\(appIconAssetDirUrl.relativePath(from: appIconSpeculidUrl.deletingLastPathComponent())!)",
-        "source" : "\(svgUrl.relativePath(from: appIconSpeculidUrl.deletingLastPathComponent())!)",
+        "set" : "\(appIconAssetDirUrl.relativePath(from: appIconSpeculidUrl)!)",
+        "source" : "\(svgUrl.relativePath(from: appIconSpeculidUrl)!)",
         "background" : "#FFFFFF",
         "remove-alpha" : true
         }
@@ -154,8 +161,8 @@ func download(_ name: String, from url: URL, relativeSVGPath: String) -> Promise
         
         let imageSetSpecText = """
         {
-        "set" : "\(imageSetAssetDirUrl.relativePath(from: imageSetSpeculidUrl.deletingLastPathComponent())!)",
-        "source" : "\(svgUrl.relativePath(from: imageSetSpeculidUrl.deletingLastPathComponent())!)"
+        "set" : "\(imageSetAssetDirUrl.relativePath(from: imageSetSpeculidUrl)!)",
+        "source" : "\(svgUrl.relativePath(from: imageSetSpeculidUrl)!)"
         }
         """
         
@@ -175,12 +182,12 @@ func download(_ name: String, from url: URL, relativeSVGPath: String) -> Promise
   return promise
 }
 
-//let fontAwesome = download("fontawesome", from: URL(string: "https://use.fontawesome.com/releases/v5.13.0/fontawesome-free-5.13.0-desktop.zip")!, relativeSVGPath: "fontawesome-free-5.13.0-desktop/svgs")
+let fontAwesome = download("fontawesome", from: URL(string: "https://use.fontawesome.com/releases/v5.13.0/fontawesome-free-5.13.0-desktop.zip")!, relativeSVGPath: "fontawesome-free-5.13.0-desktop/svgs")
 
 let promise = download("mfizz", from: URL(string: "https://github.com/fizzed/font-mfizz/archive/v2.4.1.zip")!, relativeSVGPath: "font-mfizz-2.4.1/src/svg")
 
 
-when(fulfilled: [promise]).done({
+when(fulfilled: [promise, fontAwesome]).done({
   shouldKeepRunning = false
 }).catch { (error) in
   print(error)

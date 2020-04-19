@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/brands/accessible-icon.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/brands/accessible-icon.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

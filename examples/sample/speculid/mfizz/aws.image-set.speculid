@@ -1,4 +1,4 @@
 {
-"set" : "../../../Assets.xcassets/Image Sets/mfizz/aws.imageset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/aws.svg"
+"set" : "../../Assets.xcassets/Image Sets/mfizz/aws.imageset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/aws.svg"
 }

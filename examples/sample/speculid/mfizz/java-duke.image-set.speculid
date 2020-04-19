@@ -1,4 +1,4 @@
 {
-"set" : "../../../Assets.xcassets/Image Sets/mfizz/java-duke.imageset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/java-duke.svg"
+"set" : "../../Assets.xcassets/Image Sets/mfizz/java-duke.imageset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/java-duke.svg"
 }

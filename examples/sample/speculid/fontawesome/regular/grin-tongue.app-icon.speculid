@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/regular/grin-tongue.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/regular/grin-tongue.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

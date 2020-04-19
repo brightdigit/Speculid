@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/hat-wizard.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/hat-wizard.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

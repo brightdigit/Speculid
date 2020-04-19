@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/brands/wizards-of-the-coast.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/brands/wizards-of-the-coast.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

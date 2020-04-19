@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/redo-alt.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/redo-alt.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

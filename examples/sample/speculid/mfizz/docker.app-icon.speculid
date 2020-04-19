@@ -1,6 +1,6 @@
 {
-"set" : "../../../Assets.xcassets/App Icons/mfizz/docker.appiconset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/docker.svg",
+"set" : "../../Assets.xcassets/App Icons/mfizz/docker.appiconset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/docker.svg",
 "background" : "#FFFFFF",
 "remove-alpha" : true
 }

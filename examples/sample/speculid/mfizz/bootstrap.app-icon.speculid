@@ -1,6 +1,6 @@
 {
-"set" : "../../../Assets.xcassets/App Icons/mfizz/bootstrap.appiconset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/bootstrap.svg",
+"set" : "../../Assets.xcassets/App Icons/mfizz/bootstrap.appiconset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/bootstrap.svg",
 "background" : "#FFFFFF",
 "remove-alpha" : true
 }

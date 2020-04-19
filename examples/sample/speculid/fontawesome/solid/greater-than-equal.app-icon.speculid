@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/greater-than-equal.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/greater-than-equal.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

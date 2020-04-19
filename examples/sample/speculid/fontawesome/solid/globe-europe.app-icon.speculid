@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/globe-europe.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/globe-europe.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

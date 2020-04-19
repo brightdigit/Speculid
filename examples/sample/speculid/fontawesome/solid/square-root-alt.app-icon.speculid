@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/square-root-alt.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/square-root-alt.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

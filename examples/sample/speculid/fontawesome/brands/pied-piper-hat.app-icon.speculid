@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/brands/pied-piper-hat.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/brands/pied-piper-hat.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

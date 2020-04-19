@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/battery-three-quarters.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/battery-three-quarters.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

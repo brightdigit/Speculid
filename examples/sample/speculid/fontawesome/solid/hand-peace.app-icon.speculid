@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/hand-peace.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/hand-peace.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

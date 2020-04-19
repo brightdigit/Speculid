@@ -1,4 +1,4 @@
 {
-"set" : "../../../Assets.xcassets/Image Sets/mfizz/codepen.imageset",
-"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/codepen.svg"
+"set" : "../../Assets.xcassets/Image Sets/mfizz/codepen.imageset",
+"source" : "../../graphics/mfizz/font-mfizz-2.4.1/src/svg/codepen.svg"
 }

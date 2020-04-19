@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/regular/chart-bar.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/regular/chart-bar.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

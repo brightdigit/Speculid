@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/fontawesome/solid/baseball-ball.appiconset",
+"source" : "../../../graphics/fontawesome/fontawesome-free-5.13.0-desktop/svgs/solid/baseball-ball.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}
