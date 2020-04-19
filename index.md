@@ -121,7 +121,7 @@ Email signup allows for you to get delivered updates to your email box of new fe
 
 <section class="signup-form-container">
   <div><strong>Sign up below</strong> to get the latest version.</div>
-<form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
+<form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;group[19233][4]=4&amp;id=584d0d5c40" class="signup-form" method="post">
   <div class="row">
   <input type="email" placeholder="Your Email Address" value="" name="EMAIL" id="mce-EMAIL" required>
   <input type="submit" value="Sign Up">
