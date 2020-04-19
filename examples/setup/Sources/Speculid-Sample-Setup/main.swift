@@ -27,7 +27,7 @@ func createAssetFolder(at url: URL) throws {
 }
 
 
-let exampleUrl = URL(fileURLWithPath: #file).deletingLastPathComponent()
+let exampleUrl = URL(fileURLWithPath: #file).deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
 let sampleUrl = exampleUrl.appendingPathComponent("sample")
 
 if FileManager.default.fileExists(atPath: sampleUrl.path) {
@@ -49,8 +49,12 @@ try! createAssetFolder(at: appIconsUrl)
 try! FileManager.default.createDirectory(at: speculidUrl, withIntermediateDirectories: true)
 
 let url = URL(string: "https://use.fontawesome.com/releases/v5.13.0/fontawesome-free-5.13.0-desktop.zip")!
-let relativeSVGPath = "svgs"
+let relativeSVGPath = "fontawesome-free-5.13.0-desktop/svgs"
 let name = "fontawesome"
+
+let enumerator = FileManager.default.enumerator(at: graphicsUrl, includingPropertiesForKeys: nil)?.compactMap{ $0 as? URL}.filter{
+  $0.pathExtension == "svg"
+}
 
 let promise = firstly {
   Promise<URL>{ (resolver) in
@@ -69,70 +73,81 @@ let promise = firstly {
     }
     resolver.fulfill(unzipDirUrl)
   }
-}.map { (dirUrl) in
-  let svgDirectoryUrl = dirUrl.appendingPathComponent(relativeSVGPath)
+}.map { (dirUrl) throws -> (URL, [URL]) in
+let svgDirectoryUrl = dirUrl.appendingPathComponent(relativeSVGPath)
   guard let enumerator = FileManager.default.enumerator(at: svgDirectoryUrl, includingPropertiesForKeys: nil) else {
     throw NSError()
   }
-  try enumerator.compactMap{ $0 as? URL }.filter{
+  return (svgDirectoryUrl, enumerator.compactMap{ $0 as? URL }.filter{
     $0.pathExtension == "svg"
-  }.forEach { (svgUrl) in
-    guard let parentPath = svgUrl.deletingLastPathComponent().relativePath(from: svgDirectoryUrl) else {
-      return
+  })
+}.then { (svgDirectoryUrl, urls) -> Promise<Void> in
+  
+  let promises : [Promise<Void>] = urls.map {
+    (svgUrl) in
+    return Promise<Void>{ (resolver) in
+      guard let parentPath = svgUrl.deletingLastPathComponent().relativePath(from: svgDirectoryUrl) else {
+        resolver.reject(NSError())
+           return
+         }
+         
+         let imageSetSpeculidUrl : URL
+         let appIconSpeculidUrl : URL
+         let imageSetAssetDirUrl : URL
+         let appIconAssetDirUrl : URL
+         
+         let svgName = svgUrl.lastPathComponent
+         
+         let speculidDirUrl = speculidUrl.appendingPathComponent(name, isDirectory: true).appendingPathComponent(parentPath, isDirectory: true)
+         
+         try? FileManager.default.createDirectory(at: speculidDirUrl, withIntermediateDirectories: true)
+         
+         let imageSetNameAssetDirUrl = imageSetsUrl.appendingPathComponent(name, isDirectory: true)
+         
+         let appIconNameAssetDirUrl = appIconsUrl.appendingPathComponent(name, isDirectory: true)
+         
+         try? createAssetFolder(at: imageSetNameAssetDirUrl)
+         try? createAssetFolder(at: appIconNameAssetDirUrl)
+         let imageSetAssetParentDirUrl = imageSetNameAssetDirUrl.appendingPathComponent(parentPath, isDirectory: true)
+         
+         try? createAssetFolder(at: imageSetAssetParentDirUrl)
+         
+         
+         let appIconAssetParentDirUrl = appIconNameAssetDirUrl.appendingPathComponent(parentPath, isDirectory: true)
+         try? createAssetFolder(at: appIconAssetParentDirUrl)
+         
+         imageSetSpeculidUrl = speculidDirUrl.appendingPathComponent(svgName).appendingPathExtension("image-set").appendingPathExtension("speculid")
+         
+         appIconSpeculidUrl = speculidDirUrl.appendingPathComponent(svgName).appendingPathExtension("app-icon").appendingPathExtension("speculid")
+         
+         imageSetAssetDirUrl = imageSetAssetParentDirUrl.appendingPathComponent(svgName, isDirectory: true)
+         appIconAssetDirUrl = appIconAssetParentDirUrl.appendingPathComponent(svgName, isDirectory: true)
+         
+           let appIconSpecText = """
+         {
+           "set" : "\(appIconAssetDirUrl.relativePath(from: appIconSpeculidUrl.deletingLastPathComponent())!)",
+         "source" : "\(svgUrl.relativePath(from: appIconSpeculidUrl.deletingLastPathComponent())!)",
+         "background" : "#FFFFFF",
+         "remove-alpha" : true
+         }
+         """
+         
+             let imageSetSpecText = """
+           {
+             "set" : "\(imageSetAssetDirUrl.relativePath(from: imageSetSpeculidUrl.deletingLastPathComponent())!)",
+           "source" : "\(svgUrl.relativePath(from: imageSetSpeculidUrl.deletingLastPathComponent())!)"
+           }
+           """
+         
+         try appIconSpecText.write(to: appIconSpeculidUrl, atomically: true, encoding: .utf8)
+         try imageSetSpecText.write(to: imageSetSpeculidUrl, atomically: true, encoding: .utf8)
+      resolver.fulfill(())
     }
-    
-    let imageSetSpeculidUrl : URL
-    let appIconSpeculidUrl : URL
-    let imageSetAssetDirUrl : URL
-    let appIconAssetDirUrl : URL
-    
-    let svgName = svgUrl.lastPathComponent
-    
-    let speculidDirUrl = speculidUrl.appendingPathComponent(name, isDirectory: true).appendingPathComponent(parentPath, isDirectory: true)
-    
-    try? FileManager.default.createDirectory(at: speculidDirUrl, withIntermediateDirectories: true)
-    
-    let imageSetNameAssetDirUrl = imageSetsUrl.appendingPathComponent(name, isDirectory: true)
-    
-    let appIconNameAssetDirUrl = appIconsUrl.appendingPathComponent(name, isDirectory: true)
-    
-    try? createAssetFolder(at: imageSetNameAssetDirUrl)
-    try? createAssetFolder(at: appIconNameAssetDirUrl)
-    let imageSetAssetParentDirUrl = imageSetNameAssetDirUrl.appendingPathComponent(parentPath, isDirectory: true)
-    
-    try? createAssetFolder(at: imageSetAssetParentDirUrl)
-    
-    
-    let appIconAssetParentDirUrl = appIconNameAssetDirUrl.appendingPathComponent(parentPath, isDirectory: true)
-    try? createAssetFolder(at: appIconAssetParentDirUrl)
-    
-    imageSetSpeculidUrl = speculidDirUrl.appendingPathComponent(svgName).appendingPathExtension("image-set").appendingPathExtension("speculid")
-    
-    appIconSpeculidUrl = speculidDirUrl.appendingPathComponent(svgName).appendingPathExtension("app-icon").appendingPathExtension("speculid")
-    
-    imageSetAssetDirUrl = imageSetAssetParentDirUrl.appendingPathComponent(svgName, isDirectory: true)
-    appIconAssetDirUrl = appIconAssetParentDirUrl.appendingPathComponent(svgName, isDirectory: true)
-    
-      let appIconSpecText = """
-    {
-      "set" : "\(appIconAssetDirUrl.relativePath(from: appIconSpeculidUrl.deletingLastPathComponent())!)",
-    "source" : "\(svgUrl.relativePath(from: appIconSpeculidUrl.deletingLastPathComponent())!)",
-    "background" : "#FFFFFF",
-    "remove-alpha" : true
-    }
-    """
-    
-        let imageSetSpecText = """
-      {
-        "set" : "\(imageSetAssetDirUrl.relativePath(from: imageSetSpeculidUrl.deletingLastPathComponent())!)",
-      "source" : "\(svgUrl.relativePath(from: imageSetSpeculidUrl.deletingLastPathComponent())!)"
-      }
-      """
-    
-    try appIconSpecText.write(to: appIconSpeculidUrl, atomically: true, encoding: .utf8)
-    try imageSetSpecText.write(to: imageSetSpeculidUrl, atomically: true, encoding: .utf8)
   }
-  return
+  return when(fulfilled: promises)
+}.catch { (error) in
+  print(error)
+  exit(1)
 }.done {
   shouldKeepRunning = false
 }
