@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/mfizz/redis.appiconset",
+"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/redis.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}

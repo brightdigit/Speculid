@@ -1,0 +1,6 @@
+.DS_Store
+build.xml
+build
+nbproject
+/nbproject/private/
+.vagrant

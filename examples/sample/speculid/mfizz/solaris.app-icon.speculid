@@ -1,0 +1,6 @@
+{
+"set" : "../../../Assets.xcassets/App Icons/mfizz/solaris.appiconset",
+"source" : "../../../graphics/mfizz/font-mfizz-2.4.1/src/svg/solaris.svg",
+"background" : "#FFFFFF",
+"remove-alpha" : true
+}
