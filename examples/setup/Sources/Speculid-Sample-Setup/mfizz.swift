@@ -1,3 +1,5 @@
+// https://use.fontawesome.com/releases/v5.13.0/fontawesome-free-5.13.0-desktop.zip
+// https://github.com/fizzed/font-mfizz/archive/v2.4.1.zip
 //// swiftlint:disable all
 //import Cocoa
 //

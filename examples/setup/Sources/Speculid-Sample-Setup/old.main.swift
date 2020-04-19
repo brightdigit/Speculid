@@ -32,17 +32,17 @@ extension URL {
         return relComponents.joined(separator: "/")
     }
 }
+//
+//let folderContentsJson = """
+//{
+//  "info" : {
+//    "version" : 1,
+//    "author" : "xcode"
+//  }
+//}
+//"""
 
-let folderContentsJson = """
-{
-  "info" : {
-    "version" : 1,
-    "author" : "xcode"
-  }
-}
-"""
-
-
+func code () {
 let appIconSpeculidUrl = URL(fileURLWithPath: "/Users/leo/Documents/Projects/Speculid/examples/Assets/AppIcon.speculid")
 
 let imageSetSpeculidUrl = URL(fileURLWithPath: "/Users/leo/Documents/Projects/Speculid/examples/Assets/Image Set.speculid")
@@ -124,4 +124,5 @@ for case let url as URL in enumerator {
   //    imageSetSpecUrl)
   
   try! imageSetSpecText.write(to: imageSetSpecUrl, atomically: true, encoding: .utf8)
+}
 }
