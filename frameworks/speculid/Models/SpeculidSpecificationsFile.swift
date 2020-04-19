@@ -90,6 +90,7 @@ public struct SpeculidSpecificationsFile: SpeculidSpecificationsFileProtocol, Co
     try container.encode(removeAlpha, forKey: CodingKeys.removeAlpha)
     try container.encode(background?.hexString(), forKey: CodingKeys.background)
   }
+
   //
   //  public init(assetSetRelativePath: String,
   //              sourceImageRelativePath: URL,

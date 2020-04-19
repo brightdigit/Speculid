@@ -134,6 +134,7 @@ extension NSColor {
       return String(format: "#%02X%02X%02X", Int(r * 255), Int(g * 255), Int(b * 255))
     }
   }
+
   // swiftlint:enable identifier_name
 }
 

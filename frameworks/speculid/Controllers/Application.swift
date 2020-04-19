@@ -71,6 +71,7 @@ open class Application: NSApplication, ApplicationProtocol {
 
     return text
   }()
+
   open private(set) var commandLineActivity: CommandLineActivityProtocol?
   open private(set) var statusItem: NSStatusItem?
   open private(set) var service: ServiceProtocol!
@@ -166,7 +167,7 @@ open class Application: NSApplication, ApplicationProtocol {
         .integer: ("\\d+", options: []),
         .scale: ("(\\d+)x", options: []),
         .size: ("(\\d+\\.?\\d*)x(\\d+\\.?\\d*)", options: []),
-        .number: ("\\d", options: [])
+        .number: ("\\d", options: []),
       ])
     } catch {
       assertionFailure("Failed to parse regular expression: \(error)")

@@ -63,6 +63,7 @@ func runApplication(fromBundle bundle: Bundle, withArguments arguments: [String]
   process.standardError = FileHandle.standardError
   process.launch()
 }
+
 func runApplication(withBundleIdentifier identifier: String, fromApplicationPathURL applicationPathURL: URL?, withArguments arguments: [String]?, completion: @escaping (Error?) -> Void) {
   if let applicationPathURL = applicationPathURL {
     if let bundle = Bundle(url: applicationPathURL) {
@@ -109,4 +110,5 @@ DispatchQueue.main.async {
     }
   })
 }
+
 RunLoop.main.run()

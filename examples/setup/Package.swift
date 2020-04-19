@@ -16,9 +16,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "Speculid-Sample-Setup",
-            dependencies: ["ZIPFoundation", "PromiseKit"]),
-        .testTarget(
-            name: "Speculid-Sample-SetupTests",
-            dependencies: ["Speculid-Sample-Setup"]),
+            dependencies: ["ZIPFoundation", "PromiseKit"]
+        )
     ]
 )
