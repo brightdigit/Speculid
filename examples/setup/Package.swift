@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "Speculid-Sample-Setup",
-    platforms: [.macOS(.v10_11)],
+    platforms: [.macOS(.v10_15)],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/weichsel/ZIPFoundation/", .upToNextMajor(from: "0.9.0")),
