@@ -10,9 +10,9 @@ import Foundation
 import ZIPFoundation // @weichsel ~> 0.9.0
 import PromiseKit // @mxcl ~> 6.5
 
-let appiconCompressed = "UEsDBC0ACAAIAMxxk1AAAAAA//////////8BABQALQEAEAAAAAAAAAAAAAAAAAAAAAAArZVBc5swEIXv/Rk6uwwIgbFPmek1txw7PSggg8YGURCtUo/72yvJ2HUcwCvCAWaM337vsSzLEfGS5qxF2+9H1PI/DG0R9hX20QrxjItS/+Z1ISqmL+z4gVW0NJqciZLJ5s2z4ies/p5VXl3lWtmm9GBRCp1WnwGHI+DwPXij8AYMNmJoYncwLDHxFQG3woqBiWeAYYljX8VgsBUDE88AA6fiw7jRbHLYAoOl2R00+BwUD0Ifjdk41A4ZKKkrFJL043iNQs/DBUnqDIUkXcdqHcOgVgpK6gyFJE1CL1LmBANf5SB44GOizOkWLtqvJW32THJbOeRyrbN9uS2YbND9y5zS5tGK0BKn/fAIGQ4h7zYDUbYhjbB/VkLyHU+p5KL6xirJxgxsncn8m8q06C0uuew1Y9m9yrfamiZlOf7Or/VjNKc5OS618CwET2W5WxWX8sldcevb30AqyppWOv0Lk2ZU2gUdQ2fH4S9uX0jr+pl2VVqMNvm6ahZ42IQoQpzMTYHD0/UnzCNfRU53bgsczMmEeRKrJP5v/rPj6f5ZiP3YcjPyhZq+SdQmgVtb+UIvVOAnenk6mPcFCzV9aOlbhNvavyuZXPxBrILbL2NJ0zELozR4LVkUiYeQ7xsTYhViENIqISldkYCUAdbDgBPYrZ+1oH7OwALS4ihW+gBhey0k7RwsIG0UYKUPELbXQtLOwY6m/aEp1U6g7RH9Yk2rv25oG6wQ7WQhmvNHz3tteF7IjOdcei81S7sDz9Dp9OUfUEsHCDnZLI1AAgAAAAAAANEPAAAAAAAAUEsBAh4DLQAIAAgAzHGTUDnZLI1AAgAA0Q8AAAEAAAAAAAAAAQAAALARAAAAAC1QSwUGAAAAAAEAAQAvAAAAiwIAAAAA"
+let appiconCompressed = "/Td6WFoAAAD/EtlBAgAhARYAAAB0L+Wj4A/PAildAD2IiScTleJp4I3wK/qYuY+Q19WElc6w3zOWoXmUZxfss8ijNG8Vq2i9AdIyvN9cU1rQmMdrXAC2orQ3kyyb0BJo8+Ro1epyzZhvRhZJfDJ4nzxJa466P+vtAVP6tpB0nD4+krz6y6a25Zci6vVgZIwVXy7c1I0lHOsY06z9m72gQyV/J8y39C/wW7hG3q06VyT0EFi2YcK5HQLiCGT2CAWvgv+9VS5nBs5TEAi17QOYk8U03t5kqKHxPRXDEa+tTQp8nVrak8zMZmRrAHQNx32X04rOYd14G5n4a9yLyO08hFNBnISIdzmc1icg0XGR217sTtcn+Q3Wb0J0gGFkq8E0EWW7FhLle3Gv7P2F4GyMwGFsGBhLxAZf4sYCl4GDII7pZxnzf3yN6YDmXnUYvRrJdQy68j8rsB6AyYVOZG1Y8jdl9TQrxZFo9wVR+yr2MvhXbfIIXyzHBn7aeLyoWMmdtEVUda+kNhiVJSjDyC7QLstG6DqqDBGTe71FK4+OnAma1tdU4jmajQ+KmniTgIlpjWLk7xahFHOnRtiG6xWnZImuAeQxt1z2VyNC2kD4hEnwVErnO+pjsh+fnovbPBE/FcPP5NMUkomNBq3H0E+ibppLd7rW0QTz88eaqZkz/GARIB1ES5IufHmezsC/+vK19iPRoKyHxBrgnTSnw351wNLLNk2TH1Kq4HaJQn0kJnj6XJhUhf6/8VewSBomM3OjOSck2FfidOwAAAAAAAG9BNAfAABiL6+hqAAK/AIAAAAAAFla"
 
-let imageSetCompressed = "UEsDBC0ACAAIAANsk1AAAAAA//////////8BABQALQEAEAAAAAAAAAAAAAAAAAAAAAAAlc3LCsIwEIXhvY9x1iXQdpfXcCkuYjNJB3IpaSqVUJ/ddCOCFHT7z+GbAvbK0gx5KWDN0UNiCXynNCuHBoYdBeWpZkvRU04PMWmDrSmYB+X2Q7seDNv1+bbEFGydff/4lLojqftX6o+k/ifpWmswEbJgTxwDZNtALXmMqU6H6MUtsR2zZstZnCcaFsca23Z6AVBLBwhwptLSkQAAAAAAAABUAQAAAAAAAFBLAQIeAy0ACAAIAANsk1BwptLSkQAAAFQBAAABAAAAAAAAAAEAAACwEQAAAAAtUEsFBgAAAAABAAEALwAAANwAAAAAAA=="
+let imageSetCompressed = "/Td6WFoAAAD/EtlBAgAhARYAAAB0L+Wj4AFSAJJdAD2IiScTleJp4I3wK/x+Mze2nB5KXcVj7OoMqFZvgFGCE7wldKHUpccmFrXNLK1uhdeDtypNu7v7FUrpI1ZupEmS/Zs0P8h5rpvoIEQDaUgpgi73f/GyQvY+uJDRfDGqumTyUN+zG9GFZQT6Xll/Re2S7TRajnPrtiHj6yGO/A9sXbhRT8y73oiV5mnkEYe9QnUAAAAAAAGmAdMCAACHzRUGqAAK/AIAAAAAAFla"
 
 
 let folderContentsJson = """
@@ -24,40 +24,41 @@ let folderContentsJson = """
 }
 """
 
-func uncompressedString(fromCompressedBase64 compressedBase64String: String) throws -> Data? {
+func uncompressedString(fromCompressedBase64 compressedBase64String: String) throws -> Data {
 
   guard let data = Data(base64Encoded: compressedBase64String) else {
-    return nil
+    throw NSError()
   }
   
-//  let nsData = data as NSData
+  let nsData = data as NSData
+
+  let decompressedNsData : NSData
+    decompressedNsData = try nsData.decompressed(using: .lzma)
+
+  let decompressedData = decompressedNsData as Data
+ guard let object = try? JSONSerialization.jsonObject(with: decompressedData, options: []),
+  let jsonData = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]) else {
+    return decompressedData
+  }
+  
+
+  
+  return jsonData
+//  let tempZipFileURL = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+//  let tempFolderURL = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
 //
-//  let decompressedNsData : NSData
-//  do {
-//    decompressedNsData = try nsData.decompressed(using: .lzma)
-//  } catch let error as NSError {
-//    dump(error)
-//  throw error
+//  try data.write(to: tempZipFileURL)
+//  try FileManager.default.createDirectory(at: tempFolderURL, withIntermediateDirectories: false)
+//  try FileManager.default.unzipItem(at: tempZipFileURL, to: tempFolderURL)
+//  let files = try FileManager.default.contentsOfDirectory(at: tempFolderURL, includingPropertiesForKeys: nil)
+//
+//  guard let url = files.first else {
+//    return nil
 //  }
 //
-//  return decompressedNsData as Data
-  
-  let tempZipFileURL = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
-  let tempFolderURL = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
-
-  try data.write(to: tempZipFileURL)
-  try FileManager.default.createDirectory(at: tempFolderURL, withIntermediateDirectories: false)
-  try FileManager.default.unzipItem(at: tempZipFileURL, to: tempFolderURL)
-  let files = try FileManager.default.contentsOfDirectory(at: tempFolderURL, includingPropertiesForKeys: nil)
-
-  guard let url = files.first else {
-    return nil
-  }
-
-  return try Data(contentsOf: url)
+//  return try Data(contentsOf: url)
 }
 
-//let appIconDataTEmp = try uncompressedString(fromCompressedBase64: appiconCompressed)
 extension URL {
     func relativePath(from base: URL) -> String? {
         // Ensure that both URLs represent files:
@@ -98,8 +99,8 @@ func createAssetFolder(at url: URL) throws {
   try folderContentsJson.write(to: fileUrl, atomically: true, encoding: .utf8)
 }
 
-let appIconJsonData = try! Data(contentsOf: URL(fileURLWithPath: #file).deletingLastPathComponent().appendingPathComponent("AppIcon.json"))
-let imageSetJsonData = try! Data(contentsOf: URL(fileURLWithPath: #file).deletingLastPathComponent().appendingPathComponent("ImageSet.json"))
+let appIconJsonData = try! uncompressedString(fromCompressedBase64: appiconCompressed)
+let imageSetJsonData = try! uncompressedString(fromCompressedBase64: imageSetCompressed)
 let exampleUrl = URL(fileURLWithPath: #file).deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
 let sampleUrl = exampleUrl.appendingPathComponent("sample")
 
