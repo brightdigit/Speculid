@@ -3,11 +3,13 @@ import Foundation
 public struct InvalidDocumentURL: Error {
   public let url: URL
 }
+
 extension Operation: CommandLineActivityProtocol {}
 
 public struct UnknownArgumentsError: Error {
   public let arguments: [String]
 }
+
 public class CommandLineRunner: CommandLineRunnerProtocol {
   public var errorStream: TextOutputStream
   public var outputStream: TextOutputStream
@@ -16,6 +18,7 @@ public class CommandLineRunner: CommandLineRunnerProtocol {
   public var versionProvider: VersionProvider {
     _versionProvider ?? Application.current
   }
+
   public init(outputStream: TextOutputStream, errorStream: TextOutputStream, versionProvider: VersionProvider? = nil) {
     self.outputStream = outputStream
     self.errorStream = errorStream

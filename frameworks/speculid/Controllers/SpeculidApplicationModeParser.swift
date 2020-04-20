@@ -26,6 +26,7 @@ public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtoc
       return nil
     }
   }
+
   public func parseMode(fromCommandLine commandLine: CommandLineArgumentProviderProtocol) -> SpeculidApplicationMode {
     var indicies = [Int]()
     if commandLine.arguments.first == Bundle.main.executablePath {
@@ -69,6 +70,7 @@ public struct SpeculidApplicationModeParser: SpeculidApplicationModeParserProtoc
     }
   }
 }
+
 //
 // @available(swift, obsoleted: 4.2)
 // extension Array where Element: Equatable {

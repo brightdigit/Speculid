@@ -30,6 +30,7 @@ public struct AssetSpecification: AssetSpecificationProtocol, Codable {
     case role
     case subtype
   }
+
   public init(idiom: ImageIdiom, scale: CGFloat? = nil, size: CGSize? = nil, role: AppleWatchRole? = nil, subtype: AppleWatchType? = nil, filename: String? = nil) {
     self.idiom = idiom
     self.scale = scale

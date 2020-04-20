@@ -30,6 +30,7 @@ import Cocoa
     self.backgroundColor = backgroundColor
     self.removeAlphaChannel = removeAlphaChannel
   }
+
   // swiftlint:enable identifier_name
 
   public let file: ImageFileProtocol
