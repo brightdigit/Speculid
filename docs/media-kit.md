@@ -1,9 +1,11 @@
+# Speculid 
+
+## Product Information and Media Kit
+
+![Logo](https://github.com/brightdigit/Speculid/blob/master/images/Logo.png?raw=true)
 
 ## High Resolution Screenshots 
 - PNG or JPEG
-
-## Logos
-- SVG and PNG or JPEG
 
 ## Product Information
 - PDF - not Microsoft Word
@@ -50,11 +52,19 @@ $ sudo cp /Applications/Speculid.app/Contents/SharedSupport/speculid /usr/local/
 
 #### Using the Example Project
 
-Using the example project, which can be downloaded here, you can see it in action. Open the Xcode project and notice the missing png and pdf files.
+[Using the example project, which can be downloaded here](https://github.com/brightdigit/Speculid-Example/archive/master.zip), you can see it in action. 
 
+1. Open the Xcode project and notice the missing png and pdf files.
 
+2. Open your Terminal application (ex. Terminal.app), and go to the project directory (i.e. `cd`).
 
+3. Run the `speculid` command on the `Assets` directory inside:
 
+```bash
+speculid --process Assets
+```
+
+4. Go back to the Xcode project and you'll notice all the png files and pdf files are there!
 
 #### For Any Application
 
@@ -137,9 +147,29 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
 5. **Enjoy!**
 
+
 - **FAQ** - Addresses questions the media will have
 
 
 
-## Videos optional
-- Youtube Link (for in-use) or GIF (for screenshots) 
+## Other Media
+
+### Videos
+
+[![Speculid In Use](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Speculid-In-Use.gif)](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Speculid-In-Use.gif)
+
+* [How to Get Started](https://www.youtube.com/watch?v=Mn4pknYqzH0&t=580s)
+* [Live Demo - June 27](https://www.youtube.com/watch?v=WmF8--qDUfk&t=1521s)
+* [Speculid Demos 78,000 Images](https://www.youtube.com/watch?v=thifChCnm6M)
+* [Feature On Responder Chain](https://www.youtube.com/watch?v=j5TA4C_VNc0)
+* [Xcode Asset Generation Automation with Speculid by Peter Witham](https://www.youtube.com/watch?v=U3Ytfh6tK7E)
+
+# Logo
+
+![Logo](https://github.com/brightdigit/Speculid/blob/master/images/Logo.png?raw=true)
+
+* [SVG](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Logo.svg)
+* [PNG 250x250](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Logo.png)
+* [PNG 500x500](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Logo@2x.png)
+* [PNG 750x750](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Logo@3x.png)
+* [PNG 1000x1000](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Logo@4x.png)
