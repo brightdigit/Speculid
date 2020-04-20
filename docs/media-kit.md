@@ -50,17 +50,17 @@ To try out the application you can [use the example project, which can be downlo
 
 2. Open your Terminal application (ex. Terminal.app), and go to the project directory (i.e. `cd`).
 
-![Terminal](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/02.Example-Terminal.png)
-
 3. Run the `speculid` command on the `Assets` directory inside:
 
 ```bash
 speculid --process Assets
 ```
 
-![Full Xcode](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/03.Example-Full-Xcode.png)
+![Terminal](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/02.Example-Terminal.png)
 
 4. Go back to the Xcode project and you'll notice all the png files and pdf files are there!
+
+![Full Xcode](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/03.Example-Full-Xcode.png)
 
 #### For Any Application
 
