@@ -44,9 +44,9 @@ $ sudo cp /Applications/Speculid.app/Contents/SharedSupport/speculid /usr/local/
 
 To try out the application you can [use the example project, which can be downloaded here](https://github.com/brightdigit/Speculid-Example/archive/master.zip), you can see it in action. 
 
-![Empty Xcode](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/01.Example-Empty-Xcode.png)
-
 1. Open the Xcode project and notice the missing png and pdf files.
+
+![Empty Xcode](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/01.Example-Empty-Xcode.png)
 
 2. Open your Terminal application (ex. Terminal.app), and go to the project directory (i.e. `cd`).
 
