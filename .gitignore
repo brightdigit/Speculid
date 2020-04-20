@@ -203,3 +203,4 @@ playgrounds
 *.coverage.txt
 **/fastlane/report.xml 
 
+examples/samples
