@@ -44,18 +44,21 @@ $ sudo cp /Applications/Speculid.app/Contents/SharedSupport/speculid /usr/local/
 
 To try out the application you can [use the example project, which can be downloaded here](https://github.com/brightdigit/Speculid-Example/archive/master.zip), you can see it in action. 
 
-![Empty Xcode](../01.Example-Empty-Xcode.png)
+![Empty Xcode](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/01.Example-Empty-Xcode.png)
+
 1. Open the Xcode project and notice the missing png and pdf files.
 
-![Terminal](../02.Example-Terminal.png)
 2. Open your Terminal application (ex. Terminal.app), and go to the project directory (i.e. `cd`).
 
-![Empty Xcode](../03.Example-Full-Xcode.png)
+![Terminal](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/02.Example-Terminal.png)
+
 3. Run the `speculid` command on the `Assets` directory inside:
 
 ```bash
 speculid --process Assets
 ```
+
+![Full Xcode](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/03.Example-Full-Xcode.png)
 
 4. Go back to the Xcode project and you'll notice all the png files and pdf files are there!
 
