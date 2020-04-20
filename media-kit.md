@@ -1,3 +1,9 @@
+---
+layout: page
+title: Speculid - Media Kit
+description: Media Kit for Speculid
+---
+
 # Speculid 
 
 ## Product Information and Media Kit
@@ -168,3 +174,8 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 * [PNG 500x500](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Logo@2x.png)
 * [PNG 750x750](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Logo@3x.png)
 * [PNG 1000x1000](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Logo@4x.png)
+
+## Contact Info
+
+<img src="/images/social/email.png" width="16"> Email leo@speculid.com
+<img src="/images/social/twitter.png" width="16"> Twitter @leogdion

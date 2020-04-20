@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 [{{ site.github.project_tagline }}](#){:class="html-only"}
 
 <!--ts-->
