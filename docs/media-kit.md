@@ -4,13 +4,6 @@
 
 ![Logo](https://github.com/brightdigit/Speculid/blob/master/images/Logo.png?raw=true)
 
-## High Resolution Screenshots 
-- PNG or JPEG
-
-## Product Information
-- PDF - not Microsoft Word
-
-### Content
 Speculid is a macOS application for developers. For developers in the Apple space, Xcode (the main developer application) requires particular file types and sizes for each image used. Whether the developer's app is for iPad, iPhone, Mac, or the Apple Watch. Speculid can take a single SVG or PNG file and resize the file according to the sizes required for that app.
 
 For instance, if you are building a _universal app_ for all of Apple's operating system (macOS, iOS, watchOS, tvOS, and CarPlay) that would require 41 separately sized png graphic files. With Speculid, you can take one SVG file and automatically generate each png file on build.
@@ -22,14 +15,9 @@ For questions, you can reach me:
 * @leogdion
 * speculid.com
 
-## Reviewers Guide
+## Installation
 
-### Walkthrough Documentation**
-
-
-#### Installing the Application
-
-##### From Homebrew
+### From Homebrew
 
 If you already have Homebrew installed, you can simply install Speculid via:
 
@@ -37,7 +25,7 @@ If you already have Homebrew installed, you can simply install Speculid via:
 brew cask install brightdigit/speculid/speculid
 ```
 
-##### From Download 
+### From Download 
 
 Download and install from [here:
 https://github.com/brightdigit/Speculid/releases/download/v2.0.0-beta.4/Speculid.zip](https://github.com/brightdigit/Speculid/releases/download/v2.0.0-beta.4/Speculid.zip)
@@ -50,14 +38,19 @@ A command line tool is included in the application bundle. Copy the command line
 $ sudo cp /Applications/Speculid.app/Contents/SharedSupport/speculid /usr/local/bin
 ```
 
-#### Using the Example Project
+## Usage
 
-[Using the example project, which can be downloaded here](https://github.com/brightdigit/Speculid-Example/archive/master.zip), you can see it in action. 
+#### By Example
 
+To try out the application you can [use the example project, which can be downloaded here](https://github.com/brightdigit/Speculid-Example/archive/master.zip), you can see it in action. 
+
+![Empty Xcode](../01.Example-Empty-Xcode.png)
 1. Open the Xcode project and notice the missing png and pdf files.
 
+![Terminal](../02.Example-Terminal.png)
 2. Open your Terminal application (ex. Terminal.app), and go to the project directory (i.e. `cd`).
 
+![Empty Xcode](../03.Example-Full-Xcode.png)
 3. Run the `speculid` command on the `Assets` directory inside:
 
 ```bash
@@ -141,6 +134,7 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
     **Examples**
 
+
     * **logo.20x20@1x~ipad.png** - 20x20 size 1x scale for iPad
     * **logo.60x60@3x~iphone.png** - 60x60 size 3x scale for iPhone
     * **logo.83.5x83.5@2x~ipad.png** - 83.5x83.5 size 2x scale for iPad
@@ -149,8 +143,6 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
 
 - **FAQ** - Addresses questions the media will have
-
-
 
 ## Other Media
 
