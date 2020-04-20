@@ -28,6 +28,7 @@ public class ImageFile: NSObject, ImageFileProtocol, NSSecureCoding {
     self.url = url
     self.format = format
   }
+
   // swiftlint:enable identifier_name
   public let url: URL
   public let format: ImageFileFormat

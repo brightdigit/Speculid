@@ -8,6 +8,7 @@ public extension SpeculidDocumentProtocol {
   var sourceImageURL: URL {
     url.deletingLastPathComponent().appendingPathComponent(specificationsFile.sourceImageRelativePath)
   }
+
   func destinationName(forImage image: AssetSpecificationProtocol) -> String {
     if let filename = image.filename {
       return filename
@@ -31,6 +32,7 @@ public extension SpeculidDocumentProtocol {
   func destinationURL(forFileName fileName: String) -> URL {
     url.deletingLastPathComponent().appendingPathComponent(specificationsFile.assetDirectoryRelativePath, isDirectory: true).appendingPathComponent(fileName)
   }
+
   // destinationFileNames
 }
 

@@ -11,6 +11,7 @@ public struct NoGeometrySpecifiedError: Error {
     self.specification = specification
   }
 }
+
 public struct SpeculidImageSpecificationBuilder: SpeculidImageSpecificationBuilderProtocol {
   public func imageSpecification(
     forURL destinationURL: URL,

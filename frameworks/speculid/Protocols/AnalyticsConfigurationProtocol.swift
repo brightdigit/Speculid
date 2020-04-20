@@ -19,7 +19,7 @@ public extension AnalyticsConfigurationProtocol {
       .clientId: clientIdentifier,
       .version: version,
       .applicationName: applicationName,
-      .applicationVersion: applicationVersion
+      .applicationVersion: applicationVersion,
     ]
     mainParameters.forEach {
       dictionary[$0.0] = $0.1
