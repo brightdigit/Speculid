@@ -48,25 +48,22 @@ $ sudo cp /Applications/Speculid.app/Contents/SharedSupport/speculid /usr/local/
 
 #### By Example
 
-To try out the application you can [use the example project, which can be downloaded here](https://github.com/brightdigit/Speculid-Example/archive/master.zip), you can see it in action. 
+To try out the application you can [use the example project, which can be downloaded here:](https://github.com/brightdigit/Speculid-Example/archive/master.zip)
+  -  https://github.com/brightdigit/Speculid-Example/archive/master.zip
+
 
 1. Open the Xcode project and notice the missing png and pdf files.
-
-![Empty Xcode](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/01.Example-Empty-Xcode.png)
-
+    
+    ![Empty Xcode](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/01.Example-Empty-Xcode.png)
 2. Open your Terminal application (ex. Terminal.app), and go to the project directory (i.e. `cd`).
-
 3. Run the `speculid` command on the `Assets` directory inside:
-
-```bash
-speculid --process Assets
-```
-
-![Terminal](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/02.Example-Terminal.png)
-
+  ```bash
+  speculid --process Assets
+  ```
+  ![Terminal](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/02.Example-Terminal.png)
 4. Go back to the Xcode project and you'll notice all the png files and pdf files are there!
-
-![Full Xcode](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/03.Example-Full-Xcode.png)
+  
+    ![Full Xcode](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/03.Example-Full-Xcode.png)
 
 #### For Any Application
 
@@ -158,14 +155,20 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 ### Videos
 
 [![Speculid In Use](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Speculid-In-Use.gif)](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Speculid-In-Use.gif)
+https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Speculid-In-Use.gif
 
-* [How to Get Started](https://www.youtube.com/watch?v=Mn4pknYqzH0&t=580s)
-* [Live Demo - June 27](https://www.youtube.com/watch?v=WmF8--qDUfk&t=1521s)
+* [How to Get Started](https://www.youtube.com/watch?v=Mn4pknYqzH0)
+  * https://www.youtube.com/watch?v=Mn4pknYqzH0
+* [Live Demo - June 27](https://www.youtube.com/watch?v=WmF8--qDUfk)
+  * https://www.youtube.com/watch?v=WmF8--qDUfk
 * [Speculid Demos 78,000 Images](https://www.youtube.com/watch?v=thifChCnm6M)
+  * https://www.youtube.com/watch?v=thifChCnm6M
 * [Feature On Responder Chain](https://www.youtube.com/watch?v=j5TA4C_VNc0)
+  * https://www.youtube.com/watch?v=j5TA4C_VNc0
 * [Xcode Asset Generation Automation with Speculid by Peter Witham](https://www.youtube.com/watch?v=U3Ytfh6tK7E)
+  * https://www.youtube.com/watch?v=U3Ytfh6tK7E
 
-# Logo
+### Logo
 
 ![Logo](https://github.com/brightdigit/Speculid/blob/master/images/Logo.png?raw=true)
 
@@ -177,5 +180,5 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
 ## Contact Info
 
-<img src="/images/social/email.png" width="16"> Email leo@speculid.com
-<img src="/images/social/twitter.png" width="16"> Twitter @leogdion
+<img class="small" src="/images/social/email.png" width="16"> Email leo@speculid.com
+<img class="small" src="/images/social/twitter.png" width="16"> Twitter @leogdion

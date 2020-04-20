@@ -154,8 +154,9 @@ This will automatically install the terminal command for easy scripting.
 
 You can directly download the application from the Github Repo releases page.
 
-<a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-<a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+<a href="https://github.com/brightdigit/Speculid/releases/download/v2.0.0-beta.4/Speculid.zip" class="btn">Download v2.0.0-beta.4</a>
+<a href="{{ site.github.zip_url }}" class="btn">Source .zip</a>
+<a href="{{ site.github.tar_url }}" class="btn">Source .tar.gz</a>
 
 <!-- HTML-ONLY BEGIN -->
 # Documentation

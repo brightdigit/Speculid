@@ -24,3 +24,4 @@ exclude:
   - "*.toc.*"
   - /build/*
   - /DerivedData/* 
+  - packages
