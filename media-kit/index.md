@@ -8,6 +8,8 @@ description: Media Kit for Speculid
 
 ## Product Information and Media Kit
 
+<a class="btn" href="https://github.com/brightdigit/Speculid-MediaKit/archive/master.zip">Download Media Kit with PDF version</a>
+
 ![Logo](https://github.com/brightdigit/Speculid/blob/master/images/Logo.png?raw=true)
 
 Speculid is a macOS application for developers. For developers in the Apple space, Xcode (the main developer application) requires particular file types and sizes for each image used. Whether the developer's app is for iPad, iPhone, Mac, or the Apple Watch. Speculid can take a single SVG or PNG file and resize the file according to the sizes required for that app.
@@ -46,7 +48,7 @@ $ sudo cp /Applications/Speculid.app/Contents/SharedSupport/speculid /usr/local/
 
 ## Usage
 
-#### By Example
+### By Example
 
 To try out the application you can [use the example project, which can be downloaded here:](https://github.com/brightdigit/Speculid-Example/archive/master.zip)
   -  https://github.com/brightdigit/Speculid-Example/archive/master.zip
@@ -65,7 +67,7 @@ To try out the application you can [use the example project, which can be downlo
   
     ![Full Xcode](https://raw.githubusercontent.com/brightdigit/Speculid/feature/media-kit/docs/03.Example-Full-Xcode.png)
 
-#### For Any Application
+### For Any Application
 
 With **Speculid**, the process of building image assets can be automated in **Xcode**. Here is how to setup your project the first time:
 
@@ -174,6 +176,9 @@ https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Speculid-In
 * [PNG 500x500](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Logo@2x.png)
 * [PNG 750x750](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Logo@3x.png)
 * [PNG 1000x1000](https://raw.githubusercontent.com/brightdigit/Speculid/master/images/Logo@4x.png)
+
+Download Available: **https://github.com/brightdigit/Speculid-MediaKit/archive/master.zip**
+<a class="btn" href="https://github.com/brightdigit/Speculid-MediaKit/archive/master.zip">Download Media Kit with Logos</a>
 
 ## Contact Info
 

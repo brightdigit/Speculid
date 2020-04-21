@@ -407,9 +407,9 @@ section.buttons {
   }
 }
 @media print {
-.github-corner {
-    display:none;
-}
+  .github-corner, .btn {
+      display:none;
+  }
   h2 {
     page-break-before: always;
     &:first-of-type, &:last-of-type {
@@ -417,11 +417,18 @@ section.buttons {
     }
    .main-content > & {
      margin-top: 0;
+     margin-bottom: 0;
    }
   }
   .main-content h3 {
-
-    margin-top: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    &#for-any-application {
+    page-break-before: always;    
+    }
+  }
+  .main-content ul {
+    margin-bottom: 0;
   }
   img {
     width: 40%;
