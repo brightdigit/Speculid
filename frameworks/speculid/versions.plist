@@ -8,6 +8,8 @@
 		<integer>7</integer>
 		<key>alpha</key>
 		<integer>2</integer>
+		<key>production</key>
+		<integer>11</integer>
 	</dict>
 </dict>
 </plist>

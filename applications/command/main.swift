@@ -49,7 +49,6 @@ func runApplication(fromBundle bundle: Bundle, withArguments arguments: [String]
     completion(BundleNotFoundError(identifier: bundle.bundleIdentifier!))
     return
   }
-  debugPrint(executableURL.path)
   let arguments = [String](CommandLine.arguments[1...])
   let sourceApplicationName = URL(fileURLWithPath: CommandLine.arguments[0]).lastPathComponent
   let environment = ProcessInfo.processInfo.environment.merging(["sourceApplicationName": sourceApplicationName], uniquingKeysWith: { $1 })
@@ -64,6 +63,7 @@ func runApplication(fromBundle bundle: Bundle, withArguments arguments: [String]
   process.standardError = FileHandle.standardError
   process.launch()
 }
+
 func runApplication(withBundleIdentifier identifier: String, fromApplicationPathURL applicationPathURL: URL?, withArguments arguments: [String]?, completion: @escaping (Error?) -> Void) {
   if let applicationPathURL = applicationPathURL {
     if let bundle = Bundle(url: applicationPathURL) {
@@ -110,4 +110,5 @@ DispatchQueue.main.async {
     }
   })
 }
+
 RunLoop.main.run()
