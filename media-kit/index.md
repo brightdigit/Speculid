@@ -147,9 +147,6 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
 5. **Enjoy!**
 
-
-- **FAQ** - Addresses questions the media will have
-
 ## Other Media
 
 ### Videos
