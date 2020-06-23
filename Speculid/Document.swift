@@ -1,7 +1,10 @@
 import Cocoa
 import SwiftUI
+import AssetLib
 
 class Document: NSPersistentDocument {
+  let decoder = JSONDecoder()
+  
   override init() {
     super.init()
     // Add your subclass-specific initialization here.
@@ -32,4 +35,5 @@ class Document: NSPersistentDocument {
     NotificationCenter.default.post(name: NSNotification.Name("DocumentClosing"), object: nil)
     super.close()
   }
+  
 }
