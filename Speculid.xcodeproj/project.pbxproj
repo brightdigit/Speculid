@@ -10,9 +10,9 @@
 		B303554A24381F1200A8EAB9 /* SpeculidKit in Frameworks */ = {isa = PBXBuildFile; productRef = B303554924381F1200A8EAB9 /* SpeculidKit */; };
 		B3796B7C2432C50100E5F5F9 /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3DB4824243166FC00B1DA4F /* speculid */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B394CAC2243953EC008C08E2 /* FileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B394CAC1243953EC008C08E2 /* FileManagement.swift */; };
-		B3DB480B2431642100B1DA4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB480A2431642100B1DA4F /* AppDelegate.swift */; };
-		B3DB480D2431642100B1DA4F /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB480C2431642100B1DA4F /* Document.swift */; };
-		B3DB480F2431642100B1DA4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB480E2431642100B1DA4F /* ContentView.swift */; };
+		B3B6A4CF24B15292009C6E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364624224B14DBB0089382E /* ContentView.swift */; };
+		B3B6A4D024B15292009C6E32 /* doc_appDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364624024B14DBB0089382E /* doc_appDocument.swift */; };
+		B3B6A4D124B15292009C6E32 /* doc_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364623E24B14DBB0089382E /* doc_appApp.swift */; };
 		B3DB48122431642100B1DA4F /* Document.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3DB48102431642100B1DA4F /* Document.xcdatamodeld */; };
 		B3DB48142431642600B1DA4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48132431642600B1DA4F /* Assets.xcassets */; };
 		B3DB48172431642600B1DA4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48162431642600B1DA4F /* Preview Assets.xcassets */; };
@@ -53,6 +53,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B364623E24B14DBB0089382E /* doc_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doc_appApp.swift; sourceTree = "<group>"; };
+		B364624024B14DBB0089382E /* doc_appDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doc_appDocument.swift; sourceTree = "<group>"; };
+		B364624224B14DBB0089382E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../doc-app/ContentView.swift"; sourceTree = "<group>"; };
+		B364624424B14DBD0089382E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B364624724B14DBD0089382E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B364624924B14DBD0089382E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B364624A24B14DBD0089382E /* doc_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = doc_app.entitlements; sourceTree = "<group>"; };
 		B3796B792432B7FF00E5F5F9 /* Command.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Command.entitlements; sourceTree = "<group>"; };
 		B37A52372435014400FEA6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B394CAC1243953EC008C08E2 /* FileManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagement.swift; sourceTree = "<group>"; };
@@ -97,6 +104,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B364623D24B14DBB0089382E /* doc-app */ = {
+			isa = PBXGroup;
+			children = (
+				B364624424B14DBD0089382E /* Assets.xcassets */,
+				B364624924B14DBD0089382E /* Info.plist */,
+				B364624A24B14DBD0089382E /* doc_app.entitlements */,
+				B364624624B14DBD0089382E /* Preview Content */,
+			);
+			path = "doc-app";
+			sourceTree = "<group>";
+		};
+		B364624624B14DBD0089382E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B364624724B14DBD0089382E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		B37A5236243500C900FEA6E9 /* command */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +147,7 @@
 				B39F13FE243817AB00A69B85 /* packages */,
 				B37A5236243500C900FEA6E9 /* command */,
 				B3DB48092431642100B1DA4F /* Speculid */,
+				B364623D24B14DBB0089382E /* doc-app */,
 				B3DB48082431642100B1DA4F /* Products */,
 				B303554824381F1200A8EAB9 /* Frameworks */,
 			);
@@ -138,6 +165,9 @@
 		B3DB48092431642100B1DA4F /* Speculid */ = {
 			isa = PBXGroup;
 			children = (
+				B364623E24B14DBB0089382E /* doc_appApp.swift */,
+				B364624024B14DBB0089382E /* doc_appDocument.swift */,
+				B364624224B14DBB0089382E /* ContentView.swift */,
 				B3DB480A2431642100B1DA4F /* AppDelegate.swift */,
 				B3DB480C2431642100B1DA4F /* Document.swift */,
 				B3DB480E2431642100B1DA4F /* ContentView.swift */,
@@ -208,7 +238,7 @@
 		B3DB47FD243162DA00B1DA4F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1140;
 				TargetAttributes = {
 					B3DB48062431642100B1DA4F = {
@@ -257,10 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3DB48122431642100B1DA4F /* Document.xcdatamodeld in Sources */,
-				B3DB480D2431642100B1DA4F /* Document.swift in Sources */,
-				B3DB480B2431642100B1DA4F /* AppDelegate.swift in Sources */,
+				B3B6A4D124B15292009C6E32 /* doc_appApp.swift in Sources */,
+				B3B6A4CF24B15292009C6E32 /* ContentView.swift in Sources */,
+				B3B6A4D024B15292009C6E32 /* doc_appDocument.swift in Sources */,
 				B394CAC2243953EC008C08E2 /* FileManagement.swift in Sources */,
-				B3DB480F2431642100B1DA4F /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +327,14 @@
 		B3DB4801243162DA00B1DA4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.16;
 			};
 			name = Debug;
 		};
 		B3DB4802243162DA00B1DA4F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.16;
 			};
 			name = Release;
 		};
@@ -391,7 +423,6 @@
 					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/pcre/8.42/lib",
 					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/libffi/3.2.1/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 3.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -484,7 +515,6 @@
 					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/pcre/8.42/lib",
 					"$(PROJECT_DIR)/packages/SpeculidKit/_archive/frameworks/cairosvg/dependencies/libffi/3.2.1/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 3.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
