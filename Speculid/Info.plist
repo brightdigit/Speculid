@@ -4,19 +4,33 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-  <key>CFBundleDocumentTypes</key>
-  <array>
-    <dict>
-      <key>CFBundleTypeRole</key>
-      <string>Editor</string>
-      <key>LSItemContentTypes</key>
-      <array>
-        <string>com.example.plain-text</string>
-      </array>
-      <key>NSUbiquitousDocumentUserActivityType</key>
-      <string>$(PRODUCT_BUNDLE_IDENTIFIER).example-document</string>
-    </dict>
-  </array>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.brightdigit.speculid-project-document</string>
+			</array>
+			<key>NSUbiquitousDocumentUserActivityType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).speculid-project-document</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.brightdigit.speculid-image-document</string>
+			</array>
+			<key>NSUbiquitousDocumentUserActivityType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)speculid-image-document</string>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconFile</key>
@@ -47,25 +61,46 @@
 	<true/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
-  <key>UTImportedTypeDeclarations</key>
-  <array>
-    <dict>
-      <key>UTTypeConformsTo</key>
-      <array>
-        <string>public.plain-text</string>
-      </array>
-      <key>UTTypeDescription</key>
-      <string>Example Text</string>
-      <key>UTTypeIdentifier</key>
-      <string>com.example.plain-text</string>
-      <key>UTTypeTagSpecification</key>
-      <dict>
-        <key>public.filename-extension</key>
-        <array>
-          <string>exampletext</string>
-        </array>
-      </dict>
-    </dict>
-  </array>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.plain-text</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Speuclid Project File </string>
+			<key>UTTypeIcons</key>
+			<dict/>
+			<key>UTTypeIdentifier</key>
+			<string>com.brightdigit.speculid-project-document</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>spcl</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.plain-text</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Speculid Image Document</string>
+			<key>UTTypeIcons</key>
+			<dict/>
+			<key>UTTypeIdentifier</key>
+			<string>com.brightdigit.speculid-image-document</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>speculid</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

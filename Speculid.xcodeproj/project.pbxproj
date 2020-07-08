@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B303554A24381F1200A8EAB9 /* SpeculidKit in Frameworks */ = {isa = PBXBuildFile; productRef = B303554924381F1200A8EAB9 /* SpeculidKit */; };
+		B347128924B64968001CCCFD /* ClassicDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B347128824B64968001CCCFD /* ClassicDocument.swift */; };
+		B347128B24B668DE001CCCFD /* ClassicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B347128A24B668DE001CCCFD /* ClassicView.swift */; };
 		B3796B7C2432C50100E5F5F9 /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3DB4824243166FC00B1DA4F /* speculid */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B394CAC2243953EC008C08E2 /* FileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B394CAC1243953EC008C08E2 /* FileManagement.swift */; };
 		B3B6A4CF24B15292009C6E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364624224B14DBB0089382E /* ContentView.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B347128824B64968001CCCFD /* ClassicDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicDocument.swift; sourceTree = "<group>"; };
+		B347128A24B668DE001CCCFD /* ClassicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicView.swift; sourceTree = "<group>"; };
 		B364623E24B14DBB0089382E /* doc_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doc_appApp.swift; sourceTree = "<group>"; };
 		B364624024B14DBB0089382E /* doc_appDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doc_appDocument.swift; sourceTree = "<group>"; };
 		B364624224B14DBB0089382E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../doc-app/ContentView.swift"; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 				B3DB48102431642100B1DA4F /* Document.xcdatamodeld */,
 				B3DB48152431642600B1DA4F /* Preview Content */,
 				B394CAC1243953EC008C08E2 /* FileManagement.swift */,
+				B347128824B64968001CCCFD /* ClassicDocument.swift */,
+				B347128A24B668DE001CCCFD /* ClassicView.swift */,
 			);
 			path = Speculid;
 			sourceTree = "<group>";
@@ -287,6 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3DB48122431642100B1DA4F /* Document.xcdatamodeld in Sources */,
+				B347128B24B668DE001CCCFD /* ClassicView.swift in Sources */,
+				B347128924B64968001CCCFD /* ClassicDocument.swift in Sources */,
 				B3B6A4D124B15292009C6E32 /* doc_appApp.swift in Sources */,
 				B3B6A4CF24B15292009C6E32 /* ContentView.swift in Sources */,
 				B3B6A4D024B15292009C6E32 /* doc_appDocument.swift in Sources */,

@@ -9,19 +9,19 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 extension UTType {
-    static var speculidProjectDocument: UTType {
-        UTType(importedAs: "com.brightdigit.speculid-project-document")
+    static var speculidImageDocument: UTType {
+        UTType(importedAs: "com.brightdigit.speculid-image-document")
     }
 }
 
-struct doc_appDocument: FileDocument {
+struct ClassicDocument: FileDocument {
     var text: String
 
     init(text: String = "Hello, world!") {
         self.text = text
     }
 
-    static var readableContentTypes: [UTType] { [.speculidProjectDocument] }
+    static var readableContentTypes: [UTType] { [.speculidImageDocument] }
 
     init(fileWrapper: FileWrapper, contentType: UTType) throws {
         guard let data = fileWrapper.regularFileContents,
@@ -42,7 +42,7 @@ struct doc_appDocument: FileDocument {
   }
 }
 
-struct doc_appDocument_Previews: PreviewProvider {
+struct ClassicDocument_Previews: PreviewProvider {
     static var previews: some View {
         /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }

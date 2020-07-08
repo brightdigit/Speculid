@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct doc_appApp: App {
-    var body: some Scene {
-        DocumentGroup(newDocument: doc_appDocument()) { file in
-            ContentView(document: file.$document)
+      @SceneBuilder var body: some Scene {
+        
+      DocumentGroup(newDocument: doc_appDocument()) { file in
+          ContentView(document: file.$document)
+      }
+        DocumentGroup(viewing: ClassicDocument.self) { (file) in
+          ClassicView(document: file.$document)
         }
-    }
+          }
+    
 }

@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @Binding var document: doc_appDocument
+struct ClassicView: View {
+    @Binding var document: ClassicDocument
 
     var body: some View {
       HStack{
@@ -20,7 +20,7 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ClassicView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(document: .constant(doc_appDocument()))
     }
