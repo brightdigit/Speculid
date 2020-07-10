@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import SpeculidKit
 
 struct ClassicView: View {
     @Binding var document: ClassicDocument
 
     var body: some View {
       HStack{
-        TextEditor(text: $document.text)
+        Text(document.document.assetDirectoryRelativePath)
         Button("Build") {
           document.build()
         }
@@ -22,6 +23,6 @@ struct ClassicView: View {
 
 struct ClassicView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(document: .constant(doc_appDocument()))
+      ClassicView(document: .constant(ClassicDocument()))
     }
 }

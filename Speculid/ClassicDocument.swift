@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UniformTypeIdentifiers
+import SpeculidKit
 
 extension UTType {
     static var speculidImageDocument: UTType {
@@ -15,30 +16,31 @@ extension UTType {
 }
 
 struct ClassicDocument: FileDocument {
-    var text: String
+  var document: SpeculidSpecificationsFile
 
-    init(text: String = "Hello, world!") {
-        self.text = text
+    init(document: SpeculidSpecificationsFile = SpeculidSpecificationsFile()) {
+      self.document = document
     }
 
     static var readableContentTypes: [UTType] { [.speculidImageDocument] }
 
     init(fileWrapper: FileWrapper, contentType: UTType) throws {
-        guard let data = fileWrapper.regularFileContents,
-              let string = String(data: data, encoding: .utf8)
+      debugPrint(fileWrapper.filename)
+      let decoder = JSONDecoder()
+        guard let data = fileWrapper.regularFileContents
         else {
             throw CocoaError(.fileReadCorruptFile)
         }
-        text = string
+      self.document = try decoder.decode(SpeculidSpecificationsFile.self, from: data)
     }
     
     func write(to fileWrapper: inout FileWrapper, contentType: UTType) throws {
-        let data = text.data(using: .utf8)!
+      let encoder = JSONEncoder()
+      let data = try encoder.encode(self.document)
         fileWrapper = FileWrapper(regularFileWithContents: data)
     }
   
   func build () {
-    
   }
 }
 
