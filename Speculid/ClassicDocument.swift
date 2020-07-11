@@ -43,11 +43,28 @@ struct ClassicDocument: FileDocument {
     }
   
   func build (fromURL url: URL) {
-    let builder : SpeculidBuilderProtocol = ObsoleteApplication.current.builder
+    
+    let imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
+    
+      let imageSpecifications: [ImageSpecification]
+
+      
+//    
     guard let document = try? SpeculidDocument(url: url, decoder: JSONDecoder()) else {
       return
     }
-    builder.build(document: document)
+    let destinationFileNames = document.assetFile.document.images.map {
+      asset in
+      (asset, document.destinationName(forImage: asset))
+    }
+    do {
+      imageSpecifications = try destinationFileNames.map { (asset, fileName) -> ImageSpecification in
+        try imageSpecificationBuilder.imageSpecification(forURL: document.destinationURL(forFileName: fileName), withSpecifications: document.specificationsFile, andAsset: asset)
+      }
+    } catch {
+      return //callback(error)
+    }
+//    builder.build(document: document)
   }
 }
 
