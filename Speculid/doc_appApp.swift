@@ -15,7 +15,7 @@ struct doc_appApp: App {
           ContentView(document: file.$document)
       }
         DocumentGroup(viewing: ClassicDocument.self) { (file) in
-          ClassicView(document: file.$document)
+          ClassicView(document: file.$document, fileURL: file.fileURL)
         }
           }
     

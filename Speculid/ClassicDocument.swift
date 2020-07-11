@@ -9,6 +9,7 @@ import SwiftUI
 import UniformTypeIdentifiers
 import SpeculidKit
 
+
 extension UTType {
     static var speculidImageDocument: UTType {
         UTType(importedAs: "com.brightdigit.speculid-image-document")
@@ -20,6 +21,7 @@ struct ClassicDocument: FileDocument {
 
     init(document: SpeculidSpecificationsFile = SpeculidSpecificationsFile()) {
       self.document = document
+      
     }
 
     static var readableContentTypes: [UTType] { [.speculidImageDocument] }
@@ -40,7 +42,12 @@ struct ClassicDocument: FileDocument {
         fileWrapper = FileWrapper(regularFileWithContents: data)
     }
   
-  func build () {
+  func build (fromURL url: URL) {
+    let builder : SpeculidBuilderProtocol = ObsoleteApplication.current.builder
+    guard let document = try? SpeculidDocument(url: url, decoder: JSONDecoder()) else {
+      return
+    }
+    builder.build(document: document)
   }
 }
 
