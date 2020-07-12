@@ -38,7 +38,6 @@ struct doc_appDocument: FileDocument {
     }
   
   func build () {
-    
   }
 }
 

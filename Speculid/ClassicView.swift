@@ -9,11 +9,31 @@ import SwiftUI
 import SpeculidKit
 
 struct ClassicView: View {
+  let fileManagement = FileManagement()
     @Binding var document: ClassicDocument
-  var fileURL: URL?
-
+  @State var fileURL: URL?
+  @Environment(\.importFiles) var importFiles
     var body: some View {
-      HStack{
+      VStack{
+        Button(action: {
+          self.importFiles(singleOfType: [.svg, .png]) { (result) in
+            guard case let .success(url) = result else {
+              return
+            }
+            let saveResult = Result{ try fileManagement.saveBookmark(url) }
+            guard case .success = saveResult else {
+              return
+            }
+            let urlResult = Result{ try fileManagement.bookmarkURL(fromURL: url) }
+            debugPrint(urlResult)
+          }
+        }, label: {
+          HStack{
+            Image(systemName: "photo.fill")
+            Text(document.document.sourceImageRelativePath)
+          }
+        })
+        
         Text(document.document.assetDirectoryRelativePath)
         self.fileURL.map{
           fileURL in

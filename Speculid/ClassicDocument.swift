@@ -27,6 +27,7 @@ struct ClassicDocument: FileDocument {
     static var readableContentTypes: [UTType] { [.speculidImageDocument] }
 
     init(fileWrapper: FileWrapper, contentType: UTType) throws {
+      
       debugPrint(fileWrapper.filename)
       let decoder = JSONDecoder()
         guard let data = fileWrapper.regularFileContents
@@ -43,6 +44,15 @@ struct ClassicDocument: FileDocument {
     }
   
   func build (fromURL url: URL) {
+    
+    let management = FileManagement()
+    
+    
+    let urls = ["assetDirectory" : url.deletingLastPathComponent().appendingPathComponent(document.assetDirectoryRelativePath),
+                "sourceImage" : url.deletingLastPathComponent().appendingPathComponent(document.sourceImageRelativePath)]
+    
+    
+
     
     let imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
     

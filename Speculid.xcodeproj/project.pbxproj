@@ -13,7 +13,6 @@
 		B3796B7C2432C50100E5F5F9 /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3DB4824243166FC00B1DA4F /* speculid */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B37B472224B93CB900AE2021 /* CairoSVG.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37B472124B93CB900AE2021 /* CairoSVG.xcframework */; };
 		B37B472324B93CB900AE2021 /* CairoSVG.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B37B472124B93CB900AE2021 /* CairoSVG.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B394CAC2243953EC008C08E2 /* FileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B394CAC1243953EC008C08E2 /* FileManagement.swift */; };
 		B3B6A4CF24B15292009C6E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364624224B14DBB0089382E /* ContentView.swift */; };
 		B3B6A4D024B15292009C6E32 /* doc_appDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364624024B14DBB0089382E /* doc_appDocument.swift */; };
 		B3B6A4D124B15292009C6E32 /* doc_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364623E24B14DBB0089382E /* doc_appApp.swift */; };
@@ -80,7 +79,6 @@
 		B3796B792432B7FF00E5F5F9 /* Command.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Command.entitlements; sourceTree = "<group>"; };
 		B37A52372435014400FEA6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B37B472124B93CB900AE2021 /* CairoSVG.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CairoSVG.xcframework; path = packages/SpeculidKit/packages/CairoSVG/build/CairoSVG.xcframework; sourceTree = "<group>"; };
-		B394CAC1243953EC008C08E2 /* FileManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagement.swift; sourceTree = "<group>"; };
 		B39F286B243817F700A69B85 /* SpeculidKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SpeculidKit; sourceTree = "<group>"; };
 		B3DB48072431642100B1DA4F /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DB480A2431642100B1DA4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -197,7 +195,6 @@
 				B3DB481C2431642600B1DA4F /* Speculid.entitlements */,
 				B3DB48102431642100B1DA4F /* Document.xcdatamodeld */,
 				B3DB48152431642600B1DA4F /* Preview Content */,
-				B394CAC1243953EC008C08E2 /* FileManagement.swift */,
 				B347128824B64968001CCCFD /* ClassicDocument.swift */,
 				B347128A24B668DE001CCCFD /* ClassicView.swift */,
 			);
@@ -315,7 +312,6 @@
 				B3B6A4D124B15292009C6E32 /* doc_appApp.swift in Sources */,
 				B3B6A4CF24B15292009C6E32 /* ContentView.swift in Sources */,
 				B3B6A4D024B15292009C6E32 /* doc_appDocument.swift in Sources */,
-				B394CAC2243953EC008C08E2 /* FileManagement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
