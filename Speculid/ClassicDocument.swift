@@ -51,7 +51,9 @@ struct ClassicDocument: FileDocument {
 
     init(fileWrapper: FileWrapper, contentType: UTType) throws {
       
-      debugPrint(fileWrapper.filename)
+      dump(fileWrapper.fileAttributes)
+      dump(fileWrapper.isRegularFile)
+      print(FileManager.default.currentDirectoryPath)
       let decoder = JSONDecoder()
         guard let data = fileWrapper.regularFileContents
         else {
