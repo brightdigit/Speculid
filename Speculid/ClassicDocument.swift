@@ -27,6 +27,7 @@ struct SpeculidMutableSpecificationsFile : SpeculidSpecificationsFileProtocol {
     guard backgroundColor != .clear else {
       return nil
     }
+    
     return NSColor(self.backgroundColor)
   }
   
