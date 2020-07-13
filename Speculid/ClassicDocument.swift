@@ -16,11 +16,33 @@ extension UTType {
     }
 }
 
+struct SpeculidMutableSpecificationsFile : SpeculidSpecificationsFileProtocol {
+  var assetDirectoryRelativePath: String
+  var sourceImageRelativePath: String
+  var geometry: Geometry?
+  var backgroundColor: Color
+  var removeAlpha: Bool
+  
+  var background: NSColor? {
+    guard backgroundColor != .clear else {
+      return nil
+    }
+    return NSColor(self.backgroundColor)
+  }
+  
+  init (source: SpeculidSpecificationsFileProtocol) {
+    self.assetDirectoryRelativePath = source.assetDirectoryRelativePath
+    self.sourceImageRelativePath = source.sourceImageRelativePath
+    self.geometry = source.geometry
+    self.backgroundColor = source.background.map( Color.init ) ?? .clear
+    self.removeAlpha = source.removeAlpha
+  }
+}
 struct ClassicDocument: FileDocument {
-  var document: SpeculidSpecificationsFile
+  var document: SpeculidMutableSpecificationsFile
 
     init(document: SpeculidSpecificationsFile = SpeculidSpecificationsFile()) {
-      self.document = document
+      self.document = SpeculidMutableSpecificationsFile(source: document)
       
     }
 
@@ -34,12 +56,14 @@ struct ClassicDocument: FileDocument {
         else {
             throw CocoaError(.fileReadCorruptFile)
         }
-      self.document = try decoder.decode(SpeculidSpecificationsFile.self, from: data)
+      let document = try decoder.decode(SpeculidSpecificationsFile.self, from: data)
+      self.document = SpeculidMutableSpecificationsFile(source: document)
     }
     
     func write(to fileWrapper: inout FileWrapper, contentType: UTType) throws {
+      let document = SpeculidSpecificationsFile(source: self.document)
       let encoder = JSONEncoder()
-      let data = try encoder.encode(self.document)
+      let data = try encoder.encode(document)
         fileWrapper = FileWrapper(regularFileWithContents: data)
     }
   
