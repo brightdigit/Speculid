@@ -85,9 +85,12 @@ struct ClassicDocument: FileDocument {
     
       let imageSpecifications: [ImageSpecification]
 
-      
-//    
-    guard let document = try? SpeculidDocument(url: url, decoder: JSONDecoder()) else {
+//
+    let document : SpeculidDocument
+    do {
+      document = try SpeculidDocument(sandboxedFromFile: self.document, withURL: url,  decoder: JSONDecoder(), withManager: management)
+    } catch {
+      debugPrint(error)
       return
     }
     let destinationFileNames = document.assetFile.document.images.map {
@@ -99,8 +102,21 @@ struct ClassicDocument: FileDocument {
         try imageSpecificationBuilder.imageSpecification(forURL: document.destinationURL(forFileName: fileName), withSpecifications: document.specificationsFile, andAsset: asset)
       }
     } catch {
+      debugPrint(error)
       return //callback(error)
     }
+    let service = Service()
+    let sourceURL : URL
+    do {
+      sourceURL = try management.bookmarkURL(fromURL: document.sourceImageURL)
+    } catch {
+      debugPrint(error)
+      return
+    }
+    service.exportImageAtURL(sourceURL, toSpecifications: imageSpecifications) { (error) in
+      debugPrint(error)
+    }
+    
 //    builder.build(document: document)
   }
 }

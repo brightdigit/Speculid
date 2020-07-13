@@ -23,11 +23,6 @@ import SpeculidKit
 }
 
 extension UserDefaults {
-    static var shared: UserDefaults {
-        let combined = UserDefaults.standard
-        combined.addSuite(named: "MLT7M394S7.group.com.brightdigit.Speculid")
-        return combined
-    }
   
   @objc
   var bookmarks : [String : Data]? {
@@ -44,24 +39,39 @@ public class BookmarkURLCollectionObject : ObservableObject {
 
   //@AppStorage("bookmarks", store: UserDefaults(suiteName: "MLT7M394S7.group.com.brightdigit.Speculid"))
 //  @UserDefaultsBacked(key: "bookmarks", defaultValue: [String : Data](), storage: UserDefaults.shared)
+  
+  static let shared: UserDefaults  = {
+      let combined = UserDefaults(suiteName: "MLT7M394S7.group.com.brightdigit.Speculid")!
+      combined.register(defaults: ["bookmarks" : [String : Data]()])
+      return combined
+  }()
+  
   @Published var bookmarks  = [URL : URL]()
   
   static func saveBookmark(_ url: URL)  {
-    guard let newData =  try? url.bookmarkData() else {
+    
+    guard let newData =  try? url.bookmarkData(options: .withSecurityScope, includingResourceValuesForKeys: nil, relativeTo: nil) else {
       return
     }
-    var bookmarkMap = UserDefaults.shared.bookmarks ?? [String : Data]()
+    var bookmarkMap = Self.shared.bookmarks ?? [String : Data]()
     bookmarkMap[url.path] = newData
-    UserDefaults.shared.bookmarks = bookmarkMap
+    Self.shared.bookmarks = bookmarkMap
     
   }
   
-  func isAvailable(basedOn baseURL: URL?, relativePath: String) -> Bool {
+  func reset () {
+    Self.shared.bookmarks = [String : Data]()
+  }
+  
+  func isAvailable(basedOn baseURL: URL?, relativePath: String ...) -> Bool {
     guard let baseURL = baseURL else {
       return false
     }
     
-    let url = baseURL.deletingLastPathComponent().appendingPathComponent(relativePath)
+    var url = baseURL.deletingLastPathComponent()
+    for path in relativePath {
+      url.appendPathComponent(path)
+    }
     
     return self.bookmarks[url] != nil
   }
@@ -74,17 +84,21 @@ public class BookmarkURLCollectionObject : ObservableObject {
     }
 
     if isStale {
-      saveBookmark(url)
+      DispatchQueue.global().async {
+        saveBookmark(url)
+      }
+      
     }
+    debugPrint("Adding bookmark of \(path) for \(url)")
     return (URL(fileURLWithPath: path), url)
   }
   
   init () {
-    let bookmarkPublisher = UserDefaults.shared.publisher(for: \.bookmarks).compactMap{$0}
+    let bookmarkPublisher = Self.shared.publisher(for: \.bookmarks).compactMap{$0}
     bookmarkPublisher.map{
       Dictionary(uniqueKeysWithValues:
       $0.compactMap(Self.transformPath))
-    }.assign(to: self.$bookmarks)
+    }.receive(on: DispatchQueue.main).assign(to: self.$bookmarks)
   
     
   }
@@ -97,6 +111,13 @@ struct ClassicView: View {
     @Binding var document: ClassicDocument
   @EnvironmentObject var bookmarkCollection : BookmarkURLCollectionObject
   @Environment(\.importFiles) var importFiles
+  @Environment(\.exportFiles) var exportFiles
+  
+  var canBuild : Bool {
+    return url != nil &&
+      self.bookmarkCollection.isAvailable(basedOn: self.url, relativePath: self.document.document.assetDirectoryRelativePath, "Contents.json") &&
+      self.bookmarkCollection.isAvailable(basedOn: self.url, relativePath: self.document.document.sourceImageRelativePath)
+  }
     var body: some View {
       VStack{
         Text(url?.absoluteString ?? "")
@@ -121,29 +142,72 @@ struct ClassicView: View {
         })
         
           Button(action: {
-            self.importFiles(singleOfType: [.json]) { (result) in
-              guard case let .success(jsonURL) = result else {
+            
+            self.importFiles(singleOfType: [.directory]) { (result) in
+              guard case let .success(url) = result else {
                 return
               }
-              let url = jsonURL.deletingLastPathComponent()
+              //let url = jsonURL.deletingLastPathComponent()
+              
+              guard url == self.url?.appendingPathComponent(self.document.document.assetDirectoryRelativePath) else {
+                return
+              }
               let saveResult = Result{ try fileManagement.saveBookmark(url) }
+                /*.flatMap{
+                Result{ try fileManagement.saveBookmark(jsonURL)}
+              }*/
               guard case .success = saveResult else {
+                debugPrint(saveResult)
                 return
               }
               let urlResult = Result{ try fileManagement.bookmarkURL(fromURL: url) }
               debugPrint(urlResult)
+//              let jsonURLResult = Result{ try fileManagement.bookmarkURL(fromURL: jsonURL) }
+//              debugPrint(jsonURLResult)
             }
           }, label: {
             HStack{
-              Image(systemName: self.bookmarkCollection.isAvailable(basedOn: self.url, relativePath: self.document.document.assetDirectoryRelativePath) ? "lock.open.fill" : "lock.fill")
+              Image(systemName: self.bookmarkCollection.isAvailable(basedOn: self.url, relativePath: self.document.document.assetDirectoryRelativePath, "Contents.json") ? "lock.open.fill" : "lock.fill")
               Image(systemName: "photo.fill")
               Text(self.document.document.assetDirectoryRelativePath)
             }
           })
         
+          Button(action: {
+            self.importFiles(singleOfType: [.json]) { (result) in
+              guard case let .success(url) = result else {
+                return
+              }
+              //let url = jsonURL.deletingLastPathComponent()
+              
+              let saveResult = Result{ try fileManagement.saveBookmark(url) }
+                /*.flatMap{
+                Result{ try fileManagement.saveBookmark(jsonURL)}
+              }*/
+              guard case .success = saveResult else {
+                debugPrint(saveResult)
+                return
+              }
+              let urlResult = Result{ try fileManagement.bookmarkURL(fromURL: url) }
+              debugPrint(urlResult)
+//              let jsonURLResult = Result{ try fileManagement.bookmarkURL(fromURL: jsonURL) }
+//              debugPrint(jsonURLResult)
+            }
+          }, label: {
+            HStack{
+              Image(systemName: self.bookmarkCollection.isAvailable(basedOn: self.url, relativePath: self.document.document.assetDirectoryRelativePath, "Contents.json") ? "lock.open.fill" : "lock.fill")
+              Image(systemName: "photo.fill")
+              Text(self.document.document.assetDirectoryRelativePath)
+            }
+          })
         Toggle("Remove Alpha", isOn: self.$document.document.removeAlpha)
         ColorPicker("Background Color", selection: self.$document.document.backgroundColor)
        
+        Button("Build") {
+          if let url = self.url {
+            self.document.build(fromURL: url)
+          }
+        }.disabled(!self.canBuild)
         
       }
     }
