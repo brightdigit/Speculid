@@ -69,7 +69,7 @@ struct ClassicDocument: FileDocument {
         fileWrapper = FileWrapper(regularFileWithContents: data)
     }
   
-  func build (fromURL url: URL, onExport: (([URL], @escaping ((Result<[URL : URL], Error>) -> Void)) -> Void)) {
+  func build (fromURL url: URL) {
     
     let management = FileManagement()
     
@@ -101,28 +101,6 @@ struct ClassicDocument: FileDocument {
     }
     
     processImages(fromURL: url, management: management, document: document, sandboxMap: urlMap)
-//    let sandboxMap : [(AssetSpecificationProtocol, String, URL)]
-//    do {
-//      sandboxMap = try urlMap.map{  (asset, fileName, url)  in
-//      (asset, fileName, try management.bookmarkURL(fromURL: url))
-//    }
-//    } catch {
-//      onExport(urlMap.map{$0.2}) { (urlsResult) in
-//        guard case let .success(urls) = urlsResult else {
-//          return
-//        }
-//        let sandboxMap = urlMap.map{  (asset, fileName, url)  in
-//          (asset, fileName, (urls[url]) ?? (try? management.bookmarkURL(fromURL: url)) ?? url)
-//        }
-//        processImages(fromURL: url, management: management, document: document, sandboxMap: sandboxMap)
-//      }
-//      return
-//    }
-//
-//
-//    processImages(fromURL: url, management: management, document: document, sandboxMap: sandboxMap)
-    
-//    builder.build(document: document)
   }
   
   func processImages (fromURL url: URL, management: FileManagement, document : SpeculidDocument, sandboxMap: [(AssetSpecificationProtocol, String, URL)]) {

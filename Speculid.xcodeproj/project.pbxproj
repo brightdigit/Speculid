@@ -12,11 +12,11 @@
 		B347128B24B668DE001CCCFD /* ClassicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B347128A24B668DE001CCCFD /* ClassicView.swift */; };
 		B34B6BBE24BDEF2B00F4EE6B /* CairoSVG.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37B472124B93CB900AE2021 /* CairoSVG.xcframework */; };
 		B34B6BBF24BDEF2B00F4EE6B /* CairoSVG.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B37B472124B93CB900AE2021 /* CairoSVG.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B34B6BC224BE354D00F4EE6B /* BookmarkURLCollectionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B6BC124BE354D00F4EE6B /* BookmarkURLCollectionObject.swift */; };
 		B3796B7C2432C50100E5F5F9 /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3DB4824243166FC00B1DA4F /* speculid */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3B6A4CF24B15292009C6E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364624224B14DBB0089382E /* ContentView.swift */; };
 		B3B6A4D024B15292009C6E32 /* doc_appDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364624024B14DBB0089382E /* doc_appDocument.swift */; };
 		B3B6A4D124B15292009C6E32 /* doc_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364623E24B14DBB0089382E /* doc_appApp.swift */; };
-		B3DB48122431642100B1DA4F /* Document.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3DB48102431642100B1DA4F /* Document.xcdatamodeld */; };
 		B3DB48142431642600B1DA4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48132431642600B1DA4F /* Assets.xcassets */; };
 		B3DB48172431642600B1DA4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48162431642600B1DA4F /* Preview Assets.xcassets */; };
 		B3DB481A2431642600B1DA4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48182431642600B1DA4F /* Main.storyboard */; };
@@ -69,21 +69,16 @@
 /* Begin PBXFileReference section */
 		B347128824B64968001CCCFD /* ClassicDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicDocument.swift; sourceTree = "<group>"; };
 		B347128A24B668DE001CCCFD /* ClassicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicView.swift; sourceTree = "<group>"; };
+		B34B6BC124BE354D00F4EE6B /* BookmarkURLCollectionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkURLCollectionObject.swift; sourceTree = "<group>"; };
 		B364623E24B14DBB0089382E /* doc_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doc_appApp.swift; sourceTree = "<group>"; };
 		B364624024B14DBB0089382E /* doc_appDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doc_appDocument.swift; sourceTree = "<group>"; };
 		B364624224B14DBB0089382E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../doc-app/ContentView.swift"; sourceTree = "<group>"; };
-		B364624424B14DBD0089382E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B364624724B14DBD0089382E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B364624924B14DBD0089382E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B364624A24B14DBD0089382E /* doc_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = doc_app.entitlements; sourceTree = "<group>"; };
 		B3796B792432B7FF00E5F5F9 /* Command.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Command.entitlements; sourceTree = "<group>"; };
 		B37A52372435014400FEA6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B37B472124B93CB900AE2021 /* CairoSVG.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CairoSVG.xcframework; path = packages/SpeculidKit/packages/CairoSVG/build/CairoSVG.xcframework; sourceTree = "<group>"; };
 		B39F286B243817F700A69B85 /* SpeculidKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SpeculidKit; sourceTree = "<group>"; };
 		B3DB48072431642100B1DA4F /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3DB480C2431642100B1DA4F /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		B3DB480E2431642100B1DA4F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B3DB48112431642100B1DA4F /* Document.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Document.xcdatamodel; sourceTree = "<group>"; };
 		B3DB48132431642600B1DA4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3DB48162431642600B1DA4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3DB48192431642600B1DA4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,25 +116,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B364623D24B14DBB0089382E /* doc-app */ = {
-			isa = PBXGroup;
-			children = (
-				B364624424B14DBD0089382E /* Assets.xcassets */,
-				B364624924B14DBD0089382E /* Info.plist */,
-				B364624A24B14DBD0089382E /* doc_app.entitlements */,
-				B364624624B14DBD0089382E /* Preview Content */,
-			);
-			path = "doc-app";
-			sourceTree = "<group>";
-		};
-		B364624624B14DBD0089382E /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				B364624724B14DBD0089382E /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		B37A5236243500C900FEA6E9 /* command */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +140,6 @@
 				B39F13FE243817AB00A69B85 /* packages */,
 				B37A5236243500C900FEA6E9 /* command */,
 				B3DB48092431642100B1DA4F /* Speculid */,
-				B364623D24B14DBB0089382E /* doc-app */,
 				B3DB48082431642100B1DA4F /* Products */,
 				B303554824381F1200A8EAB9 /* Frameworks */,
 			);
@@ -185,16 +160,15 @@
 				B364623E24B14DBB0089382E /* doc_appApp.swift */,
 				B364624024B14DBB0089382E /* doc_appDocument.swift */,
 				B364624224B14DBB0089382E /* ContentView.swift */,
-				B3DB480C2431642100B1DA4F /* Document.swift */,
 				B3DB480E2431642100B1DA4F /* ContentView.swift */,
 				B3DB48132431642600B1DA4F /* Assets.xcassets */,
 				B3DB48182431642600B1DA4F /* Main.storyboard */,
 				B3DB481B2431642600B1DA4F /* Info.plist */,
 				B3DB481C2431642600B1DA4F /* Speculid.entitlements */,
-				B3DB48102431642100B1DA4F /* Document.xcdatamodeld */,
 				B3DB48152431642600B1DA4F /* Preview Content */,
 				B347128824B64968001CCCFD /* ClassicDocument.swift */,
 				B347128A24B668DE001CCCFD /* ClassicView.swift */,
+				B34B6BC124BE354D00F4EE6B /* BookmarkURLCollectionObject.swift */,
 			);
 			path = Speculid;
 			sourceTree = "<group>";
@@ -304,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3DB48122431642100B1DA4F /* Document.xcdatamodeld in Sources */,
+				B34B6BC224BE354D00F4EE6B /* BookmarkURLCollectionObject.swift in Sources */,
 				B347128B24B668DE001CCCFD /* ClassicView.swift in Sources */,
 				B347128924B64968001CCCFD /* ClassicDocument.swift in Sources */,
 				B3B6A4D124B15292009C6E32 /* doc_appApp.swift in Sources */,
@@ -781,19 +755,6 @@
 			productName = SpeculidKit;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		B3DB48102431642100B1DA4F /* Document.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B3DB48112431642100B1DA4F /* Document.xcdatamodel */,
-			);
-			currentVersion = B3DB48112431642100B1DA4F /* Document.xcdatamodel */;
-			path = Document.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B3DB47FD243162DA00B1DA4F /* Project object */;
 }
