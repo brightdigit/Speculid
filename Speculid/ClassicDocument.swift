@@ -8,6 +8,7 @@
 import SwiftUI
 import UniformTypeIdentifiers
 import SpeculidKit
+import AssetLib
 
 
 extension UTType {
@@ -39,6 +40,8 @@ struct SpeculidMutableSpecificationsFile : SpeculidSpecificationsFileProtocol {
     self.removeAlpha = source.removeAlpha
   }
 }
+
+
 struct ClassicDocument: FileDocument {
   var document: SpeculidMutableSpecificationsFile
 
@@ -50,10 +53,6 @@ struct ClassicDocument: FileDocument {
     static var readableContentTypes: [UTType] { [.speculidImageDocument] }
 
     init(fileWrapper: FileWrapper, contentType: UTType) throws {
-      
-      dump(fileWrapper.fileAttributes)
-      dump(fileWrapper.isRegularFile)
-      print(FileManager.default.currentDirectoryPath)
       let decoder = JSONDecoder()
         guard let data = fileWrapper.regularFileContents
         else {
@@ -70,7 +69,7 @@ struct ClassicDocument: FileDocument {
         fileWrapper = FileWrapper(regularFileWithContents: data)
     }
   
-  func build (fromURL url: URL) {
+  func build (fromURL url: URL, onExport: (([URL], @escaping ((Result<[URL : URL], Error>) -> Void)) -> Void)) {
     
     let management = FileManagement()
     
@@ -81,9 +80,6 @@ struct ClassicDocument: FileDocument {
     
 
     
-    let imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
-    
-      let imageSpecifications: [ImageSpecification]
 
 //
     let document : SpeculidDocument
@@ -91,20 +87,60 @@ struct ClassicDocument: FileDocument {
       document = try SpeculidDocument(sandboxedFromFile: self.document, withURL: url,  decoder: JSONDecoder(), withManager: management)
     } catch {
       debugPrint(error)
+      debugPrint(error.localizedDescription)
       return
     }
+    
     let destinationFileNames = document.assetFile.document.images.map {
       asset in
       (asset, document.destinationName(forImage: asset))
     }
+    
+    let urlMap = destinationFileNames.map { (asset, fileName)  in
+      return (asset, fileName, document.destinationURL(forFileName: fileName))
+    }
+    
+    processImages(fromURL: url, management: management, document: document, sandboxMap: urlMap)
+//    let sandboxMap : [(AssetSpecificationProtocol, String, URL)]
+//    do {
+//      sandboxMap = try urlMap.map{  (asset, fileName, url)  in
+//      (asset, fileName, try management.bookmarkURL(fromURL: url))
+//    }
+//    } catch {
+//      onExport(urlMap.map{$0.2}) { (urlsResult) in
+//        guard case let .success(urls) = urlsResult else {
+//          return
+//        }
+//        let sandboxMap = urlMap.map{  (asset, fileName, url)  in
+//          (asset, fileName, (urls[url]) ?? (try? management.bookmarkURL(fromURL: url)) ?? url)
+//        }
+//        processImages(fromURL: url, management: management, document: document, sandboxMap: sandboxMap)
+//      }
+//      return
+//    }
+//
+//
+//    processImages(fromURL: url, management: management, document: document, sandboxMap: sandboxMap)
+    
+//    builder.build(document: document)
+  }
+  
+  func processImages (fromURL url: URL, management: FileManagement, document : SpeculidDocument, sandboxMap: [(AssetSpecificationProtocol, String, URL)]) {
+    
+    let assetDirectoryURL = url.deletingLastPathComponent().appendingPathComponent(self.document.assetDirectoryRelativePath)
+    debugPrint(self.document.assetDirectoryRelativePath)
+    debugPrint(assetDirectoryURL)
+    let imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
+      let imageSpecifications: [ImageSpecification]
     do {
-      imageSpecifications = try destinationFileNames.map { (asset, fileName) -> ImageSpecification in
-        try imageSpecificationBuilder.imageSpecification(forURL: document.destinationURL(forFileName: fileName), withSpecifications: document.specificationsFile, andAsset: asset)
+      imageSpecifications = try sandboxMap.map { (asset, fileName, url) -> ImageSpecification in
+        try imageSpecificationBuilder.imageSpecification(forURL: url, withSpecifications: document.specificationsFile, andAsset: asset)
       }
     } catch {
       debugPrint(error)
       return //callback(error)
     }
+    
     let service = Service()
     let sourceURL : URL
     do {
@@ -113,11 +149,25 @@ struct ClassicDocument: FileDocument {
       debugPrint(error)
       return
     }
-    service.exportImageAtURL(sourceURL, toSpecifications: imageSpecifications) { (error) in
-      debugPrint(error)
+    let destinationURL = try? management.bookmarkURL( fromURL: assetDirectoryURL )
+    if let testURL = destinationURL?.appendingPathComponent("test.text") {
+      do {
+       try "test".write(to: testURL, atomically: true, encoding: .utf8)
+      } catch {
+        debugPrint(error)
+      }
+      debugPrint("test written")
     }
     
-//    builder.build(document: document)
+    destinationURL?.startAccessingSecurityScopedResource()
+    
+    let acessingScoped = sourceURL.startAccessingSecurityScopedResource()
+    service.exportImageAtURL(sourceURL, toSpecifications: imageSpecifications) { (error) in
+      if acessingScoped  {
+      sourceURL.stopAccessingSecurityScopedResource()
+      }
+      debugPrint(error)
+    }
   }
 }
 

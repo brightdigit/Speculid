@@ -10,9 +10,9 @@
 		B303554A24381F1200A8EAB9 /* SpeculidKit in Frameworks */ = {isa = PBXBuildFile; productRef = B303554924381F1200A8EAB9 /* SpeculidKit */; };
 		B347128924B64968001CCCFD /* ClassicDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B347128824B64968001CCCFD /* ClassicDocument.swift */; };
 		B347128B24B668DE001CCCFD /* ClassicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B347128A24B668DE001CCCFD /* ClassicView.swift */; };
+		B34B6BBE24BDEF2B00F4EE6B /* CairoSVG.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37B472124B93CB900AE2021 /* CairoSVG.xcframework */; };
+		B34B6BBF24BDEF2B00F4EE6B /* CairoSVG.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B37B472124B93CB900AE2021 /* CairoSVG.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3796B7C2432C50100E5F5F9 /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3DB4824243166FC00B1DA4F /* speculid */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B37B472224B93CB900AE2021 /* CairoSVG.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37B472124B93CB900AE2021 /* CairoSVG.xcframework */; };
-		B37B472324B93CB900AE2021 /* CairoSVG.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B37B472124B93CB900AE2021 /* CairoSVG.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3B6A4CF24B15292009C6E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364624224B14DBB0089382E /* ContentView.swift */; };
 		B3B6A4D024B15292009C6E32 /* doc_appDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364624024B14DBB0089382E /* doc_appDocument.swift */; };
 		B3B6A4D124B15292009C6E32 /* doc_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364623E24B14DBB0089382E /* doc_appApp.swift */; };
@@ -34,6 +34,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B34B6BC024BDEF2B00F4EE6B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B34B6BBF24BDEF2B00F4EE6B /* CairoSVG.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3796B7A2432C33600E5F5F9 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 8;
@@ -43,17 +54,6 @@
 				B3796B7C2432C50100E5F5F9 /* speculid in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
-		};
-		B37B472424B93CB900AE2021 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B37B472324B93CB900AE2021 /* CairoSVG.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B3DB4822243166FC00B1DA4F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -81,7 +81,6 @@
 		B37B472124B93CB900AE2021 /* CairoSVG.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CairoSVG.xcframework; path = packages/SpeculidKit/packages/CairoSVG/build/CairoSVG.xcframework; sourceTree = "<group>"; };
 		B39F286B243817F700A69B85 /* SpeculidKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SpeculidKit; sourceTree = "<group>"; };
 		B3DB48072431642100B1DA4F /* Speculid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speculid.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3DB480A2431642100B1DA4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3DB480C2431642100B1DA4F /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		B3DB480E2431642100B1DA4F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3DB48112431642100B1DA4F /* Document.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Document.xcdatamodel; sourceTree = "<group>"; };
@@ -100,7 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B303554A24381F1200A8EAB9 /* SpeculidKit in Frameworks */,
-				B37B472224B93CB900AE2021 /* CairoSVG.xcframework in Frameworks */,
+				B34B6BBE24BDEF2B00F4EE6B /* CairoSVG.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +185,6 @@
 				B364623E24B14DBB0089382E /* doc_appApp.swift */,
 				B364624024B14DBB0089382E /* doc_appDocument.swift */,
 				B364624224B14DBB0089382E /* ContentView.swift */,
-				B3DB480A2431642100B1DA4F /* AppDelegate.swift */,
 				B3DB480C2431642100B1DA4F /* Document.swift */,
 				B3DB480E2431642100B1DA4F /* ContentView.swift */,
 				B3DB48132431642600B1DA4F /* Assets.xcassets */,
@@ -220,7 +218,7 @@
 				B3DB48042431642100B1DA4F /* Frameworks */,
 				B3DB48052431642100B1DA4F /* Resources */,
 				B3796B7A2432C33600E5F5F9 /* CopyFiles */,
-				B37B472424B93CB900AE2021 /* Embed Frameworks */,
+				B34B6BC024BDEF2B00F4EE6B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

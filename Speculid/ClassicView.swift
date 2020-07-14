@@ -49,7 +49,7 @@ public class BookmarkURLCollectionObject : ObservableObject {
   @Published var bookmarks  = [URL : URL]()
   
   static func saveBookmark(_ url: URL)  {
-    
+    debugPrint("saving bookmark for \(url)")
     guard let newData =  try? url.bookmarkData(options: .withSecurityScope, includingResourceValuesForKeys: nil, relativeTo: nil) else {
       return
     }
@@ -79,17 +79,20 @@ public class BookmarkURLCollectionObject : ObservableObject {
   static func transformPath(_ path: String, withBookmarkData bookmarkData: Data) -> (URL, URL)? {
     
     var isStale : Bool = false
-    guard let url = try? URL.init(resolvingBookmarkData: bookmarkData, bookmarkDataIsStale: &isStale) else {
+    
+     
+    guard let url = try? URL(resolvingBookmarkData: bookmarkData, options: .withSecurityScope, relativeTo: nil, bookmarkDataIsStale: &isStale) else {
       return nil
     }
+    
 
-    if isStale {
-      DispatchQueue.global().async {
-        saveBookmark(url)
-      }
-      
-    }
-    debugPrint("Adding bookmark of \(path) for \(url)")
+//    if isStale {
+//      DispatchQueue.global().async {
+//        saveBookmark(url)
+//      }
+//
+//    }
+    debugPrint("Adding \(isStale ? "stale" : "fresh") bookmark of \(path) for \(url)")
     return (URL(fileURLWithPath: path), url)
   }
   
@@ -131,7 +134,6 @@ struct ClassicView: View {
               return
             }
             let urlResult = Result{ try fileManagement.bookmarkURL(fromURL: url) }
-            debugPrint(urlResult)
           }
         }, label: {
           HStack{
@@ -149,7 +151,9 @@ struct ClassicView: View {
               }
               //let url = jsonURL.deletingLastPathComponent()
               
-              guard url == self.url?.appendingPathComponent(self.document.document.assetDirectoryRelativePath) else {
+              debugPrint(url.path)
+              debugPrint(self.url?.deletingLastPathComponent().appendingPathComponent(self.document.document.assetDirectoryRelativePath).path)
+              guard url.path == self.url?.deletingLastPathComponent().appendingPathComponent(self.document.document.assetDirectoryRelativePath).path else {
                 return
               }
               let saveResult = Result{ try fileManagement.saveBookmark(url) }
@@ -161,7 +165,6 @@ struct ClassicView: View {
                 return
               }
               let urlResult = Result{ try fileManagement.bookmarkURL(fromURL: url) }
-              debugPrint(urlResult)
 //              let jsonURLResult = Result{ try fileManagement.bookmarkURL(fromURL: jsonURL) }
 //              debugPrint(jsonURLResult)
             }
@@ -189,7 +192,6 @@ struct ClassicView: View {
                 return
               }
               let urlResult = Result{ try fileManagement.bookmarkURL(fromURL: url) }
-              debugPrint(urlResult)
 //              let jsonURLResult = Result{ try fileManagement.bookmarkURL(fromURL: jsonURL) }
 //              debugPrint(jsonURLResult)
             }
@@ -205,7 +207,28 @@ struct ClassicView: View {
        
         Button("Build") {
           if let url = self.url {
-            self.document.build(fromURL: url)
+            
+            self.document.build(fromURL: url, onExport: {
+              urls, callback in
+              exportFiles(moving: urls) { (result) in
+                guard let result = result else {
+                  callback(.failure(NSError()))
+                  return
+                }
+                let flatResult = result.flatMap { (sourceUrls)  in
+                  Result{
+                  try sourceUrls.map{
+                    url throws -> (URL,URL)  in
+                    try fileManagement.saveBookmark(url)
+                    let resultURL = try fileManagement.bookmarkURL(fromURL: url)
+                    return (url, resultURL)
+                  }
+                  }
+                }
+                let dictionaryResult = flatResult.map(Dictionary.init(uniqueKeysWithValues:))
+                callback(dictionaryResult)
+              }
+            })
           }
         }.disabled(!self.canBuild)
         
