@@ -1,3 +1,7 @@
 [submodule "scripts/github-markdown-toc"]
 	path = scripts/github-markdown-toc
 	url = https://github.com/ekalinin/github-markdown-toc.git
+[submodule "packages/SpeculidKit"]
+	path = packages/SpeculidKit
+	url = https://github.com/brightdigit/SpeculidKit.git
+  	branch = release/v3.0.0-alpha.1

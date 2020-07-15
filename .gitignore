@@ -1,12 +1,14 @@
-# Created by https://www.gitignore.io/api/swiftpm,swiftpackagemanager,xcode,swift,macos
-# Edit at https://www.gitignore.io/?templates=swiftpm,swiftpackagemanager,xcode,swift,macos
 
+# Created by https://www.gitignore.io/api/xcode,macos,swift
+# Edit at https://www.gitignore.io/?templates=xcode,macos,swift
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
 
 ### macOS ###
 # General
 .DS_Store
-*.DS_Store
-
 .AppleDouble
 .LSOverride
 
@@ -42,10 +44,6 @@ build/
 DerivedData/
 
 ## Various settings
-# Xcode
-#
-build/
-
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -59,8 +57,6 @@ xcuserdata/
 ## Other
 *.moved-aside
 *.xccheckout
-*.xcuserstate
-
 *.xcscmblueprint
 
 ## Obj-C/Swift specific
@@ -79,36 +75,24 @@ playground.xcworkspace
 # Package.pins
 # Package.resolved
 .build/
-xcuserdata
-*.xccheckout
-*.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
+# Add this line if you want to avoid checking in Xcode SPM integration.
+# .swiftpm/xcode
 
 # CocoaPods
-
 # We recommend against adding the Pods directory to your .gitignore. However
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-
-Example/Pods/
-Example/*.xcworkspace
+# Pods/
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# *.xcworkspace
 
 # Carthage
-
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
 Carthage/Build
 
-# Accio dependency management
-Dependencies/
-.accio/
-
 # fastlane
-
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
@@ -122,21 +106,8 @@ fastlane/test_output
 # Code Injection
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
-VCS.swift
 
 iOSInjectionProject/
-Products
-
-
-### SwiftPackageManager ###
-Packages
-xcuserdata
-/*.xcodeproj
-.tmp
-
-
-### SwiftPM ###
-
 
 ### Xcode ###
 # Xcode
@@ -149,19 +120,37 @@ xcuserdata
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 
 ## Xcode Patch
-/*.xcodeproj/*
-.swiftpm
-
+*.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 
+
+# End of https://www.gitignore.io/api/macos,swift,xcode,objective-c,jekyll
+
+Products
+*tests/*.png
+*tests/*.pdf
+
+CairoSVG.xcconfig
+autorevision.json
+applications/mac/assets/assets
+tmp
+
+certs/*.cer
+certs/*.p12
+
+*.toc.*
+*.orig.*
+
+examples/*/*.xcassets/*/*.png
+examples/*/*.xcassets/*/*.pdf
+
 ### Xcode Patch ###
 **/xcshareddata/WorkspaceSettings.xcsettings
 
-# End of https://www.gitignore.io/api/swiftpm,swiftpackagemanager,xcode,swift,macos
-*.xcworkspace
-Pods
-*.lcov
-Brewfile.lock.json
+# End of https://www.gitignore.io/api/xcode,macos,swift
+
+
+!scripts/github-markdown-toc
