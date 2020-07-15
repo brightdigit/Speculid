@@ -106,7 +106,7 @@ struct DummyContentView: View {
   @State var resizeOption = ResizeOption.none.rawValue
   @State var addBackground: Bool = false
   
-    var body: some View {      
+    var body: some View {
       Form{
         Section(header: Text("Source Graphic")){
         HStack{
