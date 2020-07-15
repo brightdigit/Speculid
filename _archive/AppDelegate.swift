@@ -7,7 +7,7 @@ extension NSSize {
   }
 }
 
-@NSApplicationMain
+//@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
   private var statusBar: NSStatusBar!
   private var statusItem: NSStatusItem!
