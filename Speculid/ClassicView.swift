@@ -8,18 +8,6 @@
 import SwiftUI
 import SpeculidKit
 
-extension UserDefaults {
-  
-  @objc
-  var bookmarks : [String : Data]? {
-    get {
-      self.dictionary(forKey: "bookmarks") as? [String : Data]
-    }
-    set {
-      self.set(newValue, forKey: "bookmarks")
-    }
-  }
-}
 
 
 
@@ -30,7 +18,6 @@ struct ClassicView: View {
     @Binding var document: ClassicDocument
   @EnvironmentObject var bookmarkCollection : BookmarkURLCollectionObject
   @Environment(\.importFiles) var importFiles
-  @Environment(\.exportFiles) var exportFiles
   
   var canBuild : Bool {
     return url != nil &&
@@ -66,10 +53,6 @@ struct ClassicView: View {
               guard case let .success(url) = result else {
                 return
               }
-              //let url = jsonURL.deletingLastPathComponent()
-              
-              debugPrint(url.path)
-              debugPrint(self.url?.deletingLastPathComponent().appendingPathComponent(self.document.document.assetDirectoryRelativePath).path)
               guard url.path == self.url?.deletingLastPathComponent().appendingPathComponent(self.document.document.assetDirectoryRelativePath).path else {
                 return
               }
@@ -110,6 +93,6 @@ struct ClassicView: View {
 
 struct ClassicView_Previews: PreviewProvider {
     static var previews: some View {
-      ClassicView(url: nil, document: .constant(ClassicDocument()))
+      ClassicView(url: nil, document: .constant(ClassicDocument())).environmentObject(BookmarkURLCollectionObject())
     }
 }

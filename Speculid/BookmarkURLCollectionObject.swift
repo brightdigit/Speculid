@@ -6,6 +6,19 @@
 //
 
 import Foundation
+
+extension UserDefaults {
+  
+  @objc
+  var bookmarks : [String : Data]? {
+    get {
+      self.dictionary(forKey: "bookmarks") as? [String : Data]
+    }
+    set {
+      self.set(newValue, forKey: "bookmarks")
+    }
+  }
+}
 public class BookmarkURLCollectionObject : ObservableObject {
 
   //@AppStorage("bookmarks", store: UserDefaults(suiteName: "MLT7M394S7.group.com.brightdigit.Speculid"))
