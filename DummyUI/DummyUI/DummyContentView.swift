@@ -106,8 +106,7 @@ struct DummyContentView: View {
   @State var resizeOption = ResizeOption.none.rawValue
   @State var addBackground: Bool = false
   
-    var body: some View {
-      
+    var body: some View {      
       Form{
         Section(header: Text("Source Graphic")){
         HStack{
@@ -133,17 +132,6 @@ struct DummyContentView: View {
             Text("􀎥")
             Spacer()
           }
-          
-            HStack{
-              Spacer()
-              Text("Contents.json:").frame(width: 150, alignment: .trailing)
-              TextField("", text: self.$something)
-                
-                .overlay(Text("􀈖").foregroundColor(.primary).padding(.trailing, 4.0), alignment: .trailing)
-                .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/).frame(width: 200)
-              Text("􀎥").tooltip("Speculid currently does currently have access to this file or folder.")
-              Spacer()
-            }
         }
         Divider()
         Section(header: Text("App Icon Modifications")) {
@@ -152,16 +140,20 @@ struct DummyContentView: View {
                 VStack(alignment: .leading){
                 Toggle("Remove Alpha Channel", isOn: self.$removeAlpha)
                     
-                    Text("If this is intended for an iOS, watchOS, or tvOS App,\nthen you should consider removing the alpha channel\nfrom the source graphic.").multilineTextAlignment(.leading).font(.subheadline).lineLimit(nil)
+                    Text("If this is intended for an iOS, watchOS, or tvOS App, then you should remove the alpha channel from the source graphic.").multilineTextAlignment(.leading).font(.subheadline).lineLimit(nil)
                 }
               Spacer()
             }
+          VStack(alignment: .leading){
             HStack{
                 Toggle("Add a Background Color", isOn: self.$addBackground)
               ColorPicker("", selection: self.$color, supportsOpacity: false).labelsHidden().frame(width: 40, height: 25, alignment: .trailing).disabled(!self.addBackground).opacity(self.addBackground ? 1.0 : 0.5)
                 
             }
-        }
+            
+            Text("If this is intended for an iOS, watchOS, or tvOS App, then you should set a background color.").multilineTextAlignment(.leading).font(.subheadline).lineLimit(nil)
+          }
+        }.disabled(true).opacity(0.5)
         Divider()
         Section(header: Text("Resizing Geometry")) {
           HStack{
@@ -174,10 +166,10 @@ struct DummyContentView: View {
             TextField("Value", value: $geometryValue, formatter: NumberFormatter()).frame(width: 50, alignment: .leading).disabled(self.resizeOption == 0).opacity(self.resizeOption == 0 ? 0.5 : 1.0)
             Text("px").opacity(self.resizeOption == 0 ? 0.5 : 1.0)
           }
-          
+          Text("If you wish to render scaled PNG files for an image set, then specify either width or height and the image will be resized to that dimention while retaining its aspect ratio.\nOtherwise if you select \"None\", then only a PDF will be rendered.   ").multilineTextAlignment(.leading).font(.subheadline).lineLimit(nil)
         }
       }
-      .padding(.all, 40.0).frame(minWidth: 500, idealWidth: 500, maxWidth: 600, minHeight: 400, idealHeight: 400, maxHeight: .infinity, alignment: .center)
+      .padding(.all, 40.0).frame(minWidth: 500, idealWidth: 500, maxWidth: 600, minHeight: 500, idealHeight: 500, maxHeight: .infinity, alignment: .center)
         
     }
 }
