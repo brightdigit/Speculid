@@ -73,10 +73,7 @@ struct ClassicDocument: FileDocument {
     
     let management = FileManagement()
     
-    
-    let urls = ["assetDirectory" : url.deletingLastPathComponent().appendingPathComponent(document.assetDirectoryRelativePath),
-                "sourceImage" : url.deletingLastPathComponent().appendingPathComponent(document.sourceImageRelativePath)]
-    
+  
     
 
     

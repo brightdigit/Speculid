@@ -36,7 +36,6 @@ struct ClassicView: View {
     return url != nil &&
       
         self.bookmarkCollection.isAvailable(basedOn: self.url, relativePath: self.document.document.assetDirectoryRelativePath) &&
-      self.bookmarkCollection.isAvailable(basedOn: self.url, relativePath: self.document.document.assetDirectoryRelativePath, "Contents.json") &&
       self.bookmarkCollection.isAvailable(basedOn: self.url, relativePath: self.document.document.sourceImageRelativePath)
   }
     var body: some View {
@@ -94,32 +93,7 @@ struct ClassicView: View {
             }
           })
         
-          Button(action: {
-            self.importFiles(singleOfType: [.json]) { (result) in
-              guard case let .success(url) = result else {
-                return
-              }
-              //let url = jsonURL.deletingLastPathComponent()
-              
-              let saveResult = Result{ try fileManagement.saveBookmark(url) }
-                /*.flatMap{
-                Result{ try fileManagement.saveBookmark(jsonURL)}
-              }*/
-              guard case .success = saveResult else {
-                debugPrint(saveResult)
-                return
-              }
-              let urlResult = Result{ try fileManagement.bookmarkURL(fromURL: url) }
-//              let jsonURLResult = Result{ try fileManagement.bookmarkURL(fromURL: jsonURL) }
-//              debugPrint(jsonURLResult)
-            }
-          }, label: {
-            HStack{
-              Image(systemName: self.bookmarkCollection.isAvailable(basedOn: self.url, relativePath: self.document.document.assetDirectoryRelativePath, "Contents.json") ? "lock.open.fill" : "lock.fill")
-              Image(systemName: "photo.fill")
-              Text(self.document.document.assetDirectoryRelativePath)
-            }
-          })
+          
         Toggle("Remove Alpha", isOn: self.$document.document.removeAlpha)
         ColorPicker("Background Color", selection: self.$document.document.backgroundColor)
        
