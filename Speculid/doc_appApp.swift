@@ -12,10 +12,10 @@ struct doc_appApp: App {
   @StateObject private var bookmarkCollection = BookmarkURLCollectionObject()
   
       @SceneBuilder var body: some Scene {
-        
-      DocumentGroup(newDocument: doc_appDocument()) { file in
-          ContentView(document: file.$document)
-      }
+//        
+//      DocumentGroup(newDocument: doc_appDocument()) { file in
+//          ContentView(document: file.$document)
+//      }
         DocumentGroup(viewing: ClassicDocument.self) { (file) in
           
           return ClassicView(url: file.fileURL, document: file.$document).environmentObject(bookmarkCollection)
