@@ -1,0 +1,5 @@
+{
+"set" : "Speculid/Assets.xcassets/StatusBarIcon.imageset",
+"source" : "layers-template.svg",
+"geometry" : "16"
+}

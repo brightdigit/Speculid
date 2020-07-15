@@ -121,7 +121,7 @@ Email signup allows for you to get delivered updates to your email box of new fe
 
 <section class="signup-form-container">
   <div><strong>Sign up below</strong> to get the latest version.</div>
-<form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;group[19233][4]=4&amp;id=584d0d5c40" class="signup-form" method="post">
+<form action="//brightdigit.us12.list-manage.com/subscribe/post-json?u=cb3bba007ed171091f55c47f0&amp;id=19a8f55024" class="signup-form" method="post">
   <div class="row">
   <input type="email" placeholder="Your Email Address" value="" name="EMAIL" id="mce-EMAIL" required>
   <input type="submit" value="Sign Up">
@@ -202,17 +202,13 @@ end
 **Speculid** only supports being called through a command line terminal for now. Once you have copied the command to your */usr/local/bin* folder you should be able to access it easily.
 
 ```bash
-$ speculid # opens file dialog in macOS
 $ speculid --process <file>
-$ speculid --initialize <set-folder> <source-file> <destination-speculid-file>
 $ speculid --help
 $ speculid --version
 
 Options:
---help            Show this screen.
---version         Show version.
---process <file>  Process the *.speculid file
---initialize ...  Create a new .speculid file with the source image, set folder path, destination speculid files
+  --help     Show this screen.
+  --version  Show version.
 ```
 
 ## File Format and Properties
@@ -339,14 +335,7 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
     ![Xcode Target Membership](/images/XcodeTargetMembership.png)
 
-    *Note: you don't need to add these files to any target membership*
-
-    **NEW *skip to step 4* and use the `--initialize` flag:**
-
-      ```
-      $ speculid --initialize \
-        "Assets.xcassets/iOS AppIcon.appiconset" geometry.svg app-icon.speculid
-      ```
+    * *Note: you don't need to add these files to any target membership*
 
 2. In the speculid file, **Add the property for the source** - the path to the SVG or PNG file.
   ```json
@@ -390,7 +379,11 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 2. **Add the *Run Script* Build Phase** to the top of your project with the following code:
 
     ```bash
-    speculid --process "${SRCROOT}"
+    find "${SRCROOT}" -name "*.speculid" -print0 |
+    while IFS= read -r -d $'\0' line; do
+    speculid --process "$line" &
+    done
+    wait
     ```
     ![Xcode Build Phase Run Script](/images/XcodeBuildPhaseRunScript.jpg)
 
@@ -414,7 +407,7 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
 -----
 
-**Speculid**  ©2020, BrightDigit, LLC. 
+**Speculid** ©2019, BrightDigit, LLC. 
 
 [sketch-step-1]:       /images/svg-export/sketch/step-1.jpg "Sketch iOS App Icon Template Window"
 [sketch-step-2]:       /images/svg-export/sketch/step-2.jpg "Sketch Slice Panel"

@@ -33,7 +33,7 @@
          * [<a href="https://camo.githubusercontent.com/b12eea760a21557d856ae2c3a0dcfc65070fe560/68747470733a2f2f72617763646e2e6769746861636b2e636f6d2f62726967687464696769742f53706563756c69642f6d61737465722f696d616765732f7376672d6578706f72742f696c6c7573747261746f722f6c6f676f2e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/b12eea760a21557d856ae2c3a0dcfc65070fe560/68747470733a2f2f72617763646e2e6769746861636b2e636f6d2f62726967687464696769742f53706563756c69642f6d61737465722f696d616765732f7376672d6578706f72742f696c6c7573747261746f722f6c6f676f2e737667" height="25pt" data-canonical-src="https://rawcdn.githack.com/brightdigit/Speculid/master/images/svg-export/illustrator/logo.svg" style="max-width:100\x;"></a> Illustrator](#-illustrator)
       * [Xcode Integration and Automation](#xcode-integration-and-automation)
 
-<!-- Added by: leo, at: Mon Apr 13 19:50:41 EDT 2020 -->
+<!-- Added by: leo, at: Thu Sep 26 10:46:47 EDT 2019 -->
 
 <!--te-->
 
@@ -226,20 +226,16 @@ end
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Mn4pknYqzH0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="display: block; margin: auto;" allowfullscreen></iframe>
 
-**Speculid** only supports being called through a command line terminal for now. Once you have copied the command to your */usr/local/bin* folder you should be able to access it easily.
+Speculid only supports being called through a command line terminal for now. Once you have copied the command to your */usr/local/bin* folder you should be able to access it easily.
 
 ```bash
-$ speculid # opens file dialog in macOS
 $ speculid --process <file>
-$ speculid --initialize <set-folder> <source-file> <destination-speculid-file>
 $ speculid --help
 $ speculid --version
 
 Options:
---help            Show this screen.
---version         Show version.
---process <file>  Process the *.speculid file
---initialize ...  Create a new .speculid file with the source image, set folder path, destination speculid files
+  --help     Show this screen.
+  --version  Show version.
 ```
 
 ## File Format and Properties
@@ -366,14 +362,7 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
     ![Xcode Target Membership](https://rawcdn.githack.com/brightdigit/Speculid/master/images/XcodeTargetMembership.png)
 
-    *Note: you don't need to add these files to any target membership*
-
-    **NEW *skip to step 4* and use the `--initialize` flag:**
-
-      ```
-      $ speculid --initialize \
-        "Assets.xcassets/iOS AppIcon.appiconset" geometry.svg app-icon.speculid
-      ```
+    * *Note: you don't need to add these files to any target membership*
 
 2. In the speculid file, **Add the property for the source** - the path to the SVG or PNG file.
   ```json
@@ -417,7 +406,11 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 2. **Add the *Run Script* Build Phase** to the top of your project with the following code:
 
     ```bash
-    speculid --process "${SRCROOT}"
+    find "${SRCROOT}" -name "*.speculid" -print0 |
+    while IFS= read -r -d $'\0' line; do
+    speculid --process "$line" &
+    done
+    wait
     ```
     ![Xcode Build Phase Run Script](https://rawcdn.githack.com/brightdigit/Speculid/master/images/XcodeBuildPhaseRunScript.jpg)
 
@@ -441,7 +434,7 @@ With **Speculid**, the process of building image assets can be automated in **Xc
 
 -----
 
-**Speculid**  ©2020, BrightDigit, LLC. 
+**Speculid** ©2018, BrightDigit, LLC. 
 
 [sketch-step-1]:       /images/svg-export/sketch/step-1.jpg "Sketch iOS App Icon Template Window"
 [sketch-step-2]:       /images/svg-export/sketch/step-2.jpg "Sketch Slice Panel"

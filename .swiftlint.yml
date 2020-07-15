@@ -1,6 +1,15 @@
-excluded: # paths to ignore during linting. Takes precedence over `included`.
-  - Pods
-  - __archive
-  - frameworks/speculid/Models/VCS.swift
+cyclomatic_complexity: 12
+file_length: 550
+function_body_length: 80
+function_parameter_count: 8
+line_length: 150
+type_body_length: 300
+identifier_name:
+  excluded: # excluded via string array
+    - id
+excluded:
+  - Tests/*/XCTestManifests.swift
   - DerivedData
-  - examples/setup/DerivedData
+  - .build
+  - _archive
+  - vendor
