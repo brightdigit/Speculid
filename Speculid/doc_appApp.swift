@@ -18,7 +18,7 @@ struct doc_appApp: App {
 //      }
         DocumentGroup(viewing: ClassicDocument.self) { (file) in
           
-          return ClassicView(url: file.fileURL, document: file.$document).environmentObject(bookmarkCollection)
+          return ClassicView(url: file.fileURL, document: file.document, documentBinding: file.$document).environmentObject(bookmarkCollection)
         }.commands {
           CommandMenu("Developer Tools"){
             Button("Reset Bookmarks") {

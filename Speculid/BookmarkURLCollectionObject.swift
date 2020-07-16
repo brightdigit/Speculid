@@ -21,9 +21,6 @@ extension UserDefaults {
 }
 public class BookmarkURLCollectionObject : ObservableObject {
 
-  //@AppStorage("bookmarks", store: UserDefaults(suiteName: "MLT7M394S7.group.com.brightdigit.Speculid"))
-//  @UserDefaultsBacked(key: "bookmarks", defaultValue: [String : Data](), storage: UserDefaults.shared)
-  
   static let shared: UserDefaults  = {
       let combined = UserDefaults(suiteName: "MLT7M394S7.group.com.brightdigit.Speculid")!
       combined.register(defaults: ["bookmarks" : [String : Data]()])
@@ -33,7 +30,6 @@ public class BookmarkURLCollectionObject : ObservableObject {
   @Published var bookmarks  = [URL : URL]()
   
   static func saveBookmark(_ url: URL)  {
-    debugPrint("saving bookmark for \(url)")
     guard let newData =  try? url.bookmarkData(options: .withSecurityScope, includingResourceValuesForKeys: nil, relativeTo: nil) else {
       return
     }
@@ -41,6 +37,10 @@ public class BookmarkURLCollectionObject : ObservableObject {
     bookmarkMap[url.path] = newData
     Self.shared.bookmarks = bookmarkMap
     
+  }
+  
+  public func saveBookmark(_ url: URL)  {
+    Self.saveBookmark(url)
   }
   
   func reset () {
@@ -61,9 +61,7 @@ public class BookmarkURLCollectionObject : ObservableObject {
   }
   
   static func transformPath(_ path: String, withBookmarkData bookmarkData: Data) -> (URL, URL)? {
-    
     var isStale : Bool = false
-    
      
     guard let url = try? URL(resolvingBookmarkData: bookmarkData, options: .withSecurityScope, relativeTo: nil, bookmarkDataIsStale: &isStale) else {
       return nil
