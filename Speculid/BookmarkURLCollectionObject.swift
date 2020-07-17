@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SpeculidKit
 
 extension UserDefaults {
   
@@ -19,7 +20,7 @@ extension UserDefaults {
     }
   }
 }
-public class BookmarkURLCollectionObject : ObservableObject {
+public class BookmarkURLCollectionObject : ObservableObject, Sandbox {
 
   static let shared: UserDefaults  = {
       let combined = UserDefaults(suiteName: "MLT7M394S7.group.com.brightdigit.Speculid")!
@@ -58,6 +59,23 @@ public class BookmarkURLCollectionObject : ObservableObject {
     }
     
     return self.bookmarks[url] != nil
+  }
+  
+  public func bookmarkURL(fromURL url: URL) throws -> URL {
+    
+    var isStale : Bool = false
+    let fromURLResult : Result<URL, Error>
+    let fromURLCurrentResult = Self.shared.bookmarks?[url.path].map{
+      data in
+      Result{
+       try URL(resolvingBookmarkData: data, options: .withSecurityScope, relativeTo: nil, bookmarkDataIsStale: &isStale)
+      }
+    }
+    if isStale {
+      saveBookmark(url)
+    }
+   fromURLResult = fromURLCurrentResult ?? .failure(NoBookmarkAvailableError(url : url))
+    return try fromURLResult.get()
   }
   
   static func transformPath(_ path: String, withBookmarkData bookmarkData: Data) -> (URL, URL)? {

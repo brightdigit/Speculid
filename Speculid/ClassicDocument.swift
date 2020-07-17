@@ -21,22 +21,15 @@ struct SpeculidMutableSpecificationsFile : SpeculidSpecificationsFileProtocol {
   var assetDirectoryRelativePath: String
   var sourceImageRelativePath: String
   var geometry: Geometry?
-  var backgroundColor: Color
+  var background: NSColor?
   var removeAlpha: Bool
   
-  var background: NSColor? {
-    guard backgroundColor != .clear else {
-      return nil
-    }
-    
-    return NSColor(self.backgroundColor)
-  }
   
   init (source: SpeculidSpecificationsFileProtocol) {
     self.assetDirectoryRelativePath = source.assetDirectoryRelativePath
     self.sourceImageRelativePath = source.sourceImageRelativePath
     self.geometry = source.geometry
-    self.backgroundColor = source.background.map( Color.init ) ?? .clear
+    self.background = source.background
     self.removeAlpha = source.removeAlpha
   }
 }
@@ -69,9 +62,8 @@ struct ClassicDocument: FileDocument {
         fileWrapper = FileWrapper(regularFileWithContents: data)
     }
   
-  func build (fromURL url: URL) {
+  func build (fromURL url: URL, inSandbox sandbox: Sandbox) {
     
-    let management = FileManagement()
     
   
     
@@ -81,7 +73,7 @@ struct ClassicDocument: FileDocument {
 //
     let document : SpeculidDocument
     do {
-      document = try SpeculidDocument(sandboxedFromFile: self.document, withURL: url,  decoder: JSONDecoder(), withManager: management)
+      document = try SpeculidDocument(sandboxedFromFile: self.document, withURL: url,  decoder: JSONDecoder(), withManager: sandbox)
     } catch {
       debugPrint(error)
       debugPrint(error.localizedDescription)
@@ -97,14 +89,13 @@ struct ClassicDocument: FileDocument {
       return (asset, fileName, document.destinationURL(forFileName: fileName))
     }
     
-    processImages(fromURL: url, management: management, document: document, sandboxMap: urlMap)
+    processImages(fromURL: url, management: sandbox, document: document, sandboxMap: urlMap)
   }
   
-  func processImages (fromURL url: URL, management: FileManagement, document : SpeculidDocument, sandboxMap: [(AssetSpecificationProtocol, String, URL)]) {
+  func processImages (fromURL url: URL, management: Sandbox, document : SpeculidDocument, sandboxMap: [(AssetSpecificationProtocol, String, URL)]) {
     
     let assetDirectoryURL = url.deletingLastPathComponent().appendingPathComponent(self.document.assetDirectoryRelativePath)
-    debugPrint(self.document.assetDirectoryRelativePath)
-    debugPrint(assetDirectoryURL)
+    
     let imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
       let imageSpecifications: [ImageSpecification]
     do {
@@ -125,14 +116,6 @@ struct ClassicDocument: FileDocument {
       return
     }
     let destinationURL = try? management.bookmarkURL( fromURL: assetDirectoryURL )
-    if let testURL = destinationURL?.appendingPathComponent("test.text") {
-      do {
-       try "test".write(to: testURL, atomically: true, encoding: .utf8)
-      } catch {
-        debugPrint(error)
-      }
-      debugPrint("test written")
-    }
     
     destinationURL?.startAccessingSecurityScopedResource()
     

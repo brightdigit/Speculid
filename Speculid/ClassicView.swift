@@ -9,7 +9,7 @@ import SwiftUI
 import SpeculidKit
 import Combine
 
-protocol LabeledOption : RawRepresentable, Identifiable where RawValue == Int{
+protocol LabeledOption : RawRepresentable, Equatable, Identifiable where RawValue == Int{
   static var mappedValues : [String] { get }
   var label: String { get }
   init (rawValue: RawValue, label : String)
@@ -46,6 +46,19 @@ struct ResizeOption : LabeledOption {
   static let height = all[2]
 }
 
+extension ResizeOption {
+  init(geometryType: GeometryType?) {
+    switch (geometryType){
+    case .some(.width):
+      self = .width
+    case .some(.height):
+      self = .height
+    default:
+      self = .none
+    }
+  }
+}
+
 class ClassicObject : ObservableObject {
   let url : URL?
   @Published var geometryValue : Float = 0.0
@@ -73,19 +86,39 @@ class ClassicObject : ObservableObject {
     
     self.assetDirectoryRelativePath = self.document.document.assetDirectoryRelativePath
     self.sourceImageRelativePath = self.document.document.sourceImageRelativePath
+    self.addBackground = self.document.document.background != nil
+    self.backgroundColor = self.document.document.background.map(Color.init) ?? .clear
+    self.geometryValue = self.document.document.geometry?.value ?? 0.0
+    self.resizeOption = ResizeOption(geometryType: self.document.document.geometry?.dimension).rawValue
+    self.removeAlpha = self.document.document.removeAlpha
     
-    var cancellables = [AnyCancellable]()
-    
-    self.$assetDirectoryRelativePath.sink {
-      self.document.document.assetDirectoryRelativePath = $0
-    }.store(in: &cancellables)
+    let nscolorPub = self.$addBackground.combineLatest(self.$backgroundColor) {
+      $0 ? NSColor($1) : nil
+    }
     
     
-    self.$sourceImageRelativePath.sink {
-      self.document.document.sourceImageRelativePath = $0
-    }.store(in: &cancellables)
+    let geoPub = self.$resizeOption.map(ResizeOption.init(rawValue:)).combineLatest(self.$geometryValue) { (option, value) -> Geometry? in
+      switch (option) {
+      case .some(.width):
+        return Geometry(value: value, dimension: .width)
+      case .some(.height):
+        return Geometry(value: value, dimension: .height)
+        default:
+        return nil
+      }
+    }
     
-    self.cancellables = cancellables
+    self.assign($assetDirectoryRelativePath, documentProperty: \.assetDirectoryRelativePath)
+    self.assign($sourceImageRelativePath, documentProperty: \.sourceImageRelativePath)
+    self.assign($removeAlpha, documentProperty: \.removeAlpha)
+    self.assign(nscolorPub, documentProperty: \.background)
+    self.assign(geoPub, documentProperty: \.geometry)
+  }
+  
+  func assign<PublisherType : Publisher, ValueType>(_ publisher: PublisherType, documentProperty: WritableKeyPath<SpeculidMutableSpecificationsFile, ValueType>) where PublisherType.Output == ValueType, PublisherType.Failure == Never {
+    publisher.sink { (value) in
+      self.document.document[keyPath: documentProperty] = value
+    }.store(in: &self.cancellables)
   }
 }
 
@@ -105,54 +138,55 @@ struct ClassicView: View {
       
       self.bookmarkCollection.isAvailable(basedOn: self.object.url, relativePath: self.object.document.document.sourceImageRelativePath)
   }
-    var body: some View {
-      VStack{
-        Button(action: {
-          self.importFiles(singleOfType: [.svg, .png]) { (result) in
-            guard case let .success(url) = result else {
-              return
-            }
-            bookmarkCollection.saveBookmark(url)
-        }, label: {
-          HStack{
-            Image(systemName: self.bookmarkCollection.isAvailable(basedOn: self.object.url, relativePath: self.object.document.document.sourceImageRelativePath) ? "lock.open.fill" : "lock.fill")
-            Image(systemName: "photo.fill")
-            Text(self.object.sourceImageRelativePath)
+  var body: some View {
+    VStack{
+      Button(action: {
+        self.importFiles(singleOfType: [.svg, .png]) { (result) in
+          guard case let .success(url) = result else {
+            return
           }
-        })
+          bookmarkCollection.saveBookmark(url)
+        }
+      }, label: {
+        HStack{
+          Image(systemName: self.bookmarkCollection.isAvailable(basedOn: self.object.url, relativePath: self.object.document.document.sourceImageRelativePath) ? "lock.open.fill" : "lock.fill")
+          Image(systemName: "photo.fill")
+          Text(self.object.sourceImageRelativePath)
+        }
+      })
+      
+      Button(action: {
         
-          Button(action: {
-            
-            self.importFiles(singleOfType: [.directory]) { (result) in
-              guard case let .success(url) = result else {
-                return
-              }
-              bookmarkCollection.saveBookmark(url)
-            }
-          }, label: {
-            HStack{
-              Image(systemName: self.bookmarkCollection.isAvailable(basedOn: self.object.url, relativePath: self.object.document.document.assetDirectoryRelativePath) ? "lock.open.fill" : "lock.fill")
-              Image(systemName: "photo.fill")
-              Text(self.object.assetDirectoryRelativePath)
-            }
-          })
-        
-          
-        Toggle("Remove Alpha", isOn: self.$object.removeAlpha)
-        ColorPicker("Background Color", selection: self.$object.backgroundColor)
-       
-        Button("Build") {
-          if let url = self.object.url {
-            self.object.document.build(fromURL: url)
+        self.importFiles(singleOfType: [.directory]) { (result) in
+          guard case let .success(url) = result else {
+            return
           }
-        }.disabled(!self.canBuild)
-        
-      }
+          bookmarkCollection.saveBookmark(url)
+        }
+      }, label: {
+        HStack{
+          Image(systemName: self.bookmarkCollection.isAvailable(basedOn: self.object.url, relativePath: self.object.document.document.assetDirectoryRelativePath) ? "lock.open.fill" : "lock.fill")
+          Image(systemName: "photo.fill")
+          Text(self.object.assetDirectoryRelativePath)
+        }
+      })
+      
+      
+      Toggle("Remove Alpha", isOn: self.$object.removeAlpha)
+      ColorPicker("Background Color", selection: self.$object.backgroundColor)
+      
+      Button("Build") {
+        if let url = self.object.url {
+          self.object.document.build(fromURL: url, inSandbox: self.bookmarkCollection)
+        }
+      }.disabled(!self.canBuild)
+      
     }
+  }
 }
 
 struct ClassicView_Previews: PreviewProvider {
-    static var previews: some View {
-      ClassicView(url: nil, document: ClassicDocument(), documentBinding: .constant(ClassicDocument())).environmentObject(BookmarkURLCollectionObject())
-    }
+  static var previews: some View {
+    ClassicView(url: nil, document: ClassicDocument(), documentBinding: .constant(ClassicDocument())).environmentObject(BookmarkURLCollectionObject())
+  }
 }
