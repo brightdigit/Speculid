@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B303554A24381F1200A8EAB9 /* SpeculidKit in Frameworks */ = {isa = PBXBuildFile; productRef = B303554924381F1200A8EAB9 /* SpeculidKit */; };
+		B3326D4324C1CFF000629F70 /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3326D4224C1CFF000629F70 /* Tooltip.swift */; };
 		B347128924B64968001CCCFD /* ClassicDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B347128824B64968001CCCFD /* ClassicDocument.swift */; };
 		B347128B24B668DE001CCCFD /* ClassicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B347128A24B668DE001CCCFD /* ClassicView.swift */; };
 		B34B6BBE24BDEF2B00F4EE6B /* CairoSVG.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37B472124B93CB900AE2021 /* CairoSVG.xcframework */; };
@@ -65,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B3326D4224C1CFF000629F70 /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
 		B347128824B64968001CCCFD /* ClassicDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicDocument.swift; sourceTree = "<group>"; };
 		B347128A24B668DE001CCCFD /* ClassicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicView.swift; sourceTree = "<group>"; };
 		B34B6BC124BE354D00F4EE6B /* BookmarkURLCollectionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkURLCollectionObject.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				B347128824B64968001CCCFD /* ClassicDocument.swift */,
 				B347128A24B668DE001CCCFD /* ClassicView.swift */,
 				B34B6BC124BE354D00F4EE6B /* BookmarkURLCollectionObject.swift */,
+				B3326D4224C1CFF000629F70 /* Tooltip.swift */,
 			);
 			path = Speculid;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				B34B6BC224BE354D00F4EE6B /* BookmarkURLCollectionObject.swift in Sources */,
 				B347128B24B668DE001CCCFD /* ClassicView.swift in Sources */,
 				B347128924B64968001CCCFD /* ClassicDocument.swift in Sources */,
+				B3326D4324C1CFF000629F70 /* Tooltip.swift in Sources */,
 				B3B6A4D124B15292009C6E32 /* doc_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
