@@ -17,24 +17,6 @@ extension UTType {
     }
 }
 
-struct SpeculidMutableSpecificationsFile : SpeculidSpecificationsFileProtocol {
-  var assetDirectoryRelativePath: String
-  var sourceImageRelativePath: String
-  var geometry: Geometry?
-  var background: NSColor?
-  var removeAlpha: Bool
-  
-  
-  init (source: SpeculidSpecificationsFileProtocol) {
-    self.assetDirectoryRelativePath = source.assetDirectoryRelativePath
-    self.sourceImageRelativePath = source.sourceImageRelativePath
-    self.geometry = source.geometry
-    self.background = source.background
-    self.removeAlpha = source.removeAlpha
-  }
-}
-
-
 struct ClassicDocument: FileDocument {
   var document: SpeculidMutableSpecificationsFile
 
