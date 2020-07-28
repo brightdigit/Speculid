@@ -101,7 +101,7 @@ public class BookmarkURLCollectionObject : ObservableObject, Sandbox {
     bookmarkPublisher.map{
       Dictionary(uniqueKeysWithValues:
       $0.compactMap(Self.transformPath))
-    }.receive(on: DispatchQueue.main).assign(to: self.$bookmarks)
+    }.receive(on: DispatchQueue.main).assign(to: &self.$bookmarks)
   
     
   }
