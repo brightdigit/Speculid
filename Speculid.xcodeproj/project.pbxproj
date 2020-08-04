@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		B303554A24381F1200A8EAB9 /* SpeculidKit in Frameworks */ = {isa = PBXBuildFile; productRef = B303554924381F1200A8EAB9 /* SpeculidKit */; };
+		B324D41424C49F500047ED11 /* CairoSVG.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B324D41324C49F500047ED11 /* CairoSVG.xcframework */; };
+		B324D41524C49F500047ED11 /* CairoSVG.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B324D41324C49F500047ED11 /* CairoSVG.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3326D4324C1CFF000629F70 /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3326D4224C1CFF000629F70 /* Tooltip.swift */; };
 		B347128924B64968001CCCFD /* ClassicDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B347128824B64968001CCCFD /* ClassicDocument.swift */; };
 		B347128B24B668DE001CCCFD /* ClassicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B347128A24B668DE001CCCFD /* ClassicView.swift */; };
-		B34B6BBE24BDEF2B00F4EE6B /* CairoSVG.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37B472124B93CB900AE2021 /* CairoSVG.xcframework */; };
-		B34B6BBF24BDEF2B00F4EE6B /* CairoSVG.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B37B472124B93CB900AE2021 /* CairoSVG.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B34B6BC224BE354D00F4EE6B /* BookmarkURLCollectionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B6BC124BE354D00F4EE6B /* BookmarkURLCollectionObject.swift */; };
 		B3796B7C2432C50100E5F5F9 /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3DB4824243166FC00B1DA4F /* speculid */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B3B6A4CF24B15292009C6E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364624224B14DBB0089382E /* ContentView.swift */; };
-		B3B6A4D024B15292009C6E32 /* doc_appDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364624024B14DBB0089382E /* doc_appDocument.swift */; };
 		B3B6A4D124B15292009C6E32 /* doc_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364623E24B14DBB0089382E /* doc_appApp.swift */; };
 		B3DB48142431642600B1DA4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48132431642600B1DA4F /* Assets.xcassets */; };
 		B3DB48172431642600B1DA4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48162431642600B1DA4F /* Preview Assets.xcassets */; };
 		B3DB481A2431642600B1DA4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48182431642600B1DA4F /* Main.storyboard */; };
+		B3E1707C24C1DBF700784D20 /* LabeledOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1707B24C1DBF700784D20 /* LabeledOption.swift */; };
+		B3E1707E24C1DC1100784D20 /* ResizeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1707D24C1DC1100784D20 /* ResizeOption.swift */; };
+		B3E1708024C1DC6C00784D20 /* ClassicObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1707F24C1DC6C00784D20 /* ClassicObject.swift */; };
 		B3E8D6B22434D71000B34464 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB4826243166FC00B1DA4F /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,13 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B34B6BC024BDEF2B00F4EE6B /* Embed Frameworks */ = {
+		B324D41624C49F500047ED11 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B34B6BBF24BDEF2B00F4EE6B /* CairoSVG.xcframework in Embed Frameworks */,
+				B324D41524C49F500047ED11 /* CairoSVG.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,12 +69,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B324D41324C49F500047ED11 /* CairoSVG.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CairoSVG.xcframework; path = /Users/leo/Documents/Projects/Speculid/DerivedData/Speculid/SourcePackages/artifacts/CairoSVG/CairoSVG.xcframework; sourceTree = "<absolute>"; };
+		B3326D4224C1CFF000629F70 /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
 		B347128824B64968001CCCFD /* ClassicDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicDocument.swift; sourceTree = "<group>"; };
 		B347128A24B668DE001CCCFD /* ClassicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicView.swift; sourceTree = "<group>"; };
 		B34B6BC124BE354D00F4EE6B /* BookmarkURLCollectionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkURLCollectionObject.swift; sourceTree = "<group>"; };
 		B364623E24B14DBB0089382E /* doc_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doc_appApp.swift; sourceTree = "<group>"; };
-		B364624024B14DBB0089382E /* doc_appDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doc_appDocument.swift; sourceTree = "<group>"; };
-		B364624224B14DBB0089382E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../doc-app/ContentView.swift"; sourceTree = "<group>"; };
 		B3796B792432B7FF00E5F5F9 /* Command.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Command.entitlements; sourceTree = "<group>"; };
 		B37A52372435014400FEA6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B37B472124B93CB900AE2021 /* CairoSVG.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CairoSVG.xcframework; path = packages/SpeculidKit/packages/CairoSVG/build/CairoSVG.xcframework; sourceTree = "<group>"; };
@@ -86,6 +88,9 @@
 		B3DB481C2431642600B1DA4F /* Speculid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speculid.entitlements; sourceTree = "<group>"; };
 		B3DB4824243166FC00B1DA4F /* speculid */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = speculid; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DB4826243166FC00B1DA4F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B3E1707B24C1DBF700784D20 /* LabeledOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledOption.swift; sourceTree = "<group>"; };
+		B3E1707D24C1DC1100784D20 /* ResizeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeOption.swift; sourceTree = "<group>"; };
+		B3E1707F24C1DC6C00784D20 /* ClassicObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B303554A24381F1200A8EAB9 /* SpeculidKit in Frameworks */,
-				B34B6BBE24BDEF2B00F4EE6B /* CairoSVG.xcframework in Frameworks */,
+				B324D41424C49F500047ED11 /* CairoSVG.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				B37B472124B93CB900AE2021 /* CairoSVG.xcframework */,
+				B324D41324C49F500047ED11 /* CairoSVG.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,8 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				B364623E24B14DBB0089382E /* doc_appApp.swift */,
-				B364624024B14DBB0089382E /* doc_appDocument.swift */,
-				B364624224B14DBB0089382E /* ContentView.swift */,
 				B3DB480E2431642100B1DA4F /* ContentView.swift */,
 				B3DB48132431642600B1DA4F /* Assets.xcassets */,
 				B3DB48182431642600B1DA4F /* Main.storyboard */,
@@ -169,6 +173,10 @@
 				B347128824B64968001CCCFD /* ClassicDocument.swift */,
 				B347128A24B668DE001CCCFD /* ClassicView.swift */,
 				B34B6BC124BE354D00F4EE6B /* BookmarkURLCollectionObject.swift */,
+				B3326D4224C1CFF000629F70 /* Tooltip.swift */,
+				B3E1707B24C1DBF700784D20 /* LabeledOption.swift */,
+				B3E1707D24C1DC1100784D20 /* ResizeOption.swift */,
+				B3E1707F24C1DC6C00784D20 /* ClassicObject.swift */,
 			);
 			path = Speculid;
 			sourceTree = "<group>";
@@ -192,7 +200,7 @@
 				B3DB48042431642100B1DA4F /* Frameworks */,
 				B3DB48052431642100B1DA4F /* Resources */,
 				B3796B7A2432C33600E5F5F9 /* CopyFiles */,
-				B34B6BC024BDEF2B00F4EE6B /* Embed Frameworks */,
+				B324D41624C49F500047ED11 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -278,12 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E1707E24C1DC1100784D20 /* ResizeOption.swift in Sources */,
 				B34B6BC224BE354D00F4EE6B /* BookmarkURLCollectionObject.swift in Sources */,
 				B347128B24B668DE001CCCFD /* ClassicView.swift in Sources */,
+				B3E1707C24C1DBF700784D20 /* LabeledOption.swift in Sources */,
 				B347128924B64968001CCCFD /* ClassicDocument.swift in Sources */,
+				B3326D4324C1CFF000629F70 /* Tooltip.swift in Sources */,
 				B3B6A4D124B15292009C6E32 /* doc_appApp.swift in Sources */,
-				B3B6A4CF24B15292009C6E32 /* ContentView.swift in Sources */,
-				B3B6A4D024B15292009C6E32 /* doc_appDocument.swift in Sources */,
+				B3E1708024C1DC6C00784D20 /* ClassicObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +433,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_ASSET_PATHS = "\"Speculid/Preview Content\"";
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -523,7 +533,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"Speculid/Preview Content\"";
 				DEVELOPMENT_TEAM = MLT7M394S7;

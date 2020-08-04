@@ -6,11 +6,22 @@
 //
 
 import Foundation
-public class BookmarkURLCollectionObject : ObservableObject {
+import SpeculidKit
 
-  //@AppStorage("bookmarks", store: UserDefaults(suiteName: "MLT7M394S7.group.com.brightdigit.Speculid"))
-//  @UserDefaultsBacked(key: "bookmarks", defaultValue: [String : Data](), storage: UserDefaults.shared)
+extension UserDefaults {
   
+  @objc
+  var bookmarks : [String : Data]? {
+    get {
+      self.dictionary(forKey: "bookmarks") as? [String : Data]
+    }
+    set {
+      self.set(newValue, forKey: "bookmarks")
+    }
+  }
+}
+public class BookmarkURLCollectionObject : ObservableObject, Sandbox {
+
   static let shared: UserDefaults  = {
       let combined = UserDefaults(suiteName: "MLT7M394S7.group.com.brightdigit.Speculid")!
       combined.register(defaults: ["bookmarks" : [String : Data]()])
@@ -20,7 +31,6 @@ public class BookmarkURLCollectionObject : ObservableObject {
   @Published var bookmarks  = [URL : URL]()
   
   static func saveBookmark(_ url: URL)  {
-    debugPrint("saving bookmark for \(url)")
     guard let newData =  try? url.bookmarkData(options: .withSecurityScope, includingResourceValuesForKeys: nil, relativeTo: nil) else {
       return
     }
@@ -28,6 +38,10 @@ public class BookmarkURLCollectionObject : ObservableObject {
     bookmarkMap[url.path] = newData
     Self.shared.bookmarks = bookmarkMap
     
+  }
+  
+  public func saveBookmark(_ url: URL)  {
+    Self.saveBookmark(url)
   }
   
   func reset () {
@@ -47,10 +61,25 @@ public class BookmarkURLCollectionObject : ObservableObject {
     return self.bookmarks[url] != nil
   }
   
-  static func transformPath(_ path: String, withBookmarkData bookmarkData: Data) -> (URL, URL)? {
+  public func bookmarkURL(fromURL url: URL) throws -> URL {
     
     var isStale : Bool = false
-    
+    let fromURLResult : Result<URL, Error>
+    let fromURLCurrentResult = Self.shared.bookmarks?[url.path].map{
+      data in
+      Result{
+       try URL(resolvingBookmarkData: data, options: .withSecurityScope, relativeTo: nil, bookmarkDataIsStale: &isStale)
+      }
+    }
+    if isStale {
+      saveBookmark(url)
+    }
+   fromURLResult = fromURLCurrentResult ?? .failure(NoBookmarkAvailableError(url : url))
+    return try fromURLResult.get()
+  }
+  
+  static func transformPath(_ path: String, withBookmarkData bookmarkData: Data) -> (URL, URL)? {
+    var isStale : Bool = false
      
     guard let url = try? URL(resolvingBookmarkData: bookmarkData, options: .withSecurityScope, relativeTo: nil, bookmarkDataIsStale: &isStale) else {
       return nil
@@ -72,7 +101,7 @@ public class BookmarkURLCollectionObject : ObservableObject {
     bookmarkPublisher.map{
       Dictionary(uniqueKeysWithValues:
       $0.compactMap(Self.transformPath))
-    }.receive(on: DispatchQueue.main).assign(to: self.$bookmarks)
+    }.receive(on: DispatchQueue.main).assign(to: &self.$bookmarks)
   
     
   }
