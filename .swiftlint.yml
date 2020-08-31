@@ -13,3 +13,4 @@ excluded:
   - .build
   - _archive
   - vendor
+  - packages
