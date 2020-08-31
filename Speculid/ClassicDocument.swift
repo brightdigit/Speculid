@@ -45,14 +45,6 @@ struct ClassicDocument: FileDocument {
     }
   
   func build (fromURL url: URL, inSandbox sandbox: Sandbox) {
-    
-    
-  
-    
-
-    
-
-//
     let document : SpeculidDocument
     do {
       document = try SpeculidDocument(sandboxedFromFile: self.document, withURL: url,  decoder: JSONDecoder(), withManager: sandbox)
@@ -103,10 +95,14 @@ struct ClassicDocument: FileDocument {
     
     let acessingScoped = sourceURL.startAccessingSecurityScopedResource()
     service.exportImageAtURL(sourceURL, toSpecifications: imageSpecifications) { (error) in
+      
       if acessingScoped  {
       sourceURL.stopAccessingSecurityScopedResource()
       }
-      debugPrint(error)
+      if error != nil {
+        return
+      }
+      NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: assetDirectoryURL.path)
     }
   }
 }
