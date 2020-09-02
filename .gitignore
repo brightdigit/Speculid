@@ -154,3 +154,7 @@ examples/*/*.xcassets/*/*.pdf
 
 
 !scripts/github-markdown-toc
+
+**/*.xcassets/**/*.png
+**/*.xcassets/**/*.pdf
+**/*.xcassets/**/*.svg
