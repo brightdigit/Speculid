@@ -82,9 +82,9 @@ struct ClassicDocument: FileDocument {
     let assetDirectoryURL = url.deletingLastPathComponent().appendingPathComponent(self.document.assetDirectoryRelativePath)
 
     let imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
-    let imageSpecifications: [ImageSpecification]
+    let imageSpecifications: [ImageSpecificationObject]
     do {
-      imageSpecifications = try sandboxMap.map { (asset, _, url) -> ImageSpecification in
+      imageSpecifications = try sandboxMap.map { (asset, _, url) -> ImageSpecificationObject in
         try imageSpecificationBuilder.imageSpecification(forURL: url, withSpecifications: document.specificationsFile, andAsset: asset)
       }
     } catch {
@@ -92,7 +92,7 @@ struct ClassicDocument: FileDocument {
       return // callback(error)
     }
 
-    let service = Service()
+    let service = ServiceObject()
     let sourceURL: URL
     do {
       sourceURL = try management.bookmarkURL(fromURL: document.sourceImageURL)
