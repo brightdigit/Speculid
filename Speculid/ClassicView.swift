@@ -5,7 +5,8 @@ import SwiftUI
 struct ClassicView: View {
   @StateObject var object: ClassicObject
   @EnvironmentObject var bookmarkCollection: BookmarkURLCollectionObject
-  @Environment(\.importFiles) var importFiles
+  @State private var isImporting: Bool = false
+  
 
   init(url: URL?, document: ClassicDocument, documentBinding _: Binding<ClassicDocument>) {
     _object = StateObject(wrappedValue: ClassicObject(url: url, document: document))
@@ -27,14 +28,16 @@ struct ClassicView: View {
           Text("File Path:").frame(width: 75, alignment: .trailing)
           TextField("SVG of PNG File", text: self.$object.sourceImageRelativePath)
             .overlay(Image(systemName: "folder.fill").foregroundColor(.primary).padding(.trailing, 4.0), alignment: .trailing)
-            .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/).frame(width: 250).onTapGesture {
-              self.importFiles(singleOfType: [.svg, .png]) { result in
-                guard case let .success(url) = result else {
-                  return
-                }
-                bookmarkCollection.saveBookmark(url)
-              }
-            }
+            .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/).frame(width: 250)
+            
+//            .onTapGesture {
+//              self.importFiles(singleOfType: [.svg, .png]) { result in
+//                guard case let .success(url) = result else {
+//                  return
+//                }
+//                bookmarkCollection.saveBookmark(url)
+//              }
+//            }
           Image(systemName: "lock.fill").foregroundColor(.yellow).opacity(self.bookmarkCollection.isAvailable(basedOn: self.object.url, relativePath: self.object.sourceImageRelativePath) ? 0.0 : 1.0)
           Spacer()
         }
@@ -46,14 +49,15 @@ struct ClassicView: View {
           Text("Folder:").frame(width: 75, alignment: .trailing)
           TextField(".appiconset or .imageset", text: self.$object.assetDirectoryRelativePath)
             .overlay(Image(systemName: "folder.fill").foregroundColor(.primary).padding(.trailing, 4.0), alignment: .trailing)
-            .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/).frame(width: 250).onTapGesture {
-              self.importFiles(singleOfType: [.directory]) { result in
-                guard case let .success(url) = result else {
-                  return
-                }
-                bookmarkCollection.saveBookmark(url)
-              }
-            }
+            .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/).frame(width: 250)
+//            .onTapGesture {
+//              self.importFiles(singleOfType: [.directory]) { result in
+//                guard case let .success(url) = result else {
+//                  return
+//                }
+//                bookmarkCollection.saveBookmark(url)
+//              }
+//            }
           Image(systemName: "lock.fill").foregroundColor(.yellow).opacity(self.bookmarkCollection.isAvailable(basedOn: self.object.url, relativePath: self.object.assetDirectoryRelativePath) ? 0.0 : 1.0)
           Spacer()
         }

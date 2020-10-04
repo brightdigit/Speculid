@@ -10,6 +10,8 @@ extension UTType {
 }
 
 struct ClassicDocument: FileDocument {
+  
+  
   var document: SpeculidMutableSpecificationsFile
 
   init(document: SpeculidSpecificationsFile = SpeculidSpecificationsFile()) {
@@ -17,22 +19,41 @@ struct ClassicDocument: FileDocument {
   }
 
   static var readableContentTypes: [UTType] { [.speculidImageDocument] }
-
-  init(fileWrapper: FileWrapper, contentType _: UTType) throws {
-    let decoder = JSONDecoder()
-    guard let data = fileWrapper.regularFileContents
-    else {
-      throw CocoaError(.fileReadCorruptFile)
-    }
-    let document = try decoder.decode(SpeculidSpecificationsFile.self, from: data)
-    self.document = SpeculidMutableSpecificationsFile(source: document)
+//
+//  init(fileWrapper: FileWrapper, contentType _: UTType) throws {
+//    let decoder = JSONDecoder()
+//    guard let data = fileWrapper.regularFileContents
+//    else {
+//      throw CocoaError(.fileReadCorruptFile)
+//    }
+//    let document = try decoder.decode(SpeculidSpecificationsFile.self, from: data)
+//    self.document = SpeculidMutableSpecificationsFile(source: document)
+//  }
+//
+  
+  init(configuration: ReadConfiguration) throws {
+    
+      let decoder = JSONDecoder()
+    guard let data = configuration.file.regularFileContents
+      else {
+        throw CocoaError(.fileReadCorruptFile)
+      }
+      let document = try decoder.decode(SpeculidSpecificationsFile.self, from: data)
+      self.document = SpeculidMutableSpecificationsFile(source: document)
   }
 
-  func write(to fileWrapper: inout FileWrapper, contentType _: UTType) throws {
+//  func write(to fileWrapper: inout FileWrapper, contentType _: UTType) throws {
+//    let document = SpeculidSpecificationsFile(source: self.document)
+//    let encoder = JSONEncoder()
+//    let data = try encoder.encode(document)
+//    fileWrapper = FileWrapper(regularFileWithContents: data)
+//  }
+  
+  func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
     let document = SpeculidSpecificationsFile(source: self.document)
     let encoder = JSONEncoder()
     let data = try encoder.encode(document)
-    fileWrapper = FileWrapper(regularFileWithContents: data)
+    return FileWrapper(regularFileWithContents: data)
   }
 
   func build(fromURL url: URL, inSandbox sandbox: Sandbox) {
