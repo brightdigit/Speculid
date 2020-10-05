@@ -5,7 +5,8 @@ import SwiftUI
 struct ClassicView: View {
   @StateObject var object: ClassicObject
   @EnvironmentObject var bookmarkCollection: BookmarkURLCollectionObject
-  @State private var isImporting: Bool = false
+  @State private var isACImporting: Bool = false
+  @State private var isSourceImporting : Bool = false
   
 
   init(url: URL?, document: ClassicDocument, documentBinding _: Binding<ClassicDocument>) {
@@ -29,15 +30,14 @@ struct ClassicView: View {
           TextField("SVG of PNG File", text: self.$object.sourceImageRelativePath)
             .overlay(Image(systemName: "folder.fill").foregroundColor(.primary).padding(.trailing, 4.0), alignment: .trailing)
             .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/).frame(width: 250)
-            
-//            .onTapGesture {
-//              self.importFiles(singleOfType: [.svg, .png]) { result in
-//                guard case let .success(url) = result else {
-//                  return
-//                }
-//                bookmarkCollection.saveBookmark(url)
-//              }
-//            }
+            .fileImporter(isPresented: self.$isSourceImporting, allowedContentTypes: [.svg, .png]) { result in
+                              guard case let .success(url) = result else {
+                                return
+                              }
+                              bookmarkCollection.saveBookmark(url)
+                            }.onTapGesture {
+                              self.isSourceImporting = true
+                            }
           Image(systemName: "lock.fill").foregroundColor(.yellow).opacity(self.bookmarkCollection.isAvailable(basedOn: self.object.url, relativePath: self.object.sourceImageRelativePath) ? 0.0 : 1.0)
           Spacer()
         }
@@ -50,14 +50,14 @@ struct ClassicView: View {
           TextField(".appiconset or .imageset", text: self.$object.assetDirectoryRelativePath)
             .overlay(Image(systemName: "folder.fill").foregroundColor(.primary).padding(.trailing, 4.0), alignment: .trailing)
             .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/).frame(width: 250)
-//            .onTapGesture {
-//              self.importFiles(singleOfType: [.directory]) { result in
-//                guard case let .success(url) = result else {
-//                  return
-//                }
-//                bookmarkCollection.saveBookmark(url)
-//              }
-//            }
+            .fileImporter(isPresented: self.$isACImporting, allowedContentTypes: [.directory])  { result in
+                guard case let .success(url) = result else {
+                  return
+                }
+                bookmarkCollection.saveBookmark(url)
+            }.onTapGesture {
+              self.isACImporting = true
+            }
           Image(systemName: "lock.fill").foregroundColor(.yellow).opacity(self.bookmarkCollection.isAvailable(basedOn: self.object.url, relativePath: self.object.assetDirectoryRelativePath) ? 0.0 : 1.0)
           Spacer()
         }
