@@ -19,17 +19,7 @@ struct ClassicDocument: FileDocument {
   }
 
   static var readableContentTypes: [UTType] { [.speculidImageDocument] }
-//
-//  init(fileWrapper: FileWrapper, contentType _: UTType) throws {
-//    let decoder = JSONDecoder()
-//    guard let data = fileWrapper.regularFileContents
-//    else {
-//      throw CocoaError(.fileReadCorruptFile)
-//    }
-//    let document = try decoder.decode(SpeculidSpecificationsFile.self, from: data)
-//    self.document = SpeculidMutableSpecificationsFile(source: document)
-//  }
-//
+  static var writableContentTypes: [UTType]  { [.speculidImageDocument] }
   
   init(configuration: ReadConfiguration) throws {
     
@@ -50,6 +40,7 @@ struct ClassicDocument: FileDocument {
 //  }
   
   func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
+    debugPrint(configuration.existingFile)
     let document = SpeculidSpecificationsFile(source: self.document)
     let encoder = JSONEncoder()
     let data = try encoder.encode(document)

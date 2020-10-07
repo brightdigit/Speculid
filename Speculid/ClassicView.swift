@@ -35,6 +35,7 @@ struct ClassicView: View {
                                 return
                               }
                               bookmarkCollection.saveBookmark(url)
+                              self.object.sourceImageRelativePath = url.path
                             }.onTapGesture {
                               self.isSourceImporting = true
                             }
@@ -55,6 +56,8 @@ struct ClassicView: View {
                   return
                 }
                 bookmarkCollection.saveBookmark(url)
+              self.object.assetDirectoryRelativePath = url.path
+              
             }.onTapGesture {
               self.isACImporting = true
             }
