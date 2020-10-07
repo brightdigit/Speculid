@@ -9,27 +9,42 @@ extension UTType {
   }
 }
 
-struct ClassicDocument: FileDocument {
+class ClassicDocument: FileDocument, SpeculidSpecificationsFileProtocol, ObservableObject {
+  @Published public var assetDirectoryRelativePath: String
+  @Published public var sourceImageRelativePath: String
+  @Published public var geometry: Geometry?
+  @Published public var background: NSColor?
+  @Published public var removeAlpha: Bool
   
-  
-  var document: SpeculidMutableSpecificationsFile
+  //var document: SpeculidMutableSpecificationsFile
 
-  init(document: SpeculidSpecificationsFile = SpeculidSpecificationsFile()) {
-    self.document = SpeculidMutableSpecificationsFile(source: document)
+  init(source: SpeculidSpecificationsFile = SpeculidSpecificationsFile()) {
+    
+      assetDirectoryRelativePath = source.assetDirectoryRelativePath
+      sourceImageRelativePath = source.sourceImageRelativePath
+      geometry = source.geometry
+      background = source.background
+      removeAlpha = source.removeAlpha
   }
 
   static var readableContentTypes: [UTType] { [.speculidImageDocument] }
   static var writableContentTypes: [UTType]  { [.speculidImageDocument] }
   
-  init(configuration: ReadConfiguration) throws {
+  required init(configuration: ReadConfiguration) throws {
     
       let decoder = JSONDecoder()
     guard let data = configuration.file.regularFileContents
       else {
         throw CocoaError(.fileReadCorruptFile)
       }
-      let document = try decoder.decode(SpeculidSpecificationsFile.self, from: data)
-      self.document = SpeculidMutableSpecificationsFile(source: document)
+      let source = try decoder.decode(SpeculidSpecificationsFile.self, from: data)
+      
+    
+      assetDirectoryRelativePath = source.assetDirectoryRelativePath
+      sourceImageRelativePath = source.sourceImageRelativePath
+      geometry = source.geometry
+      background = source.background
+      removeAlpha = source.removeAlpha
   }
 
 //  func write(to fileWrapper: inout FileWrapper, contentType _: UTType) throws {
@@ -40,9 +55,11 @@ struct ClassicDocument: FileDocument {
 //  }
   
   func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
-    debugPrint(configuration.existingFile)
-    let document = SpeculidSpecificationsFile(source: self.document)
+    debugPrint(self.assetDirectoryRelativePath)
+    let document = SpeculidSpecificationsFile(source: self)
     let encoder = JSONEncoder()
+    encoder.outputFormatting = [ .prettyPrinted, .withoutEscapingSlashes ]
+    
     let data = try encoder.encode(document)
     return FileWrapper(regularFileWithContents: data)
   }
@@ -50,7 +67,7 @@ struct ClassicDocument: FileDocument {
   func build(fromURL url: URL, inSandbox sandbox: Sandbox) {
     let document: SpeculidDocument
     do {
-      document = try SpeculidDocument(sandboxedFromFile: self.document, withURL: url, decoder: JSONDecoder(), withManager: sandbox)
+      document = try SpeculidDocument(sandboxedFromFile: self, withURL: url, decoder: JSONDecoder(), withManager: sandbox)
     } catch {
       debugPrint(error)
       debugPrint(error.localizedDescription)
@@ -70,7 +87,7 @@ struct ClassicDocument: FileDocument {
   }
 
   func processImages(fromURL url: URL, management: Sandbox, document: SpeculidDocument, sandboxMap: [(AssetSpecificationProtocol, String, URL)]) {
-    let assetDirectoryURL = url.deletingLastPathComponent().appendingPathComponent(self.document.assetDirectoryRelativePath)
+    let assetDirectoryURL = url.deletingLastPathComponent().appendingPathComponent(self.assetDirectoryRelativePath)
 
     let imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
     let imageSpecifications: [ImageSpecificationObject]

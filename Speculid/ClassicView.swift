@@ -16,9 +16,9 @@ struct ClassicView: View {
   var canBuild: Bool {
     return object.url != nil &&
 
-      bookmarkCollection.isAvailable(basedOn: object.url, relativePath: object.document.document.assetDirectoryRelativePath) &&
+      bookmarkCollection.isAvailable(basedOn: object.url, relativePath: object.document.assetDirectoryRelativePath) &&
 
-      bookmarkCollection.isAvailable(basedOn: object.url, relativePath: object.document.document.sourceImageRelativePath)
+      bookmarkCollection.isAvailable(basedOn: object.url, relativePath: object.document.sourceImageRelativePath)
   }
 
   var body: some View {
@@ -56,6 +56,7 @@ struct ClassicView: View {
                   return
                 }
                 bookmarkCollection.saveBookmark(url)
+              //self.object.document.document.assetDirectoryRelativePath = url.path
               self.object.assetDirectoryRelativePath = url.path
               
             }.onTapGesture {
@@ -108,7 +109,7 @@ struct ClassicView: View {
               Image(systemName: "play.fill")
               Text("Build")
             }
-          }
+          }.disabled(!canBuild)
         }
       }
     }.padding(.all, 40.0).frame(minWidth: 500, idealWidth: 500, maxWidth: 600, minHeight: 500, idealHeight: 500, maxHeight: .infinity, alignment: .center)
