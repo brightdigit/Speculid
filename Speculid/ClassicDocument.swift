@@ -15,6 +15,7 @@ class ClassicDocument: FileDocument, SpeculidSpecificationsFileProtocol, Observa
   @Published public var geometry: Geometry?
   @Published public var background: NSColor?
   @Published public var removeAlpha: Bool
+  @Published public var url: URL?
   
   //var document: SpeculidMutableSpecificationsFile
 
@@ -61,7 +62,12 @@ class ClassicDocument: FileDocument, SpeculidSpecificationsFileProtocol, Observa
     encoder.outputFormatting = [ .prettyPrinted, .withoutEscapingSlashes ]
     
     let data = try encoder.encode(document)
-    return FileWrapper(regularFileWithContents: data)
+    let wrapper = FileWrapper(regularFileWithContents: data)
+    if let url = self.url {
+      try wrapper.write(to: url, options: .withNameUpdating, originalContentsURL: nil)
+    }
+    
+    return wrapper
   }
 
   func build(fromURL url: URL, inSandbox sandbox: Sandbox) {
@@ -73,6 +79,16 @@ class ClassicDocument: FileDocument, SpeculidSpecificationsFileProtocol, Observa
       debugPrint(error.localizedDescription)
       return
     }
+    
+      let file = SpeculidSpecificationsFile(source: self)
+    let encoder = JSONEncoder()
+    encoder.outputFormatting = [ .prettyPrinted, .withoutEscapingSlashes ]
+    
+    if let url = self.url, let data = try? encoder.encode(file) {
+      try? data.write(to: url)
+    }
+    
+    //self.fileWrapper(configuration: WriteConfiguration)
 
     let destinationFileNames = document.assetFile.document.images.map {
       asset in

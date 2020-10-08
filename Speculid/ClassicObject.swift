@@ -64,6 +64,7 @@ class ClassicObject: ObservableObject {
     assign($removeAlpha, documentProperty: \.removeAlpha)
     assign(nscolorPub, documentProperty: \.background)
     assign(geoPub, documentProperty: \.geometry)
+    assign($url, documentProperty: \.url)
   }
 
   func assign<PublisherType: Publisher, ValueType>(_ publisher: PublisherType, documentProperty: WritableKeyPath<ClassicDocument, ValueType>) where PublisherType.Output == ValueType, PublisherType.Failure == Never {

@@ -144,7 +144,8 @@ struct ClassicView: View {
         }
       }
     }.padding(.all, 40.0).frame(minWidth: 500, idealWidth: 500, maxWidth: 600, minHeight: 500, idealHeight: 500, maxHeight: .infinity, alignment: .center)
-    .fileExporter(isPresented: $isExporting, document: self.object.document, contentType: .speculidImageDocument) { (result) in
+    
+    .fileExporter(isPresented: $isExporting, document: self.object.document, contentType: .speculidImageDocument, defaultFilename: self.object.url?.lastPathComponent ?? "") { (result) in
       guard case let .success(url) = result else {
         return
       }
