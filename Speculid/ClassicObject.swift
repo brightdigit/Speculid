@@ -67,7 +67,10 @@ class ClassicObject: ObservableObject {
     assign($url, documentProperty: \.url)
   }
 
-  func assign<PublisherType: Publisher, ValueType>(_ publisher: PublisherType, documentProperty: WritableKeyPath<ClassicDocument, ValueType>) where PublisherType.Output == ValueType, PublisherType.Failure == Never {
+  func assign<PublisherType: Publisher, ValueType>(
+    _ publisher: PublisherType,
+    documentProperty: WritableKeyPath<ClassicDocument, ValueType>
+  ) where PublisherType.Output == ValueType, PublisherType.Failure == Never {
     publisher.sink { value in
       self.document[keyPath: documentProperty] = value
     }.store(in: &cancellables)

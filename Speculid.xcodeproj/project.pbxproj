@@ -14,7 +14,7 @@
 		B347128924B64968001CCCFD /* ClassicDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B347128824B64968001CCCFD /* ClassicDocument.swift */; };
 		B347128B24B668DE001CCCFD /* ClassicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B347128A24B668DE001CCCFD /* ClassicView.swift */; };
 		B34B6BC224BE354D00F4EE6B /* BookmarkURLCollectionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B6BC124BE354D00F4EE6B /* BookmarkURLCollectionObject.swift */; };
-		B3B6A4D124B15292009C6E32 /* doc_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364623E24B14DBB0089382E /* doc_appApp.swift */; };
+		B3B6A4D124B15292009C6E32 /* SpeculidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364623E24B14DBB0089382E /* SpeculidApp.swift */; };
 		B3DB48142431642600B1DA4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48132431642600B1DA4F /* Assets.xcassets */; };
 		B3DB48172431642600B1DA4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48162431642600B1DA4F /* Preview Assets.xcassets */; };
 		B3DB481A2431642600B1DA4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3DB48182431642600B1DA4F /* Main.storyboard */; };
@@ -52,7 +52,7 @@
 		B347128824B64968001CCCFD /* ClassicDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicDocument.swift; sourceTree = "<group>"; };
 		B347128A24B668DE001CCCFD /* ClassicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicView.swift; sourceTree = "<group>"; };
 		B34B6BC124BE354D00F4EE6B /* BookmarkURLCollectionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkURLCollectionObject.swift; sourceTree = "<group>"; };
-		B364623E24B14DBB0089382E /* doc_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doc_appApp.swift; sourceTree = "<group>"; };
+		B364623E24B14DBB0089382E /* SpeculidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeculidApp.swift; sourceTree = "<group>"; };
 		B3796B792432B7FF00E5F5F9 /* Command.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Command.entitlements; sourceTree = "<group>"; };
 		B37A52372435014400FEA6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B37B472124B93CB900AE2021 /* CairoSVG.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CairoSVG.xcframework; path = packages/SpeculidKit/packages/CairoSVG/build/CairoSVG.xcframework; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		B3DB48092431642100B1DA4F /* Speculid */ = {
 			isa = PBXGroup;
 			children = (
-				B364623E24B14DBB0089382E /* doc_appApp.swift */,
+				B364623E24B14DBB0089382E /* SpeculidApp.swift */,
 				B3DB480E2431642100B1DA4F /* ContentView.swift */,
 				B3DB48132431642600B1DA4F /* Assets.xcassets */,
 				B3DB48182431642600B1DA4F /* Main.storyboard */,
@@ -170,6 +170,7 @@
 				B3DB48052431642100B1DA4F /* Resources */,
 				B3796B7A2432C33600E5F5F9 /* CopyFiles */,
 				B324D41624C49F500047ED11 /* Embed Frameworks */,
+				B33E6494252F612700A12CFD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -228,6 +229,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B33E6494252F612700A12CFD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftformat --lint . && swiftlint\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B3DB48032431642100B1DA4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -239,7 +260,7 @@
 				B3E1707C24C1DBF700784D20 /* LabeledOption.swift in Sources */,
 				B347128924B64968001CCCFD /* ClassicDocument.swift in Sources */,
 				B3326D4324C1CFF000629F70 /* Tooltip.swift in Sources */,
-				B3B6A4D124B15292009C6E32 /* doc_appApp.swift in Sources */,
+				B3B6A4D124B15292009C6E32 /* SpeculidApp.swift in Sources */,
 				B3E1708024C1DC6C00784D20 /* ClassicObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

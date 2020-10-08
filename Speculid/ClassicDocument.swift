@@ -16,36 +16,33 @@ class ClassicDocument: FileDocument, SpeculidSpecificationsFileProtocol, Observa
   @Published public var background: NSColor?
   @Published public var removeAlpha: Bool
   @Published public var url: URL?
-  
-  //var document: SpeculidMutableSpecificationsFile
+
+  // var document: SpeculidMutableSpecificationsFile
 
   init(source: SpeculidSpecificationsFile = SpeculidSpecificationsFile()) {
-    
-      assetDirectoryRelativePath = source.assetDirectoryRelativePath
-      sourceImageRelativePath = source.sourceImageRelativePath
-      geometry = source.geometry
-      background = source.background
-      removeAlpha = source.removeAlpha
+    assetDirectoryRelativePath = source.assetDirectoryRelativePath
+    sourceImageRelativePath = source.sourceImageRelativePath
+    geometry = source.geometry
+    background = source.background
+    removeAlpha = source.removeAlpha
   }
 
   static var readableContentTypes: [UTType] { [.speculidImageDocument] }
-  static var writableContentTypes: [UTType]  { [.speculidImageDocument] }
-  
+  static var writableContentTypes: [UTType] { [.speculidImageDocument] }
+
   required init(configuration: ReadConfiguration) throws {
-    
-      let decoder = JSONDecoder()
+    let decoder = JSONDecoder()
     guard let data = configuration.file.regularFileContents
-      else {
-        throw CocoaError(.fileReadCorruptFile)
-      }
-      let source = try decoder.decode(SpeculidSpecificationsFile.self, from: data)
-      
-    
-      assetDirectoryRelativePath = source.assetDirectoryRelativePath
-      sourceImageRelativePath = source.sourceImageRelativePath
-      geometry = source.geometry
-      background = source.background
-      removeAlpha = source.removeAlpha
+    else {
+      throw CocoaError(.fileReadCorruptFile)
+    }
+    let source = try decoder.decode(SpeculidSpecificationsFile.self, from: data)
+
+    assetDirectoryRelativePath = source.assetDirectoryRelativePath
+    sourceImageRelativePath = source.sourceImageRelativePath
+    geometry = source.geometry
+    background = source.background
+    removeAlpha = source.removeAlpha
   }
 
 //  func write(to fileWrapper: inout FileWrapper, contentType _: UTType) throws {
@@ -54,19 +51,19 @@ class ClassicDocument: FileDocument, SpeculidSpecificationsFileProtocol, Observa
 //    let data = try encoder.encode(document)
 //    fileWrapper = FileWrapper(regularFileWithContents: data)
 //  }
-  
-  func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
-    debugPrint(self.assetDirectoryRelativePath)
+
+  func fileWrapper(configuration _: WriteConfiguration) throws -> FileWrapper {
+    debugPrint(assetDirectoryRelativePath)
     let document = SpeculidSpecificationsFile(source: self)
     let encoder = JSONEncoder()
-    encoder.outputFormatting = [ .prettyPrinted, .withoutEscapingSlashes ]
-    
+    encoder.outputFormatting = [.prettyPrinted, .withoutEscapingSlashes]
+
     let data = try encoder.encode(document)
     let wrapper = FileWrapper(regularFileWithContents: data)
     if let url = self.url {
       try wrapper.write(to: url, options: .withNameUpdating, originalContentsURL: nil)
     }
-    
+
     return wrapper
   }
 
@@ -79,21 +76,21 @@ class ClassicDocument: FileDocument, SpeculidSpecificationsFileProtocol, Observa
       debugPrint(error.localizedDescription)
       return
     }
-    
-      let file = SpeculidSpecificationsFile(source: self)
+
+    let file = SpeculidSpecificationsFile(source: self)
     let encoder = JSONEncoder()
-    encoder.outputFormatting = [ .prettyPrinted, .withoutEscapingSlashes ]
-    
+    encoder.outputFormatting = [.prettyPrinted, .withoutEscapingSlashes]
+
     if let url = self.url, let data = try? encoder.encode(file) {
       try? data.write(to: url)
     }
-    
-    //self.fileWrapper(configuration: WriteConfiguration)
 
-    let destinationFileNames = document.assetFile.document.images.map {
-      asset in
-      (asset, document.destinationName(forImage: asset))
-    }
+    // self.fileWrapper(configuration: WriteConfiguration)
+
+    let destinationFileNames = document.assetFile.document.images
+      .map { asset in
+        (asset, document.destinationName(forImage: asset))
+      }
 
     let urlMap = destinationFileNames.map { asset, fileName in
       (asset, fileName, document.destinationURL(forFileName: fileName))
@@ -103,7 +100,7 @@ class ClassicDocument: FileDocument, SpeculidSpecificationsFileProtocol, Observa
   }
 
   func processImages(fromURL url: URL, management: Sandbox, document: SpeculidDocument, sandboxMap: [(AssetSpecificationProtocol, String, URL)]) {
-    let assetDirectoryURL = url.deletingLastPathComponent().appendingPathComponent(self.assetDirectoryRelativePath)
+    let assetDirectoryURL = url.deletingLastPathComponent().appendingPathComponent(assetDirectoryRelativePath)
 
     let imageSpecificationBuilder = SpeculidImageSpecificationBuilder()
     let imageSpecifications: [ImageSpecificationObject]
