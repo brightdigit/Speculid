@@ -1,7 +1,30 @@
 import Combine
 import SpeculidKit
 import SwiftUI
+extension URL {
+    func relativePath(from base: URL) -> String? {
+        // Ensure that both URLs represent files:
+        guard self.isFileURL && base.isFileURL else {
+            return nil
+        }
 
+        // Remove/replace "." and "..", make paths absolute:
+        let destComponents = self.standardized.pathComponents
+        let baseComponents = base.standardized.pathComponents
+
+        // Find number of common path components:
+        var i = 0
+        while i < destComponents.count && i < baseComponents.count
+            && destComponents[i] == baseComponents[i] {
+                i += 1
+        }
+
+        // Build relative path:
+        var relComponents = Array(repeating: "..", count: baseComponents.count - i)
+        relComponents.append(contentsOf: destComponents[i...])
+        return relComponents.joined(separator: "/")
+    }
+}
 struct ClassicView: View {
   @StateObject var object: ClassicObject
   @EnvironmentObject var bookmarkCollection: BookmarkURLCollectionObject
@@ -32,11 +55,15 @@ struct ClassicView: View {
             .overlay(Image(systemName: "folder.fill").foregroundColor(.primary).padding(.trailing, 4.0), alignment: .trailing)
             .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/).frame(width: 250)
             .fileImporter(isPresented: self.$isSourceImporting, allowedContentTypes: [.svg, .png]) { result in
-                              guard case let .success(url) = result else {
-                                return
-                              }
-                              bookmarkCollection.saveBookmark(url)
-                              self.object.sourceImageRelativePath = url.path
+              
+                guard case let .success(url) = result, let baseURL = self.object.url?.deletingLastPathComponent() else {
+                    return
+                  }
+                guard let relativePath = url.relativePath(from: baseURL) else {
+                  return
+                }
+                  bookmarkCollection.saveBookmark(url)
+                              self.object.sourceImageRelativePath = relativePath
                             }.onTapGesture {
                               self.isSourceImporting = true
                             }
@@ -53,12 +80,15 @@ struct ClassicView: View {
             .overlay(Image(systemName: "folder.fill").foregroundColor(.primary).padding(.trailing, 4.0), alignment: .trailing)
             .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/).frame(width: 250)
             .fileImporter(isPresented: self.$isACImporting, allowedContentTypes: [.directory])  { result in
-                guard case let .success(url) = result else {
+              guard case let .success(url) = result, let baseURL = self.object.url?.deletingLastPathComponent() else {
                   return
                 }
+              guard let relativePath = url.relativePath(from: baseURL) else {
+                return
+              }
                 bookmarkCollection.saveBookmark(url)
               //self.object.document.document.assetDirectoryRelativePath = url.path
-              self.object.assetDirectoryRelativePath = url.path
+              self.object.assetDirectoryRelativePath = relativePath
               
             }.onTapGesture {
               self.isACImporting = true
