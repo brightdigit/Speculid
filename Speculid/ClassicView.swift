@@ -7,6 +7,7 @@ struct ClassicView: View {
   @EnvironmentObject var bookmarkCollection: BookmarkURLCollectionObject
   @State private var isACImporting: Bool = false
   @State private var isSourceImporting : Bool = false
+  @State private var isExporting : Bool = false
   
 
   init(url: URL?, document: ClassicDocument, documentBinding _: Binding<ClassicDocument>) {
@@ -113,6 +114,14 @@ struct ClassicView: View {
         }
       }
     }.padding(.all, 40.0).frame(minWidth: 500, idealWidth: 500, maxWidth: 600, minHeight: 500, idealHeight: 500, maxHeight: .infinity, alignment: .center)
+    .fileExporter(isPresented: $isExporting, document: self.object.document, contentType: .speculidImageDocument) { (result) in
+      guard case let .success(url) = result else {
+        return
+      }
+      self.object.url = url
+    }.onAppear {
+      self.isExporting = self.object.url == nil
+    }
   }
 }
 
