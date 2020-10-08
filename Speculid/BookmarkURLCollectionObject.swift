@@ -55,12 +55,12 @@ public class BookmarkURLCollectionObject: ObservableObject, Sandbox {
   public func bookmarkURL(fromURL url: URL) throws -> URL {
     var isStale: Bool = false
     let fromURLResult: Result<URL, Error>
-    let fromURLCurrentResult = Self.shared.bookmarks?[url.path].map {
-      data in
-      Result {
-        try URL(resolvingBookmarkData: data, options: .withSecurityScope, relativeTo: nil, bookmarkDataIsStale: &isStale)
+    let fromURLCurrentResult = Self.shared.bookmarks?[url.path]
+      .map { data in
+        Result {
+          try URL(resolvingBookmarkData: data, options: .withSecurityScope, relativeTo: nil, bookmarkDataIsStale: &isStale)
+        }
       }
-    }
     if isStale {
       saveBookmark(url)
     }
