@@ -14,8 +14,10 @@ extension URL {
 
     // Find number of common path components:
     var index = 0
-    while index < destComponents.count, index < baseComponents.count,
-      destComponents[index] == baseComponents[index]    {
+    while index < destComponents.count,
+      index < baseComponents.count,
+      destComponents[index] == baseComponents[index]
+    {
       index += 1
     }
 
@@ -116,7 +118,7 @@ struct ClassicView: View {
         HStack {
           VStack(alignment: .leading) {
             Toggle("Remove Alpha Channel", isOn: self.$object.removeAlpha)
-            //swiftlint:disable:next line_length
+            // swiftlint:disable:next line_length
             Text("If this is intended for an iOS, watchOS, or tvOS App, then you should remove the alpha channel from the source graphic.").multilineTextAlignment(.leading).font(.subheadline).lineLimit(nil)
           }
           Spacer()
@@ -130,8 +132,7 @@ struct ClassicView: View {
               .disabled(!self.object.addBackground)
               .opacity(self.object.addBackground ? 1.0 : 0.5)
           }
-          
-          //swiftlint:disable:next line_length
+
           Text("If this is intended for an iOS, watchOS, or tvOS App, then you should set a background color.")
             .multilineTextAlignment(.leading)
             .font(.subheadline)
@@ -153,8 +154,8 @@ struct ClassicView: View {
             .opacity(self.object.resizeOption == 0 ? 0.5 : 1.0)
           Text("px").opacity(self.object.resizeOption == 0 ? 0.5 : 1.0)
         }
-        
-        //swiftlint:disable:next line_length
+
+        // swiftlint:disable:next line_length
         Text("If you wish to render scaled PNG files for an image set, then specify either width or height and the image will be resized to that dimention while retaining its aspect ratio.\nOtherwise if you select \"None\", then only a PDF will be rendered.   ")
           .multilineTextAlignment(.leading)
           .font(.subheadline)
@@ -179,18 +180,19 @@ struct ClassicView: View {
     .padding(.all, 40.0)
     .frame(minWidth: 500, idealWidth: 500, maxWidth: 600, minHeight: 500, idealHeight: 500, maxHeight: .infinity, alignment: .center)
 
-      .fileExporter(
-        isPresented: $isExporting,
-        document: self.object.document,
-        contentType: .speculidImageDocument,
-        defaultFilename: self.object.url?.lastPathComponent ?? "") { result in
-        guard case let .success(url) = result else {
-          return
-        }
-        self.object.url = url
-      }.onAppear {
-        self.isExporting = self.object.url == nil
+    .fileExporter(
+      isPresented: $isExporting,
+      document: self.object.document,
+      contentType: .speculidImageDocument,
+      defaultFilename: self.object.url?.lastPathComponent ?? ""
+    ) { result in
+      guard case let .success(url) = result else {
+        return
       }
+      self.object.url = url
+    }.onAppear {
+      self.isExporting = self.object.url == nil
+    }
   }
 }
 
