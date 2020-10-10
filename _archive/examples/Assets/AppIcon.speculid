@@ -1,1 +1,7 @@
-{"set":"Assets.xcassets\/AppIcon.appiconset","remove-alpha":true,"source":"geometry.svg","geometry":null,"background":"#FFFEFEFF"}
+{
+  "set" : "/Users/leo/Documents/Projects/Speculid/_archive/examples/Assets/Assets.xcassets/macOS AppIcon.appiconset",
+  "remove-alpha" : true,
+  "source" : "geometry.svg",
+  "geometry" : null,
+  "background" : "#FCFBFBFF"
+}
