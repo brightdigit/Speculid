@@ -17,6 +17,8 @@
 			</array>
 			<key>NSUbiquitousDocumentUserActivityType</key>
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER).speculid-project-document</string>
+      <key>CFBundleTypeName</key>
+      <string>Speculid Project Document</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
@@ -29,6 +31,8 @@
 			</array>
 			<key>NSUbiquitousDocumentUserActivityType</key>
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER)speculid-image-document</string>
+      <key>CFBundleTypeName</key>
+      <string>Speculid Image Document</string>
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>

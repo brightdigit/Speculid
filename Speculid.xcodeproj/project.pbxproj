@@ -22,7 +22,7 @@
 		B3E741E82530AF2500002110 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E741E72530AF2500002110 /* main.swift */; };
 		B3E741EE2530AF5A00002110 /* SpeculidKit in Frameworks */ = {isa = PBXBuildFile; productRef = B3E741ED2530AF5A00002110 /* SpeculidKit */; };
 		B3E741F22530AFD500002110 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = B3E741F12530AFD500002110 /* ArgumentParser */; };
-		B3E7420F2530B78F00002110 /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E741E52530AF2500002110 /* speculid */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B3E7420F2530B78F00002110 /* speculid in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E741E52530AF2500002110 /* speculid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -283,7 +283,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# swiftformat --lint . && swiftlint\n";
+			shellScript = "codesign --force --verbose  --entitlements \"${SRCROOT}/command/Command.entitlements\" -s \"${CODE_SIGN_IDENTITY}\" \"${TARGET_BUILD_DIR}/Speculid.app/Contents/SharedSupport/speculid\"   \n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -431,7 +431,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_ASSET_PATHS = "\"Speculid/Preview Content\"";
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -530,7 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"Speculid/Preview Content\"";
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -598,9 +598,9 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = speculid/speculid.entitlements;
+				CODE_SIGN_ENTITLEMENTS = command/Command.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -619,6 +619,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -641,9 +642,9 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = speculid/speculid.entitlements;
+				CODE_SIGN_ENTITLEMENTS = command/Command.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = MLT7M394S7;
@@ -657,6 +658,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
