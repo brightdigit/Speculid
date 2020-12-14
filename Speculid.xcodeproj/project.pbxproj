@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B303554A24381F1200A8EAB9 /* SpeculidKit in Frameworks */ = {isa = PBXBuildFile; productRef = B303554924381F1200A8EAB9 /* SpeculidKit */; };
-		B324D41424C49F500047ED11 /* CairoSVG.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B324D41324C49F500047ED11 /* CairoSVG.xcframework */; };
-		B324D41524C49F500047ED11 /* CairoSVG.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B324D41324C49F500047ED11 /* CairoSVG.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3326D4324C1CFF000629F70 /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3326D4224C1CFF000629F70 /* Tooltip.swift */; };
 		B347128924B64968001CCCFD /* ClassicDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B347128824B64968001CCCFD /* ClassicDocument.swift */; };
 		B347128B24B668DE001CCCFD /* ClassicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B347128A24B668DE001CCCFD /* ClassicView.swift */; };
@@ -28,17 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B324D41624C49F500047ED11 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B324D41524C49F500047ED11 /* CairoSVG.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B3796B7A2432C33600E5F5F9 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
@@ -83,7 +70,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B303554A24381F1200A8EAB9 /* SpeculidKit in Frameworks */,
-				B324D41424C49F500047ED11 /* CairoSVG.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +181,6 @@
 				B3DB48042431642100B1DA4F /* Frameworks */,
 				B3DB48052431642100B1DA4F /* Resources */,
 				B3796B7A2432C33600E5F5F9 /* CopyFiles */,
-				B324D41624C49F500047ED11 /* Embed Frameworks */,
 				B33E6494252F612700A12CFD /* ShellScript */,
 			);
 			buildRules = (
@@ -504,7 +489,6 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -597,7 +581,6 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
-				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
