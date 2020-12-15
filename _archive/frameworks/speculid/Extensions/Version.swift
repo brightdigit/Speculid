@@ -6,7 +6,7 @@ public extension Version {
     let buildnumbers = VersionMenuItem.buildNumbers(fromResource: "build", withExtension: "list")
     let title: String
     if buildnumbers?.contains(build) == true {
-      title = "Speculid v\(self) [\(buildHexidecimal)]"
+      title = "Speculid v\(self)"
     } else {
       title = "Speculid v\(fullDescription) [dev-\(buildHexidecimal)]"
     }

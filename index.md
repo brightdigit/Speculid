@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 [{{ site.github.project_tagline }}](#){:class="html-only"}
 
 <!--ts-->
@@ -150,8 +154,9 @@ This will automatically install the terminal command for easy scripting.
 
 You can directly download the application from the Github Repo releases page.
 
-<a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-<a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+<a href="https://github.com/brightdigit/Speculid/releases/download/v2.0.0/Speculid.zip" class="btn">Download zip</a>
+<a href="{{ site.github.zip_url }}" class="btn">Source .zip</a>
+<a href="{{ site.github.tar_url }}" class="btn">Source .tar.gz</a>
 
 <!-- HTML-ONLY BEGIN -->
 # Documentation

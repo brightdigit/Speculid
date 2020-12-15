@@ -406,3 +406,45 @@ section.buttons {
     }
   }
 }
+@media print {
+  .github-corner, .btn {
+      display:none;
+  }
+  h2 {
+    page-break-before: always;
+    &:first-of-type, &:last-of-type {
+      page-break-before: avoid;
+    }
+   .main-content > & {
+     margin-top: 0;
+     margin-bottom: 0;
+   }
+  }
+  .main-content h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    &#for-any-application {
+    page-break-before: always;    
+    }
+  }
+  .main-content ul {
+    margin-bottom: 0;
+  }
+  img {
+    width: 40%;
+    &.small {
+      width: 1em;
+    }
+    h1 > & {
+      display: none;
+    }
+  }
+  footer {
+    .social-share {
+      display: none;
+    }
+  }
+  #logo + p > img[alt="Logo"] {
+    width: 50px;
+  }
+}

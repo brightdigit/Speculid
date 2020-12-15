@@ -1,272 +1,231 @@
 {
   "images" : [
     {
-      "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "geometry.20x20@2x~iphone.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "20x20"
     },
     {
-      "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "geometry.20x20@3x~iphone.png",
-      "scale" : "3x"
+      "scale" : "3x",
+      "size" : "20x20"
     },
     {
-      "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "geometry.29x29@2x~iphone.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "29x29"
     },
     {
-      "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "geometry.29x29@3x~iphone.png",
-      "scale" : "3x"
+      "scale" : "3x",
+      "size" : "29x29"
     },
     {
-      "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "geometry.40x40@2x~iphone.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "40x40"
     },
     {
-      "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "geometry.40x40@3x~iphone.png",
-      "scale" : "3x"
+      "scale" : "3x",
+      "size" : "40x40"
     },
     {
-      "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "geometry.60x60@2x~iphone.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "60x60"
     },
     {
-      "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "geometry.60x60@3x~iphone.png",
-      "scale" : "3x"
+      "scale" : "3x",
+      "size" : "60x60"
     },
     {
-      "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "geometry.20x20@1x~ipad.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "20x20"
     },
     {
-      "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "geometry.20x20@2x~ipad.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "20x20"
     },
     {
-      "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "geometry.29x29@1x~ipad.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "29x29"
     },
     {
-      "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "geometry.29x29@2x~ipad.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "29x29"
     },
     {
-      "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "geometry.40x40@1x~ipad.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "40x40"
     },
     {
-      "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "geometry.40x40@2x~ipad.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "40x40"
     },
     {
-      "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "geometry.76x76@1x~ipad.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "76x76"
     },
     {
-      "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "geometry.76x76@2x~ipad.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "76x76"
     },
     {
-      "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "geometry.83.5x83.5@2x~ipad.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "83.5x83.5"
     },
     {
-      "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "geometry.1024x1024@1x~ios-marketing.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "1024x1024"
     },
     {
-      "size" : "60x60",
       "idiom" : "car",
-      "filename" : "geometry.60x60@2x~car.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "60x60"
     },
     {
-      "size" : "60x60",
       "idiom" : "car",
-      "filename" : "geometry.60x60@3x~car.png",
-      "scale" : "3x"
+      "scale" : "3x",
+      "size" : "60x60"
     },
     {
+      "idiom" : "watch",
+      "role" : "notificationCenter",
+      "scale" : "2x",
       "size" : "24x24",
-      "role" : "notificationCenter",
-      "filename" : "geometry.24x24@2x~watch.png",
-      "idiom" : "watch",
-      "subtype" : "38mm",
-      "scale" : "2x"
+      "subtype" : "38mm"
     },
     {
+      "idiom" : "watch",
+      "role" : "notificationCenter",
+      "scale" : "2x",
       "size" : "27.5x27.5",
-      "role" : "notificationCenter",
-      "filename" : "geometry.27.5x27.5@2x~watch.png",
-      "idiom" : "watch",
-      "subtype" : "42mm",
-      "scale" : "2x"
+      "subtype" : "42mm"
     },
     {
-      "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "geometry.29x29@2x~watch.png",
       "role" : "companionSettings",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "29x29"
     },
     {
-      "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "geometry.29x29@3x~watch.png",
       "role" : "companionSettings",
-      "scale" : "3x"
+      "scale" : "3x",
+      "size" : "29x29"
     },
     {
+      "idiom" : "watch",
+      "role" : "appLauncher",
+      "scale" : "2x",
       "size" : "40x40",
-      "role" : "appLauncher",
-      "filename" : "geometry.40x40@2x~watch.png",
-      "idiom" : "watch",
-      "subtype" : "38mm",
-      "scale" : "2x"
+      "subtype" : "38mm"
     },
     {
+      "idiom" : "watch",
+      "role" : "appLauncher",
+      "scale" : "2x",
       "size" : "44x44",
-      "role" : "appLauncher",
-      "filename" : "geometry.44x44@2x~watch.png",
-      "idiom" : "watch",
-      "subtype" : "40mm",
-      "scale" : "2x"
+      "subtype" : "40mm"
     },
     {
+      "idiom" : "watch",
+      "role" : "appLauncher",
+      "scale" : "2x",
       "size" : "50x50",
-      "role" : "appLauncher",
-      "filename" : "geometry.50x50@2x~watch.png",
-      "idiom" : "watch",
-      "subtype" : "44mm",
-      "scale" : "2x"
+      "subtype" : "44mm"
     },
     {
+      "idiom" : "watch",
+      "role" : "quickLook",
+      "scale" : "2x",
       "size" : "86x86",
-      "role" : "quickLook",
-      "filename" : "geometry.86x86@2x~watch.png",
-      "idiom" : "watch",
-      "subtype" : "38mm",
-      "scale" : "2x"
+      "subtype" : "38mm"
     },
     {
+      "idiom" : "watch",
+      "role" : "quickLook",
+      "scale" : "2x",
       "size" : "98x98",
-      "role" : "quickLook",
-      "filename" : "geometry.98x98@2x~watch.png",
-      "idiom" : "watch",
-      "subtype" : "42mm",
-      "scale" : "2x"
+      "subtype" : "42mm"
     },
     {
+      "idiom" : "watch",
+      "role" : "quickLook",
+      "scale" : "2x",
       "size" : "108x108",
-      "role" : "quickLook",
-      "filename" : "geometry.108x108@2x~watch.png",
-      "idiom" : "watch",
-      "subtype" : "44mm",
-      "scale" : "2x"
+      "subtype" : "44mm"
     },
     {
-      "size" : "1024x1024",
       "idiom" : "watch-marketing",
-      "filename" : "geometry.1024x1024@1x~watch-marketing.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "1024x1024"
     },
     {
-      "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "geometry.16x16@1x~mac.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "16x16"
     },
     {
-      "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "geometry.16x16@2x~mac.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "16x16"
     },
     {
-      "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "geometry.32x32@1x~mac.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "32x32"
     },
     {
-      "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "geometry.32x32@2x~mac.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "32x32"
     },
     {
-      "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "geometry.128x128@1x~mac.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "128x128"
     },
     {
-      "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "geometry.128x128@2x~mac.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "128x128"
     },
     {
-      "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "geometry.256x256@1x~mac.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "256x256"
     },
     {
-      "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "geometry.256x256@2x~mac.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "256x256"
     },
     {
-      "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "geometry.512x512@1x~mac.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "512x512"
     },
     {
-      "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "geometry.512x512@2x~mac.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "512x512"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "com.brightdigit.Speculid"
+    "author" : "xcode",
+    "version" : 1
   }
 }
