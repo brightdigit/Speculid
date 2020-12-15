@@ -1,9 +1,7 @@
 [submodule "scripts/github-markdown-toc"]
 	path = scripts/github-markdown-toc
 	url = https://github.com/ekalinin/github-markdown-toc.git
-[submodule "packages/homebrew"]
-	path = packages/homebrew
-	url = https://github.com/brightdigit/homebrew-speculid.git
-[submodule "packages/fastlane"]
-	path = packages/fastlane
-	url = https://github.com/brightdigit/fastlane-plugin-speculid.git
+[submodule "packages/SpeculidKit"]
+	path = packages/SpeculidKit
+	url = https://github.com/brightdigit/SpeculidKit.git
+  branch = release/3.0.0-alpha.2

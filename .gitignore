@@ -1,7 +1,6 @@
 
-# Created by https://www.gitignore.io/api/macos,swift,xcode,objective-c,jekyll
-
-### Jekyll ###
+# Created by https://www.gitignore.io/api/xcode,macos,swift
+# Edit at https://www.gitignore.io/?templates=xcode,macos,swift
 _site/
 .sass-cache/
 .jekyll-cache/
@@ -35,7 +34,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-### Objective-C ###
+### Swift ###
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
@@ -66,26 +65,34 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+# Package.resolved
+.build/
+# Add this line if you want to avoid checking in Xcode SPM integration.
+# .swiftpm/xcode
+
 # CocoaPods
-#
 # We recommend against adding the Pods directory to your .gitignore. However
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
 # Pods/
-#
 # Add this line if you want to avoid checking in source code from the Xcode workspace
 # *.xcworkspace
 
 # Carthage
-#
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
 Carthage/Build
 
 # fastlane
-#
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
@@ -97,67 +104,13 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 # Code Injection
-#
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
 
-### Objective-C Patch ###
-
-### Swift ###
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
-## Build generated
-
-## Various settings
-
-## Other
-
-## Obj-C/Swift specific
-
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
-
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-.build/
-
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
-
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
-
 ### Xcode ###
 # Xcode
-#
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## User settings
@@ -166,7 +119,7 @@ Pods/
 
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 
-### Xcode Patch ###
+## Xcode Patch
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
@@ -191,16 +144,17 @@ certs/*.p12
 *.toc.*
 *.orig.*
 
-examples/**/*.xcassets/**/*.png
-examples/**/*.xcassets/**/*.pdf
+examples/*/*.xcassets/*/*.png
+examples/*/*.xcassets/*/*.pdf
 
-#examples/sample/**/*.xcassets/***/*.png
-#examples/sample/**/*.xcassets/*/*.pdf
+### Xcode Patch ###
+**/xcshareddata/WorkspaceSettings.xcsettings
 
-playgrounds
+# End of https://www.gitignore.io/api/xcode,macos,swift
 
-.version
-*.coverage.txt
-**/fastlane/report.xml 
 
-examples/samples
+!scripts/github-markdown-toc
+
+**/*.xcassets/**/*.png
+**/*.xcassets/**/*.pdf
+**/*.xcassets/**/*.svg
