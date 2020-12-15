@@ -7,6 +7,8 @@
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeName</key>
+			<string>Speculid Project Document</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -17,10 +19,10 @@
 			</array>
 			<key>NSUbiquitousDocumentUserActivityType</key>
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER).speculid-project-document</string>
-      <key>CFBundleTypeName</key>
-      <string>Speculid Project Document</string>
 		</dict>
 		<dict>
+			<key>CFBundleTypeName</key>
+			<string>Speculid Image Document</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -31,8 +33,6 @@
 			</array>
 			<key>NSUbiquitousDocumentUserActivityType</key>
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER)speculid-image-document</string>
-      <key>CFBundleTypeName</key>
-      <string>Speculid Image Document</string>
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
@@ -65,6 +65,8 @@
 	<true/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>
