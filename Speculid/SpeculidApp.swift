@@ -9,11 +9,6 @@ struct SpeculidApp: App {
     DocumentGroup(newDocument: ClassicDocument()) { file in
       ClassicView(url: file.fileURL, document: file.document, documentBinding: file.$document).environmentObject(bookmarkCollection)
     }
-
-//    DocumentGroup(viewing: ClassicDocument.self) { file in
-//
-//      ClassicView(url: file.fileURL, document: file.document, documentBinding: file.$document).environmentObject(bookmarkCollection)
-//    }
     .commands {
       CommandMenu("Developer Tools") {
         Button("Reset Bookmarks") {
